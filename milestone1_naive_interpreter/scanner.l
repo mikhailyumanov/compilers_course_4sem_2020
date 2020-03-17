@@ -51,7 +51,7 @@ blank [ \t\r]
 "=="       return yy::parser::make_EQUAL       (TOKEN::TOK_EQUAL, loc);
 "+"        return yy::parser::make_PLUS        (TOKEN::TOK_PLUS, loc);
 "-"        {
-             std::cout << "minus " << loc.end.line << std::endl;
+//             std::cout << "minus " << loc.end.line << std::endl;
              return yy::parser::make_MINUS     (TOKEN::TOK_MINUS, loc);
            }
 "*"        return yy::parser::make_STAR        (TOKEN::TOK_STAR, loc);
@@ -67,7 +67,7 @@ blank [ \t\r]
 "."        return yy::parser::make_DOT         (loc);
 ","        return yy::parser::make_COLON       (loc);
 ";"        {
-             std::cout << "colon " << loc.end.line << std::endl;
+//             std::cout << "colon " << loc.end.line << std::endl;
              return yy::parser::make_SEMICOLON   (loc);
            }
 
@@ -90,12 +90,14 @@ blank [ \t\r]
 "void"     return yy::parser::make_VOID        (loc);
 
 "main"     return yy::parser::make_MAIN        (loc);
-"System.out.println" return yy::parser::make_PRINT (loc);
+"System"   return yy::parser::make_SYSTEM      (loc);
+"out"      return yy::parser::make_OUT         (loc);
+"println"  return yy::parser::make_PRINTLN     (loc);
 "length"   return yy::parser::make_LENGTH      (loc);
 
 {int}      {
-             std::cout << "number " << loc.end.line
-                             << " " << loc.end.column << std::endl;
+//             std::cout << "number " << loc.end.line
+//                             << " " << loc.end.column << std::endl;
              return make_NUMBER(yytext, loc);
            }
 {id}       return yy::parser::make_IDENTIFIER(yytext, loc);
