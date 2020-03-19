@@ -4,6 +4,10 @@ project(ParserExample)
 find_package(FLEX)
 find_package(BISON)
 
+include_directories(
+  src
+)
+
 set(
     HEADERS
     ${ParserExample_SOURCE_DIR}/driver.hh

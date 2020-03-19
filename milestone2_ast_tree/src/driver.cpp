@@ -7,8 +7,6 @@ Driver::Driver() :
     trace_parsing(false),
     trace_scanning(false),
     scanner(*this), parser(scanner, *this) {
-    variables["one"] = std::make_pair(std::vector<int>{1}, 0);
-    variables["two"] = std::make_pair(std::vector<int>{2}, 0);
 }
 
 
