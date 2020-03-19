@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cmake ..
+make
+./ParserExample b.in
