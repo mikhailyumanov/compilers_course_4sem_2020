@@ -1,3 +1,0 @@
-/compilers/compilers_course_4sem_2020/milestone1_naive_interpreter/build/CMakeFiles/rebuild_cache.dir
-/compilers/compilers_course_4sem_2020/milestone1_naive_interpreter/build/CMakeFiles/ParserExample.dir
-/compilers/compilers_course_4sem_2020/milestone1_naive_interpreter/build/CMakeFiles/edit_cache.dir
