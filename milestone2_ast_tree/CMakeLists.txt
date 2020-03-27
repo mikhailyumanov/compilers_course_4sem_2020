@@ -1,42 +1,12 @@
-cmake_minimum_required(VERSION 3.10)
-project(ParserExample)
+cmake_minimum_required(VERSION 3.0)
+project(Compilers)
 
-find_package(FLEX)
-find_package(BISON)
+find_package(FLEX REQUIRED)
+find_package(BISON REQUIRED)
 
-include_directories(
-  src
-)
+set(CMAKE_CXX_STANDARD 14)
 
-set(
-    HEADERS
-    ${ParserExample_SOURCE_DIR}/driver.hh
-    ${ParserExample_SOURCE_DIR}/parser.hh
-    )
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${Compilers_SOURCE_DIR}/bin)
 
-BISON_TARGET(
-    MyParser
-    parser.y
-    ${ParserExample_SOURCE_DIR}/parser.cpp
-    DEFINES_FILE ${ParserExample_SOURCE_DIR}/parser.hh
-)
-
-FLEX_TARGET(
-    MyScanner
-    scanner.l
-    ${ParserExample_SOURCE_DIR}/scanner.cpp
-)
-
-ADD_FLEX_BISON_DEPENDENCY(MyScanner MyParser)
-
-add_executable(
-    ParserExample
-    main.cpp
-    driver.cpp
-    ${BISON_MyParser_OUTPUTS}
-    ${FLEX_MyScanner_OUTPUTS}
-)
-target_include_directories(ParserExample PRIVATE ${ParserExample_SOURCE_DIR})
-
-
-
+add_subdirectory(src)
+include_directories(include)
