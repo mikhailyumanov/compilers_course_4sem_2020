@@ -1,4 +1,5 @@
 #usage: run_tests {filename}
+#invoke from /tests dir
 
 filename=$1
 
