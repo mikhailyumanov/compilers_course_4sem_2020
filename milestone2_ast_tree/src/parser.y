@@ -22,6 +22,10 @@
     #include "driver.hh"
     #include "location.hh"
 
+    // include nodes
+    #include "Expression.hpp"
+    #include "BinOpExpression.hpp"
+
     static yy::parser::symbol_type yylex(Scanner &scanner, Driver& driver) {
         return scanner.ScanToken();
     }
