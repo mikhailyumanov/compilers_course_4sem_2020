@@ -2,7 +2,6 @@
 #include "parser.hh"
 
 
-
 Driver::Driver() :
     trace_parsing(false),
     trace_scanning(false),

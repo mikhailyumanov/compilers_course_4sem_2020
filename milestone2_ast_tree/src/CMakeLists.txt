@@ -5,6 +5,10 @@ set(
     ${Project_SOURCE_DIR}/parser.hh
     )
 
+include_directories(
+    ${Project_SOURCE_DIR}/../include/expressions/
+)
+
 BISON_TARGET(
     MyParser
     parser.y
