@@ -185,9 +185,9 @@ lvalue: "identifier"              { $$ = std::make_pair($1, -1); }
 comma_expr_list: expr
                | comma_expr_list "," expr;
 
-expr: expr binary_operator expr { 
+expr: expr binary_operator expr { /*$$ = new BinOpExpression($1, $2, $3);*/ }
     int tmp = 0;
-  switch($2) {
+/*  switch($2) {
     case token::TOK_AND:     tmp = $1.first[0] && $3.first[0]; break;
     case token::TOK_OR:      tmp = $1.first[0] || $3.first[0]; break;
     case token::TOK_LESS:    tmp = $1.first[0] <  $3.first[0]; break;
@@ -199,7 +199,7 @@ expr: expr binary_operator expr {
     case token::TOK_SLASH:   tmp = $1.first[0] /  $3.first[0]; break;
     case token::TOK_RMNDR:   tmp = $1.first[0] %  $3.first[0]; break;
     default: break;
-  }
+  }*/
   $$ = std::make_pair(std::vector<int>{tmp}, 0);
 }
     | expr "[" expr "]"
@@ -239,32 +239,6 @@ integer_literal: "number" { $$ = $1; }
 binary_operator: "&&" | "||" | "<" | ">" | "=="
                | "+"  | "-"  | "*" | "/" | "%";
 
-/*
-unit: assignments exp { driver.result = $2; };
-
-assignments:
-    %empty {}
-    | assignments assignment {};
-
-assignment:
-    "identifier" "=" exp {
-        driver.variables[$1] = $3;
-        // std::cout << drv.location.begin.line
-        //           << "-" << drv.location.end.line << std::endl;
-    };
-
-%left "+" "-";
-%left "*" "/";
-
-exp:
-    "number"
-    | "identifier" {$$ = driver.variables[$1];}
-    | exp "+" exp {$$ = $1 + $3; }
-    | exp "-" exp {$$ = $1 - $3; }
-    | exp "*" exp {$$ = $1 * $3; }
-    | exp "/" exp {$$ = $1 / $3; }
-    | "(" exp ")" {$$ = $2; };
-*/
 %%
 
 void

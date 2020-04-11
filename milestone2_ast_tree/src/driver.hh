@@ -11,7 +11,8 @@
 class Driver {
  public:
     Driver();
-    std::map<std::string, std::pair<std::vector<int>, bool /*is array*/>> variables;
+    std::map<std::string, 
+      std::pair<std::vector<int>, bool /*is array*/>> variables;
     int result;
     int parse(const std::string& f);
     std::string file;
