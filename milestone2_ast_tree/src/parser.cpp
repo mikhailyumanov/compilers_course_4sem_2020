@@ -41,20 +41,30 @@
 
 
 // Unqualified %code blocks.
-#line 21 "parser.y"
+#line 22 "parser.y"
 
     #include "driver.hh"
     #include "location.hh"
 
     // include nodes
-    #include "Expression.hpp"
-    #include "BinOpExpression.hpp"
+    // program
+    #include "program/Program.hpp"
+    #include "program/MainClass.hpp"
+    #include "program/ClassDeclList.hpp"
+    // statements
+    #include "statements/Statement.hpp"
+    #include "statements/PrintStmt.hpp"
+    #include "statements/StmtList.hpp"
+    // expressions
+    #include "expressions/Expression.hpp"
+    #include "expressions/BoolConstExpression.hpp"
+    // declarations
 
     static yy::parser::symbol_type yylex(Scanner &scanner, Driver& driver) {
         return scanner.ScanToken();
     }
 
-#line 58 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 68 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
 
 
 #ifndef YY_
@@ -145,7 +155,7 @@
 #define YYRECOVERING()  (!!yyerrstatus_)
 
 namespace yy {
-#line 149 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 159 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
 
 
   /* Return YYSTR after stripping away unnecessary quotes and
@@ -741,223 +751,223 @@ namespace yy {
           switch (yyn)
             {
   case 21:
-#line 152 "parser.y"
+#line 163 "parser.y"
                     { driver.variables[yystack_[1].value.as < std::string > ()] = 
                           std::make_pair(std::vector<int>(), yystack_[2].value.as < std::pair<std::string, bool> > ().second); }
-#line 748 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 758 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 22:
-#line 155 "parser.y"
+#line 166 "parser.y"
                   { yylhs.value.as < std::pair<std::string, bool> > () = std::make_pair(yystack_[0].value.as < std::string > (), 0); }
-#line 754 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 764 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 23:
-#line 156 "parser.y"
+#line 167 "parser.y"
                   { yylhs.value.as < std::pair<std::string, bool> > () = std::make_pair(yystack_[0].value.as < std::string > (), 1); }
-#line 760 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 770 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 28:
-#line 160 "parser.y"
+#line 171 "parser.y"
                                 { yylhs.value.as < std::string > () = yystack_[2].value.as < std::string > (); }
-#line 766 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 776 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 36:
-#line 171 "parser.y"
+#line 182 "parser.y"
            { std::cout << yystack_[2].value.as < std::pair<std::vector<int>, bool> > ().first[0] << std::endl; }
-#line 772 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 782 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 37:
-#line 173 "parser.y"
+#line 184 "parser.y"
            { if (yystack_[3].value.as < std::pair<std::string, int> > ().second == -1) driver.variables[yystack_[3].value.as < std::pair<std::string, int> > ().first] = yystack_[1].value.as < std::pair<std::vector<int>, bool> > ();
              else driver.variables[yystack_[3].value.as < std::pair<std::string, int> > ().first].first[yystack_[3].value.as < std::pair<std::string, int> > ().second] = yystack_[1].value.as < std::pair<std::vector<int>, bool> > ().first[0]; }
-#line 779 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 789 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 42:
-#line 182 "parser.y"
+#line 193 "parser.y"
                                   { yylhs.value.as < std::pair<std::string, int> > () = std::make_pair(yystack_[0].value.as < std::string > (), -1); }
-#line 785 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 795 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 43:
-#line 183 "parser.y"
+#line 194 "parser.y"
                                   { yylhs.value.as < std::pair<std::string, int> > () = std::make_pair(yystack_[3].value.as < std::string > (), yystack_[1].value.as < std::pair<std::vector<int>, bool> > ().first[0]); }
-#line 791 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 801 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 46:
-#line 188 "parser.y"
-                                { 
+#line 199 "parser.y"
+                                { /*$$ = new BinOpExpression($1, $2, $3);*/ 
     int tmp = 0;
-  switch(yystack_[1].value.as < int > ()) {
-    case token::TOK_AND:     tmp = yystack_[2].value.as < std::pair<std::vector<int>, bool> > ().first[0] && yystack_[0].value.as < std::pair<std::vector<int>, bool> > ().first[0]; break;
-    case token::TOK_OR:      tmp = yystack_[2].value.as < std::pair<std::vector<int>, bool> > ().first[0] || yystack_[0].value.as < std::pair<std::vector<int>, bool> > ().first[0]; break;
-    case token::TOK_LESS:    tmp = yystack_[2].value.as < std::pair<std::vector<int>, bool> > ().first[0] <  yystack_[0].value.as < std::pair<std::vector<int>, bool> > ().first[0]; break;
-    case token::TOK_GREATER: tmp = yystack_[2].value.as < std::pair<std::vector<int>, bool> > ().first[0] >  yystack_[0].value.as < std::pair<std::vector<int>, bool> > ().first[0]; break;
-    case token::TOK_EQUAL:   tmp = yystack_[2].value.as < std::pair<std::vector<int>, bool> > ().first[0] == yystack_[0].value.as < std::pair<std::vector<int>, bool> > ().first[0]; break;
-    case token::TOK_PLUS:    tmp = yystack_[2].value.as < std::pair<std::vector<int>, bool> > ().first[0] +  yystack_[0].value.as < std::pair<std::vector<int>, bool> > ().first[0]; break;
-    case token::TOK_MINUS:   tmp = yystack_[2].value.as < std::pair<std::vector<int>, bool> > ().first[0] -  yystack_[0].value.as < std::pair<std::vector<int>, bool> > ().first[0]; break;
-    case token::TOK_STAR:    tmp = yystack_[2].value.as < std::pair<std::vector<int>, bool> > ().first[0] *  yystack_[0].value.as < std::pair<std::vector<int>, bool> > ().first[0]; break;
-    case token::TOK_SLASH:   tmp = yystack_[2].value.as < std::pair<std::vector<int>, bool> > ().first[0] /  yystack_[0].value.as < std::pair<std::vector<int>, bool> > ().first[0]; break;
-    case token::TOK_RMNDR:   tmp = yystack_[2].value.as < std::pair<std::vector<int>, bool> > ().first[0] %  yystack_[0].value.as < std::pair<std::vector<int>, bool> > ().first[0]; break;
+/*  switch($2) {
+    case token::TOK_AND:     tmp = $1.first[0] && $3.first[0]; break;
+    case token::TOK_OR:      tmp = $1.first[0] || $3.first[0]; break;
+    case token::TOK_LESS:    tmp = $1.first[0] <  $3.first[0]; break;
+    case token::TOK_GREATER: tmp = $1.first[0] >  $3.first[0]; break;
+    case token::TOK_EQUAL:   tmp = $1.first[0] == $3.first[0]; break;
+    case token::TOK_PLUS:    tmp = $1.first[0] +  $3.first[0]; break;
+    case token::TOK_MINUS:   tmp = $1.first[0] -  $3.first[0]; break;
+    case token::TOK_STAR:    tmp = $1.first[0] *  $3.first[0]; break;
+    case token::TOK_SLASH:   tmp = $1.first[0] /  $3.first[0]; break;
+    case token::TOK_RMNDR:   tmp = $1.first[0] %  $3.first[0]; break;
     default: break;
-  }
+  }*/
   yylhs.value.as < std::pair<std::vector<int>, bool> > () = std::make_pair(std::vector<int>{tmp}, 0);
 }
-#line 813 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 823 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 47:
-#line 206 "parser.y"
+#line 217 "parser.y"
       { yylhs.value.as < std::pair<std::vector<int>, bool> > () = std::make_pair(std::vector<int>{yystack_[3].value.as < std::pair<std::vector<int>, bool> > ().first[yystack_[1].value.as < std::pair<std::vector<int>, bool> > ().first[0]]}, 0); }
-#line 819 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 829 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 48:
-#line 208 "parser.y"
+#line 219 "parser.y"
                         { yylhs.value.as < std::pair<std::vector<int>, bool> > () = std::make_pair(std::vector<int>{(int)yystack_[2].value.as < std::pair<std::vector<int>, bool> > ().first.size()}, 0); }
-#line 825 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 835 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 49:
-#line 211 "parser.y"
+#line 222 "parser.y"
       { yylhs.value.as < std::pair<std::vector<int>, bool> > () = std::make_pair(std::vector<int>(yystack_[1].value.as < std::pair<std::vector<int>, bool> > ().first[0]), 1); }
-#line 831 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 841 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 50:
-#line 214 "parser.y"
+#line 225 "parser.y"
       { yylhs.value.as < std::pair<std::vector<int>, bool> > () = std::make_pair(std::vector<int>(1), 0); }
-#line 837 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 847 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 51:
-#line 217 "parser.y"
+#line 228 "parser.y"
       { yylhs.value.as < std::pair<std::vector<int>, bool> > () = std::make_pair(std::vector<int>{!yystack_[0].value.as < std::pair<std::vector<int>, bool> > ().first[0]}, 0); }
-#line 843 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 853 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 52:
-#line 219 "parser.y"
+#line 230 "parser.y"
                                      { yylhs.value.as < std::pair<std::vector<int>, bool> > () = yystack_[1].value.as < std::pair<std::vector<int>, bool> > (); }
-#line 849 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 859 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 53:
-#line 221 "parser.y"
+#line 232 "parser.y"
                                      { yylhs.value.as < std::pair<std::vector<int>, bool> > () = driver.variables[yystack_[0].value.as < std::string > ()]; }
-#line 855 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 865 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 54:
-#line 224 "parser.y"
+#line 235 "parser.y"
       { yylhs.value.as < std::pair<std::vector<int>, bool> > () = std::make_pair(std::vector<int>{yystack_[0].value.as < int > ()}, 0); }
-#line 861 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 871 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 55:
-#line 226 "parser.y"
+#line 237 "parser.y"
                                      { /* TODO */ }
-#line 867 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 877 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 56:
-#line 229 "parser.y"
+#line 240 "parser.y"
       { yylhs.value.as < std::pair<std::vector<int>, bool> > () = std::make_pair(std::vector<int>{1}, 0); }
-#line 873 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 883 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 57:
-#line 232 "parser.y"
+#line 243 "parser.y"
       { yylhs.value.as < std::pair<std::vector<int>, bool> > () = std::make_pair(std::vector<int>{0}, 0); }
-#line 879 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 889 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 58:
-#line 234 "parser.y"
+#line 245 "parser.y"
                                      { }
-#line 885 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 895 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 59:
-#line 236 "parser.y"
+#line 247 "parser.y"
                           { yylhs.value.as < int > () = yystack_[0].value.as < int > (); }
-#line 891 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 901 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 60:
-#line 237 "parser.y"
+#line 248 "parser.y"
                               { yylhs.value.as < int > () = -yystack_[0].value.as < int > (); }
-#line 897 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 907 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 61:
-#line 239 "parser.y"
+#line 250 "parser.y"
                  { yylhs.value.as < int > () = yystack_[0].value.as < int > (); }
-#line 903 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 913 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 62:
-#line 239 "parser.y"
+#line 250 "parser.y"
                         { yylhs.value.as < int > () = yystack_[0].value.as < int > (); }
-#line 909 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 919 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 63:
-#line 239 "parser.y"
+#line 250 "parser.y"
                                { yylhs.value.as < int > () = yystack_[0].value.as < int > (); }
-#line 915 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 925 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 64:
-#line 239 "parser.y"
+#line 250 "parser.y"
                                      { yylhs.value.as < int > () = yystack_[0].value.as < int > (); }
-#line 921 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 931 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 65:
-#line 239 "parser.y"
+#line 250 "parser.y"
                                            { yylhs.value.as < int > () = yystack_[0].value.as < int > (); }
-#line 927 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 937 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 66:
-#line 240 "parser.y"
+#line 251 "parser.y"
                  { yylhs.value.as < int > () = yystack_[0].value.as < int > (); }
-#line 933 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 943 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 67:
-#line 240 "parser.y"
+#line 251 "parser.y"
                         { yylhs.value.as < int > () = yystack_[0].value.as < int > (); }
-#line 939 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 949 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 68:
-#line 240 "parser.y"
+#line 251 "parser.y"
                                { yylhs.value.as < int > () = yystack_[0].value.as < int > (); }
-#line 945 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 955 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 69:
-#line 240 "parser.y"
+#line 251 "parser.y"
                                      { yylhs.value.as < int > () = yystack_[0].value.as < int > (); }
-#line 951 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 961 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
   case 70:
-#line 240 "parser.y"
+#line 251 "parser.y"
                                            { yylhs.value.as < int > () = yystack_[0].value.as < int > (); }
-#line 957 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 967 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
     break;
 
 
-#line 961 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 971 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
 
             default:
               break;
@@ -1463,14 +1473,14 @@ namespace yy {
   const unsigned char
   parser::yyrline_[] =
   {
-       0,   118,   118,   119,   121,   122,   124,   127,   128,   131,
-     132,   134,   135,   137,   138,   140,   143,   144,   146,   147,
-     149,   151,   155,   156,   158,   158,   158,   158,   160,   162,
-     164,   165,   166,   167,   168,   169,   170,   172,   175,   176,
-     178,   180,   182,   183,   185,   186,   188,   205,   208,   210,
-     213,   216,   219,   221,   223,   226,   228,   231,   234,   236,
-     237,   239,   239,   239,   239,   239,   240,   240,   240,   240,
-     240
+       0,   129,   129,   130,   132,   133,   135,   138,   139,   142,
+     143,   145,   146,   148,   149,   151,   154,   155,   157,   158,
+     160,   162,   166,   167,   169,   169,   169,   169,   171,   173,
+     175,   176,   177,   178,   179,   180,   181,   183,   186,   187,
+     189,   191,   193,   194,   196,   197,   199,   216,   219,   221,
+     224,   227,   230,   232,   234,   237,   239,   242,   245,   247,
+     248,   250,   250,   250,   250,   250,   251,   251,   251,   251,
+     251
   };
 
   // Print the state stack on the debug stream.
@@ -1504,9 +1514,9 @@ namespace yy {
 
 
 } // yy
-#line 1508 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
+#line 1518 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.cpp"
 
-#line 268 "parser.y"
+#line 253 "parser.y"
 
 
 void

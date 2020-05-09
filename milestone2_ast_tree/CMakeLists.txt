@@ -9,4 +9,9 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${Compilers_SOURCE_DIR}/bin)
 
 add_subdirectory(src)
-include_directories(include)
+include_directories(
+	../include/expressions/
+	../include/statements/
+	../include/declarations/
+	../include/program/
+)

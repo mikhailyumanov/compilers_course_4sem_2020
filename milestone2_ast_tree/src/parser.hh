@@ -46,12 +46,13 @@
 // "%code requires" blocks.
 #line 9 "parser.y"
 
-    #include <functional>     
+    #include <functional>
+    #include <memory>
     #include <string>
     class Scanner;
     class Driver;
 
-#line 55 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.hh"
+#line 56 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.hh"
 
 # include <cassert>
 # include <cstdlib> // std::abort
@@ -185,7 +186,7 @@
 #endif
 
 namespace yy {
-#line 189 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.hh"
+#line 190 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.hh"
 
 
 
@@ -2065,7 +2066,7 @@ switch (yytype)
   }
 
 } // yy
-#line 2069 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.hh"
+#line 2070 "/compilers/compilers_course_4sem_2020/milestone2_ast_tree/src/parser.hh"
 
 
 

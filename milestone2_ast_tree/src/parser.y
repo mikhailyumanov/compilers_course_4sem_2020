@@ -7,7 +7,8 @@
 %define parse.assert
 
 %code requires {
-    #include <functional>     
+    #include <functional>
+    #include <memory>
     #include <string>
     class Scanner;
     class Driver;
@@ -23,8 +24,18 @@
     #include "location.hh"
 
     // include nodes
-    #include "Expression.hpp"
-    #include "BinOpExpression.hpp"
+    // program
+    #include "program/Program.hpp"
+    #include "program/MainClass.hpp"
+    #include "program/ClassDeclList.hpp"
+    // statements
+    #include "statements/Statement.hpp"
+    #include "statements/PrintStmt.hpp"
+    #include "statements/StmtList.hpp"
+    // expressions
+    #include "expressions/Expression.hpp"
+    #include "expressions/BoolConstExpression.hpp"
+    // declarations
 
     static yy::parser::symbol_type yylex(Scanner &scanner, Driver& driver) {
         return scanner.ScanToken();
@@ -185,7 +196,7 @@ lvalue: "identifier"              { $$ = std::make_pair($1, -1); }
 comma_expr_list: expr
                | comma_expr_list "," expr;
 
-expr: expr binary_operator expr { /*$$ = new BinOpExpression($1, $2, $3);*/ }
+expr: expr binary_operator expr { /*$$ = new BinOpExpression($1, $2, $3);*/ 
     int tmp = 0;
 /*  switch($2) {
     case token::TOK_AND:     tmp = $1.first[0] && $3.first[0]; break;
