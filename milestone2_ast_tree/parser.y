@@ -63,6 +63,7 @@
 
 // syntax
 %token
+    NOT "!"
     LPAREN "("
     RPAREN ")"
     LPARENSQR "["
@@ -108,15 +109,21 @@
 %token <int> NUMBER "number"
 %nterm <int> integer_literal
 %nterm <int> binary_operator
-%nterm <std::pair<std::string, int>> lvalue
-%nterm <std::pair<std::string, bool>> type
+%nterm <std::shared_ptr<Lvalue>> lvalue
+%nterm <Type> type
 %nterm <std::string> simple_type
 %nterm <std::string> array_type
 
 %nterm <std::shared_ptr<Program>> program
+%nterm <std::shared_ptr<ClassDeclList>> class_declaration_list
 %nterm <std::shared_ptr<MainClass>> main_class
+%nterm <std::shared_ptr<ClassDecl>> class_declaration
 %nterm <std::shared_ptr<StmtList>> statement_list
+%nterm <std::shared_ptr<DeclList>> declaration_list
+%nterm <std::shared_ptr<Decl>> declaration
+%nterm <std::shared_ptr<VarDecl>> variable_declaration
 %nterm <std::shared_ptr<Statement>> statement
+%nterm <std::shared_ptr<VarDecl>> local_variable_declaration
 %nterm <std::shared_ptr<Expression>> expr
 
 //%printer { yyo << $$; } <*>;
@@ -126,12 +133,16 @@
 
 program: main_class 
          { $$ = std::make_shared<Program>($1); driver.program = $$; }
-//       | main_class class_declaration_list
-//         { $$ = std::shared_ptr<Program>($1, $2); driver.program = $$; }
+       | main_class class_declaration_list
+         { $$ = std::make_shared<Program>($1, $2); driver.program = $$; }
 ;
 
 class_declaration_list: class_declaration
-                      | class_declaration_list class_declaration;
+                        { $$ = std::make_shared<ClassDeclList>($1); }
+                      | class_declaration_list class_declaration
+                        { $$ = std::make_shared<ClassDeclList>($1); 
+                          $$.AddItem($2); }
+;
 
 main_class: "class" "identifier" "{"
             "public" "static" "void" "main" "(" ")" "{" statement_list "}" "}"
@@ -139,8 +150,11 @@ main_class: "class" "identifier" "{"
 ;
 
 class_declaration: "class" "identifier" "{" declaration_list "}"
+                   { $$ = std::make_shared<ClassDecl>($4); }
                  | "class" "identifier" "extends" "identifier" "{"
-                   declaration_list "}";
+                   declaration_list "}"
+                   { $$ = std::make_shared<ClassDecl>($6); }
+;
 
 statement_list: statement
                 { $$ = std::make_shared<StmtList>(); $$->AddItem($1); }
@@ -149,78 +163,115 @@ statement_list: statement
 ;
 
 declaration_list : declaration
-                 | declaration_list declaration;
+                   { $$ = std::make_shared<DeclList>(); $$->AddItem($1); }
+                 | declaration_list declaration
+                   { $$ = $1; $$->AddItem($2); }
+;
 
 declaration: variable_declaration
-           | method_declaration;
+             { $$ = std::make_shared<VarDecl>($1); }
+           | method_declaration
+//             { $$ = std::make_shared<MethodDecl>($1); }
+;
 
 method_declaration: "public" type "identifier" args_list "{"
-                  statement_list "}";
+                  statement_list "}"
+;
 
 args_list: "(" ")"
-         | "(" comma_formals_list ")";
+         | "(" comma_formals_list ")"
+;
 
 comma_formals_list: formals
-                  | comma_formals_list "," formals;
+                  | comma_formals_list "," formals
+;
 
-formals: type "identifier";
+formals: type "identifier"       
+;
 
 variable_declaration: type "identifier" ";"
+                      { $$ = std::make_chared<VarDecl>($1, $2); }
 //                    { driver.variables[$2] = 
-//                          std::make_pair(std::vector<int>(), $1.second); };
+//                          std::make_pair(std::vector<int>(), $1.second); }
+;
 
-type: simple_type { $$ = std::make_pair($1, 0); } 
-    | array_type  { $$ = std::make_pair($1, 1); };
+type: simple_type { $$ = Type{$1, false}; } //{ $$ = std::make_pair($1, 0); } 
+    | array_type  { $$ = Type{$1, true};  } //{ $$ = std::make_pair($1, 1); }
+;
 
-simple_type: "int" | "boolean" | "void" | "type_identifier";
+simple_type: "int" | "boolean" | "void" | "type_identifier"
+;
 
-array_type: simple_type "[" "]" { $$ = $1; };
+array_type: simple_type "[" "]" //{ $$ = $1; }
+;
 
-type_identifier: "identifier";
+type_identifier: "identifier"
+;
 
 statement: "assert" "(" expr ")" ";"
+           { $$ = std::make_shared<AssertStmt>($3); }
          | local_variable_declaration
+           { $$ = std::make_shared<LocalVarDeclStmt>($1); }
          | "{" statement_list "}"
+           { $$ = std::make_shared<StmtListStmt>($2); }
          | "if"  "(" expr ")" statement
+           { $$ = std::make_shared<IfStmt>($3, $5); }
          | "if"  "(" expr ")" statement "else" statement
+           { $$ = std::make_shared<IfElseStmt>($3, $5, $7); }
          | "while" "(" expr ")" statement
+           { $$ = std::make_shared<WhileStmt>($3, $5); }
          | "System" "." "out" "." "println" "(" expr ")" ";"
-//           { std::cout << $7.first[0] << std::endl; }
            { $$ = std::make_shared<PrintStmt>($7); }
          | lvalue "=" expr ";"
+           { $$ = std::make_shared<AssignmentStmt>($1, $3); }
 //           { if ($1.second == -1) driver.variables[$1.first] = $3;
 //             else driver.variables[$1.first].first[$1.second] = $3.first[0]; }
          | "return" expr ";"
          | method_invocation ";";
 
-local_variable_declaration: variable_declaration;
+local_variable_declaration: variable_declaration
+                            { $$ = $1; }
+;
 
-method_invocation: expr "." "identifier" "(" comma_expr_list ")";
+method_invocation: expr "." "identifier" "(" comma_expr_list ")" 
+;
 
-lvalue: "identifier"              //{ $$ = std::make_pair($1, -1); }
-      | "identifier" "[" expr "]" //{ $$ = std::make_pair($1, $3.first[0]); };
+lvalue: "identifier" { $$ = std::make_shared<Lvalue>($1); } //{ $$ = std::make_pair($1, -1); }
+      | "identifier" "[" expr "]" //{ $$ = std::make_pair($1, $3.first[0]); }
+;
 
 comma_expr_list: expr
-               | comma_expr_list "," expr;
+               | comma_expr_list "," expr
+;
 
-expr: expr binary_operator expr { 
-  BinOpExpr::Operation op;
-  switch($2) {
-    case token::TOK_AND:     op = BinOpExpr::Operation::OP_AND     ; break;
-    case token::TOK_OR:      op = BinOpExpr::Operation::OP_OR      ; break;
-    case token::TOK_LESS:    op = BinOpExpr::Operation::OP_LESS    ; break;
-    case token::TOK_GREATER: op = BinOpExpr::Operation::OP_GREATER ; break;
-    case token::TOK_EQUAL:   op = BinOpExpr::Operation::OP_EQUAL   ; break;
-    case token::TOK_PLUS:    op = BinOpExpr::Operation::OP_PLUS    ; break;
-    case token::TOK_MINUS:   op = BinOpExpr::Operation::OP_MINUS   ; break;
-    case token::TOK_STAR:    op = BinOpExpr::Operation::OP_STAR    ; break;
-    case token::TOK_SLASH:   op = BinOpExpr::Operation::OP_SLASH   ; break;
-    case token::TOK_RMNDR:   op = BinOpExpr::Operation::OP_RMNDR   ; break;
-    default: break;
-  }
 
-    $$ = std::make_shared<BinOpExpr>($1, op, $3);
-}
+%left "&&" "||";
+%left "==" "!";
+%left "<" ">";
+%left "+" "-";
+%left "*" "/";
+
+expr: expr AND    expr
+  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_AND     , $3);}
+   | expr OR      expr
+  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_OR      , $3);}
+   | expr LESS    expr
+  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_LESS    , $3);}
+   | expr GREATER expr
+  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_GREATER , $3);}
+   | expr EQUAL   expr
+  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_EQUAL   , $3);}
+   | expr PLUS    expr
+  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_PLUS    , $3);}
+   | expr MINUS   expr
+  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_MINUS   , $3);}
+   | expr STAR    expr
+  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_STAR    , $3);}
+   | expr SLASH   expr
+  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_SLASH   , $3);}
+   | expr RMNDR   expr
+  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_RMNDR   , $3);}
+
     | expr "[" expr "]"
 //      { $$ = std::make_pair(std::vector<int>{$1.first[$3.first[0]]}, 0); }
       { $$ = std::make_shared<TrueExpr>(); }
@@ -236,10 +287,6 @@ expr: expr binary_operator expr {
     | "new" type_identifier "(" ")"
 //      { $$ = std::make_pair(std::vector<int>(1), 0); }
 //      { $$ = std::make_shared<NewExpr>($2); }
-
-    | "!" expr
-//      { $$ = std::make_pair(std::vector<int>{!$2.first[0]}, 0); }
-      { $$ = std::make_shared<NotExpr>($2); }
 
     | "(" expr ")"
       { $$ = $2; }
@@ -263,6 +310,11 @@ expr: expr binary_operator expr {
       { $$ = std::make_shared<FalseExpr>(); }
 
     | method_invocation              { };
+
+    | "!" expr
+//      { $$ = std::make_pair(std::vector<int>{!$2.first[0]}, 0); }
+      { $$ = std::make_shared<NotExpr>($2); }
+
 
 integer_literal: "number" { $$ = $1; }
                | "-" "number" { $$ = -$2; };

@@ -17,7 +17,8 @@ int Driver::parse(const std::string& f) {
     int res = parser();
     scan_end();
   
-    PrintTree("./printed_tree");
+//    PrintTree("./printed_tree");
+    Eval();
 
     return res;
 }
@@ -40,4 +41,10 @@ void Driver::scan_end()
 void Driver::PrintTree(const std::string& filename) const {
   auto visitor = std::make_shared<PrintVisitor>(filename);
   program->Accept(visitor);
+}
+
+int Driver::Eval() const {
+  auto visitor = std::make_shared<Interpreter>();
+  return visitor->GetResult(program);
+  return 0;
 }

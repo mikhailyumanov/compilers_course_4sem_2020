@@ -58,6 +58,7 @@ blank [ \t\r]
 "/"        return yy::parser::make_SLASH       (TOKEN::TOK_SLASH, loc);
 "%"        return yy::parser::make_RMNDR       (TOKEN::TOK_RMNDR, loc);
 
+"!"        return yy::parser::make_NOT         (loc);
 "("        return yy::parser::make_LPAREN      (loc);
 ")"        return yy::parser::make_RPAREN      (loc);
 "["        return yy::parser::make_LPARENSQR   (loc);

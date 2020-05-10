@@ -1,7 +1,6 @@
 #pragma once
 
 #include <fstream>
-#include <map>
 #include <string>
 #include <vector>
 
@@ -9,6 +8,7 @@
 #include "parser.hh"
 #include "program/Program.hpp"
 #include "visitors/PrintVisitor.hpp"
+#include "visitors/Interpreter.hpp"
 
 
 class Driver {
@@ -20,6 +20,7 @@ class Driver {
   void scan_end();
 
   void PrintTree(const std::string& filename) const;
+  int Eval() const;
 
  public:
   friend class Scanner;
@@ -28,7 +29,6 @@ class Driver {
   yy::parser parser;
 
   std::shared_ptr<Program> program;
-  std::map<std::string, int> variables;
 
   int result;
   bool trace_parsing;
