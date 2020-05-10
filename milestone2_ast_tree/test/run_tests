@@ -1,5 +1,5 @@
 #usage: run_tests {filename}
-#invoke from /build dir
+#invoke from /build or /bin dir
 
 filename=../test/$1
 
