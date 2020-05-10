@@ -1,6 +1,9 @@
 #pragma once
 
+#include "utils/BasicElement.hpp"
 
-struct Expression {
-  virtual int Eval() = 0;
+
+class Expression: public BasicElement {
+ public:
+  virtual int Eval() const = 0;
 };

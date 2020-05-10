@@ -1,9 +1,9 @@
 #pragma once
 
-#include <memory>
+#include "utils/BasicElement.hpp"
 
 
-class Statement: std::enable_shared_from_this<Statement> {
+class Statement: public BasicElement {
  public:
   virtual void Perform() const = 0;
 };
