@@ -3,14 +3,18 @@
 #include <memory>
 #include <vector>
 
+#include "utils/BasicElement.hpp"
+#include "visitors/Visitor.hpp"
 
-template <class T>
-class BasicList : enable_shared_from_this<BasicList> {
+
+class BasicList: public std::enable_shared_from_this<BasicList> {
  public:
   BasicList();
 
-  AddItem(std::shared_ptr<T> item);
+  virtual ~BasicList() = default;
 
- private:
-  std::vector<std::shared_ptr<T>> items_;
-}
+  void AddItem(std::shared_ptr<BasicElement> item);
+  void Accept(std::shared_ptr<Visitor> visitor);
+
+  std::vector<std::shared_ptr<BasicElement>> items;
+};

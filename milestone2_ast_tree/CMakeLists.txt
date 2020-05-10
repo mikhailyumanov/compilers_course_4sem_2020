@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 project(Project)
 
-find_package(FLEX)
-find_package(BISON)
+find_package(FLEX REQUIRED)
+find_package(BISON REQUIRED)
 
 set(
     HEADERS
@@ -25,14 +25,32 @@ FLEX_TARGET(
 
 ADD_FLEX_BISON_DEPENDENCY(MyScanner MyParser)
 
-add_executable(
-    Project
-    main.cpp
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
+
+set(
+    SOURCES
     driver.cpp
     ${BISON_MyParser_OUTPUTS}
     ${FLEX_MyScanner_OUTPUTS}
+    include/program/Program.cpp
+    include/program/MainClass.cpp
+    include/statements/PrintStmt.cpp
+    include/expressions/BinOpExpr.cpp
+    include/expressions/BoolConstExpr.cpp
+    include/expressions/IntExpr.cpp
+    include/expressions/NewExpr.cpp
+    include/expressions/NotExpr.cpp
+    include/utils/BasicList.cpp
+    include/visitors/PrintVisitor.cpp
 )
+
+add_executable(
+    Project
+    ${Project_SOURCE_DIR}/main.cpp
+    ${SOURCES}
+)
+
 target_include_directories(Project PRIVATE ${Project_SOURCE_DIR})
-
-
-
+target_include_directories(Project PRIVATE 
+  ${Project_SOURCE_DIR}/include
+)

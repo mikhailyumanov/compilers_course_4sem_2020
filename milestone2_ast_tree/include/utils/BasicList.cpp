@@ -1,11 +1,15 @@
 #include "utils/BasicList.hpp"
 
 
-template <class T>
-BasicList<T>::BasicList() {
+BasicList::BasicList() {
 }
 
-template <class T>
-BasicList<T>::AddItem(std::shared_ptr<T> item) {
-  items_.push_back(item);
+void BasicList::AddItem(std::shared_ptr<BasicElement> item) {
+  items.push_back(item);
+}
+
+void BasicList::Accept(std::shared_ptr<Visitor> visitor) {
+  for (auto item : items) {
+    item->Accept(visitor);
+  }
 }

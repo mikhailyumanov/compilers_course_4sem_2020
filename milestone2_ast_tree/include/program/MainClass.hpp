@@ -2,13 +2,14 @@
 
 #include <memory>
 
-#include "statements/StmtList.hpp"
+#include "visitors/Visitor.hpp"
 
 
-class MainClass : std::enable_shared_from_this<MainClass> {
+class MainClass: public std::enable_shared_from_this<MainClass> {
  public:
   MainClass(std::shared_ptr<StmtList> stmt_list);
 
- private:
-  std::shared_ptr<StmtList> stmt_list_;
+  void Accept(std::shared_ptr<Visitor> visitor);
+
+  std::shared_ptr<StmtList> stmt_list;
 };

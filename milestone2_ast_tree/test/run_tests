@@ -1,7 +1,7 @@
 #usage: run_tests {filename}
 #invoke from /build dir
 
-filename=$1
+filename=../test/$1
 
 if ! test -f $filename;
 then
