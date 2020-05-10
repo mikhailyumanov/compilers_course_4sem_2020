@@ -1,0 +1,48 @@
+Program
+	MainClass
+		PrintStmt
+			IntExpr 1
+		PrintStmt
+			BinOpExpr
+				IntExpr 2
+				5
+				BinOpExpr
+					IntExpr 3
+					7
+					IntExpr 5
+		PrintStmt
+			BinOpExpr
+				BinOpExpr
+					IntExpr 2
+					7
+					IntExpr 3
+				5
+				BinOpExpr
+					IntExpr 5
+					8
+					IntExpr 7
+		PrintStmt
+			BinOpExpr
+				BinOpExpr
+					IntExpr 2
+					7
+					IntExpr 3
+				5
+				BinOpExpr
+					IntExpr 5
+					8
+					IntExpr 7
+		PrintStmt
+			BinOpExpr
+				IntExpr 4
+				6
+				IntExpr 7
+		PrintStmt
+			BinOpExpr
+				NotExpr
+					BinOpExpr
+						IntExpr 2
+						3
+						IntExpr 3
+				4
+				TrueExpr

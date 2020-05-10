@@ -42,6 +42,7 @@ set(
     include/expressions/NotExpr.cpp
     include/utils/BasicList.cpp
     include/visitors/PrintVisitor.cpp
+    include/visitors/Interpreter.cpp
 )
 
 add_executable(

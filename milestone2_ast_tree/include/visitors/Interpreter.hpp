@@ -1,15 +1,15 @@
 #pragma once
 
-#include <fstream>
+#include <map>
 
 #include "utils/elements.hpp"
 #include "visitors/Visitor.hpp"
 
 
-class PrintVisitor: public Visitor,
-  public std::enable_shared_from_this<PrintVisitor> {
+class Interpreter: public Visitor,
+  public std::enable_shared_from_this<Interpreter> {
  public:
-  PrintVisitor(const std::string& filename);
+  Interpreter();
 
   void Visit(std::shared_ptr<Program> program) override;
   void Visit(std::shared_ptr<MainClass> main_class) override;
@@ -21,12 +21,15 @@ class PrintVisitor: public Visitor,
   void Visit(std::shared_ptr<NewExpr> new_expr) override;
   void Visit(std::shared_ptr<NotExpr> not_expr) override;
 
- ~PrintVisitor();
+  int GetResult(std::shared_ptr<Program> program);
 
  private:
-  void PrintTabs();
-  
+  void SetTosValue(int value);
+  void UnsetTosValue();
+
  private:
-  size_t num_tabs_ = 0;
-  std::ofstream stream_;
+  std::map<std::string, int> variables;
+  int tos_value_;
+  bool is_tos_expression_;
+
 };

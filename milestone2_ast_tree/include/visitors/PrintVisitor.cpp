@@ -1,5 +1,4 @@
 #include "visitors/PrintVisitor.hpp"
-#include "utils/elements.hpp"
 
 
 PrintVisitor::PrintVisitor(const std::string& filename) :stream_(filename) {
@@ -57,7 +56,7 @@ void PrintVisitor::Visit(std::shared_ptr<FalseExpr> false_expr) {
 
 void PrintVisitor::Visit(std::shared_ptr<IntExpr> int_expr) {
   PrintTabs();
-  stream_ << "IntExpr" << int_expr->value << std::endl;
+  stream_ << "IntExpr " << int_expr->value << std::endl;
 }
 
 void PrintVisitor::Visit(std::shared_ptr<NewExpr> new_expr) {

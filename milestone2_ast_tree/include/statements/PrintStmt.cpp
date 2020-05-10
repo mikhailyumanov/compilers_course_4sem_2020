@@ -9,6 +9,5 @@ void PrintStmt::Perform() const {
 }
 
 void PrintStmt::Accept(std::shared_ptr<Visitor> visitor) {
-  std::cout << "A\n";
   visitor->Visit(shared_from_this());
 }
