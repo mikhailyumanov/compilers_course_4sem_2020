@@ -5,7 +5,7 @@ class BasicList;
 // program
 class Program;
 class MainClass;
-using ClassDeclList = BasicList;
+class ClassDeclList;
 // statements
 class Statement;
 class AssertStmt;
@@ -16,7 +16,7 @@ class IfElseStmt;
 class WhileStmt;
 class PrintStmt;
 class AssignmentStmt;
-using StmtList = BasicList;
+class StmtList;
 // expressions
 class Expression;
 class BinOpExpr;
@@ -25,11 +25,12 @@ class FalseExpr;
 class IntExpr;
 class NewExpr;
 class NotExpr;
+class IdentExpr;
 // declarations
 class Decl;
 class VarDecl;
 class ClassDecl;
-using DeclList = BasicList;
+class DeclList;
 // value categories
 class Lvalue;
 

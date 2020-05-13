@@ -3,7 +3,7 @@
 #include "utils/BasicElement.hpp"
 
 
-class Statement: public BasicElement {
+class Statement: virtual public BasicElement {
  public:
   virtual void Perform() const = 0;
 };
