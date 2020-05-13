@@ -2,7 +2,5 @@
 
 Checkpoint 2 and 3: AST Tree and Visitors
 
-В папке bin содержится Project, вызывающий визитор Interpreter. Реализация с
-визитором PrintTree не сохранилась, а новую пока сделать невозможно (грамматика
-и инклуды перекроены и ещё в нерабочем состоянии), но сохранился результат его
-работы для test2.in - в файле printed_tree
+В папке bin содержится Project, вызывающий визиторы PrintVisitor и Interpreter
+на тесте test2.in, результат работы первого в файле print_tree

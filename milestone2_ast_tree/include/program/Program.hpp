@@ -3,7 +3,7 @@
 #include <memory>
 
 #include "program/MainClass.hpp"
-#include "utils/BasicList.hpp"
+#include "program/ClassDeclList.hpp"
 #include "visitors/Visitor.hpp"
 
 

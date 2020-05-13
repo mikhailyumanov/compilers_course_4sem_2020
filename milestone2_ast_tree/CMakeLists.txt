@@ -34,13 +34,30 @@ set(
     ${FLEX_MyScanner_OUTPUTS}
     include/program/Program.cpp
     include/program/MainClass.cpp
+
     include/statements/PrintStmt.cpp
+    include/statements/AssertStmt.cpp
+    include/statements/LocalVarDeclStmt.cpp
+    include/statements/StmtListStmt.cpp
+    include/statements/ConditionalStmt.cpp
+    include/statements/PrintStmt.cpp
+    include/statements/AssignmentStmt.cpp
+    include/statements/LocalVarDeclStmt.cpp
+
     include/expressions/BinOpExpr.cpp
     include/expressions/BoolConstExpr.cpp
     include/expressions/IntExpr.cpp
     include/expressions/NewExpr.cpp
     include/expressions/NotExpr.cpp
+    include/expressions/IdentExpr.cpp
+
     include/utils/BasicList.cpp
+
+    include/declarations/VarDecl.cpp
+    include/declarations/ClassDecl.cpp
+
+    include/value_categories/Lvalue.cpp
+
     include/visitors/PrintVisitor.cpp
     include/visitors/Interpreter.cpp
 )

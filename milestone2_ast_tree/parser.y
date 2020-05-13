@@ -138,10 +138,10 @@ program: main_class
 ;
 
 class_declaration_list: class_declaration
-                        { $$ = std::make_shared<ClassDeclList>($1); }
+                        { $$ = std::make_shared<ClassDeclList>();
+                          $$->AddItem($1); }
                       | class_declaration_list class_declaration
-                        { $$ = std::make_shared<ClassDeclList>($1); 
-                          $$.AddItem($2); }
+                        { $$ = $1; $$->AddItem($2); }
 ;
 
 main_class: "class" "identifier" "{"
@@ -169,9 +169,9 @@ declaration_list : declaration
 ;
 
 declaration: variable_declaration
-             { $$ = std::make_shared<VarDecl>($1); }
+             { $$ = $1; }
            | method_declaration
-//             { $$ = std::make_shared<MethodDecl>($1); }
+//             { $$ = $1; }
 ;
 
 method_declaration: "public" type "identifier" args_list "{"
@@ -190,7 +190,7 @@ formals: type "identifier"
 ;
 
 variable_declaration: type "identifier" ";"
-                      { $$ = std::make_chared<VarDecl>($1, $2); }
+                      { $$ = std::make_shared<VarDecl>($1, $2); }
 //                    { driver.variables[$2] = 
 //                          std::make_pair(std::vector<int>(), $1.second); }
 ;
@@ -209,7 +209,8 @@ type_identifier: "identifier"
 ;
 
 statement: "assert" "(" expr ")" ";"
-           { $$ = std::make_shared<AssertStmt>($3); }
+           { $$ = std::static_pointer_cast<Statement>(
+              std::make_shared<AssertStmt>($3)); }
          | local_variable_declaration
            { $$ = std::make_shared<LocalVarDeclStmt>($1); }
          | "{" statement_list "}"
@@ -236,7 +237,7 @@ local_variable_declaration: variable_declaration
 method_invocation: expr "." "identifier" "(" comma_expr_list ")" 
 ;
 
-lvalue: "identifier" { $$ = std::make_shared<Lvalue>($1); } //{ $$ = std::make_pair($1, -1); }
+lvalue: "identifier" { $$ = std::make_shared<Lvalue>($1, false); }
       | "identifier" "[" expr "]" //{ $$ = std::make_pair($1, $3.first[0]); }
 ;
 
@@ -293,7 +294,7 @@ expr: expr AND    expr
 
     | "identifier"
 //                   { $$ = driver.variables[$1]; }
-      { $$ = std::make_shared<TrueExpr>(); }
+      { $$ = std::make_shared<IdentExpr>($1); }
 
     | integer_literal
 //      { $$ = std::make_pair(std::vector<int>{$1}, 0); }
