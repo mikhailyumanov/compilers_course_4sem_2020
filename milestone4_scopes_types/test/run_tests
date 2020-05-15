@@ -1,0 +1,11 @@
+#usage: run_tests {filename}
+#invoke from /build or /bin dir
+
+filename=../test/$1
+
+if ! test -f $filename;
+then
+  exit 1
+else
+  ../bin/Project $filename
+fi 
