@@ -60,6 +60,7 @@ set(
 
     include/visitors/PrintVisitor.cpp
     include/visitors/Interpreter.cpp
+    include/visitors/TemplateVisitor.cpp
 )
 
 add_executable(

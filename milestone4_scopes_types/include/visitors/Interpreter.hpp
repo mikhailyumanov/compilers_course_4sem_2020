@@ -3,10 +3,10 @@
 #include <map>
 
 #include "utils/elements.hpp"
-#include "visitors/Visitor.hpp"
+#include "visitors/TemplateVisitor.hpp"
 
 
-class Interpreter: public Visitor,
+class Interpreter: public TemplateVisitor<int>,
   public std::enable_shared_from_this<Interpreter> {
  public:
   Interpreter();
@@ -32,6 +32,7 @@ class Interpreter: public Visitor,
   void Visit(std::shared_ptr<Lvalue> lvalue) override;
 
   int GetResult(std::shared_ptr<Program> program);
+  int Accept(std::shared_ptr<BasicElement> element) override;
 
  private:
   void SetTosValue(int value);

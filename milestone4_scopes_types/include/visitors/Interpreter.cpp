@@ -7,7 +7,7 @@ Interpreter::Interpreter() : tos_value_{0}, is_tos_expression_{false} {
 }
 
 void Interpreter::Visit(std::shared_ptr<Program> program) {
-  program->class_decl_list->Accept(shared_from_this());
+  program->class_decl_list->Accept(Interpreter::shared_from_this());
   program->main_class->Accept(shared_from_this());
 }
 
@@ -16,8 +16,7 @@ void Interpreter::Visit(std::shared_ptr<MainClass> main_class) {
 }
 
 void Interpreter::Visit(std::shared_ptr<AssertStmt> assert_stmt) {
-  assert_stmt->expr->Accept(shared_from_this());
-  if (!tos_value_) {
+  if (!Accept(assert_stmt->expr)) {
     throw AssertException();
   }
 }
@@ -32,47 +31,40 @@ void Interpreter::Visit(std::shared_ptr<StmtListStmt> stmt_list_stmt) {
 }
 
 void Interpreter::Visit(std::shared_ptr<IfStmt> if_stmt) {
-  if_stmt->expr->Accept(shared_from_this());
-  if (tos_value_) { 
+  if (Accept(if_stmt->expr)) { 
     if_stmt->stmt->Accept(shared_from_this()); 
   }
 }
 
 void Interpreter::Visit(std::shared_ptr<IfElseStmt> if_else_stmt) {
-  if_else_stmt->expr->Accept(shared_from_this());
-  int value = tos_value_;
-  if (value) { 
-    if_else_stmt->stmt_true->Accept(shared_from_this()); 
+  if (Accept(if_else_stmt->expr)) { 
+    tos_value_ = Accept(if_else_stmt->stmt_true);
   } else {
-    if_else_stmt->stmt_false->Accept(shared_from_this()); 
+    tos_value_ = Accept(if_else_stmt->stmt_false);
   }
 }
 
 void Interpreter::Visit(std::shared_ptr<WhileStmt> while_stmt) {
   while_stmt->expr->Accept(shared_from_this());
-  while (while_stmt->expr->Accept(shared_from_this()), tos_value_) { 
+  while (Accept(while_stmt->expr)) { 
     while_stmt->stmt->Accept(shared_from_this()); 
   }
 }
 
 void Interpreter::Visit(std::shared_ptr<PrintStmt> print_stmt) {
-  print_stmt->expr->Accept(shared_from_this());
-  std::cout << "Print: " << tos_value_ << std::endl;
-
+  std::cout << Accept(print_stmt->expr) << std::endl;
   UnsetTosValue();
 }
 
 void Interpreter::Visit(std::shared_ptr<AssignmentStmt> assignment_stmt) {
-  assignment_stmt->expr->Accept(shared_from_this());
-  variables[assignment_stmt->lvalue->name].value = tos_value_;
+  variables[assignment_stmt->lvalue->name].value =
+      Accept(assignment_stmt->expr);
   variables[assignment_stmt->lvalue->name].is_init = true;
 }
 
 void Interpreter::Visit(std::shared_ptr<BinOpExpr> bin_op_expr) {
-  bin_op_expr->lhs->Accept(shared_from_this());
-  int lhs = tos_value_;
-  bin_op_expr->rhs->Accept(shared_from_this());
-  int rhs = tos_value_;
+  int lhs = Accept(bin_op_expr->lhs);
+  int rhs = Accept(bin_op_expr->rhs);
   
   int tmp = 0;
   switch(bin_op_expr->op) {
@@ -107,8 +99,7 @@ void Interpreter::Visit(std::shared_ptr<IntExpr> int_expr) {
 void Interpreter::Visit(std::shared_ptr<NewExpr> new_expr) {}
 
 void Interpreter::Visit(std::shared_ptr<NotExpr> not_expr) {
-  not_expr->expr->Accept(shared_from_this());
-  SetTosValue(!tos_value_);
+  SetTosValue(!Accept(not_expr->expr));
 }
 
 void Interpreter::Visit(std::shared_ptr<IdentExpr> ident_expr) {
@@ -138,5 +129,10 @@ int Interpreter::GetResult(std::shared_ptr<Program> program) {
   UnsetTosValue();
   Visit(program);
 
+  return tos_value_;
+}
+
+int Interpreter::Accept(std::shared_ptr<BasicElement> element) {
+  element->Accept(shared_from_this());
   return tos_value_;
 }
