@@ -1,10 +1,9 @@
 #pragma once
 
-#include "Object.h"
+#include "types/Object.hpp"
 
 class UninitObject: public Object {
  public:
-    // explicit Integer(int value);
-    int ToInt() override;
-    // int value_;
+  int ToInt() const override;
+  bool ToBool() const override;
 };

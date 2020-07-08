@@ -17,13 +17,19 @@ class Visitor {
   virtual void Visit(std::shared_ptr<WhileStmt> while_stmt) = 0;
   virtual void Visit(std::shared_ptr<PrintStmt> print_stmt) = 0;
   virtual void Visit(std::shared_ptr<AssignmentStmt> assignment_stmt) = 0;
+
   virtual void Visit(std::shared_ptr<BinOpExpr> bin_op_expr) = 0;
+  virtual void Visit(std::shared_ptr<SubscriptExpr> subscript_expr) = 0;
+  virtual void Visit(std::shared_ptr<LengthExpr> length_expr) = 0;
   virtual void Visit(std::shared_ptr<TrueExpr> true_expr) = 0;
   virtual void Visit(std::shared_ptr<FalseExpr> false_expr) = 0;
   virtual void Visit(std::shared_ptr<IntExpr> int_expr) = 0;
   virtual void Visit(std::shared_ptr<NewExpr> new_expr) = 0;
+  virtual void Visit(std::shared_ptr<NewArrayExpr> new_array_expr) = 0;
   virtual void Visit(std::shared_ptr<NotExpr> not_expr) = 0;
   virtual void Visit(std::shared_ptr<IdentExpr> ident_expr) = 0;
+
+  virtual void Visit(std::shared_ptr<ClassDecl> class_decl) = 0;
   virtual void Visit(std::shared_ptr<VarDecl> var_decl) = 0;
   virtual void Visit(std::shared_ptr<Lvalue> lvalue) = 0;
 };

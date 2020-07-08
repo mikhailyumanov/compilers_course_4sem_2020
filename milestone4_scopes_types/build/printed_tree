@@ -1,0 +1,55 @@
+Program
+	MainClass
+		LocalVarDeclStmt
+			VarDecl int is array: 1 arr
+		AssignmentStmt
+			Lvalue arr
+			NewArrayExpr type = int
+				IntExpr 5
+		AssignmentStmt
+			Lvalue arr
+				IntExpr 1
+			IntExpr 3
+		AssignmentStmt
+			Lvalue arr
+				IntExpr 0
+			IntExpr 2
+		AssignmentStmt
+			Lvalue arr
+				IntExpr 2
+			IntExpr 5
+		AssignmentStmt
+			Lvalue arr
+				IntExpr 3
+			IntExpr 7
+		AssignmentStmt
+			Lvalue arr
+				IntExpr 4
+			IntExpr 11
+		PrintStmt
+			SubscriptExpr
+				IdentExpr arr
+				IntExpr 0
+		PrintStmt
+			SubscriptExpr
+				IdentExpr arr
+				IntExpr 4
+		PrintStmt
+			BinOpExpr
+				SubscriptExpr
+					IdentExpr arr
+					IntExpr 1
+				2
+				SubscriptExpr
+					IdentExpr arr
+					IntExpr 3
+		PrintStmt
+			BinOpExpr
+				SubscriptExpr
+					IdentExpr arr
+					IntExpr 2
+				4
+				IntExpr 4
+		PrintStmt
+			LengthExpr
+				IdentExpr arr

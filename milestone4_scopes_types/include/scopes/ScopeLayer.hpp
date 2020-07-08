@@ -15,7 +15,7 @@ class ScopeLayer: public std::enable_shared_from_this<ScopeLayer> {
     ScopeLayer();
   
     void DeclareVariable(Symbol symbol);
-    std::pair<Symbol, std::shared_ptr<Object>>& GetSymbol();
+    std::shared_ptr<Object>& GetSymbol(Symbol symbol);
     std::shared_ptr<Object> GetValue(Symbol symbol);
     void SetValue(Symbol symbol, std::shared_ptr<Object> value);
 

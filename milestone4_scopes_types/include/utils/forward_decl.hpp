@@ -20,10 +20,13 @@ class StmtList;
 // expressions
 class Expression;
 class BinOpExpr;
+class SubscriptExpr;
+class LengthExpr;
 class TrueExpr;
 class FalseExpr;
 class IntExpr;
 class NewExpr;
+class NewArrayExpr;
 class NotExpr;
 class IdentExpr;
 // declarations
@@ -31,6 +34,17 @@ class Decl;
 class VarDecl;
 class ClassDecl;
 class DeclList;
+// scopes
+class Symbol;
+class ScopeLayer;
+class ScopeLayerTree;
+// types
+class Object;
+class Integer;
+class Bool;
+class Class;
+class Array;
+class UninitObject;
 // value categories
 class Lvalue;
 

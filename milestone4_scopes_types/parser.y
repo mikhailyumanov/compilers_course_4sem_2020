@@ -111,6 +111,7 @@
 %nterm <int> binary_operator
 %nterm <std::shared_ptr<Lvalue>> lvalue
 %nterm <Type> type
+%nterm <std::string> type_identifier
 %nterm <std::string> simple_type
 %nterm <std::string> array_type
 
@@ -150,10 +151,10 @@ main_class: "class" "identifier" "{"
 ;
 
 class_declaration: "class" "identifier" "{" declaration_list "}"
-                   { $$ = std::make_shared<ClassDecl>($4); }
+                   { $$ = std::make_shared<ClassDecl>($2, $4); }
                  | "class" "identifier" "extends" "identifier" "{"
                    declaration_list "}"
-                   { $$ = std::make_shared<ClassDecl>($6); }
+                   { $$ = std::make_shared<ClassDecl>($2, $6); }
 ;
 
 statement_list: statement
@@ -199,13 +200,16 @@ type: simple_type { $$ = Type{$1, false}; } //{ $$ = std::make_pair($1, 0); }
     | array_type  { $$ = Type{$1, true};  } //{ $$ = std::make_pair($1, 1); }
 ;
 
-simple_type: "int" | "boolean" | "void" | "type_identifier"
+simple_type: "int" { $$ = "int"; }
+           | "boolean" {$$ = "boolean"; }
+           | "void" { $$ = "void"; }
+           | type_identifier{ $$ = $1; }
 ;
 
-array_type: simple_type "[" "]" //{ $$ = $1; }
+array_type: simple_type "[" "]" { $$ = $1; std::cout << $1 << std::endl; }
 ;
 
-type_identifier: "identifier"
+type_identifier: "identifier" { $$ = $1; }
 ;
 
 statement: "assert" "(" expr ")" ";"
@@ -237,8 +241,10 @@ local_variable_declaration: variable_declaration
 method_invocation: expr "." "identifier" "(" comma_expr_list ")" 
 ;
 
-lvalue: "identifier" { $$ = std::make_shared<Lvalue>($1, false); }
-      | "identifier" "[" expr "]" //{ $$ = std::make_pair($1, $3.first[0]); }
+lvalue: "identifier" 
+        { $$ = std::make_shared<Lvalue>($1); }
+      | "identifier" "[" expr "]" 
+        { $$ = std::make_shared<Lvalue>($1, $3); }
 ;
 
 comma_expr_list: expr
@@ -275,19 +281,19 @@ expr: expr AND    expr
 
     | expr "[" expr "]"
 //      { $$ = std::make_pair(std::vector<int>{$1.first[$3.first[0]]}, 0); }
-      { $$ = std::make_shared<TrueExpr>(); }
+      { $$ = std::make_shared<SubscriptExpr>($1, $3); }
 
     | expr "." "length"
 // { $$ = std::make_pair(std::vector<int>{(int)$1.first.size()}, 0); }
-      { $$ = std::make_shared<TrueExpr>(); }
+      { $$ = std::make_shared<LengthExpr>($1); }
 
     | "new" simple_type "[" expr "]"
 //      { $$ = std::make_pair(std::vector<int>($4.first[0]), 1); }
-      { $$ = std::make_shared<TrueExpr>(); }
+      { $$ = std::make_shared<NewArrayExpr>($2, $4); }
 
     | "new" type_identifier "(" ")"
 //      { $$ = std::make_pair(std::vector<int>(1), 0); }
-//      { $$ = std::make_shared<NewExpr>($2); }
+      { $$ = std::make_shared<NewExpr>($2); }
 
     | "(" expr ")"
       { $$ = $2; }

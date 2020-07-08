@@ -12,7 +12,7 @@ class NewExpr: public Expression,
   NewExpr(const std::string& type);
   
   int Eval() const override;
+  void Accept(std::shared_ptr<Visitor> visitor) override;
 
- private:
-  std::string type_;
+  std::string type;
 };

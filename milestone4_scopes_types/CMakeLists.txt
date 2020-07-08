@@ -46,8 +46,11 @@ set(
 
     include/expressions/BinOpExpr.cpp
     include/expressions/BoolConstExpr.cpp
+    include/expressions/SubscriptExpr.cpp
+    include/expressions/LengthExpr.cpp
     include/expressions/IntExpr.cpp
     include/expressions/NewExpr.cpp
+    include/expressions/NewArrayExpr.cpp
     include/expressions/NotExpr.cpp
     include/expressions/IdentExpr.cpp
 
@@ -55,6 +58,17 @@ set(
 
     include/declarations/VarDecl.cpp
     include/declarations/ClassDecl.cpp
+
+    include/scopes/Symbol.cpp
+    include/scopes/ScopeLayer.cpp
+    include/scopes/ScopeLayerTree.cpp
+
+    include/types/Object.cpp
+    include/types/Integer.cpp
+    include/types/Bool.cpp
+    include/types/Class.cpp
+    include/types/Array.cpp
+    include/types/UninitObject.cpp
 
     include/value_categories/Lvalue.cpp
 

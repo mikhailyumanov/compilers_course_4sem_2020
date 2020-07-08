@@ -1,4 +1,4 @@
-#include "scopes/Symbol.h"
+#include "scopes/Symbol.hpp"
 
 #include <iostream>
 

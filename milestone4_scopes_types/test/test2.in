@@ -26,3 +26,9 @@ class Class {
     }
   }
 }
+
+class MyClass {
+  int x;
+  int y;
+  int z;
+}

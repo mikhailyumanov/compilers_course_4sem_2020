@@ -31,7 +31,7 @@ void ScopeLayer::DeclareVariable(Symbol symbol) {
 }
 
 
-std::pair<Symbol, std::shared_ptr<Object>>& ScopeLayer::GetSymbol(
+std::shared_ptr<Object>& ScopeLayer::GetSymbol(
     Symbol symbol) {
   auto current_layer = shared_from_this();
 
@@ -41,7 +41,7 @@ std::pair<Symbol, std::shared_ptr<Object>>& ScopeLayer::GetSymbol(
   }
 
   if (current_layer->IsDeclared(symbol)) {
-    return current_layer->local_vars_.find(symbol);
+    return current_layer->local_vars_[symbol];
   } else {
     throw std::runtime_error("Variable not declared");
   }
@@ -49,16 +49,16 @@ std::pair<Symbol, std::shared_ptr<Object>>& ScopeLayer::GetSymbol(
 
 
 std::shared_ptr<Object> ScopeLayer::GetValue(Symbol symbol) {
-  return GetSymbol(symbol).second;
+  return GetSymbol(symbol);
 }
 
 
 void ScopeLayer::SetValue(Symbol symbol, std::shared_ptr<Object> value) {
-  GetSymbol(symbol).second = value;
+  GetSymbol(symbol) = value;
 }
 
 
-bool ScopeLayer::IsDeclared(Symbol symbol) {
+bool ScopeLayer::IsDeclared(Symbol symbol) const {
   return local_vars_.find(symbol) != local_vars_.end();
 }
 

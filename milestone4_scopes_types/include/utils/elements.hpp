@@ -18,9 +18,12 @@
 // expressions
 #include "expressions/Expression.hpp"
 #include "expressions/BinOpExpr.hpp"
+#include "expressions/SubscriptExpr.hpp"
+#include "expressions/LengthExpr.hpp"
 #include "expressions/BoolConstExpr.hpp"
 #include "expressions/IntExpr.hpp"
 #include "expressions/NewExpr.hpp"
+#include "expressions/NewArrayExpr.hpp"
 #include "expressions/NotExpr.hpp"
 #include "expressions/IdentExpr.hpp"
 // declarations
@@ -28,5 +31,16 @@
 #include "declarations/VarDecl.hpp"
 #include "declarations/ClassDecl.hpp"
 #include "declarations/DeclList.hpp"
+// scopes
+#include "scopes/Symbol.hpp"
+#include "scopes/ScopeLayer.hpp"
+#include "scopes/ScopeLayerTree.hpp"
+// types
+#include "types/Object.hpp"
+#include "types/Integer.hpp"
+#include "types/Bool.hpp"
+#include "types/Class.hpp"
+#include "types/Array.hpp"
+#include "types/UninitObject.hpp"
 // value categories
 #include "value_categories/Lvalue.hpp"

@@ -11,12 +11,17 @@ CMakeFiles/Project.dir/driver.cpp.o
  ../include/expressions/Expression.hpp
  ../include/expressions/IdentExpr.hpp
  ../include/expressions/IntExpr.hpp
+ ../include/expressions/LengthExpr.hpp
+ ../include/expressions/NewArrayExpr.hpp
  ../include/expressions/NewExpr.hpp
  ../include/expressions/NotExpr.hpp
+ ../include/expressions/SubscriptExpr.hpp
  ../include/program/ClassDeclList.hpp
  ../include/program/MainClass.hpp
  ../include/program/Program.hpp
- ../include/scopes/VarScope.hpp
+ ../include/scopes/ScopeLayer.hpp
+ ../include/scopes/ScopeLayerTree.hpp
+ ../include/scopes/Symbol.hpp
  ../include/statements/AssertStmt.hpp
  ../include/statements/AssignmentStmt.hpp
  ../include/statements/ConditionalStmt.hpp
@@ -25,6 +30,12 @@ CMakeFiles/Project.dir/driver.cpp.o
  ../include/statements/Statement.hpp
  ../include/statements/StmtList.hpp
  ../include/statements/StmtListStmt.hpp
+ ../include/types/Array.hpp
+ ../include/types/Bool.hpp
+ ../include/types/Class.hpp
+ ../include/types/Integer.hpp
+ ../include/types/Object.hpp
+ ../include/types/UninitObject.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/BasicList.hpp
  ../include/utils/elements.hpp
@@ -43,7 +54,6 @@ CMakeFiles/Project.dir/include/declarations/ClassDecl.cpp.o
  ../include/declarations/ClassDecl.hpp
  ../include/declarations/Decl.hpp
  ../include/declarations/DeclList.hpp
- ../include/scopes/VarScope.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/BasicList.hpp
  ../include/utils/forward_decl.hpp
@@ -52,7 +62,6 @@ CMakeFiles/Project.dir/include/declarations/ClassDecl.cpp.o
 CMakeFiles/Project.dir/include/declarations/VarDecl.cpp.o
  ../include/declarations/Decl.hpp
  ../include/declarations/VarDecl.hpp
- ../include/scopes/VarScope.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/forward_decl.hpp
  ../include/visitors/Visitor.hpp
@@ -85,6 +94,20 @@ CMakeFiles/Project.dir/include/expressions/IntExpr.cpp.o
  ../include/utils/forward_decl.hpp
  ../include/visitors/Visitor.hpp
  /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/expressions/IntExpr.cpp
+CMakeFiles/Project.dir/include/expressions/LengthExpr.cpp.o
+ ../include/expressions/Expression.hpp
+ ../include/expressions/LengthExpr.hpp
+ ../include/utils/BasicElement.hpp
+ ../include/utils/forward_decl.hpp
+ ../include/visitors/Visitor.hpp
+ /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/expressions/LengthExpr.cpp
+CMakeFiles/Project.dir/include/expressions/NewArrayExpr.cpp.o
+ ../include/expressions/Expression.hpp
+ ../include/expressions/NewArrayExpr.hpp
+ ../include/utils/BasicElement.hpp
+ ../include/utils/forward_decl.hpp
+ ../include/visitors/Visitor.hpp
+ /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/expressions/NewArrayExpr.cpp
 CMakeFiles/Project.dir/include/expressions/NewExpr.cpp.o
  ../include/expressions/Expression.hpp
  ../include/expressions/NewExpr.hpp
@@ -99,6 +122,13 @@ CMakeFiles/Project.dir/include/expressions/NotExpr.cpp.o
  ../include/utils/forward_decl.hpp
  ../include/visitors/Visitor.hpp
  /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/expressions/NotExpr.cpp
+CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o
+ ../include/expressions/Expression.hpp
+ ../include/expressions/SubscriptExpr.hpp
+ ../include/utils/BasicElement.hpp
+ ../include/utils/forward_decl.hpp
+ ../include/visitors/Visitor.hpp
+ /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/expressions/SubscriptExpr.cpp
 CMakeFiles/Project.dir/include/program/MainClass.cpp.o
  ../include/program/MainClass.hpp
  ../include/utils/forward_decl.hpp
@@ -113,6 +143,21 @@ CMakeFiles/Project.dir/include/program/Program.cpp.o
  ../include/utils/forward_decl.hpp
  ../include/visitors/Visitor.hpp
  /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/program/Program.cpp
+CMakeFiles/Project.dir/include/scopes/ScopeLayer.cpp.o
+ ../include/scopes/ScopeLayer.hpp
+ ../include/scopes/Symbol.hpp
+ ../include/types/Object.hpp
+ ../include/types/UninitObject.hpp
+ /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/scopes/ScopeLayer.cpp
+CMakeFiles/Project.dir/include/scopes/ScopeLayerTree.cpp.o
+ ../include/scopes/ScopeLayer.hpp
+ ../include/scopes/ScopeLayerTree.hpp
+ ../include/scopes/Symbol.hpp
+ ../include/types/Object.hpp
+ /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/scopes/ScopeLayerTree.cpp
+CMakeFiles/Project.dir/include/scopes/Symbol.cpp.o
+ ../include/scopes/Symbol.hpp
+ /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/scopes/Symbol.cpp
 CMakeFiles/Project.dir/include/statements/AssertStmt.cpp.o
  ../include/expressions/Expression.hpp
  ../include/statements/AssertStmt.hpp
@@ -122,6 +167,7 @@ CMakeFiles/Project.dir/include/statements/AssertStmt.cpp.o
  ../include/visitors/Visitor.hpp
  /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/statements/AssertStmt.cpp
 CMakeFiles/Project.dir/include/statements/AssignmentStmt.cpp.o
+ ../include/expressions/Expression.hpp
  ../include/statements/AssignmentStmt.hpp
  ../include/statements/Statement.hpp
  ../include/utils/BasicElement.hpp
@@ -140,7 +186,6 @@ CMakeFiles/Project.dir/include/statements/ConditionalStmt.cpp.o
 CMakeFiles/Project.dir/include/statements/LocalVarDeclStmt.cpp.o
  ../include/declarations/Decl.hpp
  ../include/declarations/VarDecl.hpp
- ../include/scopes/VarScope.hpp
  ../include/statements/LocalVarDeclStmt.hpp
  ../include/statements/Statement.hpp
  ../include/utils/BasicElement.hpp
@@ -164,6 +209,29 @@ CMakeFiles/Project.dir/include/statements/StmtListStmt.cpp.o
  ../include/utils/forward_decl.hpp
  ../include/visitors/Visitor.hpp
  /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/statements/StmtListStmt.cpp
+CMakeFiles/Project.dir/include/types/Array.cpp.o
+ ../include/types/Array.hpp
+ ../include/types/Object.hpp
+ /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/types/Array.cpp
+CMakeFiles/Project.dir/include/types/Bool.cpp.o
+ ../include/types/Bool.hpp
+ ../include/types/Object.hpp
+ /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/types/Bool.cpp
+CMakeFiles/Project.dir/include/types/Class.cpp.o
+ ../include/types/Class.hpp
+ ../include/types/Object.hpp
+ /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/types/Class.cpp
+CMakeFiles/Project.dir/include/types/Integer.cpp.o
+ ../include/types/Integer.hpp
+ ../include/types/Object.hpp
+ /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/types/Integer.cpp
+CMakeFiles/Project.dir/include/types/Object.cpp.o
+ ../include/types/Object.hpp
+ /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/types/Object.cpp
+CMakeFiles/Project.dir/include/types/UninitObject.cpp.o
+ ../include/types/Object.hpp
+ ../include/types/UninitObject.hpp
+ /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/types/UninitObject.cpp
 CMakeFiles/Project.dir/include/utils/BasicList.cpp.o
  ../include/utils/BasicElement.hpp
  ../include/utils/BasicList.hpp
@@ -171,6 +239,7 @@ CMakeFiles/Project.dir/include/utils/BasicList.cpp.o
  ../include/visitors/Visitor.hpp
  /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/utils/BasicList.cpp
 CMakeFiles/Project.dir/include/value_categories/Lvalue.cpp.o
+ ../include/expressions/Expression.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/forward_decl.hpp
  ../include/value_categories/Lvalue.hpp
@@ -186,12 +255,17 @@ CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o
  ../include/expressions/Expression.hpp
  ../include/expressions/IdentExpr.hpp
  ../include/expressions/IntExpr.hpp
+ ../include/expressions/LengthExpr.hpp
+ ../include/expressions/NewArrayExpr.hpp
  ../include/expressions/NewExpr.hpp
  ../include/expressions/NotExpr.hpp
+ ../include/expressions/SubscriptExpr.hpp
  ../include/program/ClassDeclList.hpp
  ../include/program/MainClass.hpp
  ../include/program/Program.hpp
- ../include/scopes/VarScope.hpp
+ ../include/scopes/ScopeLayer.hpp
+ ../include/scopes/ScopeLayerTree.hpp
+ ../include/scopes/Symbol.hpp
  ../include/statements/AssertStmt.hpp
  ../include/statements/AssignmentStmt.hpp
  ../include/statements/ConditionalStmt.hpp
@@ -200,6 +274,12 @@ CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o
  ../include/statements/Statement.hpp
  ../include/statements/StmtList.hpp
  ../include/statements/StmtListStmt.hpp
+ ../include/types/Array.hpp
+ ../include/types/Bool.hpp
+ ../include/types/Class.hpp
+ ../include/types/Integer.hpp
+ ../include/types/Object.hpp
+ ../include/types/UninitObject.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/BasicList.hpp
  ../include/utils/elements.hpp
@@ -219,12 +299,17 @@ CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o
  ../include/expressions/Expression.hpp
  ../include/expressions/IdentExpr.hpp
  ../include/expressions/IntExpr.hpp
+ ../include/expressions/LengthExpr.hpp
+ ../include/expressions/NewArrayExpr.hpp
  ../include/expressions/NewExpr.hpp
  ../include/expressions/NotExpr.hpp
+ ../include/expressions/SubscriptExpr.hpp
  ../include/program/ClassDeclList.hpp
  ../include/program/MainClass.hpp
  ../include/program/Program.hpp
- ../include/scopes/VarScope.hpp
+ ../include/scopes/ScopeLayer.hpp
+ ../include/scopes/ScopeLayerTree.hpp
+ ../include/scopes/Symbol.hpp
  ../include/statements/AssertStmt.hpp
  ../include/statements/AssignmentStmt.hpp
  ../include/statements/ConditionalStmt.hpp
@@ -233,6 +318,12 @@ CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o
  ../include/statements/Statement.hpp
  ../include/statements/StmtList.hpp
  ../include/statements/StmtListStmt.hpp
+ ../include/types/Array.hpp
+ ../include/types/Bool.hpp
+ ../include/types/Class.hpp
+ ../include/types/Integer.hpp
+ ../include/types/Object.hpp
+ ../include/types/UninitObject.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/BasicList.hpp
  ../include/utils/elements.hpp
@@ -257,12 +348,17 @@ CMakeFiles/Project.dir/main.cpp.o
  ../include/expressions/Expression.hpp
  ../include/expressions/IdentExpr.hpp
  ../include/expressions/IntExpr.hpp
+ ../include/expressions/LengthExpr.hpp
+ ../include/expressions/NewArrayExpr.hpp
  ../include/expressions/NewExpr.hpp
  ../include/expressions/NotExpr.hpp
+ ../include/expressions/SubscriptExpr.hpp
  ../include/program/ClassDeclList.hpp
  ../include/program/MainClass.hpp
  ../include/program/Program.hpp
- ../include/scopes/VarScope.hpp
+ ../include/scopes/ScopeLayer.hpp
+ ../include/scopes/ScopeLayerTree.hpp
+ ../include/scopes/Symbol.hpp
  ../include/statements/AssertStmt.hpp
  ../include/statements/AssignmentStmt.hpp
  ../include/statements/ConditionalStmt.hpp
@@ -271,6 +367,12 @@ CMakeFiles/Project.dir/main.cpp.o
  ../include/statements/Statement.hpp
  ../include/statements/StmtList.hpp
  ../include/statements/StmtListStmt.hpp
+ ../include/types/Array.hpp
+ ../include/types/Bool.hpp
+ ../include/types/Class.hpp
+ ../include/types/Integer.hpp
+ ../include/types/Object.hpp
+ ../include/types/UninitObject.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/BasicList.hpp
  ../include/utils/elements.hpp
@@ -295,12 +397,17 @@ CMakeFiles/Project.dir/parser.cpp.o
  ../include/expressions/Expression.hpp
  ../include/expressions/IdentExpr.hpp
  ../include/expressions/IntExpr.hpp
+ ../include/expressions/LengthExpr.hpp
+ ../include/expressions/NewArrayExpr.hpp
  ../include/expressions/NewExpr.hpp
  ../include/expressions/NotExpr.hpp
+ ../include/expressions/SubscriptExpr.hpp
  ../include/program/ClassDeclList.hpp
  ../include/program/MainClass.hpp
  ../include/program/Program.hpp
- ../include/scopes/VarScope.hpp
+ ../include/scopes/ScopeLayer.hpp
+ ../include/scopes/ScopeLayerTree.hpp
+ ../include/scopes/Symbol.hpp
  ../include/statements/AssertStmt.hpp
  ../include/statements/AssignmentStmt.hpp
  ../include/statements/ConditionalStmt.hpp
@@ -309,6 +416,12 @@ CMakeFiles/Project.dir/parser.cpp.o
  ../include/statements/Statement.hpp
  ../include/statements/StmtList.hpp
  ../include/statements/StmtListStmt.hpp
+ ../include/types/Array.hpp
+ ../include/types/Bool.hpp
+ ../include/types/Class.hpp
+ ../include/types/Integer.hpp
+ ../include/types/Object.hpp
+ ../include/types/UninitObject.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/BasicList.hpp
  ../include/utils/elements.hpp
@@ -333,12 +446,17 @@ CMakeFiles/Project.dir/scanner.cpp.o
  ../include/expressions/Expression.hpp
  ../include/expressions/IdentExpr.hpp
  ../include/expressions/IntExpr.hpp
+ ../include/expressions/LengthExpr.hpp
+ ../include/expressions/NewArrayExpr.hpp
  ../include/expressions/NewExpr.hpp
  ../include/expressions/NotExpr.hpp
+ ../include/expressions/SubscriptExpr.hpp
  ../include/program/ClassDeclList.hpp
  ../include/program/MainClass.hpp
  ../include/program/Program.hpp
- ../include/scopes/VarScope.hpp
+ ../include/scopes/ScopeLayer.hpp
+ ../include/scopes/ScopeLayerTree.hpp
+ ../include/scopes/Symbol.hpp
  ../include/statements/AssertStmt.hpp
  ../include/statements/AssignmentStmt.hpp
  ../include/statements/ConditionalStmt.hpp
@@ -347,6 +465,12 @@ CMakeFiles/Project.dir/scanner.cpp.o
  ../include/statements/Statement.hpp
  ../include/statements/StmtList.hpp
  ../include/statements/StmtListStmt.hpp
+ ../include/types/Array.hpp
+ ../include/types/Bool.hpp
+ ../include/types/Class.hpp
+ ../include/types/Integer.hpp
+ ../include/types/Object.hpp
+ ../include/types/UninitObject.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/BasicList.hpp
  ../include/utils/elements.hpp

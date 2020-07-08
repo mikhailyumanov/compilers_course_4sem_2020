@@ -113,6 +113,25 @@ void PrintVisitor::Visit(std::shared_ptr<BinOpExpr> bin_op_expr) {
   --num_tabs_;
 }
 
+void PrintVisitor::Visit(std::shared_ptr<SubscriptExpr> subscript_expr) {
+  PrintTabs();
+  stream_ << "SubscriptExpr" << std::endl;
+
+  ++num_tabs_;
+  subscript_expr->expr->Accept(shared_from_this());
+  subscript_expr->idx->Accept(shared_from_this());
+  --num_tabs_;
+}
+
+void PrintVisitor::Visit(std::shared_ptr<LengthExpr> length_expr) {
+  PrintTabs();
+  stream_ << "LengthExpr" << std::endl;
+
+  ++num_tabs_;
+  length_expr->expr->Accept(shared_from_this());
+  --num_tabs_;
+}
+
 void PrintVisitor::Visit(std::shared_ptr<TrueExpr> true_expr) {
   PrintTabs();
   stream_ << "TrueExpr" << std::endl;
@@ -130,7 +149,16 @@ void PrintVisitor::Visit(std::shared_ptr<IntExpr> int_expr) {
 
 void PrintVisitor::Visit(std::shared_ptr<NewExpr> new_expr) {
   PrintTabs();
-  stream_ << "NewExpr" << std::endl;
+  stream_ << "NewExpr type = " << new_expr->type << std::endl;
+}
+
+void PrintVisitor::Visit(std::shared_ptr<NewArrayExpr> new_array_expr) {
+  PrintTabs();
+  stream_ << "NewArrayExpr type = " << new_array_expr->type << std::endl;
+
+  ++num_tabs_;
+  new_array_expr->expr->Accept(shared_from_this());
+  --num_tabs_;
 }
 
 void PrintVisitor::Visit(std::shared_ptr<NotExpr> not_expr) {
@@ -147,6 +175,15 @@ void PrintVisitor::Visit(std::shared_ptr<IdentExpr> ident_expr) {
   stream_ << "IdentExpr " << ident_expr->name << std::endl;
 }
 
+void PrintVisitor::Visit(std::shared_ptr<ClassDecl> class_decl) {
+  PrintTabs();
+  stream_ << "ClassDecl " << class_decl->class_name << std::endl;
+
+  ++num_tabs_;
+  class_decl->decl_list->Accept(shared_from_this());
+  --num_tabs_;
+}
+
 void PrintVisitor::Visit(std::shared_ptr<VarDecl> var_decl) {
   PrintTabs();
   stream_ << "VarDecl " << var_decl->type.type << " " 
@@ -156,8 +193,13 @@ void PrintVisitor::Visit(std::shared_ptr<VarDecl> var_decl) {
 
 void PrintVisitor::Visit(std::shared_ptr<Lvalue> lvalue) {
   PrintTabs();
-  stream_ << "Lvalue " << lvalue->name << " "
-          << "is array: " << lvalue->is_array << std::endl;
+  
+  stream_ << "Lvalue " << lvalue->name << std::endl;
+  if (lvalue->expr) {
+    ++num_tabs_;
+    lvalue->expr->Accept(shared_from_this());
+    --num_tabs_;
+  }
 }
 
 PrintVisitor::~PrintVisitor() {

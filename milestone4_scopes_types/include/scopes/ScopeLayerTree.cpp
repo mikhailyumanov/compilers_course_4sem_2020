@@ -1,4 +1,4 @@
-#include "scopes/ScopeLayerTree.h"
+#include "scopes/ScopeLayerTree.hpp"
 
 
 ScopeLayerTree::ScopeLayerTree(std::shared_ptr<ScopeLayer> root)

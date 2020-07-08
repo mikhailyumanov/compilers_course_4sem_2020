@@ -17,8 +17,8 @@ int Driver::parse(const std::string& f) {
     int res = parser();
     scan_end();
   
-//    PrintTree("./printed_tree");
-    Eval();
+    PrintTree("./printed_tree");
+//    Eval();
 
     return res;
 }

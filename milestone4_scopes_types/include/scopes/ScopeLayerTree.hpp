@@ -1,6 +1,6 @@
 #pragma once
 
-#include "scopes/ScopeLayer.h"
+#include "scopes/ScopeLayer.hpp"
 
 class ScopeLayerTree: public std::enable_shared_from_this<ScopeLayerTree> {
  public:

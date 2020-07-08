@@ -256,7 +256,7 @@ namespace yy {
   {
     switch (that.type_get ())
     {
-      case 51: // type
+      case 50: // type
         value.YY_MOVE_OR_COPY< Type > (YY_MOVE (that.value));
         break;
 
@@ -271,7 +271,7 @@ namespace yy {
       case 12: // "=="
       case 13: // "%"
       case 46: // "number"
-      case 49: // integer_literal
+      case 48: // integer_literal
         value.YY_MOVE_OR_COPY< int > (YY_MOVE (that.value));
         break;
 
@@ -295,7 +295,7 @@ namespace yy {
         value.YY_MOVE_OR_COPY< std::shared_ptr<Expression> > (YY_MOVE (that.value));
         break;
 
-      case 50: // lvalue
+      case 49: // lvalue
         value.YY_MOVE_OR_COPY< std::shared_ptr<Lvalue> > (YY_MOVE (that.value));
         break;
 
@@ -321,6 +321,7 @@ namespace yy {
         break;
 
       case 45: // "identifier"
+      case 51: // type_identifier
       case 52: // simple_type
       case 53: // array_type
         value.YY_MOVE_OR_COPY< std::string > (YY_MOVE (that.value));
@@ -341,7 +342,7 @@ namespace yy {
   {
     switch (that.type_get ())
     {
-      case 51: // type
+      case 50: // type
         value.move< Type > (YY_MOVE (that.value));
         break;
 
@@ -356,7 +357,7 @@ namespace yy {
       case 12: // "=="
       case 13: // "%"
       case 46: // "number"
-      case 49: // integer_literal
+      case 48: // integer_literal
         value.move< int > (YY_MOVE (that.value));
         break;
 
@@ -380,7 +381,7 @@ namespace yy {
         value.move< std::shared_ptr<Expression> > (YY_MOVE (that.value));
         break;
 
-      case 50: // lvalue
+      case 49: // lvalue
         value.move< std::shared_ptr<Lvalue> > (YY_MOVE (that.value));
         break;
 
@@ -406,6 +407,7 @@ namespace yy {
         break;
 
       case 45: // "identifier"
+      case 51: // type_identifier
       case 52: // simple_type
       case 53: // array_type
         value.move< std::string > (YY_MOVE (that.value));
@@ -426,7 +428,7 @@ namespace yy {
     state = that.state;
     switch (that.type_get ())
     {
-      case 51: // type
+      case 50: // type
         value.copy< Type > (that.value);
         break;
 
@@ -441,7 +443,7 @@ namespace yy {
       case 12: // "=="
       case 13: // "%"
       case 46: // "number"
-      case 49: // integer_literal
+      case 48: // integer_literal
         value.copy< int > (that.value);
         break;
 
@@ -465,7 +467,7 @@ namespace yy {
         value.copy< std::shared_ptr<Expression> > (that.value);
         break;
 
-      case 50: // lvalue
+      case 49: // lvalue
         value.copy< std::shared_ptr<Lvalue> > (that.value);
         break;
 
@@ -491,6 +493,7 @@ namespace yy {
         break;
 
       case 45: // "identifier"
+      case 51: // type_identifier
       case 52: // simple_type
       case 53: // array_type
         value.copy< std::string > (that.value);
@@ -510,7 +513,7 @@ namespace yy {
     state = that.state;
     switch (that.type_get ())
     {
-      case 51: // type
+      case 50: // type
         value.move< Type > (that.value);
         break;
 
@@ -525,7 +528,7 @@ namespace yy {
       case 12: // "=="
       case 13: // "%"
       case 46: // "number"
-      case 49: // integer_literal
+      case 48: // integer_literal
         value.move< int > (that.value);
         break;
 
@@ -549,7 +552,7 @@ namespace yy {
         value.move< std::shared_ptr<Expression> > (that.value);
         break;
 
-      case 50: // lvalue
+      case 49: // lvalue
         value.move< std::shared_ptr<Lvalue> > (that.value);
         break;
 
@@ -575,6 +578,7 @@ namespace yy {
         break;
 
       case 45: // "identifier"
+      case 51: // type_identifier
       case 52: // simple_type
       case 53: // array_type
         value.move< std::string > (that.value);
@@ -830,7 +834,7 @@ namespace yy {
          when using variants.  */
       switch (yyr1_[yyn])
     {
-      case 51: // type
+      case 50: // type
         yylhs.value.emplace< Type > ();
         break;
 
@@ -845,7 +849,7 @@ namespace yy {
       case 12: // "=="
       case 13: // "%"
       case 46: // "number"
-      case 49: // integer_literal
+      case 48: // integer_literal
         yylhs.value.emplace< int > ();
         break;
 
@@ -869,7 +873,7 @@ namespace yy {
         yylhs.value.emplace< std::shared_ptr<Expression> > ();
         break;
 
-      case 50: // lvalue
+      case 49: // lvalue
         yylhs.value.emplace< std::shared_ptr<Lvalue> > ();
         break;
 
@@ -895,6 +899,7 @@ namespace yy {
         break;
 
       case 45: // "identifier"
+      case 51: // type_identifier
       case 52: // simple_type
       case 53: // array_type
         yylhs.value.emplace< std::string > ();
@@ -921,303 +926,345 @@ namespace yy {
           switch (yyn)
             {
   case 2:
-#line 135 "parser.y"
+#line 136 "parser.y"
          { yylhs.value.as < std::shared_ptr<Program> > () = std::make_shared<Program>(yystack_[0].value.as < std::shared_ptr<MainClass> > ()); driver.program = yylhs.value.as < std::shared_ptr<Program> > (); }
-#line 927 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 932 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 3:
-#line 137 "parser.y"
+#line 138 "parser.y"
          { yylhs.value.as < std::shared_ptr<Program> > () = std::make_shared<Program>(yystack_[1].value.as < std::shared_ptr<MainClass> > (), yystack_[0].value.as < std::shared_ptr<ClassDeclList> > ()); driver.program = yylhs.value.as < std::shared_ptr<Program> > (); }
-#line 933 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 938 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 4:
-#line 141 "parser.y"
+#line 142 "parser.y"
                         { yylhs.value.as < std::shared_ptr<ClassDeclList> > () = std::make_shared<ClassDeclList>();
                           yylhs.value.as < std::shared_ptr<ClassDeclList> > ()->AddItem(yystack_[0].value.as < std::shared_ptr<ClassDecl> > ()); }
-#line 940 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 945 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 5:
-#line 144 "parser.y"
+#line 145 "parser.y"
                         { yylhs.value.as < std::shared_ptr<ClassDeclList> > () = yystack_[1].value.as < std::shared_ptr<ClassDeclList> > (); yylhs.value.as < std::shared_ptr<ClassDeclList> > ()->AddItem(yystack_[0].value.as < std::shared_ptr<ClassDecl> > ()); }
-#line 946 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 951 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 6:
-#line 149 "parser.y"
+#line 150 "parser.y"
             { yylhs.value.as < std::shared_ptr<MainClass> > () = std::make_shared<MainClass>(yystack_[2].value.as < std::shared_ptr<StmtList> > ()); }
-#line 952 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 957 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 7:
-#line 153 "parser.y"
-                   { yylhs.value.as < std::shared_ptr<ClassDecl> > () = std::make_shared<ClassDecl>(yystack_[1].value.as < std::shared_ptr<DeclList> > ()); }
-#line 958 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 154 "parser.y"
+                   { yylhs.value.as < std::shared_ptr<ClassDecl> > () = std::make_shared<ClassDecl>(yystack_[3].value.as < std::string > (), yystack_[1].value.as < std::shared_ptr<DeclList> > ()); }
+#line 963 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 8:
-#line 156 "parser.y"
-                   { yylhs.value.as < std::shared_ptr<ClassDecl> > () = std::make_shared<ClassDecl>(yystack_[1].value.as < std::shared_ptr<DeclList> > ()); }
-#line 964 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 157 "parser.y"
+                   { yylhs.value.as < std::shared_ptr<ClassDecl> > () = std::make_shared<ClassDecl>(yystack_[5].value.as < std::string > (), yystack_[1].value.as < std::shared_ptr<DeclList> > ()); }
+#line 969 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 9:
-#line 160 "parser.y"
+#line 161 "parser.y"
                 { yylhs.value.as < std::shared_ptr<StmtList> > () = std::make_shared<StmtList>(); yylhs.value.as < std::shared_ptr<StmtList> > ()->AddItem(yystack_[0].value.as < std::shared_ptr<Statement> > ()); }
-#line 970 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 975 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 10:
-#line 162 "parser.y"
+#line 163 "parser.y"
                 { yylhs.value.as < std::shared_ptr<StmtList> > () = yystack_[1].value.as < std::shared_ptr<StmtList> > (); yylhs.value.as < std::shared_ptr<StmtList> > ()->AddItem(yystack_[0].value.as < std::shared_ptr<Statement> > ()); }
-#line 976 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 981 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 11:
-#line 166 "parser.y"
+#line 167 "parser.y"
                    { yylhs.value.as < std::shared_ptr<DeclList> > () = std::make_shared<DeclList>(); yylhs.value.as < std::shared_ptr<DeclList> > ()->AddItem(yystack_[0].value.as < std::shared_ptr<Decl> > ()); }
-#line 982 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 987 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 12:
-#line 168 "parser.y"
+#line 169 "parser.y"
                    { yylhs.value.as < std::shared_ptr<DeclList> > () = yystack_[1].value.as < std::shared_ptr<DeclList> > (); yylhs.value.as < std::shared_ptr<DeclList> > ()->AddItem(yystack_[0].value.as < std::shared_ptr<Decl> > ()); }
-#line 988 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 993 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 13:
-#line 172 "parser.y"
+#line 173 "parser.y"
              { yylhs.value.as < std::shared_ptr<Decl> > () = yystack_[0].value.as < std::shared_ptr<VarDecl> > (); }
-#line 994 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 999 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 21:
-#line 193 "parser.y"
+#line 194 "parser.y"
                       { yylhs.value.as < std::shared_ptr<VarDecl> > () = std::make_shared<VarDecl>(yystack_[2].value.as < Type > (), yystack_[1].value.as < std::string > ()); }
-#line 1000 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1005 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 22:
-#line 198 "parser.y"
+#line 199 "parser.y"
                   { yylhs.value.as < Type > () = Type{yystack_[0].value.as < std::string > (), false}; }
-#line 1006 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1011 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 23:
-#line 199 "parser.y"
+#line 200 "parser.y"
                   { yylhs.value.as < Type > () = Type{yystack_[0].value.as < std::string > (), true};  }
-#line 1012 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1017 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+    break;
+
+  case 24:
+#line 203 "parser.y"
+                   { yylhs.value.as < std::string > () = "int"; }
+#line 1023 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+    break;
+
+  case 25:
+#line 204 "parser.y"
+                       {yylhs.value.as < std::string > () = "boolean"; }
+#line 1029 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+    break;
+
+  case 26:
+#line 205 "parser.y"
+                    { yylhs.value.as < std::string > () = "void"; }
+#line 1035 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+    break;
+
+  case 27:
+#line 206 "parser.y"
+                            { yylhs.value.as < std::string > () = yystack_[0].value.as < std::string > (); }
+#line 1041 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 28:
-#line 205 "parser.y"
-            { yylhs.value.as < std::string > () = yystack_[2].value.as < std::string > (); }
-#line 1018 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 209 "parser.y"
+                                { yylhs.value.as < std::string > () = yystack_[2].value.as < std::string > (); std::cout << yystack_[2].value.as < std::string > () << std::endl; }
+#line 1047 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+    break;
+
+  case 29:
+#line 212 "parser.y"
+                              { yylhs.value.as < std::string > () = yystack_[0].value.as < std::string > (); }
+#line 1053 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 30:
-#line 212 "parser.y"
+#line 216 "parser.y"
            { yylhs.value.as < std::shared_ptr<Statement> > () = std::static_pointer_cast<Statement>(
               std::make_shared<AssertStmt>(yystack_[2].value.as < std::shared_ptr<Expression> > ())); }
-#line 1025 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1060 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 31:
-#line 215 "parser.y"
+#line 219 "parser.y"
            { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<LocalVarDeclStmt>(yystack_[0].value.as < std::shared_ptr<VarDecl> > ()); }
-#line 1031 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1066 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 32:
-#line 217 "parser.y"
+#line 221 "parser.y"
            { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<StmtListStmt>(yystack_[1].value.as < std::shared_ptr<StmtList> > ()); }
-#line 1037 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1072 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 33:
-#line 219 "parser.y"
+#line 223 "parser.y"
            { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<IfStmt>(yystack_[2].value.as < std::shared_ptr<Expression> > (), yystack_[0].value.as < std::shared_ptr<Statement> > ()); }
-#line 1043 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1078 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 34:
-#line 221 "parser.y"
+#line 225 "parser.y"
            { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<IfElseStmt>(yystack_[4].value.as < std::shared_ptr<Expression> > (), yystack_[2].value.as < std::shared_ptr<Statement> > (), yystack_[0].value.as < std::shared_ptr<Statement> > ()); }
-#line 1049 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1084 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 35:
-#line 223 "parser.y"
+#line 227 "parser.y"
            { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<WhileStmt>(yystack_[2].value.as < std::shared_ptr<Expression> > (), yystack_[0].value.as < std::shared_ptr<Statement> > ()); }
-#line 1055 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1090 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 36:
-#line 225 "parser.y"
+#line 229 "parser.y"
            { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<PrintStmt>(yystack_[2].value.as < std::shared_ptr<Expression> > ()); }
-#line 1061 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1096 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 37:
-#line 227 "parser.y"
+#line 231 "parser.y"
            { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<AssignmentStmt>(yystack_[3].value.as < std::shared_ptr<Lvalue> > (), yystack_[1].value.as < std::shared_ptr<Expression> > ()); }
-#line 1067 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1102 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 40:
-#line 234 "parser.y"
+#line 238 "parser.y"
                             { yylhs.value.as < std::shared_ptr<VarDecl> > () = yystack_[0].value.as < std::shared_ptr<VarDecl> > (); }
-#line 1073 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1108 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 42:
-#line 240 "parser.y"
-                     { yylhs.value.as < std::shared_ptr<Lvalue> > () = std::make_shared<Lvalue>(yystack_[0].value.as < std::string > (), false); }
-#line 1079 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 245 "parser.y"
+        { yylhs.value.as < std::shared_ptr<Lvalue> > () = std::make_shared<Lvalue>(yystack_[0].value.as < std::string > ()); }
+#line 1114 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+    break;
+
+  case 43:
+#line 247 "parser.y"
+        { yylhs.value.as < std::shared_ptr<Lvalue> > () = std::make_shared<Lvalue>(yystack_[3].value.as < std::string > (), yystack_[1].value.as < std::shared_ptr<Expression> > ()); }
+#line 1120 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 46:
-#line 256 "parser.y"
+#line 262 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_AND     , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1085 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1126 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 47:
-#line 258 "parser.y"
+#line 264 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_OR      , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1091 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1132 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 48:
-#line 260 "parser.y"
+#line 266 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_LESS    , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1097 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1138 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 49:
-#line 262 "parser.y"
+#line 268 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_GREATER , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1103 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1144 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 50:
-#line 264 "parser.y"
+#line 270 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_EQUAL   , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1109 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1150 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 51:
-#line 266 "parser.y"
+#line 272 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_PLUS    , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1115 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1156 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 52:
-#line 268 "parser.y"
+#line 274 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_MINUS   , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1121 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1162 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 53:
-#line 270 "parser.y"
+#line 276 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_STAR    , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1127 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1168 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 54:
-#line 272 "parser.y"
+#line 278 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_SLASH   , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1133 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1174 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 55:
-#line 274 "parser.y"
+#line 280 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_RMNDR   , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1139 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1180 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 56:
-#line 278 "parser.y"
-      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<TrueExpr>(); }
-#line 1145 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 284 "parser.y"
+      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<SubscriptExpr>(yystack_[3].value.as < std::shared_ptr<Expression> > (), yystack_[1].value.as < std::shared_ptr<Expression> > ()); }
+#line 1186 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 57:
-#line 282 "parser.y"
-      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<TrueExpr>(); }
-#line 1151 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 288 "parser.y"
+      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<LengthExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > ()); }
+#line 1192 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 58:
-#line 286 "parser.y"
-      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<TrueExpr>(); }
-#line 1157 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 292 "parser.y"
+      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<NewArrayExpr>(yystack_[3].value.as < std::string > (), yystack_[1].value.as < std::shared_ptr<Expression> > ()); }
+#line 1198 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+    break;
+
+  case 59:
+#line 296 "parser.y"
+      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<NewExpr>(yystack_[2].value.as < std::string > ()); }
+#line 1204 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 60:
-#line 293 "parser.y"
+#line 299 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = yystack_[1].value.as < std::shared_ptr<Expression> > (); }
-#line 1163 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1210 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 61:
-#line 297 "parser.y"
+#line 303 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<IdentExpr>(yystack_[0].value.as < std::string > ()); }
-#line 1169 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1216 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 62:
-#line 301 "parser.y"
+#line 307 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<IntExpr>(yystack_[0].value.as < int > ()); }
-#line 1175 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1222 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 63:
-#line 303 "parser.y"
+#line 309 "parser.y"
                                      { /* TODO */ }
-#line 1181 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1228 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 64:
-#line 307 "parser.y"
+#line 313 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<TrueExpr>(); }
-#line 1187 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1234 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 65:
-#line 311 "parser.y"
+#line 317 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<FalseExpr>(); }
-#line 1193 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1240 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 66:
-#line 313 "parser.y"
+#line 319 "parser.y"
                                      { }
-#line 1199 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1246 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 67:
-#line 317 "parser.y"
+#line 323 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<NotExpr>(yystack_[0].value.as < std::shared_ptr<Expression> > ()); }
-#line 1205 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1252 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 68:
-#line 320 "parser.y"
+#line 326 "parser.y"
                           { yylhs.value.as < int > () = yystack_[0].value.as < int > (); }
-#line 1211 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1258 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 69:
-#line 321 "parser.y"
+#line 327 "parser.y"
                               { yylhs.value.as < int > () = -yystack_[0].value.as < int > (); }
-#line 1217 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1264 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
 
-#line 1221 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1268 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
 
             default:
               break;
@@ -1488,30 +1535,30 @@ namespace yy {
   }
 
 
-  const signed char parser::yypact_ninf_ = -70;
+  const signed char parser::yypact_ninf_ = -71;
 
   const signed char parser::yytable_ninf_ = -43;
 
   const short
   parser::yypact_[] =
   {
-     -22,   -26,    30,     4,    26,   -70,    16,     4,   -70,    29,
-      -7,   -70,    46,   434,    19,    33,   448,   -70,   -70,   -70,
-     -70,    43,    75,   -70,   183,   -70,   -70,   -70,    74,    55,
-      66,    77,    96,   -70,   -70,   434,   101,   102,   -70,   -70,
-     189,   106,   -14,   105,   -70,   113,   -70,    88,    -1,   -70,
-     169,   169,   -70,   -70,   448,    94,    53,    53,   169,    37,
-     -70,   -70,   -70,   119,   128,   130,    53,   125,    14,   -70,
-     -70,   148,    82,   -70,   -70,   -70,   417,   138,   111,   -70,
-     -70,   -70,   453,   -70,   273,   140,   -70,   136,   147,    53,
-      53,    53,   233,   121,    53,    53,   -70,   -70,    53,    53,
-      53,    53,    53,    53,    53,    53,    53,    53,    53,    -4,
-     -70,   149,   -70,   -70,    53,   156,   291,   309,   327,   -70,
-     153,   345,   253,    52,    52,    70,    70,   435,   435,   471,
-     471,   453,   417,   363,   -70,   160,   -70,   381,   -70,   169,
-     169,   157,   139,   -70,   -70,   -70,    53,   -70,   161,   -70,
-     -70,   174,   417,    44,   169,    53,   -70,    53,   -70,   399,
-     417,   168,   -70
+     -20,    -5,    44,    26,    42,   -71,    20,    26,   -71,    48,
+     -12,   -71,    55,   394,    38,    53,    35,   -71,   -71,   -71,
+     -71,    49,   -71,    82,   -71,   178,   -71,   -71,   -71,    91,
+      74,    70,    93,   103,   -71,   -71,   394,   110,   115,   -71,
+     -71,   187,   116,   -14,   112,   -71,   119,   -71,    97,    17,
+     -71,   165,   165,   -71,   -71,    35,    98,    52,    52,   165,
+      35,   -71,   -71,   -71,   128,   134,   138,    52,   139,    12,
+     -71,   -71,   155,    81,   -71,   -71,   -71,   413,   136,   109,
+     -71,   -71,   -71,   449,   -71,   269,   137,   151,   169,    52,
+      52,    52,   229,   130,    52,    52,   -71,   -71,    52,    52,
+      52,    52,    52,    52,    52,    52,    52,    52,    52,   -34,
+     -71,   167,   -71,   -71,   172,    52,   287,   305,   323,   -71,
+     173,   341,   249,   164,   164,    47,    47,   431,   431,    13,
+      13,   449,   413,   359,   -71,   182,   -71,   -71,   377,   165,
+     165,   176,   157,   -71,   -71,   -71,    52,   -71,   179,   -71,
+     -71,   190,   413,    65,   165,    52,   -71,    52,   -71,   395,
+     413,   186,   -71
   };
 
   const signed char
@@ -1519,18 +1566,18 @@ namespace yy {
   {
        0,     0,     0,     2,     0,     1,     0,     3,     4,     0,
        0,     5,     0,     0,     0,     0,     0,    24,    25,    26,
-      27,     0,    22,    23,     0,    11,    13,    14,     0,     0,
-       0,     0,     0,     7,    12,     0,     0,     0,    21,    28,
-       0,     0,     0,     0,     8,     0,    16,     0,     0,    18,
-       0,     0,    20,    17,     0,     0,     0,     0,     0,     0,
-      63,    64,    65,     0,     0,     0,     0,     0,    61,    68,
-      62,     0,     0,    40,     9,    31,     0,    66,     0,    19,
-      69,    61,    67,    66,     0,     0,    29,     0,     0,     0,
+      29,     0,    27,    22,    23,     0,    11,    13,    14,     0,
+       0,     0,     0,     0,     7,    12,     0,     0,     0,    21,
+      28,     0,     0,     0,     0,     8,     0,    16,     0,     0,
+      18,     0,     0,    20,    17,     0,     0,     0,     0,     0,
+       0,    63,    64,    65,     0,     0,     0,     0,     0,    61,
+      68,    62,     0,     0,    40,     9,    31,     0,    66,     0,
+      19,    69,    61,    67,    66,     0,     0,    27,     0,     0,
        0,     0,     0,     0,     0,     0,    15,    10,     0,     0,
        0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
       39,     0,    60,    32,     0,     0,     0,     0,     0,    38,
        0,     0,     0,    52,    51,    53,    54,    46,    47,    48,
-      49,    50,    55,     0,    57,     0,     6,     0,    59,     0,
+      49,    50,    55,     0,    57,     0,     6,    59,     0,     0,
        0,     0,     0,    43,    37,    56,     0,    58,    33,    35,
       30,     0,    44,     0,     0,     0,    41,     0,    34,     0,
       45,     0,    36
@@ -1539,127 +1586,123 @@ namespace yy {
   const short
   parser::yypgoto_[] =
   {
-     -70,   -70,   -70,   -10,   133,   -70,   -70,   -70,   -70,   191,
-     -38,   166,   -13,    -6,   -69,   -70,   -52,   -70,   -70,   -70,
-     150,   -70,   -50,   -70
+     -71,   -71,   -71,    16,   153,   154,   -71,   -71,   -71,   -71,
+     211,   -46,   183,     2,    50,   -70,   -71,   -53,   -71,   -71,
+     -71,   174,   -51,   -71
   };
 
   const short
   parser::yydefgoto_[] =
   {
-      -1,    70,    71,    21,    22,    23,     2,     7,     3,     8,
-      72,    24,    25,    73,    74,    75,    76,    27,    43,    48,
-      49,    88,    83,   153
+      -1,    71,    72,    21,    22,    23,    24,     2,     7,     3,
+       8,    73,    25,    26,    74,    75,    76,    77,    28,    44,
+      49,    50,    84,   153
   };
 
   const short
   parser::yytable_[] =
   {
-      77,    77,    46,    97,    82,    84,    30,    26,    77,    97,
-       1,    34,    13,    78,    92,    53,    97,   -42,    26,     4,
-      85,    54,    77,    17,    18,    19,    14,    34,    77,    26,
-       5,    94,    47,    20,    26,    77,     6,   116,   117,   118,
-     134,   135,   121,   122,    47,     9,   123,   124,   125,   126,
-     127,   128,   129,   130,   131,   132,   133,    55,   100,   101,
-     156,    10,   137,    12,    28,   107,   157,    56,    57,   108,
-     148,   149,    29,   109,    17,    18,    19,    59,    60,    61,
-      62,    15,    86,   107,    20,   158,    55,   108,    31,    77,
-      77,   109,    32,    35,   152,    36,    56,    57,    81,    69,
-      38,    58,    96,   159,    77,   160,    59,    60,    61,    62,
-      63,    37,    64,    65,    39,    55,    41,    42,    66,    17,
-      18,    19,    45,    67,    50,    56,    57,    68,    69,    20,
-      58,   111,    51,    52,    89,    59,    60,    61,    62,    63,
-      80,    64,    65,    90,    55,    91,    93,    66,    17,    18,
-      19,    95,    67,   114,    56,    57,    68,    69,    20,    58,
-     113,   110,   115,   120,    59,    60,    61,    62,    63,   136,
-      64,    65,   138,    55,   142,   146,    66,    17,    18,    19,
-     150,    67,   151,    56,    57,    68,    69,    20,    58,   155,
-     154,   162,    87,    59,    60,    61,    62,    63,    11,    64,
-      65,    40,     0,    33,    79,    66,    17,    18,    19,    44,
-      67,     0,     0,     0,    68,    69,    20,    16,     0,     0,
-      17,    18,    19,    16,     0,     0,    17,    18,    19,     0,
-      20,     0,     0,     0,     0,     0,    20,    98,    99,   100,
-     101,   102,   103,   104,   105,   106,   107,     0,     0,     0,
-     108,     0,     0,     0,   109,     0,   119,    98,    99,   100,
-     101,   102,   103,   104,   105,   106,   107,     0,     0,     0,
-     108,     0,     0,     0,   109,     0,   144,    98,    99,   100,
-     101,   102,   103,   104,   105,   106,   107,     0,     0,   112,
-     108,     0,     0,     0,   109,    98,    99,   100,   101,   102,
-     103,   104,   105,   106,   107,     0,     0,   139,   108,     0,
-       0,     0,   109,    98,    99,   100,   101,   102,   103,   104,
-     105,   106,   107,     0,     0,   140,   108,     0,     0,     0,
+      78,    78,    47,    97,    83,    85,    79,    13,    78,    97,
+     134,   135,     1,    86,    92,   -42,    97,    98,    99,   100,
+     101,    14,    78,    17,    18,    19,   107,    35,    78,    94,
+     108,    20,    31,    54,   109,    78,   116,   117,   118,    55,
+       4,   121,   122,    35,     5,   123,   124,   125,   126,   127,
+     128,   129,   130,   131,   132,   133,    56,   -29,     6,    48,
+     107,     9,   138,    27,   108,    10,    57,    58,   109,   148,
+     149,    48,    17,    18,    19,    27,    60,    61,    62,    63,
+      20,   156,    12,    29,   158,    56,    27,   157,    78,    78,
+      15,    27,    30,   152,    32,    57,    58,    82,    70,    33,
+      59,    96,   159,    78,   160,    60,    61,    62,    63,    64,
+      36,    65,    66,    56,    37,    38,    39,    67,    17,    18,
+      19,    40,    68,    57,    58,    42,    69,    70,    59,   111,
+      43,    51,    46,    60,    61,    62,    63,    64,    52,    65,
+      66,    56,    53,    89,    81,    67,    17,    18,    19,    90,
+      68,    57,    58,    91,    69,    70,    59,   113,    95,   110,
+      93,    60,    61,    62,    63,    64,   114,    65,    66,    56,
+     100,   101,   120,    67,    17,    18,    19,   107,    68,    57,
+      58,   108,    69,    70,    59,   109,   115,   136,   137,    60,
+      61,    62,    63,    64,   142,    65,    66,   146,    34,   150,
+     151,    67,    17,    18,    19,   155,    68,    45,   154,   162,
+      69,    70,    16,    87,    88,    17,    18,    19,    11,    41,
+       0,    16,     0,    20,    17,    18,    19,     0,     0,    80,
+       0,     0,    20,    98,    99,   100,   101,   102,   103,   104,
+     105,   106,   107,     0,     0,     0,   108,     0,     0,     0,
+     109,     0,   119,    98,    99,   100,   101,   102,   103,   104,
+     105,   106,   107,     0,     0,     0,   108,     0,     0,     0,
+     109,     0,   144,    98,    99,   100,   101,   102,   103,   104,
+     105,   106,   107,     0,     0,   112,   108,     0,     0,     0,
      109,    98,    99,   100,   101,   102,   103,   104,   105,   106,
-     107,     0,     0,   141,   108,     0,     0,     0,   109,    98,
+     107,     0,     0,   139,   108,     0,     0,     0,   109,    98,
       99,   100,   101,   102,   103,   104,   105,   106,   107,     0,
-       0,     0,   108,   143,     0,     0,   109,    98,    99,   100,
-     101,   102,   103,   104,   105,   106,   107,     0,     0,     0,
-     108,   145,     0,     0,   109,    98,    99,   100,   101,   102,
-     103,   104,   105,   106,   107,     0,     0,     0,   108,   147,
+       0,   140,   108,     0,     0,     0,   109,    98,    99,   100,
+     101,   102,   103,   104,   105,   106,   107,     0,     0,   141,
+     108,     0,     0,     0,   109,    98,    99,   100,   101,   102,
+     103,   104,   105,   106,   107,     0,     0,     0,   108,   143,
        0,     0,   109,    98,    99,   100,   101,   102,   103,   104,
-     105,   106,   107,     0,     0,   161,   108,     0,     0,     0,
+     105,   106,   107,     0,     0,     0,   108,   145,     0,     0,
      109,    98,    99,   100,   101,   102,   103,   104,   105,   106,
-     107,     0,     0,     0,   108,     0,     0,     0,   109,    98,
-      99,   100,   101,     0,     0,   104,   105,   106,   107,     0,
-       0,     0,   108,     0,     0,     0,   109,    98,    99,   100,
-     101,     0,     0,   104,   105,     0,   107,     0,    16,     0,
-     108,    17,    18,    19,   109,    98,    99,   100,   101,     0,
-       0,    20,     0,     0,   107,    17,    18,    19,   108,     0,
-       0,     0,   109,     0,     0,    20
+     107,     0,     0,     0,   108,   147,     0,     0,   109,    98,
+      99,   100,   101,   102,   103,   104,   105,   106,   107,     0,
+       0,   161,   108,     0,     0,     0,   109,    98,    99,   100,
+     101,   102,   103,   104,   105,   106,   107,     0,    16,     0,
+     108,    17,    18,    19,   109,    98,    99,   100,   101,    20,
+       0,   104,   105,   106,   107,     0,     0,     0,   108,     0,
+       0,     0,   109,    98,    99,   100,   101,     0,     0,   104,
+     105,     0,   107,     0,     0,     0,   108,     0,     0,     0,
+     109
   };
 
   const short
   parser::yycheck_[] =
   {
-      50,    51,    16,    72,    56,    57,    16,    13,    58,    78,
-      32,    24,    19,    51,    66,    16,    85,     3,    24,    45,
-      58,    22,    72,    37,    38,    39,    33,    40,    78,    35,
-       0,    17,    42,    47,    40,    85,    32,    89,    90,    91,
-      44,    45,    94,    95,    54,    19,    98,    99,   100,   101,
-     102,   103,   104,   105,   106,   107,   108,     4,     6,     7,
-      16,    45,   114,    34,    45,    13,    22,    14,    15,    17,
-     139,   140,    39,    21,    37,    38,    39,    24,    25,    26,
-      27,    35,    45,    13,    47,   154,     4,    17,    45,   139,
-     140,    21,    17,    19,   146,    40,    14,    15,    45,    46,
-      23,    19,    20,   155,   154,   157,    24,    25,    26,    27,
-      28,    45,    30,    31,    18,     4,    15,    15,    36,    37,
-      38,    39,    16,    41,    19,    14,    15,    45,    46,    47,
-      19,    20,    19,    45,    15,    24,    25,    26,    27,    28,
-      46,    30,    31,    15,     4,    15,    21,    36,    37,    38,
-      39,     3,    41,    17,    14,    15,    45,    46,    47,    19,
-      20,    23,    15,    42,    24,    25,    26,    27,    28,    20,
-      30,    31,    16,     4,    21,    15,    36,    37,    38,    39,
-      23,    41,    43,    14,    15,    45,    46,    47,    19,    15,
-      29,    23,    59,    24,    25,    26,    27,    28,     7,    30,
-      31,    35,    -1,    20,    54,    36,    37,    38,    39,    20,
-      41,    -1,    -1,    -1,    45,    46,    47,    34,    -1,    -1,
-      37,    38,    39,    34,    -1,    -1,    37,    38,    39,    -1,
-      47,    -1,    -1,    -1,    -1,    -1,    47,     4,     5,     6,
-       7,     8,     9,    10,    11,    12,    13,    -1,    -1,    -1,
-      17,    -1,    -1,    -1,    21,    -1,    23,     4,     5,     6,
-       7,     8,     9,    10,    11,    12,    13,    -1,    -1,    -1,
-      17,    -1,    -1,    -1,    21,    -1,    23,     4,     5,     6,
-       7,     8,     9,    10,    11,    12,    13,    -1,    -1,    16,
-      17,    -1,    -1,    -1,    21,     4,     5,     6,     7,     8,
-       9,    10,    11,    12,    13,    -1,    -1,    16,    17,    -1,
-      -1,    -1,    21,     4,     5,     6,     7,     8,     9,    10,
+      51,    52,    16,    73,    57,    58,    52,    19,    59,    79,
+      44,    45,    32,    59,    67,     3,    86,     4,     5,     6,
+       7,    33,    73,    37,    38,    39,    13,    25,    79,    17,
+      17,    45,    16,    16,    21,    86,    89,    90,    91,    22,
+      45,    94,    95,    41,     0,    98,    99,   100,   101,   102,
+     103,   104,   105,   106,   107,   108,     4,    45,    32,    43,
+      13,    19,   115,    13,    17,    45,    14,    15,    21,   139,
+     140,    55,    37,    38,    39,    25,    24,    25,    26,    27,
+      45,    16,    34,    45,   154,     4,    36,    22,   139,   140,
+      35,    41,    39,   146,    45,    14,    15,    45,    46,    17,
+      19,    20,   155,   154,   157,    24,    25,    26,    27,    28,
+      19,    30,    31,     4,    40,    45,    23,    36,    37,    38,
+      39,    18,    41,    14,    15,    15,    45,    46,    19,    20,
+      15,    19,    16,    24,    25,    26,    27,    28,    19,    30,
+      31,     4,    45,    15,    46,    36,    37,    38,    39,    15,
+      41,    14,    15,    15,    45,    46,    19,    20,     3,    23,
+      21,    24,    25,    26,    27,    28,    15,    30,    31,     4,
+       6,     7,    42,    36,    37,    38,    39,    13,    41,    14,
+      15,    17,    45,    46,    19,    21,    17,    20,    16,    24,
+      25,    26,    27,    28,    21,    30,    31,    15,    20,    23,
+      43,    36,    37,    38,    39,    15,    41,    20,    29,    23,
+      45,    46,    34,    60,    60,    37,    38,    39,     7,    36,
+      -1,    34,    -1,    45,    37,    38,    39,    -1,    -1,    55,
+      -1,    -1,    45,     4,     5,     6,     7,     8,     9,    10,
+      11,    12,    13,    -1,    -1,    -1,    17,    -1,    -1,    -1,
+      21,    -1,    23,     4,     5,     6,     7,     8,     9,    10,
+      11,    12,    13,    -1,    -1,    -1,    17,    -1,    -1,    -1,
+      21,    -1,    23,     4,     5,     6,     7,     8,     9,    10,
       11,    12,    13,    -1,    -1,    16,    17,    -1,    -1,    -1,
       21,     4,     5,     6,     7,     8,     9,    10,    11,    12,
       13,    -1,    -1,    16,    17,    -1,    -1,    -1,    21,     4,
        5,     6,     7,     8,     9,    10,    11,    12,    13,    -1,
-      -1,    -1,    17,    18,    -1,    -1,    21,     4,     5,     6,
-       7,     8,     9,    10,    11,    12,    13,    -1,    -1,    -1,
-      17,    18,    -1,    -1,    21,     4,     5,     6,     7,     8,
+      -1,    16,    17,    -1,    -1,    -1,    21,     4,     5,     6,
+       7,     8,     9,    10,    11,    12,    13,    -1,    -1,    16,
+      17,    -1,    -1,    -1,    21,     4,     5,     6,     7,     8,
        9,    10,    11,    12,    13,    -1,    -1,    -1,    17,    18,
       -1,    -1,    21,     4,     5,     6,     7,     8,     9,    10,
-      11,    12,    13,    -1,    -1,    16,    17,    -1,    -1,    -1,
+      11,    12,    13,    -1,    -1,    -1,    17,    18,    -1,    -1,
       21,     4,     5,     6,     7,     8,     9,    10,    11,    12,
-      13,    -1,    -1,    -1,    17,    -1,    -1,    -1,    21,     4,
-       5,     6,     7,    -1,    -1,    10,    11,    12,    13,    -1,
-      -1,    -1,    17,    -1,    -1,    -1,    21,     4,     5,     6,
-       7,    -1,    -1,    10,    11,    -1,    13,    -1,    34,    -1,
-      17,    37,    38,    39,    21,     4,     5,     6,     7,    -1,
-      -1,    47,    -1,    -1,    13,    37,    38,    39,    17,    -1,
-      -1,    -1,    21,    -1,    -1,    47
+      13,    -1,    -1,    -1,    17,    18,    -1,    -1,    21,     4,
+       5,     6,     7,     8,     9,    10,    11,    12,    13,    -1,
+      -1,    16,    17,    -1,    -1,    -1,    21,     4,     5,     6,
+       7,     8,     9,    10,    11,    12,    13,    -1,    34,    -1,
+      17,    37,    38,    39,    21,     4,     5,     6,     7,    45,
+      -1,    10,    11,    12,    13,    -1,    -1,    -1,    17,    -1,
+      -1,    -1,    21,     4,     5,     6,     7,    -1,    -1,    10,
+      11,    -1,    13,    -1,    -1,    -1,    17,    -1,    -1,    -1,
+      21
   };
 
   const signed char
@@ -1667,33 +1710,33 @@ namespace yy {
   {
        0,    32,    54,    56,    45,     0,    32,    55,    57,    19,
       45,    57,    34,    19,    33,    35,    34,    37,    38,    39,
-      47,    51,    52,    53,    59,    60,    61,    65,    45,    39,
-      51,    45,    17,    20,    60,    19,    40,    45,    23,    18,
-      59,    15,    15,    66,    20,    16,    16,    51,    67,    68,
-      19,    19,    45,    16,    22,     4,    14,    15,    19,    24,
-      25,    26,    27,    28,    30,    31,    36,    41,    45,    46,
-      49,    50,    58,    61,    62,    63,    64,    70,    58,    68,
-      46,    45,    64,    70,    64,    58,    45,    52,    69,    15,
+      45,    50,    51,    52,    53,    59,    60,    61,    65,    45,
+      39,    50,    45,    17,    20,    60,    19,    40,    45,    23,
+      18,    59,    15,    15,    66,    20,    16,    16,    50,    67,
+      68,    19,    19,    45,    16,    22,     4,    14,    15,    19,
+      24,    25,    26,    27,    28,    30,    31,    36,    41,    45,
+      46,    48,    49,    58,    61,    62,    63,    64,    69,    58,
+      68,    46,    45,    64,    69,    64,    58,    51,    52,    15,
       15,    15,    64,    21,    17,     3,    20,    62,     4,     5,
        6,     7,     8,     9,    10,    11,    12,    13,    17,    21,
-      23,    20,    16,    20,    17,    15,    64,    64,    64,    23,
+      23,    20,    16,    20,    15,    17,    64,    64,    64,    23,
       42,    64,    64,    64,    64,    64,    64,    64,    64,    64,
-      64,    64,    64,    64,    44,    45,    20,    64,    16,    16,
+      64,    64,    64,    64,    44,    45,    20,    16,    64,    16,
       16,    16,    21,    18,    23,    18,    15,    18,    62,    62,
-      23,    43,    64,    71,    29,    15,    16,    22,    62,    64,
+      23,    43,    64,    70,    29,    15,    16,    22,    62,    64,
       64,    16,    23
   };
 
   const signed char
   parser::yyr1_[] =
   {
-       0,    48,    54,    54,    55,    55,    56,    57,    57,    58,
+       0,    47,    54,    54,    55,    55,    56,    57,    57,    58,
       58,    59,    59,    60,    60,    65,    66,    66,    67,    67,
-      68,    61,    51,    51,    52,    52,    52,    52,    53,    69,
+      68,    61,    50,    50,    52,    52,    52,    52,    53,    51,
       62,    62,    62,    62,    62,    62,    62,    62,    62,    62,
-      63,    70,    50,    50,    71,    71,    64,    64,    64,    64,
+      63,    69,    49,    49,    70,    70,    64,    64,    64,    64,
       64,    64,    64,    64,    64,    64,    64,    64,    64,    64,
-      64,    64,    64,    64,    64,    64,    64,    64,    49,    49
+      64,    64,    64,    64,    64,    64,    64,    64,    48,    48
   };
 
   const signed char
@@ -1723,26 +1766,25 @@ namespace yy {
   "\"class\"", "\"extends\"", "\"public\"", "\"static\"", "\"return\"",
   "\"int\"", "\"boolean\"", "\"void\"", "\"main\"", "\"System\"",
   "\"out\"", "\"println\"", "\"length\"", "\"identifier\"", "\"number\"",
-  "\"type_identifier\"", "$accept", "integer_literal", "lvalue", "type",
+  "$accept", "integer_literal", "lvalue", "type", "type_identifier",
   "simple_type", "array_type", "program", "class_declaration_list",
   "main_class", "class_declaration", "statement_list", "declaration_list",
   "declaration", "variable_declaration", "statement",
   "local_variable_declaration", "expr", "method_declaration", "args_list",
-  "comma_formals_list", "formals", "type_identifier", "method_invocation",
-  "comma_expr_list", YY_NULLPTR
+  "comma_formals_list", "formals", "method_invocation", "comma_expr_list", YY_NULLPTR
   };
 
 #if YYDEBUG
   const short
   parser::yyrline_[] =
   {
-       0,   134,   134,   136,   140,   143,   147,   152,   154,   159,
-     161,   165,   167,   171,   173,   177,   181,   182,   185,   186,
-     189,   192,   198,   199,   202,   202,   202,   202,   205,   208,
-     211,   214,   216,   218,   220,   222,   224,   226,   230,   231,
-     233,   237,   240,   241,   244,   245,   255,   257,   259,   261,
-     263,   265,   267,   269,   271,   273,   276,   280,   284,   288,
-     292,   295,   299,   303,   305,   309,   313,   315,   320,   321
+       0,   135,   135,   137,   141,   144,   148,   153,   155,   160,
+     162,   166,   168,   172,   174,   178,   182,   183,   186,   187,
+     190,   193,   199,   200,   203,   204,   205,   206,   209,   212,
+     215,   218,   220,   222,   224,   226,   228,   230,   234,   235,
+     237,   241,   244,   246,   250,   251,   261,   263,   265,   267,
+     269,   271,   273,   275,   277,   279,   282,   286,   290,   294,
+     298,   301,   305,   309,   311,   315,   319,   321,   326,   327
   };
 
   // Print the state stack on the debug stream.
@@ -1776,9 +1818,9 @@ namespace yy {
 
 
 } // yy
-#line 1780 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1822 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
 
-#line 326 "parser.y"
+#line 332 "parser.y"
 
 
 void

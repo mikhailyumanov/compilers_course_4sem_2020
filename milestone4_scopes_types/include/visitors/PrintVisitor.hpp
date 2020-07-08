@@ -21,13 +21,19 @@ class PrintVisitor: public Visitor,
   void Visit(std::shared_ptr<WhileStmt> while_stmt) override;
   void Visit(std::shared_ptr<PrintStmt> print_stmt) override;
   void Visit(std::shared_ptr<AssignmentStmt> assignment_stmt) override;
+
   void Visit(std::shared_ptr<BinOpExpr> bin_op_expr) override;
+  void Visit(std::shared_ptr<SubscriptExpr> subscript_expr) override;
+  void Visit(std::shared_ptr<LengthExpr> length_expr) override;
   void Visit(std::shared_ptr<TrueExpr> true_expr) override;
   void Visit(std::shared_ptr<FalseExpr> false_expr) override;
   void Visit(std::shared_ptr<IntExpr> int_expr) override;
   void Visit(std::shared_ptr<NewExpr> new_expr) override;
+  void Visit(std::shared_ptr<NewArrayExpr> new_array_expr) override;
   void Visit(std::shared_ptr<NotExpr> not_expr) override;
   void Visit(std::shared_ptr<IdentExpr> ident_expr) override;
+
+  void Visit(std::shared_ptr<ClassDecl> class_decl) override;
   void Visit(std::shared_ptr<VarDecl> var_decl) override;
   void Visit(std::shared_ptr<Lvalue> lvalue) override;
 

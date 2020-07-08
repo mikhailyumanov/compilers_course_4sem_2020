@@ -312,6 +312,60 @@ include/expressions/IntExpr.cpp.s:
 	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/expressions/IntExpr.cpp.s
 .PHONY : include/expressions/IntExpr.cpp.s
 
+include/expressions/LengthExpr.o: include/expressions/LengthExpr.cpp.o
+
+.PHONY : include/expressions/LengthExpr.o
+
+# target to build an object file
+include/expressions/LengthExpr.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/expressions/LengthExpr.cpp.o
+.PHONY : include/expressions/LengthExpr.cpp.o
+
+include/expressions/LengthExpr.i: include/expressions/LengthExpr.cpp.i
+
+.PHONY : include/expressions/LengthExpr.i
+
+# target to preprocess a source file
+include/expressions/LengthExpr.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/expressions/LengthExpr.cpp.i
+.PHONY : include/expressions/LengthExpr.cpp.i
+
+include/expressions/LengthExpr.s: include/expressions/LengthExpr.cpp.s
+
+.PHONY : include/expressions/LengthExpr.s
+
+# target to generate assembly for a file
+include/expressions/LengthExpr.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/expressions/LengthExpr.cpp.s
+.PHONY : include/expressions/LengthExpr.cpp.s
+
+include/expressions/NewArrayExpr.o: include/expressions/NewArrayExpr.cpp.o
+
+.PHONY : include/expressions/NewArrayExpr.o
+
+# target to build an object file
+include/expressions/NewArrayExpr.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/expressions/NewArrayExpr.cpp.o
+.PHONY : include/expressions/NewArrayExpr.cpp.o
+
+include/expressions/NewArrayExpr.i: include/expressions/NewArrayExpr.cpp.i
+
+.PHONY : include/expressions/NewArrayExpr.i
+
+# target to preprocess a source file
+include/expressions/NewArrayExpr.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/expressions/NewArrayExpr.cpp.i
+.PHONY : include/expressions/NewArrayExpr.cpp.i
+
+include/expressions/NewArrayExpr.s: include/expressions/NewArrayExpr.cpp.s
+
+.PHONY : include/expressions/NewArrayExpr.s
+
+# target to generate assembly for a file
+include/expressions/NewArrayExpr.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/expressions/NewArrayExpr.cpp.s
+.PHONY : include/expressions/NewArrayExpr.cpp.s
+
 include/expressions/NewExpr.o: include/expressions/NewExpr.cpp.o
 
 .PHONY : include/expressions/NewExpr.o
@@ -366,6 +420,33 @@ include/expressions/NotExpr.cpp.s:
 	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/expressions/NotExpr.cpp.s
 .PHONY : include/expressions/NotExpr.cpp.s
 
+include/expressions/SubscriptExpr.o: include/expressions/SubscriptExpr.cpp.o
+
+.PHONY : include/expressions/SubscriptExpr.o
+
+# target to build an object file
+include/expressions/SubscriptExpr.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o
+.PHONY : include/expressions/SubscriptExpr.cpp.o
+
+include/expressions/SubscriptExpr.i: include/expressions/SubscriptExpr.cpp.i
+
+.PHONY : include/expressions/SubscriptExpr.i
+
+# target to preprocess a source file
+include/expressions/SubscriptExpr.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.i
+.PHONY : include/expressions/SubscriptExpr.cpp.i
+
+include/expressions/SubscriptExpr.s: include/expressions/SubscriptExpr.cpp.s
+
+.PHONY : include/expressions/SubscriptExpr.s
+
+# target to generate assembly for a file
+include/expressions/SubscriptExpr.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.s
+.PHONY : include/expressions/SubscriptExpr.cpp.s
+
 include/program/MainClass.o: include/program/MainClass.cpp.o
 
 .PHONY : include/program/MainClass.o
@@ -419,6 +500,87 @@ include/program/Program.s: include/program/Program.cpp.s
 include/program/Program.cpp.s:
 	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/program/Program.cpp.s
 .PHONY : include/program/Program.cpp.s
+
+include/scopes/ScopeLayer.o: include/scopes/ScopeLayer.cpp.o
+
+.PHONY : include/scopes/ScopeLayer.o
+
+# target to build an object file
+include/scopes/ScopeLayer.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/scopes/ScopeLayer.cpp.o
+.PHONY : include/scopes/ScopeLayer.cpp.o
+
+include/scopes/ScopeLayer.i: include/scopes/ScopeLayer.cpp.i
+
+.PHONY : include/scopes/ScopeLayer.i
+
+# target to preprocess a source file
+include/scopes/ScopeLayer.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/scopes/ScopeLayer.cpp.i
+.PHONY : include/scopes/ScopeLayer.cpp.i
+
+include/scopes/ScopeLayer.s: include/scopes/ScopeLayer.cpp.s
+
+.PHONY : include/scopes/ScopeLayer.s
+
+# target to generate assembly for a file
+include/scopes/ScopeLayer.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/scopes/ScopeLayer.cpp.s
+.PHONY : include/scopes/ScopeLayer.cpp.s
+
+include/scopes/ScopeLayerTree.o: include/scopes/ScopeLayerTree.cpp.o
+
+.PHONY : include/scopes/ScopeLayerTree.o
+
+# target to build an object file
+include/scopes/ScopeLayerTree.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/scopes/ScopeLayerTree.cpp.o
+.PHONY : include/scopes/ScopeLayerTree.cpp.o
+
+include/scopes/ScopeLayerTree.i: include/scopes/ScopeLayerTree.cpp.i
+
+.PHONY : include/scopes/ScopeLayerTree.i
+
+# target to preprocess a source file
+include/scopes/ScopeLayerTree.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/scopes/ScopeLayerTree.cpp.i
+.PHONY : include/scopes/ScopeLayerTree.cpp.i
+
+include/scopes/ScopeLayerTree.s: include/scopes/ScopeLayerTree.cpp.s
+
+.PHONY : include/scopes/ScopeLayerTree.s
+
+# target to generate assembly for a file
+include/scopes/ScopeLayerTree.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/scopes/ScopeLayerTree.cpp.s
+.PHONY : include/scopes/ScopeLayerTree.cpp.s
+
+include/scopes/Symbol.o: include/scopes/Symbol.cpp.o
+
+.PHONY : include/scopes/Symbol.o
+
+# target to build an object file
+include/scopes/Symbol.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/scopes/Symbol.cpp.o
+.PHONY : include/scopes/Symbol.cpp.o
+
+include/scopes/Symbol.i: include/scopes/Symbol.cpp.i
+
+.PHONY : include/scopes/Symbol.i
+
+# target to preprocess a source file
+include/scopes/Symbol.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/scopes/Symbol.cpp.i
+.PHONY : include/scopes/Symbol.cpp.i
+
+include/scopes/Symbol.s: include/scopes/Symbol.cpp.s
+
+.PHONY : include/scopes/Symbol.s
+
+# target to generate assembly for a file
+include/scopes/Symbol.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/scopes/Symbol.cpp.s
+.PHONY : include/scopes/Symbol.cpp.s
 
 include/statements/AssertStmt.o: include/statements/AssertStmt.cpp.o
 
@@ -581,6 +743,168 @@ include/statements/StmtListStmt.s: include/statements/StmtListStmt.cpp.s
 include/statements/StmtListStmt.cpp.s:
 	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/statements/StmtListStmt.cpp.s
 .PHONY : include/statements/StmtListStmt.cpp.s
+
+include/types/Array.o: include/types/Array.cpp.o
+
+.PHONY : include/types/Array.o
+
+# target to build an object file
+include/types/Array.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/Array.cpp.o
+.PHONY : include/types/Array.cpp.o
+
+include/types/Array.i: include/types/Array.cpp.i
+
+.PHONY : include/types/Array.i
+
+# target to preprocess a source file
+include/types/Array.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/Array.cpp.i
+.PHONY : include/types/Array.cpp.i
+
+include/types/Array.s: include/types/Array.cpp.s
+
+.PHONY : include/types/Array.s
+
+# target to generate assembly for a file
+include/types/Array.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/Array.cpp.s
+.PHONY : include/types/Array.cpp.s
+
+include/types/Bool.o: include/types/Bool.cpp.o
+
+.PHONY : include/types/Bool.o
+
+# target to build an object file
+include/types/Bool.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/Bool.cpp.o
+.PHONY : include/types/Bool.cpp.o
+
+include/types/Bool.i: include/types/Bool.cpp.i
+
+.PHONY : include/types/Bool.i
+
+# target to preprocess a source file
+include/types/Bool.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/Bool.cpp.i
+.PHONY : include/types/Bool.cpp.i
+
+include/types/Bool.s: include/types/Bool.cpp.s
+
+.PHONY : include/types/Bool.s
+
+# target to generate assembly for a file
+include/types/Bool.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/Bool.cpp.s
+.PHONY : include/types/Bool.cpp.s
+
+include/types/Class.o: include/types/Class.cpp.o
+
+.PHONY : include/types/Class.o
+
+# target to build an object file
+include/types/Class.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/Class.cpp.o
+.PHONY : include/types/Class.cpp.o
+
+include/types/Class.i: include/types/Class.cpp.i
+
+.PHONY : include/types/Class.i
+
+# target to preprocess a source file
+include/types/Class.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/Class.cpp.i
+.PHONY : include/types/Class.cpp.i
+
+include/types/Class.s: include/types/Class.cpp.s
+
+.PHONY : include/types/Class.s
+
+# target to generate assembly for a file
+include/types/Class.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/Class.cpp.s
+.PHONY : include/types/Class.cpp.s
+
+include/types/Integer.o: include/types/Integer.cpp.o
+
+.PHONY : include/types/Integer.o
+
+# target to build an object file
+include/types/Integer.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/Integer.cpp.o
+.PHONY : include/types/Integer.cpp.o
+
+include/types/Integer.i: include/types/Integer.cpp.i
+
+.PHONY : include/types/Integer.i
+
+# target to preprocess a source file
+include/types/Integer.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/Integer.cpp.i
+.PHONY : include/types/Integer.cpp.i
+
+include/types/Integer.s: include/types/Integer.cpp.s
+
+.PHONY : include/types/Integer.s
+
+# target to generate assembly for a file
+include/types/Integer.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/Integer.cpp.s
+.PHONY : include/types/Integer.cpp.s
+
+include/types/Object.o: include/types/Object.cpp.o
+
+.PHONY : include/types/Object.o
+
+# target to build an object file
+include/types/Object.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/Object.cpp.o
+.PHONY : include/types/Object.cpp.o
+
+include/types/Object.i: include/types/Object.cpp.i
+
+.PHONY : include/types/Object.i
+
+# target to preprocess a source file
+include/types/Object.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/Object.cpp.i
+.PHONY : include/types/Object.cpp.i
+
+include/types/Object.s: include/types/Object.cpp.s
+
+.PHONY : include/types/Object.s
+
+# target to generate assembly for a file
+include/types/Object.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/Object.cpp.s
+.PHONY : include/types/Object.cpp.s
+
+include/types/UninitObject.o: include/types/UninitObject.cpp.o
+
+.PHONY : include/types/UninitObject.o
+
+# target to build an object file
+include/types/UninitObject.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/UninitObject.cpp.o
+.PHONY : include/types/UninitObject.cpp.o
+
+include/types/UninitObject.i: include/types/UninitObject.cpp.i
+
+.PHONY : include/types/UninitObject.i
+
+# target to preprocess a source file
+include/types/UninitObject.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/UninitObject.cpp.i
+.PHONY : include/types/UninitObject.cpp.i
+
+include/types/UninitObject.s: include/types/UninitObject.cpp.s
+
+.PHONY : include/types/UninitObject.s
+
+# target to generate assembly for a file
+include/types/UninitObject.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/UninitObject.cpp.s
+.PHONY : include/types/UninitObject.cpp.s
 
 include/utils/BasicList.o: include/utils/BasicList.cpp.o
 
@@ -828,18 +1152,36 @@ help:
 	@echo "... include/expressions/IntExpr.o"
 	@echo "... include/expressions/IntExpr.i"
 	@echo "... include/expressions/IntExpr.s"
+	@echo "... include/expressions/LengthExpr.o"
+	@echo "... include/expressions/LengthExpr.i"
+	@echo "... include/expressions/LengthExpr.s"
+	@echo "... include/expressions/NewArrayExpr.o"
+	@echo "... include/expressions/NewArrayExpr.i"
+	@echo "... include/expressions/NewArrayExpr.s"
 	@echo "... include/expressions/NewExpr.o"
 	@echo "... include/expressions/NewExpr.i"
 	@echo "... include/expressions/NewExpr.s"
 	@echo "... include/expressions/NotExpr.o"
 	@echo "... include/expressions/NotExpr.i"
 	@echo "... include/expressions/NotExpr.s"
+	@echo "... include/expressions/SubscriptExpr.o"
+	@echo "... include/expressions/SubscriptExpr.i"
+	@echo "... include/expressions/SubscriptExpr.s"
 	@echo "... include/program/MainClass.o"
 	@echo "... include/program/MainClass.i"
 	@echo "... include/program/MainClass.s"
 	@echo "... include/program/Program.o"
 	@echo "... include/program/Program.i"
 	@echo "... include/program/Program.s"
+	@echo "... include/scopes/ScopeLayer.o"
+	@echo "... include/scopes/ScopeLayer.i"
+	@echo "... include/scopes/ScopeLayer.s"
+	@echo "... include/scopes/ScopeLayerTree.o"
+	@echo "... include/scopes/ScopeLayerTree.i"
+	@echo "... include/scopes/ScopeLayerTree.s"
+	@echo "... include/scopes/Symbol.o"
+	@echo "... include/scopes/Symbol.i"
+	@echo "... include/scopes/Symbol.s"
 	@echo "... include/statements/AssertStmt.o"
 	@echo "... include/statements/AssertStmt.i"
 	@echo "... include/statements/AssertStmt.s"
@@ -858,6 +1200,24 @@ help:
 	@echo "... include/statements/StmtListStmt.o"
 	@echo "... include/statements/StmtListStmt.i"
 	@echo "... include/statements/StmtListStmt.s"
+	@echo "... include/types/Array.o"
+	@echo "... include/types/Array.i"
+	@echo "... include/types/Array.s"
+	@echo "... include/types/Bool.o"
+	@echo "... include/types/Bool.i"
+	@echo "... include/types/Bool.s"
+	@echo "... include/types/Class.o"
+	@echo "... include/types/Class.i"
+	@echo "... include/types/Class.s"
+	@echo "... include/types/Integer.o"
+	@echo "... include/types/Integer.i"
+	@echo "... include/types/Integer.s"
+	@echo "... include/types/Object.o"
+	@echo "... include/types/Object.i"
+	@echo "... include/types/Object.s"
+	@echo "... include/types/UninitObject.o"
+	@echo "... include/types/UninitObject.i"
+	@echo "... include/types/UninitObject.s"
 	@echo "... include/utils/BasicList.o"
 	@echo "... include/utils/BasicList.i"
 	@echo "... include/utils/BasicList.s"

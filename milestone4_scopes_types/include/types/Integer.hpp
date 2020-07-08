@@ -1,11 +1,14 @@
 #pragma once
 
-#include "Object.h"
+#include "types/Object.hpp"
 
 class Integer: public Object {
  public:
-    explicit Integer(int value);
-    int ToInt() override;
+  explicit Integer(int value);
+  int ToInt() const override;
+  bool ToBool() const override;
+
  private:
-    int value_;
+  int value_;
 };
+

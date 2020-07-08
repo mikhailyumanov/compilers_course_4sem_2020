@@ -8,8 +8,9 @@
 class ClassDecl: public Decl,
   public std::enable_shared_from_this<ClassDecl> {
  public:
-  ClassDecl(std::shared_ptr<DeclList> decl_list);
+  ClassDecl(const std::string& class_name, std::shared_ptr<DeclList> decl_list);
   void Accept(std::shared_ptr<Visitor> visitor) override;
 
+  std::string class_name;
   std::shared_ptr<DeclList> decl_list;
 };
