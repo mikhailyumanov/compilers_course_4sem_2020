@@ -1,5 +1,14 @@
 #pragma once
 
+#define DEBUG_ON true
+
+#if DEBUG_ON
+#define DEBUG(expr) std::cout << expr << std::endl;
+#else
+#define DEBUG(expr) ;
+#endif
+
+
 // utils
 #include "utils/BasicList.hpp"
 // program
@@ -36,6 +45,7 @@
 #include "scopes/ScopeLayer.hpp"
 #include "scopes/ScopeLayerTree.hpp"
 // types
+#include "types/Type.hpp"
 #include "types/Object.hpp"
 #include "types/Integer.hpp"
 #include "types/Bool.hpp"

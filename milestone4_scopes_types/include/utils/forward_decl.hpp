@@ -1,5 +1,7 @@
 #pragma once
 
+#include "types/Type.hpp"
+
 // utils
 class BasicList;
 // program
@@ -48,7 +50,4 @@ class UninitObject;
 // value categories
 class Lvalue;
 
-struct Type {
-  std::string type;
-  bool is_array;
-} ;
+

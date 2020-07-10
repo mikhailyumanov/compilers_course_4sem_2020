@@ -107,11 +107,13 @@ scopes/Symbol.hpp
 ../include/scopes/scopes/Symbol.hpp
 types/Object.hpp
 ../include/scopes/types/Object.hpp
-unordered_map
+iterator
+-
+memory
 -
 string
 -
-memory
+unordered_map
 -
 vector
 -
@@ -185,6 +187,8 @@ types/Object.hpp
 ../include/types/Bool.hpp
 types/Object.hpp
 ../include/types/types/Object.hpp
+types/Integer.hpp
+../include/types/types/Integer.hpp
 
 ../include/types/Class.hpp
 types/Object.hpp
@@ -193,11 +197,21 @@ types/Object.hpp
 ../include/types/Integer.hpp
 types/Object.hpp
 ../include/types/types/Object.hpp
+types/Bool.hpp
+../include/types/types/Bool.hpp
 
 ../include/types/Object.hpp
+iostream
+-
 memory
 -
 string
+-
+utils/forward_decl.hpp
+../include/types/utils/forward_decl.hpp
+
+../include/types/Type.hpp
+iostream
 -
 
 ../include/types/UninitObject.hpp
@@ -279,6 +293,8 @@ scopes/ScopeLayer.hpp
 ../include/utils/scopes/ScopeLayer.hpp
 scopes/ScopeLayerTree.hpp
 ../include/utils/scopes/ScopeLayerTree.hpp
+types/Type.hpp
+../include/utils/types/Type.hpp
 types/Object.hpp
 ../include/utils/types/Object.hpp
 types/Integer.hpp
@@ -295,6 +311,8 @@ value_categories/Lvalue.hpp
 ../include/utils/value_categories/Lvalue.hpp
 
 ../include/utils/forward_decl.hpp
+types/Type.hpp
+../include/utils/types/Type.hpp
 
 ../include/value_categories/Lvalue.hpp
 expressions/Expression.hpp
@@ -311,6 +329,16 @@ utils/elements.hpp
 ../include/visitors/utils/elements.hpp
 visitors/TemplateVisitor.hpp
 ../include/visitors/visitors/TemplateVisitor.hpp
+visitors/SymbolTreeVisitor.hpp
+../include/visitors/visitors/SymbolTreeVisitor.hpp
+types/Object.hpp
+../include/visitors/types/Object.hpp
+types/Integer.hpp
+../include/visitors/types/Integer.hpp
+types/Bool.hpp
+../include/visitors/types/Bool.hpp
+types/Class.hpp
+../include/visitors/types/Class.hpp
 
 ../include/visitors/PrintVisitor.hpp
 fstream
@@ -319,6 +347,14 @@ utils/elements.hpp
 ../include/visitors/utils/elements.hpp
 visitors/Visitor.hpp
 ../include/visitors/visitors/Visitor.hpp
+
+../include/visitors/SymbolTreeVisitor.hpp
+utils/elements.hpp
+../include/visitors/utils/elements.hpp
+visitors/Visitor.hpp
+../include/visitors/visitors/Visitor.hpp
+visitors/PrintVisitor.hpp
+../include/visitors/visitors/PrintVisitor.hpp
 
 ../include/visitors/TemplateVisitor.hpp
 utils/BasicElement.hpp
@@ -355,6 +391,8 @@ visitors/PrintVisitor.hpp
 /compilers/compilers_course_4sem_2020/milestone4_scopes_types/visitors/PrintVisitor.hpp
 visitors/Interpreter.hpp
 /compilers/compilers_course_4sem_2020/milestone4_scopes_types/visitors/Interpreter.hpp
+visitors/SymbolTreeVisitor.hpp
+/compilers/compilers_course_4sem_2020/milestone4_scopes_types/visitors/SymbolTreeVisitor.hpp
 
 /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/declarations/ClassDecl.cpp
 declarations/ClassDecl.hpp
@@ -470,6 +508,10 @@ types/Integer.hpp
 types/Object.hpp
 /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/types/types/Object.hpp
 
+/compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/types/Type.cpp
+types/Type.hpp
+/compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/types/types/Type.hpp
+
 /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/types/UninitObject.cpp
 types/UninitObject.hpp
 /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/types/types/UninitObject.hpp
@@ -491,6 +533,10 @@ visitors/Interpreter.hpp
 /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/visitors/PrintVisitor.cpp
 visitors/PrintVisitor.hpp
 /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/visitors/visitors/PrintVisitor.hpp
+
+/compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/visitors/SymbolTreeVisitor.cpp
+visitors/SymbolTreeVisitor.hpp
+/compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/visitors/visitors/SymbolTreeVisitor.hpp
 
 /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/visitors/TemplateVisitor.cpp
 visitors/TemplateVisitor.hpp

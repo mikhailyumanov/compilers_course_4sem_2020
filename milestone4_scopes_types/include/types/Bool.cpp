@@ -1,6 +1,6 @@
 #include "types/Bool.hpp"
 
-Bool::Bool(bool value) : Object("bool"), value_(value) {
+Bool::Bool(bool value) : Object({"bool", false}), value_(value) {
 }
 
 int Bool::ToInt() const {
@@ -11,3 +11,14 @@ bool Bool::ToBool() const {
   return value_;
 }
 
+Bool::operator Integer() const {
+  return Integer(ToInt());
+}
+
+Bool Bool::operator!() const {
+  return Bool(!value_);
+}
+
+void Bool::Print(std::ostream& stream) const {
+  stream << value_;
+}

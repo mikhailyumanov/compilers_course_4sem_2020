@@ -9,7 +9,9 @@
 class PrintVisitor: public Visitor,
   public std::enable_shared_from_this<PrintVisitor> {
  public:
+  PrintVisitor() = default;
   PrintVisitor(const std::string& filename);
+  PrintVisitor(const std::string& filename, bool as_plugin);
 
   void Visit(std::shared_ptr<Program> program) override;
   void Visit(std::shared_ptr<MainClass> main_class) override;
@@ -39,10 +41,14 @@ class PrintVisitor: public Visitor,
 
  ~PrintVisitor();
 
- private:
   void PrintTabs();
-  
+  std::ofstream& GetStream();
+
+  void GoDown();
+  void GoUp();
+
  private:
   size_t num_tabs_ = 0;
   std::ofstream stream_;
+  bool as_plugin_ = false;
 };

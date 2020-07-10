@@ -63,6 +63,7 @@ set(
     include/scopes/ScopeLayer.cpp
     include/scopes/ScopeLayerTree.cpp
 
+    include/types/Type.cpp
     include/types/Object.cpp
     include/types/Integer.cpp
     include/types/Bool.cpp
@@ -75,6 +76,7 @@ set(
     include/visitors/PrintVisitor.cpp
     include/visitors/Interpreter.cpp
     include/visitors/TemplateVisitor.cpp
+    include/visitors/SymbolTreeVisitor.cpp
 )
 
 add_executable(

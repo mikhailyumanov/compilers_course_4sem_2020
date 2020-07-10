@@ -879,6 +879,33 @@ include/types/Object.cpp.s:
 	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/Object.cpp.s
 .PHONY : include/types/Object.cpp.s
 
+include/types/Type.o: include/types/Type.cpp.o
+
+.PHONY : include/types/Type.o
+
+# target to build an object file
+include/types/Type.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/Type.cpp.o
+.PHONY : include/types/Type.cpp.o
+
+include/types/Type.i: include/types/Type.cpp.i
+
+.PHONY : include/types/Type.i
+
+# target to preprocess a source file
+include/types/Type.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/Type.cpp.i
+.PHONY : include/types/Type.cpp.i
+
+include/types/Type.s: include/types/Type.cpp.s
+
+.PHONY : include/types/Type.s
+
+# target to generate assembly for a file
+include/types/Type.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/Type.cpp.s
+.PHONY : include/types/Type.cpp.s
+
 include/types/UninitObject.o: include/types/UninitObject.cpp.o
 
 .PHONY : include/types/UninitObject.o
@@ -1013,6 +1040,33 @@ include/visitors/PrintVisitor.s: include/visitors/PrintVisitor.cpp.s
 include/visitors/PrintVisitor.cpp.s:
 	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.s
 .PHONY : include/visitors/PrintVisitor.cpp.s
+
+include/visitors/SymbolTreeVisitor.o: include/visitors/SymbolTreeVisitor.cpp.o
+
+.PHONY : include/visitors/SymbolTreeVisitor.o
+
+# target to build an object file
+include/visitors/SymbolTreeVisitor.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o
+.PHONY : include/visitors/SymbolTreeVisitor.cpp.o
+
+include/visitors/SymbolTreeVisitor.i: include/visitors/SymbolTreeVisitor.cpp.i
+
+.PHONY : include/visitors/SymbolTreeVisitor.i
+
+# target to preprocess a source file
+include/visitors/SymbolTreeVisitor.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.i
+.PHONY : include/visitors/SymbolTreeVisitor.cpp.i
+
+include/visitors/SymbolTreeVisitor.s: include/visitors/SymbolTreeVisitor.cpp.s
+
+.PHONY : include/visitors/SymbolTreeVisitor.s
+
+# target to generate assembly for a file
+include/visitors/SymbolTreeVisitor.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.s
+.PHONY : include/visitors/SymbolTreeVisitor.cpp.s
 
 include/visitors/TemplateVisitor.o: include/visitors/TemplateVisitor.cpp.o
 
@@ -1215,6 +1269,9 @@ help:
 	@echo "... include/types/Object.o"
 	@echo "... include/types/Object.i"
 	@echo "... include/types/Object.s"
+	@echo "... include/types/Type.o"
+	@echo "... include/types/Type.i"
+	@echo "... include/types/Type.s"
 	@echo "... include/types/UninitObject.o"
 	@echo "... include/types/UninitObject.i"
 	@echo "... include/types/UninitObject.s"
@@ -1230,6 +1287,9 @@ help:
 	@echo "... include/visitors/PrintVisitor.o"
 	@echo "... include/visitors/PrintVisitor.i"
 	@echo "... include/visitors/PrintVisitor.s"
+	@echo "... include/visitors/SymbolTreeVisitor.o"
+	@echo "... include/visitors/SymbolTreeVisitor.i"
+	@echo "... include/visitors/SymbolTreeVisitor.s"
 	@echo "... include/visitors/TemplateVisitor.o"
 	@echo "... include/visitors/TemplateVisitor.i"
 	@echo "... include/visitors/TemplateVisitor.s"

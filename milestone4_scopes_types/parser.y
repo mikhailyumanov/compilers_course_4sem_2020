@@ -206,7 +206,7 @@ simple_type: "int" { $$ = "int"; }
            | type_identifier{ $$ = $1; }
 ;
 
-array_type: simple_type "[" "]" { $$ = $1; std::cout << $1 << std::endl; }
+array_type: simple_type "[" "]" { $$ = $1; }
 ;
 
 type_identifier: "identifier" { $$ = $1; }
@@ -229,8 +229,6 @@ statement: "assert" "(" expr ")" ";"
            { $$ = std::make_shared<PrintStmt>($7); }
          | lvalue "=" expr ";"
            { $$ = std::make_shared<AssignmentStmt>($1, $3); }
-//           { if ($1.second == -1) driver.variables[$1.first] = $3;
-//             else driver.variables[$1.first].first[$1.second] = $3.first[0]; }
          | "return" expr ";"
          | method_invocation ";";
 
@@ -280,46 +278,37 @@ expr: expr AND    expr
   {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_RMNDR   , $3);}
 
     | expr "[" expr "]"
-//      { $$ = std::make_pair(std::vector<int>{$1.first[$3.first[0]]}, 0); }
       { $$ = std::make_shared<SubscriptExpr>($1, $3); }
 
     | expr "." "length"
-// { $$ = std::make_pair(std::vector<int>{(int)$1.first.size()}, 0); }
       { $$ = std::make_shared<LengthExpr>($1); }
 
     | "new" simple_type "[" expr "]"
-//      { $$ = std::make_pair(std::vector<int>($4.first[0]), 1); }
       { $$ = std::make_shared<NewArrayExpr>($2, $4); }
 
     | "new" type_identifier "(" ")"
-//      { $$ = std::make_pair(std::vector<int>(1), 0); }
       { $$ = std::make_shared<NewExpr>($2); }
 
     | "(" expr ")"
       { $$ = $2; }
 
     | "identifier"
-//                   { $$ = driver.variables[$1]; }
       { $$ = std::make_shared<IdentExpr>($1); }
 
     | integer_literal
-//      { $$ = std::make_pair(std::vector<int>{$1}, 0); }
       { $$ = std::make_shared<IntExpr>($1); }
 
     | "this"                         { /* TODO */ }
 
     | "true"
-//      { $$ = std::make_pair(std::vector<int>{1}, 0); }
       { $$ = std::make_shared<TrueExpr>(); }
 
     | "false"
-//      { $$ = std::make_pair(std::vector<int>{0}, 0); }
       { $$ = std::make_shared<FalseExpr>(); }
 
     | method_invocation              { };
 
     | "!" expr
-//      { $$ = std::make_pair(std::vector<int>{!$2.first[0]}, 0); }
       { $$ = std::make_shared<NotExpr>($2); }
 
 

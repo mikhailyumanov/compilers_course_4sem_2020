@@ -1,5 +1,6 @@
 #include "expressions/NewArrayExpr.hpp"
 
+
 NewArrayExpr::NewArrayExpr(
     const std::string& type, std::shared_ptr<Expression> expr)
   : type{type}, expr{expr} {

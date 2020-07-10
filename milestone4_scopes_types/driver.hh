@@ -9,6 +9,7 @@
 #include "program/Program.hpp"
 #include "visitors/PrintVisitor.hpp"
 #include "visitors/Interpreter.hpp"
+#include "visitors/SymbolTreeVisitor.hpp"
 
 
 class Driver {
@@ -19,6 +20,7 @@ class Driver {
   void scan_begin();
   void scan_end();
 
+  void BuildSymbolTree(const std::string& filename) const;
   void PrintTree(const std::string& filename) const;
   int Eval() const;
 

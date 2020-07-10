@@ -29,6 +29,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Project.dir/include/scopes/Symbol.cpp.o"
   "CMakeFiles/Project.dir/include/scopes/ScopeLayer.cpp.o"
   "CMakeFiles/Project.dir/include/scopes/ScopeLayerTree.cpp.o"
+  "CMakeFiles/Project.dir/include/types/Type.cpp.o"
   "CMakeFiles/Project.dir/include/types/Object.cpp.o"
   "CMakeFiles/Project.dir/include/types/Integer.cpp.o"
   "CMakeFiles/Project.dir/include/types/Bool.cpp.o"
@@ -39,6 +40,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o"
   "CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o"
   "CMakeFiles/Project.dir/include/visitors/TemplateVisitor.cpp.o"
+  "CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o"
   "../bin/Project.pdb"
   "../bin/Project"
 )

@@ -35,6 +35,7 @@ CMakeFiles/Project.dir/driver.cpp.o
  ../include/types/Class.hpp
  ../include/types/Integer.hpp
  ../include/types/Object.hpp
+ ../include/types/Type.hpp
  ../include/types/UninitObject.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/BasicList.hpp
@@ -43,6 +44,7 @@ CMakeFiles/Project.dir/driver.cpp.o
  ../include/value_categories/Lvalue.hpp
  ../include/visitors/Interpreter.hpp
  ../include/visitors/PrintVisitor.hpp
+ ../include/visitors/SymbolTreeVisitor.hpp
  ../include/visitors/TemplateVisitor.hpp
  ../include/visitors/Visitor.hpp
  /compilers/compilers_course_4sem_2020/milestone4_scopes_types/driver.cpp
@@ -54,6 +56,7 @@ CMakeFiles/Project.dir/include/declarations/ClassDecl.cpp.o
  ../include/declarations/ClassDecl.hpp
  ../include/declarations/Decl.hpp
  ../include/declarations/DeclList.hpp
+ ../include/types/Type.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/BasicList.hpp
  ../include/utils/forward_decl.hpp
@@ -62,6 +65,7 @@ CMakeFiles/Project.dir/include/declarations/ClassDecl.cpp.o
 CMakeFiles/Project.dir/include/declarations/VarDecl.cpp.o
  ../include/declarations/Decl.hpp
  ../include/declarations/VarDecl.hpp
+ ../include/types/Type.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/forward_decl.hpp
  ../include/visitors/Visitor.hpp
@@ -69,6 +73,7 @@ CMakeFiles/Project.dir/include/declarations/VarDecl.cpp.o
 CMakeFiles/Project.dir/include/expressions/BinOpExpr.cpp.o
  ../include/expressions/BinOpExpr.hpp
  ../include/expressions/Expression.hpp
+ ../include/types/Type.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/forward_decl.hpp
  ../include/visitors/Visitor.hpp
@@ -76,6 +81,7 @@ CMakeFiles/Project.dir/include/expressions/BinOpExpr.cpp.o
 CMakeFiles/Project.dir/include/expressions/BoolConstExpr.cpp.o
  ../include/expressions/BoolConstExpr.hpp
  ../include/expressions/Expression.hpp
+ ../include/types/Type.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/forward_decl.hpp
  ../include/visitors/Visitor.hpp
@@ -83,6 +89,7 @@ CMakeFiles/Project.dir/include/expressions/BoolConstExpr.cpp.o
 CMakeFiles/Project.dir/include/expressions/IdentExpr.cpp.o
  ../include/expressions/Expression.hpp
  ../include/expressions/IdentExpr.hpp
+ ../include/types/Type.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/forward_decl.hpp
  ../include/visitors/Visitor.hpp
@@ -90,6 +97,7 @@ CMakeFiles/Project.dir/include/expressions/IdentExpr.cpp.o
 CMakeFiles/Project.dir/include/expressions/IntExpr.cpp.o
  ../include/expressions/Expression.hpp
  ../include/expressions/IntExpr.hpp
+ ../include/types/Type.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/forward_decl.hpp
  ../include/visitors/Visitor.hpp
@@ -97,6 +105,7 @@ CMakeFiles/Project.dir/include/expressions/IntExpr.cpp.o
 CMakeFiles/Project.dir/include/expressions/LengthExpr.cpp.o
  ../include/expressions/Expression.hpp
  ../include/expressions/LengthExpr.hpp
+ ../include/types/Type.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/forward_decl.hpp
  ../include/visitors/Visitor.hpp
@@ -104,6 +113,7 @@ CMakeFiles/Project.dir/include/expressions/LengthExpr.cpp.o
 CMakeFiles/Project.dir/include/expressions/NewArrayExpr.cpp.o
  ../include/expressions/Expression.hpp
  ../include/expressions/NewArrayExpr.hpp
+ ../include/types/Type.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/forward_decl.hpp
  ../include/visitors/Visitor.hpp
@@ -111,6 +121,7 @@ CMakeFiles/Project.dir/include/expressions/NewArrayExpr.cpp.o
 CMakeFiles/Project.dir/include/expressions/NewExpr.cpp.o
  ../include/expressions/Expression.hpp
  ../include/expressions/NewExpr.hpp
+ ../include/types/Type.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/forward_decl.hpp
  ../include/visitors/Visitor.hpp
@@ -118,6 +129,7 @@ CMakeFiles/Project.dir/include/expressions/NewExpr.cpp.o
 CMakeFiles/Project.dir/include/expressions/NotExpr.cpp.o
  ../include/expressions/Expression.hpp
  ../include/expressions/NotExpr.hpp
+ ../include/types/Type.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/forward_decl.hpp
  ../include/visitors/Visitor.hpp
@@ -125,12 +137,14 @@ CMakeFiles/Project.dir/include/expressions/NotExpr.cpp.o
 CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o
  ../include/expressions/Expression.hpp
  ../include/expressions/SubscriptExpr.hpp
+ ../include/types/Type.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/forward_decl.hpp
  ../include/visitors/Visitor.hpp
  /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/expressions/SubscriptExpr.cpp
 CMakeFiles/Project.dir/include/program/MainClass.cpp.o
  ../include/program/MainClass.hpp
+ ../include/types/Type.hpp
  ../include/utils/forward_decl.hpp
  ../include/visitors/Visitor.hpp
  /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/program/MainClass.cpp
@@ -138,6 +152,7 @@ CMakeFiles/Project.dir/include/program/Program.cpp.o
  ../include/program/ClassDeclList.hpp
  ../include/program/MainClass.hpp
  ../include/program/Program.hpp
+ ../include/types/Type.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/BasicList.hpp
  ../include/utils/forward_decl.hpp
@@ -147,13 +162,17 @@ CMakeFiles/Project.dir/include/scopes/ScopeLayer.cpp.o
  ../include/scopes/ScopeLayer.hpp
  ../include/scopes/Symbol.hpp
  ../include/types/Object.hpp
+ ../include/types/Type.hpp
  ../include/types/UninitObject.hpp
+ ../include/utils/forward_decl.hpp
  /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/scopes/ScopeLayer.cpp
 CMakeFiles/Project.dir/include/scopes/ScopeLayerTree.cpp.o
  ../include/scopes/ScopeLayer.hpp
  ../include/scopes/ScopeLayerTree.hpp
  ../include/scopes/Symbol.hpp
  ../include/types/Object.hpp
+ ../include/types/Type.hpp
+ ../include/utils/forward_decl.hpp
  /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/scopes/ScopeLayerTree.cpp
 CMakeFiles/Project.dir/include/scopes/Symbol.cpp.o
  ../include/scopes/Symbol.hpp
@@ -162,6 +181,7 @@ CMakeFiles/Project.dir/include/statements/AssertStmt.cpp.o
  ../include/expressions/Expression.hpp
  ../include/statements/AssertStmt.hpp
  ../include/statements/Statement.hpp
+ ../include/types/Type.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/forward_decl.hpp
  ../include/visitors/Visitor.hpp
@@ -170,6 +190,7 @@ CMakeFiles/Project.dir/include/statements/AssignmentStmt.cpp.o
  ../include/expressions/Expression.hpp
  ../include/statements/AssignmentStmt.hpp
  ../include/statements/Statement.hpp
+ ../include/types/Type.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/forward_decl.hpp
  ../include/value_categories/Lvalue.hpp
@@ -179,6 +200,7 @@ CMakeFiles/Project.dir/include/statements/ConditionalStmt.cpp.o
  ../include/expressions/Expression.hpp
  ../include/statements/ConditionalStmt.hpp
  ../include/statements/Statement.hpp
+ ../include/types/Type.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/forward_decl.hpp
  ../include/visitors/Visitor.hpp
@@ -188,6 +210,7 @@ CMakeFiles/Project.dir/include/statements/LocalVarDeclStmt.cpp.o
  ../include/declarations/VarDecl.hpp
  ../include/statements/LocalVarDeclStmt.hpp
  ../include/statements/Statement.hpp
+ ../include/types/Type.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/forward_decl.hpp
  ../include/visitors/Visitor.hpp
@@ -196,6 +219,7 @@ CMakeFiles/Project.dir/include/statements/PrintStmt.cpp.o
  ../include/expressions/Expression.hpp
  ../include/statements/PrintStmt.hpp
  ../include/statements/Statement.hpp
+ ../include/types/Type.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/forward_decl.hpp
  ../include/visitors/Visitor.hpp
@@ -204,6 +228,7 @@ CMakeFiles/Project.dir/include/statements/StmtListStmt.cpp.o
  ../include/statements/Statement.hpp
  ../include/statements/StmtList.hpp
  ../include/statements/StmtListStmt.hpp
+ ../include/types/Type.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/BasicList.hpp
  ../include/utils/forward_decl.hpp
@@ -212,27 +237,45 @@ CMakeFiles/Project.dir/include/statements/StmtListStmt.cpp.o
 CMakeFiles/Project.dir/include/types/Array.cpp.o
  ../include/types/Array.hpp
  ../include/types/Object.hpp
+ ../include/types/Type.hpp
+ ../include/utils/forward_decl.hpp
  /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/types/Array.cpp
 CMakeFiles/Project.dir/include/types/Bool.cpp.o
  ../include/types/Bool.hpp
+ ../include/types/Integer.hpp
  ../include/types/Object.hpp
+ ../include/types/Type.hpp
+ ../include/utils/forward_decl.hpp
  /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/types/Bool.cpp
 CMakeFiles/Project.dir/include/types/Class.cpp.o
  ../include/types/Class.hpp
  ../include/types/Object.hpp
+ ../include/types/Type.hpp
+ ../include/utils/forward_decl.hpp
  /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/types/Class.cpp
 CMakeFiles/Project.dir/include/types/Integer.cpp.o
+ ../include/types/Bool.hpp
  ../include/types/Integer.hpp
  ../include/types/Object.hpp
+ ../include/types/Type.hpp
+ ../include/utils/forward_decl.hpp
  /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/types/Integer.cpp
 CMakeFiles/Project.dir/include/types/Object.cpp.o
  ../include/types/Object.hpp
+ ../include/types/Type.hpp
+ ../include/utils/forward_decl.hpp
  /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/types/Object.cpp
+CMakeFiles/Project.dir/include/types/Type.cpp.o
+ ../include/types/Type.hpp
+ /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/types/Type.cpp
 CMakeFiles/Project.dir/include/types/UninitObject.cpp.o
  ../include/types/Object.hpp
+ ../include/types/Type.hpp
  ../include/types/UninitObject.hpp
+ ../include/utils/forward_decl.hpp
  /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/types/UninitObject.cpp
 CMakeFiles/Project.dir/include/utils/BasicList.cpp.o
+ ../include/types/Type.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/BasicList.hpp
  ../include/utils/forward_decl.hpp
@@ -240,6 +283,7 @@ CMakeFiles/Project.dir/include/utils/BasicList.cpp.o
  /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/utils/BasicList.cpp
 CMakeFiles/Project.dir/include/value_categories/Lvalue.cpp.o
  ../include/expressions/Expression.hpp
+ ../include/types/Type.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/forward_decl.hpp
  ../include/value_categories/Lvalue.hpp
@@ -279,6 +323,7 @@ CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o
  ../include/types/Class.hpp
  ../include/types/Integer.hpp
  ../include/types/Object.hpp
+ ../include/types/Type.hpp
  ../include/types/UninitObject.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/BasicList.hpp
@@ -286,6 +331,8 @@ CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o
  ../include/utils/forward_decl.hpp
  ../include/value_categories/Lvalue.hpp
  ../include/visitors/Interpreter.hpp
+ ../include/visitors/PrintVisitor.hpp
+ ../include/visitors/SymbolTreeVisitor.hpp
  ../include/visitors/TemplateVisitor.hpp
  ../include/visitors/Visitor.hpp
  /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/visitors/Interpreter.cpp
@@ -323,6 +370,7 @@ CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o
  ../include/types/Class.hpp
  ../include/types/Integer.hpp
  ../include/types/Object.hpp
+ ../include/types/Type.hpp
  ../include/types/UninitObject.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/BasicList.hpp
@@ -332,7 +380,53 @@ CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o
  ../include/visitors/PrintVisitor.hpp
  ../include/visitors/Visitor.hpp
  /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/visitors/PrintVisitor.cpp
+CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o
+ ../include/declarations/ClassDecl.hpp
+ ../include/declarations/Decl.hpp
+ ../include/declarations/DeclList.hpp
+ ../include/declarations/VarDecl.hpp
+ ../include/expressions/BinOpExpr.hpp
+ ../include/expressions/BoolConstExpr.hpp
+ ../include/expressions/Expression.hpp
+ ../include/expressions/IdentExpr.hpp
+ ../include/expressions/IntExpr.hpp
+ ../include/expressions/LengthExpr.hpp
+ ../include/expressions/NewArrayExpr.hpp
+ ../include/expressions/NewExpr.hpp
+ ../include/expressions/NotExpr.hpp
+ ../include/expressions/SubscriptExpr.hpp
+ ../include/program/ClassDeclList.hpp
+ ../include/program/MainClass.hpp
+ ../include/program/Program.hpp
+ ../include/scopes/ScopeLayer.hpp
+ ../include/scopes/ScopeLayerTree.hpp
+ ../include/scopes/Symbol.hpp
+ ../include/statements/AssertStmt.hpp
+ ../include/statements/AssignmentStmt.hpp
+ ../include/statements/ConditionalStmt.hpp
+ ../include/statements/LocalVarDeclStmt.hpp
+ ../include/statements/PrintStmt.hpp
+ ../include/statements/Statement.hpp
+ ../include/statements/StmtList.hpp
+ ../include/statements/StmtListStmt.hpp
+ ../include/types/Array.hpp
+ ../include/types/Bool.hpp
+ ../include/types/Class.hpp
+ ../include/types/Integer.hpp
+ ../include/types/Object.hpp
+ ../include/types/Type.hpp
+ ../include/types/UninitObject.hpp
+ ../include/utils/BasicElement.hpp
+ ../include/utils/BasicList.hpp
+ ../include/utils/elements.hpp
+ ../include/utils/forward_decl.hpp
+ ../include/value_categories/Lvalue.hpp
+ ../include/visitors/PrintVisitor.hpp
+ ../include/visitors/SymbolTreeVisitor.hpp
+ ../include/visitors/Visitor.hpp
+ /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/visitors/SymbolTreeVisitor.cpp
 CMakeFiles/Project.dir/include/visitors/TemplateVisitor.cpp.o
+ ../include/types/Type.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/forward_decl.hpp
  ../include/visitors/TemplateVisitor.hpp
@@ -372,6 +466,7 @@ CMakeFiles/Project.dir/main.cpp.o
  ../include/types/Class.hpp
  ../include/types/Integer.hpp
  ../include/types/Object.hpp
+ ../include/types/Type.hpp
  ../include/types/UninitObject.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/BasicList.hpp
@@ -380,6 +475,7 @@ CMakeFiles/Project.dir/main.cpp.o
  ../include/value_categories/Lvalue.hpp
  ../include/visitors/Interpreter.hpp
  ../include/visitors/PrintVisitor.hpp
+ ../include/visitors/SymbolTreeVisitor.hpp
  ../include/visitors/TemplateVisitor.hpp
  ../include/visitors/Visitor.hpp
  /compilers/compilers_course_4sem_2020/milestone4_scopes_types/driver.hh
@@ -421,6 +517,7 @@ CMakeFiles/Project.dir/parser.cpp.o
  ../include/types/Class.hpp
  ../include/types/Integer.hpp
  ../include/types/Object.hpp
+ ../include/types/Type.hpp
  ../include/types/UninitObject.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/BasicList.hpp
@@ -429,6 +526,7 @@ CMakeFiles/Project.dir/parser.cpp.o
  ../include/value_categories/Lvalue.hpp
  ../include/visitors/Interpreter.hpp
  ../include/visitors/PrintVisitor.hpp
+ ../include/visitors/SymbolTreeVisitor.hpp
  ../include/visitors/TemplateVisitor.hpp
  ../include/visitors/Visitor.hpp
  /compilers/compilers_course_4sem_2020/milestone4_scopes_types/driver.hh
@@ -470,6 +568,7 @@ CMakeFiles/Project.dir/scanner.cpp.o
  ../include/types/Class.hpp
  ../include/types/Integer.hpp
  ../include/types/Object.hpp
+ ../include/types/Type.hpp
  ../include/types/UninitObject.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/BasicList.hpp
@@ -478,6 +577,7 @@ CMakeFiles/Project.dir/scanner.cpp.o
  ../include/value_categories/Lvalue.hpp
  ../include/visitors/Interpreter.hpp
  ../include/visitors/PrintVisitor.hpp
+ ../include/visitors/SymbolTreeVisitor.hpp
  ../include/visitors/TemplateVisitor.hpp
  ../include/visitors/Visitor.hpp
  /compilers/compilers_course_4sem_2020/milestone4_scopes_types/driver.hh

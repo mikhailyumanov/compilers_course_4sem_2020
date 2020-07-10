@@ -6,75 +6,75 @@
 
 ScopeLayer::ScopeLayer(std::shared_ptr<ScopeLayer> parent)
   : parent_(parent) {
-    std::cout << "Constructor called" << std::endl;
-    std::cout << "End contstructor called" << std::endl;
-
-    parent_->AddChild(shared_from_this());
 }
 
 
-void ScopeLayer::AttachParent() {
-  //TODO
+ScopeLayer::ScopeLayer() {
 }
 
 
-ScopeLayer::ScopeLayer(): parent_{shared_from_this()} {
-}
-
-
-void ScopeLayer::DeclareVariable(Symbol symbol) {
+void ScopeLayer::DeclareVariable(Symbol symbol, Type type) {
   if (IsDeclared(symbol)) {
     throw std::runtime_error("Variable has locally declared");
   }
 
-  local_vars_[symbol] = std::make_shared<UninitObject>();
+  local_vars_[symbol] = std::make_shared<UninitObject>(type);
 }
 
 
-std::shared_ptr<Object>& ScopeLayer::GetSymbol(
-    Symbol symbol) {
-  auto current_layer = shared_from_this();
+std::shared_ptr<Object>& ScopeLayer::Get(Symbol symbol) {
+  auto current_scope = shared_from_this();
 
-  while (!current_layer->IsDeclared(symbol) &&
-      current_layer->parent_ != current_layer) {
-    current_layer = current_layer->parent_;
+  while (!current_scope->IsDeclared(symbol) &&
+      current_scope->parent_ != current_scope) {
+    current_scope = current_scope->parent_;
   }
 
-  if (current_layer->IsDeclared(symbol)) {
-    return current_layer->local_vars_[symbol];
+  if (current_scope->IsDeclared(symbol)) {
+    return current_scope->local_vars_[symbol];
   } else {
     throw std::runtime_error("Variable not declared");
   }
 }
 
 
-std::shared_ptr<Object> ScopeLayer::GetValue(Symbol symbol) {
-  return GetSymbol(symbol);
+void ScopeLayer::Set(Symbol symbol, std::shared_ptr<Object> value) {
+  Get(symbol) = value;
 }
-
-
-void ScopeLayer::SetValue(Symbol symbol, std::shared_ptr<Object> value) {
-  GetSymbol(symbol) = value;
-}
-
 
 bool ScopeLayer::IsDeclared(Symbol symbol) const {
   return local_vars_.find(symbol) != local_vars_.end();
 }
 
 
-void ScopeLayer::AddChild(std::shared_ptr<ScopeLayer> child) {
-  children_.push_back(child);
+bool ScopeLayer::IsDeclaredAnywhere(Symbol symbol) const {
+  return IsDeclared(symbol) || 
+    (parent_ != shared_from_this() && parent_->IsDeclaredAnywhere(symbol));
 }
 
 
-std::shared_ptr<ScopeLayer> ScopeLayer::GetChild(size_t index) {
-  std::cout << "Children of scope: " << children_.size() << std::endl;
+void ScopeLayer::AddChild(std::shared_ptr<ScopeLayer> child) {
+  children_.push_back(child);
+  child->parent_ = shared_from_this();
+}
+
+
+void ScopeLayer::AttachParent(std::shared_ptr<ScopeLayer> parent) {
+  parent->AddChild(shared_from_this());
+}
+
+
+size_t ScopeLayer::GetNumChildren() const {
+  return children_.size();
+}
+
+
+std::shared_ptr<ScopeLayer>& ScopeLayer::GetChild(size_t index) {
   return children_[index];
 }
 
 
-std::shared_ptr<ScopeLayer> ScopeLayer::GetParent() const {
+std::shared_ptr<ScopeLayer>& ScopeLayer::GetParent() {
   return parent_;
 }
 

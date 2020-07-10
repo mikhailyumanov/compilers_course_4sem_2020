@@ -2,134 +2,433 @@
 
 
 SymbolTreeVisitor::SymbolTreeVisitor(const std::string& filename) 
-  : current_scope_{}, tree_{current_scope_} {
+  : tree_(std::make_shared<ScopeLayerTree>()), 
+    current_scope_(tree_->GetRoot()),
+    print_visitor_(std::make_shared<PrintVisitor>(filename, true)), 
+    verbose_{true} {
 }
 
-void SymbolTreeVisitor::Visit(std::shared_ptr<Program> program) {
+SymbolTreeVisitor::SymbolTreeVisitor() 
+  : tree_(std::make_shared<ScopeLayerTree>()), 
+    current_scope_(tree_->GetRoot()),
+    verbose_{false} {
+}
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<Program> element) {
   // current_scope_ = main() scope
-
-  program->main_class->Accept(shared_from_this());
-  program->class_decl_list->Accept(shared_from_this());
-}
-
-void SymbolTreeVisitor::Visit(std::shared_ptr<MainClass> main_class) {
-  // current_scope_ = main() scope
-
-  main_class->stmt_list->Accept(shared_from_this());
-}
-
-void SymbolTreeVisitor::Visit(std::shared_ptr<AssertStmt> assert_stmt) {
-  assert_stmt->expr->Accept(shared_from_this());
-}
-
-void SymbolTreeVisitor::Visit(
-    std::shared_ptr<LocalVarDeclStmt> local_var_decl_stmt) {
-  local_var_decl_stmt->var_decl->Accept(shared_from_this());
-}
-
-void SymbolTreeVisitor::Visit(std::shared_ptr<StmtListStmt> stmt_list_stmt) {
+  if (verbose_) {
+    print_visitor_->Visit(element);
+  }
   ScopeDown();
-  stmt_list_stmt->stmt_list->Accept(shared_from_this());
-  ScopeUp();
-}
 
-void SymbolTreeVisitor::Visit(std::shared_ptr<IfStmt> if_stmt) {
-  if_stmt->expr->Accept(shared_from_this());
-
+  element->class_decl_list->Accept(shared_from_this());
   ScopeDown();
-  if_stmt->stmt->Accept(shared_from_this());
-  ScopeUp();
-}
-
-void SymbolTreeVisitor::Visit(std::shared_ptr<IfElseStmt> if_else_stmt) {
-  if_else_stmt->expr->Accept(shared_from_this());
-
-  ScopeDown();
-  if_else_stmt->stmt_true->Accept(shared_from_this());
+  element->main_class->Accept(shared_from_this());
   ScopeUp();
 
-  ScopeDown();
-  if_else_stmt->stmt_false->Accept(shared_from_this());
-  ScopeUp();
-}
-
-void SymbolTreeVisitor::Visit(std::shared_ptr<WhileStmt> while_stmt) {
-  while_stmt->expr->Accept(shared_from_this());
-
-  ScopeDown();
-  while_stmt->stmt->Accept(shared_from_this());
-  ScopeUp();
-}
-
-void SymbolTreeVisitor::Visit(std::shared_ptr<PrintStmt> print_stmt) {
-  print_stmt->expr->Accept(shared_from_this());
-}
-
-void SymbolTreeVisitor::Visit(std::shared_ptr<AssignmentStmt> assignment_stmt) {
-  assignment_stmt->lvalue->Accept(shared_from_this());
-  assignment_stmt->expr->Accept(shared_from_this());
-}
-
-void SymbolTreeVisitor::Visit(std::shared_ptr<BinOpExpr> bin_op_expr) {
-  bin_op_expr->lhs->Accept(shared_from_this());
-  std::cout << (int) bin_op_expr->op << std::endl;
-  bin_op_expr->rhs->Accept(shared_from_this());
-}
-
-void SymbolTreeVisitor::Visit(std::shared_ptr<TrueExpr> true_expr) {
-  // do nothing
-}
-
-void SymbolTreeVisitor::Visit(std::shared_ptr<FalseExpr> false_expr) {
-  // do nothing
-}
-
-void SymbolTreeVisitor::Visit(std::shared_ptr<IntExpr> int_expr) {
-  // do nothing
-}
-
-void SymbolTreeVisitor::Visit(std::shared_ptr<NewExpr> new_expr) {
-}
-
-void SymbolTreeVisitor::Visit(std::shared_ptr<NotExpr> not_expr) {
-  not_expr->expr->Accept(shared_from_this());
-}
-
-void SymbolTreeVisitor::Visit(std::shared_ptr<IdentExpr> ident_expr) {
-  current_scope_->GetSymbol(ident_expr->name);
-}
-
-void SymbolTreeVisitor::Visit(std::shared_ptr<ClassDecl> class_decl) {
-  ScopeDown();
-  class_decl->decl_list->Accept(shared_from_this());
-  ScopeUp();
-}
-
-void SymbolTreeVisitor::Visit(std::shared_ptr<VarDecl> var_decl) {
-  if (current_scope_->IsDeclared(var_decl->name)) {
-    throw std::runtime_error("Variable is declared");
+  if (verbose_) {
+    print_visitor_->GoUp();
   }
 }
 
-void SymbolTreeVisitor::Visit(std::shared_ptr<Lvalue> lvalue) {
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<MainClass> element) {
+  // current_scope_ = main() scope
+  if (verbose_) {
+    print_visitor_->Visit(element);
+  }
+
+  element->stmt_list->Accept(shared_from_this());
+
+  if (verbose_) {
+    print_visitor_->GoUp();
+  }
+}
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<AssertStmt> element) {
+  if (verbose_) {
+    print_visitor_->Visit(element);
+  }
+
+  element->expr->Accept(shared_from_this());
+
+  if (verbose_) {
+    print_visitor_->GoUp();
+  }
+}
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<LocalVarDeclStmt> element) {
+  if (verbose_) {
+    print_visitor_->Visit(element);
+  }
+
+  element->var_decl->Accept(shared_from_this());
+
+  if (verbose_) {
+    print_visitor_->GoUp();
+  }
+}
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<StmtListStmt> element) {
+  ScopeDown();
+  if (verbose_) {
+    print_visitor_->Visit(element);
+  }
+
+  element->stmt_list->Accept(shared_from_this());
+  ScopeUp();
+
+  if (verbose_) {
+    print_visitor_->GoUp();
+  }
+}
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<IfStmt> element) {
+//  Why not ScopeDown? If there is StmtListStmt, it will. 
+//  Else, there is a single expr, for example, useless VarDecl.
+//  If so, TODO: print warning
+
+//  ScopeDown();
+  if (verbose_) {
+    print_visitor_->Visit(element);
+  }
+
+  element->expr->Accept(shared_from_this());
+  element->stmt->Accept(shared_from_this());
+//  ScopeUp();
+
+  if (verbose_) {
+    print_visitor_->GoUp();
+  }
+}
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<IfElseStmt> element) {
+  if (verbose_) {
+    print_visitor_->Visit(element);
+  }
+
+  element->expr->Accept(shared_from_this());
+
+//  Why not ScopeDown? See below
+//  ScopeDown();
+  element->stmt_true->Accept(shared_from_this());
+//  ScopeUp();
+
+//  ScopeDown();
+  element->stmt_false->Accept(shared_from_this());
+//  ScopeUp();
+
+  if (verbose_) {
+    print_visitor_->GoUp();
+  }
+}
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<WhileStmt> element) {
+//  Why not ScopeDown? See below
+//  ScopeDown();
+  if (verbose_) {
+    print_visitor_->Visit(element);
+  }
+
+  element->expr->Accept(shared_from_this());
+
+  element->stmt->Accept(shared_from_this());
+//  ScopeUp();
+
+  if (verbose_) {
+    print_visitor_->GoUp();
+  }
+}
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<PrintStmt> element) {
+  if (verbose_) {
+    print_visitor_->Visit(element);
+  }
+
+  element->expr->Accept(shared_from_this());
+
+  if (verbose_) {
+    print_visitor_->GoUp();
+  }
+}
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<AssignmentStmt> element) {
+  if (verbose_) {
+    print_visitor_->Visit(element);
+  }
+
+  element->lvalue->Accept(shared_from_this());
+  element->expr->Accept(shared_from_this());
+
+  auto object = current_scope_->Get(element->lvalue->name);
+  Type expr_type = element->expr->GetType();
+
+  if ((object->IsArray() && !element->lvalue->expr) ^
+      expr_type.is_array) {
+    throw std::runtime_error("Exactly one of types is non-array.");
+  }
+
+  if (object->GetType().IsIntegral() ^ expr_type.IsIntegral()) {
+    throw std::runtime_error("Exactly one of types is not integral.");
+  } else {
+    if (!expr_type.IsIntegral() && 
+        object->GetType().type != expr_type.type) {
+      throw std::runtime_error("Cannot cast.");
+    }
+  }
+
+  if (verbose_) {
+    print_visitor_->GoUp();
+  }
+}
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<BinOpExpr> element) {
+  if (verbose_) {
+    print_visitor_->Visit(element);
+  }
+
+  element->lhs->Accept(shared_from_this());
+  if (verbose_) 
+    print_visitor_->GetStream() << (int) element->op << std::endl;
+  element->rhs->Accept(shared_from_this());
+
+  Type lt = element->lhs->GetType();
+  Type rt = element->rhs->GetType();
+
+  if (lt.is_array || rt.is_array) {
+    throw std::runtime_error("Cannot perform bin operation over array.");
+  }
+
+  if (element->op <= BinOpExpr::Operation::OP_EQUAL) {
+    element->SetType({"boolean", false});
+  } else {
+    element->SetType({"int", false});
+  }
+
+  if (verbose_) {
+    print_visitor_->GoUp();
+  }
+}
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<SubscriptExpr> element) {
+  if (verbose_) {
+    print_visitor_->Visit(element);
+  }
+
+  element->expr->Accept(shared_from_this());
+  element->idx->Accept(shared_from_this());
+
+  Type expr_type = element->expr->GetType();
+  if (!expr_type.is_array) {
+    throw std::runtime_error("Cannot subscript non-array.");
+  }
+
+  Type idx_type = element->idx->GetType();
+  if (idx_type.is_array) {
+    throw std::runtime_error("Index should be of non-array type.");
+  }
+
+  if (!idx_type.IsIntegral()) {
+    throw std::runtime_error("Index must be integral.");
+  }
+
+  // there are no n-dim arrays with n > 1
+  element->SetType({expr_type.type, false}); 
+
+  if (verbose_) {
+    print_visitor_->GoUp();
+  }
+}
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<LengthExpr> element) {
+  if (verbose_) {
+    print_visitor_->Visit(element);
+  }
+
+  element->expr->Accept(shared_from_this());
+
+  Type expr_type = element->expr->GetType();
+  if (!expr_type.is_array) {
+    throw std::runtime_error("Non-array type has not length.");
+  }
+
+  element->SetType({"int", false});
+
+  if (verbose_) {
+    print_visitor_->GoUp();
+  }
+}
+
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<TrueExpr> element) {
+  if (verbose_) {
+    print_visitor_->Visit(element);
+  }
+
+  element->SetType({"boolean", false});
+}
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<FalseExpr> element) {
+  if (verbose_) {
+    print_visitor_->Visit(element);
+  }
+
+  element->SetType({"boolean", false});
+}
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<IntExpr> element) {
+  if (verbose_) {
+    print_visitor_->Visit(element);
+  }
+
+  element->SetType({"int", false});
+}
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<NewExpr> element) {
+  if (verbose_) {
+    print_visitor_->Visit(element);
+  }
+
+  element->SetType({element->type, false});
+}
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<NewArrayExpr> element) {
+  if (verbose_) {
+    print_visitor_->Visit(element);
+  }
+
+  element->expr->Accept(shared_from_this());
+
+  Type expr_type = element->expr->GetType();
+  if (expr_type.is_array) {
+    throw std::runtime_error("Array size must be of non-array type.");
+  }
+
+  if (!expr_type.IsIntegral()) {
+    throw std::runtime_error("Array size must be integral.");
+  }
+
+  element->SetType({element->type, true});
+
+  if (verbose_) {
+    print_visitor_->GoUp();
+  }
+}
+
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<NotExpr> element) {
+  if (verbose_) {
+    print_visitor_->Visit(element);
+  }
+
+  element->expr->Accept(shared_from_this());
+
+  Type expr_type = element->expr->GetType();
+  if (expr_type.is_array) {
+    throw std::runtime_error("'Not'-expression must be of non-array type.");
+  }
+
+  element->SetType({"boolean", false});
+
+  if (verbose_) {
+    print_visitor_->GoUp();
+  }
+}
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<IdentExpr> element) {
+  if (verbose_) {
+    print_visitor_->Visit(element);
+  }
+
+  // check if declared
+  if (!current_scope_->IsDeclaredAnywhere(element->name)) {
+    throw std::runtime_error("Variable is not declared.");
+  }
+
+  element->SetType(current_scope_->Get(element->name)->GetType());
+}
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<ClassDecl> element) {
+  ScopeDown();
+  if (verbose_) {
+    print_visitor_->Visit(element);
+  }
+
+  element->decl_list->Accept(shared_from_this());
+  ScopeUp();
+
   // TODO
+
+  if (verbose_) {
+    print_visitor_->GoUp();
+  }
 }
 
-void SymbolTreeVisitor::ScopeDown(const std::string& name = "") {
-  PrintTabs();
-  ++num_tabs_;
-  std::cout << name << std::endl;
+void SymbolTreeVisitor::Visit(std::shared_ptr<VarDecl> element) {
+  if (verbose_) {
+    print_visitor_->Visit(element);
+  }
 
-  auto new_scope = std::make_shared<ScopeLayer>(current_scope_);
-  current_scope_ = new_scope;
+  current_scope_->DeclareVariable(element->name, element->type);
 }
 
-void SymbolTreeVisitpr::ScopeUp() {
-  --num_tabs;
+void SymbolTreeVisitor::Visit(std::shared_ptr<Lvalue> element) {
+  if (verbose_) {
+    print_visitor_->Visit(element);
 
-  current_scope_ = current_scope_->GetParent();
+  }
+
+  // check if declared
+  if (!current_scope_->IsDeclaredAnywhere(element->name)) {
+    throw std::runtime_error("Variable is not declared.");
+  }
+
+  if (element->expr) {
+    auto object = current_scope_->Get(element->name);
+
+    // check if object is array
+    if (!object->IsArray()) {
+      throw std::runtime_error("Subscription of non-array is restricted.");
+    }
+
+    element->expr->Accept(shared_from_this());
+
+    Type expr_type = element->expr->GetType();
+
+    if (expr_type.is_array) {
+      throw std::runtime_error("Index should be of non-array type.");
+    }
+   
+    if (!expr_type.IsIntegral()) {
+      throw std::runtime_error("Index must be integral.");
+    }
+
+
+    if (verbose_) {
+      print_visitor_->GoUp();
+    }
+  }
 }
 
-void SymbolTreeVisitor::PrintTabs() const {
-  for (size_t i = 0; i < num_tabs_; stream_ << '\t', ++i);
+
+std::shared_ptr<ScopeLayerTree> SymbolTreeVisitor::GetTree() const {
+  return tree_;
 }
+
+
+void SymbolTreeVisitor::ScopeDown() {
+  if (verbose_) {
+    print_visitor_->PrintTabs();
+    print_visitor_->GetStream() << "NEW SCOPE" << std::endl;
+  }
+
+//  current_scope_ = tree_->AddLayer(current_scope_);
+  tree_->AddLayer(*current_scope_);
+  current_scope_.GoDown();
+}
+
+void SymbolTreeVisitor::ScopeUp() {
+//  current_scope_ = current_scope_->GetParent();
+  current_scope_.GoUp();
+}
+

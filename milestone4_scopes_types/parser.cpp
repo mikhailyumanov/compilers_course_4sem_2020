@@ -1042,7 +1042,7 @@ namespace yy {
 
   case 28:
 #line 209 "parser.y"
-                                { yylhs.value.as < std::string > () = yystack_[2].value.as < std::string > (); std::cout << yystack_[2].value.as < std::string > () << std::endl; }
+                                { yylhs.value.as < std::string > () = yystack_[2].value.as < std::string > (); }
 #line 1047 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
@@ -1102,163 +1102,163 @@ namespace yy {
     break;
 
   case 40:
-#line 238 "parser.y"
+#line 236 "parser.y"
                             { yylhs.value.as < std::shared_ptr<VarDecl> > () = yystack_[0].value.as < std::shared_ptr<VarDecl> > (); }
 #line 1108 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 42:
-#line 245 "parser.y"
+#line 243 "parser.y"
         { yylhs.value.as < std::shared_ptr<Lvalue> > () = std::make_shared<Lvalue>(yystack_[0].value.as < std::string > ()); }
 #line 1114 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 43:
-#line 247 "parser.y"
+#line 245 "parser.y"
         { yylhs.value.as < std::shared_ptr<Lvalue> > () = std::make_shared<Lvalue>(yystack_[3].value.as < std::string > (), yystack_[1].value.as < std::shared_ptr<Expression> > ()); }
 #line 1120 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 46:
-#line 262 "parser.y"
+#line 260 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_AND     , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
 #line 1126 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 47:
-#line 264 "parser.y"
+#line 262 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_OR      , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
 #line 1132 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 48:
-#line 266 "parser.y"
+#line 264 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_LESS    , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
 #line 1138 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 49:
-#line 268 "parser.y"
+#line 266 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_GREATER , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
 #line 1144 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 50:
-#line 270 "parser.y"
+#line 268 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_EQUAL   , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
 #line 1150 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 51:
-#line 272 "parser.y"
+#line 270 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_PLUS    , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
 #line 1156 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 52:
-#line 274 "parser.y"
+#line 272 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_MINUS   , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
 #line 1162 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 53:
-#line 276 "parser.y"
+#line 274 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_STAR    , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
 #line 1168 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 54:
-#line 278 "parser.y"
+#line 276 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_SLASH   , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
 #line 1174 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 55:
-#line 280 "parser.y"
+#line 278 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_RMNDR   , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
 #line 1180 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 56:
-#line 284 "parser.y"
+#line 281 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<SubscriptExpr>(yystack_[3].value.as < std::shared_ptr<Expression> > (), yystack_[1].value.as < std::shared_ptr<Expression> > ()); }
 #line 1186 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 57:
-#line 288 "parser.y"
+#line 284 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<LengthExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > ()); }
 #line 1192 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 58:
-#line 292 "parser.y"
+#line 287 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<NewArrayExpr>(yystack_[3].value.as < std::string > (), yystack_[1].value.as < std::shared_ptr<Expression> > ()); }
 #line 1198 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 59:
-#line 296 "parser.y"
+#line 290 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<NewExpr>(yystack_[2].value.as < std::string > ()); }
 #line 1204 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 60:
-#line 299 "parser.y"
+#line 293 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = yystack_[1].value.as < std::shared_ptr<Expression> > (); }
 #line 1210 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 61:
-#line 303 "parser.y"
+#line 296 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<IdentExpr>(yystack_[0].value.as < std::string > ()); }
 #line 1216 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 62:
-#line 307 "parser.y"
+#line 299 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<IntExpr>(yystack_[0].value.as < int > ()); }
 #line 1222 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 63:
-#line 309 "parser.y"
+#line 301 "parser.y"
                                      { /* TODO */ }
 #line 1228 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 64:
-#line 313 "parser.y"
+#line 304 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<TrueExpr>(); }
 #line 1234 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 65:
-#line 317 "parser.y"
+#line 307 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<FalseExpr>(); }
 #line 1240 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 66:
-#line 319 "parser.y"
+#line 309 "parser.y"
                                      { }
 #line 1246 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 67:
-#line 323 "parser.y"
+#line 312 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<NotExpr>(yystack_[0].value.as < std::shared_ptr<Expression> > ()); }
 #line 1252 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 68:
-#line 326 "parser.y"
+#line 315 "parser.y"
                           { yylhs.value.as < int > () = yystack_[0].value.as < int > (); }
 #line 1258 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 69:
-#line 327 "parser.y"
+#line 316 "parser.y"
                               { yylhs.value.as < int > () = -yystack_[0].value.as < int > (); }
 #line 1264 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
@@ -1781,10 +1781,10 @@ namespace yy {
        0,   135,   135,   137,   141,   144,   148,   153,   155,   160,
      162,   166,   168,   172,   174,   178,   182,   183,   186,   187,
      190,   193,   199,   200,   203,   204,   205,   206,   209,   212,
-     215,   218,   220,   222,   224,   226,   228,   230,   234,   235,
-     237,   241,   244,   246,   250,   251,   261,   263,   265,   267,
-     269,   271,   273,   275,   277,   279,   282,   286,   290,   294,
-     298,   301,   305,   309,   311,   315,   319,   321,   326,   327
+     215,   218,   220,   222,   224,   226,   228,   230,   232,   233,
+     235,   239,   242,   244,   248,   249,   259,   261,   263,   265,
+     267,   269,   271,   273,   275,   277,   280,   283,   286,   289,
+     292,   295,   298,   301,   303,   306,   309,   311,   315,   316
   };
 
   // Print the state stack on the debug stream.
@@ -1820,7 +1820,7 @@ namespace yy {
 } // yy
 #line 1822 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
 
-#line 332 "parser.y"
+#line 321 "parser.y"
 
 
 void
