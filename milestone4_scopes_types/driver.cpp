@@ -82,7 +82,7 @@ void Driver::PrintTree(const std::string& filename) const {
 }
 
 int Driver::Eval() const {
-  auto visitor = std::make_shared<Interpreter>("./symbol_tree");
+  auto visitor = std::make_shared<Interpreter>("../bin/test5_tree");
   return visitor->GetResult(program);
   return 0;
 }

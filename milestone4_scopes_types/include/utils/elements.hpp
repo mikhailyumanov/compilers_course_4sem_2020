@@ -1,6 +1,6 @@
 #pragma once
 
-#define DEBUG_ON true
+#define DEBUG_ON false
 
 #if DEBUG_ON
 #define DEBUG(expr) std::cout << expr << std::endl;

@@ -1,75 +1,97 @@
 Program
+	NEW SCOPE
+	NEW SCOPE
+	ClassDecl MyClass
+		VarDecl int is array: 0 x
+		VarDecl int is array: 0 y
+		VarDecl int is array: 0 z
+	NEW SCOPE
 	MainClass
 		PrintStmt
 			IntExpr 1
 		PrintStmt
 			BinOpExpr
 				IntExpr 2
-				5
+5
 				BinOpExpr
 					IntExpr 3
-					7
+7
 					IntExpr 5
 		PrintStmt
 			BinOpExpr
 				BinOpExpr
 					IntExpr 2
-					7
+7
 					IntExpr 3
-				5
+5
 				BinOpExpr
 					IntExpr 5
-					8
+8
 					IntExpr 7
 		PrintStmt
 			BinOpExpr
 				BinOpExpr
 					IntExpr 2
-					7
+7
 					IntExpr 3
-				5
+5
 				BinOpExpr
 					IntExpr 5
-					8
+8
 					IntExpr 7
 		PrintStmt
 			BinOpExpr
 				IntExpr 4
-				6
+6
 				IntExpr 7
 		PrintStmt
 			BinOpExpr
 				NotExpr
 					BinOpExpr
 						IntExpr 2
-						3
+3
 						IntExpr 3
-				4
+4
 				TrueExpr
+		PrintStmt
+			IntExpr 123454321
 		LocalVarDeclStmt
-			VarDecl  is array: 0 i
+			VarDecl int is array: 0 i
 		AssignmentStmt
-			Lvalue i is array: 0
+			Lvalue i
 			IntExpr 0
 		WhileStmt
 			BinOpExpr
 				IdentExpr i
-				2
+2
 				IntExpr 10
+			NEW SCOPE
 			StmtListStmt
-				PrintStmt
-					IdentExpr i
 				IfStmt
 					BinOpExpr
 						IdentExpr i
-						4
+9
 						IntExpr 2
+					NEW SCOPE
 					StmtListStmt
 						PrintStmt
 							IdentExpr i
-				AssignmentStmt
-					Lvalue i is array: 0
+				IfElseStmt
 					BinOpExpr
 						IdentExpr i
-						5
+4
+						IntExpr 5
+					NEW SCOPE
+					StmtListStmt
+						PrintStmt
+							IntExpr 42
+					NEW SCOPE
+					StmtListStmt
+						PrintStmt
+							IntExpr 99
+				AssignmentStmt
+					Lvalue i
+					BinOpExpr
+						IdentExpr i
+5
 						IntExpr 1
