@@ -82,9 +82,11 @@ Program
 4
 						IntExpr 5
 					NEW SCOPE
+					NEW SCOPE
 					StmtListStmt
 						PrintStmt
 							IntExpr 42
+					NEW SCOPE
 					NEW SCOPE
 					StmtListStmt
 						PrintStmt

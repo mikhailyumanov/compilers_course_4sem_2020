@@ -109,14 +109,20 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<IfElseStmt> element) {
 
   element->expr->Accept(shared_from_this());
 
-//  Why not ScopeDown? See below
-//  ScopeDown();
-  element->stmt_true->Accept(shared_from_this());
-//  ScopeUp();
+//  Unlike the IfStmt above, ScopeDown is necessary here!
+//  Case: if-stmt false, go to else-stmt? 
+//        No, iterator goes to if-stmt instead of else-stmt.
+//  Solution: 1) surround 'Accepts' with scope-down/up here
+//            2) scopedown + scopeup both of stmt (if, else) 
+//               in interpreter even if one of them is not evaluated.
 
-//  ScopeDown();
+  ScopeDown();
+  element->stmt_true->Accept(shared_from_this());
+  ScopeUp();
+
+  ScopeDown();
   element->stmt_false->Accept(shared_from_this());
-//  ScopeUp();
+  ScopeUp();
 
   if (verbose_) {
     print_visitor_->GoUp();
@@ -124,7 +130,7 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<IfElseStmt> element) {
 }
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<WhileStmt> element) {
-//  Why not ScopeDown? See below
+//  Why not ScopeDown? See IfStmt
 //  ScopeDown();
   if (verbose_) {
     print_visitor_->Visit(element);
@@ -369,6 +375,7 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<VarDecl> element) {
     print_visitor_->Visit(element);
   }
 
+  DEBUG_START DEBUG(element->name) DEBUG(element->type) DEBUG_FINISH
   current_scope_->DeclareVariable(element->name, element->type);
 }
 

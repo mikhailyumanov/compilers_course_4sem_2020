@@ -90,6 +90,14 @@ ScopeLayerTree::Iterator& ScopeLayerTree::Iterator::GoDown() {
   SaveState();
   current_parent_ = current_parent_->GetChild(current_child_index_);
   current_child_index_ = GetLastChildIndex(current_parent_);
+
+  DEBUG_SINGLE("GoDown")
+  DEBUG_START 
+    DEBUG("Current state:")
+    DEBUG("parent:") DEBUG(current_parent_)
+    DEBUG("; child index:") DEBUG(current_child_index_)
+  DEBUG_FINISH
+
   return *this;
 }
 
@@ -97,6 +105,14 @@ ScopeLayerTree::Iterator& ScopeLayerTree::Iterator::GoUp() {
   SaveState();
   current_parent_ = current_parent_->GetParent();
   current_child_index_ = last_visited_child_[current_parent_];
+
+  DEBUG_SINGLE("GoUp")
+  DEBUG_START 
+    DEBUG("Current state:")
+    DEBUG("parent:") DEBUG(current_parent_)
+    DEBUG("; child index:") DEBUG(current_child_index_)
+  DEBUG_FINISH
+
   return *this;
 }
 

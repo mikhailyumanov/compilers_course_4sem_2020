@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+..//debug.h
+
 ../include/declarations/ClassDecl.hpp
 declarations/Decl.hpp
 ../include/declarations/declarations/Decl.hpp
@@ -129,6 +131,8 @@ unordered_map
 -
 memory
 -
+debug.h
+../include/scopes/debug.h
 
 ../include/statements/AssertStmt.hpp
 statements/Statement.hpp
@@ -235,6 +239,8 @@ visitors/Visitor.hpp
 ../include/utils/visitors/Visitor.hpp
 
 ../include/utils/elements.hpp
+debug.h
+../include/utils/debug.h
 utils/BasicList.hpp
 ../include/utils/utils/BasicList.hpp
 program/Program.hpp

@@ -5,6 +5,7 @@
 Driver::Driver() :
     trace_parsing(false),
     trace_scanning(false),
+    trace_tree_building(false),
     scanner(*this), parser(scanner, *this) {
 }
 
@@ -82,7 +83,14 @@ void Driver::PrintTree(const std::string& filename) const {
 }
 
 int Driver::Eval() const {
-  auto visitor = std::make_shared<Interpreter>("../bin/test5_tree");
+  std::shared_ptr<Interpreter> visitor;
+  if (!trace_tree_building) {
+    visitor = std::make_shared<Interpreter>();
+  } else {
+    std::cout << tree_output << std::endl;
+    visitor = std::make_shared<Interpreter>(tree_output);
+  }
+
   return visitor->GetResult(program);
   return 0;
 }

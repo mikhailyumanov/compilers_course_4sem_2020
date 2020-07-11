@@ -13,7 +13,7 @@ Interpreter::Interpreter()
 }
 
 void Interpreter::Visit(std::shared_ptr<Program> element) {
-  DEBUG("Program")
+  DEBUG_SINGLE("Program")
 
   // Build symbol tree
   symbol_tree_visitor_->Visit(element);
@@ -32,13 +32,13 @@ void Interpreter::Visit(std::shared_ptr<Program> element) {
 }
 
 void Interpreter::Visit(std::shared_ptr<MainClass> element) {
-  DEBUG("MainClass")
+  DEBUG_SINGLE("MainClass")
 
   element->stmt_list->Accept(shared_from_this());
 }
 
 void Interpreter::Visit(std::shared_ptr<AssertStmt> element) {
-  DEBUG("AssertStmt")
+  DEBUG_SINGLE("AssertStmt")
 
   if (!Accept(element->expr)->ToBool()) {
     throw AssertException();
@@ -46,13 +46,13 @@ void Interpreter::Visit(std::shared_ptr<AssertStmt> element) {
 }
 
 void Interpreter::Visit(std::shared_ptr<LocalVarDeclStmt> element) {
-  DEBUG("LocalVarDeclStmt")
+  DEBUG_SINGLE("LocalVarDeclStmt")
 
   element->var_decl->Accept(shared_from_this());
 }
 
 void Interpreter::Visit(std::shared_ptr<StmtListStmt> element) {
-  DEBUG("StmtListStmt")
+  DEBUG_SINGLE("StmtListStmt")
 
   current_scope_.GoDown();
   element->stmt_list->Accept(shared_from_this());
@@ -60,7 +60,7 @@ void Interpreter::Visit(std::shared_ptr<StmtListStmt> element) {
 }
 
 void Interpreter::Visit(std::shared_ptr<IfStmt> element) {
-  DEBUG("IfStmt")
+  DEBUG_SINGLE("IfStmt")
 
   if (Accept(element->expr)->ToBool()) { 
     element->stmt->Accept(shared_from_this()); 
@@ -68,17 +68,25 @@ void Interpreter::Visit(std::shared_ptr<IfStmt> element) {
 }
 
 void Interpreter::Visit(std::shared_ptr<IfElseStmt> element) {
-  DEBUG("IfElseStmt")
+  DEBUG_SINGLE("IfElseStmt")
 
   if (Accept(element->expr)->ToBool()) { 
+    current_scope_.GoDown();
     tos_value_ = Accept(element->stmt_true);
+    current_scope_.GoUp();
+    current_scope_.GoDown();
+    current_scope_.GoUp();
   } else {
+    current_scope_.GoDown();
+    current_scope_.GoUp();
+    current_scope_.GoDown();
     tos_value_ = Accept(element->stmt_false);
+    current_scope_.GoUp();
   }
 }
 
 void Interpreter::Visit(std::shared_ptr<WhileStmt> element) {
-  DEBUG("WhileStmt")
+  DEBUG_SINGLE("WhileStmt")
 
   auto old_current_scope = current_scope_;
   auto new_current_scope = current_scope_;
@@ -93,7 +101,7 @@ void Interpreter::Visit(std::shared_ptr<WhileStmt> element) {
 }
 
 void Interpreter::Visit(std::shared_ptr<PrintStmt> element) {
-  DEBUG("PrintStmt")
+  DEBUG_SINGLE("PrintStmt")
 
   Accept(element->expr)->Print(std::cout);
   std::cout << std::endl;
@@ -101,27 +109,37 @@ void Interpreter::Visit(std::shared_ptr<PrintStmt> element) {
 }
 
 void Interpreter::Visit(std::shared_ptr<AssignmentStmt> element) {
-  DEBUG("AssignmentStmt")
+  DEBUG_SINGLE("AssignmentStmt")
+
+  DEBUG_START 
+    DEBUG("Is var") 
+    DEBUG(element->lvalue->name)
+    DEBUG("declared:")
+    DEBUG((bool) current_scope_->IsDeclaredAnywhere(element->lvalue->name))
+  DEBUG_FINISH
+  for (auto& pr : current_scope_->GetVars()) {
+    DEBUG_START DEBUG(pr.first.GetName()) DEBUG(pr.second) DEBUG_FINISH
+  }
 
   auto value = Accept(element->expr);
   std::shared_ptr<Object> var = current_scope_->Get(element->lvalue->name);
   if (element->lvalue->expr) {  // arr[i] = x
-    DEBUG("Assignment subscript")
-    DEBUG(var->IsArray())
+    DEBUG_SINGLE("Assignment subscript")
+    DEBUG_SINGLE(var->IsArray())
     std::shared_ptr<Array> array = std::dynamic_pointer_cast<Array>(var);
     (*array)[Accept(element->lvalue->expr)->ToInt()] = value;
 //    array->Print(std::cout);
-//    DEBUG('\n')
+//    DEBUG_SINGLE('\n')
   } else {  // a = b
-    DEBUG("Assignment no subscript")
+    DEBUG_SINGLE("Assignment no subscript")
     current_scope_->Set(element->lvalue->name, value);
 //    current_scope_->Get(element->lvalue->name)->Print(std::cout);
-//    DEBUG('\n')
+//    DEBUG_SINGLE('\n')
   }
 }
 
 void Interpreter::Visit(std::shared_ptr<BinOpExpr> element) {
-  DEBUG("BinOpExpr")
+  DEBUG_SINGLE("BinOpExpr")
 
   int lhs = Accept(element->lhs)->ToInt();
   int rhs = Accept(element->rhs)->ToInt();
@@ -145,7 +163,7 @@ void Interpreter::Visit(std::shared_ptr<BinOpExpr> element) {
 }
 
 void Interpreter::Visit(std::shared_ptr<SubscriptExpr> element) {
-  DEBUG("SubscriptExpr")
+  DEBUG_SINGLE("SubscriptExpr")
 
   std::shared_ptr<Object> array = Accept(element->expr);
   SetTosValue(
@@ -155,7 +173,7 @@ void Interpreter::Visit(std::shared_ptr<SubscriptExpr> element) {
 }
 
 void Interpreter::Visit(std::shared_ptr<LengthExpr> element) {
-  DEBUG("LengthExpr")
+  DEBUG_SINGLE("LengthExpr")
 
   std::shared_ptr<Object> array = Accept(element->expr);
   SetTosValue(std::make_shared<Integer>(
@@ -163,31 +181,31 @@ void Interpreter::Visit(std::shared_ptr<LengthExpr> element) {
 }
 
 void Interpreter::Visit(std::shared_ptr<TrueExpr> element) {
-  DEBUG("TrueExpr")
+  DEBUG_SINGLE("TrueExpr")
 
   SetTosValue(std::make_shared<Bool>(true));
 }
 
 void Interpreter::Visit(std::shared_ptr<FalseExpr> element) {
-  DEBUG("FalseExpr")
+  DEBUG_SINGLE("FalseExpr")
 
   SetTosValue(std::make_shared<Bool>(false));
 }
 
 void Interpreter::Visit(std::shared_ptr<IntExpr> element) {
-  DEBUG("IntExpr")
+  DEBUG_SINGLE("IntExpr")
 
   SetTosValue(std::make_shared<Integer>(element->value));
 }
 
 void Interpreter::Visit(std::shared_ptr<NewExpr> element) {
-  DEBUG("NewExpr")
+  DEBUG_SINGLE("NewExpr")
 
   SetTosValue(std::make_shared<Class>(element->GetType().type));
 }
 
 void Interpreter::Visit(std::shared_ptr<NewArrayExpr> element) {
-  DEBUG("NewArrayExpr")
+  DEBUG_SINGLE("NewArrayExpr")
 
   size_t len = Accept(element->expr)->ToInt();
   std::vector<std::shared_ptr<Object>> new_array;
@@ -214,32 +232,32 @@ void Interpreter::Visit(std::shared_ptr<NewArrayExpr> element) {
 }
 
 void Interpreter::Visit(std::shared_ptr<NotExpr> element) {
-  DEBUG("NotExpr")
+  DEBUG_SINGLE("NotExpr")
 
   SetTosValue(std::make_shared<Bool>(!Accept(element->expr)->ToBool()));
 }
 
 void Interpreter::Visit(std::shared_ptr<IdentExpr> element) {
-  DEBUG("IdentExpr")
+  DEBUG_SINGLE("IdentExpr")
 
   SetTosValue(current_scope_->Get(element->name));
 }
 
 void Interpreter::Visit(std::shared_ptr<ClassDecl> element) {
-  DEBUG("ClassDecl")
+  DEBUG_SINGLE("ClassDecl")
 
   current_scope_.GoDown();
   current_scope_.GoUp();
 }
 
 void Interpreter::Visit(std::shared_ptr<VarDecl> element) {
-  DEBUG("VarDecl")
+  DEBUG_SINGLE("VarDecl")
 
   UnsetTosValue();
 }
  
 void Interpreter::Visit(std::shared_ptr<Lvalue> element) {
-  DEBUG("Lvalue")
+  DEBUG_SINGLE("Lvalue")
 
   // do nothing
 }

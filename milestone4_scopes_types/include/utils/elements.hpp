@@ -1,13 +1,7 @@
 #pragma once
 
-#define DEBUG_ON false
-
-#if DEBUG_ON
-#define DEBUG(expr) std::cout << expr << std::endl;
-#else
-#define DEBUG(expr) ;
-#endif
-
+//debug
+#include "debug.h"
 
 // utils
 #include "utils/BasicList.hpp"

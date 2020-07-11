@@ -4,6 +4,8 @@
 #include <unordered_map>
 #include <memory>
 
+#include "debug.h"
+
 
 class Symbol: public std::enable_shared_from_this<Symbol> {
  public:

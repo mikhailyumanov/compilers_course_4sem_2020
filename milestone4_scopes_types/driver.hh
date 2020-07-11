@@ -35,6 +35,9 @@ class Driver {
   int result;
   bool trace_parsing;
   bool trace_scanning;
+  bool trace_tree_building;
+  std::string tree_output;
+
   yy::location location;
   std::string file;
 
