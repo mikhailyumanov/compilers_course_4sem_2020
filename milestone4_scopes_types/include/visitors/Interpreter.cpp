@@ -138,6 +138,14 @@ void Interpreter::Visit(std::shared_ptr<AssignmentStmt> element) {
   }
 }
 
+void Interpreter::Visit(std::shared_ptr<ReturnStmt> element) {
+  DEBUG_SINGLE("ReturnStmt")
+}
+
+void Interpreter::Visit(std::shared_ptr<MethodStmt> element) {
+  DEBUG_SINGLE("MethodStmt")
+}
+
 void Interpreter::Visit(std::shared_ptr<BinOpExpr> element) {
   DEBUG_SINGLE("BinOpExpr")
 

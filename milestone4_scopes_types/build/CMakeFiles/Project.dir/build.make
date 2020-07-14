@@ -357,9 +357,81 @@ CMakeFiles/Project.dir/include/statements/AssignmentStmt.cpp.o.provides: CMakeFi
 CMakeFiles/Project.dir/include/statements/AssignmentStmt.cpp.o.provides.build: CMakeFiles/Project.dir/include/statements/AssignmentStmt.cpp.o
 
 
+CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o: ../include/statements/ReturnStmt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/statements/ReturnStmt.cpp
+
+CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/statements/ReturnStmt.cpp > CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.i
+
+CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/statements/ReturnStmt.cpp -o CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.s
+
+CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o.requires:
+
+.PHONY : CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o.requires
+
+CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o.provides: CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o.provides.build
+.PHONY : CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o.provides
+
+CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o.provides.build: CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o
+
+
+CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o: ../include/statements/MethodStmt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/statements/MethodStmt.cpp
+
+CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/statements/MethodStmt.cpp > CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.i
+
+CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/statements/MethodStmt.cpp -o CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.s
+
+CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o.requires:
+
+.PHONY : CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o.requires
+
+CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o.provides: CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o.provides.build
+.PHONY : CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o.provides
+
+CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o.provides.build: CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o
+
+
+CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o: ../include/statements/MethodInvocation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/statements/MethodInvocation.cpp
+
+CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/statements/MethodInvocation.cpp > CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.i
+
+CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/statements/MethodInvocation.cpp -o CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.s
+
+CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o.requires:
+
+.PHONY : CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o.requires
+
+CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o.provides: CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o.provides.build
+.PHONY : CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o.provides
+
+CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o.provides.build: CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o
+
+
 CMakeFiles/Project.dir/include/expressions/BinOpExpr.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/expressions/BinOpExpr.cpp.o: ../include/expressions/BinOpExpr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Project.dir/include/expressions/BinOpExpr.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Project.dir/include/expressions/BinOpExpr.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/expressions/BinOpExpr.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/expressions/BinOpExpr.cpp
 
 CMakeFiles/Project.dir/include/expressions/BinOpExpr.cpp.i: cmake_force
@@ -383,7 +455,7 @@ CMakeFiles/Project.dir/include/expressions/BinOpExpr.cpp.o.provides.build: CMake
 
 CMakeFiles/Project.dir/include/expressions/BoolConstExpr.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/expressions/BoolConstExpr.cpp.o: ../include/expressions/BoolConstExpr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Project.dir/include/expressions/BoolConstExpr.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Project.dir/include/expressions/BoolConstExpr.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/expressions/BoolConstExpr.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/expressions/BoolConstExpr.cpp
 
 CMakeFiles/Project.dir/include/expressions/BoolConstExpr.cpp.i: cmake_force
@@ -407,7 +479,7 @@ CMakeFiles/Project.dir/include/expressions/BoolConstExpr.cpp.o.provides.build: C
 
 CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o: ../include/expressions/SubscriptExpr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/expressions/SubscriptExpr.cpp
 
 CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.i: cmake_force
@@ -431,7 +503,7 @@ CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o.provides.build: C
 
 CMakeFiles/Project.dir/include/expressions/LengthExpr.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/expressions/LengthExpr.cpp.o: ../include/expressions/LengthExpr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Project.dir/include/expressions/LengthExpr.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/Project.dir/include/expressions/LengthExpr.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/expressions/LengthExpr.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/expressions/LengthExpr.cpp
 
 CMakeFiles/Project.dir/include/expressions/LengthExpr.cpp.i: cmake_force
@@ -455,7 +527,7 @@ CMakeFiles/Project.dir/include/expressions/LengthExpr.cpp.o.provides.build: CMak
 
 CMakeFiles/Project.dir/include/expressions/IntExpr.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/expressions/IntExpr.cpp.o: ../include/expressions/IntExpr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Project.dir/include/expressions/IntExpr.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/Project.dir/include/expressions/IntExpr.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/expressions/IntExpr.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/expressions/IntExpr.cpp
 
 CMakeFiles/Project.dir/include/expressions/IntExpr.cpp.i: cmake_force
@@ -479,7 +551,7 @@ CMakeFiles/Project.dir/include/expressions/IntExpr.cpp.o.provides.build: CMakeFi
 
 CMakeFiles/Project.dir/include/expressions/NewExpr.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/expressions/NewExpr.cpp.o: ../include/expressions/NewExpr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/Project.dir/include/expressions/NewExpr.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/Project.dir/include/expressions/NewExpr.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/expressions/NewExpr.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/expressions/NewExpr.cpp
 
 CMakeFiles/Project.dir/include/expressions/NewExpr.cpp.i: cmake_force
@@ -503,7 +575,7 @@ CMakeFiles/Project.dir/include/expressions/NewExpr.cpp.o.provides.build: CMakeFi
 
 CMakeFiles/Project.dir/include/expressions/NewArrayExpr.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/expressions/NewArrayExpr.cpp.o: ../include/expressions/NewArrayExpr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/Project.dir/include/expressions/NewArrayExpr.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/Project.dir/include/expressions/NewArrayExpr.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/expressions/NewArrayExpr.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/expressions/NewArrayExpr.cpp
 
 CMakeFiles/Project.dir/include/expressions/NewArrayExpr.cpp.i: cmake_force
@@ -527,7 +599,7 @@ CMakeFiles/Project.dir/include/expressions/NewArrayExpr.cpp.o.provides.build: CM
 
 CMakeFiles/Project.dir/include/expressions/NotExpr.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/expressions/NotExpr.cpp.o: ../include/expressions/NotExpr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/Project.dir/include/expressions/NotExpr.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/Project.dir/include/expressions/NotExpr.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/expressions/NotExpr.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/expressions/NotExpr.cpp
 
 CMakeFiles/Project.dir/include/expressions/NotExpr.cpp.i: cmake_force
@@ -551,7 +623,7 @@ CMakeFiles/Project.dir/include/expressions/NotExpr.cpp.o.provides.build: CMakeFi
 
 CMakeFiles/Project.dir/include/expressions/IdentExpr.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/expressions/IdentExpr.cpp.o: ../include/expressions/IdentExpr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/Project.dir/include/expressions/IdentExpr.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/Project.dir/include/expressions/IdentExpr.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/expressions/IdentExpr.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/expressions/IdentExpr.cpp
 
 CMakeFiles/Project.dir/include/expressions/IdentExpr.cpp.i: cmake_force
@@ -575,7 +647,7 @@ CMakeFiles/Project.dir/include/expressions/IdentExpr.cpp.o.provides.build: CMake
 
 CMakeFiles/Project.dir/include/utils/BasicList.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/utils/BasicList.cpp.o: ../include/utils/BasicList.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/Project.dir/include/utils/BasicList.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/Project.dir/include/utils/BasicList.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/utils/BasicList.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/utils/BasicList.cpp
 
 CMakeFiles/Project.dir/include/utils/BasicList.cpp.i: cmake_force
@@ -599,7 +671,7 @@ CMakeFiles/Project.dir/include/utils/BasicList.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/Project.dir/include/declarations/VarDecl.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/declarations/VarDecl.cpp.o: ../include/declarations/VarDecl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/Project.dir/include/declarations/VarDecl.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/Project.dir/include/declarations/VarDecl.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/declarations/VarDecl.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/declarations/VarDecl.cpp
 
 CMakeFiles/Project.dir/include/declarations/VarDecl.cpp.i: cmake_force
@@ -623,7 +695,7 @@ CMakeFiles/Project.dir/include/declarations/VarDecl.cpp.o.provides.build: CMakeF
 
 CMakeFiles/Project.dir/include/declarations/ClassDecl.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/declarations/ClassDecl.cpp.o: ../include/declarations/ClassDecl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/Project.dir/include/declarations/ClassDecl.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/Project.dir/include/declarations/ClassDecl.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/declarations/ClassDecl.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/declarations/ClassDecl.cpp
 
 CMakeFiles/Project.dir/include/declarations/ClassDecl.cpp.i: cmake_force
@@ -647,7 +719,7 @@ CMakeFiles/Project.dir/include/declarations/ClassDecl.cpp.o.provides.build: CMak
 
 CMakeFiles/Project.dir/include/scopes/Symbol.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/scopes/Symbol.cpp.o: ../include/scopes/Symbol.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/Project.dir/include/scopes/Symbol.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/Project.dir/include/scopes/Symbol.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/scopes/Symbol.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/scopes/Symbol.cpp
 
 CMakeFiles/Project.dir/include/scopes/Symbol.cpp.i: cmake_force
@@ -671,7 +743,7 @@ CMakeFiles/Project.dir/include/scopes/Symbol.cpp.o.provides.build: CMakeFiles/Pr
 
 CMakeFiles/Project.dir/include/scopes/ScopeLayer.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/scopes/ScopeLayer.cpp.o: ../include/scopes/ScopeLayer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/Project.dir/include/scopes/ScopeLayer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/Project.dir/include/scopes/ScopeLayer.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/scopes/ScopeLayer.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/scopes/ScopeLayer.cpp
 
 CMakeFiles/Project.dir/include/scopes/ScopeLayer.cpp.i: cmake_force
@@ -695,7 +767,7 @@ CMakeFiles/Project.dir/include/scopes/ScopeLayer.cpp.o.provides.build: CMakeFile
 
 CMakeFiles/Project.dir/include/scopes/ScopeLayerTree.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/scopes/ScopeLayerTree.cpp.o: ../include/scopes/ScopeLayerTree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/Project.dir/include/scopes/ScopeLayerTree.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/Project.dir/include/scopes/ScopeLayerTree.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/scopes/ScopeLayerTree.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/scopes/ScopeLayerTree.cpp
 
 CMakeFiles/Project.dir/include/scopes/ScopeLayerTree.cpp.i: cmake_force
@@ -719,7 +791,7 @@ CMakeFiles/Project.dir/include/scopes/ScopeLayerTree.cpp.o.provides.build: CMake
 
 CMakeFiles/Project.dir/include/types/Type.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/types/Type.cpp.o: ../include/types/Type.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/Project.dir/include/types/Type.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/Project.dir/include/types/Type.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/types/Type.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/types/Type.cpp
 
 CMakeFiles/Project.dir/include/types/Type.cpp.i: cmake_force
@@ -743,7 +815,7 @@ CMakeFiles/Project.dir/include/types/Type.cpp.o.provides.build: CMakeFiles/Proje
 
 CMakeFiles/Project.dir/include/types/Object.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/types/Object.cpp.o: ../include/types/Object.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/Project.dir/include/types/Object.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/Project.dir/include/types/Object.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/types/Object.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/types/Object.cpp
 
 CMakeFiles/Project.dir/include/types/Object.cpp.i: cmake_force
@@ -767,7 +839,7 @@ CMakeFiles/Project.dir/include/types/Object.cpp.o.provides.build: CMakeFiles/Pro
 
 CMakeFiles/Project.dir/include/types/Integer.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/types/Integer.cpp.o: ../include/types/Integer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/Project.dir/include/types/Integer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/Project.dir/include/types/Integer.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/types/Integer.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/types/Integer.cpp
 
 CMakeFiles/Project.dir/include/types/Integer.cpp.i: cmake_force
@@ -791,7 +863,7 @@ CMakeFiles/Project.dir/include/types/Integer.cpp.o.provides.build: CMakeFiles/Pr
 
 CMakeFiles/Project.dir/include/types/Bool.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/types/Bool.cpp.o: ../include/types/Bool.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/Project.dir/include/types/Bool.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/Project.dir/include/types/Bool.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/types/Bool.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/types/Bool.cpp
 
 CMakeFiles/Project.dir/include/types/Bool.cpp.i: cmake_force
@@ -815,7 +887,7 @@ CMakeFiles/Project.dir/include/types/Bool.cpp.o.provides.build: CMakeFiles/Proje
 
 CMakeFiles/Project.dir/include/types/Class.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/types/Class.cpp.o: ../include/types/Class.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/Project.dir/include/types/Class.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/Project.dir/include/types/Class.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/types/Class.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/types/Class.cpp
 
 CMakeFiles/Project.dir/include/types/Class.cpp.i: cmake_force
@@ -839,7 +911,7 @@ CMakeFiles/Project.dir/include/types/Class.cpp.o.provides.build: CMakeFiles/Proj
 
 CMakeFiles/Project.dir/include/types/Array.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/types/Array.cpp.o: ../include/types/Array.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/Project.dir/include/types/Array.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/Project.dir/include/types/Array.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/types/Array.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/types/Array.cpp
 
 CMakeFiles/Project.dir/include/types/Array.cpp.i: cmake_force
@@ -863,7 +935,7 @@ CMakeFiles/Project.dir/include/types/Array.cpp.o.provides.build: CMakeFiles/Proj
 
 CMakeFiles/Project.dir/include/types/UninitObject.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/types/UninitObject.cpp.o: ../include/types/UninitObject.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/Project.dir/include/types/UninitObject.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/Project.dir/include/types/UninitObject.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/types/UninitObject.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/types/UninitObject.cpp
 
 CMakeFiles/Project.dir/include/types/UninitObject.cpp.i: cmake_force
@@ -887,7 +959,7 @@ CMakeFiles/Project.dir/include/types/UninitObject.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/Project.dir/include/value_categories/Lvalue.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/value_categories/Lvalue.cpp.o: ../include/value_categories/Lvalue.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/Project.dir/include/value_categories/Lvalue.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/Project.dir/include/value_categories/Lvalue.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/value_categories/Lvalue.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/value_categories/Lvalue.cpp
 
 CMakeFiles/Project.dir/include/value_categories/Lvalue.cpp.i: cmake_force
@@ -911,7 +983,7 @@ CMakeFiles/Project.dir/include/value_categories/Lvalue.cpp.o.provides.build: CMa
 
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/visitors/PrintVisitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/visitors/PrintVisitor.cpp
 
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.i: cmake_force
@@ -935,7 +1007,7 @@ CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o.provides.build: CMake
 
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/visitors/Interpreter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/visitors/Interpreter.cpp
 
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.i: cmake_force
@@ -959,7 +1031,7 @@ CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o.provides.build: CMakeF
 
 CMakeFiles/Project.dir/include/visitors/TemplateVisitor.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/visitors/TemplateVisitor.cpp.o: ../include/visitors/TemplateVisitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/Project.dir/include/visitors/TemplateVisitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/Project.dir/include/visitors/TemplateVisitor.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/visitors/TemplateVisitor.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/visitors/TemplateVisitor.cpp
 
 CMakeFiles/Project.dir/include/visitors/TemplateVisitor.cpp.i: cmake_force
@@ -983,7 +1055,7 @@ CMakeFiles/Project.dir/include/visitors/TemplateVisitor.cpp.o.provides.build: CM
 
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/visitors/SymbolTreeVisitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o -c /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/visitors/SymbolTreeVisitor.cpp
 
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.i: cmake_force
@@ -1019,6 +1091,9 @@ Project_OBJECTS = \
 "CMakeFiles/Project.dir/include/statements/StmtListStmt.cpp.o" \
 "CMakeFiles/Project.dir/include/statements/ConditionalStmt.cpp.o" \
 "CMakeFiles/Project.dir/include/statements/AssignmentStmt.cpp.o" \
+"CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o" \
+"CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o" \
+"CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o" \
 "CMakeFiles/Project.dir/include/expressions/BinOpExpr.cpp.o" \
 "CMakeFiles/Project.dir/include/expressions/BoolConstExpr.cpp.o" \
 "CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o" \
@@ -1062,6 +1137,9 @@ Project_EXTERNAL_OBJECTS =
 ../bin/Project: CMakeFiles/Project.dir/include/statements/StmtListStmt.cpp.o
 ../bin/Project: CMakeFiles/Project.dir/include/statements/ConditionalStmt.cpp.o
 ../bin/Project: CMakeFiles/Project.dir/include/statements/AssignmentStmt.cpp.o
+../bin/Project: CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o
+../bin/Project: CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o
+../bin/Project: CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o
 ../bin/Project: CMakeFiles/Project.dir/include/expressions/BinOpExpr.cpp.o
 ../bin/Project: CMakeFiles/Project.dir/include/expressions/BoolConstExpr.cpp.o
 ../bin/Project: CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o
@@ -1091,7 +1169,7 @@ Project_EXTERNAL_OBJECTS =
 ../bin/Project: CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o
 ../bin/Project: CMakeFiles/Project.dir/build.make
 ../bin/Project: CMakeFiles/Project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Linking CXX executable ../bin/Project"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/compilers/compilers_course_4sem_2020/milestone4_scopes_types/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Linking CXX executable ../bin/Project"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Project.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -1111,6 +1189,9 @@ CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/include/statements/Local
 CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/include/statements/StmtListStmt.cpp.o.requires
 CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/include/statements/ConditionalStmt.cpp.o.requires
 CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/include/statements/AssignmentStmt.cpp.o.requires
+CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o.requires
+CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o.requires
+CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o.requires
 CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/include/expressions/BinOpExpr.cpp.o.requires
 CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/include/expressions/BoolConstExpr.cpp.o.requires
 CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o.requires

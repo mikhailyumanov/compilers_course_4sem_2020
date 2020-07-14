@@ -31,7 +31,6 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<Program> element) {
   }
 }
 
-
 void SymbolTreeVisitor::Visit(std::shared_ptr<MainClass> element) {
   // current_scope_ = main() scope
   if (verbose_) {
@@ -182,6 +181,30 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<AssignmentStmt> element) {
       throw std::runtime_error("Cannot cast.");
     }
   }
+
+  if (verbose_) {
+    print_visitor_->GoUp();
+  }
+}
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<ReturnStmt> element) {
+  if (verbose_) {
+    print_visitor_->Visit(element);
+  }
+
+  // TODO
+
+  if (verbose_) {
+    print_visitor_->GoUp();
+  }
+}
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<MethodStmt> element) {
+  if (verbose_) {
+    print_visitor_->Visit(element);
+  }
+
+  // TODO
 
   if (verbose_) {
     print_visitor_->GoUp();

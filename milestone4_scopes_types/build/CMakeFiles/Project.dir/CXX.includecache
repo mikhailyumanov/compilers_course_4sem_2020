@@ -146,6 +146,10 @@ statements/Statement.hpp
 value_categories/Lvalue.hpp
 ../include/statements/value_categories/Lvalue.hpp
 
+../include/statements/CommaExprList.hpp
+utils/BasicList.hpp
+../include/statements/utils/BasicList.hpp
+
 ../include/statements/ConditionalStmt.hpp
 statements/Statement.hpp
 ../include/statements/statements/Statement.hpp
@@ -158,7 +162,33 @@ statements/Statement.hpp
 declarations/VarDecl.hpp
 ../include/statements/declarations/VarDecl.hpp
 
+../include/statements/MethodInvocation.hpp
+expressions/Expression.hpp
+../include/statements/expressions/Expression.hpp
+statements/CommaExprList.hpp
+../include/statements/statements/CommaExprList.hpp
+scopes/Symbol.hpp
+../include/statements/scopes/Symbol.hpp
+
+../include/statements/MethodStmt.hpp
+iostream
+-
+expressions/Expression.hpp
+../include/statements/expressions/Expression.hpp
+statements/Statement.hpp
+../include/statements/statements/Statement.hpp
+statements/MethodInvocation.hpp
+../include/statements/statements/MethodInvocation.hpp
+
 ../include/statements/PrintStmt.hpp
+iostream
+-
+expressions/Expression.hpp
+../include/statements/expressions/Expression.hpp
+statements/Statement.hpp
+../include/statements/statements/Statement.hpp
+
+../include/statements/ReturnStmt.hpp
 iostream
 -
 expressions/Expression.hpp
@@ -265,6 +295,14 @@ statements/StmtList.hpp
 ../include/utils/statements/StmtList.hpp
 statements/AssignmentStmt.hpp
 ../include/utils/statements/AssignmentStmt.hpp
+statements/ReturnStmt.hpp
+../include/utils/statements/ReturnStmt.hpp
+statements/MethodStmt.hpp
+../include/utils/statements/MethodStmt.hpp
+statements/MethodInvocation.hpp
+../include/utils/statements/MethodInvocation.hpp
+statements/CommaExprList.hpp
+../include/utils/statements/CommaExprList.hpp
 expressions/Expression.hpp
 ../include/utils/expressions/Expression.hpp
 expressions/BinOpExpr.hpp
@@ -486,9 +524,21 @@ statements/ConditionalStmt.hpp
 statements/LocalVarDeclStmt.hpp
 /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/statements/statements/LocalVarDeclStmt.hpp
 
+/compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/statements/MethodInvocation.cpp
+statements/MethodInvocation.hpp
+/compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/statements/statements/MethodInvocation.hpp
+
+/compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/statements/MethodStmt.cpp
+statements/MethodStmt.hpp
+/compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/statements/statements/MethodStmt.hpp
+
 /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/statements/PrintStmt.cpp
 statements/PrintStmt.hpp
 /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/statements/statements/PrintStmt.hpp
+
+/compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/statements/ReturnStmt.cpp
+statements/ReturnStmt.hpp
+/compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/statements/statements/ReturnStmt.hpp
 
 /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/statements/StmtListStmt.cpp
 statements/StmtListStmt.hpp

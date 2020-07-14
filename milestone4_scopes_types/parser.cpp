@@ -283,6 +283,10 @@ namespace yy {
         value.YY_MOVE_OR_COPY< std::shared_ptr<ClassDeclList> > (YY_MOVE (that.value));
         break;
 
+      case 66: // comma_expr_list
+        value.YY_MOVE_OR_COPY< std::shared_ptr<CommaExprList> > (YY_MOVE (that.value));
+        break;
+
       case 60: // declaration
         value.YY_MOVE_OR_COPY< std::shared_ptr<Decl> > (YY_MOVE (that.value));
         break;
@@ -301,6 +305,10 @@ namespace yy {
 
       case 56: // main_class
         value.YY_MOVE_OR_COPY< std::shared_ptr<MainClass> > (YY_MOVE (that.value));
+        break;
+
+      case 65: // method_invocation
+        value.YY_MOVE_OR_COPY< std::shared_ptr<MethodInvocation> > (YY_MOVE (that.value));
         break;
 
       case 54: // program
@@ -369,6 +377,10 @@ namespace yy {
         value.move< std::shared_ptr<ClassDeclList> > (YY_MOVE (that.value));
         break;
 
+      case 66: // comma_expr_list
+        value.move< std::shared_ptr<CommaExprList> > (YY_MOVE (that.value));
+        break;
+
       case 60: // declaration
         value.move< std::shared_ptr<Decl> > (YY_MOVE (that.value));
         break;
@@ -387,6 +399,10 @@ namespace yy {
 
       case 56: // main_class
         value.move< std::shared_ptr<MainClass> > (YY_MOVE (that.value));
+        break;
+
+      case 65: // method_invocation
+        value.move< std::shared_ptr<MethodInvocation> > (YY_MOVE (that.value));
         break;
 
       case 54: // program
@@ -455,6 +471,10 @@ namespace yy {
         value.copy< std::shared_ptr<ClassDeclList> > (that.value);
         break;
 
+      case 66: // comma_expr_list
+        value.copy< std::shared_ptr<CommaExprList> > (that.value);
+        break;
+
       case 60: // declaration
         value.copy< std::shared_ptr<Decl> > (that.value);
         break;
@@ -473,6 +493,10 @@ namespace yy {
 
       case 56: // main_class
         value.copy< std::shared_ptr<MainClass> > (that.value);
+        break;
+
+      case 65: // method_invocation
+        value.copy< std::shared_ptr<MethodInvocation> > (that.value);
         break;
 
       case 54: // program
@@ -540,6 +564,10 @@ namespace yy {
         value.move< std::shared_ptr<ClassDeclList> > (that.value);
         break;
 
+      case 66: // comma_expr_list
+        value.move< std::shared_ptr<CommaExprList> > (that.value);
+        break;
+
       case 60: // declaration
         value.move< std::shared_ptr<Decl> > (that.value);
         break;
@@ -558,6 +586,10 @@ namespace yy {
 
       case 56: // main_class
         value.move< std::shared_ptr<MainClass> > (that.value);
+        break;
+
+      case 65: // method_invocation
+        value.move< std::shared_ptr<MethodInvocation> > (that.value);
         break;
 
       case 54: // program
@@ -861,6 +893,10 @@ namespace yy {
         yylhs.value.emplace< std::shared_ptr<ClassDeclList> > ();
         break;
 
+      case 66: // comma_expr_list
+        yylhs.value.emplace< std::shared_ptr<CommaExprList> > ();
+        break;
+
       case 60: // declaration
         yylhs.value.emplace< std::shared_ptr<Decl> > ();
         break;
@@ -879,6 +915,10 @@ namespace yy {
 
       case 56: // main_class
         yylhs.value.emplace< std::shared_ptr<MainClass> > ();
+        break;
+
+      case 65: // method_invocation
+        yylhs.value.emplace< std::shared_ptr<MethodInvocation> > ();
         break;
 
       case 54: // program
@@ -926,345 +966,375 @@ namespace yy {
           switch (yyn)
             {
   case 2:
-#line 136 "parser.y"
+#line 138 "parser.y"
          { yylhs.value.as < std::shared_ptr<Program> > () = std::make_shared<Program>(yystack_[0].value.as < std::shared_ptr<MainClass> > ()); driver.program = yylhs.value.as < std::shared_ptr<Program> > (); }
-#line 932 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 972 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 3:
-#line 138 "parser.y"
+#line 140 "parser.y"
          { yylhs.value.as < std::shared_ptr<Program> > () = std::make_shared<Program>(yystack_[1].value.as < std::shared_ptr<MainClass> > (), yystack_[0].value.as < std::shared_ptr<ClassDeclList> > ()); driver.program = yylhs.value.as < std::shared_ptr<Program> > (); }
-#line 938 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 978 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 4:
-#line 142 "parser.y"
+#line 144 "parser.y"
                         { yylhs.value.as < std::shared_ptr<ClassDeclList> > () = std::make_shared<ClassDeclList>();
                           yylhs.value.as < std::shared_ptr<ClassDeclList> > ()->AddItem(yystack_[0].value.as < std::shared_ptr<ClassDecl> > ()); }
-#line 945 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 985 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 5:
-#line 145 "parser.y"
+#line 147 "parser.y"
                         { yylhs.value.as < std::shared_ptr<ClassDeclList> > () = yystack_[1].value.as < std::shared_ptr<ClassDeclList> > (); yylhs.value.as < std::shared_ptr<ClassDeclList> > ()->AddItem(yystack_[0].value.as < std::shared_ptr<ClassDecl> > ()); }
-#line 951 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 991 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 6:
-#line 150 "parser.y"
+#line 152 "parser.y"
             { yylhs.value.as < std::shared_ptr<MainClass> > () = std::make_shared<MainClass>(yystack_[2].value.as < std::shared_ptr<StmtList> > ()); }
-#line 957 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 997 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 7:
-#line 154 "parser.y"
+#line 156 "parser.y"
                    { yylhs.value.as < std::shared_ptr<ClassDecl> > () = std::make_shared<ClassDecl>(yystack_[3].value.as < std::string > (), yystack_[1].value.as < std::shared_ptr<DeclList> > ()); }
-#line 963 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1003 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 8:
-#line 157 "parser.y"
+#line 159 "parser.y"
                    { yylhs.value.as < std::shared_ptr<ClassDecl> > () = std::make_shared<ClassDecl>(yystack_[5].value.as < std::string > (), yystack_[1].value.as < std::shared_ptr<DeclList> > ()); }
-#line 969 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1009 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 9:
-#line 161 "parser.y"
+#line 163 "parser.y"
                 { yylhs.value.as < std::shared_ptr<StmtList> > () = std::make_shared<StmtList>(); yylhs.value.as < std::shared_ptr<StmtList> > ()->AddItem(yystack_[0].value.as < std::shared_ptr<Statement> > ()); }
-#line 975 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1015 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 10:
-#line 163 "parser.y"
+#line 165 "parser.y"
                 { yylhs.value.as < std::shared_ptr<StmtList> > () = yystack_[1].value.as < std::shared_ptr<StmtList> > (); yylhs.value.as < std::shared_ptr<StmtList> > ()->AddItem(yystack_[0].value.as < std::shared_ptr<Statement> > ()); }
-#line 981 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1021 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 11:
-#line 167 "parser.y"
+#line 169 "parser.y"
                    { yylhs.value.as < std::shared_ptr<DeclList> > () = std::make_shared<DeclList>(); yylhs.value.as < std::shared_ptr<DeclList> > ()->AddItem(yystack_[0].value.as < std::shared_ptr<Decl> > ()); }
-#line 987 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1027 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 12:
-#line 169 "parser.y"
+#line 171 "parser.y"
                    { yylhs.value.as < std::shared_ptr<DeclList> > () = yystack_[1].value.as < std::shared_ptr<DeclList> > (); yylhs.value.as < std::shared_ptr<DeclList> > ()->AddItem(yystack_[0].value.as < std::shared_ptr<Decl> > ()); }
-#line 993 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1033 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 13:
-#line 173 "parser.y"
+#line 175 "parser.y"
              { yylhs.value.as < std::shared_ptr<Decl> > () = yystack_[0].value.as < std::shared_ptr<VarDecl> > (); }
-#line 999 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1039 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 21:
-#line 194 "parser.y"
+#line 196 "parser.y"
                       { yylhs.value.as < std::shared_ptr<VarDecl> > () = std::make_shared<VarDecl>(yystack_[2].value.as < Type > (), yystack_[1].value.as < std::string > ()); }
-#line 1005 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1045 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 22:
 #line 199 "parser.y"
                   { yylhs.value.as < Type > () = Type{yystack_[0].value.as < std::string > (), false}; }
-#line 1011 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1051 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 23:
 #line 200 "parser.y"
                   { yylhs.value.as < Type > () = Type{yystack_[0].value.as < std::string > (), true};  }
-#line 1017 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1057 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 24:
 #line 203 "parser.y"
                    { yylhs.value.as < std::string > () = "int"; }
-#line 1023 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1063 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 25:
 #line 204 "parser.y"
                        {yylhs.value.as < std::string > () = "boolean"; }
-#line 1029 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1069 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 26:
 #line 205 "parser.y"
                     { yylhs.value.as < std::string > () = "void"; }
-#line 1035 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1075 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 27:
 #line 206 "parser.y"
                             { yylhs.value.as < std::string > () = yystack_[0].value.as < std::string > (); }
-#line 1041 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1081 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 28:
 #line 209 "parser.y"
                                 { yylhs.value.as < std::string > () = yystack_[2].value.as < std::string > (); }
-#line 1047 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1087 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 29:
 #line 212 "parser.y"
                               { yylhs.value.as < std::string > () = yystack_[0].value.as < std::string > (); }
-#line 1053 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1093 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 30:
 #line 216 "parser.y"
            { yylhs.value.as < std::shared_ptr<Statement> > () = std::static_pointer_cast<Statement>(
               std::make_shared<AssertStmt>(yystack_[2].value.as < std::shared_ptr<Expression> > ())); }
-#line 1060 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1100 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 31:
 #line 219 "parser.y"
            { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<LocalVarDeclStmt>(yystack_[0].value.as < std::shared_ptr<VarDecl> > ()); }
-#line 1066 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1106 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 32:
 #line 221 "parser.y"
            { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<StmtListStmt>(yystack_[1].value.as < std::shared_ptr<StmtList> > ()); }
-#line 1072 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1112 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 33:
 #line 223 "parser.y"
            { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<IfStmt>(yystack_[2].value.as < std::shared_ptr<Expression> > (), yystack_[0].value.as < std::shared_ptr<Statement> > ()); }
-#line 1078 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1118 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 34:
 #line 225 "parser.y"
            { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<IfElseStmt>(yystack_[4].value.as < std::shared_ptr<Expression> > (), yystack_[2].value.as < std::shared_ptr<Statement> > (), yystack_[0].value.as < std::shared_ptr<Statement> > ()); }
-#line 1084 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1124 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 35:
 #line 227 "parser.y"
            { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<WhileStmt>(yystack_[2].value.as < std::shared_ptr<Expression> > (), yystack_[0].value.as < std::shared_ptr<Statement> > ()); }
-#line 1090 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1130 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 36:
 #line 229 "parser.y"
            { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<PrintStmt>(yystack_[2].value.as < std::shared_ptr<Expression> > ()); }
-#line 1096 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1136 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 37:
 #line 231 "parser.y"
            { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<AssignmentStmt>(yystack_[3].value.as < std::shared_ptr<Lvalue> > (), yystack_[1].value.as < std::shared_ptr<Expression> > ()); }
-#line 1102 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1142 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+    break;
+
+  case 38:
+#line 233 "parser.y"
+           { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<ReturnStmt>(yystack_[1].value.as < std::shared_ptr<Expression> > ()); }
+#line 1148 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+    break;
+
+  case 39:
+#line 235 "parser.y"
+           { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<MethodStmt>(yystack_[1].value.as < std::shared_ptr<MethodInvocation> > ()); }
+#line 1154 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 40:
-#line 236 "parser.y"
+#line 239 "parser.y"
                             { yylhs.value.as < std::shared_ptr<VarDecl> > () = yystack_[0].value.as < std::shared_ptr<VarDecl> > (); }
-#line 1108 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1160 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+    break;
+
+  case 41:
+#line 243 "parser.y"
+        { yylhs.value.as < std::shared_ptr<MethodInvocation> > () = std::make_shared<MethodInvocation>(yystack_[5].value.as < std::shared_ptr<Expression> > (), Symbol(yystack_[3].value.as < std::string > ()), yystack_[1].value.as < std::shared_ptr<CommaExprList> > ()); }
+#line 1166 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 42:
-#line 243 "parser.y"
+#line 247 "parser.y"
         { yylhs.value.as < std::shared_ptr<Lvalue> > () = std::make_shared<Lvalue>(yystack_[0].value.as < std::string > ()); }
-#line 1114 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1172 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 43:
-#line 245 "parser.y"
+#line 249 "parser.y"
         { yylhs.value.as < std::shared_ptr<Lvalue> > () = std::make_shared<Lvalue>(yystack_[3].value.as < std::string > (), yystack_[1].value.as < std::shared_ptr<Expression> > ()); }
-#line 1120 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1178 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+    break;
+
+  case 44:
+#line 252 "parser.y"
+                      { yylhs.value.as < std::shared_ptr<CommaExprList> > () = std::make_shared<CommaExprList>(); yylhs.value.as < std::shared_ptr<CommaExprList> > ()->AddItem(yystack_[0].value.as < std::shared_ptr<Expression> > ()); }
+#line 1184 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+    break;
+
+  case 45:
+#line 253 "parser.y"
+                                          { yylhs.value.as < std::shared_ptr<CommaExprList> > () = yystack_[2].value.as < std::shared_ptr<CommaExprList> > (); yylhs.value.as < std::shared_ptr<CommaExprList> > ()->AddItem(yystack_[0].value.as < std::shared_ptr<Expression> > ()); }
+#line 1190 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 46:
-#line 260 "parser.y"
+#line 264 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_AND     , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1126 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1196 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 47:
-#line 262 "parser.y"
+#line 266 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_OR      , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1132 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1202 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 48:
-#line 264 "parser.y"
+#line 268 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_LESS    , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1138 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1208 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 49:
-#line 266 "parser.y"
+#line 270 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_GREATER , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1144 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1214 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 50:
-#line 268 "parser.y"
+#line 272 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_EQUAL   , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1150 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1220 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 51:
-#line 270 "parser.y"
+#line 274 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_PLUS    , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1156 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1226 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 52:
-#line 272 "parser.y"
+#line 276 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_MINUS   , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1162 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1232 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 53:
-#line 274 "parser.y"
+#line 278 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_STAR    , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1168 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1238 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 54:
-#line 276 "parser.y"
+#line 280 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_SLASH   , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1174 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1244 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 55:
-#line 278 "parser.y"
+#line 282 "parser.y"
   {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_RMNDR   , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1180 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1250 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 56:
-#line 281 "parser.y"
+#line 285 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<SubscriptExpr>(yystack_[3].value.as < std::shared_ptr<Expression> > (), yystack_[1].value.as < std::shared_ptr<Expression> > ()); }
-#line 1186 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1256 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 57:
-#line 284 "parser.y"
+#line 288 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<LengthExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > ()); }
-#line 1192 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1262 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 58:
-#line 287 "parser.y"
+#line 291 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<NewArrayExpr>(yystack_[3].value.as < std::string > (), yystack_[1].value.as < std::shared_ptr<Expression> > ()); }
-#line 1198 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1268 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 59:
-#line 290 "parser.y"
+#line 294 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<NewExpr>(yystack_[2].value.as < std::string > ()); }
-#line 1204 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1274 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 60:
-#line 293 "parser.y"
+#line 297 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = yystack_[1].value.as < std::shared_ptr<Expression> > (); }
-#line 1210 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1280 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 61:
-#line 296 "parser.y"
+#line 300 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<IdentExpr>(yystack_[0].value.as < std::string > ()); }
-#line 1216 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1286 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 62:
-#line 299 "parser.y"
+#line 303 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<IntExpr>(yystack_[0].value.as < int > ()); }
-#line 1222 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1292 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 63:
-#line 301 "parser.y"
+#line 305 "parser.y"
                                      { /* TODO */ }
-#line 1228 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1298 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 64:
-#line 304 "parser.y"
+#line 308 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<TrueExpr>(); }
-#line 1234 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1304 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 65:
-#line 307 "parser.y"
+#line 311 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<FalseExpr>(); }
-#line 1240 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1310 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 66:
-#line 309 "parser.y"
+#line 313 "parser.y"
                                      { }
-#line 1246 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1316 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 67:
-#line 312 "parser.y"
+#line 316 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<NotExpr>(yystack_[0].value.as < std::shared_ptr<Expression> > ()); }
-#line 1252 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1322 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 68:
-#line 315 "parser.y"
+#line 319 "parser.y"
                           { yylhs.value.as < int > () = yystack_[0].value.as < int > (); }
-#line 1258 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1328 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
   case 69:
-#line 316 "parser.y"
+#line 320 "parser.y"
                               { yylhs.value.as < int > () = -yystack_[0].value.as < int > (); }
-#line 1264 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1334 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
     break;
 
 
-#line 1268 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1338 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
 
             default:
               break;
@@ -1587,16 +1657,16 @@ namespace yy {
   parser::yypgoto_[] =
   {
      -71,   -71,   -71,    16,   153,   154,   -71,   -71,   -71,   -71,
-     211,   -46,   183,     2,    50,   -70,   -71,   -53,   -71,   -71,
-     -71,   174,   -51,   -71
+     211,   -46,   183,     2,    50,   -70,   -71,   -53,   -51,   -71,
+     -71,   -71,   -71,   174
   };
 
   const short
   parser::yydefgoto_[] =
   {
       -1,    71,    72,    21,    22,    23,    24,     2,     7,     3,
-       8,    73,    25,    26,    74,    75,    76,    77,    28,    44,
-      49,    50,    84,   153
+       8,    73,    25,    26,    74,    75,    76,    77,    84,   153,
+      28,    44,    49,    50
   };
 
   const short
@@ -1710,20 +1780,20 @@ namespace yy {
   {
        0,    32,    54,    56,    45,     0,    32,    55,    57,    19,
       45,    57,    34,    19,    33,    35,    34,    37,    38,    39,
-      45,    50,    51,    52,    53,    59,    60,    61,    65,    45,
+      45,    50,    51,    52,    53,    59,    60,    61,    67,    45,
       39,    50,    45,    17,    20,    60,    19,    40,    45,    23,
-      18,    59,    15,    15,    66,    20,    16,    16,    50,    67,
-      68,    19,    19,    45,    16,    22,     4,    14,    15,    19,
+      18,    59,    15,    15,    68,    20,    16,    16,    50,    69,
+      70,    19,    19,    45,    16,    22,     4,    14,    15,    19,
       24,    25,    26,    27,    28,    30,    31,    36,    41,    45,
-      46,    48,    49,    58,    61,    62,    63,    64,    69,    58,
-      68,    46,    45,    64,    69,    64,    58,    51,    52,    15,
+      46,    48,    49,    58,    61,    62,    63,    64,    65,    58,
+      70,    46,    45,    64,    65,    64,    58,    51,    52,    15,
       15,    15,    64,    21,    17,     3,    20,    62,     4,     5,
        6,     7,     8,     9,    10,    11,    12,    13,    17,    21,
       23,    20,    16,    20,    15,    17,    64,    64,    64,    23,
       42,    64,    64,    64,    64,    64,    64,    64,    64,    64,
       64,    64,    64,    64,    44,    45,    20,    16,    64,    16,
       16,    16,    21,    18,    23,    18,    15,    18,    62,    62,
-      23,    43,    64,    70,    29,    15,    16,    22,    62,    64,
+      23,    43,    64,    66,    29,    15,    16,    22,    62,    64,
       64,    16,    23
   };
 
@@ -1731,10 +1801,10 @@ namespace yy {
   parser::yyr1_[] =
   {
        0,    47,    54,    54,    55,    55,    56,    57,    57,    58,
-      58,    59,    59,    60,    60,    65,    66,    66,    67,    67,
-      68,    61,    50,    50,    52,    52,    52,    52,    53,    51,
+      58,    59,    59,    60,    60,    67,    68,    68,    69,    69,
+      70,    61,    50,    50,    52,    52,    52,    52,    53,    51,
       62,    62,    62,    62,    62,    62,    62,    62,    62,    62,
-      63,    69,    49,    49,    70,    70,    64,    64,    64,    64,
+      63,    65,    49,    49,    66,    66,    64,    64,    64,    64,
       64,    64,    64,    64,    64,    64,    64,    64,    64,    64,
       64,    64,    64,    64,    64,    64,    64,    64,    48,    48
   };
@@ -1770,21 +1840,22 @@ namespace yy {
   "simple_type", "array_type", "program", "class_declaration_list",
   "main_class", "class_declaration", "statement_list", "declaration_list",
   "declaration", "variable_declaration", "statement",
-  "local_variable_declaration", "expr", "method_declaration", "args_list",
-  "comma_formals_list", "formals", "method_invocation", "comma_expr_list", YY_NULLPTR
+  "local_variable_declaration", "expr", "method_invocation",
+  "comma_expr_list", "method_declaration", "args_list",
+  "comma_formals_list", "formals", YY_NULLPTR
   };
 
 #if YYDEBUG
   const short
   parser::yyrline_[] =
   {
-       0,   135,   135,   137,   141,   144,   148,   153,   155,   160,
-     162,   166,   168,   172,   174,   178,   182,   183,   186,   187,
-     190,   193,   199,   200,   203,   204,   205,   206,   209,   212,
-     215,   218,   220,   222,   224,   226,   228,   230,   232,   233,
-     235,   239,   242,   244,   248,   249,   259,   261,   263,   265,
-     267,   269,   271,   273,   275,   277,   280,   283,   286,   289,
-     292,   295,   298,   301,   303,   306,   309,   311,   315,   316
+       0,   137,   137,   139,   143,   146,   150,   155,   157,   162,
+     164,   168,   170,   174,   176,   180,   184,   185,   188,   189,
+     192,   195,   199,   200,   203,   204,   205,   206,   209,   212,
+     215,   218,   220,   222,   224,   226,   228,   230,   232,   234,
+     238,   242,   246,   248,   252,   253,   263,   265,   267,   269,
+     271,   273,   275,   277,   279,   281,   284,   287,   290,   293,
+     296,   299,   302,   305,   307,   310,   313,   315,   319,   320
   };
 
   // Print the state stack on the debug stream.
@@ -1818,9 +1889,9 @@ namespace yy {
 
 
 } // yy
-#line 1822 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
+#line 1893 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.cpp"
 
-#line 321 "parser.y"
+#line 325 "parser.y"
 
 
 void

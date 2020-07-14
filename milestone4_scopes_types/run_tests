@@ -2,6 +2,8 @@
 #invoke from main dir (/milestoneN_...)
 
 rebuild=false
+build_result=0
+
 if [[ $# > 0 && (( $1 == "--rebuild" || $1 == "-r" )) ]]
 then
   rebuild=true
@@ -26,7 +28,14 @@ then
   cd build
   cmake ..
   make
+  build_result=$?
   cd ..
+fi
+
+if [[ ! build_result ]]
+then
+  echo $build_result
+  exit -1
 fi
 
 if ! test -d ./test_output

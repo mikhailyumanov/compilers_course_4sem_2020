@@ -18,6 +18,10 @@
 #include "statements/PrintStmt.hpp"
 #include "statements/StmtList.hpp"
 #include "statements/AssignmentStmt.hpp"
+#include "statements/ReturnStmt.hpp"
+#include "statements/MethodStmt.hpp"
+#include "statements/MethodInvocation.hpp"
+#include "statements/CommaExprList.hpp"
 // expressions
 #include "expressions/Expression.hpp"
 #include "expressions/BinOpExpr.hpp"

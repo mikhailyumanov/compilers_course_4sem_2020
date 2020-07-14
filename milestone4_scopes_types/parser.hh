@@ -416,39 +416,45 @@ namespace yy {
       // class_declaration_list
       char dummy4[sizeof (std::shared_ptr<ClassDeclList>)];
 
+      // comma_expr_list
+      char dummy5[sizeof (std::shared_ptr<CommaExprList>)];
+
       // declaration
-      char dummy5[sizeof (std::shared_ptr<Decl>)];
+      char dummy6[sizeof (std::shared_ptr<Decl>)];
 
       // declaration_list
-      char dummy6[sizeof (std::shared_ptr<DeclList>)];
+      char dummy7[sizeof (std::shared_ptr<DeclList>)];
 
       // expr
-      char dummy7[sizeof (std::shared_ptr<Expression>)];
+      char dummy8[sizeof (std::shared_ptr<Expression>)];
 
       // lvalue
-      char dummy8[sizeof (std::shared_ptr<Lvalue>)];
+      char dummy9[sizeof (std::shared_ptr<Lvalue>)];
 
       // main_class
-      char dummy9[sizeof (std::shared_ptr<MainClass>)];
+      char dummy10[sizeof (std::shared_ptr<MainClass>)];
+
+      // method_invocation
+      char dummy11[sizeof (std::shared_ptr<MethodInvocation>)];
 
       // program
-      char dummy10[sizeof (std::shared_ptr<Program>)];
+      char dummy12[sizeof (std::shared_ptr<Program>)];
 
       // statement
-      char dummy11[sizeof (std::shared_ptr<Statement>)];
+      char dummy13[sizeof (std::shared_ptr<Statement>)];
 
       // statement_list
-      char dummy12[sizeof (std::shared_ptr<StmtList>)];
+      char dummy14[sizeof (std::shared_ptr<StmtList>)];
 
       // variable_declaration
       // local_variable_declaration
-      char dummy13[sizeof (std::shared_ptr<VarDecl>)];
+      char dummy15[sizeof (std::shared_ptr<VarDecl>)];
 
       // "identifier"
       // type_identifier
       // simple_type
       // array_type
-      char dummy14[sizeof (std::string)];
+      char dummy16[sizeof (std::string)];
     };
 
     /// The size of the largest semantic type.
@@ -647,6 +653,19 @@ namespace yy {
       {}
 #endif
 #if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, std::shared_ptr<CommaExprList>&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const std::shared_ptr<CommaExprList>& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
       basic_symbol (typename Base::kind_type t, std::shared_ptr<Decl>&& v, location_type&& l)
         : Base (t)
         , value (std::move (v))
@@ -706,6 +725,19 @@ namespace yy {
       {}
 #else
       basic_symbol (typename Base::kind_type t, const std::shared_ptr<MainClass>& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, std::shared_ptr<MethodInvocation>&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const std::shared_ptr<MethodInvocation>& v, const location_type& l)
         : Base (t)
         , value (v)
         , location (l)
@@ -826,6 +858,10 @@ switch (yytype)
         value.template destroy< std::shared_ptr<ClassDeclList> > ();
         break;
 
+      case 66: // comma_expr_list
+        value.template destroy< std::shared_ptr<CommaExprList> > ();
+        break;
+
       case 60: // declaration
         value.template destroy< std::shared_ptr<Decl> > ();
         break;
@@ -844,6 +880,10 @@ switch (yytype)
 
       case 56: // main_class
         value.template destroy< std::shared_ptr<MainClass> > ();
+        break;
+
+      case 65: // method_invocation
+        value.template destroy< std::shared_ptr<MethodInvocation> > ();
         break;
 
       case 54: // program
@@ -2100,6 +2140,10 @@ switch (yytype)
         value.move< std::shared_ptr<ClassDeclList> > (std::move (that.value));
         break;
 
+      case 66: // comma_expr_list
+        value.move< std::shared_ptr<CommaExprList> > (std::move (that.value));
+        break;
+
       case 60: // declaration
         value.move< std::shared_ptr<Decl> > (std::move (that.value));
         break;
@@ -2118,6 +2162,10 @@ switch (yytype)
 
       case 56: // main_class
         value.move< std::shared_ptr<MainClass> > (std::move (that.value));
+        break;
+
+      case 65: // method_invocation
+        value.move< std::shared_ptr<MethodInvocation> > (std::move (that.value));
         break;
 
       case 54: // program
@@ -2186,6 +2234,10 @@ switch (yytype)
         value.copy< std::shared_ptr<ClassDeclList> > (YY_MOVE (that.value));
         break;
 
+      case 66: // comma_expr_list
+        value.copy< std::shared_ptr<CommaExprList> > (YY_MOVE (that.value));
+        break;
+
       case 60: // declaration
         value.copy< std::shared_ptr<Decl> > (YY_MOVE (that.value));
         break;
@@ -2204,6 +2256,10 @@ switch (yytype)
 
       case 56: // main_class
         value.copy< std::shared_ptr<MainClass> > (YY_MOVE (that.value));
+        break;
+
+      case 65: // method_invocation
+        value.copy< std::shared_ptr<MethodInvocation> > (YY_MOVE (that.value));
         break;
 
       case 54: // program
@@ -2279,6 +2335,10 @@ switch (yytype)
         value.move< std::shared_ptr<ClassDeclList> > (YY_MOVE (s.value));
         break;
 
+      case 66: // comma_expr_list
+        value.move< std::shared_ptr<CommaExprList> > (YY_MOVE (s.value));
+        break;
+
       case 60: // declaration
         value.move< std::shared_ptr<Decl> > (YY_MOVE (s.value));
         break;
@@ -2297,6 +2357,10 @@ switch (yytype)
 
       case 56: // main_class
         value.move< std::shared_ptr<MainClass> > (YY_MOVE (s.value));
+        break;
+
+      case 65: // method_invocation
+        value.move< std::shared_ptr<MethodInvocation> > (YY_MOVE (s.value));
         break;
 
       case 54: // program
@@ -2378,7 +2442,7 @@ switch (yytype)
   }
 
 } // yy
-#line 2382 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.hh"
+#line 2446 "/compilers/compilers_course_4sem_2020/milestone4_scopes_types/parser.hh"
 
 
 

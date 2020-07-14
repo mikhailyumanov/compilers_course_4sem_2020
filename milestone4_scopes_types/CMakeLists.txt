@@ -43,6 +43,9 @@ set(
     include/statements/PrintStmt.cpp
     include/statements/AssignmentStmt.cpp
     include/statements/LocalVarDeclStmt.cpp
+    include/statements/ReturnStmt.cpp
+    include/statements/MethodStmt.cpp
+    include/statements/MethodInvocation.cpp
 
     include/expressions/BinOpExpr.cpp
     include/expressions/BoolConstExpr.cpp

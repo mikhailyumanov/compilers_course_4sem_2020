@@ -19,6 +19,10 @@ class WhileStmt;
 class PrintStmt;
 class AssignmentStmt;
 class StmtList;
+class ReturnStmt;
+class MethodStmt;
+class MethodInvocation;
+class CommaExprList;
 // expressions
 class Expression;
 class BinOpExpr;

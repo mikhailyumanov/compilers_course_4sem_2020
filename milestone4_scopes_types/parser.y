@@ -126,6 +126,8 @@
 %nterm <std::shared_ptr<Statement>> statement
 %nterm <std::shared_ptr<VarDecl>> local_variable_declaration
 %nterm <std::shared_ptr<Expression>> expr
+%nterm <std::shared_ptr<MethodInvocation>> method_invocation
+%nterm <std::shared_ptr<CommaExprList>> comma_expr_list
 
 //%printer { yyo << $$; } <*>;
 
@@ -192,8 +194,6 @@ formals: type "identifier"
 
 variable_declaration: type "identifier" ";"
                       { $$ = std::make_shared<VarDecl>($1, $2); }
-//                    { driver.variables[$2] = 
-//                          std::make_pair(std::vector<int>(), $1.second); }
 ;
 
 type: simple_type { $$ = Type{$1, false}; } //{ $$ = std::make_pair($1, 0); } 
@@ -229,14 +229,18 @@ statement: "assert" "(" expr ")" ";"
            { $$ = std::make_shared<PrintStmt>($7); }
          | lvalue "=" expr ";"
            { $$ = std::make_shared<AssignmentStmt>($1, $3); }
-         | "return" expr ";"
-         | method_invocation ";";
+         | "return" expr ";" 
+           { $$ = std::make_shared<ReturnStmt>($2); }
+         | method_invocation ";"
+           { $$ = std::make_shared<MethodStmt>($1); }
+;
 
 local_variable_declaration: variable_declaration
                             { $$ = $1; }
 ;
 
-method_invocation: expr "." "identifier" "(" comma_expr_list ")" 
+method_invocation: expr "." "identifier" "(" comma_expr_list ")"
+        { $$ = std::make_shared<MethodInvocation>($1, Symbol($3), $5); }
 ;
 
 lvalue: "identifier" 
@@ -245,8 +249,8 @@ lvalue: "identifier"
         { $$ = std::make_shared<Lvalue>($1, $3); }
 ;
 
-comma_expr_list: expr
-               | comma_expr_list "," expr
+comma_expr_list: expr { $$ = std::make_shared<CommaExprList>(); $$->AddItem($1); }
+               | comma_expr_list "," expr { $$ = $1; $$->AddItem($3); }
 ;
 
 

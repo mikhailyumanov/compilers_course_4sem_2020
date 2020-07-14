@@ -21,6 +21,8 @@ class SymbolTreeVisitor: public Visitor,
   void Visit(std::shared_ptr<WhileStmt> element) override;
   void Visit(std::shared_ptr<PrintStmt> element) override;
   void Visit(std::shared_ptr<AssignmentStmt> element) override;
+  void Visit(std::shared_ptr<ReturnStmt> element) override;
+  void Visit(std::shared_ptr<MethodStmt> element) override;
 
   void Visit(std::shared_ptr<BinOpExpr> element) override;
   void Visit(std::shared_ptr<SubscriptExpr> element) override;

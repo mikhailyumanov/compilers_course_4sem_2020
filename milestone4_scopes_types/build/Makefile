@@ -690,6 +690,60 @@ include/statements/LocalVarDeclStmt.cpp.s:
 	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/statements/LocalVarDeclStmt.cpp.s
 .PHONY : include/statements/LocalVarDeclStmt.cpp.s
 
+include/statements/MethodInvocation.o: include/statements/MethodInvocation.cpp.o
+
+.PHONY : include/statements/MethodInvocation.o
+
+# target to build an object file
+include/statements/MethodInvocation.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o
+.PHONY : include/statements/MethodInvocation.cpp.o
+
+include/statements/MethodInvocation.i: include/statements/MethodInvocation.cpp.i
+
+.PHONY : include/statements/MethodInvocation.i
+
+# target to preprocess a source file
+include/statements/MethodInvocation.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.i
+.PHONY : include/statements/MethodInvocation.cpp.i
+
+include/statements/MethodInvocation.s: include/statements/MethodInvocation.cpp.s
+
+.PHONY : include/statements/MethodInvocation.s
+
+# target to generate assembly for a file
+include/statements/MethodInvocation.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.s
+.PHONY : include/statements/MethodInvocation.cpp.s
+
+include/statements/MethodStmt.o: include/statements/MethodStmt.cpp.o
+
+.PHONY : include/statements/MethodStmt.o
+
+# target to build an object file
+include/statements/MethodStmt.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o
+.PHONY : include/statements/MethodStmt.cpp.o
+
+include/statements/MethodStmt.i: include/statements/MethodStmt.cpp.i
+
+.PHONY : include/statements/MethodStmt.i
+
+# target to preprocess a source file
+include/statements/MethodStmt.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.i
+.PHONY : include/statements/MethodStmt.cpp.i
+
+include/statements/MethodStmt.s: include/statements/MethodStmt.cpp.s
+
+.PHONY : include/statements/MethodStmt.s
+
+# target to generate assembly for a file
+include/statements/MethodStmt.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.s
+.PHONY : include/statements/MethodStmt.cpp.s
+
 include/statements/PrintStmt.o: include/statements/PrintStmt.cpp.o
 
 .PHONY : include/statements/PrintStmt.o
@@ -716,6 +770,33 @@ include/statements/PrintStmt.s: include/statements/PrintStmt.cpp.s
 include/statements/PrintStmt.cpp.s:
 	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/statements/PrintStmt.cpp.s
 .PHONY : include/statements/PrintStmt.cpp.s
+
+include/statements/ReturnStmt.o: include/statements/ReturnStmt.cpp.o
+
+.PHONY : include/statements/ReturnStmt.o
+
+# target to build an object file
+include/statements/ReturnStmt.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o
+.PHONY : include/statements/ReturnStmt.cpp.o
+
+include/statements/ReturnStmt.i: include/statements/ReturnStmt.cpp.i
+
+.PHONY : include/statements/ReturnStmt.i
+
+# target to preprocess a source file
+include/statements/ReturnStmt.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.i
+.PHONY : include/statements/ReturnStmt.cpp.i
+
+include/statements/ReturnStmt.s: include/statements/ReturnStmt.cpp.s
+
+.PHONY : include/statements/ReturnStmt.s
+
+# target to generate assembly for a file
+include/statements/ReturnStmt.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.s
+.PHONY : include/statements/ReturnStmt.cpp.s
 
 include/statements/StmtListStmt.o: include/statements/StmtListStmt.cpp.o
 
@@ -1248,9 +1329,18 @@ help:
 	@echo "... include/statements/LocalVarDeclStmt.o"
 	@echo "... include/statements/LocalVarDeclStmt.i"
 	@echo "... include/statements/LocalVarDeclStmt.s"
+	@echo "... include/statements/MethodInvocation.o"
+	@echo "... include/statements/MethodInvocation.i"
+	@echo "... include/statements/MethodInvocation.s"
+	@echo "... include/statements/MethodStmt.o"
+	@echo "... include/statements/MethodStmt.i"
+	@echo "... include/statements/MethodStmt.s"
 	@echo "... include/statements/PrintStmt.o"
 	@echo "... include/statements/PrintStmt.i"
 	@echo "... include/statements/PrintStmt.s"
+	@echo "... include/statements/ReturnStmt.o"
+	@echo "... include/statements/ReturnStmt.i"
+	@echo "... include/statements/ReturnStmt.s"
 	@echo "... include/statements/StmtListStmt.o"
 	@echo "... include/statements/StmtListStmt.i"
 	@echo "... include/statements/StmtListStmt.s"

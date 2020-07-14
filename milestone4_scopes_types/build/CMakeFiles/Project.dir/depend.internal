@@ -25,9 +25,13 @@ CMakeFiles/Project.dir/driver.cpp.o
  ../include/scopes/Symbol.hpp
  ../include/statements/AssertStmt.hpp
  ../include/statements/AssignmentStmt.hpp
+ ../include/statements/CommaExprList.hpp
  ../include/statements/ConditionalStmt.hpp
  ../include/statements/LocalVarDeclStmt.hpp
+ ../include/statements/MethodInvocation.hpp
+ ../include/statements/MethodStmt.hpp
  ../include/statements/PrintStmt.hpp
+ ../include/statements/ReturnStmt.hpp
  ../include/statements/Statement.hpp
  ../include/statements/StmtList.hpp
  ../include/statements/StmtListStmt.hpp
@@ -219,6 +223,32 @@ CMakeFiles/Project.dir/include/statements/LocalVarDeclStmt.cpp.o
  ../include/utils/forward_decl.hpp
  ../include/visitors/Visitor.hpp
  /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/statements/LocalVarDeclStmt.cpp
+CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o
+ ..//debug.h
+ ../include/expressions/Expression.hpp
+ ../include/scopes/Symbol.hpp
+ ../include/statements/CommaExprList.hpp
+ ../include/statements/MethodInvocation.hpp
+ ../include/types/Type.hpp
+ ../include/utils/BasicElement.hpp
+ ../include/utils/BasicList.hpp
+ ../include/utils/forward_decl.hpp
+ ../include/visitors/Visitor.hpp
+ /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/statements/MethodInvocation.cpp
+CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o
+ ..//debug.h
+ ../include/expressions/Expression.hpp
+ ../include/scopes/Symbol.hpp
+ ../include/statements/CommaExprList.hpp
+ ../include/statements/MethodInvocation.hpp
+ ../include/statements/MethodStmt.hpp
+ ../include/statements/Statement.hpp
+ ../include/types/Type.hpp
+ ../include/utils/BasicElement.hpp
+ ../include/utils/BasicList.hpp
+ ../include/utils/forward_decl.hpp
+ ../include/visitors/Visitor.hpp
+ /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/statements/MethodStmt.cpp
 CMakeFiles/Project.dir/include/statements/PrintStmt.cpp.o
  ../include/expressions/Expression.hpp
  ../include/statements/PrintStmt.hpp
@@ -228,6 +258,15 @@ CMakeFiles/Project.dir/include/statements/PrintStmt.cpp.o
  ../include/utils/forward_decl.hpp
  ../include/visitors/Visitor.hpp
  /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/statements/PrintStmt.cpp
+CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o
+ ../include/expressions/Expression.hpp
+ ../include/statements/ReturnStmt.hpp
+ ../include/statements/Statement.hpp
+ ../include/types/Type.hpp
+ ../include/utils/BasicElement.hpp
+ ../include/utils/forward_decl.hpp
+ ../include/visitors/Visitor.hpp
+ /compilers/compilers_course_4sem_2020/milestone4_scopes_types/include/statements/ReturnStmt.cpp
 CMakeFiles/Project.dir/include/statements/StmtListStmt.cpp.o
  ../include/statements/Statement.hpp
  ../include/statements/StmtList.hpp
@@ -317,9 +356,13 @@ CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o
  ../include/scopes/Symbol.hpp
  ../include/statements/AssertStmt.hpp
  ../include/statements/AssignmentStmt.hpp
+ ../include/statements/CommaExprList.hpp
  ../include/statements/ConditionalStmt.hpp
  ../include/statements/LocalVarDeclStmt.hpp
+ ../include/statements/MethodInvocation.hpp
+ ../include/statements/MethodStmt.hpp
  ../include/statements/PrintStmt.hpp
+ ../include/statements/ReturnStmt.hpp
  ../include/statements/Statement.hpp
  ../include/statements/StmtList.hpp
  ../include/statements/StmtListStmt.hpp
@@ -365,9 +408,13 @@ CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o
  ../include/scopes/Symbol.hpp
  ../include/statements/AssertStmt.hpp
  ../include/statements/AssignmentStmt.hpp
+ ../include/statements/CommaExprList.hpp
  ../include/statements/ConditionalStmt.hpp
  ../include/statements/LocalVarDeclStmt.hpp
+ ../include/statements/MethodInvocation.hpp
+ ../include/statements/MethodStmt.hpp
  ../include/statements/PrintStmt.hpp
+ ../include/statements/ReturnStmt.hpp
  ../include/statements/Statement.hpp
  ../include/statements/StmtList.hpp
  ../include/statements/StmtListStmt.hpp
@@ -410,9 +457,13 @@ CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o
  ../include/scopes/Symbol.hpp
  ../include/statements/AssertStmt.hpp
  ../include/statements/AssignmentStmt.hpp
+ ../include/statements/CommaExprList.hpp
  ../include/statements/ConditionalStmt.hpp
  ../include/statements/LocalVarDeclStmt.hpp
+ ../include/statements/MethodInvocation.hpp
+ ../include/statements/MethodStmt.hpp
  ../include/statements/PrintStmt.hpp
+ ../include/statements/ReturnStmt.hpp
  ../include/statements/Statement.hpp
  ../include/statements/StmtList.hpp
  ../include/statements/StmtListStmt.hpp
@@ -463,9 +514,13 @@ CMakeFiles/Project.dir/main.cpp.o
  ../include/scopes/Symbol.hpp
  ../include/statements/AssertStmt.hpp
  ../include/statements/AssignmentStmt.hpp
+ ../include/statements/CommaExprList.hpp
  ../include/statements/ConditionalStmt.hpp
  ../include/statements/LocalVarDeclStmt.hpp
+ ../include/statements/MethodInvocation.hpp
+ ../include/statements/MethodStmt.hpp
  ../include/statements/PrintStmt.hpp
+ ../include/statements/ReturnStmt.hpp
  ../include/statements/Statement.hpp
  ../include/statements/StmtList.hpp
  ../include/statements/StmtListStmt.hpp
@@ -515,9 +570,13 @@ CMakeFiles/Project.dir/parser.cpp.o
  ../include/scopes/Symbol.hpp
  ../include/statements/AssertStmt.hpp
  ../include/statements/AssignmentStmt.hpp
+ ../include/statements/CommaExprList.hpp
  ../include/statements/ConditionalStmt.hpp
  ../include/statements/LocalVarDeclStmt.hpp
+ ../include/statements/MethodInvocation.hpp
+ ../include/statements/MethodStmt.hpp
  ../include/statements/PrintStmt.hpp
+ ../include/statements/ReturnStmt.hpp
  ../include/statements/Statement.hpp
  ../include/statements/StmtList.hpp
  ../include/statements/StmtListStmt.hpp
@@ -567,9 +626,13 @@ CMakeFiles/Project.dir/scanner.cpp.o
  ../include/scopes/Symbol.hpp
  ../include/statements/AssertStmt.hpp
  ../include/statements/AssignmentStmt.hpp
+ ../include/statements/CommaExprList.hpp
  ../include/statements/ConditionalStmt.hpp
  ../include/statements/LocalVarDeclStmt.hpp
+ ../include/statements/MethodInvocation.hpp
+ ../include/statements/MethodStmt.hpp
  ../include/statements/PrintStmt.hpp
+ ../include/statements/ReturnStmt.hpp
  ../include/statements/Statement.hpp
  ../include/statements/StmtList.hpp
  ../include/statements/StmtListStmt.hpp

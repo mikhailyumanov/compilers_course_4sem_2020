@@ -24,9 +24,13 @@ CMakeFiles/Project.dir/driver.cpp.o: ../include/scopes/ScopeLayerTree.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/scopes/Symbol.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/statements/AssertStmt.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/statements/AssignmentStmt.hpp
+CMakeFiles/Project.dir/driver.cpp.o: ../include/statements/CommaExprList.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/statements/ConditionalStmt.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/statements/LocalVarDeclStmt.hpp
+CMakeFiles/Project.dir/driver.cpp.o: ../include/statements/MethodInvocation.hpp
+CMakeFiles/Project.dir/driver.cpp.o: ../include/statements/MethodStmt.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/statements/PrintStmt.hpp
+CMakeFiles/Project.dir/driver.cpp.o: ../include/statements/ReturnStmt.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/statements/Statement.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/statements/StmtList.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/statements/StmtListStmt.hpp
@@ -219,6 +223,32 @@ CMakeFiles/Project.dir/include/statements/LocalVarDeclStmt.cpp.o: ../include/uti
 CMakeFiles/Project.dir/include/statements/LocalVarDeclStmt.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/statements/LocalVarDeclStmt.cpp.o: ../include/statements/LocalVarDeclStmt.cpp
 
+CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o: ../include/expressions/Expression.hpp
+CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o: ../include/scopes/Symbol.hpp
+CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o: ../include/statements/CommaExprList.hpp
+CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o: ../include/statements/MethodInvocation.hpp
+CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o: ../include/types/Type.hpp
+CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o: ../include/utils/BasicElement.hpp
+CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o: ../include/utils/BasicList.hpp
+CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o: ../include/utils/forward_decl.hpp
+CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o: ../include/visitors/Visitor.hpp
+CMakeFiles/Project.dir/include/statements/MethodInvocation.cpp.o: ../include/statements/MethodInvocation.cpp
+
+CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o: ../include/expressions/Expression.hpp
+CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o: ../include/scopes/Symbol.hpp
+CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o: ../include/statements/CommaExprList.hpp
+CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o: ../include/statements/MethodInvocation.hpp
+CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o: ../include/statements/MethodStmt.hpp
+CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o: ../include/statements/Statement.hpp
+CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o: ../include/types/Type.hpp
+CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o: ../include/utils/BasicElement.hpp
+CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o: ../include/utils/BasicList.hpp
+CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o: ../include/utils/forward_decl.hpp
+CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o: ../include/visitors/Visitor.hpp
+CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o: ../include/statements/MethodStmt.cpp
+
 CMakeFiles/Project.dir/include/statements/PrintStmt.cpp.o: ../include/expressions/Expression.hpp
 CMakeFiles/Project.dir/include/statements/PrintStmt.cpp.o: ../include/statements/PrintStmt.hpp
 CMakeFiles/Project.dir/include/statements/PrintStmt.cpp.o: ../include/statements/Statement.hpp
@@ -227,6 +257,15 @@ CMakeFiles/Project.dir/include/statements/PrintStmt.cpp.o: ../include/utils/Basi
 CMakeFiles/Project.dir/include/statements/PrintStmt.cpp.o: ../include/utils/forward_decl.hpp
 CMakeFiles/Project.dir/include/statements/PrintStmt.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/statements/PrintStmt.cpp.o: ../include/statements/PrintStmt.cpp
+
+CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o: ../include/expressions/Expression.hpp
+CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o: ../include/statements/ReturnStmt.hpp
+CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o: ../include/statements/Statement.hpp
+CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o: ../include/types/Type.hpp
+CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o: ../include/utils/BasicElement.hpp
+CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o: ../include/utils/forward_decl.hpp
+CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o: ../include/visitors/Visitor.hpp
+CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o: ../include/statements/ReturnStmt.cpp
 
 CMakeFiles/Project.dir/include/statements/StmtListStmt.cpp.o: ../include/statements/Statement.hpp
 CMakeFiles/Project.dir/include/statements/StmtListStmt.cpp.o: ../include/statements/StmtList.hpp
@@ -316,9 +355,13 @@ CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/scopes/Sco
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/scopes/Symbol.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/statements/AssertStmt.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/statements/AssignmentStmt.hpp
+CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/statements/CommaExprList.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/statements/ConditionalStmt.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/statements/LocalVarDeclStmt.hpp
+CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/statements/MethodInvocation.hpp
+CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/statements/MethodStmt.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/statements/PrintStmt.hpp
+CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/statements/ReturnStmt.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/statements/Statement.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/statements/StmtList.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/statements/StmtListStmt.hpp
@@ -364,9 +407,13 @@ CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/scopes/Sc
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/scopes/Symbol.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/statements/AssertStmt.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/statements/AssignmentStmt.hpp
+CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/statements/CommaExprList.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/statements/ConditionalStmt.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/statements/LocalVarDeclStmt.hpp
+CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/statements/MethodInvocation.hpp
+CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/statements/MethodStmt.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/statements/PrintStmt.hpp
+CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/statements/ReturnStmt.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/statements/Statement.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/statements/StmtList.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/statements/StmtListStmt.hpp
@@ -409,9 +456,13 @@ CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/scop
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/scopes/Symbol.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/statements/AssertStmt.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/statements/AssignmentStmt.hpp
+CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/statements/CommaExprList.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/statements/ConditionalStmt.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/statements/LocalVarDeclStmt.hpp
+CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/statements/MethodInvocation.hpp
+CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/statements/MethodStmt.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/statements/PrintStmt.hpp
+CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/statements/ReturnStmt.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/statements/Statement.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/statements/StmtList.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/statements/StmtListStmt.hpp
@@ -462,9 +513,13 @@ CMakeFiles/Project.dir/main.cpp.o: ../include/scopes/ScopeLayerTree.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/scopes/Symbol.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/statements/AssertStmt.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/statements/AssignmentStmt.hpp
+CMakeFiles/Project.dir/main.cpp.o: ../include/statements/CommaExprList.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/statements/ConditionalStmt.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/statements/LocalVarDeclStmt.hpp
+CMakeFiles/Project.dir/main.cpp.o: ../include/statements/MethodInvocation.hpp
+CMakeFiles/Project.dir/main.cpp.o: ../include/statements/MethodStmt.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/statements/PrintStmt.hpp
+CMakeFiles/Project.dir/main.cpp.o: ../include/statements/ReturnStmt.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/statements/Statement.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/statements/StmtList.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/statements/StmtListStmt.hpp
@@ -514,9 +569,13 @@ CMakeFiles/Project.dir/parser.cpp.o: ../include/scopes/ScopeLayerTree.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/scopes/Symbol.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/statements/AssertStmt.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/statements/AssignmentStmt.hpp
+CMakeFiles/Project.dir/parser.cpp.o: ../include/statements/CommaExprList.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/statements/ConditionalStmt.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/statements/LocalVarDeclStmt.hpp
+CMakeFiles/Project.dir/parser.cpp.o: ../include/statements/MethodInvocation.hpp
+CMakeFiles/Project.dir/parser.cpp.o: ../include/statements/MethodStmt.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/statements/PrintStmt.hpp
+CMakeFiles/Project.dir/parser.cpp.o: ../include/statements/ReturnStmt.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/statements/Statement.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/statements/StmtList.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/statements/StmtListStmt.hpp
@@ -566,9 +625,13 @@ CMakeFiles/Project.dir/scanner.cpp.o: ../include/scopes/ScopeLayerTree.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/scopes/Symbol.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/statements/AssertStmt.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/statements/AssignmentStmt.hpp
+CMakeFiles/Project.dir/scanner.cpp.o: ../include/statements/CommaExprList.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/statements/ConditionalStmt.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/statements/LocalVarDeclStmt.hpp
+CMakeFiles/Project.dir/scanner.cpp.o: ../include/statements/MethodInvocation.hpp
+CMakeFiles/Project.dir/scanner.cpp.o: ../include/statements/MethodStmt.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/statements/PrintStmt.hpp
+CMakeFiles/Project.dir/scanner.cpp.o: ../include/statements/ReturnStmt.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/statements/Statement.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/statements/StmtList.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/statements/StmtListStmt.hpp
