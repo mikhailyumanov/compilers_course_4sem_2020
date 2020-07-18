@@ -5,22 +5,26 @@
 #include <unordered_map>
 
 #include "scopes/Symbol.hpp"
-#include "types/Object.hpp"
 
 
 class FunctionTable: public std::enable_shared_from_this<FunctionTable> {
  public:
   FunctionTable() = default;
 
-  std::shared_ptr<Object> GetOffset(Symbol symbol) const;
+  void DeclareVariable(Symbol symbol);
+
+  size_t GetOffset(Symbol symbol) const;
   void SetOffset(Symbol symbol, size_t offset);
 
-  void DeclareVariable(Symbol symbol);
+  bool IsDeclared(Symbol symbol) const;
+
   void BeginScope();
   void EndScope();
 
+#if !DEBUG_ON
  private:
+#endif
+ 
   std::stack<Symbol> symbols_;
-  std::unordered_map<Symbol, std::stack<std::shared_ptr<Object>> 
-    current_offsets_;
-}
+  std::unordered_map<Symbol, std::stack<size_t>> symbol_offsets_;
+};

@@ -254,12 +254,12 @@ void PrintVisitor::Visit(std::shared_ptr<VarDecl> element) {
 
 void PrintVisitor::Visit(std::shared_ptr<MethodDecl> element) {
   PrintTabs();
-  stream_ << "MethodDecl " << element->type << " "
+  stream_ << "MethodDecl " << element->function_type << " "
          << element->name << std::endl;
 
   DEBUG_START
     DEBUG(">>> PrintVisitor: MethodDecl")
-    DEBUG(element->type)
+    DEBUG(element->function_type)
     DEBUG(element->name)
   DEBUG_FINISH
 

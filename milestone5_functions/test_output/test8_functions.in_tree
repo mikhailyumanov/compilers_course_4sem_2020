@@ -3,7 +3,7 @@ Program
 	NEW SCOPE
 	ClassDecl Dog
 		NEW FUNCTION SCOPE
-		MethodDecl type: , is_array: false Bark
+		MethodDecl Return type: void; Args:  Bark
 			PrintStmt
 				IntExpr 12345
 	NEW SCOPE

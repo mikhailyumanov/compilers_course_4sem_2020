@@ -528,6 +528,33 @@ include/expressions/SubscriptExpr.cpp.s:
 	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.s
 .PHONY : include/expressions/SubscriptExpr.cpp.s
 
+include/functions/Frame.o: include/functions/Frame.cpp.o
+
+.PHONY : include/functions/Frame.o
+
+# target to build an object file
+include/functions/Frame.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/functions/Frame.cpp.o
+.PHONY : include/functions/Frame.cpp.o
+
+include/functions/Frame.i: include/functions/Frame.cpp.i
+
+.PHONY : include/functions/Frame.i
+
+# target to preprocess a source file
+include/functions/Frame.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/functions/Frame.cpp.i
+.PHONY : include/functions/Frame.cpp.i
+
+include/functions/Frame.s: include/functions/Frame.cpp.s
+
+.PHONY : include/functions/Frame.s
+
+# target to generate assembly for a file
+include/functions/Frame.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/functions/Frame.cpp.s
+.PHONY : include/functions/Frame.cpp.s
+
 include/functions/FunctionStorage.o: include/functions/FunctionStorage.cpp.o
 
 .PHONY : include/functions/FunctionStorage.o
@@ -554,6 +581,33 @@ include/functions/FunctionStorage.s: include/functions/FunctionStorage.cpp.s
 include/functions/FunctionStorage.cpp.s:
 	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.s
 .PHONY : include/functions/FunctionStorage.cpp.s
+
+include/functions/FunctionTable.o: include/functions/FunctionTable.cpp.o
+
+.PHONY : include/functions/FunctionTable.o
+
+# target to build an object file
+include/functions/FunctionTable.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.o
+.PHONY : include/functions/FunctionTable.cpp.o
+
+include/functions/FunctionTable.i: include/functions/FunctionTable.cpp.i
+
+.PHONY : include/functions/FunctionTable.i
+
+# target to preprocess a source file
+include/functions/FunctionTable.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.i
+.PHONY : include/functions/FunctionTable.cpp.i
+
+include/functions/FunctionTable.s: include/functions/FunctionTable.cpp.s
+
+.PHONY : include/functions/FunctionTable.s
+
+# target to generate assembly for a file
+include/functions/FunctionTable.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.s
+.PHONY : include/functions/FunctionTable.cpp.s
 
 include/functions/MethodInvocation.o: include/functions/MethodInvocation.cpp.o
 
@@ -1473,9 +1527,15 @@ help:
 	@echo "... include/expressions/SubscriptExpr.o"
 	@echo "... include/expressions/SubscriptExpr.i"
 	@echo "... include/expressions/SubscriptExpr.s"
+	@echo "... include/functions/Frame.o"
+	@echo "... include/functions/Frame.i"
+	@echo "... include/functions/Frame.s"
 	@echo "... include/functions/FunctionStorage.o"
 	@echo "... include/functions/FunctionStorage.i"
 	@echo "... include/functions/FunctionStorage.s"
+	@echo "... include/functions/FunctionTable.o"
+	@echo "... include/functions/FunctionTable.i"
+	@echo "... include/functions/FunctionTable.s"
 	@echo "... include/functions/MethodInvocation.o"
 	@echo "... include/functions/MethodInvocation.i"
 	@echo "... include/functions/MethodInvocation.s"

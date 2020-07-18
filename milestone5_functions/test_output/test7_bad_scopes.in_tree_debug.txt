@@ -1,1488 +1,350 @@
 >>> Interpreter: Program
 >>> PrintVisitor: Program
 GoDown
-Current state: parent: 0x557ec288e890 ; child index: 1 
+Current state: parent: 0x5585a94e68b0 ; child index: 1 
 GoDown
-Current state: parent: 0x557ec288eea0 ; child index: 0 
+Current state: parent: 0x5585a94e7500 ; child index: 0 
 >>> PrintVisitor: MainClass
-ScopeLayer::SetMain
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false i 
 i type: int, is_array: false 
-ScopeLayer::DeclareVariable i type: int, is_array: false 
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::DeclareVariable init
 >>> PrintVisitor: AssignmentStmt
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IntExpr 5 
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoDown
-Current state: parent: 0x557ec288eff0 ; child index: 0 
+Current state: parent: 0x5585a94e7650 ; child index: 0 
 >>> PrintVisitor: WhileStmt
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr i 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IntExpr 5 
 GoDown
-Current state: parent: 0x557ec288f210 ; child index: 0 
+Current state: parent: 0x5585a94e7870 ; child index: 0 
 >>> PrintVisitor: StmtListStmt
 >>> PrintVisitor: IfElseStmt
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr i 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IntExpr 2 
 >>> PrintVisitor: IntExpr 0 
 GoDown
-Current state: parent: 0x557ec288f390 ; child index: 0 
+Current state: parent: 0x5585a94e79f0 ; child index: 0 
 GoDown
-Current state: parent: 0x557ec288f4e0 ; child index: 0 
+Current state: parent: 0x5585a94e7b40 ; child index: 0 
 >>> PrintVisitor: StmtListStmt
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IntExpr 1337 
 GoUp
-Current state: parent: 0x557ec288f390 ; child index: 0 
+Current state: parent: 0x5585a94e79f0 ; child index: 0 
 GoUp
-Current state: parent: 0x557ec288f210 ; child index: 0 
+Current state: parent: 0x5585a94e7870 ; child index: 0 
 GoDown
-Current state: parent: 0x557ec288f390 ; child index: 1 
+Current state: parent: 0x5585a94e79f0 ; child index: 1 
 GoDown
-Current state: parent: 0x557ec288f7c0 ; child index: 0 
+Current state: parent: 0x5585a94e7e20 ; child index: 0 
 >>> PrintVisitor: StmtListStmt
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IntExpr 420 
 GoUp
-Current state: parent: 0x557ec288f390 ; child index: 1 
+Current state: parent: 0x5585a94e79f0 ; child index: 1 
 GoUp
-Current state: parent: 0x557ec288f210 ; child index: 0 
+Current state: parent: 0x5585a94e7870 ; child index: 0 
 >>> PrintVisitor: AssignmentStmt
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr i 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IntExpr 1 
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x557ec288eff0 ; child index: 0 
+Current state: parent: 0x5585a94e7650 ; child index: 0 
 GoUp
-Current state: parent: 0x557ec288eea0 ; child index: 0 
+Current state: parent: 0x5585a94e7500 ; child index: 0 
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IdentExpr i 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false x 
 x type: int, is_array: false 
-ScopeLayer::DeclareVariable x type: int, is_array: false 
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::DeclareVariable init
 >>> PrintVisitor: AssignmentStmt
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IntExpr 0 
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false n 
 n type: int, is_array: false 
-ScopeLayer::DeclareVariable n type: int, is_array: false 
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::DeclareVariable init
 >>> PrintVisitor: AssignmentStmt
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IntExpr 6 
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoDown
-Current state: parent: 0x557ec288eff0 ; child index: 1 
+Current state: parent: 0x5585a94e7650 ; child index: 1 
 >>> PrintVisitor: WhileStmt
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr x 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IdentExpr n 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoDown
-Current state: parent: 0x557ec288fc10 ; child index: 0 
+Current state: parent: 0x5585a94e8270 ; child index: 0 
 >>> PrintVisitor: StmtListStmt
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IntExpr 111111111 
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IdentExpr x 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IdentExpr n 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false y 
 y type: int, is_array: false 
-ScopeLayer::DeclareVariable y type: int, is_array: false 
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::DeclareVariable init
 >>> PrintVisitor: AssignmentStmt
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IntExpr 11 
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoDown
-Current state: parent: 0x557ec288fd30 ; child index: 0 
+Current state: parent: 0x5585a94e8390 ; child index: 0 
 >>> PrintVisitor: WhileStmt
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr y 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr n 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IntExpr 2 
 GoDown
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 >>> PrintVisitor: StmtListStmt
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IntExpr 222222222 
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IdentExpr x 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IdentExpr n 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IdentExpr y 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false d 
 d type: int, is_array: false 
-ScopeLayer::DeclareVariable d type: int, is_array: false 
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::DeclareVariable init
 >>> PrintVisitor: AssignmentStmt
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IntExpr 0 
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoDown
-Current state: parent: 0x557ec28900b0 ; child index: 0 
+Current state: parent: 0x5585a94f5880 ; child index: 0 
 >>> PrintVisitor: IfStmt
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr x 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr n 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IntExpr 2 
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr x 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr n 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IntExpr 2 
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr y 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IdentExpr n 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr y 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IdentExpr n 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IntExpr 4 
 >>> PrintVisitor: IntExpr 25 
 GoDown
-Current state: parent: 0x557ec2890330 ; child index: 0 
+Current state: parent: 0x5585a94f5b00 ; child index: 0 
 >>> PrintVisitor: StmtListStmt
 >>> PrintVisitor: AssignmentStmt
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IntExpr 7 
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x557ec28900b0 ; child index: 0 
+Current state: parent: 0x5585a94f5880 ; child index: 0 
 GoUp
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IntExpr 123 
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IdentExpr d 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IntExpr 456 
 >>> PrintVisitor: IfElseStmt
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr y 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr n 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IntExpr 2 
 >>> PrintVisitor: IntExpr 1 
 GoDown
-Current state: parent: 0x557ec28900b0 ; child index: 1 
+Current state: parent: 0x5585a94f5880 ; child index: 1 
 GoDown
-Current state: parent: 0x557ec289d760 ; child index: 0 
+Current state: parent: 0x5585a94f5db0 ; child index: 0 
 >>> PrintVisitor: StmtListStmt
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IntExpr 789 
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IdentExpr d 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IntExpr 987 
 GoUp
-Current state: parent: 0x557ec28900b0 ; child index: 1 
+Current state: parent: 0x5585a94f5880 ; child index: 1 
 GoUp
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 GoDown
-Current state: parent: 0x557ec28900b0 ; child index: 2 
+Current state: parent: 0x5585a94f5880 ; child index: 2 
 GoDown
-Current state: parent: 0x557ec289da00 ; child index: 0 
+Current state: parent: 0x5585a94f6050 ; child index: 0 
 >>> PrintVisitor: StmtListStmt
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IdentExpr d 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x557ec28900b0 ; child index: 2 
+Current state: parent: 0x5585a94f5880 ; child index: 2 
 GoUp
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 >>> PrintVisitor: AssignmentStmt
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr y 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IntExpr 1 
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x557ec288fd30 ; child index: 0 
+Current state: parent: 0x5585a94e8390 ; child index: 0 
 GoUp
-Current state: parent: 0x557ec288fc10 ; child index: 0 
+Current state: parent: 0x5585a94e8270 ; child index: 0 
 >>> PrintVisitor: AssignmentStmt
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr x 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IntExpr 1 
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x557ec288eff0 ; child index: 1 
+Current state: parent: 0x5585a94e7650 ; child index: 1 
 GoUp
-Current state: parent: 0x557ec288eea0 ; child index: 0 
+Current state: parent: 0x5585a94e7500 ; child index: 0 
 GoUp
-Current state: parent: 0x557ec288e890 ; child index: 1 
+Current state: parent: 0x5585a94e68b0 ; child index: 1 
 
 
 GoDown
-Current state: parent: 0x557ec288e890 ; child index: 1 
+Current state: parent: 0x5585a94e68b0 ; child index: 1 
 GoDown
-Current state: parent: 0x557ec288eea0 ; child index: 0 
+Current state: parent: 0x5585a94e7500 ; child index: 0 
 >>> Interpreter: MainClass
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var i declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-n 0x557ec288fb50 
-i 0x557ec288e5f0 
-x 0x557ec288fa90 
+Is var i declared: 1 
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: WhileStmt
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x557ec288eff0 ; child index: 0 
+Current state: parent: 0x5585a94e7650 ; child index: 0 
 GoUp
-Current state: parent: 0x557ec288eea0 ; child index: 0 
+Current state: parent: 0x5585a94e7500 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 5
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var x declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-n 0x557ec288fb50 
-i 0x557ec289de10 
-x 0x557ec288fa90 
+Is var x declared: 1 
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var n declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-n 0x557ec288fb50 
-i 0x557ec289de10 
-x 0x557ec288ee40 
+Is var n declared: 1 
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: WhileStmt
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoDown
-Current state: parent: 0x557ec288eff0 ; child index: 1 
+Current state: parent: 0x5585a94e7650 ; child index: 1 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x557ec288fc10 ; child index: 0 
+Current state: parent: 0x5585a94e8270 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 111111111
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 0
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 6
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var y declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-y 0x557ec288feb0 
+Is var y declared: 1 
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: WhileStmt
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x557ec288fd30 ; child index: 0 
+Current state: parent: 0x5585a94e8390 ; child index: 0 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 222222222
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 0
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 6
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 11
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var d declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-d 0x557ec2890250 
+Is var d declared: 1 
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IfStmt
 GoDown
-Current state: parent: 0x557ec28900b0 ; child index: 0 
+Current state: parent: 0x5585a94f5880 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x557ec2890330 ; child index: 0 
+Current state: parent: 0x5585a94f5b00 ; child index: 0 
 >>> Interpreter: AssignmentStmt
-Is var d declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
+Is var d declared: 1 
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x557ec28900b0 ; child index: 0 
+Current state: parent: 0x5585a94f5880 ; child index: 0 
 GoUp
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 123
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 7
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
@@ -1491,592 +353,156 @@ ScopeLayer::IsDeclared
 >>> Interpreter: IfElseStmt
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x557ec28900b0 ; child index: 1 
+Current state: parent: 0x5585a94f5880 ; child index: 1 
 GoUp
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 GoDown
-Current state: parent: 0x557ec28900b0 ; child index: 2 
+Current state: parent: 0x5585a94f5880 ; child index: 2 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x557ec289da00 ; child index: 0 
+Current state: parent: 0x5585a94f6050 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 7
 GoUp
-Current state: parent: 0x557ec28900b0 ; child index: 2 
+Current state: parent: 0x5585a94f5880 ; child index: 2 
 GoUp
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 >>> Interpreter: AssignmentStmt
-Is var y declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-d 0x557ec2890250 
+Is var y declared: 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x557ec288fd30 ; child index: 0 
+Current state: parent: 0x5585a94e8390 ; child index: 0 
 GoUp
-Current state: parent: 0x557ec288fc10 ; child index: 0 
+Current state: parent: 0x5585a94e8270 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var x declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-y 0x557ec288fb50 
+Is var x declared: 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x557ec288eff0 ; child index: 1 
+Current state: parent: 0x5585a94e7650 ; child index: 1 
 GoUp
-Current state: parent: 0x557ec288eea0 ; child index: 0 
+Current state: parent: 0x5585a94e7500 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoDown
-Current state: parent: 0x557ec288eff0 ; child index: 1 
+Current state: parent: 0x5585a94e7650 ; child index: 1 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x557ec288fc10 ; child index: 0 
+Current state: parent: 0x5585a94e8270 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 111111111
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 1
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 6
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var y declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-y 0x557ec288fb50 
+Is var y declared: 1 
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: WhileStmt
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x557ec288fd30 ; child index: 0 
+Current state: parent: 0x5585a94e8390 ; child index: 0 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 222222222
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 1
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 6
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 11
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var d declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-d 0x557ec2890250 
+Is var d declared: 1 
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IfStmt
 GoDown
-Current state: parent: 0x557ec28900b0 ; child index: 0 
+Current state: parent: 0x5585a94f5880 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x557ec2890330 ; child index: 0 
+Current state: parent: 0x5585a94f5b00 ; child index: 0 
 >>> Interpreter: AssignmentStmt
-Is var d declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
+Is var d declared: 1 
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x557ec28900b0 ; child index: 0 
+Current state: parent: 0x5585a94f5880 ; child index: 0 
 GoUp
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 123
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 7
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
@@ -2085,592 +511,156 @@ ScopeLayer::IsDeclared
 >>> Interpreter: IfElseStmt
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x557ec28900b0 ; child index: 1 
+Current state: parent: 0x5585a94f5880 ; child index: 1 
 GoUp
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 GoDown
-Current state: parent: 0x557ec28900b0 ; child index: 2 
+Current state: parent: 0x5585a94f5880 ; child index: 2 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x557ec289da00 ; child index: 0 
+Current state: parent: 0x5585a94f6050 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 7
 GoUp
-Current state: parent: 0x557ec28900b0 ; child index: 2 
+Current state: parent: 0x5585a94f5880 ; child index: 2 
 GoUp
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 >>> Interpreter: AssignmentStmt
-Is var y declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-d 0x557ec2890250 
+Is var y declared: 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x557ec288fd30 ; child index: 0 
+Current state: parent: 0x5585a94e8390 ; child index: 0 
 GoUp
-Current state: parent: 0x557ec288fc10 ; child index: 0 
+Current state: parent: 0x5585a94e8270 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var x declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-y 0x557ec288ee40 
+Is var x declared: 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x557ec288eff0 ; child index: 1 
+Current state: parent: 0x5585a94e7650 ; child index: 1 
 GoUp
-Current state: parent: 0x557ec288eea0 ; child index: 0 
+Current state: parent: 0x5585a94e7500 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoDown
-Current state: parent: 0x557ec288eff0 ; child index: 1 
+Current state: parent: 0x5585a94e7650 ; child index: 1 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x557ec288fc10 ; child index: 0 
+Current state: parent: 0x5585a94e8270 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 111111111
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 2
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 6
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var y declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-y 0x557ec288ee40 
+Is var y declared: 1 
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: WhileStmt
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x557ec288fd30 ; child index: 0 
+Current state: parent: 0x5585a94e8390 ; child index: 0 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 222222222
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 2
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 6
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 11
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var d declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-d 0x557ec2890250 
+Is var d declared: 1 
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IfStmt
 GoDown
-Current state: parent: 0x557ec28900b0 ; child index: 0 
+Current state: parent: 0x5585a94f5880 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x557ec2890330 ; child index: 0 
+Current state: parent: 0x5585a94f5b00 ; child index: 0 
 >>> Interpreter: AssignmentStmt
-Is var d declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
+Is var d declared: 1 
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x557ec28900b0 ; child index: 0 
+Current state: parent: 0x5585a94f5880 ; child index: 0 
 GoUp
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 123
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 7
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
@@ -2679,592 +669,156 @@ ScopeLayer::IsDeclared
 >>> Interpreter: IfElseStmt
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x557ec28900b0 ; child index: 1 
+Current state: parent: 0x5585a94f5880 ; child index: 1 
 GoUp
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 GoDown
-Current state: parent: 0x557ec28900b0 ; child index: 2 
+Current state: parent: 0x5585a94f5880 ; child index: 2 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x557ec289da00 ; child index: 0 
+Current state: parent: 0x5585a94f6050 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 7
 GoUp
-Current state: parent: 0x557ec28900b0 ; child index: 2 
+Current state: parent: 0x5585a94f5880 ; child index: 2 
 GoUp
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 >>> Interpreter: AssignmentStmt
-Is var y declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-d 0x557ec2890250 
+Is var y declared: 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x557ec288fd30 ; child index: 0 
+Current state: parent: 0x5585a94e8390 ; child index: 0 
 GoUp
-Current state: parent: 0x557ec288fc10 ; child index: 0 
+Current state: parent: 0x5585a94e8270 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var x declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-y 0x557ec288feb0 
+Is var x declared: 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x557ec288eff0 ; child index: 1 
+Current state: parent: 0x5585a94e7650 ; child index: 1 
 GoUp
-Current state: parent: 0x557ec288eea0 ; child index: 0 
+Current state: parent: 0x5585a94e7500 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoDown
-Current state: parent: 0x557ec288eff0 ; child index: 1 
+Current state: parent: 0x5585a94e7650 ; child index: 1 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x557ec288fc10 ; child index: 0 
+Current state: parent: 0x5585a94e8270 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 111111111
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 3
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 6
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var y declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-y 0x557ec288feb0 
+Is var y declared: 1 
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: WhileStmt
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x557ec288fd30 ; child index: 0 
+Current state: parent: 0x5585a94e8390 ; child index: 0 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 222222222
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 3
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 6
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 11
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var d declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-d 0x557ec2890250 
+Is var d declared: 1 
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IfStmt
 GoDown
-Current state: parent: 0x557ec28900b0 ; child index: 0 
+Current state: parent: 0x5585a94f5880 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x557ec2890330 ; child index: 0 
+Current state: parent: 0x5585a94f5b00 ; child index: 0 
 >>> Interpreter: AssignmentStmt
-Is var d declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
+Is var d declared: 1 
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x557ec28900b0 ; child index: 0 
+Current state: parent: 0x5585a94f5880 ; child index: 0 
 GoUp
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 123
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 7
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
@@ -3273,592 +827,156 @@ ScopeLayer::IsDeclared
 >>> Interpreter: IfElseStmt
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x557ec28900b0 ; child index: 1 
+Current state: parent: 0x5585a94f5880 ; child index: 1 
 GoUp
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 GoDown
-Current state: parent: 0x557ec28900b0 ; child index: 2 
+Current state: parent: 0x5585a94f5880 ; child index: 2 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x557ec289da00 ; child index: 0 
+Current state: parent: 0x5585a94f6050 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 7
 GoUp
-Current state: parent: 0x557ec28900b0 ; child index: 2 
+Current state: parent: 0x5585a94f5880 ; child index: 2 
 GoUp
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 >>> Interpreter: AssignmentStmt
-Is var y declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-d 0x557ec2890250 
+Is var y declared: 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x557ec288fd30 ; child index: 0 
+Current state: parent: 0x5585a94e8390 ; child index: 0 
 GoUp
-Current state: parent: 0x557ec288fc10 ; child index: 0 
+Current state: parent: 0x5585a94e8270 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var x declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-y 0x557ec288fb50 
+Is var x declared: 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x557ec288eff0 ; child index: 1 
+Current state: parent: 0x5585a94e7650 ; child index: 1 
 GoUp
-Current state: parent: 0x557ec288eea0 ; child index: 0 
+Current state: parent: 0x5585a94e7500 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoDown
-Current state: parent: 0x557ec288eff0 ; child index: 1 
+Current state: parent: 0x5585a94e7650 ; child index: 1 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x557ec288fc10 ; child index: 0 
+Current state: parent: 0x5585a94e8270 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 111111111
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 4
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 6
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var y declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-y 0x557ec288fb50 
+Is var y declared: 1 
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: WhileStmt
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x557ec288fd30 ; child index: 0 
+Current state: parent: 0x5585a94e8390 ; child index: 0 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 222222222
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 4
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 6
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 11
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var d declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-d 0x557ec2890250 
+Is var d declared: 1 
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IfStmt
 GoDown
-Current state: parent: 0x557ec28900b0 ; child index: 0 
+Current state: parent: 0x5585a94f5880 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x557ec2890330 ; child index: 0 
+Current state: parent: 0x5585a94f5b00 ; child index: 0 
 >>> Interpreter: AssignmentStmt
-Is var d declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
+Is var d declared: 1 
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x557ec28900b0 ; child index: 0 
+Current state: parent: 0x5585a94f5880 ; child index: 0 
 GoUp
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 123
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 7
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
@@ -3867,592 +985,156 @@ ScopeLayer::IsDeclared
 >>> Interpreter: IfElseStmt
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x557ec28900b0 ; child index: 1 
+Current state: parent: 0x5585a94f5880 ; child index: 1 
 GoUp
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 GoDown
-Current state: parent: 0x557ec28900b0 ; child index: 2 
+Current state: parent: 0x5585a94f5880 ; child index: 2 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x557ec289da00 ; child index: 0 
+Current state: parent: 0x5585a94f6050 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 7
 GoUp
-Current state: parent: 0x557ec28900b0 ; child index: 2 
+Current state: parent: 0x5585a94f5880 ; child index: 2 
 GoUp
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 >>> Interpreter: AssignmentStmt
-Is var y declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-d 0x557ec2890250 
+Is var y declared: 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x557ec288fd30 ; child index: 0 
+Current state: parent: 0x5585a94e8390 ; child index: 0 
 GoUp
-Current state: parent: 0x557ec288fc10 ; child index: 0 
+Current state: parent: 0x5585a94e8270 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var x declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-y 0x557ec288ee40 
+Is var x declared: 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x557ec288eff0 ; child index: 1 
+Current state: parent: 0x5585a94e7650 ; child index: 1 
 GoUp
-Current state: parent: 0x557ec288eea0 ; child index: 0 
+Current state: parent: 0x5585a94e7500 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoDown
-Current state: parent: 0x557ec288eff0 ; child index: 1 
+Current state: parent: 0x5585a94e7650 ; child index: 1 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x557ec288fc10 ; child index: 0 
+Current state: parent: 0x5585a94e8270 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 111111111
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 5
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 6
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var y declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-y 0x557ec288ee40 
+Is var y declared: 1 
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: WhileStmt
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x557ec288fd30 ; child index: 0 
+Current state: parent: 0x5585a94e8390 ; child index: 0 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 222222222
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 5
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 6
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 11
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var d declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-d 0x557ec2890250 
+Is var d declared: 1 
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IfStmt
 GoDown
-Current state: parent: 0x557ec28900b0 ; child index: 0 
+Current state: parent: 0x5585a94f5880 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x557ec2890330 ; child index: 0 
+Current state: parent: 0x5585a94f5b00 ; child index: 0 
 >>> Interpreter: AssignmentStmt
-Is var d declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
+Is var d declared: 1 
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x557ec28900b0 ; child index: 0 
+Current state: parent: 0x5585a94f5880 ; child index: 0 
 GoUp
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 123
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 7
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
@@ -4461,187 +1143,55 @@ ScopeLayer::IsDeclared
 >>> Interpreter: IfElseStmt
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x557ec28900b0 ; child index: 1 
+Current state: parent: 0x5585a94f5880 ; child index: 1 
 GoUp
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 GoDown
-Current state: parent: 0x557ec28900b0 ; child index: 2 
+Current state: parent: 0x5585a94f5880 ; child index: 2 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x557ec289da00 ; child index: 0 
+Current state: parent: 0x5585a94f6050 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 7
 GoUp
-Current state: parent: 0x557ec28900b0 ; child index: 2 
+Current state: parent: 0x5585a94f5880 ; child index: 2 
 GoUp
-Current state: parent: 0x557ec288ff70 ; child index: 0 
+Current state: parent: 0x5585a94f5760 ; child index: 0 
 >>> Interpreter: AssignmentStmt
-Is var y declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-d 0x557ec2890250 
+Is var y declared: 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x557ec288fd30 ; child index: 0 
+Current state: parent: 0x5585a94e8390 ; child index: 0 
 GoUp
-Current state: parent: 0x557ec288fc10 ; child index: 0 
+Current state: parent: 0x5585a94e8270 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var x declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-y 0x557ec288feb0 
+Is var x declared: 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IntExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x557ec288eff0 ; child index: 1 
+Current state: parent: 0x5585a94e7650 ; child index: 1 
 GoUp
-Current state: parent: 0x557ec288eea0 ; child index: 0 
+Current state: parent: 0x5585a94e7500 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x557ec288e890 ; child index: 1 
+Current state: parent: 0x5585a94e68b0 ; child index: 1 

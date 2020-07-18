@@ -1,7 +1,5 @@
 #pragma once
 
-#include "types/Object.hpp"
-
 #include <iterator>
 #include <memory>
 #include <stack>
@@ -9,10 +7,15 @@
 #include <unordered_map>
 #include <vector>
 
+#include "types/Object.hpp"
+#include "types/UninitObject.hpp"
+#include "types/FunctionType.hpp"
+
 
 class Frame: public std::enable_shared_from_this<Frame> {
  public:
   explicit Frame(FunctionType function_type);
+  Frame() = default;
 
   std::shared_ptr<Object> GetValue(size_t idx) const;
   void SetValue(size_t idx, std::shared_ptr<Object> value);
@@ -32,7 +35,11 @@ class Frame: public std::enable_shared_from_this<Frame> {
  private:
   std::shared_ptr<Frame> parent_;
   std::shared_ptr<Object> return_value_;
+
+  // stack of vars_ size slices in time;
+  // alloc scope: save size, dealloc scope: pop slice
   std::stack<size_t> offsets_;
+
   std::vector<std::shared_ptr<Object>> args_;
   std::vector<std::shared_ptr<Object>> vars_;
 };

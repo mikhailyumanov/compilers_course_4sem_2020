@@ -50,14 +50,20 @@ class Interpreter: public TemplateVisitor<std::shared_ptr<Object>>,
   void Visit(std::shared_ptr<MethodInvocation> element) override;
 
   int GetResult(std::shared_ptr<Program> program);
-  std::shared_ptr<Object> Accept(std::shared_ptr<BasicElement> element) override;
+  std::shared_ptr<Object> Accept(
+      std::shared_ptr<BasicElement> element) override;
 
  private:
   void SetTosValue(std::shared_ptr<Object> value);
   void UnsetTosValue();
 
+  void ScopeDown();
+  void ScopeUp();
+
  private:
   std::shared_ptr<Object> tos_value_;
   std::shared_ptr<SymbolTreeVisitor> symbol_tree_visitor_;
   ScopeLayerTree::Iterator current_scope_;
+  std::shared_ptr<Frame> current_frame_;
+  std::shared_ptr<FunctionTable> function_table_;
 };

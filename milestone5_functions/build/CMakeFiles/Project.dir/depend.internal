@@ -23,7 +23,9 @@ CMakeFiles/Project.dir/driver.cpp.o
  ../include/expressions/NotExpr.hpp
  ../include/expressions/SubscriptExpr.hpp
  ../include/functions/CommaExprList.hpp
+ ../include/functions/Frame.hpp
  ../include/functions/FunctionStorage.hpp
+ ../include/functions/FunctionTable.hpp
  ../include/functions/MethodInvocation.hpp
  ../include/program/ClassDeclList.hpp
  ../include/program/MainClass.hpp
@@ -191,6 +193,15 @@ CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o
  ../include/utils/forward_decl.hpp
  ../include/visitors/Visitor.hpp
  /compilers/compilers_course_4sem_2020/milestone5_functions/include/expressions/SubscriptExpr.cpp
+CMakeFiles/Project.dir/include/functions/Frame.cpp.o
+ ..//debug.h
+ ../include/functions/Frame.hpp
+ ../include/types/FunctionType.hpp
+ ../include/types/Object.hpp
+ ../include/types/Type.hpp
+ ../include/types/UninitObject.hpp
+ ../include/utils/forward_decl.hpp
+ /compilers/compilers_course_4sem_2020/milestone5_functions/include/functions/Frame.cpp
 CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o
  ..//debug.h
  ../include/functions/FunctionStorage.hpp
@@ -204,6 +215,11 @@ CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o
  ../include/utils/forward_decl.hpp
  ../include/visitors/Visitor.hpp
  /compilers/compilers_course_4sem_2020/milestone5_functions/include/functions/FunctionStorage.cpp
+CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.o
+ ..//debug.h
+ ../include/functions/FunctionTable.hpp
+ ../include/scopes/Symbol.hpp
+ /compilers/compilers_course_4sem_2020/milestone5_functions/include/functions/FunctionTable.cpp
 CMakeFiles/Project.dir/include/functions/MethodInvocation.cpp.o
  ..//debug.h
  ../include/expressions/Expression.hpp
@@ -445,7 +461,9 @@ CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o
  ../include/expressions/NotExpr.hpp
  ../include/expressions/SubscriptExpr.hpp
  ../include/functions/CommaExprList.hpp
+ ../include/functions/Frame.hpp
  ../include/functions/FunctionStorage.hpp
+ ../include/functions/FunctionTable.hpp
  ../include/functions/MethodInvocation.hpp
  ../include/program/ClassDeclList.hpp
  ../include/program/MainClass.hpp
@@ -502,7 +520,9 @@ CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o
  ../include/expressions/NotExpr.hpp
  ../include/expressions/SubscriptExpr.hpp
  ../include/functions/CommaExprList.hpp
+ ../include/functions/Frame.hpp
  ../include/functions/FunctionStorage.hpp
+ ../include/functions/FunctionTable.hpp
  ../include/functions/MethodInvocation.hpp
  ../include/program/ClassDeclList.hpp
  ../include/program/MainClass.hpp
@@ -556,7 +576,9 @@ CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o
  ../include/expressions/NotExpr.hpp
  ../include/expressions/SubscriptExpr.hpp
  ../include/functions/CommaExprList.hpp
+ ../include/functions/Frame.hpp
  ../include/functions/FunctionStorage.hpp
+ ../include/functions/FunctionTable.hpp
  ../include/functions/MethodInvocation.hpp
  ../include/program/ClassDeclList.hpp
  ../include/program/MainClass.hpp
@@ -619,7 +641,9 @@ CMakeFiles/Project.dir/main.cpp.o
  ../include/expressions/NotExpr.hpp
  ../include/expressions/SubscriptExpr.hpp
  ../include/functions/CommaExprList.hpp
+ ../include/functions/Frame.hpp
  ../include/functions/FunctionStorage.hpp
+ ../include/functions/FunctionTable.hpp
  ../include/functions/MethodInvocation.hpp
  ../include/program/ClassDeclList.hpp
  ../include/program/MainClass.hpp
@@ -680,7 +704,9 @@ CMakeFiles/Project.dir/parser.cpp.o
  ../include/expressions/NotExpr.hpp
  ../include/expressions/SubscriptExpr.hpp
  ../include/functions/CommaExprList.hpp
+ ../include/functions/Frame.hpp
  ../include/functions/FunctionStorage.hpp
+ ../include/functions/FunctionTable.hpp
  ../include/functions/MethodInvocation.hpp
  ../include/program/ClassDeclList.hpp
  ../include/program/MainClass.hpp
@@ -741,7 +767,9 @@ CMakeFiles/Project.dir/scanner.cpp.o
  ../include/expressions/NotExpr.hpp
  ../include/expressions/SubscriptExpr.hpp
  ../include/functions/CommaExprList.hpp
+ ../include/functions/Frame.hpp
  ../include/functions/FunctionStorage.hpp
+ ../include/functions/FunctionTable.hpp
  ../include/functions/MethodInvocation.hpp
  ../include/program/ClassDeclList.hpp
  ../include/program/MainClass.hpp

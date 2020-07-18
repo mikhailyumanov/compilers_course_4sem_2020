@@ -6,12 +6,20 @@
 FunctionType::FunctionType(Type return_type, 
     const std::vector<Type>& arg_types, 
     const std::vector<std::string>& arg_names)
-  : Type(return_type), arg_types{arg_types}, arg_names{arg_names} {
+  : Type{return_type}, arg_types{arg_types}, arg_names{arg_names} {
   assert(arg_types.size() == arg_names.size());
+}
+
+FunctionType::FunctionType(bool _is_main) : FunctionType() {
+  is_main = _is_main;
 }
 
 size_t FunctionType::GetNumArgs() const {
   return arg_types.size();
+}
+
+Type FunctionType::GetReturnType() const {
+  return *this;
 }
 
 bool FunctionType::IsMain() const {
