@@ -7,10 +7,22 @@ class ScopeLayerTree: public std::enable_shared_from_this<ScopeLayerTree> {
   ScopeLayerTree();
 
   void AddLayer(std::shared_ptr<ScopeLayer> parent) const;
-  std::shared_ptr<ScopeLayer> GetRoot() const;
+  void AddLayer(std::shared_ptr<ScopeLayer> class_scope,
+      FunctionType function_type) const;
 
- public:
+  void SetFunctionScope(std::string class_name, std::string func_name,
+      std::shared_ptr<ScopeLayer> func_scope);
+  std::shared_ptr<ScopeLayer> GetFunctionScope(
+      std::string class_name, std::string func_name) const;
+
+  std::shared_ptr<ScopeLayer> GetRoot() const;
+  
+
+ private:
   std::shared_ptr<ScopeLayer> root_;
+  std::unordered_map<std::string,
+    std::unordered_map<std::string,
+      std::shared_ptr<ScopeLayer>>> function_scopes_;
 
   // iterator
  public:

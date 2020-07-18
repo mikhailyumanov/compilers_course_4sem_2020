@@ -21,8 +21,6 @@ class AssignmentStmt;
 class StmtList;
 class ReturnStmt;
 class MethodStmt;
-class MethodInvocation;
-class CommaExprList;
 // expressions
 class Expression;
 class BinOpExpr;
@@ -35,9 +33,11 @@ class NewExpr;
 class NewArrayExpr;
 class NotExpr;
 class IdentExpr;
+class MethodExpr;
 // declarations
 class Decl;
 class VarDecl;
+class MethodDecl;
 class ClassDecl;
 class DeclList;
 // scopes
@@ -51,7 +51,12 @@ class Bool;
 class Class;
 class Array;
 class UninitObject;
+class Function;
 // value categories
 class Lvalue;
-
+// functions
+class MethodInvocation;
+class CommaExprList;
+//class Frame;
+class FunctionStorage;
 

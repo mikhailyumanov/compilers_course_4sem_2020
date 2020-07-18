@@ -410,51 +410,61 @@ namespace yy {
       // integer_literal
       char dummy2[sizeof (int)];
 
+      // formals
+      char dummy3[sizeof (std::pair<Type, std::string>)];
+
+      // comma_formals_list
+      // args_list
+      char dummy4[sizeof (std::pair<std::vector<Type>, std::vector<std::string>>)];
+
       // class_declaration
-      char dummy3[sizeof (std::shared_ptr<ClassDecl>)];
+      char dummy5[sizeof (std::shared_ptr<ClassDecl>)];
 
       // class_declaration_list
-      char dummy4[sizeof (std::shared_ptr<ClassDeclList>)];
+      char dummy6[sizeof (std::shared_ptr<ClassDeclList>)];
 
       // comma_expr_list
-      char dummy5[sizeof (std::shared_ptr<CommaExprList>)];
+      char dummy7[sizeof (std::shared_ptr<CommaExprList>)];
 
       // declaration
-      char dummy6[sizeof (std::shared_ptr<Decl>)];
+      char dummy8[sizeof (std::shared_ptr<Decl>)];
 
       // declaration_list
-      char dummy7[sizeof (std::shared_ptr<DeclList>)];
+      char dummy9[sizeof (std::shared_ptr<DeclList>)];
 
       // expr
-      char dummy8[sizeof (std::shared_ptr<Expression>)];
+      char dummy10[sizeof (std::shared_ptr<Expression>)];
 
       // lvalue
-      char dummy9[sizeof (std::shared_ptr<Lvalue>)];
+      char dummy11[sizeof (std::shared_ptr<Lvalue>)];
 
       // main_class
-      char dummy10[sizeof (std::shared_ptr<MainClass>)];
+      char dummy12[sizeof (std::shared_ptr<MainClass>)];
+
+      // method_declaration
+      char dummy13[sizeof (std::shared_ptr<MethodDecl>)];
 
       // method_invocation
-      char dummy11[sizeof (std::shared_ptr<MethodInvocation>)];
+      char dummy14[sizeof (std::shared_ptr<MethodInvocation>)];
 
       // program
-      char dummy12[sizeof (std::shared_ptr<Program>)];
+      char dummy15[sizeof (std::shared_ptr<Program>)];
 
       // statement
-      char dummy13[sizeof (std::shared_ptr<Statement>)];
+      char dummy16[sizeof (std::shared_ptr<Statement>)];
 
       // statement_list
-      char dummy14[sizeof (std::shared_ptr<StmtList>)];
+      char dummy17[sizeof (std::shared_ptr<StmtList>)];
 
       // variable_declaration
       // local_variable_declaration
-      char dummy15[sizeof (std::shared_ptr<VarDecl>)];
+      char dummy18[sizeof (std::shared_ptr<VarDecl>)];
 
       // "identifier"
       // type_identifier
       // simple_type
       // array_type
-      char dummy16[sizeof (std::string)];
+      char dummy19[sizeof (std::string)];
     };
 
     /// The size of the largest semantic type.
@@ -627,6 +637,32 @@ namespace yy {
       {}
 #endif
 #if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, std::pair<Type, std::string>&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const std::pair<Type, std::string>& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, std::pair<std::vector<Type>, std::vector<std::string>>&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const std::pair<std::vector<Type>, std::vector<std::string>>& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
       basic_symbol (typename Base::kind_type t, std::shared_ptr<ClassDecl>&& v, location_type&& l)
         : Base (t)
         , value (std::move (v))
@@ -725,6 +761,19 @@ namespace yy {
       {}
 #else
       basic_symbol (typename Base::kind_type t, const std::shared_ptr<MainClass>& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, std::shared_ptr<MethodDecl>&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const std::shared_ptr<MethodDecl>& v, const location_type& l)
         : Base (t)
         , value (v)
         , location (l)
@@ -850,6 +899,15 @@ switch (yytype)
         value.template destroy< int > ();
         break;
 
+      case 67: // formals
+        value.template destroy< std::pair<Type, std::string> > ();
+        break;
+
+      case 68: // comma_formals_list
+      case 69: // args_list
+        value.template destroy< std::pair<std::vector<Type>, std::vector<std::string>> > ();
+        break;
+
       case 57: // class_declaration
         value.template destroy< std::shared_ptr<ClassDecl> > ();
         break;
@@ -880,6 +938,10 @@ switch (yytype)
 
       case 56: // main_class
         value.template destroy< std::shared_ptr<MainClass> > ();
+        break;
+
+      case 70: // method_declaration
+        value.template destroy< std::shared_ptr<MethodDecl> > ();
         break;
 
       case 65: // method_invocation
@@ -2039,7 +2101,7 @@ switch (yytype)
     enum
     {
       yyeof_ = 0,
-      yylast_ = 470,     ///< Last index in yytable_.
+      yylast_ = 525,     ///< Last index in yytable_.
       yynnts_ = 24,  ///< Number of nonterminal symbols.
       yyfinal_ = 5, ///< Termination state number.
       yyntokens_ = 47  ///< Number of tokens.
@@ -2132,6 +2194,15 @@ switch (yytype)
         value.move< int > (std::move (that.value));
         break;
 
+      case 67: // formals
+        value.move< std::pair<Type, std::string> > (std::move (that.value));
+        break;
+
+      case 68: // comma_formals_list
+      case 69: // args_list
+        value.move< std::pair<std::vector<Type>, std::vector<std::string>> > (std::move (that.value));
+        break;
+
       case 57: // class_declaration
         value.move< std::shared_ptr<ClassDecl> > (std::move (that.value));
         break;
@@ -2162,6 +2233,10 @@ switch (yytype)
 
       case 56: // main_class
         value.move< std::shared_ptr<MainClass> > (std::move (that.value));
+        break;
+
+      case 70: // method_declaration
+        value.move< std::shared_ptr<MethodDecl> > (std::move (that.value));
         break;
 
       case 65: // method_invocation
@@ -2226,6 +2301,15 @@ switch (yytype)
         value.copy< int > (YY_MOVE (that.value));
         break;
 
+      case 67: // formals
+        value.copy< std::pair<Type, std::string> > (YY_MOVE (that.value));
+        break;
+
+      case 68: // comma_formals_list
+      case 69: // args_list
+        value.copy< std::pair<std::vector<Type>, std::vector<std::string>> > (YY_MOVE (that.value));
+        break;
+
       case 57: // class_declaration
         value.copy< std::shared_ptr<ClassDecl> > (YY_MOVE (that.value));
         break;
@@ -2256,6 +2340,10 @@ switch (yytype)
 
       case 56: // main_class
         value.copy< std::shared_ptr<MainClass> > (YY_MOVE (that.value));
+        break;
+
+      case 70: // method_declaration
+        value.copy< std::shared_ptr<MethodDecl> > (YY_MOVE (that.value));
         break;
 
       case 65: // method_invocation
@@ -2327,6 +2415,15 @@ switch (yytype)
         value.move< int > (YY_MOVE (s.value));
         break;
 
+      case 67: // formals
+        value.move< std::pair<Type, std::string> > (YY_MOVE (s.value));
+        break;
+
+      case 68: // comma_formals_list
+      case 69: // args_list
+        value.move< std::pair<std::vector<Type>, std::vector<std::string>> > (YY_MOVE (s.value));
+        break;
+
       case 57: // class_declaration
         value.move< std::shared_ptr<ClassDecl> > (YY_MOVE (s.value));
         break;
@@ -2357,6 +2454,10 @@ switch (yytype)
 
       case 56: // main_class
         value.move< std::shared_ptr<MainClass> > (YY_MOVE (s.value));
+        break;
+
+      case 70: // method_declaration
+        value.move< std::shared_ptr<MethodDecl> > (YY_MOVE (s.value));
         break;
 
       case 65: // method_invocation
@@ -2442,7 +2543,7 @@ switch (yytype)
   }
 
 } // yy
-#line 2446 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.hh"
+#line 2547 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.hh"
 
 
 

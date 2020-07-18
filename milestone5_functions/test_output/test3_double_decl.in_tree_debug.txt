@@ -1,0 +1,28 @@
+>>> Interpreter: Program
+>>> PrintVisitor: Program
+GoDown
+Current state: parent: 0x557580786890 ; child index: 1 
+GoDown
+Current state: parent: 0x557580786e80 ; child index: 0 
+>>> PrintVisitor: MainClass
+ScopeLayer::SetMain
+>>> PrintVisitor: LocalVarDeclStmt
+>>> PrintVisitor: VarDecl type: int, is_array: false x 
+x type: int, is_array: false 
+ScopeLayer::DeclareVariable x type: int, is_array: false 
+ScopeLayer::IsDeclared
+ScopeLayer::IsArgument
+ScopeLayer::IsClassData
+ScopeLayer::DeclareVariable init
+>>> PrintVisitor: AssignmentStmt
+ScopeLayer::IsDeclaredAnywhere
+ScopeLayer::IsDeclared
+>>> PrintVisitor: IntExpr 5 
+ScopeLayer::GetType
+ScopeLayer::IsDeclared
+ScopeLayer::IsDeclared
+>>> PrintVisitor: LocalVarDeclStmt
+>>> PrintVisitor: VarDecl type: int, is_array: false x 
+x type: int, is_array: false 
+ScopeLayer::DeclareVariable x type: int, is_array: false 
+ScopeLayer::IsDeclared

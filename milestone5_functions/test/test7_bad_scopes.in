@@ -16,13 +16,13 @@ class Program {
         int x;
         x = 0;
         int n;
-        n = 15;
+        n = 6;
         while (x < n) {
             System.out.println(111111111);
             System.out.println(x);
             System.out.println(n);
             int y;
-            y = 0;
+            y = 11;
             while (y < n * 2) {
                 System.out.println(222222222);
                 System.out.println(x);

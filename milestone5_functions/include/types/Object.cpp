@@ -20,6 +20,10 @@ std::string Object::GetTypeName() const {
   return type_.type;
 }
 
+bool Object::IsClass() const {
+  return false;
+}
+
 bool Object::IsArray() const {
   return type_.is_array;
 }

@@ -7,7 +7,7 @@
 #IncludeRegexTransform: 
 
 ..//debug.h
-fstream
+iostream
 -
 
 ../include/declarations/ClassDecl.hpp
@@ -27,6 +27,14 @@ utils/BasicElement.hpp
 ../include/declarations/DeclList.hpp
 utils/BasicList.hpp
 ../include/declarations/utils/BasicList.hpp
+
+../include/declarations/MethodDecl.hpp
+declarations/Decl.hpp
+../include/declarations/declarations/Decl.hpp
+statements/StmtList.hpp
+../include/declarations/statements/StmtList.hpp
+types/FunctionType.hpp
+../include/declarations/types/FunctionType.hpp
 
 ../include/declarations/VarDecl.hpp
 declarations/Decl.hpp
@@ -62,6 +70,12 @@ expressions/Expression.hpp
 Expression.hpp
 ../include/expressions/Expression.hpp
 
+../include/expressions/MethodExpr.hpp
+Expression.hpp
+../include/expressions/Expression.hpp
+functions/MethodInvocation.hpp
+../include/expressions/functions/MethodInvocation.hpp
+
 ../include/expressions/NewArrayExpr.hpp
 Expression.hpp
 ../include/expressions/Expression.hpp
@@ -89,6 +103,14 @@ Expression.hpp
 ../include/functions/CommaExprList.hpp
 utils/BasicList.hpp
 ../include/functions/utils/BasicList.hpp
+
+../include/functions/FunctionStorage.hpp
+memory
+-
+unordered_map
+-
+types/Function.hpp
+../include/functions/types/Function.hpp
 
 ../include/functions/MethodInvocation.hpp
 expressions/Expression.hpp
@@ -123,6 +145,8 @@ scopes/Symbol.hpp
 ../include/scopes/scopes/Symbol.hpp
 types/Object.hpp
 ../include/scopes/types/Object.hpp
+types/FunctionType.hpp
+../include/scopes/types/FunctionType.hpp
 iterator
 -
 memory
@@ -227,8 +251,24 @@ types/Integer.hpp
 ../include/types/types/Integer.hpp
 
 ../include/types/Class.hpp
+vector
+-
 types/Object.hpp
 ../include/types/types/Object.hpp
+
+../include/types/Function.hpp
+types/Object.hpp
+../include/types/types/Object.hpp
+types/FunctionType.hpp
+../include/types/types/FunctionType.hpp
+statements/StmtList.hpp
+../include/types/statements/StmtList.hpp
+
+../include/types/FunctionType.hpp
+vector
+-
+types/Type.hpp
+../include/types/types/Type.hpp
 
 ../include/types/Integer.hpp
 types/Object.hpp
@@ -249,6 +289,8 @@ utils/forward_decl.hpp
 ../include/types/Type.hpp
 iostream
 -
+debug.h
+../include/types/debug.h
 
 ../include/types/UninitObject.hpp
 types/Object.hpp
@@ -321,10 +363,14 @@ expressions/NotExpr.hpp
 ../include/utils/expressions/NotExpr.hpp
 expressions/IdentExpr.hpp
 ../include/utils/expressions/IdentExpr.hpp
+expressions/MethodExpr.hpp
+../include/utils/expressions/MethodExpr.hpp
 declarations/Decl.hpp
 ../include/utils/declarations/Decl.hpp
 declarations/VarDecl.hpp
 ../include/utils/declarations/VarDecl.hpp
+declarations/MethodDecl.hpp
+../include/utils/declarations/MethodDecl.hpp
 declarations/ClassDecl.hpp
 ../include/utils/declarations/ClassDecl.hpp
 declarations/DeclList.hpp
@@ -337,6 +383,8 @@ scopes/ScopeLayerTree.hpp
 ../include/utils/scopes/ScopeLayerTree.hpp
 types/Type.hpp
 ../include/utils/types/Type.hpp
+types/FunctionType.hpp
+../include/utils/types/FunctionType.hpp
 types/Object.hpp
 ../include/utils/types/Object.hpp
 types/Integer.hpp
@@ -349,12 +397,16 @@ types/Array.hpp
 ../include/utils/types/Array.hpp
 types/UninitObject.hpp
 ../include/utils/types/UninitObject.hpp
+types/Function.hpp
+../include/utils/types/Function.hpp
 value_categories/Lvalue.hpp
 ../include/utils/value_categories/Lvalue.hpp
 functions/MethodInvocation.hpp
 ../include/utils/functions/MethodInvocation.hpp
 functions/CommaExprList.hpp
 ../include/utils/functions/CommaExprList.hpp
+functions/FunctionStorage.hpp
+../include/utils/functions/FunctionStorage.hpp
 
 ../include/utils/forward_decl.hpp
 types/Type.hpp
@@ -421,7 +473,7 @@ fstream
 -
 
 /compilers/compilers_course_4sem_2020/milestone5_functions/debug.h
-fstream
+iostream
 -
 
 /compilers/compilers_course_4sem_2020/milestone5_functions/driver.cpp
@@ -454,6 +506,10 @@ visitors/SymbolTreeVisitor.hpp
 declarations/ClassDecl.hpp
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/declarations/declarations/ClassDecl.hpp
 
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/declarations/MethodDecl.cpp
+declarations/MethodDecl.hpp
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/declarations/declarations/MethodDecl.hpp
+
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/declarations/VarDecl.cpp
 declarations/VarDecl.hpp
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/declarations/declarations/VarDecl.hpp
@@ -478,6 +534,10 @@ expressions/IntExpr.hpp
 expressions/LengthExpr.hpp
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/expressions/expressions/LengthExpr.hpp
 
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/expressions/MethodExpr.cpp
+expressions/MethodExpr.hpp
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/expressions/expressions/MethodExpr.hpp
+
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/expressions/NewArrayExpr.cpp
 expressions/NewArrayExpr.hpp
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/expressions/expressions/NewArrayExpr.hpp
@@ -493,6 +553,12 @@ expressions/NotExpr.hpp
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/expressions/SubscriptExpr.cpp
 expressions/SubscriptExpr.hpp
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/expressions/expressions/SubscriptExpr.hpp
+
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/functions/FunctionStorage.cpp
+cassert
+-
+functions/FunctionStorage.hpp
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/functions/functions/FunctionStorage.hpp
 
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/functions/MethodInvocation.cpp
 functions/MethodInvocation.hpp
@@ -517,6 +583,8 @@ iostream
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/scopes/ScopeLayerTree.cpp
 scopes/ScopeLayerTree.hpp
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/scopes/scopes/ScopeLayerTree.hpp
+cassert
+-
 
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/scopes/Symbol.cpp
 scopes/Symbol.hpp
@@ -567,6 +635,16 @@ types/Bool.hpp
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/types/Class.cpp
 types/Class.hpp
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/types/types/Class.hpp
+
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/types/Function.cpp
+types/Function.hpp
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/types/types/Function.hpp
+
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/types/FunctionType.cpp
+types/FunctionType.hpp
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/types/types/FunctionType.hpp
+cassert
+-
 
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/types/Integer.cpp
 types/Integer.hpp

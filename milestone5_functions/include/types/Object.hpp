@@ -17,6 +17,7 @@ class Object: std::enable_shared_from_this<Object> {
 
   Type GetType() const;
   std::string GetTypeName() const;
+  virtual bool IsClass() const;
   bool IsArray() const;
   void SetArray(bool is_array);
 

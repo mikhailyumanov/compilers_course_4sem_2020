@@ -204,6 +204,33 @@ include/declarations/ClassDecl.cpp.s:
 	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/declarations/ClassDecl.cpp.s
 .PHONY : include/declarations/ClassDecl.cpp.s
 
+include/declarations/MethodDecl.o: include/declarations/MethodDecl.cpp.o
+
+.PHONY : include/declarations/MethodDecl.o
+
+# target to build an object file
+include/declarations/MethodDecl.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/declarations/MethodDecl.cpp.o
+.PHONY : include/declarations/MethodDecl.cpp.o
+
+include/declarations/MethodDecl.i: include/declarations/MethodDecl.cpp.i
+
+.PHONY : include/declarations/MethodDecl.i
+
+# target to preprocess a source file
+include/declarations/MethodDecl.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/declarations/MethodDecl.cpp.i
+.PHONY : include/declarations/MethodDecl.cpp.i
+
+include/declarations/MethodDecl.s: include/declarations/MethodDecl.cpp.s
+
+.PHONY : include/declarations/MethodDecl.s
+
+# target to generate assembly for a file
+include/declarations/MethodDecl.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/declarations/MethodDecl.cpp.s
+.PHONY : include/declarations/MethodDecl.cpp.s
+
 include/declarations/VarDecl.o: include/declarations/VarDecl.cpp.o
 
 .PHONY : include/declarations/VarDecl.o
@@ -366,6 +393,33 @@ include/expressions/LengthExpr.cpp.s:
 	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/expressions/LengthExpr.cpp.s
 .PHONY : include/expressions/LengthExpr.cpp.s
 
+include/expressions/MethodExpr.o: include/expressions/MethodExpr.cpp.o
+
+.PHONY : include/expressions/MethodExpr.o
+
+# target to build an object file
+include/expressions/MethodExpr.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/expressions/MethodExpr.cpp.o
+.PHONY : include/expressions/MethodExpr.cpp.o
+
+include/expressions/MethodExpr.i: include/expressions/MethodExpr.cpp.i
+
+.PHONY : include/expressions/MethodExpr.i
+
+# target to preprocess a source file
+include/expressions/MethodExpr.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/expressions/MethodExpr.cpp.i
+.PHONY : include/expressions/MethodExpr.cpp.i
+
+include/expressions/MethodExpr.s: include/expressions/MethodExpr.cpp.s
+
+.PHONY : include/expressions/MethodExpr.s
+
+# target to generate assembly for a file
+include/expressions/MethodExpr.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/expressions/MethodExpr.cpp.s
+.PHONY : include/expressions/MethodExpr.cpp.s
+
 include/expressions/NewArrayExpr.o: include/expressions/NewArrayExpr.cpp.o
 
 .PHONY : include/expressions/NewArrayExpr.o
@@ -473,6 +527,33 @@ include/expressions/SubscriptExpr.s: include/expressions/SubscriptExpr.cpp.s
 include/expressions/SubscriptExpr.cpp.s:
 	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.s
 .PHONY : include/expressions/SubscriptExpr.cpp.s
+
+include/functions/FunctionStorage.o: include/functions/FunctionStorage.cpp.o
+
+.PHONY : include/functions/FunctionStorage.o
+
+# target to build an object file
+include/functions/FunctionStorage.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o
+.PHONY : include/functions/FunctionStorage.cpp.o
+
+include/functions/FunctionStorage.i: include/functions/FunctionStorage.cpp.i
+
+.PHONY : include/functions/FunctionStorage.i
+
+# target to preprocess a source file
+include/functions/FunctionStorage.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.i
+.PHONY : include/functions/FunctionStorage.cpp.i
+
+include/functions/FunctionStorage.s: include/functions/FunctionStorage.cpp.s
+
+.PHONY : include/functions/FunctionStorage.s
+
+# target to generate assembly for a file
+include/functions/FunctionStorage.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.s
+.PHONY : include/functions/FunctionStorage.cpp.s
 
 include/functions/MethodInvocation.o: include/functions/MethodInvocation.cpp.o
 
@@ -933,6 +1014,60 @@ include/types/Class.cpp.s:
 	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/Class.cpp.s
 .PHONY : include/types/Class.cpp.s
 
+include/types/Function.o: include/types/Function.cpp.o
+
+.PHONY : include/types/Function.o
+
+# target to build an object file
+include/types/Function.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/Function.cpp.o
+.PHONY : include/types/Function.cpp.o
+
+include/types/Function.i: include/types/Function.cpp.i
+
+.PHONY : include/types/Function.i
+
+# target to preprocess a source file
+include/types/Function.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/Function.cpp.i
+.PHONY : include/types/Function.cpp.i
+
+include/types/Function.s: include/types/Function.cpp.s
+
+.PHONY : include/types/Function.s
+
+# target to generate assembly for a file
+include/types/Function.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/Function.cpp.s
+.PHONY : include/types/Function.cpp.s
+
+include/types/FunctionType.o: include/types/FunctionType.cpp.o
+
+.PHONY : include/types/FunctionType.o
+
+# target to build an object file
+include/types/FunctionType.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/FunctionType.cpp.o
+.PHONY : include/types/FunctionType.cpp.o
+
+include/types/FunctionType.i: include/types/FunctionType.cpp.i
+
+.PHONY : include/types/FunctionType.i
+
+# target to preprocess a source file
+include/types/FunctionType.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/FunctionType.cpp.i
+.PHONY : include/types/FunctionType.cpp.i
+
+include/types/FunctionType.s: include/types/FunctionType.cpp.s
+
+.PHONY : include/types/FunctionType.s
+
+# target to generate assembly for a file
+include/types/FunctionType.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/FunctionType.cpp.s
+.PHONY : include/types/FunctionType.cpp.s
+
 include/types/Integer.o: include/types/Integer.cpp.o
 
 .PHONY : include/types/Integer.o
@@ -1302,6 +1437,9 @@ help:
 	@echo "... include/declarations/ClassDecl.o"
 	@echo "... include/declarations/ClassDecl.i"
 	@echo "... include/declarations/ClassDecl.s"
+	@echo "... include/declarations/MethodDecl.o"
+	@echo "... include/declarations/MethodDecl.i"
+	@echo "... include/declarations/MethodDecl.s"
 	@echo "... include/declarations/VarDecl.o"
 	@echo "... include/declarations/VarDecl.i"
 	@echo "... include/declarations/VarDecl.s"
@@ -1320,6 +1458,9 @@ help:
 	@echo "... include/expressions/LengthExpr.o"
 	@echo "... include/expressions/LengthExpr.i"
 	@echo "... include/expressions/LengthExpr.s"
+	@echo "... include/expressions/MethodExpr.o"
+	@echo "... include/expressions/MethodExpr.i"
+	@echo "... include/expressions/MethodExpr.s"
 	@echo "... include/expressions/NewArrayExpr.o"
 	@echo "... include/expressions/NewArrayExpr.i"
 	@echo "... include/expressions/NewArrayExpr.s"
@@ -1332,6 +1473,9 @@ help:
 	@echo "... include/expressions/SubscriptExpr.o"
 	@echo "... include/expressions/SubscriptExpr.i"
 	@echo "... include/expressions/SubscriptExpr.s"
+	@echo "... include/functions/FunctionStorage.o"
+	@echo "... include/functions/FunctionStorage.i"
+	@echo "... include/functions/FunctionStorage.s"
 	@echo "... include/functions/MethodInvocation.o"
 	@echo "... include/functions/MethodInvocation.i"
 	@echo "... include/functions/MethodInvocation.s"
@@ -1383,6 +1527,12 @@ help:
 	@echo "... include/types/Class.o"
 	@echo "... include/types/Class.i"
 	@echo "... include/types/Class.s"
+	@echo "... include/types/Function.o"
+	@echo "... include/types/Function.i"
+	@echo "... include/types/Function.s"
+	@echo "... include/types/FunctionType.o"
+	@echo "... include/types/FunctionType.i"
+	@echo "... include/types/FunctionType.s"
 	@echo "... include/types/Integer.o"
 	@echo "... include/types/Integer.i"
 	@echo "... include/types/Integer.s"

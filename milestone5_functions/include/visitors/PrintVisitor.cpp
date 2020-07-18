@@ -1,5 +1,8 @@
 #include "visitors/PrintVisitor.hpp"
 
+#define GO_DOWN GoDown(); if (!as_plugin_) {
+#define GO_UP GoUp(); }
+
 PrintVisitor::PrintVisitor(const std::string& filename, bool as_plugin) 
   : stream_(filename), as_plugin_{as_plugin} {
 }
@@ -10,237 +13,259 @@ PrintVisitor::PrintVisitor(const std::string& filename)
 
 void PrintVisitor::Visit(std::shared_ptr<Program> element) {
   stream_ << "Program" << std::endl;
-  DEBUG_SINGLE("Program")
+  DEBUG_SINGLE(">>> PrintVisitor: Program")
 
-  GoDown(); if (!as_plugin_) {
+  GO_DOWN
   element->main_class->Accept(shared_from_this());
   element->class_decl_list->Accept(shared_from_this());
-  GoUp(); }
+  GO_UP
 }
 
 void PrintVisitor::Visit(std::shared_ptr<MainClass> element) {
   PrintTabs();
   stream_ << "MainClass" << std::endl;
-  DEBUG_SINGLE("MainClass")
+  DEBUG_SINGLE(">>> PrintVisitor: MainClass")
 
-  GoDown(); if (!as_plugin_) {
+  GO_DOWN
   element->stmt_list->Accept(shared_from_this());
-  GoUp(); }
+  GO_UP
 }
 
 void PrintVisitor::Visit(std::shared_ptr<AssertStmt> element) {
   PrintTabs();
   stream_ << "AssertStmt" << std::endl;
-  DEBUG_SINGLE("AssertStmt")
+  DEBUG_SINGLE(">>> PrintVisitor: AssertStmt")
 
-  GoDown(); if (!as_plugin_) {
+  GO_DOWN
   element->expr->Accept(shared_from_this());
-  GoUp(); }
+  GO_UP
 }
 
 void PrintVisitor::Visit(
     std::shared_ptr<LocalVarDeclStmt> element) {
   PrintTabs();
   stream_ << "LocalVarDeclStmt" << std::endl;
-  DEBUG_SINGLE("LocalVarDeclStmt")
+  DEBUG_SINGLE(">>> PrintVisitor: LocalVarDeclStmt")
 
-  GoDown(); if (!as_plugin_) {
+  GO_DOWN
   element->var_decl->Accept(shared_from_this());
-  GoUp(); }
+  GO_UP
 }
 
 void PrintVisitor::Visit(std::shared_ptr<StmtListStmt> element) {
   PrintTabs();
   stream_ << "StmtListStmt" << std::endl;
-  DEBUG_SINGLE("StmtListStmt")
+  DEBUG_SINGLE(">>> PrintVisitor: StmtListStmt")
 
-  GoDown(); if (!as_plugin_) {
+  GO_DOWN
   element->stmt_list->Accept(shared_from_this());
-  GoUp(); }
+  GO_UP
 }
 
 void PrintVisitor::Visit(std::shared_ptr<IfStmt> element) {
   PrintTabs();
   stream_ << "IfStmt" << std::endl;
-  DEBUG_SINGLE("IfStmt")
+  DEBUG_SINGLE(">>> PrintVisitor: IfStmt")
 
-  GoDown(); if (!as_plugin_) {
+  GO_DOWN
   element->expr->Accept(shared_from_this());
   element->stmt->Accept(shared_from_this());
-  GoUp(); }
+  GO_UP
 }
 
 void PrintVisitor::Visit(std::shared_ptr<IfElseStmt> element) {
   PrintTabs();
   stream_ << "IfElseStmt" << std::endl;
-  DEBUG_SINGLE("IfElseStmt")
+  DEBUG_SINGLE(">>> PrintVisitor: IfElseStmt")
 
-  GoDown(); if (!as_plugin_) {
+  GO_DOWN
   element->expr->Accept(shared_from_this());
   element->stmt_true->Accept(shared_from_this());
   element->stmt_false->Accept(shared_from_this());
-  GoUp(); }
+  GO_UP
 }
 
 void PrintVisitor::Visit(std::shared_ptr<WhileStmt> element) {
   PrintTabs();
   stream_ << "WhileStmt" << std::endl;
-  DEBUG_SINGLE("WhileStmt")
+  DEBUG_SINGLE(">>> PrintVisitor: WhileStmt")
 
-  GoDown(); if (!as_plugin_) {
+  GO_DOWN
   element->expr->Accept(shared_from_this());
   element->stmt->Accept(shared_from_this());
-  GoUp(); }
+  GO_UP
 }
 
 void PrintVisitor::Visit(std::shared_ptr<PrintStmt> element) {
   PrintTabs();
   stream_ << "PrintStmt" << std::endl;
-  DEBUG_SINGLE("PrintStmt")
+  DEBUG_SINGLE(">>> PrintVisitor: PrintStmt")
 
-  GoDown(); if (!as_plugin_) {
+  GO_DOWN
   element->expr->Accept(shared_from_this());
-  GoUp(); }
+  GO_UP
 }
 
 void PrintVisitor::Visit(std::shared_ptr<AssignmentStmt> element) {
   PrintTabs();
   stream_ << "AssignmentStmt" << std::endl;
-  DEBUG_SINGLE("AssignmentStmt")
+  DEBUG_SINGLE(">>> PrintVisitor: AssignmentStmt")
 
-  GoDown(); if (!as_plugin_) {
+  GO_DOWN
   element->lvalue->Accept(shared_from_this());
   element->expr->Accept(shared_from_this());
-  GoUp(); }
+  GO_UP
 }
 
 void PrintVisitor::Visit(std::shared_ptr<ReturnStmt> element) {
   PrintTabs();
   stream_ << "ReturnStmt" << std::endl;
-  DEBUG_SINGLE("ReturnStmt")
+  DEBUG_SINGLE(">>> PrintVisitor: ReturnStmt")
 
-  GoDown(); if (!as_plugin_) {
+  GO_DOWN
   element->expr->Accept(shared_from_this());
-  GoUp(); }
+  GO_UP
 }
 
 void PrintVisitor::Visit(std::shared_ptr<MethodStmt> element) {
   PrintTabs();
   stream_ << "MethodStmt" << std::endl;
-  DEBUG_SINGLE("MethodStmt")
+  DEBUG_SINGLE(">>> PrintVisitor: MethodStmt")
 
-  GoDown(); if (!as_plugin_) {
-  element->invocation->expr->Accept(shared_from_this());
-  stream_ << element->invocation->name.GetName() << std::endl;
-  element->invocation->comma_expr_list->Accept(shared_from_this());
-  GoUp(); }
+  GO_DOWN
+  element->invocation->Accept(shared_from_this());
+  GO_UP
 }
 
 void PrintVisitor::Visit(std::shared_ptr<BinOpExpr> element) {
   PrintTabs();
   stream_ << "BinOpExpr" << std::endl;
-  DEBUG_SINGLE("BinOpExpr")
+  DEBUG_SINGLE(">>> PrintVisitor: BinOpExpr")
 
-  GoDown(); if (!as_plugin_) {
+  GO_DOWN
   element->lhs->Accept(shared_from_this());
   PrintTabs(); stream_ << (int) element->op << std::endl;
   element->rhs->Accept(shared_from_this());
-  GoUp(); }
+  GO_UP
 }
 
 void PrintVisitor::Visit(std::shared_ptr<SubscriptExpr> element) {
   PrintTabs();
   stream_ << "SubscriptExpr" << std::endl;
-  DEBUG_SINGLE("SubscriptExpr")
+  DEBUG_SINGLE(">>> PrintVisitor: SubscriptExpr")
 
-  GoDown(); if (!as_plugin_) {
+  GO_DOWN
   element->expr->Accept(shared_from_this());
   element->idx->Accept(shared_from_this());
-  GoUp(); }
+  GO_UP
 }
 
 void PrintVisitor::Visit(std::shared_ptr<LengthExpr> element) {
   PrintTabs();
   stream_ << "LengthExpr" << std::endl;
-  DEBUG_SINGLE("LengthExpr")
+  DEBUG_SINGLE(">>> PrintVisitor: LengthExpr")
 
-  GoDown(); if (!as_plugin_) {
+  GO_DOWN
   element->expr->Accept(shared_from_this());
-  GoUp(); }
+  GO_UP
 }
 
 void PrintVisitor::Visit(std::shared_ptr<TrueExpr> element) {
   PrintTabs();
   stream_ << "TrueExpr" << std::endl;
+  DEBUG_SINGLE(">>> PrintVisitor: TrueExpr")
 }
 
 void PrintVisitor::Visit(std::shared_ptr<FalseExpr> element) {
   PrintTabs();
   stream_ << "FalseExpr" << std::endl;
-  DEBUG_SINGLE("FalseExpr")
+  DEBUG_SINGLE(">>> PrintVisitor: FalseExpr")
 }
 
 void PrintVisitor::Visit(std::shared_ptr<IntExpr> element) {
   PrintTabs();
   stream_ << "IntExpr " << element->value << std::endl;
-  DEBUG_START DEBUG("IntExpr") DEBUG(element->value) DEBUG_FINISH
+  DEBUG_START DEBUG(">>> PrintVisitor: IntExpr") DEBUG(element->value) DEBUG_FINISH
 }
 
 void PrintVisitor::Visit(std::shared_ptr<NewExpr> element) {
   PrintTabs();
   stream_ << "NewExpr type = " << element->type << std::endl;
-  DEBUG_START DEBUG("NewExpr type = ") DEBUG(element->type) DEBUG_FINISH
+  DEBUG_START DEBUG(">>> PrintVisitor: NewExpr type = ") DEBUG(element->type) DEBUG_FINISH
 }
 
 void PrintVisitor::Visit(std::shared_ptr<NewArrayExpr> element) {
   PrintTabs();
   stream_ << "NewArrayExpr type = " << element->type << std::endl;
-  DEBUG_START DEBUG("NewArrayExpr type = ") DEBUG(element->type) DEBUG_FINISH
+  DEBUG_START DEBUG(">>> PrintVisitor: NewArrayExpr type = ") DEBUG(element->type) DEBUG_FINISH
 
-  GoDown(); if (!as_plugin_) {
+  GO_DOWN
   element->expr->Accept(shared_from_this());
-  GoUp(); }
+  GO_UP
 }
 
 void PrintVisitor::Visit(std::shared_ptr<NotExpr> element) {
   PrintTabs();
   stream_ << "NotExpr" << std::endl;
-  DEBUG_SINGLE("NotExpr")
+  DEBUG_SINGLE(">>> PrintVisitor: NotExpr")
 
-  GoDown(); if (!as_plugin_) {
+  GO_DOWN
   element->expr->Accept(shared_from_this());
-  GoUp(); }
+  GO_UP
 }
 
 void PrintVisitor::Visit(std::shared_ptr<IdentExpr> element) {
   PrintTabs();
   stream_ << "IdentExpr " << element->name << std::endl;
-  DEBUG_START DEBUG("IdentExpr") DEBUG(element->name) DEBUG_FINISH
+  DEBUG_START DEBUG(">>> PrintVisitor: IdentExpr") DEBUG(element->name) DEBUG_FINISH
+}
+
+void PrintVisitor::Visit(std::shared_ptr<MethodExpr> element) {
+  PrintTabs();
+  stream_ << "MethodExpr" << std::endl;
+  DEBUG_SINGLE(">>> PrintVisitor: MethodExpr")
+
+  GO_DOWN
+  element->invocation->Accept(shared_from_this());
+  GO_UP
 }
 
 void PrintVisitor::Visit(std::shared_ptr<ClassDecl> element) {
   PrintTabs();
   stream_ << "ClassDecl " << element->class_name << std::endl;
-  DEBUG_START DEBUG("ClassDecl") DEBUG(element->class_name) DEBUG_FINISH
+  DEBUG_START DEBUG(">>> PrintVisitor: ClassDecl") DEBUG(element->class_name) DEBUG_FINISH
 
-  GoDown(); if (!as_plugin_) {
+  GO_DOWN
   element->decl_list->Accept(shared_from_this());
-  GoUp(); }
+  GO_UP
 }
 
 void PrintVisitor::Visit(std::shared_ptr<VarDecl> element) {
   PrintTabs();
-  stream_ << "VarDecl " << element->type.type << " " 
-          << "is array: " << element->type.is_array << " "
+  stream_ << "VarDecl " << element->type << " "
           << element->name << std::endl;
   
   DEBUG_START 
-    DEBUG("VarDecl")
-    DEBUG(element->type.type)
-    DEBUG("is array: ")
-    DEBUG(element->type.is_array)
+    DEBUG(">>> PrintVisitor: VarDecl")
+    DEBUG(element->type)
     DEBUG(element->name)
   DEBUG_FINISH
+}
+
+void PrintVisitor::Visit(std::shared_ptr<MethodDecl> element) {
+  PrintTabs();
+  stream_ << "MethodDecl " << element->type << " "
+         << element->name << std::endl;
+
+  DEBUG_START
+    DEBUG(">>> PrintVisitor: MethodDecl")
+    DEBUG(element->type)
+    DEBUG(element->name)
+  DEBUG_FINISH
+
+  GO_DOWN
+  element->stmt_list->Accept(shared_from_this());
+  GO_UP
 }
 
 void PrintVisitor::Visit(std::shared_ptr<Lvalue> element) {
@@ -248,10 +273,22 @@ void PrintVisitor::Visit(std::shared_ptr<Lvalue> element) {
   
   stream_ << "Lvalue " << element->name << std::endl;
   if (element->expr) {
-    GoDown(); if (!as_plugin_) {
+    GO_DOWN
     element->expr->Accept(shared_from_this());
-    GoUp(); }
+    GO_UP
   }
+}
+
+void PrintVisitor::Visit(std::shared_ptr<MethodInvocation> element) {
+  PrintTabs();
+  stream_ << "MethodInvocation" << std::endl;
+  DEBUG_SINGLE(">>> PrintVisitor: MethodInvocation")
+
+  GO_DOWN
+  element->expr->Accept(shared_from_this());
+  stream_ << element->name.GetName() << std::endl;
+  element->comma_expr_list->Accept(shared_from_this());
+  GO_UP
 }
 
 PrintVisitor::~PrintVisitor() {

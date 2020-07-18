@@ -1,0 +1,19 @@
+Program
+	NEW SCOPE
+	NEW SCOPE
+	ClassDecl Dog
+		NEW FUNCTION SCOPE
+		MethodDecl type: , is_array: false Bark
+			PrintStmt
+				IntExpr 12345
+	NEW SCOPE
+	MainClass
+		LocalVarDeclStmt
+			VarDecl type: Dog, is_array: false dog
+		AssignmentStmt
+			Lvalue dog
+			NewExpr type = Dog
+		MethodStmt
+			MethodInvocation
+				NewExpr type = Dog
+				NEW SCOPE

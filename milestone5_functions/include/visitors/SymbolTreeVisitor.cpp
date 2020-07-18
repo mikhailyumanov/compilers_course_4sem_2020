@@ -1,5 +1,9 @@
 #include "visitors/SymbolTreeVisitor.hpp"
 
+#define PRINT_DOWN if (verbose_) { print_visitor_->Visit(element); }
+
+// Use PRINT_UP where GO_DOWN/UP is used in PrintVisitor
+#define PRINT_UP if (verbose_) { print_visitor_->GoUp(); }
 
 SymbolTreeVisitor::SymbolTreeVisitor(const std::string& filename) 
   : tree_(std::make_shared<ScopeLayerTree>()), 
@@ -16,9 +20,7 @@ SymbolTreeVisitor::SymbolTreeVisitor()
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<Program> element) {
   // current_scope_ = main() scope
-  if (verbose_) {
-    print_visitor_->Visit(element);
-  }
+  PRINT_DOWN
   ScopeDown();
 
   element->class_decl_list->Accept(shared_from_this());
@@ -26,60 +28,43 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<Program> element) {
   element->main_class->Accept(shared_from_this());
   ScopeUp();
 
-  if (verbose_) {
-    print_visitor_->GoUp();
-  }
+  PRINT_UP
 }
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<MainClass> element) {
   // current_scope_ = main() scope
-  if (verbose_) {
-    print_visitor_->Visit(element);
-  }
+  PRINT_DOWN
 
+  current_scope_->SetMain();
   element->stmt_list->Accept(shared_from_this());
 
-  if (verbose_) {
-    print_visitor_->GoUp();
-  }
+  PRINT_UP
 }
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<AssertStmt> element) {
-  if (verbose_) {
-    print_visitor_->Visit(element);
-  }
+  PRINT_DOWN
 
   element->expr->Accept(shared_from_this());
 
-  if (verbose_) {
-    print_visitor_->GoUp();
-  }
+  PRINT_UP
 }
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<LocalVarDeclStmt> element) {
-  if (verbose_) {
-    print_visitor_->Visit(element);
-  }
+  PRINT_DOWN
 
   element->var_decl->Accept(shared_from_this());
 
-  if (verbose_) {
-    print_visitor_->GoUp();
-  }
+  PRINT_UP
 }
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<StmtListStmt> element) {
   ScopeDown();
-  if (verbose_) {
-    print_visitor_->Visit(element);
-  }
+  PRINT_DOWN
 
   element->stmt_list->Accept(shared_from_this());
   ScopeUp();
 
-  if (verbose_) {
-    print_visitor_->GoUp();
-  }
+  PRINT_UP
 }
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<IfStmt> element) {
@@ -91,23 +76,17 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<IfStmt> element) {
 //  ScopeDown is EXTREMELY NECESSARY! See test7
 
   ScopeDown();
-  if (verbose_) {
-    print_visitor_->Visit(element);
-  }
+  PRINT_DOWN
 
   element->expr->Accept(shared_from_this());
   element->stmt->Accept(shared_from_this());
   ScopeUp();
 
-  if (verbose_) {
-    print_visitor_->GoUp();
-  }
+  PRINT_UP
 }
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<IfElseStmt> element) {
-  if (verbose_) {
-    print_visitor_->Visit(element);
-  }
+  PRINT_DOWN
 
   element->expr->Accept(shared_from_this());
 
@@ -126,9 +105,7 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<IfElseStmt> element) {
   element->stmt_false->Accept(shared_from_this());
   ScopeUp();
 
-  if (verbose_) {
-    print_visitor_->GoUp();
-  }
+  PRINT_UP
 }
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<WhileStmt> element) {
@@ -140,90 +117,71 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<WhileStmt> element) {
 //  Dear future me or anyone using it: please, DO NOT SAVE ON SCOPEDOWNS
 
   ScopeDown();
-  if (verbose_) {
-    print_visitor_->Visit(element);
-  }
+  PRINT_DOWN
 
   element->expr->Accept(shared_from_this());
 
   element->stmt->Accept(shared_from_this());
   ScopeUp();
 
-  if (verbose_) {
-    print_visitor_->GoUp();
-  }
+  PRINT_UP
 }
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<PrintStmt> element) {
-  if (verbose_) {
-    print_visitor_->Visit(element);
-  }
+  PRINT_DOWN
 
   element->expr->Accept(shared_from_this());
 
-  if (verbose_) {
-    print_visitor_->GoUp();
-  }
+  PRINT_UP
 }
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<AssignmentStmt> element) {
-  if (verbose_) {
-    print_visitor_->Visit(element);
-  }
+  PRINT_DOWN
 
   element->lvalue->Accept(shared_from_this());
   element->expr->Accept(shared_from_this());
 
-  auto object = current_scope_->Get(element->lvalue->name);
   Type expr_type = element->expr->GetType();
+  Type object_type = current_scope_->GetType(element->lvalue->name);
 
-  if ((object->IsArray() && !element->lvalue->expr) ^
+  if ((object_type.is_array && !element->lvalue->expr) ^
       expr_type.is_array) {
-    throw std::runtime_error("Exactly one of types is non-array.");
+    throw std::runtime_error("Exactly one of types is non-array: " +
+        object_type.ToString() + " and " + expr_type.ToString());
   }
 
-  if (object->GetType().IsIntegral() ^ expr_type.IsIntegral()) {
-    throw std::runtime_error("Exactly one of types is not integral.");
+  if (object_type.IsIntegral() ^ expr_type.IsIntegral()) {
+    throw std::runtime_error("Exactly one of types is not integral: " +
+        object_type.ToString() + " and " + expr_type.ToString());
   } else {
     if (!expr_type.IsIntegral() && 
-        object->GetType().type != expr_type.type) {
-      throw std::runtime_error("Cannot cast.");
+        object_type.type != expr_type.type) {
+      throw std::runtime_error("Cannot cast: " +
+        object_type.ToString() + " and " + expr_type.ToString());
     }
   }
 
-  if (verbose_) {
-    print_visitor_->GoUp();
-  }
+  PRINT_UP
 }
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<ReturnStmt> element) {
-  if (verbose_) {
-    print_visitor_->Visit(element);
-  }
+  PRINT_DOWN
 
   // TODO
 
-  if (verbose_) {
-    print_visitor_->GoUp();
-  }
+  PRINT_UP
 }
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<MethodStmt> element) {
-  if (verbose_) {
-    print_visitor_->Visit(element);
-  }
+  PRINT_DOWN
 
-  // TODO
+  element->invocation->Accept(shared_from_this());
 
-  if (verbose_) {
-    print_visitor_->GoUp();
-  }
+  PRINT_UP
 }
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<BinOpExpr> element) {
-  if (verbose_) {
-    print_visitor_->Visit(element);
-  }
+  PRINT_DOWN
 
   element->lhs->Accept(shared_from_this());
   if (verbose_) 
@@ -234,7 +192,8 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<BinOpExpr> element) {
   Type rt = element->rhs->GetType();
 
   if (lt.is_array || rt.is_array) {
-    throw std::runtime_error("Cannot perform bin operation over array.");
+    throw std::runtime_error("Cannot perform bin operation over array: " +
+        lt.ToString() + " and " + rt.ToString());
   }
 
   if (element->op <= BinOpExpr::Operation::OP_EQUAL) {
@@ -243,191 +202,191 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<BinOpExpr> element) {
     element->SetType({"int", false});
   }
 
-  if (verbose_) {
-    print_visitor_->GoUp();
-  }
+  PRINT_UP
 }
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<SubscriptExpr> element) {
-  if (verbose_) {
-    print_visitor_->Visit(element);
-  }
+  PRINT_DOWN
 
   element->expr->Accept(shared_from_this());
   element->idx->Accept(shared_from_this());
 
   Type expr_type = element->expr->GetType();
   if (!expr_type.is_array) {
-    throw std::runtime_error("Cannot subscript non-array.");
+    throw std::runtime_error(
+        "Cannot subscript non-array: " + expr_type.ToString());
   }
 
   Type idx_type = element->idx->GetType();
   if (idx_type.is_array) {
-    throw std::runtime_error("Index should be of non-array type.");
+    throw std::runtime_error(
+        "Index should be of non-array type: " + idx_type.ToString());
   }
 
   if (!idx_type.IsIntegral()) {
-    throw std::runtime_error("Index must be integral.");
+    throw std::runtime_error("Index must be integral: " + idx_type.ToString());
   }
 
   // there are no n-dim arrays with n > 1
   element->SetType({expr_type.type, false}); 
 
-  if (verbose_) {
-    print_visitor_->GoUp();
-  }
+  PRINT_UP
 }
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<LengthExpr> element) {
-  if (verbose_) {
-    print_visitor_->Visit(element);
-  }
+  PRINT_DOWN
 
   element->expr->Accept(shared_from_this());
 
   Type expr_type = element->expr->GetType();
   if (!expr_type.is_array) {
-    throw std::runtime_error("Non-array type has not length.");
+    throw std::runtime_error(
+        "Non-array type has not length: " + expr_type.ToString());
   }
 
   element->SetType({"int", false});
 
-  if (verbose_) {
-    print_visitor_->GoUp();
-  }
+  PRINT_UP
 }
 
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<TrueExpr> element) {
-  if (verbose_) {
-    print_visitor_->Visit(element);
-  }
+  PRINT_DOWN
 
   element->SetType({"boolean", false});
 }
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<FalseExpr> element) {
-  if (verbose_) {
-    print_visitor_->Visit(element);
-  }
+  PRINT_DOWN
 
   element->SetType({"boolean", false});
 }
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<IntExpr> element) {
-  if (verbose_) {
-    print_visitor_->Visit(element);
-  }
+  PRINT_DOWN
 
   element->SetType({"int", false});
 }
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<NewExpr> element) {
-  if (verbose_) {
-    print_visitor_->Visit(element);
-  }
+  PRINT_DOWN
 
   element->SetType({element->type, false});
 }
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<NewArrayExpr> element) {
-  if (verbose_) {
-    print_visitor_->Visit(element);
-  }
+  PRINT_DOWN
 
   element->expr->Accept(shared_from_this());
 
   Type expr_type = element->expr->GetType();
   if (expr_type.is_array) {
-    throw std::runtime_error("Array size must be of non-array type.");
+    throw std::runtime_error(
+        "Array size must be of non-array type: " + expr_type.ToString());
   }
 
   if (!expr_type.IsIntegral()) {
-    throw std::runtime_error("Array size must be integral.");
+    throw std::runtime_error(
+        "Array size must be integral: " + expr_type.ToString());
   }
 
   element->SetType({element->type, true});
 
-  if (verbose_) {
-    print_visitor_->GoUp();
-  }
+  PRINT_UP
 }
 
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<NotExpr> element) {
-  if (verbose_) {
-    print_visitor_->Visit(element);
-  }
+  PRINT_DOWN
 
   element->expr->Accept(shared_from_this());
 
   Type expr_type = element->expr->GetType();
   if (expr_type.is_array) {
-    throw std::runtime_error("'Not'-expression must be of non-array type.");
+    throw std::runtime_error(
+        "'Not'-expression must be of non-array type: " + expr_type.ToString());
   }
 
   element->SetType({"boolean", false});
 
-  if (verbose_) {
-    print_visitor_->GoUp();
-  }
+  PRINT_UP
 }
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<IdentExpr> element) {
-  if (verbose_) {
-    print_visitor_->Visit(element);
-  }
+  PRINT_DOWN
 
   // check if declared
   if (!current_scope_->IsDeclaredAnywhere(element->name)) {
-    throw std::runtime_error("Variable is not declared.");
+    throw std::runtime_error("Variable is not declared: " + element->name);
   }
 
-  element->SetType(current_scope_->Get(element->name)->GetType());
+  element->SetType(current_scope_->GetType(element->name));
+}
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<MethodExpr> element) {
+  PRINT_DOWN
+
+  element->invocation->Accept(shared_from_this());
+
+  Type method_type = FunctionStorage::GetInstance().GetFunction(
+        element->invocation->expr->GetType().type, 
+        element->invocation->name.GetName())->function_type;
+  element->SetType(method_type);
+
+  PRINT_UP
 }
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<ClassDecl> element) {
   ScopeDown();
-  if (verbose_) {
-    print_visitor_->Visit(element);
-  }
+  PRINT_DOWN
+
+  current_class_ = element->class_name;
 
   element->decl_list->Accept(shared_from_this());
   ScopeUp();
 
-  // TODO
-
-  if (verbose_) {
-    print_visitor_->GoUp();
-  }
+  PRINT_UP
 }
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<VarDecl> element) {
-  if (verbose_) {
-    print_visitor_->Visit(element);
-  }
+  PRINT_DOWN
 
   DEBUG_START DEBUG(element->name) DEBUG(element->type) DEBUG_FINISH
   current_scope_->DeclareVariable(element->name, element->type);
 }
 
-void SymbolTreeVisitor::Visit(std::shared_ptr<Lvalue> element) {
-  if (verbose_) {
-    print_visitor_->Visit(element);
+void SymbolTreeVisitor::Visit(std::shared_ptr<MethodDecl> element) {
+  FunctionScopeDown(element->function_type);
+  PRINT_DOWN
 
-  }
+  DEBUG_START DEBUG(element->name) DEBUG(element->type) DEBUG_FINISH
+
+  element->stmt_list->Accept(shared_from_this());
+  ScopeUp();
+
+  FunctionStorage::GetInstance().SetFunction(current_class_, element->name,
+      std::make_shared<Function>(element->function_type, element->stmt_list));
+
+  tree_->SetFunctionScope(current_class_, element->name, *current_scope_);
+
+  PRINT_UP
+}
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<Lvalue> element) {
+  PRINT_DOWN
 
   // check if declared
   if (!current_scope_->IsDeclaredAnywhere(element->name)) {
-    throw std::runtime_error("Variable is not declared.");
+    throw std::runtime_error("Variable is not declared: " + element->name);
   }
 
   if (element->expr) {
-    auto object = current_scope_->Get(element->name);
+    Type object_type = current_scope_->GetType(element->name);
 
     // check if object is array
-    if (!object->IsArray()) {
-      throw std::runtime_error("Subscription of non-array is restricted.");
+    if (!object_type.is_array) {
+      throw std::runtime_error("Subscription of non-array is restricted: " +
+          object_type.ToString());
     }
 
     element->expr->Accept(shared_from_this());
@@ -435,18 +394,78 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<Lvalue> element) {
     Type expr_type = element->expr->GetType();
 
     if (expr_type.is_array) {
-      throw std::runtime_error("Index should be of non-array type.");
+      throw std::runtime_error(
+          "Index should be of non-array type: " + expr_type.ToString());
     }
    
     if (!expr_type.IsIntegral()) {
-      throw std::runtime_error("Index must be integral.");
+      throw std::runtime_error(
+          "Index must be integral: " + expr_type.ToString());
     }
 
 
-    if (verbose_) {
-      print_visitor_->GoUp();
+    PRINT_UP
+  }
+}
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<MethodInvocation> element) {
+  PRINT_DOWN
+
+  auto comma_expr_list = element->comma_expr_list;
+  auto expr = element->expr;
+
+  expr->Accept(shared_from_this());
+  DEBUG_SINGLE(element->name.GetName())
+  comma_expr_list->Accept(shared_from_this());
+  std::string class_name = expr->GetType().type;
+  std::string func_name = element->name.GetName();
+
+  // check expr type
+  if (!expr->GetType().IsClass()) {
+    throw std::runtime_error("Cannot call method of non-class: " +
+        expr->GetType().ToString());
+  }
+
+  // check if class exists
+  if (!FunctionStorage::GetInstance().HasClass(class_name)) {
+    throw std::runtime_error(
+        "Class " + class_name + " is not already declared.");
+  }
+
+  // check if method exists
+  if (!FunctionStorage::GetInstance().HasFunction(class_name, func_name)) {
+    throw std::runtime_error(
+        "Function " + class_name + "::" + func_name +
+        " is not already declared.");
+  }
+
+  auto function = FunctionStorage::GetInstance().GetFunction(
+      class_name, func_name);
+  auto& func_type = function->function_type;
+  size_t num_args = func_type.GetNumArgs();
+
+  // check num args
+  if (comma_expr_list->GetLength() != num_args) {
+    throw std::runtime_error("Wrong number of arguments passed to function " +
+        class_name + "::" + func_name);
+  }
+
+  // check args types
+  for (size_t i = 0; i < num_args; ++i) {
+    auto arg_type =
+      std::dynamic_pointer_cast<Expression>((*comma_expr_list)[i])->GetType();
+    if (arg_type != func_type.arg_types[i]) {
+      throw std::runtime_error("Wrong type of expr in function call: got " +
+          arg_type.ToString() + ", expected " +
+          func_type.arg_types[i].ToString() + ".");
     }
   }
+
+  // dummy scope for attaching function scope in Interpreter
+  ScopeDown();
+  ScopeUp();
+
+  PRINT_UP
 }
 
 
@@ -461,13 +480,20 @@ void SymbolTreeVisitor::ScopeDown() {
     print_visitor_->GetStream() << "NEW SCOPE" << std::endl;
   }
 
-//  current_scope_ = tree_->AddLayer(current_scope_);
   tree_->AddLayer(*current_scope_);
   current_scope_.GoDown();
 }
 
 void SymbolTreeVisitor::ScopeUp() {
-//  current_scope_ = current_scope_->GetParent();
   current_scope_.GoUp();
 }
 
+void SymbolTreeVisitor::FunctionScopeDown(FunctionType function_type) {
+  if (verbose_) {
+    print_visitor_->PrintTabs();
+    print_visitor_->GetStream() << "NEW FUNCTION SCOPE" << std::endl;
+  }
+
+  tree_->AddLayer(*current_scope_, function_type);
+  current_scope_.GoDown();
+}
