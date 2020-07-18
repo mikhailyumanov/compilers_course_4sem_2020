@@ -128,6 +128,10 @@
 %nterm <std::shared_ptr<Expression>> expr
 %nterm <std::shared_ptr<MethodInvocation>> method_invocation
 %nterm <std::shared_ptr<CommaExprList>> comma_expr_list
+%nterm <std::pair<Type, std::string>> formals
+%nterm <std::pair<std::vector<Type>, std::vector<std::string>>> comma_formals_list
+%nterm <std::pair<std::vector<Type>, std::vector<std::string>>> args_list
+%nterm <std::shared_ptr<MethodDecl>> method_declaration
 
 //%printer { yyo << $$; } <*>;
 
@@ -174,39 +178,47 @@ declaration_list : declaration
 declaration: variable_declaration
              { $$ = $1; }
            | method_declaration
-//             { $$ = $1; }
+             { $$ = $1; }
 ;
 
-method_declaration: "public" type "identifier" args_list "{"
-                  statement_list "}"
+method_declaration: "public" type "identifier" args_list "{" statement_list "}"
+                    { $$ = std::make_shared<MethodDecl>(
+                          FunctionType($2, $4.first,$4.second), $3, $6); }
 ;
 
-args_list: "(" ")"
-         | "(" comma_formals_list ")"
+args_list: "(" ")" { $$ = std::pair<std::vector<Type>,
+                                    std::vector<std::string>>(); }
+         | "(" comma_formals_list ")" { $$ = $2; }
 ;
 
 comma_formals_list: formals
+                    { $$ = std::pair<std::vector<Type>,
+                                     std::vector<std::string>>();
+                      $$.first.push_back($1.first);
+                      $$.second.push_back($1.second); }
                   | comma_formals_list "," formals
+                    { $$ = $1; $$.first.push_back($3.first);
+                      $$.second.push_back($3.second); }
 ;
 
-formals: type "identifier"       
+formals: type "identifier" { $$ = std::make_pair($1, $2); }
 ;
 
 variable_declaration: type "identifier" ";"
                       { $$ = std::make_shared<VarDecl>($1, $2); }
 ;
 
-type: simple_type { $$ = Type{$1, false}; } //{ $$ = std::make_pair($1, 0); } 
-    | array_type  { $$ = Type{$1, true};  } //{ $$ = std::make_pair($1, 1); }
+type: simple_type { $$ = Type{$1, false}; }
+    | array_type  { $$ = Type{$1, true};  }
+;
+
+array_type: simple_type "[" "]" { $$ = $1; }
 ;
 
 simple_type: "int" { $$ = "int"; }
            | "boolean" {$$ = "boolean"; }
            | "void" { $$ = "void"; }
-           | type_identifier{ $$ = $1; }
-;
-
-array_type: simple_type "[" "]" { $$ = $1; }
+           | type_identifier { $$ = $1; }
 ;
 
 type_identifier: "identifier" { $$ = $1; }
@@ -215,8 +227,6 @@ type_identifier: "identifier" { $$ = $1; }
 statement: "assert" "(" expr ")" ";"
            { $$ = std::static_pointer_cast<Statement>(
               std::make_shared<AssertStmt>($3)); }
-         | local_variable_declaration
-           { $$ = std::make_shared<LocalVarDeclStmt>($1); }
          | "{" statement_list "}"
            { $$ = std::make_shared<StmtListStmt>($2); }
          | "if"  "(" expr ")" statement
@@ -229,6 +239,15 @@ statement: "assert" "(" expr ")" ";"
            { $$ = std::make_shared<PrintStmt>($7); }
          | lvalue "=" expr ";"
            { $$ = std::make_shared<AssignmentStmt>($1, $3); }
+         | local_variable_declaration
+           { $$ = std::make_shared<LocalVarDeclStmt>($1); }
+
+         // FIXME: such a terrible workaround, but stmt like
+         // `Class[] class_array;` can't exist without it.
+         | "identifier" "[" "]" "identifier" ";"
+           { $$ = std::make_shared<LocalVarDeclStmt>(
+                 std::make_shared<VarDecl>(Type{$1, true}, $4)); }
+        
          | "return" expr ";" 
            { $$ = std::make_shared<ReturnStmt>($2); }
          | method_invocation ";"
@@ -241,6 +260,9 @@ local_variable_declaration: variable_declaration
 
 method_invocation: expr "." "identifier" "(" comma_expr_list ")"
         { $$ = std::make_shared<MethodInvocation>($1, Symbol($3), $5); }
+                 | expr "." "identifier" "(" ")"
+        { $$ = std::make_shared<MethodInvocation>($1, Symbol($3), 
+              std::make_shared<CommaExprList>()); }
 ;
 
 lvalue: "identifier" 
@@ -310,7 +332,8 @@ expr: expr AND    expr
     | "false"
       { $$ = std::make_shared<FalseExpr>(); }
 
-    | method_invocation              { };
+    | method_invocation
+      { $$ = std::make_shared<MethodExpr>($1); }
 
     | "!" expr
       { $$ = std::make_shared<NotExpr>($2); }

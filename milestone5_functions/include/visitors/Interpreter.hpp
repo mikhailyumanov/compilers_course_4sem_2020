@@ -41,10 +41,13 @@ class Interpreter: public TemplateVisitor<std::shared_ptr<Object>>,
   void Visit(std::shared_ptr<NewArrayExpr> element) override;
   void Visit(std::shared_ptr<NotExpr> element) override;
   void Visit(std::shared_ptr<IdentExpr> element) override;
+  void Visit(std::shared_ptr<MethodExpr> element) override;
 
-  void Visit(std::shared_ptr<ClassDecl> element) override;
   void Visit(std::shared_ptr<VarDecl> element) override;
+  void Visit(std::shared_ptr<MethodDecl> element) override;
+  void Visit(std::shared_ptr<ClassDecl> element) override;
   void Visit(std::shared_ptr<Lvalue> element) override;
+  void Visit(std::shared_ptr<MethodInvocation> element) override;
 
   int GetResult(std::shared_ptr<Program> program);
   std::shared_ptr<Object> Accept(std::shared_ptr<BasicElement> element) override;

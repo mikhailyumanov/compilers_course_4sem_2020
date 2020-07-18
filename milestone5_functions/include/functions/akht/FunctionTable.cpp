@@ -17,13 +17,9 @@ void FunctionTable::Put(Symbol symbol, int value) {
 }
 
 int FunctionTable::Get(Symbol symbol) {
-                DEBUG_SINGLE("search for bug: 1")
   if (values_.find(symbol) == values_.end()) {
-                DEBUG_SINGLE("search for bug: 2")
     throw std::runtime_error(symbol.GetName() + ": variable not declared");
-                DEBUG_SINGLE("search for bug: 3")
   }
-                DEBUG_SINGLE("search for bug: 4")
   return values_[symbol].top();
 }
 

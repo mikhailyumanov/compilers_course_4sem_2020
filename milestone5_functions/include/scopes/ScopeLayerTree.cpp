@@ -1,15 +1,43 @@
 #include "scopes/ScopeLayerTree.hpp"
 
+#include <cassert>
+
 
 ScopeLayerTree::ScopeLayerTree() {
   root_ = std::make_shared<ScopeLayer>();
   root_->AttachParent(root_);
+  root_->AttachClass(root_);
 }
 
 void ScopeLayerTree::AddLayer(
     std::shared_ptr<ScopeLayer> parent) const {
   parent->AddChild(std::make_shared<ScopeLayer>(parent));
 }
+
+void ScopeLayerTree::AddLayer(
+    std::shared_ptr<ScopeLayer> class_scope,
+    FunctionType function_type) const {
+  class_scope->AddChild(
+      std::make_shared<ScopeLayer>(class_scope, function_type));
+}
+
+void ScopeLayerTree::SetFunctionScope(
+    std::string class_name,
+    std::string func_name,
+    std::shared_ptr<ScopeLayer> func_scope) {
+  function_scopes_[class_name][func_name] = func_scope;
+}
+
+std::shared_ptr<ScopeLayer> ScopeLayerTree::GetFunctionScope(
+    std::string class_name, std::string func_name) const {
+  assert(function_scopes_.find(class_name) != function_scopes_.end());
+  assert(function_scopes_.at(class_name).find(func_name) !=
+         function_scopes_.at(class_name).end());
+
+  return function_scopes_.at(class_name).at(func_name);
+}
+
+
 
 std::shared_ptr<ScopeLayer> ScopeLayerTree::GetRoot() const {
   return root_;

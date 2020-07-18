@@ -1,6 +1,9 @@
 #include "driver.hh"
 #include "parser.hh"
 
+#if DEBUG_ON
+std::ofstream debug_output_stream;
+#endif
 
 Driver::Driver() :
     trace_parsing(false),
@@ -17,12 +20,16 @@ int Driver::parse(const std::string& f) {
     parser.set_debug_level(trace_parsing);
     int res = parser();
     scan_end();
+
+#if DEBUG_ON
+debug_output_stream = std::ofstream(tree_output + "_debug.txt");
+#endif
   
-//    PrintTree("./printed_tree");
+//    PrintTree(tree_output);
     Eval();
 /*
     try {
-      BuildSymbolTree("./symbol_tree");
+      BuildSymbolTree(tree_output);
     } catch (std::runtime_error err) {
       std::cout << err.what() << std::endl;
     }
@@ -87,7 +94,6 @@ int Driver::Eval() const {
   if (!trace_tree_building) {
     visitor = std::make_shared<Interpreter>();
   } else {
-    std::cout << tree_output << std::endl;
     visitor = std::make_shared<Interpreter>(tree_output);
   }
 

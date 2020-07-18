@@ -13,3 +13,16 @@ void BasicList::Accept(std::shared_ptr<Visitor> visitor) {
     item->Accept(visitor);
   }
 }
+
+std::shared_ptr<BasicElement>& BasicList::operator[](size_t idx) {
+  return items[idx];
+}
+
+
+const std::shared_ptr<BasicElement>& BasicList::operator[](size_t idx) const {
+  return items[idx];
+}
+
+size_t BasicList::GetLength() const {
+  return items.size();
+}

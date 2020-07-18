@@ -1,0 +1,78 @@
+class Main {
+  public static void main() {
+    House house;
+    house = new House();
+    house.SetNumDogs(0);
+    house.SetDogs(new Dog[1]);
+
+    if (3 > 2) {
+      int i;
+      int[] j;
+      House h;
+      House[] g;
+    }
+
+    Dog dog;
+    dog = new Dog();
+    dog.SetIndex(42);
+    dog.Bark();
+    house.AddDog(dog);
+
+    dog = new Dog();
+    dog.SetIndex(79);
+    dog.Bark();
+    house.AddDog(dog);
+
+    (house.GetDog(1)).Bark();
+  }
+}
+
+class Dog {
+  int dog_index;
+
+  public void SetIndex(int idx) {
+    dog_index = idx;
+  }
+
+  public void Bark() {
+    System.out.println(dog_index);
+  }
+}
+
+class House {
+  Dog[] dogs;
+  int num_dogs;
+
+  public void SetNumDogs(int new_num) {
+    num_dogs = new_num;
+  }
+
+  public void SetDogs(Dog[] new_dogs) {
+    dogs = new_dogs;
+  }
+
+  public void AddDog(Dog new_dog) {
+    if (num_dogs == dogs.length) {
+      Dog[] new_dogs;
+      new_dogs = new Dog[num_dogs * 2];
+  
+      int i;
+      i = 0;
+      while (i < num_dogs) {
+        new_dogs[i] = dogs[i];
+        i = i + 1;
+      }
+      dogs = new_dogs;
+    }
+
+    dogs[num_dogs] = new_dog;
+    num_dogs = num_dogs + 1;
+  }
+
+  public Dog GetDog(int i) {
+    assert(i > -1);
+    assert(i < num_dogs);
+
+    return dogs[i];
+  }
+}

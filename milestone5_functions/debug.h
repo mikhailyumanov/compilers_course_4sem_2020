@@ -4,12 +4,14 @@
 
 #if DEBUG_ON
 
-#include <fstream>
-extern std::ofstream debug_output;
-#define DEBUG_START debug_output
+#include <iostream>
+
+extern std::ostream& debug_output();
+
+#define DEBUG_START debug_output()
 #define DEBUG(expr) << expr << ' '
 #define DEBUG_FINISH << std::endl;
-#define DEBUG_SINGLE(expr) debug_output << expr << std::endl;
+#define DEBUG_SINGLE(expr) debug_output() << expr << std::endl;
 
 #else
 

@@ -3,7 +3,7 @@ Program
 	NEW SCOPE
 	MainClass
 		LocalVarDeclStmt
-			VarDecl int is array: 0 i
+			VarDecl type: int, is_array: false i
 		AssignmentStmt
 			Lvalue i
 			IntExpr 5
@@ -42,15 +42,15 @@ Program
 		PrintStmt
 			IdentExpr i
 		LocalVarDeclStmt
-			VarDecl int is array: 0 x
+			VarDecl type: int, is_array: false x
 		AssignmentStmt
 			Lvalue x
 			IntExpr 0
 		LocalVarDeclStmt
-			VarDecl int is array: 0 n
+			VarDecl type: int, is_array: false n
 		AssignmentStmt
 			Lvalue n
-			IntExpr 15
+			IntExpr 6
 		NEW SCOPE
 		WhileStmt
 			BinOpExpr
@@ -66,10 +66,10 @@ Program
 				PrintStmt
 					IdentExpr n
 				LocalVarDeclStmt
-					VarDecl int is array: 0 y
+					VarDecl type: int, is_array: false y
 				AssignmentStmt
 					Lvalue y
-					IntExpr 0
+					IntExpr 11
 				NEW SCOPE
 				WhileStmt
 					BinOpExpr
@@ -90,7 +90,7 @@ Program
 						PrintStmt
 							IdentExpr y
 						LocalVarDeclStmt
-							VarDecl int is array: 0 d
+							VarDecl type: int, is_array: false d
 						AssignmentStmt
 							Lvalue d
 							IntExpr 0

@@ -55,10 +55,12 @@ set(
     include/expressions/NewArrayExpr.cpp
     include/expressions/NotExpr.cpp
     include/expressions/IdentExpr.cpp
+    include/expressions/MethodExpr.cpp
 
     include/utils/BasicList.cpp
 
     include/declarations/VarDecl.cpp
+    include/declarations/MethodDecl.cpp
     include/declarations/ClassDecl.cpp
 
     include/scopes/Symbol.cpp
@@ -66,16 +68,22 @@ set(
     include/scopes/ScopeLayerTree.cpp
 
     include/types/Type.cpp
+    include/types/FunctionType.cpp
     include/types/Object.cpp
     include/types/Integer.cpp
     include/types/Bool.cpp
     include/types/Class.cpp
     include/types/Array.cpp
     include/types/UninitObject.cpp
+    include/types/Function.cpp
 
     include/value_categories/Lvalue.cpp
 
     include/functions/MethodInvocation.cpp
+    #    include/functions/Frame.cpp
+    #include/functions/FunctionTable.cpp
+    include/functions/FunctionStorage.cpp
+
 
     include/visitors/PrintVisitor.cpp
     include/visitors/Interpreter.cpp

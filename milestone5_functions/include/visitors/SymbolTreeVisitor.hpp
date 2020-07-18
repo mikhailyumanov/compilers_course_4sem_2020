@@ -34,22 +34,30 @@ class SymbolTreeVisitor: public Visitor,
   void Visit(std::shared_ptr<NewArrayExpr> element) override;
   void Visit(std::shared_ptr<NotExpr> element) override;
   void Visit(std::shared_ptr<IdentExpr> element) override;
+  void Visit(std::shared_ptr<MethodExpr> element) override;
 
-  void Visit(std::shared_ptr<ClassDecl> element) override;
   void Visit(std::shared_ptr<VarDecl> element) override;
+  void Visit(std::shared_ptr<MethodDecl> element) override;
+  void Visit(std::shared_ptr<ClassDecl> element) override;
   void Visit(std::shared_ptr<Lvalue> element) override;
+  void Visit(std::shared_ptr<MethodInvocation> element) override;
 
   std::shared_ptr<ScopeLayerTree> GetTree() const;
 
  private:
   void ScopeDown();
   void ScopeUp();
+  void FunctionScopeDown(FunctionType);
 
   friend class Interpreter;
 
  private:
   std::shared_ptr<ScopeLayerTree> tree_;
   ScopeLayerTree::Iterator current_scope_;
+
+  std::unordered_map<std::string, std::vector<std::shared_ptr<Function>>>
+    methods_;
+  std::string current_class_;
 
   // verbose
   std::shared_ptr<PrintVisitor> print_visitor_;

@@ -6,3 +6,7 @@ MethodInvocation::MethodInvocation(
     std::shared_ptr<CommaExprList> comma_expr_list)
   : expr{expr}, name{name}, comma_expr_list{comma_expr_list} {
 }
+
+void MethodInvocation::Accept(std::shared_ptr<Visitor> visitor) {
+  visitor->Visit(shared_from_this());
+}

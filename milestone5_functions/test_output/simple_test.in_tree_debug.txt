@@ -1,0 +1,59 @@
+>>> Interpreter: Program
+>>> PrintVisitor: Program
+GoDown
+Current state: parent: 0x56370da038d0 ; child index: 1 
+GoDown
+Current state: parent: 0x56370da03ec0 ; child index: 0 
+>>> PrintVisitor: MainClass
+ScopeLayer::SetMain
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: IntExpr 6 
+>>> PrintVisitor: LocalVarDeclStmt
+>>> PrintVisitor: VarDecl type: int, is_array: false x 
+x type: int, is_array: false 
+ScopeLayer::DeclareVariable x type: int, is_array: false 
+ScopeLayer::IsDeclared
+ScopeLayer::IsArgument
+ScopeLayer::IsClassData
+ScopeLayer::DeclareVariable init
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: IntExpr 7 
+>>> PrintVisitor: AssignmentStmt
+ScopeLayer::IsDeclaredAnywhere
+ScopeLayer::IsDeclared
+>>> PrintVisitor: IntExpr 5 
+ScopeLayer::GetType
+ScopeLayer::IsDeclared
+ScopeLayer::IsDeclared
+GoUp
+Current state: parent: 0x56370da038d0 ; child index: 1 
+
+
+GoDown
+Current state: parent: 0x56370da038d0 ; child index: 1 
+GoDown
+Current state: parent: 0x56370da03ec0 ; child index: 0 
+>>> Interpreter: MainClass
+>>> Interpreter: PrintStmt
+>>> Interpreter: IntExpr
+>>> Interpreter: IntExpr
+6
+>>> Interpreter: LocalVarDeclStmt
+>>> Interpreter: VarDecl
+>>> Interpreter: PrintStmt
+>>> Interpreter: IntExpr
+>>> Interpreter: IntExpr
+7
+>>> Interpreter: AssignmentStmt
+Is var x declared: ScopeLayer::IsDeclaredAnywhere
+ScopeLayer::IsDeclared
+1 
+x 0x56370da036f0 
+>>> Interpreter: IntExpr
+ScopeLayer::IsDeclared
+ScopeLayer::IsDeclared
+>>> Interpreter: Assignment no subscript
+ScopeLayer::IsDeclared
+ScopeLayer::IsDeclared
+GoUp
+Current state: parent: 0x56370da038d0 ; child index: 1 

@@ -31,9 +31,11 @@
 #include "expressions/NewArrayExpr.hpp"
 #include "expressions/NotExpr.hpp"
 #include "expressions/IdentExpr.hpp"
+#include "expressions/MethodExpr.hpp"
 // declarations
 #include "declarations/Decl.hpp"
 #include "declarations/VarDecl.hpp"
+#include "declarations/MethodDecl.hpp"
 #include "declarations/ClassDecl.hpp"
 #include "declarations/DeclList.hpp"
 // scopes
@@ -42,15 +44,20 @@
 #include "scopes/ScopeLayerTree.hpp"
 // types
 #include "types/Type.hpp"
+#include "types/FunctionType.hpp"
 #include "types/Object.hpp"
 #include "types/Integer.hpp"
 #include "types/Bool.hpp"
 #include "types/Class.hpp"
 #include "types/Array.hpp"
 #include "types/UninitObject.hpp"
+#include "types/Function.hpp"
 // value categories
 #include "value_categories/Lvalue.hpp"
 // functions
 #include "functions/MethodInvocation.hpp"
 #include "functions/CommaExprList.hpp"
+//#include "functions/Frame.hpp"
+//#include "functions/FunctionTable.hpp"
+#include "functions/FunctionStorage.hpp"
 

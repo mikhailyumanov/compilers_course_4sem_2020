@@ -8,6 +8,7 @@ CMakeFiles/Project.dir/driver.cpp.o: ../debug.h
 CMakeFiles/Project.dir/driver.cpp.o: ../include/declarations/ClassDecl.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/declarations/Decl.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/declarations/DeclList.hpp
+CMakeFiles/Project.dir/driver.cpp.o: ../include/declarations/MethodDecl.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/declarations/VarDecl.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/expressions/BinOpExpr.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/expressions/BoolConstExpr.hpp
@@ -15,11 +16,13 @@ CMakeFiles/Project.dir/driver.cpp.o: ../include/expressions/Expression.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/expressions/IdentExpr.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/expressions/IntExpr.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/expressions/LengthExpr.hpp
+CMakeFiles/Project.dir/driver.cpp.o: ../include/expressions/MethodExpr.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/expressions/NewArrayExpr.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/expressions/NewExpr.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/expressions/NotExpr.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/expressions/SubscriptExpr.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/functions/CommaExprList.hpp
+CMakeFiles/Project.dir/driver.cpp.o: ../include/functions/FunctionStorage.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/functions/MethodInvocation.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/program/ClassDeclList.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/program/MainClass.hpp
@@ -40,6 +43,8 @@ CMakeFiles/Project.dir/driver.cpp.o: ../include/statements/StmtListStmt.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/types/Array.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/types/Bool.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/types/Class.hpp
+CMakeFiles/Project.dir/driver.cpp.o: ../include/types/Function.hpp
+CMakeFiles/Project.dir/driver.cpp.o: ../include/types/FunctionType.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/types/Integer.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/types/Object.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/types/Type.hpp
@@ -60,6 +65,7 @@ CMakeFiles/Project.dir/driver.cpp.o: ../location.hh
 CMakeFiles/Project.dir/driver.cpp.o: ../parser.hh
 CMakeFiles/Project.dir/driver.cpp.o: ../scanner.h
 
+CMakeFiles/Project.dir/include/declarations/ClassDecl.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/declarations/ClassDecl.cpp.o: ../include/declarations/ClassDecl.hpp
 CMakeFiles/Project.dir/include/declarations/ClassDecl.cpp.o: ../include/declarations/Decl.hpp
 CMakeFiles/Project.dir/include/declarations/ClassDecl.cpp.o: ../include/declarations/DeclList.hpp
@@ -70,6 +76,19 @@ CMakeFiles/Project.dir/include/declarations/ClassDecl.cpp.o: ../include/utils/fo
 CMakeFiles/Project.dir/include/declarations/ClassDecl.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/declarations/ClassDecl.cpp.o: ../include/declarations/ClassDecl.cpp
 
+CMakeFiles/Project.dir/include/declarations/MethodDecl.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/declarations/MethodDecl.cpp.o: ../include/declarations/Decl.hpp
+CMakeFiles/Project.dir/include/declarations/MethodDecl.cpp.o: ../include/declarations/MethodDecl.hpp
+CMakeFiles/Project.dir/include/declarations/MethodDecl.cpp.o: ../include/statements/StmtList.hpp
+CMakeFiles/Project.dir/include/declarations/MethodDecl.cpp.o: ../include/types/FunctionType.hpp
+CMakeFiles/Project.dir/include/declarations/MethodDecl.cpp.o: ../include/types/Type.hpp
+CMakeFiles/Project.dir/include/declarations/MethodDecl.cpp.o: ../include/utils/BasicElement.hpp
+CMakeFiles/Project.dir/include/declarations/MethodDecl.cpp.o: ../include/utils/BasicList.hpp
+CMakeFiles/Project.dir/include/declarations/MethodDecl.cpp.o: ../include/utils/forward_decl.hpp
+CMakeFiles/Project.dir/include/declarations/MethodDecl.cpp.o: ../include/visitors/Visitor.hpp
+CMakeFiles/Project.dir/include/declarations/MethodDecl.cpp.o: ../include/declarations/MethodDecl.cpp
+
+CMakeFiles/Project.dir/include/declarations/VarDecl.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/declarations/VarDecl.cpp.o: ../include/declarations/Decl.hpp
 CMakeFiles/Project.dir/include/declarations/VarDecl.cpp.o: ../include/declarations/VarDecl.hpp
 CMakeFiles/Project.dir/include/declarations/VarDecl.cpp.o: ../include/types/Type.hpp
@@ -78,6 +97,7 @@ CMakeFiles/Project.dir/include/declarations/VarDecl.cpp.o: ../include/utils/forw
 CMakeFiles/Project.dir/include/declarations/VarDecl.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/declarations/VarDecl.cpp.o: ../include/declarations/VarDecl.cpp
 
+CMakeFiles/Project.dir/include/expressions/BinOpExpr.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/expressions/BinOpExpr.cpp.o: ../include/expressions/BinOpExpr.hpp
 CMakeFiles/Project.dir/include/expressions/BinOpExpr.cpp.o: ../include/expressions/Expression.hpp
 CMakeFiles/Project.dir/include/expressions/BinOpExpr.cpp.o: ../include/types/Type.hpp
@@ -86,6 +106,7 @@ CMakeFiles/Project.dir/include/expressions/BinOpExpr.cpp.o: ../include/utils/for
 CMakeFiles/Project.dir/include/expressions/BinOpExpr.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/expressions/BinOpExpr.cpp.o: ../include/expressions/BinOpExpr.cpp
 
+CMakeFiles/Project.dir/include/expressions/BoolConstExpr.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/expressions/BoolConstExpr.cpp.o: ../include/expressions/BoolConstExpr.hpp
 CMakeFiles/Project.dir/include/expressions/BoolConstExpr.cpp.o: ../include/expressions/Expression.hpp
 CMakeFiles/Project.dir/include/expressions/BoolConstExpr.cpp.o: ../include/types/Type.hpp
@@ -94,6 +115,7 @@ CMakeFiles/Project.dir/include/expressions/BoolConstExpr.cpp.o: ../include/utils
 CMakeFiles/Project.dir/include/expressions/BoolConstExpr.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/expressions/BoolConstExpr.cpp.o: ../include/expressions/BoolConstExpr.cpp
 
+CMakeFiles/Project.dir/include/expressions/IdentExpr.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/expressions/IdentExpr.cpp.o: ../include/expressions/Expression.hpp
 CMakeFiles/Project.dir/include/expressions/IdentExpr.cpp.o: ../include/expressions/IdentExpr.hpp
 CMakeFiles/Project.dir/include/expressions/IdentExpr.cpp.o: ../include/types/Type.hpp
@@ -102,6 +124,7 @@ CMakeFiles/Project.dir/include/expressions/IdentExpr.cpp.o: ../include/utils/for
 CMakeFiles/Project.dir/include/expressions/IdentExpr.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/expressions/IdentExpr.cpp.o: ../include/expressions/IdentExpr.cpp
 
+CMakeFiles/Project.dir/include/expressions/IntExpr.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/expressions/IntExpr.cpp.o: ../include/expressions/Expression.hpp
 CMakeFiles/Project.dir/include/expressions/IntExpr.cpp.o: ../include/expressions/IntExpr.hpp
 CMakeFiles/Project.dir/include/expressions/IntExpr.cpp.o: ../include/types/Type.hpp
@@ -110,6 +133,7 @@ CMakeFiles/Project.dir/include/expressions/IntExpr.cpp.o: ../include/utils/forwa
 CMakeFiles/Project.dir/include/expressions/IntExpr.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/expressions/IntExpr.cpp.o: ../include/expressions/IntExpr.cpp
 
+CMakeFiles/Project.dir/include/expressions/LengthExpr.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/expressions/LengthExpr.cpp.o: ../include/expressions/Expression.hpp
 CMakeFiles/Project.dir/include/expressions/LengthExpr.cpp.o: ../include/expressions/LengthExpr.hpp
 CMakeFiles/Project.dir/include/expressions/LengthExpr.cpp.o: ../include/types/Type.hpp
@@ -118,6 +142,20 @@ CMakeFiles/Project.dir/include/expressions/LengthExpr.cpp.o: ../include/utils/fo
 CMakeFiles/Project.dir/include/expressions/LengthExpr.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/expressions/LengthExpr.cpp.o: ../include/expressions/LengthExpr.cpp
 
+CMakeFiles/Project.dir/include/expressions/MethodExpr.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/expressions/MethodExpr.cpp.o: ../include/expressions/Expression.hpp
+CMakeFiles/Project.dir/include/expressions/MethodExpr.cpp.o: ../include/expressions/MethodExpr.hpp
+CMakeFiles/Project.dir/include/expressions/MethodExpr.cpp.o: ../include/functions/CommaExprList.hpp
+CMakeFiles/Project.dir/include/expressions/MethodExpr.cpp.o: ../include/functions/MethodInvocation.hpp
+CMakeFiles/Project.dir/include/expressions/MethodExpr.cpp.o: ../include/scopes/Symbol.hpp
+CMakeFiles/Project.dir/include/expressions/MethodExpr.cpp.o: ../include/types/Type.hpp
+CMakeFiles/Project.dir/include/expressions/MethodExpr.cpp.o: ../include/utils/BasicElement.hpp
+CMakeFiles/Project.dir/include/expressions/MethodExpr.cpp.o: ../include/utils/BasicList.hpp
+CMakeFiles/Project.dir/include/expressions/MethodExpr.cpp.o: ../include/utils/forward_decl.hpp
+CMakeFiles/Project.dir/include/expressions/MethodExpr.cpp.o: ../include/visitors/Visitor.hpp
+CMakeFiles/Project.dir/include/expressions/MethodExpr.cpp.o: ../include/expressions/MethodExpr.cpp
+
+CMakeFiles/Project.dir/include/expressions/NewArrayExpr.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/expressions/NewArrayExpr.cpp.o: ../include/expressions/Expression.hpp
 CMakeFiles/Project.dir/include/expressions/NewArrayExpr.cpp.o: ../include/expressions/NewArrayExpr.hpp
 CMakeFiles/Project.dir/include/expressions/NewArrayExpr.cpp.o: ../include/types/Type.hpp
@@ -126,6 +164,7 @@ CMakeFiles/Project.dir/include/expressions/NewArrayExpr.cpp.o: ../include/utils/
 CMakeFiles/Project.dir/include/expressions/NewArrayExpr.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/expressions/NewArrayExpr.cpp.o: ../include/expressions/NewArrayExpr.cpp
 
+CMakeFiles/Project.dir/include/expressions/NewExpr.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/expressions/NewExpr.cpp.o: ../include/expressions/Expression.hpp
 CMakeFiles/Project.dir/include/expressions/NewExpr.cpp.o: ../include/expressions/NewExpr.hpp
 CMakeFiles/Project.dir/include/expressions/NewExpr.cpp.o: ../include/types/Type.hpp
@@ -134,6 +173,7 @@ CMakeFiles/Project.dir/include/expressions/NewExpr.cpp.o: ../include/utils/forwa
 CMakeFiles/Project.dir/include/expressions/NewExpr.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/expressions/NewExpr.cpp.o: ../include/expressions/NewExpr.cpp
 
+CMakeFiles/Project.dir/include/expressions/NotExpr.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/expressions/NotExpr.cpp.o: ../include/expressions/Expression.hpp
 CMakeFiles/Project.dir/include/expressions/NotExpr.cpp.o: ../include/expressions/NotExpr.hpp
 CMakeFiles/Project.dir/include/expressions/NotExpr.cpp.o: ../include/types/Type.hpp
@@ -142,6 +182,7 @@ CMakeFiles/Project.dir/include/expressions/NotExpr.cpp.o: ../include/utils/forwa
 CMakeFiles/Project.dir/include/expressions/NotExpr.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/expressions/NotExpr.cpp.o: ../include/expressions/NotExpr.cpp
 
+CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o: ../include/expressions/Expression.hpp
 CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o: ../include/expressions/SubscriptExpr.hpp
 CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o: ../include/types/Type.hpp
@@ -149,6 +190,19 @@ CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o: ../include/utils
 CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o: ../include/utils/forward_decl.hpp
 CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o: ../include/expressions/SubscriptExpr.cpp
+
+CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o: ../include/functions/FunctionStorage.hpp
+CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o: ../include/statements/StmtList.hpp
+CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o: ../include/types/Function.hpp
+CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o: ../include/types/FunctionType.hpp
+CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o: ../include/types/Object.hpp
+CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o: ../include/types/Type.hpp
+CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o: ../include/utils/BasicElement.hpp
+CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o: ../include/utils/BasicList.hpp
+CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o: ../include/utils/forward_decl.hpp
+CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o: ../include/visitors/Visitor.hpp
+CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o: ../include/functions/FunctionStorage.cpp
 
 CMakeFiles/Project.dir/include/functions/MethodInvocation.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/functions/MethodInvocation.cpp.o: ../include/expressions/Expression.hpp
@@ -162,12 +216,14 @@ CMakeFiles/Project.dir/include/functions/MethodInvocation.cpp.o: ../include/util
 CMakeFiles/Project.dir/include/functions/MethodInvocation.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/functions/MethodInvocation.cpp.o: ../include/functions/MethodInvocation.cpp
 
+CMakeFiles/Project.dir/include/program/MainClass.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/program/MainClass.cpp.o: ../include/program/MainClass.hpp
 CMakeFiles/Project.dir/include/program/MainClass.cpp.o: ../include/types/Type.hpp
 CMakeFiles/Project.dir/include/program/MainClass.cpp.o: ../include/utils/forward_decl.hpp
 CMakeFiles/Project.dir/include/program/MainClass.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/program/MainClass.cpp.o: ../include/program/MainClass.cpp
 
+CMakeFiles/Project.dir/include/program/Program.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/program/Program.cpp.o: ../include/program/ClassDeclList.hpp
 CMakeFiles/Project.dir/include/program/Program.cpp.o: ../include/program/MainClass.hpp
 CMakeFiles/Project.dir/include/program/Program.cpp.o: ../include/program/Program.hpp
@@ -181,6 +237,7 @@ CMakeFiles/Project.dir/include/program/Program.cpp.o: ../include/program/Program
 CMakeFiles/Project.dir/include/scopes/ScopeLayer.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/scopes/ScopeLayer.cpp.o: ../include/scopes/ScopeLayer.hpp
 CMakeFiles/Project.dir/include/scopes/ScopeLayer.cpp.o: ../include/scopes/Symbol.hpp
+CMakeFiles/Project.dir/include/scopes/ScopeLayer.cpp.o: ../include/types/FunctionType.hpp
 CMakeFiles/Project.dir/include/scopes/ScopeLayer.cpp.o: ../include/types/Object.hpp
 CMakeFiles/Project.dir/include/scopes/ScopeLayer.cpp.o: ../include/types/Type.hpp
 CMakeFiles/Project.dir/include/scopes/ScopeLayer.cpp.o: ../include/types/UninitObject.hpp
@@ -191,6 +248,7 @@ CMakeFiles/Project.dir/include/scopes/ScopeLayerTree.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/scopes/ScopeLayerTree.cpp.o: ../include/scopes/ScopeLayer.hpp
 CMakeFiles/Project.dir/include/scopes/ScopeLayerTree.cpp.o: ../include/scopes/ScopeLayerTree.hpp
 CMakeFiles/Project.dir/include/scopes/ScopeLayerTree.cpp.o: ../include/scopes/Symbol.hpp
+CMakeFiles/Project.dir/include/scopes/ScopeLayerTree.cpp.o: ../include/types/FunctionType.hpp
 CMakeFiles/Project.dir/include/scopes/ScopeLayerTree.cpp.o: ../include/types/Object.hpp
 CMakeFiles/Project.dir/include/scopes/ScopeLayerTree.cpp.o: ../include/types/Type.hpp
 CMakeFiles/Project.dir/include/scopes/ScopeLayerTree.cpp.o: ../include/utils/forward_decl.hpp
@@ -200,6 +258,7 @@ CMakeFiles/Project.dir/include/scopes/Symbol.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/scopes/Symbol.cpp.o: ../include/scopes/Symbol.hpp
 CMakeFiles/Project.dir/include/scopes/Symbol.cpp.o: ../include/scopes/Symbol.cpp
 
+CMakeFiles/Project.dir/include/statements/AssertStmt.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/statements/AssertStmt.cpp.o: ../include/expressions/Expression.hpp
 CMakeFiles/Project.dir/include/statements/AssertStmt.cpp.o: ../include/statements/AssertStmt.hpp
 CMakeFiles/Project.dir/include/statements/AssertStmt.cpp.o: ../include/statements/Statement.hpp
@@ -209,6 +268,7 @@ CMakeFiles/Project.dir/include/statements/AssertStmt.cpp.o: ../include/utils/for
 CMakeFiles/Project.dir/include/statements/AssertStmt.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/statements/AssertStmt.cpp.o: ../include/statements/AssertStmt.cpp
 
+CMakeFiles/Project.dir/include/statements/AssignmentStmt.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/statements/AssignmentStmt.cpp.o: ../include/expressions/Expression.hpp
 CMakeFiles/Project.dir/include/statements/AssignmentStmt.cpp.o: ../include/statements/AssignmentStmt.hpp
 CMakeFiles/Project.dir/include/statements/AssignmentStmt.cpp.o: ../include/statements/Statement.hpp
@@ -219,6 +279,7 @@ CMakeFiles/Project.dir/include/statements/AssignmentStmt.cpp.o: ../include/value
 CMakeFiles/Project.dir/include/statements/AssignmentStmt.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/statements/AssignmentStmt.cpp.o: ../include/statements/AssignmentStmt.cpp
 
+CMakeFiles/Project.dir/include/statements/ConditionalStmt.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/statements/ConditionalStmt.cpp.o: ../include/expressions/Expression.hpp
 CMakeFiles/Project.dir/include/statements/ConditionalStmt.cpp.o: ../include/statements/ConditionalStmt.hpp
 CMakeFiles/Project.dir/include/statements/ConditionalStmt.cpp.o: ../include/statements/Statement.hpp
@@ -228,6 +289,7 @@ CMakeFiles/Project.dir/include/statements/ConditionalStmt.cpp.o: ../include/util
 CMakeFiles/Project.dir/include/statements/ConditionalStmt.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/statements/ConditionalStmt.cpp.o: ../include/statements/ConditionalStmt.cpp
 
+CMakeFiles/Project.dir/include/statements/LocalVarDeclStmt.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/statements/LocalVarDeclStmt.cpp.o: ../include/declarations/Decl.hpp
 CMakeFiles/Project.dir/include/statements/LocalVarDeclStmt.cpp.o: ../include/declarations/VarDecl.hpp
 CMakeFiles/Project.dir/include/statements/LocalVarDeclStmt.cpp.o: ../include/statements/LocalVarDeclStmt.hpp
@@ -252,6 +314,7 @@ CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o: ../include/utils/for
 CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/statements/MethodStmt.cpp.o: ../include/statements/MethodStmt.cpp
 
+CMakeFiles/Project.dir/include/statements/PrintStmt.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/statements/PrintStmt.cpp.o: ../include/expressions/Expression.hpp
 CMakeFiles/Project.dir/include/statements/PrintStmt.cpp.o: ../include/statements/PrintStmt.hpp
 CMakeFiles/Project.dir/include/statements/PrintStmt.cpp.o: ../include/statements/Statement.hpp
@@ -261,6 +324,7 @@ CMakeFiles/Project.dir/include/statements/PrintStmt.cpp.o: ../include/utils/forw
 CMakeFiles/Project.dir/include/statements/PrintStmt.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/statements/PrintStmt.cpp.o: ../include/statements/PrintStmt.cpp
 
+CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o: ../include/expressions/Expression.hpp
 CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o: ../include/statements/ReturnStmt.hpp
 CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o: ../include/statements/Statement.hpp
@@ -270,6 +334,7 @@ CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o: ../include/utils/for
 CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/statements/ReturnStmt.cpp.o: ../include/statements/ReturnStmt.cpp
 
+CMakeFiles/Project.dir/include/statements/StmtListStmt.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/statements/StmtListStmt.cpp.o: ../include/statements/Statement.hpp
 CMakeFiles/Project.dir/include/statements/StmtListStmt.cpp.o: ../include/statements/StmtList.hpp
 CMakeFiles/Project.dir/include/statements/StmtListStmt.cpp.o: ../include/statements/StmtListStmt.hpp
@@ -280,12 +345,14 @@ CMakeFiles/Project.dir/include/statements/StmtListStmt.cpp.o: ../include/utils/f
 CMakeFiles/Project.dir/include/statements/StmtListStmt.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/statements/StmtListStmt.cpp.o: ../include/statements/StmtListStmt.cpp
 
+CMakeFiles/Project.dir/include/types/Array.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/types/Array.cpp.o: ../include/types/Array.hpp
 CMakeFiles/Project.dir/include/types/Array.cpp.o: ../include/types/Object.hpp
 CMakeFiles/Project.dir/include/types/Array.cpp.o: ../include/types/Type.hpp
 CMakeFiles/Project.dir/include/types/Array.cpp.o: ../include/utils/forward_decl.hpp
 CMakeFiles/Project.dir/include/types/Array.cpp.o: ../include/types/Array.cpp
 
+CMakeFiles/Project.dir/include/types/Bool.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/types/Bool.cpp.o: ../include/types/Bool.hpp
 CMakeFiles/Project.dir/include/types/Bool.cpp.o: ../include/types/Integer.hpp
 CMakeFiles/Project.dir/include/types/Bool.cpp.o: ../include/types/Object.hpp
@@ -293,12 +360,31 @@ CMakeFiles/Project.dir/include/types/Bool.cpp.o: ../include/types/Type.hpp
 CMakeFiles/Project.dir/include/types/Bool.cpp.o: ../include/utils/forward_decl.hpp
 CMakeFiles/Project.dir/include/types/Bool.cpp.o: ../include/types/Bool.cpp
 
+CMakeFiles/Project.dir/include/types/Class.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/types/Class.cpp.o: ../include/types/Class.hpp
 CMakeFiles/Project.dir/include/types/Class.cpp.o: ../include/types/Object.hpp
 CMakeFiles/Project.dir/include/types/Class.cpp.o: ../include/types/Type.hpp
 CMakeFiles/Project.dir/include/types/Class.cpp.o: ../include/utils/forward_decl.hpp
 CMakeFiles/Project.dir/include/types/Class.cpp.o: ../include/types/Class.cpp
 
+CMakeFiles/Project.dir/include/types/Function.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/types/Function.cpp.o: ../include/statements/StmtList.hpp
+CMakeFiles/Project.dir/include/types/Function.cpp.o: ../include/types/Function.hpp
+CMakeFiles/Project.dir/include/types/Function.cpp.o: ../include/types/FunctionType.hpp
+CMakeFiles/Project.dir/include/types/Function.cpp.o: ../include/types/Object.hpp
+CMakeFiles/Project.dir/include/types/Function.cpp.o: ../include/types/Type.hpp
+CMakeFiles/Project.dir/include/types/Function.cpp.o: ../include/utils/BasicElement.hpp
+CMakeFiles/Project.dir/include/types/Function.cpp.o: ../include/utils/BasicList.hpp
+CMakeFiles/Project.dir/include/types/Function.cpp.o: ../include/utils/forward_decl.hpp
+CMakeFiles/Project.dir/include/types/Function.cpp.o: ../include/visitors/Visitor.hpp
+CMakeFiles/Project.dir/include/types/Function.cpp.o: ../include/types/Function.cpp
+
+CMakeFiles/Project.dir/include/types/FunctionType.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/types/FunctionType.cpp.o: ../include/types/FunctionType.hpp
+CMakeFiles/Project.dir/include/types/FunctionType.cpp.o: ../include/types/Type.hpp
+CMakeFiles/Project.dir/include/types/FunctionType.cpp.o: ../include/types/FunctionType.cpp
+
+CMakeFiles/Project.dir/include/types/Integer.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/types/Integer.cpp.o: ../include/types/Bool.hpp
 CMakeFiles/Project.dir/include/types/Integer.cpp.o: ../include/types/Integer.hpp
 CMakeFiles/Project.dir/include/types/Integer.cpp.o: ../include/types/Object.hpp
@@ -306,20 +392,24 @@ CMakeFiles/Project.dir/include/types/Integer.cpp.o: ../include/types/Type.hpp
 CMakeFiles/Project.dir/include/types/Integer.cpp.o: ../include/utils/forward_decl.hpp
 CMakeFiles/Project.dir/include/types/Integer.cpp.o: ../include/types/Integer.cpp
 
+CMakeFiles/Project.dir/include/types/Object.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/types/Object.cpp.o: ../include/types/Object.hpp
 CMakeFiles/Project.dir/include/types/Object.cpp.o: ../include/types/Type.hpp
 CMakeFiles/Project.dir/include/types/Object.cpp.o: ../include/utils/forward_decl.hpp
 CMakeFiles/Project.dir/include/types/Object.cpp.o: ../include/types/Object.cpp
 
+CMakeFiles/Project.dir/include/types/Type.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/types/Type.cpp.o: ../include/types/Type.hpp
 CMakeFiles/Project.dir/include/types/Type.cpp.o: ../include/types/Type.cpp
 
+CMakeFiles/Project.dir/include/types/UninitObject.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/types/UninitObject.cpp.o: ../include/types/Object.hpp
 CMakeFiles/Project.dir/include/types/UninitObject.cpp.o: ../include/types/Type.hpp
 CMakeFiles/Project.dir/include/types/UninitObject.cpp.o: ../include/types/UninitObject.hpp
 CMakeFiles/Project.dir/include/types/UninitObject.cpp.o: ../include/utils/forward_decl.hpp
 CMakeFiles/Project.dir/include/types/UninitObject.cpp.o: ../include/types/UninitObject.cpp
 
+CMakeFiles/Project.dir/include/utils/BasicList.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/utils/BasicList.cpp.o: ../include/types/Type.hpp
 CMakeFiles/Project.dir/include/utils/BasicList.cpp.o: ../include/utils/BasicElement.hpp
 CMakeFiles/Project.dir/include/utils/BasicList.cpp.o: ../include/utils/BasicList.hpp
@@ -327,6 +417,7 @@ CMakeFiles/Project.dir/include/utils/BasicList.cpp.o: ../include/utils/forward_d
 CMakeFiles/Project.dir/include/utils/BasicList.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/utils/BasicList.cpp.o: ../include/utils/BasicList.cpp
 
+CMakeFiles/Project.dir/include/value_categories/Lvalue.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/value_categories/Lvalue.cpp.o: ../include/expressions/Expression.hpp
 CMakeFiles/Project.dir/include/value_categories/Lvalue.cpp.o: ../include/types/Type.hpp
 CMakeFiles/Project.dir/include/value_categories/Lvalue.cpp.o: ../include/utils/BasicElement.hpp
@@ -339,6 +430,7 @@ CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/declarations/ClassDecl.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/declarations/Decl.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/declarations/DeclList.hpp
+CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/declarations/MethodDecl.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/declarations/VarDecl.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/expressions/BinOpExpr.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/expressions/BoolConstExpr.hpp
@@ -346,11 +438,13 @@ CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/expression
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/expressions/IdentExpr.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/expressions/IntExpr.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/expressions/LengthExpr.hpp
+CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/expressions/MethodExpr.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/expressions/NewArrayExpr.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/expressions/NewExpr.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/expressions/NotExpr.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/expressions/SubscriptExpr.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/functions/CommaExprList.hpp
+CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/functions/FunctionStorage.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/functions/MethodInvocation.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/program/ClassDeclList.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/program/MainClass.hpp
@@ -371,6 +465,8 @@ CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/statements
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/types/Array.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/types/Bool.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/types/Class.hpp
+CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/types/Function.hpp
+CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/types/FunctionType.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/types/Integer.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/types/Object.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/types/Type.hpp
@@ -391,6 +487,7 @@ CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/declarations/ClassDecl.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/declarations/Decl.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/declarations/DeclList.hpp
+CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/declarations/MethodDecl.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/declarations/VarDecl.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/expressions/BinOpExpr.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/expressions/BoolConstExpr.hpp
@@ -398,11 +495,13 @@ CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/expressio
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/expressions/IdentExpr.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/expressions/IntExpr.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/expressions/LengthExpr.hpp
+CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/expressions/MethodExpr.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/expressions/NewArrayExpr.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/expressions/NewExpr.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/expressions/NotExpr.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/expressions/SubscriptExpr.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/functions/CommaExprList.hpp
+CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/functions/FunctionStorage.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/functions/MethodInvocation.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/program/ClassDeclList.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/program/MainClass.hpp
@@ -423,6 +522,8 @@ CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/statement
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/types/Array.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/types/Bool.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/types/Class.hpp
+CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/types/Function.hpp
+CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/types/FunctionType.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/types/Integer.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/types/Object.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/types/Type.hpp
@@ -440,6 +541,7 @@ CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/declarations/ClassDecl.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/declarations/Decl.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/declarations/DeclList.hpp
+CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/declarations/MethodDecl.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/declarations/VarDecl.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/expressions/BinOpExpr.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/expressions/BoolConstExpr.hpp
@@ -447,11 +549,13 @@ CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/expr
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/expressions/IdentExpr.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/expressions/IntExpr.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/expressions/LengthExpr.hpp
+CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/expressions/MethodExpr.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/expressions/NewArrayExpr.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/expressions/NewExpr.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/expressions/NotExpr.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/expressions/SubscriptExpr.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/functions/CommaExprList.hpp
+CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/functions/FunctionStorage.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/functions/MethodInvocation.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/program/ClassDeclList.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/program/MainClass.hpp
@@ -472,6 +576,8 @@ CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/stat
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/types/Array.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/types/Bool.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/types/Class.hpp
+CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/types/Function.hpp
+CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/types/FunctionType.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/types/Integer.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/types/Object.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/types/Type.hpp
@@ -486,6 +592,7 @@ CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/visi
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/visitors/SymbolTreeVisitor.cpp
 
+CMakeFiles/Project.dir/include/visitors/TemplateVisitor.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/visitors/TemplateVisitor.cpp.o: ../include/types/Type.hpp
 CMakeFiles/Project.dir/include/visitors/TemplateVisitor.cpp.o: ../include/utils/BasicElement.hpp
 CMakeFiles/Project.dir/include/visitors/TemplateVisitor.cpp.o: ../include/utils/forward_decl.hpp
@@ -497,6 +604,7 @@ CMakeFiles/Project.dir/main.cpp.o: ../debug.h
 CMakeFiles/Project.dir/main.cpp.o: ../include/declarations/ClassDecl.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/declarations/Decl.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/declarations/DeclList.hpp
+CMakeFiles/Project.dir/main.cpp.o: ../include/declarations/MethodDecl.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/declarations/VarDecl.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/expressions/BinOpExpr.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/expressions/BoolConstExpr.hpp
@@ -504,11 +612,13 @@ CMakeFiles/Project.dir/main.cpp.o: ../include/expressions/Expression.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/expressions/IdentExpr.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/expressions/IntExpr.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/expressions/LengthExpr.hpp
+CMakeFiles/Project.dir/main.cpp.o: ../include/expressions/MethodExpr.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/expressions/NewArrayExpr.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/expressions/NewExpr.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/expressions/NotExpr.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/expressions/SubscriptExpr.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/functions/CommaExprList.hpp
+CMakeFiles/Project.dir/main.cpp.o: ../include/functions/FunctionStorage.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/functions/MethodInvocation.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/program/ClassDeclList.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/program/MainClass.hpp
@@ -529,6 +639,8 @@ CMakeFiles/Project.dir/main.cpp.o: ../include/statements/StmtListStmt.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/types/Array.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/types/Bool.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/types/Class.hpp
+CMakeFiles/Project.dir/main.cpp.o: ../include/types/Function.hpp
+CMakeFiles/Project.dir/main.cpp.o: ../include/types/FunctionType.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/types/Integer.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/types/Object.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/types/Type.hpp
@@ -553,6 +665,7 @@ CMakeFiles/Project.dir/parser.cpp.o: ../debug.h
 CMakeFiles/Project.dir/parser.cpp.o: ../include/declarations/ClassDecl.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/declarations/Decl.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/declarations/DeclList.hpp
+CMakeFiles/Project.dir/parser.cpp.o: ../include/declarations/MethodDecl.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/declarations/VarDecl.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/expressions/BinOpExpr.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/expressions/BoolConstExpr.hpp
@@ -560,11 +673,13 @@ CMakeFiles/Project.dir/parser.cpp.o: ../include/expressions/Expression.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/expressions/IdentExpr.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/expressions/IntExpr.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/expressions/LengthExpr.hpp
+CMakeFiles/Project.dir/parser.cpp.o: ../include/expressions/MethodExpr.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/expressions/NewArrayExpr.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/expressions/NewExpr.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/expressions/NotExpr.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/expressions/SubscriptExpr.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/functions/CommaExprList.hpp
+CMakeFiles/Project.dir/parser.cpp.o: ../include/functions/FunctionStorage.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/functions/MethodInvocation.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/program/ClassDeclList.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/program/MainClass.hpp
@@ -585,6 +700,8 @@ CMakeFiles/Project.dir/parser.cpp.o: ../include/statements/StmtListStmt.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/types/Array.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/types/Bool.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/types/Class.hpp
+CMakeFiles/Project.dir/parser.cpp.o: ../include/types/Function.hpp
+CMakeFiles/Project.dir/parser.cpp.o: ../include/types/FunctionType.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/types/Integer.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/types/Object.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/types/Type.hpp
@@ -609,6 +726,7 @@ CMakeFiles/Project.dir/scanner.cpp.o: ../debug.h
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/declarations/ClassDecl.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/declarations/Decl.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/declarations/DeclList.hpp
+CMakeFiles/Project.dir/scanner.cpp.o: ../include/declarations/MethodDecl.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/declarations/VarDecl.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/expressions/BinOpExpr.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/expressions/BoolConstExpr.hpp
@@ -616,11 +734,13 @@ CMakeFiles/Project.dir/scanner.cpp.o: ../include/expressions/Expression.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/expressions/IdentExpr.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/expressions/IntExpr.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/expressions/LengthExpr.hpp
+CMakeFiles/Project.dir/scanner.cpp.o: ../include/expressions/MethodExpr.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/expressions/NewArrayExpr.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/expressions/NewExpr.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/expressions/NotExpr.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/expressions/SubscriptExpr.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/functions/CommaExprList.hpp
+CMakeFiles/Project.dir/scanner.cpp.o: ../include/functions/FunctionStorage.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/functions/MethodInvocation.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/program/ClassDeclList.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/program/MainClass.hpp
@@ -641,6 +761,8 @@ CMakeFiles/Project.dir/scanner.cpp.o: ../include/statements/StmtListStmt.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/types/Array.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/types/Bool.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/types/Class.hpp
+CMakeFiles/Project.dir/scanner.cpp.o: ../include/types/Function.hpp
+CMakeFiles/Project.dir/scanner.cpp.o: ../include/types/FunctionType.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/types/Integer.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/types/Object.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/types/Type.hpp
