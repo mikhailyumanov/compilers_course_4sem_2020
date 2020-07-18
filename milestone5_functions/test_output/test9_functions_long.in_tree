@@ -4,12 +4,12 @@ Program
 	ClassDecl Dog
 		VarDecl type: int, is_array: false dog_index
 		NEW FUNCTION SCOPE
-		MethodDecl type: , is_array: false SetIndex
+		MethodDecl Return type: void; Args: idx(type: int, is_array: false),  SetIndex
 			AssignmentStmt
 				Lvalue dog_index
 				IdentExpr idx
 		NEW FUNCTION SCOPE
-		MethodDecl type: , is_array: false Bark
+		MethodDecl Return type: void; Args:  Bark
 			PrintStmt
 				IdentExpr dog_index
 	NEW SCOPE
@@ -17,17 +17,17 @@ Program
 		VarDecl type: Dog, is_array: true dogs
 		VarDecl type: int, is_array: false num_dogs
 		NEW FUNCTION SCOPE
-		MethodDecl type: , is_array: false SetNumDogs
+		MethodDecl Return type: void; Args: new_num(type: int, is_array: false),  SetNumDogs
 			AssignmentStmt
 				Lvalue num_dogs
 				IdentExpr new_num
 		NEW FUNCTION SCOPE
-		MethodDecl type: , is_array: false SetDogs
+		MethodDecl Return type: void; Args: new_dogs(type: Dog, is_array: true),  SetDogs
 			AssignmentStmt
 				Lvalue dogs
 				IdentExpr new_dogs
 		NEW FUNCTION SCOPE
-		MethodDecl type: , is_array: false AddDog
+		MethodDecl Return type: void; Args: new_dog(type: Dog, is_array: false),  AddDog
 			NEW SCOPE
 			IfStmt
 				BinOpExpr
@@ -85,7 +85,7 @@ Program
 5
 					IntExpr 1
 		NEW FUNCTION SCOPE
-		MethodDecl type: , is_array: false GetDog
+		MethodDecl Return type: Dog; Args: i(type: int, is_array: false),  GetDog
 			AssertStmt
 				BinOpExpr
 					IdentExpr i

@@ -1,55 +1,22 @@
 >>> Interpreter: Program
 >>> PrintVisitor: Program
 GoDown
-Current state: parent: 0x557901f32890 ; child index: 1 
+Current state: parent: 0x55ba67b3d8b0 ; child index: 1 
 GoDown
-Current state: parent: 0x557901f32e80 ; child index: 0 
+Current state: parent: 0x55ba67b3e4c0 ; child index: 0 
 >>> PrintVisitor: MainClass
-ScopeLayer::SetMain
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false x 
 x type: int, is_array: false 
-ScopeLayer::DeclareVariable x type: int, is_array: false 
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::DeclareVariable init
 GoDown
-Current state: parent: 0x557901f32fd0 ; child index: 0 
+Current state: parent: 0x55ba67b3e610 ; child index: 0 
 >>> PrintVisitor: StmtListStmt
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false y 
 y type: int, is_array: false 
-ScopeLayer::DeclareVariable y type: int, is_array: false 
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::DeclareVariable init
 >>> PrintVisitor: AssignmentStmt
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IntExpr 5 
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x557901f32e80 ; child index: 0 
+Current state: parent: 0x55ba67b3e4c0 ; child index: 0 
 >>> PrintVisitor: AssignmentStmt
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IdentExpr y 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData

@@ -22,7 +22,9 @@ CMakeFiles/Project.dir/driver.cpp.o: ../include/expressions/NewExpr.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/expressions/NotExpr.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/expressions/SubscriptExpr.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/functions/CommaExprList.hpp
+CMakeFiles/Project.dir/driver.cpp.o: ../include/functions/Frame.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/functions/FunctionStorage.hpp
+CMakeFiles/Project.dir/driver.cpp.o: ../include/functions/FunctionTable.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/functions/MethodInvocation.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/program/ClassDeclList.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/program/MainClass.hpp
@@ -191,6 +193,15 @@ CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o: ../include/utils
 CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o: ../include/expressions/SubscriptExpr.cpp
 
+CMakeFiles/Project.dir/include/functions/Frame.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/functions/Frame.cpp.o: ../include/functions/Frame.hpp
+CMakeFiles/Project.dir/include/functions/Frame.cpp.o: ../include/types/FunctionType.hpp
+CMakeFiles/Project.dir/include/functions/Frame.cpp.o: ../include/types/Object.hpp
+CMakeFiles/Project.dir/include/functions/Frame.cpp.o: ../include/types/Type.hpp
+CMakeFiles/Project.dir/include/functions/Frame.cpp.o: ../include/types/UninitObject.hpp
+CMakeFiles/Project.dir/include/functions/Frame.cpp.o: ../include/utils/forward_decl.hpp
+CMakeFiles/Project.dir/include/functions/Frame.cpp.o: ../include/functions/Frame.cpp
+
 CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o: ../include/functions/FunctionStorage.hpp
 CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o: ../include/statements/StmtList.hpp
@@ -203,6 +214,11 @@ CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o: ../include/utils
 CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o: ../include/utils/forward_decl.hpp
 CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o: ../include/functions/FunctionStorage.cpp
+
+CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.o: ../include/functions/FunctionTable.hpp
+CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.o: ../include/scopes/Symbol.hpp
+CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.o: ../include/functions/FunctionTable.cpp
 
 CMakeFiles/Project.dir/include/functions/MethodInvocation.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/functions/MethodInvocation.cpp.o: ../include/expressions/Expression.hpp
@@ -444,7 +460,9 @@ CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/expression
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/expressions/NotExpr.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/expressions/SubscriptExpr.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/functions/CommaExprList.hpp
+CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/functions/Frame.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/functions/FunctionStorage.hpp
+CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/functions/FunctionTable.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/functions/MethodInvocation.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/program/ClassDeclList.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/program/MainClass.hpp
@@ -501,7 +519,9 @@ CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/expressio
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/expressions/NotExpr.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/expressions/SubscriptExpr.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/functions/CommaExprList.hpp
+CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/functions/Frame.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/functions/FunctionStorage.hpp
+CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/functions/FunctionTable.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/functions/MethodInvocation.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/program/ClassDeclList.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/program/MainClass.hpp
@@ -555,7 +575,9 @@ CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/expr
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/expressions/NotExpr.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/expressions/SubscriptExpr.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/functions/CommaExprList.hpp
+CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/functions/Frame.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/functions/FunctionStorage.hpp
+CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/functions/FunctionTable.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/functions/MethodInvocation.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/program/ClassDeclList.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/program/MainClass.hpp
@@ -618,7 +640,9 @@ CMakeFiles/Project.dir/main.cpp.o: ../include/expressions/NewExpr.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/expressions/NotExpr.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/expressions/SubscriptExpr.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/functions/CommaExprList.hpp
+CMakeFiles/Project.dir/main.cpp.o: ../include/functions/Frame.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/functions/FunctionStorage.hpp
+CMakeFiles/Project.dir/main.cpp.o: ../include/functions/FunctionTable.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/functions/MethodInvocation.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/program/ClassDeclList.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/program/MainClass.hpp
@@ -679,7 +703,9 @@ CMakeFiles/Project.dir/parser.cpp.o: ../include/expressions/NewExpr.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/expressions/NotExpr.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/expressions/SubscriptExpr.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/functions/CommaExprList.hpp
+CMakeFiles/Project.dir/parser.cpp.o: ../include/functions/Frame.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/functions/FunctionStorage.hpp
+CMakeFiles/Project.dir/parser.cpp.o: ../include/functions/FunctionTable.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/functions/MethodInvocation.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/program/ClassDeclList.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/program/MainClass.hpp
@@ -740,7 +766,9 @@ CMakeFiles/Project.dir/scanner.cpp.o: ../include/expressions/NewExpr.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/expressions/NotExpr.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/expressions/SubscriptExpr.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/functions/CommaExprList.hpp
+CMakeFiles/Project.dir/scanner.cpp.o: ../include/functions/Frame.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/functions/FunctionStorage.hpp
+CMakeFiles/Project.dir/scanner.cpp.o: ../include/functions/FunctionTable.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/functions/MethodInvocation.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/program/ClassDeclList.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/program/MainClass.hpp

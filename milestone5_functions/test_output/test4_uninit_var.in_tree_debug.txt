@@ -1,66 +1,34 @@
 >>> Interpreter: Program
 >>> PrintVisitor: Program
 GoDown
-Current state: parent: 0x5612bca0f890 ; child index: 1 
+Current state: parent: 0x5603fabf68b0 ; child index: 1 
 GoDown
-Current state: parent: 0x5612bca0fe80 ; child index: 0 
+Current state: parent: 0x5603fabf74e0 ; child index: 0 
 >>> PrintVisitor: MainClass
-ScopeLayer::SetMain
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false x 
 x type: int, is_array: false 
-ScopeLayer::DeclareVariable x type: int, is_array: false 
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::DeclareVariable init
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false y 
 y type: int, is_array: false 
-ScopeLayer::DeclareVariable y type: int, is_array: false 
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::DeclareVariable init
 >>> PrintVisitor: AssignmentStmt
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IdentExpr x 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x5612bca0f890 ; child index: 1 
+Current state: parent: 0x5603fabf68b0 ; child index: 1 
 
 
 GoDown
-Current state: parent: 0x5612bca0f890 ; child index: 1 
+Current state: parent: 0x5603fabf68b0 ; child index: 1 
 GoDown
-Current state: parent: 0x5612bca0fe80 ; child index: 0 
+Current state: parent: 0x5603fabf74e0 ; child index: 0 
 >>> Interpreter: MainClass
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var y declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-y 0x5612bca101f0 
-x 0x5612bca0f5f0 
+Is var y declared: 1 
 >>> Interpreter: IdentExpr
-0
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x5612bca0f890 ; child index: 1 
+Current state: parent: 0x5603fabf68b0 ; child index: 1 

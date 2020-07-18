@@ -330,7 +330,7 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<MethodExpr> element) {
 
   Type method_type = FunctionStorage::GetInstance().GetFunction(
         element->invocation->expr->GetType().type, 
-        element->invocation->name.GetName())->function_type;
+        element->invocation->name.GetName())->function_type.GetReturnType();
   element->SetType(method_type);
 
   PRINT_UP
@@ -359,10 +359,12 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<MethodDecl> element) {
   FunctionScopeDown(element->function_type);
   PRINT_DOWN
 
-  DEBUG_START DEBUG(element->name) DEBUG(element->type) DEBUG_FINISH
+  DEBUG_START DEBUG(element->name) DEBUG(element->function_type) DEBUG_FINISH
 
   element->stmt_list->Accept(shared_from_this());
   ScopeUp();
+
+  DEBUG_SINGLE("MethodDecl: " + element->function_type.ToString())
 
   FunctionStorage::GetInstance().SetFunction(current_class_, element->name,
       std::make_shared<Function>(element->function_type, element->stmt_list));

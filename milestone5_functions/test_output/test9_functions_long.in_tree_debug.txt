@@ -1,946 +1,305 @@
 >>> Interpreter: Program
 >>> PrintVisitor: Program
 GoDown
-Current state: parent: 0x561ada6e18e0 ; child index: 1 
+Current state: parent: 0x562e79557900 ; child index: 1 
 GoDown
-Current state: parent: 0x561ada6e1ed0 ; child index: 0 
+Current state: parent: 0x562e79558510 ; child index: 0 
 >>> PrintVisitor: ClassDecl Dog 
 >>> PrintVisitor: VarDecl type: int, is_array: false dog_index 
 dog_index type: int, is_array: false 
-ScopeLayer::DeclareVariable dog_index type: int, is_array: false 
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::DeclareVariable init
 GoDown
-Current state: parent: 0x561ada6e1ff0 ; child index: 0 
->>> PrintVisitor: MethodDecl type: , is_array: false SetIndex 
-SetIndex type: , is_array: false 
+Current state: parent: 0x562e79558630 ; child index: 0 
+>>> PrintVisitor: MethodDecl Return type: void; Args: idx(type: int, is_array: false),  SetIndex 
+SetIndex Return type: void; Args: idx(type: int, is_array: false),  
 >>> PrintVisitor: AssignmentStmt
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IdentExpr idx 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x561ada6e1ed0 ; child index: 0 
+Current state: parent: 0x562e79558510 ; child index: 0 
+MethodDecl: type: void, is_array: false
 GoDown
-Current state: parent: 0x561ada6e1ff0 ; child index: 1 
->>> PrintVisitor: MethodDecl type: , is_array: false Bark 
-Bark type: , is_array: false 
+Current state: parent: 0x562e79558630 ; child index: 1 
+>>> PrintVisitor: MethodDecl Return type: void; Args:  Bark 
+Bark Return type: void; Args:  
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IdentExpr dog_index 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x561ada6e1ed0 ; child index: 0 
+Current state: parent: 0x562e79558510 ; child index: 0 
+MethodDecl: type: void, is_array: false
 GoUp
-Current state: parent: 0x561ada6e18e0 ; child index: 1 
+Current state: parent: 0x562e79557900 ; child index: 1 
 GoDown
-Current state: parent: 0x561ada6e1ed0 ; child index: 1 
+Current state: parent: 0x562e79558510 ; child index: 1 
 >>> PrintVisitor: ClassDecl House 
 >>> PrintVisitor: VarDecl type: Dog, is_array: true dogs 
 dogs type: Dog, is_array: true 
-ScopeLayer::DeclareVariable dogs type: Dog, is_array: true 
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::DeclareVariable init
 >>> PrintVisitor: VarDecl type: int, is_array: false num_dogs 
 num_dogs type: int, is_array: false 
-ScopeLayer::DeclareVariable num_dogs type: int, is_array: false 
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::DeclareVariable init
 GoDown
-Current state: parent: 0x561ada6e2990 ; child index: 0 
->>> PrintVisitor: MethodDecl type: , is_array: false SetNumDogs 
-SetNumDogs type: , is_array: false 
+Current state: parent: 0x562e79558ff0 ; child index: 0 
+>>> PrintVisitor: MethodDecl Return type: void; Args: new_num(type: int, is_array: false),  SetNumDogs 
+SetNumDogs Return type: void; Args: new_num(type: int, is_array: false),  
 >>> PrintVisitor: AssignmentStmt
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IdentExpr new_num 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x561ada6e1ed0 ; child index: 1 
+Current state: parent: 0x562e79558510 ; child index: 1 
+MethodDecl: type: void, is_array: false
 GoDown
-Current state: parent: 0x561ada6e2990 ; child index: 1 
->>> PrintVisitor: MethodDecl type: , is_array: false SetDogs 
-SetDogs type: , is_array: false 
+Current state: parent: 0x562e79558ff0 ; child index: 1 
+>>> PrintVisitor: MethodDecl Return type: void; Args: new_dogs(type: Dog, is_array: true),  SetDogs 
+SetDogs Return type: void; Args: new_dogs(type: Dog, is_array: true),  
 >>> PrintVisitor: AssignmentStmt
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IdentExpr new_dogs 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x561ada6e1ed0 ; child index: 1 
+Current state: parent: 0x562e79558510 ; child index: 1 
+MethodDecl: type: void, is_array: false
 GoDown
-Current state: parent: 0x561ada6e2990 ; child index: 2 
->>> PrintVisitor: MethodDecl type: , is_array: false AddDog 
-AddDog type: , is_array: false 
+Current state: parent: 0x562e79558ff0 ; child index: 2 
+>>> PrintVisitor: MethodDecl Return type: void; Args: new_dog(type: Dog, is_array: false),  AddDog 
+AddDog Return type: void; Args: new_dog(type: Dog, is_array: false),  
 GoDown
-Current state: parent: 0x561ada6e34e0 ; child index: 0 
+Current state: parent: 0x562e79568020 ; child index: 0 
 >>> PrintVisitor: IfStmt
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr num_dogs 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: LengthExpr
 >>> PrintVisitor: IdentExpr dogs 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoDown
-Current state: parent: 0x561ada6f1bf0 ; child index: 0 
+Current state: parent: 0x562e79568250 ; child index: 0 
 >>> PrintVisitor: StmtListStmt
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: Dog, is_array: true new_dogs 
 new_dogs type: Dog, is_array: true 
-ScopeLayer::DeclareVariable new_dogs type: Dog, is_array: true 
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::DeclareVariable init
 >>> PrintVisitor: AssignmentStmt
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
 >>> PrintVisitor: NewArrayExpr type =  Dog 
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr num_dogs 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IntExpr 2 
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false i 
 i type: int, is_array: false 
-ScopeLayer::DeclareVariable i type: int, is_array: false 
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::DeclareVariable init
 >>> PrintVisitor: AssignmentStmt
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IntExpr 0 
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoDown
-Current state: parent: 0x561ada6f1d10 ; child index: 0 
+Current state: parent: 0x562e79568370 ; child index: 0 
 >>> PrintVisitor: WhileStmt
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr i 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IdentExpr num_dogs 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoDown
-Current state: parent: 0x561ada6f1ff0 ; child index: 0 
+Current state: parent: 0x562e79568650 ; child index: 0 
 >>> PrintVisitor: StmtListStmt
 >>> PrintVisitor: AssignmentStmt
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IdentExpr i 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: SubscriptExpr
 >>> PrintVisitor: IdentExpr dogs 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IdentExpr i 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: AssignmentStmt
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr i 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IntExpr 1 
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x561ada6f1d10 ; child index: 0 
+Current state: parent: 0x562e79568370 ; child index: 0 
 GoUp
-Current state: parent: 0x561ada6f1bf0 ; child index: 0 
+Current state: parent: 0x562e79568250 ; child index: 0 
 >>> PrintVisitor: AssignmentStmt
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IdentExpr new_dogs 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x561ada6e34e0 ; child index: 0 
+Current state: parent: 0x562e79568020 ; child index: 0 
 GoUp
-Current state: parent: 0x561ada6e2990 ; child index: 2 
+Current state: parent: 0x562e79558ff0 ; child index: 2 
 >>> PrintVisitor: AssignmentStmt
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IdentExpr num_dogs 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IdentExpr new_dog 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: AssignmentStmt
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr num_dogs 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: IntExpr 1 
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoUp
-Current state: parent: 0x561ada6e1ed0 ; child index: 1 
+Current state: parent: 0x562e79558510 ; child index: 1 
+MethodDecl: type: void, is_array: false
 GoDown
-Current state: parent: 0x561ada6e2990 ; child index: 3 
->>> PrintVisitor: MethodDecl type: , is_array: false GetDog 
-GetDog type: , is_array: false 
+Current state: parent: 0x562e79558ff0 ; child index: 3 
+>>> PrintVisitor: MethodDecl Return type: Dog; Args: i(type: int, is_array: false),  GetDog 
+GetDog Return type: Dog; Args: i(type: int, is_array: false),  
 >>> PrintVisitor: AssertStmt
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr i 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::GetType
-ScopeLayer::IsArgument
 >>> PrintVisitor: IntExpr -1 
 >>> PrintVisitor: AssertStmt
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr i 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::GetType
-ScopeLayer::IsArgument
 >>> PrintVisitor: IdentExpr num_dogs 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: ReturnStmt
 GoUp
-Current state: parent: 0x561ada6e1ed0 ; child index: 1 
+Current state: parent: 0x562e79558510 ; child index: 1 
+MethodDecl: type: Dog, is_array: false
 GoUp
-Current state: parent: 0x561ada6e18e0 ; child index: 1 
+Current state: parent: 0x562e79557900 ; child index: 1 
 GoDown
-Current state: parent: 0x561ada6e1ed0 ; child index: 2 
+Current state: parent: 0x562e79558510 ; child index: 2 
 >>> PrintVisitor: MainClass
-ScopeLayer::SetMain
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: House, is_array: false house 
 house type: House, is_array: false 
-ScopeLayer::DeclareVariable house type: House, is_array: false 
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::DeclareVariable init
 >>> PrintVisitor: AssignmentStmt
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
 >>> PrintVisitor: NewExpr type =  House 
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: MethodStmt
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: IdentExpr house 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 SetNumDogs
 >>> PrintVisitor: IntExpr 0 
 GoDown
-Current state: parent: 0x561ada6f2a10 ; child index: 0 
+Current state: parent: 0x562e79569040 ; child index: 0 
 GoUp
-Current state: parent: 0x561ada6e1ed0 ; child index: 2 
+Current state: parent: 0x562e79558510 ; child index: 2 
 >>> PrintVisitor: MethodStmt
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: IdentExpr house 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 SetDogs
 >>> PrintVisitor: NewArrayExpr type =  Dog 
 >>> PrintVisitor: IntExpr 1 
 GoDown
-Current state: parent: 0x561ada6f2a10 ; child index: 1 
+Current state: parent: 0x562e79569040 ; child index: 1 
 GoUp
-Current state: parent: 0x561ada6e1ed0 ; child index: 2 
+Current state: parent: 0x562e79558510 ; child index: 2 
 GoDown
-Current state: parent: 0x561ada6f2a10 ; child index: 2 
+Current state: parent: 0x562e79569040 ; child index: 2 
 >>> PrintVisitor: IfStmt
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IntExpr 3 
 >>> PrintVisitor: IntExpr 2 
 GoDown
-Current state: parent: 0x561ada6f2e80 ; child index: 0 
+Current state: parent: 0x562e795694d0 ; child index: 0 
 >>> PrintVisitor: StmtListStmt
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false i 
 i type: int, is_array: false 
-ScopeLayer::DeclareVariable i type: int, is_array: false 
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::DeclareVariable init
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: true j 
 j type: int, is_array: true 
-ScopeLayer::DeclareVariable j type: int, is_array: true 
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::DeclareVariable init
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: House, is_array: false h 
 h type: House, is_array: false 
-ScopeLayer::DeclareVariable h type: House, is_array: false 
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::DeclareVariable init
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: House, is_array: true g 
 g type: House, is_array: true 
-ScopeLayer::DeclareVariable g type: House, is_array: true 
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::DeclareVariable init
 GoUp
-Current state: parent: 0x561ada6f2a10 ; child index: 2 
+Current state: parent: 0x562e79569040 ; child index: 2 
 GoUp
-Current state: parent: 0x561ada6e1ed0 ; child index: 2 
+Current state: parent: 0x562e79558510 ; child index: 2 
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: Dog, is_array: false dog 
 dog type: Dog, is_array: false 
-ScopeLayer::DeclareVariable dog type: Dog, is_array: false 
-ScopeLayer::IsDeclared
-ScopeLayer::IsArgument
-ScopeLayer::IsClassData
-ScopeLayer::DeclareVariable init
 >>> PrintVisitor: AssignmentStmt
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
 >>> PrintVisitor: NewExpr type =  Dog 
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: MethodStmt
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: IdentExpr dog 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 SetIndex
 >>> PrintVisitor: IntExpr 42 
 GoDown
-Current state: parent: 0x561ada6f2a10 ; child index: 3 
+Current state: parent: 0x562e79569040 ; child index: 3 
 GoUp
-Current state: parent: 0x561ada6e1ed0 ; child index: 2 
+Current state: parent: 0x562e79558510 ; child index: 2 
 >>> PrintVisitor: MethodStmt
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: IdentExpr dog 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 Bark
 GoDown
-Current state: parent: 0x561ada6f2a10 ; child index: 4 
+Current state: parent: 0x562e79569040 ; child index: 4 
 GoUp
-Current state: parent: 0x561ada6e1ed0 ; child index: 2 
+Current state: parent: 0x562e79558510 ; child index: 2 
 >>> PrintVisitor: MethodStmt
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: IdentExpr house 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 AddDog
 >>> PrintVisitor: IdentExpr dog 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoDown
-Current state: parent: 0x561ada6f2a10 ; child index: 5 
+Current state: parent: 0x562e79569040 ; child index: 5 
 GoUp
-Current state: parent: 0x561ada6e1ed0 ; child index: 2 
+Current state: parent: 0x562e79558510 ; child index: 2 
 >>> PrintVisitor: AssignmentStmt
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
 >>> PrintVisitor: NewExpr type =  Dog 
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> PrintVisitor: MethodStmt
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: IdentExpr dog 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 SetIndex
 >>> PrintVisitor: IntExpr 79 
 GoDown
-Current state: parent: 0x561ada6f2a10 ; child index: 6 
+Current state: parent: 0x562e79569040 ; child index: 6 
 GoUp
-Current state: parent: 0x561ada6e1ed0 ; child index: 2 
+Current state: parent: 0x562e79558510 ; child index: 2 
 >>> PrintVisitor: MethodStmt
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: IdentExpr dog 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 Bark
 GoDown
-Current state: parent: 0x561ada6f2a10 ; child index: 7 
+Current state: parent: 0x562e79569040 ; child index: 7 
 GoUp
-Current state: parent: 0x561ada6e1ed0 ; child index: 2 
+Current state: parent: 0x562e79558510 ; child index: 2 
 >>> PrintVisitor: MethodStmt
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: IdentExpr house 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 AddDog
 >>> PrintVisitor: IdentExpr dog 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GoDown
-Current state: parent: 0x561ada6f2a10 ; child index: 8 
+Current state: parent: 0x562e79569040 ; child index: 8 
 GoUp
-Current state: parent: 0x561ada6e1ed0 ; child index: 2 
+Current state: parent: 0x562e79558510 ; child index: 2 
 >>> PrintVisitor: MethodStmt
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: MethodExpr
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: IdentExpr house 
-ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-ScopeLayer::GetType
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 GetDog
 >>> PrintVisitor: IntExpr 1 
 GoDown
-Current state: parent: 0x561ada6f2a10 ; child index: 9 
+Current state: parent: 0x562e79569040 ; child index: 9 
 GoUp
-Current state: parent: 0x561ada6e1ed0 ; child index: 2 
+Current state: parent: 0x562e79558510 ; child index: 2 
 Bark
 GoDown
-Current state: parent: 0x561ada6f2a10 ; child index: 10 
+Current state: parent: 0x562e79569040 ; child index: 10 
 GoUp
-Current state: parent: 0x561ada6e1ed0 ; child index: 2 
+Current state: parent: 0x562e79558510 ; child index: 2 
 GoUp
-Current state: parent: 0x561ada6e18e0 ; child index: 1 
+Current state: parent: 0x562e79557900 ; child index: 1 
 
 
 GoDown
-Current state: parent: 0x561ada6e18e0 ; child index: 1 
+Current state: parent: 0x562e79557900 ; child index: 1 
 >>> Interpreter: ClassDecl
 GoDown
-Current state: parent: 0x561ada6e1ed0 ; child index: 0 
+Current state: parent: 0x562e79558510 ; child index: 0 
 GoUp
-Current state: parent: 0x561ada6e18e0 ; child index: 1 
+Current state: parent: 0x562e79557900 ; child index: 1 
 >>> Interpreter: ClassDecl
 GoDown
-Current state: parent: 0x561ada6e1ed0 ; child index: 1 
+Current state: parent: 0x562e79558510 ; child index: 1 
 GoUp
-Current state: parent: 0x561ada6e18e0 ; child index: 1 
+Current state: parent: 0x562e79557900 ; child index: 1 
 GoDown
-Current state: parent: 0x561ada6e1ed0 ; child index: 2 
+Current state: parent: 0x562e79558510 ; child index: 2 
 >>> Interpreter: MainClass
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var house declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-dog 0x561ada6f3470 
-house 0x561ada6f2b80 
+Is var house declared: 1 
 >>> Interpreter: NewExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: MethodStmt
 >>> Interpreter: MethodInvocation
 >>> Interpreter: MethodStmt
 >>> Interpreter: MethodInvocation
 >>> Interpreter: IfStmt
 GoDown
-Current state: parent: 0x561ada6f2a10 ; child index: 0 
+Current state: parent: 0x562e79569040 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x561ada6f2c40 ; child index: 0 
+Current state: parent: 0x562e79569270 ; child index: 0 
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: LocalVarDeclStmt
@@ -950,23 +309,15 @@ Current state: parent: 0x561ada6f2c40 ; child index: 0
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 GoUp
-Current state: parent: 0x561ada6f2a10 ; child index: 0 
+Current state: parent: 0x562e79569040 ; child index: 0 
 GoUp
-Current state: parent: 0x561ada6e1ed0 ; child index: 2 
+Current state: parent: 0x562e79558510 ; child index: 2 
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var dog declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-dog 0x561ada6f3470 
-house 0x561ada6f4050 
+Is var dog declared: 1 
 >>> Interpreter: NewExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: MethodStmt
 >>> Interpreter: MethodInvocation
 >>> Interpreter: MethodStmt
@@ -974,17 +325,9 @@ ScopeLayer::IsDeclared
 >>> Interpreter: MethodStmt
 >>> Interpreter: MethodInvocation
 >>> Interpreter: AssignmentStmt
-Is var dog declared: ScopeLayer::IsDeclaredAnywhere
-ScopeLayer::IsDeclared
-1 
-dog 0x561ada6e1e70 
-house 0x561ada6f4050 
+Is var dog declared: 1 
 >>> Interpreter: NewExpr
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: Assignment no subscript
-ScopeLayer::IsDeclared
-ScopeLayer::IsDeclared
 >>> Interpreter: MethodStmt
 >>> Interpreter: MethodInvocation
 >>> Interpreter: MethodStmt
@@ -994,4 +337,4 @@ ScopeLayer::IsDeclared
 >>> Interpreter: MethodStmt
 >>> Interpreter: MethodInvocation
 GoUp
-Current state: parent: 0x561ada6e18e0 ; child index: 1 
+Current state: parent: 0x562e79557900 ; child index: 1 

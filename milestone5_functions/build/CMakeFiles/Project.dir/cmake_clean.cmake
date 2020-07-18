@@ -44,6 +44,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Project.dir/include/types/Function.cpp.o"
   "CMakeFiles/Project.dir/include/value_categories/Lvalue.cpp.o"
   "CMakeFiles/Project.dir/include/functions/MethodInvocation.cpp.o"
+  "CMakeFiles/Project.dir/include/functions/Frame.cpp.o"
+  "CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.o"
   "CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o"
   "CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o"
   "CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o"

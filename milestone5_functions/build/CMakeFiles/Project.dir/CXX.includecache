@@ -104,6 +104,26 @@ Expression.hpp
 utils/BasicList.hpp
 ../include/functions/utils/BasicList.hpp
 
+../include/functions/Frame.hpp
+iterator
+-
+memory
+-
+stack
+-
+string
+-
+unordered_map
+-
+vector
+-
+types/Object.hpp
+../include/functions/types/Object.hpp
+types/UninitObject.hpp
+../include/functions/types/UninitObject.hpp
+types/FunctionType.hpp
+../include/functions/types/FunctionType.hpp
+
 ../include/functions/FunctionStorage.hpp
 memory
 -
@@ -111,6 +131,16 @@ unordered_map
 -
 types/Function.hpp
 ../include/functions/types/Function.hpp
+
+../include/functions/FunctionTable.hpp
+memory
+-
+stack
+-
+unordered_map
+-
+scopes/Symbol.hpp
+../include/functions/scopes/Symbol.hpp
 
 ../include/functions/MethodInvocation.hpp
 expressions/Expression.hpp
@@ -405,6 +435,10 @@ functions/MethodInvocation.hpp
 ../include/utils/functions/MethodInvocation.hpp
 functions/CommaExprList.hpp
 ../include/utils/functions/CommaExprList.hpp
+functions/Frame.hpp
+../include/utils/functions/Frame.hpp
+functions/FunctionTable.hpp
+../include/utils/functions/FunctionTable.hpp
 functions/FunctionStorage.hpp
 ../include/utils/functions/FunctionStorage.hpp
 
@@ -554,11 +588,21 @@ expressions/NotExpr.hpp
 expressions/SubscriptExpr.hpp
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/expressions/expressions/SubscriptExpr.hpp
 
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/functions/Frame.cpp
+functions/Frame.hpp
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/functions/functions/Frame.hpp
+
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/functions/FunctionStorage.cpp
 cassert
 -
 functions/FunctionStorage.hpp
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/functions/functions/FunctionStorage.hpp
+
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/functions/FunctionTable.cpp
+functions/FunctionTable.hpp
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/functions/functions/FunctionTable.hpp
+exception
+-
 
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/functions/MethodInvocation.cpp
 functions/MethodInvocation.hpp

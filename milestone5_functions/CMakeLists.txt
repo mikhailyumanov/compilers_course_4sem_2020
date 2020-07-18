@@ -80,8 +80,8 @@ set(
     include/value_categories/Lvalue.cpp
 
     include/functions/MethodInvocation.cpp
-    #    include/functions/Frame.cpp
-    #include/functions/FunctionTable.cpp
+    include/functions/Frame.cpp
+    include/functions/FunctionTable.cpp
     include/functions/FunctionStorage.cpp
 
 

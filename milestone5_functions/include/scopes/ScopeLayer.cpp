@@ -16,17 +16,19 @@ ScopeLayer::ScopeLayer(std::shared_ptr<ScopeLayer> parent,
 
 
 void ScopeLayer::DeclareVariable(Symbol symbol, Type type) {
+  /*
   DEBUG_START
     DEBUG("ScopeLayer::DeclareVariable")
     DEBUG(symbol.GetName())
     DEBUG(type)
   DEBUG_FINISH
+  */
 
   if (IsDeclared(symbol)) {
     throw std::runtime_error("Variable has locally declared");
   }
 
-  DEBUG_SINGLE("ScopeLayer::DeclareVariable init")
+//  DEBUG_SINGLE("ScopeLayer::DeclareVariable init")
   local_vars_[symbol] = std::make_shared<UninitObject>(type);
 }
 
@@ -68,7 +70,7 @@ void ScopeLayer::Set(Symbol symbol, std::shared_ptr<Object> value) {
 }
 
 bool ScopeLayer::IsClassData(Symbol symbol) const {
-  DEBUG_SINGLE("ScopeLayer::IsClassData")
+//  DEBUG_SINGLE("ScopeLayer::IsClassData")
   if (function_type_.IsMain() || class_scope_ == shared_from_this()) {
     return false;
   } 
@@ -77,7 +79,7 @@ bool ScopeLayer::IsClassData(Symbol symbol) const {
 }
 
 bool ScopeLayer::IsArgument(Symbol symbol) const {
-  DEBUG_SINGLE("ScopeLayer::IsArgument")
+//  DEBUG_SINGLE("ScopeLayer::IsArgument")
   if (function_type_.IsMain()) {
     return false;
   } 
@@ -92,7 +94,7 @@ bool ScopeLayer::IsArgument(Symbol symbol) const {
 }
 
 Type ScopeLayer::GetType(Symbol symbol) const {
-  DEBUG_SINGLE("ScopeLayer::GetType")
+//  DEBUG_SINGLE("ScopeLayer::GetType")
   if (local_vars_.find(symbol) != local_vars_.end()) {
     return Get(symbol)->GetType();
   } else if (IsArgument(symbol)) {
@@ -109,19 +111,19 @@ Type ScopeLayer::GetType(Symbol symbol) const {
 }
 
 void ScopeLayer::SetMain() {
-  DEBUG_SINGLE("ScopeLayer::SetMain")
+//  DEBUG_SINGLE("ScopeLayer::SetMain")
   function_type_.is_main = true;
 }
 
 bool ScopeLayer::IsDeclared(Symbol symbol) const {
-  DEBUG_SINGLE("ScopeLayer::IsDeclared")
+//  DEBUG_SINGLE("ScopeLayer::IsDeclared")
   return local_vars_.find(symbol) != local_vars_.end() || IsArgument(symbol) ||
     IsClassData(symbol);
 }
 
 
 bool ScopeLayer::IsDeclaredAnywhere(Symbol symbol) const {
-  DEBUG_SINGLE("ScopeLayer::IsDeclaredAnywhere")
+//  DEBUG_SINGLE("ScopeLayer::IsDeclaredAnywhere")
   return IsDeclared(symbol) || 
     (parent_ != shared_from_this() && parent_->IsDeclaredAnywhere(symbol));
 }

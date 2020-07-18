@@ -4,12 +4,16 @@ struct AssertException {};
 
 Interpreter::Interpreter(const std::string& filename)
   : tos_value_{std::make_shared<Integer>(0)},
-    symbol_tree_visitor_(std::make_shared<SymbolTreeVisitor>(filename)) {
+    symbol_tree_visitor_(std::make_shared<SymbolTreeVisitor>(filename)),
+    current_frame_{std::make_shared<Frame>(FunctionType(true))},
+    function_table_{std::make_shared<FunctionTable>()} {
 }
 
 Interpreter::Interpreter()
   : tos_value_{std::make_shared<Integer>(0)},
-    symbol_tree_visitor_(std::make_shared<SymbolTreeVisitor>()) {
+    symbol_tree_visitor_(std::make_shared<SymbolTreeVisitor>()), 
+    current_frame_{std::make_shared<Frame>(FunctionType(true))},
+    function_table_{std::make_shared<FunctionTable>()} {
 }
 
 void Interpreter::Visit(std::shared_ptr<Program> element) {
@@ -18,18 +22,18 @@ void Interpreter::Visit(std::shared_ptr<Program> element) {
   // Build symbol tree
   symbol_tree_visitor_->Visit(element);
   DEBUG_START DEBUG_FINISH DEBUG_START DEBUG_FINISH
-  // Init tree iterator
   
+  // Init tree iterator
   current_scope_ = ScopeLayerTree::Iterator(
       symbol_tree_visitor_->GetTree()->GetRoot());
 
-  current_scope_.GoDown();
+  ScopeDown();
 
   element->class_decl_list->Accept(shared_from_this());
 
-  current_scope_.GoDown();
+  ScopeDown();
   element->main_class->Accept(shared_from_this());
-  current_scope_.GoUp();
+  ScopeUp();
 }
 
 void Interpreter::Visit(std::shared_ptr<MainClass> element) {
@@ -55,36 +59,36 @@ void Interpreter::Visit(std::shared_ptr<LocalVarDeclStmt> element) {
 void Interpreter::Visit(std::shared_ptr<StmtListStmt> element) {
   DEBUG_SINGLE(">>> Interpreter: StmtListStmt")
 
-  current_scope_.GoDown();
+  ScopeDown();
   element->stmt_list->Accept(shared_from_this());
-  current_scope_.GoUp();
+  ScopeUp();
 }
 
 void Interpreter::Visit(std::shared_ptr<IfStmt> element) {
   DEBUG_SINGLE(">>> Interpreter: IfStmt")
 
-  current_scope_.GoDown();
+  ScopeDown();
   if (Accept(element->expr)->ToBool()) { 
     element->stmt->Accept(shared_from_this()); 
   }
-  current_scope_.GoUp();
+  ScopeUp();
 }
 
 void Interpreter::Visit(std::shared_ptr<IfElseStmt> element) {
   DEBUG_SINGLE(">>> Interpreter: IfElseStmt")
 
   if (Accept(element->expr)->ToBool()) { 
-    current_scope_.GoDown();
+    ScopeDown();
     tos_value_ = Accept(element->stmt_true);
-    current_scope_.GoUp();
-    current_scope_.GoDown();
-    current_scope_.GoUp();
+    ScopeUp();
+    ScopeDown();
+    ScopeUp();
   } else {
-    current_scope_.GoDown();
-    current_scope_.GoUp();
-    current_scope_.GoDown();
+    ScopeDown();
+    ScopeUp();
+    ScopeDown();
     tos_value_ = Accept(element->stmt_false);
-    current_scope_.GoUp();
+    ScopeUp();
   }
 }
 
@@ -98,9 +102,9 @@ void Interpreter::Visit(std::shared_ptr<WhileStmt> element) {
   while (Accept(element->expr)->ToBool()) {
     true_stmt = true;
 
-    current_scope_.GoDown();
+    ScopeDown();
     element->stmt->Accept(shared_from_this()); 
-    current_scope_.GoUp();
+    ScopeUp();
 
     new_current_scope = current_scope_;
     current_scope_ = old_current_scope;
@@ -108,8 +112,8 @@ void Interpreter::Visit(std::shared_ptr<WhileStmt> element) {
   current_scope_ = new_current_scope;
 
   if (!true_stmt) {
-    current_scope_.GoDown();
-    current_scope_.GoUp();
+    ScopeDown();
+    ScopeUp();
   }
 }
 
@@ -131,14 +135,28 @@ void Interpreter::Visit(std::shared_ptr<AssignmentStmt> element) {
     DEBUG("Is var") 
     DEBUG(element->lvalue->name)
     DEBUG("declared:")
-    DEBUG((bool) current_scope_->IsDeclaredAnywhere(element->lvalue->name))
+//  current_scope_ is "deprecated"
+//    DEBUG((bool) current_scope_->IsDeclaredAnywhere(element->lvalue->name))
+    DEBUG((bool) function_table_->IsDeclared(element->lvalue->name))
   DEBUG_FINISH
-  for (auto& pr : current_scope_->GetVars()) {
-    DEBUG_START DEBUG(pr.first.GetName()) DEBUG(pr.second) DEBUG_FINISH
+//  current_scope_ is "deprecated"
+//  for (auto& pr : current_scope_->GetVars()) {
+//    DEBUG_START DEBUG(pr.first.GetName()) DEBUG(pr.second) DEBUG_FINISH
+//  }
+/*
+#if DEBUG_ON
+  for (auto& symbol : function_table_->symbols_) {
+    DEBUG_START 
+      DEBUG(symbol.GetName())
+      DEBUG(function_table_->GetOffset(symbol))
+      DEBUG(current_frame_->GetValue(function_table_->GetOffset(symbol))
+    DEBUG_FINISH
   }
-
+#endif
+*/
   auto value = Accept(element->expr);
-  std::shared_ptr<Object> var = current_scope_->Get(element->lvalue->name);
+  size_t offset = function_table_->GetOffset(element->lvalue->name);
+  std::shared_ptr<Object> var = current_frame_->GetValue(offset);
   if (element->lvalue->expr) {  // arr[i] = x
     DEBUG_SINGLE(">>> Interpreter: Assignment subscript")
     DEBUG_SINGLE(var->IsArray())
@@ -148,7 +166,9 @@ void Interpreter::Visit(std::shared_ptr<AssignmentStmt> element) {
 //    DEBUG_SINGLE('\n')
   } else {  // a = b
     DEBUG_SINGLE(">>> Interpreter: Assignment no subscript")
-    current_scope_->Set(element->lvalue->name, value);
+    current_frame_->SetValue(
+        function_table_->GetOffset(Symbol(element->lvalue->name)),
+        value);
 //    current_scope_->Get(element->lvalue->name)->Print(std::cout);
 //    DEBUG_SINGLE('\n')
   }
@@ -270,9 +290,20 @@ void Interpreter::Visit(std::shared_ptr<NotExpr> element) {
 void Interpreter::Visit(std::shared_ptr<IdentExpr> element) {
   DEBUG_SINGLE(">>> Interpreter: IdentExpr")
 
-  DEBUG_SINGLE(current_scope_.current_child_index_)
+//  current_scope_ is "deprecated"
+//  DEBUG_SINGLE(current_scope_.current_child_index_)
 
-  SetTosValue(current_scope_->Get(element->name));
+/*
+  DEBUG_START 
+    DEBUG(element->name)
+    DEBUG(function_table_->GetOffset(Symbol(element->name)))
+    DEBUG(current_frame_->GetValue(function_table_->GetOffset(Symbol(element->name)))
+  DEBUG_FINISH
+*/
+
+  SetTosValue(
+    current_frame_->GetValue(
+      function_table_->GetOffset(Symbol(element->name))));
 }
 
 void Interpreter::Visit(std::shared_ptr<MethodExpr> element) {
@@ -285,12 +316,16 @@ void Interpreter::Visit(std::shared_ptr<MethodExpr> element) {
 void Interpreter::Visit(std::shared_ptr<ClassDecl> element) {
   DEBUG_SINGLE(">>> Interpreter: ClassDecl")
 
-  current_scope_.GoDown();
-  current_scope_.GoUp();
+  ScopeDown();
+  ScopeUp();
 }
 
 void Interpreter::Visit(std::shared_ptr<VarDecl> element) {
   DEBUG_SINGLE(">>> Interpreter: VarDecl")
+
+  size_t offset = current_frame_->AllocVariable();
+  function_table_->DeclareVariable(Symbol(element->name));
+  function_table_->SetOffset(Symbol(element->name), offset);
 
   UnsetTosValue();
 }
@@ -298,8 +333,8 @@ void Interpreter::Visit(std::shared_ptr<VarDecl> element) {
 void Interpreter::Visit(std::shared_ptr<MethodDecl> element) {
   DEBUG_SINGLE(">>> Interpreter: MethodDecl")
 
-  current_scope_.GoDown();
-  current_scope_.GoUp();
+  ScopeDown();
+  ScopeUp();
 }
  
 void Interpreter::Visit(std::shared_ptr<Lvalue> element) {
@@ -314,14 +349,6 @@ void Interpreter::Visit(std::shared_ptr<MethodInvocation> element) {
   // TODO
 }
 
-void Interpreter::SetTosValue(std::shared_ptr<Object> value){
-  tos_value_ = value;
-}
-
-void Interpreter::UnsetTosValue(){
-  tos_value_ = std::make_shared<Integer>(0);
-}
-
 int Interpreter::GetResult(std::shared_ptr<Program> program) {
   UnsetTosValue();
   Visit(program);
@@ -334,4 +361,24 @@ std::shared_ptr<Object> Interpreter::Accept(
     std::shared_ptr<BasicElement> element) {
   element->Accept(shared_from_this());
   return tos_value_;
+}
+
+void Interpreter::SetTosValue(std::shared_ptr<Object> value){
+  tos_value_ = value;
+}
+
+void Interpreter::UnsetTosValue(){
+  tos_value_ = std::make_shared<Integer>(0);
+}
+
+void Interpreter::ScopeDown() {
+  current_scope_.GoDown();
+  current_frame_->AllocScope();
+  function_table_->BeginScope();
+}
+
+void Interpreter::ScopeUp() {
+  current_scope_.GoUp();
+  current_frame_->DeallocScope();
+  function_table_->EndScope();
 }

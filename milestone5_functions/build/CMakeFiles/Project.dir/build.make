@@ -1077,9 +1077,57 @@ CMakeFiles/Project.dir/include/functions/MethodInvocation.cpp.o.provides: CMakeF
 CMakeFiles/Project.dir/include/functions/MethodInvocation.cpp.o.provides.build: CMakeFiles/Project.dir/include/functions/MethodInvocation.cpp.o
 
 
+CMakeFiles/Project.dir/include/functions/Frame.cpp.o: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/include/functions/Frame.cpp.o: ../include/functions/Frame.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone5_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/Project.dir/include/functions/Frame.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/functions/Frame.cpp.o -c /compilers/compilers_course_4sem_2020/milestone5_functions/include/functions/Frame.cpp
+
+CMakeFiles/Project.dir/include/functions/Frame.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/include/functions/Frame.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /compilers/compilers_course_4sem_2020/milestone5_functions/include/functions/Frame.cpp > CMakeFiles/Project.dir/include/functions/Frame.cpp.i
+
+CMakeFiles/Project.dir/include/functions/Frame.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/include/functions/Frame.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /compilers/compilers_course_4sem_2020/milestone5_functions/include/functions/Frame.cpp -o CMakeFiles/Project.dir/include/functions/Frame.cpp.s
+
+CMakeFiles/Project.dir/include/functions/Frame.cpp.o.requires:
+
+.PHONY : CMakeFiles/Project.dir/include/functions/Frame.cpp.o.requires
+
+CMakeFiles/Project.dir/include/functions/Frame.cpp.o.provides: CMakeFiles/Project.dir/include/functions/Frame.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/functions/Frame.cpp.o.provides.build
+.PHONY : CMakeFiles/Project.dir/include/functions/Frame.cpp.o.provides
+
+CMakeFiles/Project.dir/include/functions/Frame.cpp.o.provides.build: CMakeFiles/Project.dir/include/functions/Frame.cpp.o
+
+
+CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.o: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.o: ../include/functions/FunctionTable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone5_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.o -c /compilers/compilers_course_4sem_2020/milestone5_functions/include/functions/FunctionTable.cpp
+
+CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /compilers/compilers_course_4sem_2020/milestone5_functions/include/functions/FunctionTable.cpp > CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.i
+
+CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /compilers/compilers_course_4sem_2020/milestone5_functions/include/functions/FunctionTable.cpp -o CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.s
+
+CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.o.requires:
+
+.PHONY : CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.o.requires
+
+CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.o.provides: CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.o.provides.build
+.PHONY : CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.o.provides
+
+CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.o.provides.build: CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.o
+
+
 CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o: ../include/functions/FunctionStorage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone5_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone5_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o -c /compilers/compilers_course_4sem_2020/milestone5_functions/include/functions/FunctionStorage.cpp
 
 CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.i: cmake_force
@@ -1103,7 +1151,7 @@ CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o.provides.build: C
 
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/visitors/PrintVisitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone5_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone5_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o -c /compilers/compilers_course_4sem_2020/milestone5_functions/include/visitors/PrintVisitor.cpp
 
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.i: cmake_force
@@ -1127,7 +1175,7 @@ CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o.provides.build: CMake
 
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/visitors/Interpreter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone5_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone5_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o -c /compilers/compilers_course_4sem_2020/milestone5_functions/include/visitors/Interpreter.cpp
 
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.i: cmake_force
@@ -1151,7 +1199,7 @@ CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o.provides.build: CMakeF
 
 CMakeFiles/Project.dir/include/visitors/TemplateVisitor.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/visitors/TemplateVisitor.cpp.o: ../include/visitors/TemplateVisitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone5_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/Project.dir/include/visitors/TemplateVisitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone5_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/Project.dir/include/visitors/TemplateVisitor.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/visitors/TemplateVisitor.cpp.o -c /compilers/compilers_course_4sem_2020/milestone5_functions/include/visitors/TemplateVisitor.cpp
 
 CMakeFiles/Project.dir/include/visitors/TemplateVisitor.cpp.i: cmake_force
@@ -1175,7 +1223,7 @@ CMakeFiles/Project.dir/include/visitors/TemplateVisitor.cpp.o.provides.build: CM
 
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/visitors/SymbolTreeVisitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone5_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone5_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o -c /compilers/compilers_course_4sem_2020/milestone5_functions/include/visitors/SymbolTreeVisitor.cpp
 
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.i: cmake_force
@@ -1199,7 +1247,7 @@ CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o.provides.build: 
 
 CMakeFiles/Project.dir/debug.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/debug.cpp.o: ../debug.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone5_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/Project.dir/debug.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/compilers/compilers_course_4sem_2020/milestone5_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object CMakeFiles/Project.dir/debug.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/debug.cpp.o -c /compilers/compilers_course_4sem_2020/milestone5_functions/debug.cpp
 
 CMakeFiles/Project.dir/debug.cpp.i: cmake_force
@@ -1265,6 +1313,8 @@ Project_OBJECTS = \
 "CMakeFiles/Project.dir/include/types/Function.cpp.o" \
 "CMakeFiles/Project.dir/include/value_categories/Lvalue.cpp.o" \
 "CMakeFiles/Project.dir/include/functions/MethodInvocation.cpp.o" \
+"CMakeFiles/Project.dir/include/functions/Frame.cpp.o" \
+"CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.o" \
 "CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o" \
 "CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o" \
 "CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o" \
@@ -1317,6 +1367,8 @@ Project_EXTERNAL_OBJECTS =
 ../bin/Project: CMakeFiles/Project.dir/include/types/Function.cpp.o
 ../bin/Project: CMakeFiles/Project.dir/include/value_categories/Lvalue.cpp.o
 ../bin/Project: CMakeFiles/Project.dir/include/functions/MethodInvocation.cpp.o
+../bin/Project: CMakeFiles/Project.dir/include/functions/Frame.cpp.o
+../bin/Project: CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.o
 ../bin/Project: CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o
 ../bin/Project: CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o
 ../bin/Project: CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o
@@ -1325,7 +1377,7 @@ Project_EXTERNAL_OBJECTS =
 ../bin/Project: CMakeFiles/Project.dir/debug.cpp.o
 ../bin/Project: CMakeFiles/Project.dir/build.make
 ../bin/Project: CMakeFiles/Project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/compilers/compilers_course_4sem_2020/milestone5_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Linking CXX executable ../bin/Project"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/compilers/compilers_course_4sem_2020/milestone5_functions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Linking CXX executable ../bin/Project"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Project.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -1375,6 +1427,8 @@ CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/include/types/UninitObje
 CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/include/types/Function.cpp.o.requires
 CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/include/value_categories/Lvalue.cpp.o.requires
 CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/include/functions/MethodInvocation.cpp.o.requires
+CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/include/functions/Frame.cpp.o.requires
+CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/include/functions/FunctionTable.cpp.o.requires
 CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/include/functions/FunctionStorage.cpp.o.requires
 CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o.requires
 CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o.requires

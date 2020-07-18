@@ -57,7 +57,7 @@
 // functions
 #include "functions/MethodInvocation.hpp"
 #include "functions/CommaExprList.hpp"
-//#include "functions/Frame.hpp"
-//#include "functions/FunctionTable.hpp"
+#include "functions/Frame.hpp"
+#include "functions/FunctionTable.hpp"
 #include "functions/FunctionStorage.hpp"
 
