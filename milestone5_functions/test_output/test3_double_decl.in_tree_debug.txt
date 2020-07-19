@@ -1,9 +1,9 @@
 >>> Interpreter: Program
 >>> PrintVisitor: Program
 GoDown
-Current state: parent: 0x56452f4ca880 ; child index: 1 
+Current state: parent: 0x55679f99b880 ; child index: 1 
 GoDown
-Current state: parent: 0x56452f4cb4b0 ; child index: 0 
+Current state: parent: 0x55679f99c4b0 ; child index: 0 
 >>> PrintVisitor: MainClass
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false x 

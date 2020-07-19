@@ -23,7 +23,7 @@ class Main {
     dog.Bark();
     house.AddDog(dog);
 
-    (house.GetDog(1)).Bark();
+    (house.GetDog(0)).Bark();
   }
 }
 

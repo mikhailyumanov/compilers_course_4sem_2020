@@ -1,9 +1,9 @@
 >>> Interpreter: Program
 >>> PrintVisitor: Program
 GoDown
-Current state: parent: 0x55fdde76f8c0 ; child index: 1 
+Current state: parent: 0x558ed91828c0 ; child index: 1 
 GoDown
-Current state: parent: 0x55fdde7704a0 ; child index: 0 
+Current state: parent: 0x558ed91834a0 ; child index: 0 
 >>> PrintVisitor: MainClass
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IntExpr 6 
@@ -16,13 +16,13 @@ ScopeLayer::IsArgument
 >>> PrintVisitor: AssignmentStmt
 >>> PrintVisitor: IntExpr 5 
 GoUp
-Current state: parent: 0x55fdde76f8c0 ; child index: 1 
+Current state: parent: 0x558ed91828c0 ; child index: 1 
 
 
 GoDown
-Current state: parent: 0x55fdde76f8c0 ; child index: 1 
+Current state: parent: 0x558ed91828c0 ; child index: 1 
 GoDown
-Current state: parent: 0x55fdde7704a0 ; child index: 0 
+Current state: parent: 0x558ed91834a0 ; child index: 0 
 >>> Interpreter: MainClass
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
@@ -39,4 +39,4 @@ Is var x declared: 1
 >>> Interpreter: IntExpr
 >>> Interpreter: Assignment no subscript
 GoUp
-Current state: parent: 0x55fdde76f8c0 ; child index: 1 
+Current state: parent: 0x558ed91828c0 ; child index: 1 

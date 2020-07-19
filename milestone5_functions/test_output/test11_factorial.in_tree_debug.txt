@@ -1,17 +1,19 @@
 >>> Interpreter: Program
 >>> PrintVisitor: Program
 GoDown
-Current state: parent: 0x55fdf035b880 ; child index: 1 
+Current state: parent: 0x55ef62ca3880 ; child index: 1 
 GoDown
-Current state: parent: 0x55fdf035c4d0 ; child index: 0 
+Current state: parent: 0x55ef62ca44d0 ; child index: 0 
 >>> PrintVisitor: ClassDecl Fac 
 SymbolTreeVisitor::FunctionScopeDown
 Return type: int; Args: num(type: int, is_array: false), 
 GoDown
-Current state: parent: 0x55fdf035c5f0 ; child index: 0 
+Current state: parent: 0x55ef62ca45f0 ; child index: 0 
 Return type: int; Args: num(type: int, is_array: false), 
 >>> PrintVisitor: MethodDecl Return type: int; Args: num(type: int, is_array: false),  ComputeFac 
 ComputeFac Return type: int; Args: num(type: int, is_array: false),  Return type: int; Args: num(type: int, is_array: false),  
+GoDown
+Current state: parent: 0x55ef62ca4850 ; child index: 0 
 >>> PrintVisitor: AssertStmt
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr num 
@@ -49,7 +51,7 @@ ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array:
 ScopeLayer::IsArgument: num num
 >>> PrintVisitor: IntExpr 0 
 GoDown
-Current state: parent: 0x55fdf035c850 ; child index: 0 
+Current state: parent: 0x55ef62ca4a90 ; child index: 0 
 >>> PrintVisitor: AssignmentStmt
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
@@ -67,9 +69,9 @@ ScopeLayer::IsArgument not main Return type: ; Args:
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: ; Args:  
 GoUp
-Current state: parent: 0x55fdf035c5f0 ; child index: 0 
+Current state: parent: 0x55ef62ca4850 ; child index: 0 
 GoDown
-Current state: parent: 0x55fdf035c850 ; child index: 1 
+Current state: parent: 0x55ef62ca4a90 ; child index: 1 
 >>> PrintVisitor: AssignmentStmt
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
@@ -106,9 +108,9 @@ ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array:
 ScopeLayer::IsArgument: num num
 >>> PrintVisitor: IntExpr 1 
 GoDown
-Current state: parent: 0x55fdf035cdf0 ; child index: 0 
+Current state: parent: 0x55ef62ca4fc0 ; child index: 0 
 GoUp
-Current state: parent: 0x55fdf035c850 ; child index: 1 
+Current state: parent: 0x55ef62ca4a90 ; child index: 1 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
 ScopeLayer::IsArgument: num num_aux
@@ -117,18 +119,20 @@ ScopeLayer::IsArgument not main Return type: ; Args:
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: ; Args:  
 GoUp
-Current state: parent: 0x55fdf035c5f0 ; child index: 0 
+Current state: parent: 0x55ef62ca4850 ; child index: 0 
 >>> PrintVisitor: ReturnStmt
 >>> PrintVisitor: IdentExpr num_aux 
+GoUp
+Current state: parent: 0x55ef62ca45f0 ; child index: 0 
 MethodDecl:  Return type: int; Args: num(type: int, is_array: false),  Return type: int; Args: num(type: int, is_array: false),  
 Return type: int; Args: num(type: int, is_array: false), 
 ScopeLayerTree::SetFunctionScope Return type: int; Args: num(type: int, is_array: false),  Return type: int; Args: num(type: int, is_array: false),  
 GoUp
-Current state: parent: 0x55fdf035c4d0 ; child index: 0 
+Current state: parent: 0x55ef62ca44d0 ; child index: 0 
 GoUp
-Current state: parent: 0x55fdf035b880 ; child index: 1 
+Current state: parent: 0x55ef62ca3880 ; child index: 1 
 GoDown
-Current state: parent: 0x55fdf035c4d0 ; child index: 1 
+Current state: parent: 0x55ef62ca44d0 ; child index: 1 
 >>> PrintVisitor: MainClass
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: MethodExpr
@@ -137,22 +141,22 @@ Current state: parent: 0x55fdf035c4d0 ; child index: 1
 ComputeFac
 >>> PrintVisitor: IntExpr 10 
 GoDown
-Current state: parent: 0x55fdf03679e0 ; child index: 0 
+Current state: parent: 0x55ef62caf9e0 ; child index: 0 
 GoUp
-Current state: parent: 0x55fdf035c4d0 ; child index: 1 
+Current state: parent: 0x55ef62ca44d0 ; child index: 1 
 GoUp
-Current state: parent: 0x55fdf035b880 ; child index: 1 
+Current state: parent: 0x55ef62ca3880 ; child index: 1 
 
 
 GoDown
-Current state: parent: 0x55fdf035b880 ; child index: 1 
+Current state: parent: 0x55ef62ca3880 ; child index: 1 
 >>> Interpreter: ClassDecl
 GoDown
-Current state: parent: 0x55fdf035c4d0 ; child index: 0 
+Current state: parent: 0x55ef62ca44d0 ; child index: 0 
 GoUp
-Current state: parent: 0x55fdf035b880 ; child index: 1 
+Current state: parent: 0x55ef62ca3880 ; child index: 1 
 GoDown
-Current state: parent: 0x55fdf035c4d0 ; child index: 1 
+Current state: parent: 0x55ef62ca44d0 ; child index: 1 
 >>> Interpreter: MainClass
 >>> Interpreter: PrintStmt
 >>> Interpreter: MethodExpr
@@ -163,9 +167,13 @@ Constructor::Construct
 Constructor::GetInstance
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x55fdf03679e0 ; child index: 0 
+Current state: parent: 0x55ef62caf9e0 ; child index: 0 
+GoUp
+Current state: parent: 0x55ef62ca44d0 ; child index: 1 
 GoDown
-Current state: parent: 0x55fdf0367b00 ; child index: 0 
+Current state: parent: 0x55ef62caf9e0 ; child index: 0 
+GoDown
+Current state: parent: 0x55ef62cafb00 ; child index: 0 
 >>> Interpreter: AssertStmt
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
@@ -189,100 +197,9 @@ ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array:
 ScopeLayer::IsArgument: num num
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x55fdf0368050 ; child index: 0 
+Current state: parent: 0x55ef62ca4850 ; child index: 0 
 GoUp
-Current state: parent: 0x55fdf0367b00 ; child index: 0 
+Current state: parent: 0x55ef62cafb00 ; child index: 0 
 GoDown
-Current state: parent: 0x55fdf0368050 ; child index: 1 
+Current state: parent: 0x55ef62ca4850 ; child index: 1 
 >>> Interpreter: AssignmentStmt
-Is var num_aux declared: ScopeLayer::IsArgument
-ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
-ScopeLayer::IsArgument: num num_aux
-ScopeLayer::IsArgument
-ScopeLayer::IsArgument not main Return type: ; Args:  
-ScopeLayer::IsArgument
-ScopeLayer::IsArgument not main Return type: ; Args:  
-0 
->>> Interpreter: BinOpExpr
->>> Interpreter: IdentExpr
-ScopeLayer::IsArgument
-ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
-ScopeLayer::IsArgument: num num
-ScopeLayer::IsArgument
-ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
-ScopeLayer::IsArgument: num num
->>> Interpreter: MethodExpr
->>> Interpreter: MethodInvocation
->>> Interpreter: ThisExpr
->>> Interpreter: BinOpExpr
->>> Interpreter: IdentExpr
-ScopeLayer::IsArgument
-ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
-ScopeLayer::IsArgument: num num
-ScopeLayer::IsArgument
-ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
-ScopeLayer::IsArgument: num num
->>> Interpreter: IntExpr
-GoDown
-Current state: parent: 0x55fdf035cdf0 ; child index: 0 
-GoDown
-Current state: parent: 0x55fdf035cfa0 ; child index: 0 
->>> Interpreter: AssertStmt
->>> Interpreter: BinOpExpr
->>> Interpreter: IdentExpr
-ScopeLayer::IsArgument
-ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
-ScopeLayer::IsArgument: num num
-ScopeLayer::IsArgument
-ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
-ScopeLayer::IsArgument: num num
->>> Interpreter: IntExpr
->>> Interpreter: LocalVarDeclStmt
->>> Interpreter: VarDecl
->>> Interpreter: IfElseStmt
->>> Interpreter: BinOpExpr
->>> Interpreter: IdentExpr
-ScopeLayer::IsArgument
-ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
-ScopeLayer::IsArgument: num num
-ScopeLayer::IsArgument
-ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
-ScopeLayer::IsArgument: num num
->>> Interpreter: IntExpr
-GoDown
-Current state: parent: 0x55fdf0368b80 ; child index: 0 
-GoUp
-Current state: parent: 0x55fdf035cfa0 ; child index: 0 
-GoDown
-Current state: parent: 0x55fdf0368b80 ; child index: 1 
->>> Interpreter: AssignmentStmt
-Is var num_aux declared: ScopeLayer::IsArgument
-ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
-ScopeLayer::IsArgument: num num_aux
-ScopeLayer::IsArgument
-ScopeLayer::IsArgument not main Return type: ; Args:  
-ScopeLayer::IsArgument
-ScopeLayer::IsArgument not main Return type: ; Args:  
-0 
->>> Interpreter: BinOpExpr
->>> Interpreter: IdentExpr
-ScopeLayer::IsArgument
-ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
-ScopeLayer::IsArgument: num num
-ScopeLayer::IsArgument
-ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
-ScopeLayer::IsArgument: num num
->>> Interpreter: MethodExpr
->>> Interpreter: MethodInvocation
->>> Interpreter: ThisExpr
->>> Interpreter: BinOpExpr
->>> Interpreter: IdentExpr
-ScopeLayer::IsArgument
-ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
-ScopeLayer::IsArgument: num num
-ScopeLayer::IsArgument
-ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
-ScopeLayer::IsArgument: num num
->>> Interpreter: IntExpr
-GoDown
-Current state: parent: 0x55fdf035cdf0 ; child index: 1 

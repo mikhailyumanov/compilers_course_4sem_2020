@@ -1,9 +1,9 @@
 >>> Interpreter: Program
 >>> PrintVisitor: Program
 GoDown
-Current state: parent: 0x55f5cda338d0 ; child index: 1 
+Current state: parent: 0x5557c0f7d8d0 ; child index: 1 
 GoDown
-Current state: parent: 0x55f5cda344e0 ; child index: 0 
+Current state: parent: 0x5557c0f7e4e0 ; child index: 0 
 >>> PrintVisitor: ClassDecl Dog 
 >>> PrintVisitor: VarDecl type: int, is_array: false dog_index 
 dog_index type: int, is_array: false 
@@ -15,10 +15,12 @@ VarDecl: IsMethodDecl
 SymbolTreeVisitor::FunctionScopeDown
 Return type: void; Args: idx(type: int, is_array: false), 
 GoDown
-Current state: parent: 0x55f5cda34600 ; child index: 0 
+Current state: parent: 0x5557c0f7e600 ; child index: 0 
 Return type: void; Args: idx(type: int, is_array: false), 
 >>> PrintVisitor: MethodDecl Return type: void; Args: idx(type: int, is_array: false),  SetIndex 
 SetIndex Return type: void; Args: idx(type: int, is_array: false),  Return type: void; Args: idx(type: int, is_array: false),  
+GoDown
+Current state: parent: 0x5557c0f7ea30 ; child index: 0 
 >>> PrintVisitor: AssignmentStmt
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: void; Args: idx(type: int, is_array: false),  
@@ -36,33 +38,39 @@ ScopeLayer::IsArgument: idx idx
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: void; Args: idx(type: int, is_array: false),  
 ScopeLayer::IsArgument: idx dog_index
+GoUp
+Current state: parent: 0x5557c0f7e600 ; child index: 0 
 MethodDecl:  Return type: void; Args: idx(type: int, is_array: false),  Return type: void; Args: idx(type: int, is_array: false),  
 Return type: void; Args: idx(type: int, is_array: false), 
 ScopeLayerTree::SetFunctionScope Return type: void; Args: idx(type: int, is_array: false),  Return type: void; Args: idx(type: int, is_array: false),  
 GoUp
-Current state: parent: 0x55f5cda344e0 ; child index: 0 
+Current state: parent: 0x5557c0f7e4e0 ; child index: 0 
 SymbolTreeVisitor::FunctionScopeDown
 Return type: void; Args: 
 GoDown
-Current state: parent: 0x55f5cda34600 ; child index: 1 
+Current state: parent: 0x5557c0f7e600 ; child index: 1 
 Return type: void; Args: 
 >>> PrintVisitor: MethodDecl Return type: void; Args:  Bark 
 Bark Return type: void; Args:  Return type: void; Args:  
+GoDown
+Current state: parent: 0x5557c0f7f150 ; child index: 0 
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IdentExpr dog_index 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: void; Args:  
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: void; Args:  
+GoUp
+Current state: parent: 0x5557c0f7e600 ; child index: 1 
 MethodDecl:  Return type: void; Args:  Return type: void; Args:  
 Return type: void; Args: 
 ScopeLayerTree::SetFunctionScope Return type: void; Args:  Return type: void; Args:  
 GoUp
-Current state: parent: 0x55f5cda344e0 ; child index: 0 
+Current state: parent: 0x5557c0f7e4e0 ; child index: 0 
 GoUp
-Current state: parent: 0x55f5cda338d0 ; child index: 1 
+Current state: parent: 0x5557c0f7d8d0 ; child index: 1 
 GoDown
-Current state: parent: 0x55f5cda344e0 ; child index: 1 
+Current state: parent: 0x5557c0f7e4e0 ; child index: 1 
 >>> PrintVisitor: ClassDecl House 
 >>> PrintVisitor: VarDecl type: Dog, is_array: true dogs 
 dogs type: Dog, is_array: true 
@@ -81,10 +89,12 @@ VarDecl: IsMethodDecl
 SymbolTreeVisitor::FunctionScopeDown
 Return type: void; Args: new_num(type: int, is_array: false), 
 GoDown
-Current state: parent: 0x55f5cda35450 ; child index: 0 
+Current state: parent: 0x5557c0f8da40 ; child index: 0 
 Return type: void; Args: new_num(type: int, is_array: false), 
 >>> PrintVisitor: MethodDecl Return type: void; Args: new_num(type: int, is_array: false),  SetNumDogs 
 SetNumDogs Return type: void; Args: new_num(type: int, is_array: false),  Return type: void; Args: new_num(type: int, is_array: false),  
+GoDown
+Current state: parent: 0x5557c0f8de30 ; child index: 0 
 >>> PrintVisitor: AssignmentStmt
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: void; Args: new_num(type: int, is_array: false),  
@@ -102,18 +112,22 @@ ScopeLayer::IsArgument: new_num new_num
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: void; Args: new_num(type: int, is_array: false),  
 ScopeLayer::IsArgument: new_num num_dogs
+GoUp
+Current state: parent: 0x5557c0f8da40 ; child index: 0 
 MethodDecl:  Return type: void; Args: new_num(type: int, is_array: false),  Return type: void; Args: new_num(type: int, is_array: false),  
 Return type: void; Args: new_num(type: int, is_array: false), 
 ScopeLayerTree::SetFunctionScope Return type: void; Args: new_num(type: int, is_array: false),  Return type: void; Args: new_num(type: int, is_array: false),  
 GoUp
-Current state: parent: 0x55f5cda344e0 ; child index: 1 
+Current state: parent: 0x5557c0f7e4e0 ; child index: 1 
 SymbolTreeVisitor::FunctionScopeDown
 Return type: void; Args: new_dogs(type: Dog, is_array: true), 
 GoDown
-Current state: parent: 0x55f5cda35450 ; child index: 1 
+Current state: parent: 0x5557c0f8da40 ; child index: 1 
 Return type: void; Args: new_dogs(type: Dog, is_array: true), 
 >>> PrintVisitor: MethodDecl Return type: void; Args: new_dogs(type: Dog, is_array: true),  SetDogs 
 SetDogs Return type: void; Args: new_dogs(type: Dog, is_array: true),  Return type: void; Args: new_dogs(type: Dog, is_array: true),  
+GoDown
+Current state: parent: 0x5557c0f8e4f0 ; child index: 0 
 >>> PrintVisitor: AssignmentStmt
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: void; Args: new_dogs(type: Dog, is_array: true),  
@@ -131,20 +145,24 @@ ScopeLayer::IsArgument: new_dogs new_dogs
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: void; Args: new_dogs(type: Dog, is_array: true),  
 ScopeLayer::IsArgument: new_dogs dogs
+GoUp
+Current state: parent: 0x5557c0f8da40 ; child index: 1 
 MethodDecl:  Return type: void; Args: new_dogs(type: Dog, is_array: true),  Return type: void; Args: new_dogs(type: Dog, is_array: true),  
 Return type: void; Args: new_dogs(type: Dog, is_array: true), 
 ScopeLayerTree::SetFunctionScope Return type: void; Args: new_dogs(type: Dog, is_array: true),  Return type: void; Args: new_dogs(type: Dog, is_array: true),  
 GoUp
-Current state: parent: 0x55f5cda344e0 ; child index: 1 
+Current state: parent: 0x5557c0f7e4e0 ; child index: 1 
 SymbolTreeVisitor::FunctionScopeDown
 Return type: void; Args: new_dog(type: Dog, is_array: false), 
 GoDown
-Current state: parent: 0x55f5cda35450 ; child index: 2 
+Current state: parent: 0x5557c0f8da40 ; child index: 2 
 Return type: void; Args: new_dog(type: Dog, is_array: false), 
 >>> PrintVisitor: MethodDecl Return type: void; Args: new_dog(type: Dog, is_array: false),  AddDog 
 AddDog Return type: void; Args: new_dog(type: Dog, is_array: false),  Return type: void; Args: new_dog(type: Dog, is_array: false),  
 GoDown
-Current state: parent: 0x55f5cda44800 ; child index: 0 
+Current state: parent: 0x5557c0f8ea20 ; child index: 0 
+GoDown
+Current state: parent: 0x5557c0f8ec20 ; child index: 0 
 >>> PrintVisitor: IfStmt
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr num_dogs 
@@ -163,7 +181,7 @@ ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
 ScopeLayer::IsArgument: new_dog dogs
 GoDown
-Current state: parent: 0x55f5cda44a40 ; child index: 0 
+Current state: parent: 0x5557c0f8ee10 ; child index: 0 
 >>> PrintVisitor: StmtListStmt
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: Dog, is_array: true new_dogs 
@@ -199,7 +217,7 @@ ScopeLayer::IsArgument not main Return type: ; Args:
 >>> PrintVisitor: AssignmentStmt
 >>> PrintVisitor: IntExpr 0 
 GoDown
-Current state: parent: 0x55f5cda44bb0 ; child index: 0 
+Current state: parent: 0x5557c0f8ef80 ; child index: 0 
 >>> PrintVisitor: WhileStmt
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr i 
@@ -225,7 +243,7 @@ ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
 ScopeLayer::IsArgument: new_dog num_dogs
 GoDown
-Current state: parent: 0x55f5cda44ed0 ; child index: 0 
+Current state: parent: 0x5557c0f8f2f0 ; child index: 0 
 >>> PrintVisitor: StmtListStmt
 >>> PrintVisitor: AssignmentStmt
 ScopeLayer::IsArgument
@@ -397,9 +415,9 @@ ScopeLayer::IsArgument not main Return type: ; Args:
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: ; Args:  
 GoUp
-Current state: parent: 0x55f5cda44bb0 ; child index: 0 
+Current state: parent: 0x5557c0f8ef80 ; child index: 0 
 GoUp
-Current state: parent: 0x55f5cda44a40 ; child index: 0 
+Current state: parent: 0x5557c0f8ee10 ; child index: 0 
 >>> PrintVisitor: AssignmentStmt
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
@@ -409,9 +427,9 @@ ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
 ScopeLayer::IsArgument: new_dog dogs
 GoUp
-Current state: parent: 0x55f5cda44800 ; child index: 0 
+Current state: parent: 0x5557c0f8ec20 ; child index: 0 
 GoUp
-Current state: parent: 0x55f5cda35450 ; child index: 2 
+Current state: parent: 0x5557c0f8ea20 ; child index: 0 
 >>> PrintVisitor: AssignmentStmt
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
@@ -455,18 +473,22 @@ ScopeLayer::IsArgument: new_dog num_dogs
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
 ScopeLayer::IsArgument: new_dog num_dogs
+GoUp
+Current state: parent: 0x5557c0f8da40 ; child index: 2 
 MethodDecl:  Return type: void; Args: new_dog(type: Dog, is_array: false),  Return type: void; Args: new_dog(type: Dog, is_array: false),  
 Return type: void; Args: new_dog(type: Dog, is_array: false), 
 ScopeLayerTree::SetFunctionScope Return type: void; Args: new_dog(type: Dog, is_array: false),  Return type: void; Args: new_dog(type: Dog, is_array: false),  
 GoUp
-Current state: parent: 0x55f5cda344e0 ; child index: 1 
+Current state: parent: 0x5557c0f7e4e0 ; child index: 1 
 SymbolTreeVisitor::FunctionScopeDown
 Return type: Dog; Args: i(type: int, is_array: false), 
 GoDown
-Current state: parent: 0x55f5cda35450 ; child index: 3 
+Current state: parent: 0x5557c0f8da40 ; child index: 3 
 Return type: Dog; Args: i(type: int, is_array: false), 
 >>> PrintVisitor: MethodDecl Return type: Dog; Args: i(type: int, is_array: false),  GetDog 
 GetDog Return type: Dog; Args: i(type: int, is_array: false),  Return type: Dog; Args: i(type: int, is_array: false),  
+GoDown
+Current state: parent: 0x5557c0f8f860 ; child index: 0 
 >>> PrintVisitor: AssertStmt
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr i 
@@ -518,15 +540,17 @@ ScopeLayer::IsArgument: i i
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: Dog; Args: i(type: int, is_array: false),  
 ScopeLayer::IsArgument: i i
+GoUp
+Current state: parent: 0x5557c0f8da40 ; child index: 3 
 MethodDecl:  Return type: Dog; Args: i(type: int, is_array: false),  Return type: Dog; Args: i(type: int, is_array: false),  
 Return type: Dog; Args: i(type: int, is_array: false), 
 ScopeLayerTree::SetFunctionScope Return type: Dog; Args: i(type: int, is_array: false),  Return type: Dog; Args: i(type: int, is_array: false),  
 GoUp
-Current state: parent: 0x55f5cda344e0 ; child index: 1 
+Current state: parent: 0x5557c0f7e4e0 ; child index: 1 
 GoUp
-Current state: parent: 0x55f5cda338d0 ; child index: 1 
+Current state: parent: 0x5557c0f7d8d0 ; child index: 1 
 GoDown
-Current state: parent: 0x55f5cda344e0 ; child index: 2 
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
 >>> PrintVisitor: MainClass
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: House, is_array: false house 
@@ -540,9 +564,9 @@ ScopeLayer::IsArgument
 SetNumDogs
 >>> PrintVisitor: IntExpr 0 
 GoDown
-Current state: parent: 0x55f5cda45ad0 ; child index: 0 
+Current state: parent: 0x5557c0f8fd60 ; child index: 0 
 GoUp
-Current state: parent: 0x55f5cda344e0 ; child index: 2 
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
 >>> PrintVisitor: MethodStmt
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: IdentExpr house 
@@ -550,17 +574,17 @@ SetDogs
 >>> PrintVisitor: NewArrayExpr type =  Dog 
 >>> PrintVisitor: IntExpr 1 
 GoDown
-Current state: parent: 0x55f5cda45ad0 ; child index: 1 
+Current state: parent: 0x5557c0f8fd60 ; child index: 1 
 GoUp
-Current state: parent: 0x55f5cda344e0 ; child index: 2 
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
 GoDown
-Current state: parent: 0x55f5cda45ad0 ; child index: 2 
+Current state: parent: 0x5557c0f8fd60 ; child index: 2 
 >>> PrintVisitor: IfStmt
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IntExpr 3 
 >>> PrintVisitor: IntExpr 2 
 GoDown
-Current state: parent: 0x55f5cda45f30 ; child index: 0 
+Current state: parent: 0x5557c0f90210 ; child index: 0 
 >>> PrintVisitor: StmtListStmt
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false i 
@@ -579,9 +603,9 @@ ScopeLayer::IsArgument
 g type: House, is_array: true 
 ScopeLayer::IsArgument
 GoUp
-Current state: parent: 0x55f5cda45ad0 ; child index: 2 
+Current state: parent: 0x5557c0f8fd60 ; child index: 2 
 GoUp
-Current state: parent: 0x55f5cda344e0 ; child index: 2 
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: Dog, is_array: false dog 
 dog type: Dog, is_array: false 
@@ -594,26 +618,26 @@ ScopeLayer::IsArgument
 SetIndex
 >>> PrintVisitor: IntExpr 42 
 GoDown
-Current state: parent: 0x55f5cda45ad0 ; child index: 3 
+Current state: parent: 0x5557c0f8fd60 ; child index: 3 
 GoUp
-Current state: parent: 0x55f5cda344e0 ; child index: 2 
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
 >>> PrintVisitor: MethodStmt
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: IdentExpr dog 
 Bark
 GoDown
-Current state: parent: 0x55f5cda45ad0 ; child index: 4 
+Current state: parent: 0x5557c0f8fd60 ; child index: 4 
 GoUp
-Current state: parent: 0x55f5cda344e0 ; child index: 2 
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
 >>> PrintVisitor: MethodStmt
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: IdentExpr house 
 AddDog
 >>> PrintVisitor: IdentExpr dog 
 GoDown
-Current state: parent: 0x55f5cda45ad0 ; child index: 5 
+Current state: parent: 0x5557c0f8fd60 ; child index: 5 
 GoUp
-Current state: parent: 0x55f5cda344e0 ; child index: 2 
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
 >>> PrintVisitor: AssignmentStmt
 >>> PrintVisitor: NewExpr type =  Dog 
 >>> PrintVisitor: MethodStmt
@@ -622,60 +646,60 @@ Current state: parent: 0x55f5cda344e0 ; child index: 2
 SetIndex
 >>> PrintVisitor: IntExpr 79 
 GoDown
-Current state: parent: 0x55f5cda45ad0 ; child index: 6 
+Current state: parent: 0x5557c0f8fd60 ; child index: 6 
 GoUp
-Current state: parent: 0x55f5cda344e0 ; child index: 2 
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
 >>> PrintVisitor: MethodStmt
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: IdentExpr dog 
 Bark
 GoDown
-Current state: parent: 0x55f5cda45ad0 ; child index: 7 
+Current state: parent: 0x5557c0f8fd60 ; child index: 7 
 GoUp
-Current state: parent: 0x55f5cda344e0 ; child index: 2 
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
 >>> PrintVisitor: MethodStmt
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: IdentExpr house 
 AddDog
 >>> PrintVisitor: IdentExpr dog 
 GoDown
-Current state: parent: 0x55f5cda45ad0 ; child index: 8 
+Current state: parent: 0x5557c0f8fd60 ; child index: 8 
 GoUp
-Current state: parent: 0x55f5cda344e0 ; child index: 2 
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
 >>> PrintVisitor: MethodStmt
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: MethodExpr
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: IdentExpr house 
 GetDog
->>> PrintVisitor: IntExpr 1 
+>>> PrintVisitor: IntExpr 0 
 GoDown
-Current state: parent: 0x55f5cda45ad0 ; child index: 9 
+Current state: parent: 0x5557c0f8fd60 ; child index: 9 
 GoUp
-Current state: parent: 0x55f5cda344e0 ; child index: 2 
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
 Bark
 GoDown
-Current state: parent: 0x55f5cda45ad0 ; child index: 10 
+Current state: parent: 0x5557c0f8fd60 ; child index: 10 
 GoUp
-Current state: parent: 0x55f5cda344e0 ; child index: 2 
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
 GoUp
-Current state: parent: 0x55f5cda338d0 ; child index: 1 
+Current state: parent: 0x5557c0f7d8d0 ; child index: 1 
 
 
 GoDown
-Current state: parent: 0x55f5cda338d0 ; child index: 1 
+Current state: parent: 0x5557c0f7d8d0 ; child index: 1 
 >>> Interpreter: ClassDecl
 GoDown
-Current state: parent: 0x55f5cda344e0 ; child index: 0 
+Current state: parent: 0x5557c0f7e4e0 ; child index: 0 
 GoUp
-Current state: parent: 0x55f5cda338d0 ; child index: 1 
+Current state: parent: 0x5557c0f7d8d0 ; child index: 1 
 >>> Interpreter: ClassDecl
 GoDown
-Current state: parent: 0x55f5cda344e0 ; child index: 1 
+Current state: parent: 0x5557c0f7e4e0 ; child index: 1 
 GoUp
-Current state: parent: 0x55f5cda338d0 ; child index: 1 
+Current state: parent: 0x5557c0f7d8d0 ; child index: 1 
 GoDown
-Current state: parent: 0x55f5cda344e0 ; child index: 2 
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
 >>> Interpreter: MainClass
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
@@ -698,9 +722,13 @@ Constructor::Construct
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x55f5cda45ad0 ; child index: 0 
+Current state: parent: 0x5557c0f8fd60 ; child index: 0 
+GoUp
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
 GoDown
-Current state: parent: 0x55f5cda45cd0 ; child index: 0 
+Current state: parent: 0x5557c0f8fd60 ; child index: 0 
+GoDown
+Current state: parent: 0x5557c0f8ffb0 ; child index: 0 
 >>> Interpreter: AssignmentStmt
 Is var num_dogs declared: ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: void; Args: new_num(type: int, is_array: false),  
@@ -731,9 +759,810 @@ Class type: House, is_array: false; fields: {
 -> num_dogs 0}
 
 GoUp
-Current state: parent: 0x55f5cda45ad0 ; child index: 0 
+Current state: parent: 0x5557c0f8fd60 ; child index: 0 
 GoUp
-Current state: parent: 0x55f5cda344e0 ; child index: 2 
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
 >>> Interpreter: MethodStmt
 >>> Interpreter: MethodInvocation
 >>> Interpreter: IdentExpr
+>>> Interpreter: NewArrayExpr
+>>> Interpreter: IntExpr
+Constructor::GetInstance
+Constructor::Construct
+Constructor::GetInstance
+ClassBuilder::CreateObject: dog_index
+Constructor::Construct
+GoDown
+Current state: parent: 0x5557c0f8fd60 ; child index: 1 
+GoUp
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
+GoDown
+Current state: parent: 0x5557c0f8fd60 ; child index: 1 
+GoDown
+Current state: parent: 0x5557c0f900f0 ; child index: 0 
+>>> Interpreter: AssignmentStmt
+Is var dogs declared: ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dogs(type: Dog, is_array: true),  
+ScopeLayer::IsArgument: new_dogs dogs
+1 
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dogs(type: Dog, is_array: true),  
+ScopeLayer::IsArgument: new_dogs new_dogs
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dogs(type: Dog, is_array: true),  
+ScopeLayer::IsArgument: new_dogs new_dogs
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dogs(type: Dog, is_array: true),  
+ScopeLayer::IsArgument: new_dogs dogs
+Class type: House, is_array: false; fields: {
+-> dogs Class type: Dog, is_array: false; fields: {
+-> dog_index 0}
+-> num_dogs 0}
+
+>>> Interpreter: Assignment no subscript
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dogs(type: Dog, is_array: true),  
+ScopeLayer::IsArgument: new_dogs dogs
+Class type: House, is_array: false; fields: {
+-> dogs Class type: Dog, is_array: false; fields: {
+-> dog_index 0}
+-> num_dogs 0}
+
+GoUp
+Current state: parent: 0x5557c0f8fd60 ; child index: 1 
+GoUp
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
+>>> Interpreter: IfStmt
+GoDown
+Current state: parent: 0x5557c0f8fd60 ; child index: 2 
+>>> Interpreter: BinOpExpr
+>>> Interpreter: IntExpr
+>>> Interpreter: IntExpr
+>>> Interpreter: StmtListStmt
+GoDown
+Current state: parent: 0x5557c0f90210 ; child index: 0 
+>>> Interpreter: LocalVarDeclStmt
+>>> Interpreter: VarDecl
+>>> Interpreter: LocalVarDeclStmt
+>>> Interpreter: VarDecl
+>>> Interpreter: LocalVarDeclStmt
+>>> Interpreter: VarDecl
+>>> Interpreter: LocalVarDeclStmt
+>>> Interpreter: VarDecl
+GoUp
+Current state: parent: 0x5557c0f8fd60 ; child index: 2 
+GoUp
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
+>>> Interpreter: LocalVarDeclStmt
+>>> Interpreter: VarDecl
+>>> Interpreter: AssignmentStmt
+Is var dog declared: 1 
+>>> Interpreter: NewExpr
+Constructor::GetInstance
+Constructor::Construct
+Constructor::GetInstance
+ClassBuilder::CreateObject: dog_index
+Constructor::Construct
+>>> Interpreter: Assignment no subscript
+>>> Interpreter: MethodStmt
+>>> Interpreter: MethodInvocation
+>>> Interpreter: IdentExpr
+>>> Interpreter: IntExpr
+GoDown
+Current state: parent: 0x5557c0f8fd60 ; child index: 3 
+GoUp
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
+GoDown
+Current state: parent: 0x5557c0f8fd60 ; child index: 3 
+GoDown
+Current state: parent: 0x5557c0f908c0 ; child index: 0 
+>>> Interpreter: AssignmentStmt
+Is var dog_index declared: ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: idx(type: int, is_array: false),  
+ScopeLayer::IsArgument: idx dog_index
+1 
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: idx(type: int, is_array: false),  
+ScopeLayer::IsArgument: idx idx
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: idx(type: int, is_array: false),  
+ScopeLayer::IsArgument: idx idx
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: idx(type: int, is_array: false),  
+ScopeLayer::IsArgument: idx dog_index
+Class type: Dog, is_array: false; fields: {
+-> dog_index 0}
+
+>>> Interpreter: Assignment no subscript
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: idx(type: int, is_array: false),  
+ScopeLayer::IsArgument: idx dog_index
+Class type: Dog, is_array: false; fields: {
+-> dog_index 0}
+
+GoUp
+Current state: parent: 0x5557c0f8fd60 ; child index: 3 
+GoUp
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
+>>> Interpreter: MethodStmt
+>>> Interpreter: MethodInvocation
+>>> Interpreter: IdentExpr
+GoDown
+Current state: parent: 0x5557c0f8fd60 ; child index: 4 
+GoUp
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
+GoDown
+Current state: parent: 0x5557c0f8fd60 ; child index: 4 
+GoDown
+Current state: parent: 0x5557c0f909e0 ; child index: 0 
+>>> Interpreter: PrintStmt
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args:  
+Class type: Dog, is_array: false; fields: {
+-> dog_index 42}
+
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args:  
+Class type: Dog, is_array: false; fields: {
+-> dog_index 42}
+
+42
+GoUp
+Current state: parent: 0x5557c0f8fd60 ; child index: 4 
+GoUp
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
+>>> Interpreter: MethodStmt
+>>> Interpreter: MethodInvocation
+>>> Interpreter: IdentExpr
+>>> Interpreter: IdentExpr
+GoDown
+Current state: parent: 0x5557c0f8fd60 ; child index: 5 
+GoUp
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
+GoDown
+Current state: parent: 0x5557c0f8fd60 ; child index: 5 
+GoDown
+Current state: parent: 0x5557c0f90b90 ; child index: 0 
+>>> Interpreter: IfStmt
+GoDown
+Current state: parent: 0x5557c0f8ea20 ; child index: 0 
+>>> Interpreter: BinOpExpr
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog num_dogs
+Class type: House, is_array: false; fields: {
+-> dogs Array [ Class type: Dog, is_array: false; fields: {
+-> dog_index 0}
+ ] 1 elements.
+-> num_dogs 0}
+
+>>> Interpreter: LengthExpr
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog dogs
+Class type: House, is_array: false; fields: {
+-> dogs Array [ Class type: Dog, is_array: false; fields: {
+-> dog_index 0}
+ ] 1 elements.
+-> num_dogs 0}
+
+GoUp
+Current state: parent: 0x5557c0f90b90 ; child index: 0 
+>>> Interpreter: AssignmentStmt
+Is var dogs declared: ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog dogs
+1 
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog new_dog
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog new_dog
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog dogs
+Class type: House, is_array: false; fields: {
+-> dogs Array [ Class type: Dog, is_array: false; fields: {
+-> dog_index 0}
+ ] 1 elements.
+-> num_dogs 0}
+
+>>> Interpreter: Assignment subscript
+1
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog num_dogs
+Class type: House, is_array: false; fields: {
+-> dogs Array [ Class type: Dog, is_array: false; fields: {
+-> dog_index 0}
+ ] 1 elements.
+-> num_dogs 0}
+
+>>> Interpreter: AssignmentStmt
+Is var num_dogs declared: ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog num_dogs
+1 
+>>> Interpreter: BinOpExpr
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog num_dogs
+Class type: House, is_array: false; fields: {
+-> dogs Array [ Class type: Dog, is_array: false; fields: {
+-> dog_index 42}
+ ] 1 elements.
+-> num_dogs 0}
+
+>>> Interpreter: IntExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog num_dogs
+Class type: House, is_array: false; fields: {
+-> dogs Array [ Class type: Dog, is_array: false; fields: {
+-> dog_index 42}
+ ] 1 elements.
+-> num_dogs 0}
+
+>>> Interpreter: Assignment no subscript
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog num_dogs
+Class type: House, is_array: false; fields: {
+-> dogs Array [ Class type: Dog, is_array: false; fields: {
+-> dog_index 42}
+ ] 1 elements.
+-> num_dogs 0}
+
+GoUp
+Current state: parent: 0x5557c0f8fd60 ; child index: 5 
+GoUp
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
+>>> Interpreter: AssignmentStmt
+Is var dog declared: 1 
+>>> Interpreter: NewExpr
+Constructor::GetInstance
+Constructor::Construct
+Constructor::GetInstance
+ClassBuilder::CreateObject: dog_index
+Constructor::Construct
+>>> Interpreter: Assignment no subscript
+>>> Interpreter: MethodStmt
+>>> Interpreter: MethodInvocation
+>>> Interpreter: IdentExpr
+>>> Interpreter: IntExpr
+GoDown
+Current state: parent: 0x5557c0f8fd60 ; child index: 6 
+GoUp
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
+GoDown
+Current state: parent: 0x5557c0f8fd60 ; child index: 6 
+GoDown
+Current state: parent: 0x5557c0f90cb0 ; child index: 0 
+>>> Interpreter: AssignmentStmt
+Is var dog_index declared: ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: idx(type: int, is_array: false),  
+ScopeLayer::IsArgument: idx dog_index
+1 
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: idx(type: int, is_array: false),  
+ScopeLayer::IsArgument: idx idx
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: idx(type: int, is_array: false),  
+ScopeLayer::IsArgument: idx idx
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: idx(type: int, is_array: false),  
+ScopeLayer::IsArgument: idx dog_index
+Class type: Dog, is_array: false; fields: {
+-> dog_index 0}
+
+>>> Interpreter: Assignment no subscript
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: idx(type: int, is_array: false),  
+ScopeLayer::IsArgument: idx dog_index
+Class type: Dog, is_array: false; fields: {
+-> dog_index 0}
+
+GoUp
+Current state: parent: 0x5557c0f8fd60 ; child index: 6 
+GoUp
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
+>>> Interpreter: MethodStmt
+>>> Interpreter: MethodInvocation
+>>> Interpreter: IdentExpr
+GoDown
+Current state: parent: 0x5557c0f8fd60 ; child index: 7 
+GoUp
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
+GoDown
+Current state: parent: 0x5557c0f8fd60 ; child index: 7 
+GoDown
+Current state: parent: 0x5557c0f90dd0 ; child index: 0 
+>>> Interpreter: PrintStmt
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args:  
+Class type: Dog, is_array: false; fields: {
+-> dog_index 79}
+
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args:  
+Class type: Dog, is_array: false; fields: {
+-> dog_index 79}
+
+79
+GoUp
+Current state: parent: 0x5557c0f8fd60 ; child index: 7 
+GoUp
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
+>>> Interpreter: MethodStmt
+>>> Interpreter: MethodInvocation
+>>> Interpreter: IdentExpr
+>>> Interpreter: IdentExpr
+GoDown
+Current state: parent: 0x5557c0f8fd60 ; child index: 8 
+GoUp
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
+GoDown
+Current state: parent: 0x5557c0f8fd60 ; child index: 8 
+GoDown
+Current state: parent: 0x5557c0f90ef0 ; child index: 0 
+>>> Interpreter: IfStmt
+GoDown
+Current state: parent: 0x5557c0f8ea20 ; child index: 0 
+>>> Interpreter: BinOpExpr
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog num_dogs
+Class type: House, is_array: false; fields: {
+-> dogs Array [ Class type: Dog, is_array: false; fields: {
+-> dog_index 42}
+ ] 1 elements.
+-> num_dogs 1}
+
+>>> Interpreter: LengthExpr
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog dogs
+Class type: House, is_array: false; fields: {
+-> dogs Array [ Class type: Dog, is_array: false; fields: {
+-> dog_index 42}
+ ] 1 elements.
+-> num_dogs 1}
+
+>>> Interpreter: StmtListStmt
+GoDown
+Current state: parent: 0x5557c0f8ec20 ; child index: 0 
+>>> Interpreter: LocalVarDeclStmt
+>>> Interpreter: VarDecl
+>>> Interpreter: AssignmentStmt
+Is var new_dogs declared: ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog new_dogs
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+0 
+>>> Interpreter: NewArrayExpr
+>>> Interpreter: BinOpExpr
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog num_dogs
+Class type: House, is_array: false; fields: {
+-> dogs Array [ Class type: Dog, is_array: false; fields: {
+-> dog_index 42}
+ ] 1 elements.
+-> num_dogs 1}
+
+>>> Interpreter: IntExpr
+Constructor::GetInstance
+Constructor::Construct
+Constructor::GetInstance
+ClassBuilder::CreateObject: dog_index
+Constructor::Construct
+Constructor::GetInstance
+Constructor::Construct
+Constructor::GetInstance
+ClassBuilder::CreateObject: dog_index
+Constructor::Construct
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog new_dogs
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+>>> Interpreter: Assignment no subscript
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog new_dogs
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+>>> Interpreter: LocalVarDeclStmt
+>>> Interpreter: VarDecl
+>>> Interpreter: AssignmentStmt
+Is var i declared: ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog i
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+0 
+>>> Interpreter: IntExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog i
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+>>> Interpreter: Assignment no subscript
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog i
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+>>> Interpreter: WhileStmt
+>>> Interpreter: BinOpExpr
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog i
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog num_dogs
+Class type: House, is_array: false; fields: {
+-> dogs Array [ Class type: Dog, is_array: false; fields: {
+-> dog_index 42}
+ ] 1 elements.
+-> num_dogs 1}
+
+GoDown
+Current state: parent: 0x5557c0f8ee10 ; child index: 0 
+>>> Interpreter: StmtListStmt
+GoDown
+Current state: parent: 0x5557c0f8ef80 ; child index: 0 
+>>> Interpreter: AssignmentStmt
+Is var new_dogs declared: ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog new_dogs
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+0 
+>>> Interpreter: SubscriptExpr
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog dogs
+Class type: House, is_array: false; fields: {
+-> dogs Array [ Class type: Dog, is_array: false; fields: {
+-> dog_index 42}
+ ] 1 elements.
+-> num_dogs 1}
+
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog i
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog new_dogs
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+>>> Interpreter: Assignment subscript
+1
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog i
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+>>> Interpreter: AssignmentStmt
+Is var i declared: ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog i
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+0 
+>>> Interpreter: BinOpExpr
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog i
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+>>> Interpreter: IntExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog i
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+>>> Interpreter: Assignment no subscript
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog i
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+GoUp
+Current state: parent: 0x5557c0f8ee10 ; child index: 0 
+GoUp
+Current state: parent: 0x5557c0f8ec20 ; child index: 0 
+>>> Interpreter: BinOpExpr
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog i
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog num_dogs
+Class type: House, is_array: false; fields: {
+-> dogs Array [ Class type: Dog, is_array: false; fields: {
+-> dog_index 42}
+ ] 1 elements.
+-> num_dogs 1}
+
+>>> Interpreter: AssignmentStmt
+Is var dogs declared: ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog dogs
+1 
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog new_dogs
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog dogs
+Class type: House, is_array: false; fields: {
+-> dogs Array [ Class type: Dog, is_array: false; fields: {
+-> dog_index 42}
+ ] 1 elements.
+-> num_dogs 1}
+
+>>> Interpreter: Assignment no subscript
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog dogs
+Class type: House, is_array: false; fields: {
+-> dogs Array [ Class type: Dog, is_array: false; fields: {
+-> dog_index 42}
+ ] 1 elements.
+-> num_dogs 1}
+
+GoUp
+Current state: parent: 0x5557c0f8ea20 ; child index: 0 
+GoUp
+Current state: parent: 0x5557c0f90ef0 ; child index: 0 
+>>> Interpreter: AssignmentStmt
+Is var dogs declared: ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog dogs
+1 
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog new_dog
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog new_dog
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog dogs
+Class type: House, is_array: false; fields: {
+-> dogs Array [ Class type: Dog, is_array: false; fields: {
+-> dog_index 42}
+ Class type: Dog, is_array: false; fields: {
+-> dog_index 0}
+ ] 2 elements.
+-> num_dogs 1}
+
+>>> Interpreter: Assignment subscript
+1
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog num_dogs
+Class type: House, is_array: false; fields: {
+-> dogs Array [ Class type: Dog, is_array: false; fields: {
+-> dog_index 42}
+ Class type: Dog, is_array: false; fields: {
+-> dog_index 0}
+ ] 2 elements.
+-> num_dogs 1}
+
+>>> Interpreter: AssignmentStmt
+Is var num_dogs declared: ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog num_dogs
+1 
+>>> Interpreter: BinOpExpr
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog num_dogs
+Class type: House, is_array: false; fields: {
+-> dogs Array [ Class type: Dog, is_array: false; fields: {
+-> dog_index 42}
+ Class type: Dog, is_array: false; fields: {
+-> dog_index 79}
+ ] 2 elements.
+-> num_dogs 1}
+
+>>> Interpreter: IntExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog num_dogs
+Class type: House, is_array: false; fields: {
+-> dogs Array [ Class type: Dog, is_array: false; fields: {
+-> dog_index 42}
+ Class type: Dog, is_array: false; fields: {
+-> dog_index 79}
+ ] 2 elements.
+-> num_dogs 1}
+
+>>> Interpreter: Assignment no subscript
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args: new_dog(type: Dog, is_array: false),  
+ScopeLayer::IsArgument: new_dog num_dogs
+Class type: House, is_array: false; fields: {
+-> dogs Array [ Class type: Dog, is_array: false; fields: {
+-> dog_index 42}
+ Class type: Dog, is_array: false; fields: {
+-> dog_index 79}
+ ] 2 elements.
+-> num_dogs 1}
+
+GoUp
+Current state: parent: 0x5557c0f8fd60 ; child index: 8 
+GoUp
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
+>>> Interpreter: MethodStmt
+>>> Interpreter: MethodInvocation
+>>> Interpreter: MethodExpr
+>>> Interpreter: MethodInvocation
+>>> Interpreter: IdentExpr
+>>> Interpreter: IntExpr
+GoDown
+Current state: parent: 0x5557c0f8fd60 ; child index: 9 
+GoUp
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
+GoDown
+Current state: parent: 0x5557c0f8fd60 ; child index: 9 
+GoDown
+Current state: parent: 0x5557c0f91120 ; child index: 0 
+>>> Interpreter: AssertStmt
+>>> Interpreter: BinOpExpr
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: Dog; Args: i(type: int, is_array: false),  
+ScopeLayer::IsArgument: i i
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: Dog; Args: i(type: int, is_array: false),  
+ScopeLayer::IsArgument: i i
+>>> Interpreter: IntExpr
+>>> Interpreter: AssertStmt
+>>> Interpreter: BinOpExpr
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: Dog; Args: i(type: int, is_array: false),  
+ScopeLayer::IsArgument: i i
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: Dog; Args: i(type: int, is_array: false),  
+ScopeLayer::IsArgument: i i
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: Dog; Args: i(type: int, is_array: false),  
+ScopeLayer::IsArgument: i num_dogs
+Class type: House, is_array: false; fields: {
+-> dogs Array [ Class type: Dog, is_array: false; fields: {
+-> dog_index 42}
+ Class type: Dog, is_array: false; fields: {
+-> dog_index 79}
+ ] 2 elements.
+-> num_dogs 2}
+
+>>> Interpreter: ReturnStmt
+>>> Interpreter: SubscriptExpr
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: Dog; Args: i(type: int, is_array: false),  
+ScopeLayer::IsArgument: i dogs
+Class type: House, is_array: false; fields: {
+-> dogs Array [ Class type: Dog, is_array: false; fields: {
+-> dog_index 42}
+ Class type: Dog, is_array: false; fields: {
+-> dog_index 79}
+ ] 2 elements.
+-> num_dogs 2}
+
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: Dog; Args: i(type: int, is_array: false),  
+ScopeLayer::IsArgument: i i
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: Dog; Args: i(type: int, is_array: false),  
+ScopeLayer::IsArgument: i i
+GoUp
+Current state: parent: 0x5557c0f8fd60 ; child index: 9 
+GoUp
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
+GoDown
+Current state: parent: 0x5557c0f8fd60 ; child index: 10 
+GoUp
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
+GoDown
+Current state: parent: 0x5557c0f8fd60 ; child index: 10 
+GoDown
+Current state: parent: 0x5557c0f91240 ; child index: 0 
+>>> Interpreter: PrintStmt
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args:  
+Class type: Dog, is_array: false; fields: {
+-> dog_index 42}
+
+>>> Interpreter: IdentExpr
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: void; Args:  
+Class type: Dog, is_array: false; fields: {
+-> dog_index 42}
+
+42
+GoUp
+Current state: parent: 0x5557c0f8fd60 ; child index: 10 
+GoUp
+Current state: parent: 0x5557c0f7e4e0 ; child index: 2 
+GoUp
+Current state: parent: 0x5557c0f7d8d0 ; child index: 1 

@@ -57,6 +57,15 @@ START TEST test11_factorial.in
 ./test/test11_factorial.in
 
 ================================================================================
+START TEST test12_function_with_if.in
+./test/test12_function_with_if.in
+1
+1
+0
+0
+result: 0
+
+================================================================================
 START TEST test2.in
 ./test/test2.in
 1
@@ -183,4 +192,8 @@ result: 0
 ================================================================================
 START TEST test9_functions_long.in
 ./test/test9_functions_long.in
+42
+79
+42
+result: 0
 

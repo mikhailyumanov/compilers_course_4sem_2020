@@ -1,16 +1,16 @@
 >>> Interpreter: Program
 >>> PrintVisitor: Program
 GoDown
-Current state: parent: 0x5620dfb24880 ; child index: 1 
+Current state: parent: 0x562f3a785880 ; child index: 1 
 GoDown
-Current state: parent: 0x5620dfb25490 ; child index: 0 
+Current state: parent: 0x562f3a786490 ; child index: 0 
 >>> PrintVisitor: MainClass
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false x 
 x type: int, is_array: false 
 ScopeLayer::IsArgument
 GoDown
-Current state: parent: 0x5620dfb255e0 ; child index: 0 
+Current state: parent: 0x562f3a7865e0 ; child index: 0 
 >>> PrintVisitor: StmtListStmt
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false y 
@@ -19,7 +19,7 @@ ScopeLayer::IsArgument
 >>> PrintVisitor: AssignmentStmt
 >>> PrintVisitor: IntExpr 5 
 GoUp
-Current state: parent: 0x5620dfb25490 ; child index: 0 
+Current state: parent: 0x562f3a786490 ; child index: 0 
 >>> PrintVisitor: AssignmentStmt
 >>> PrintVisitor: IdentExpr y 
 ScopeLayer::IsArgument

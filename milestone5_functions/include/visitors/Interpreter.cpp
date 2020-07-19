@@ -420,18 +420,22 @@ void Interpreter::Visit(std::shared_ptr<MethodInvocation> element) {
     new_frame->SetValue(-i - 2, Accept((*element->comma_expr_list)[i]));
   }
 
-  // call
+  // precall
   current_frame_ = new_frame;
+  
+  // precall: make copy of iterator
+  auto old_current_scope = current_scope_;
+  old_current_scope.GoDown();
+  old_current_scope.GoUp();
+
   ScopeDown();
   current_scope_->AddChild(
-      std::make_shared<ScopeLayer>(
-        symbol_tree_visitor_->GetTree()
-          ->GetFunctionScope(
-            new_frame->GetValue(-1)->GetType().type, element->func_name)));
+      symbol_tree_visitor_->GetTree()->GetFunctionScope(
+        new_frame->GetValue(-1)->GetType().type, element->func_name));
   ScopeDown();
   current_scope_->UnsetMain();
 
-  // process
+  // call
   for (size_t i = 0; i < function->stmt_list->GetLength(); ++i) {
     if (!current_frame_->IsReturned()) {
       (*function->stmt_list)[i]->Accept(shared_from_this());
@@ -439,10 +443,13 @@ void Interpreter::Visit(std::shared_ptr<MethodInvocation> element) {
   }
 
   // ret
+  ScopeUp();
+  ScopeUp();
+
+  // postret
   current_frame_ = current_frame_->GetParent();
   tos_value_ = current_frame_->GetReturnValue();
-  ScopeUp();
-  ScopeUp();
+  current_scope_ = old_current_scope;
 }
 
 int Interpreter::GetResult(std::shared_ptr<Program> program) {

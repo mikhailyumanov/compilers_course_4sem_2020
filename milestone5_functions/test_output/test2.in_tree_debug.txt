@@ -1,9 +1,9 @@
 >>> Interpreter: Program
 >>> PrintVisitor: Program
 GoDown
-Current state: parent: 0x55e3bb8fb860 ; child index: 1 
+Current state: parent: 0x555a0b234860 ; child index: 1 
 GoDown
-Current state: parent: 0x55e3bb8fc4b0 ; child index: 0 
+Current state: parent: 0x555a0b2354b0 ; child index: 0 
 >>> PrintVisitor: ClassDecl MyClass 
 >>> PrintVisitor: VarDecl type: int, is_array: false x 
 x type: int, is_array: false 
@@ -27,9 +27,9 @@ ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: ; Args:  
 VarDecl: IsMethodDecl
 GoUp
-Current state: parent: 0x55e3bb8fb860 ; child index: 1 
+Current state: parent: 0x555a0b234860 ; child index: 1 
 GoDown
-Current state: parent: 0x55e3bb8fc4b0 ; child index: 1 
+Current state: parent: 0x555a0b2354b0 ; child index: 1 
 >>> PrintVisitor: MainClass
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IntExpr 1 
@@ -75,7 +75,7 @@ ScopeLayer::IsArgument
 >>> PrintVisitor: AssignmentStmt
 >>> PrintVisitor: IntExpr 0 
 GoDown
-Current state: parent: 0x55e3bb8fcc70 ; child index: 0 
+Current state: parent: 0x555a0b235c70 ; child index: 0 
 >>> PrintVisitor: WhileStmt
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr i 
@@ -83,10 +83,10 @@ ScopeLayer::IsArgument
 ScopeLayer::IsArgument
 >>> PrintVisitor: IntExpr 10 
 GoDown
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> PrintVisitor: StmtListStmt
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 0 
+Current state: parent: 0x555a0b235fe0 ; child index: 0 
 >>> PrintVisitor: IfStmt
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr i 
@@ -98,7 +98,7 @@ ScopeLayer::IsArgument
 ScopeLayer::IsArgument
 >>> PrintVisitor: IntExpr 2 
 GoDown
-Current state: parent: 0x55e3bb8fd130 ; child index: 0 
+Current state: parent: 0x555a0b236130 ; child index: 0 
 >>> PrintVisitor: StmtListStmt
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IdentExpr i 
@@ -111,9 +111,9 @@ ScopeLayer::IsArgument
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
 GoUp
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 0 
+Current state: parent: 0x555a0b235fe0 ; child index: 0 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> PrintVisitor: IfElseStmt
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr i 
@@ -123,27 +123,27 @@ ScopeLayer::IsArgument
 ScopeLayer::IsArgument
 >>> PrintVisitor: IntExpr 5 
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 1 
+Current state: parent: 0x555a0b235fe0 ; child index: 1 
 GoDown
-Current state: parent: 0x55e3bb8fd3f0 ; child index: 0 
+Current state: parent: 0x555a0b2363f0 ; child index: 0 
 >>> PrintVisitor: StmtListStmt
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IntExpr 42 
 GoUp
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 1 
+Current state: parent: 0x555a0b235fe0 ; child index: 1 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 2 
+Current state: parent: 0x555a0b235fe0 ; child index: 2 
 GoDown
-Current state: parent: 0x55e3bb908b70 ; child index: 0 
+Current state: parent: 0x555a0b241b70 ; child index: 0 
 >>> PrintVisitor: StmtListStmt
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IntExpr 99 
 GoUp
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 2 
+Current state: parent: 0x555a0b235fe0 ; child index: 2 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> PrintVisitor: AssignmentStmt
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
@@ -157,22 +157,22 @@ ScopeLayer::IsArgument
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
 GoUp
-Current state: parent: 0x55e3bb8fcc70 ; child index: 0 
+Current state: parent: 0x555a0b235c70 ; child index: 0 
 GoUp
-Current state: parent: 0x55e3bb8fc4b0 ; child index: 1 
+Current state: parent: 0x555a0b2354b0 ; child index: 1 
 GoUp
-Current state: parent: 0x55e3bb8fb860 ; child index: 1 
+Current state: parent: 0x555a0b234860 ; child index: 1 
 
 
 GoDown
-Current state: parent: 0x55e3bb8fb860 ; child index: 1 
+Current state: parent: 0x555a0b234860 ; child index: 1 
 >>> Interpreter: ClassDecl
 GoDown
-Current state: parent: 0x55e3bb8fc4b0 ; child index: 0 
+Current state: parent: 0x555a0b2354b0 ; child index: 0 
 GoUp
-Current state: parent: 0x55e3bb8fb860 ; child index: 1 
+Current state: parent: 0x555a0b234860 ; child index: 1 
 GoDown
-Current state: parent: 0x55e3bb8fc4b0 ; child index: 1 
+Current state: parent: 0x555a0b2354b0 ; child index: 1 
 >>> Interpreter: MainClass
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
@@ -259,39 +259,39 @@ Is var i declared: 1
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x55e3bb8fcc70 ; child index: 0 
+Current state: parent: 0x555a0b235c70 ; child index: 0 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: IfStmt
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 0 
+Current state: parent: 0x555a0b235fe0 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: IfElseStmt
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 1 
+Current state: parent: 0x555a0b235fe0 ; child index: 1 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 2 
+Current state: parent: 0x555a0b235fe0 ; child index: 2 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x55e3bb908b70 ; child index: 0 
+Current state: parent: 0x555a0b241b70 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 99
 GoUp
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 2 
+Current state: parent: 0x555a0b235fe0 ; child index: 2 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: AssignmentStmt
 Is var i declared: ScopeLayer::IsArgument
 0 
@@ -300,55 +300,55 @@ Is var i declared: ScopeLayer::IsArgument
 >>> Interpreter: IntExpr
 >>> Interpreter: Assignment no subscript
 GoUp
-Current state: parent: 0x55e3bb8fcc70 ; child index: 0 
+Current state: parent: 0x555a0b235c70 ; child index: 0 
 GoUp
-Current state: parent: 0x55e3bb8fc4b0 ; child index: 1 
+Current state: parent: 0x555a0b2354b0 ; child index: 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x55e3bb8fcc70 ; child index: 0 
+Current state: parent: 0x555a0b235c70 ; child index: 0 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: IfStmt
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 0 
+Current state: parent: 0x555a0b235fe0 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x55e3bb8fd130 ; child index: 0 
+Current state: parent: 0x555a0b236130 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
 >>> Interpreter: IdentExpr
 1
 GoUp
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 0 
+Current state: parent: 0x555a0b235fe0 ; child index: 0 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: IfElseStmt
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 1 
+Current state: parent: 0x555a0b235fe0 ; child index: 1 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 2 
+Current state: parent: 0x555a0b235fe0 ; child index: 2 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x55e3bb908b70 ; child index: 0 
+Current state: parent: 0x555a0b241b70 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 99
 GoUp
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 2 
+Current state: parent: 0x555a0b235fe0 ; child index: 2 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: AssignmentStmt
 Is var i declared: ScopeLayer::IsArgument
 0 
@@ -357,46 +357,46 @@ Is var i declared: ScopeLayer::IsArgument
 >>> Interpreter: IntExpr
 >>> Interpreter: Assignment no subscript
 GoUp
-Current state: parent: 0x55e3bb8fcc70 ; child index: 0 
+Current state: parent: 0x555a0b235c70 ; child index: 0 
 GoUp
-Current state: parent: 0x55e3bb8fc4b0 ; child index: 1 
+Current state: parent: 0x555a0b2354b0 ; child index: 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x55e3bb8fcc70 ; child index: 0 
+Current state: parent: 0x555a0b235c70 ; child index: 0 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: IfStmt
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 0 
+Current state: parent: 0x555a0b235fe0 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: IfElseStmt
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 1 
+Current state: parent: 0x555a0b235fe0 ; child index: 1 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 2 
+Current state: parent: 0x555a0b235fe0 ; child index: 2 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x55e3bb908b70 ; child index: 0 
+Current state: parent: 0x555a0b241b70 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 99
 GoUp
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 2 
+Current state: parent: 0x555a0b235fe0 ; child index: 2 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: AssignmentStmt
 Is var i declared: ScopeLayer::IsArgument
 0 
@@ -405,55 +405,55 @@ Is var i declared: ScopeLayer::IsArgument
 >>> Interpreter: IntExpr
 >>> Interpreter: Assignment no subscript
 GoUp
-Current state: parent: 0x55e3bb8fcc70 ; child index: 0 
+Current state: parent: 0x555a0b235c70 ; child index: 0 
 GoUp
-Current state: parent: 0x55e3bb8fc4b0 ; child index: 1 
+Current state: parent: 0x555a0b2354b0 ; child index: 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x55e3bb8fcc70 ; child index: 0 
+Current state: parent: 0x555a0b235c70 ; child index: 0 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: IfStmt
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 0 
+Current state: parent: 0x555a0b235fe0 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x55e3bb8fd130 ; child index: 0 
+Current state: parent: 0x555a0b236130 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
 >>> Interpreter: IdentExpr
 3
 GoUp
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 0 
+Current state: parent: 0x555a0b235fe0 ; child index: 0 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: IfElseStmt
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 1 
+Current state: parent: 0x555a0b235fe0 ; child index: 1 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 2 
+Current state: parent: 0x555a0b235fe0 ; child index: 2 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x55e3bb908b70 ; child index: 0 
+Current state: parent: 0x555a0b241b70 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 99
 GoUp
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 2 
+Current state: parent: 0x555a0b235fe0 ; child index: 2 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: AssignmentStmt
 Is var i declared: ScopeLayer::IsArgument
 0 
@@ -462,46 +462,46 @@ Is var i declared: ScopeLayer::IsArgument
 >>> Interpreter: IntExpr
 >>> Interpreter: Assignment no subscript
 GoUp
-Current state: parent: 0x55e3bb8fcc70 ; child index: 0 
+Current state: parent: 0x555a0b235c70 ; child index: 0 
 GoUp
-Current state: parent: 0x55e3bb8fc4b0 ; child index: 1 
+Current state: parent: 0x555a0b2354b0 ; child index: 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x55e3bb8fcc70 ; child index: 0 
+Current state: parent: 0x555a0b235c70 ; child index: 0 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: IfStmt
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 0 
+Current state: parent: 0x555a0b235fe0 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: IfElseStmt
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 1 
+Current state: parent: 0x555a0b235fe0 ; child index: 1 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 2 
+Current state: parent: 0x555a0b235fe0 ; child index: 2 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x55e3bb908b70 ; child index: 0 
+Current state: parent: 0x555a0b241b70 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 99
 GoUp
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 2 
+Current state: parent: 0x555a0b235fe0 ; child index: 2 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: AssignmentStmt
 Is var i declared: ScopeLayer::IsArgument
 0 
@@ -510,55 +510,55 @@ Is var i declared: ScopeLayer::IsArgument
 >>> Interpreter: IntExpr
 >>> Interpreter: Assignment no subscript
 GoUp
-Current state: parent: 0x55e3bb8fcc70 ; child index: 0 
+Current state: parent: 0x555a0b235c70 ; child index: 0 
 GoUp
-Current state: parent: 0x55e3bb8fc4b0 ; child index: 1 
+Current state: parent: 0x555a0b2354b0 ; child index: 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x55e3bb8fcc70 ; child index: 0 
+Current state: parent: 0x555a0b235c70 ; child index: 0 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: IfStmt
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 0 
+Current state: parent: 0x555a0b235fe0 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x55e3bb8fd130 ; child index: 0 
+Current state: parent: 0x555a0b236130 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
 >>> Interpreter: IdentExpr
 5
 GoUp
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 0 
+Current state: parent: 0x555a0b235fe0 ; child index: 0 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: IfElseStmt
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 1 
+Current state: parent: 0x555a0b235fe0 ; child index: 1 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x55e3bb8fd3f0 ; child index: 0 
+Current state: parent: 0x555a0b2363f0 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 42
 GoUp
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 1 
+Current state: parent: 0x555a0b235fe0 ; child index: 1 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 2 
+Current state: parent: 0x555a0b235fe0 ; child index: 2 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: AssignmentStmt
 Is var i declared: ScopeLayer::IsArgument
 0 
@@ -567,46 +567,46 @@ Is var i declared: ScopeLayer::IsArgument
 >>> Interpreter: IntExpr
 >>> Interpreter: Assignment no subscript
 GoUp
-Current state: parent: 0x55e3bb8fcc70 ; child index: 0 
+Current state: parent: 0x555a0b235c70 ; child index: 0 
 GoUp
-Current state: parent: 0x55e3bb8fc4b0 ; child index: 1 
+Current state: parent: 0x555a0b2354b0 ; child index: 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x55e3bb8fcc70 ; child index: 0 
+Current state: parent: 0x555a0b235c70 ; child index: 0 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: IfStmt
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 0 
+Current state: parent: 0x555a0b235fe0 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: IfElseStmt
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 1 
+Current state: parent: 0x555a0b235fe0 ; child index: 1 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 2 
+Current state: parent: 0x555a0b235fe0 ; child index: 2 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x55e3bb908b70 ; child index: 0 
+Current state: parent: 0x555a0b241b70 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 99
 GoUp
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 2 
+Current state: parent: 0x555a0b235fe0 ; child index: 2 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: AssignmentStmt
 Is var i declared: ScopeLayer::IsArgument
 0 
@@ -615,55 +615,55 @@ Is var i declared: ScopeLayer::IsArgument
 >>> Interpreter: IntExpr
 >>> Interpreter: Assignment no subscript
 GoUp
-Current state: parent: 0x55e3bb8fcc70 ; child index: 0 
+Current state: parent: 0x555a0b235c70 ; child index: 0 
 GoUp
-Current state: parent: 0x55e3bb8fc4b0 ; child index: 1 
+Current state: parent: 0x555a0b2354b0 ; child index: 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x55e3bb8fcc70 ; child index: 0 
+Current state: parent: 0x555a0b235c70 ; child index: 0 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: IfStmt
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 0 
+Current state: parent: 0x555a0b235fe0 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x55e3bb8fd130 ; child index: 0 
+Current state: parent: 0x555a0b236130 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
 >>> Interpreter: IdentExpr
 7
 GoUp
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 0 
+Current state: parent: 0x555a0b235fe0 ; child index: 0 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: IfElseStmt
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 1 
+Current state: parent: 0x555a0b235fe0 ; child index: 1 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 2 
+Current state: parent: 0x555a0b235fe0 ; child index: 2 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x55e3bb908b70 ; child index: 0 
+Current state: parent: 0x555a0b241b70 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 99
 GoUp
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 2 
+Current state: parent: 0x555a0b235fe0 ; child index: 2 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: AssignmentStmt
 Is var i declared: ScopeLayer::IsArgument
 0 
@@ -672,46 +672,46 @@ Is var i declared: ScopeLayer::IsArgument
 >>> Interpreter: IntExpr
 >>> Interpreter: Assignment no subscript
 GoUp
-Current state: parent: 0x55e3bb8fcc70 ; child index: 0 
+Current state: parent: 0x555a0b235c70 ; child index: 0 
 GoUp
-Current state: parent: 0x55e3bb8fc4b0 ; child index: 1 
+Current state: parent: 0x555a0b2354b0 ; child index: 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x55e3bb8fcc70 ; child index: 0 
+Current state: parent: 0x555a0b235c70 ; child index: 0 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: IfStmt
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 0 
+Current state: parent: 0x555a0b235fe0 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: IfElseStmt
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 1 
+Current state: parent: 0x555a0b235fe0 ; child index: 1 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 2 
+Current state: parent: 0x555a0b235fe0 ; child index: 2 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x55e3bb908b70 ; child index: 0 
+Current state: parent: 0x555a0b241b70 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 99
 GoUp
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 2 
+Current state: parent: 0x555a0b235fe0 ; child index: 2 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: AssignmentStmt
 Is var i declared: ScopeLayer::IsArgument
 0 
@@ -720,55 +720,55 @@ Is var i declared: ScopeLayer::IsArgument
 >>> Interpreter: IntExpr
 >>> Interpreter: Assignment no subscript
 GoUp
-Current state: parent: 0x55e3bb8fcc70 ; child index: 0 
+Current state: parent: 0x555a0b235c70 ; child index: 0 
 GoUp
-Current state: parent: 0x55e3bb8fc4b0 ; child index: 1 
+Current state: parent: 0x555a0b2354b0 ; child index: 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x55e3bb8fcc70 ; child index: 0 
+Current state: parent: 0x555a0b235c70 ; child index: 0 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: IfStmt
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 0 
+Current state: parent: 0x555a0b235fe0 ; child index: 0 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x55e3bb8fd130 ; child index: 0 
+Current state: parent: 0x555a0b236130 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
 >>> Interpreter: IdentExpr
 9
 GoUp
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 0 
+Current state: parent: 0x555a0b235fe0 ; child index: 0 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: IfElseStmt
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 1 
+Current state: parent: 0x555a0b235fe0 ; child index: 1 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 GoDown
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 2 
+Current state: parent: 0x555a0b235fe0 ; child index: 2 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x55e3bb908b70 ; child index: 0 
+Current state: parent: 0x555a0b241b70 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 99
 GoUp
-Current state: parent: 0x55e3bb8fcfe0 ; child index: 2 
+Current state: parent: 0x555a0b235fe0 ; child index: 2 
 GoUp
-Current state: parent: 0x55e3bb8fce80 ; child index: 0 
+Current state: parent: 0x555a0b235e80 ; child index: 0 
 >>> Interpreter: AssignmentStmt
 Is var i declared: ScopeLayer::IsArgument
 0 
@@ -777,11 +777,11 @@ Is var i declared: ScopeLayer::IsArgument
 >>> Interpreter: IntExpr
 >>> Interpreter: Assignment no subscript
 GoUp
-Current state: parent: 0x55e3bb8fcc70 ; child index: 0 
+Current state: parent: 0x555a0b235c70 ; child index: 0 
 GoUp
-Current state: parent: 0x55e3bb8fc4b0 ; child index: 1 
+Current state: parent: 0x555a0b2354b0 ; child index: 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoUp
-Current state: parent: 0x55e3bb8fb860 ; child index: 1 
+Current state: parent: 0x555a0b234860 ; child index: 1 
