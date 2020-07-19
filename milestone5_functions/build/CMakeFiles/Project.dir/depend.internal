@@ -22,6 +22,7 @@ CMakeFiles/Project.dir/driver.cpp.o
  ../include/expressions/NewExpr.hpp
  ../include/expressions/NotExpr.hpp
  ../include/expressions/SubscriptExpr.hpp
+ ../include/expressions/ThisExpr.hpp
  ../include/functions/CommaExprList.hpp
  ../include/functions/Frame.hpp
  ../include/functions/FunctionStorage.hpp
@@ -52,6 +53,10 @@ CMakeFiles/Project.dir/driver.cpp.o
  ../include/types/Object.hpp
  ../include/types/Type.hpp
  ../include/types/UninitObject.hpp
+ ../include/types/constructor/BoolBuilder.hpp
+ ../include/types/constructor/ClassBuilder.hpp
+ ../include/types/constructor/Constructor.hpp
+ ../include/types/constructor/IntegerBuilder.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/BasicList.hpp
  ../include/utils/elements.hpp
@@ -193,6 +198,15 @@ CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o
  ../include/utils/forward_decl.hpp
  ../include/visitors/Visitor.hpp
  /compilers/compilers_course_4sem_2020/milestone5_functions/include/expressions/SubscriptExpr.cpp
+CMakeFiles/Project.dir/include/expressions/ThisExpr.cpp.o
+ ..//debug.h
+ ../include/expressions/Expression.hpp
+ ../include/expressions/ThisExpr.hpp
+ ../include/types/Type.hpp
+ ../include/utils/BasicElement.hpp
+ ../include/utils/forward_decl.hpp
+ ../include/visitors/Visitor.hpp
+ /compilers/compilers_course_4sem_2020/milestone5_functions/include/expressions/ThisExpr.cpp
 CMakeFiles/Project.dir/include/functions/Frame.cpp.o
  ..//debug.h
  ../include/functions/Frame.hpp
@@ -378,6 +392,7 @@ CMakeFiles/Project.dir/include/types/Bool.cpp.o
  /compilers/compilers_course_4sem_2020/milestone5_functions/include/types/Bool.cpp
 CMakeFiles/Project.dir/include/types/Class.cpp.o
  ..//debug.h
+ ../include/scopes/Symbol.hpp
  ../include/types/Class.hpp
  ../include/types/Object.hpp
  ../include/types/Type.hpp
@@ -425,6 +440,52 @@ CMakeFiles/Project.dir/include/types/UninitObject.cpp.o
  ../include/types/UninitObject.hpp
  ../include/utils/forward_decl.hpp
  /compilers/compilers_course_4sem_2020/milestone5_functions/include/types/UninitObject.cpp
+CMakeFiles/Project.dir/include/types/constructor/BoolBuilder.cpp.o
+ ..//debug.h
+ ../include/types/Bool.hpp
+ ../include/types/Integer.hpp
+ ../include/types/Object.hpp
+ ../include/types/Type.hpp
+ ../include/types/constructor/BoolBuilder.hpp
+ ../include/utils/forward_decl.hpp
+ /compilers/compilers_course_4sem_2020/milestone5_functions/include/types/constructor/BoolBuilder.cpp
+CMakeFiles/Project.dir/include/types/constructor/ClassBuilder.cpp.o
+ ..//debug.h
+ ../include/scopes/Symbol.hpp
+ ../include/types/Bool.hpp
+ ../include/types/Class.hpp
+ ../include/types/Integer.hpp
+ ../include/types/Object.hpp
+ ../include/types/Type.hpp
+ ../include/types/constructor/BoolBuilder.hpp
+ ../include/types/constructor/ClassBuilder.hpp
+ ../include/types/constructor/Constructor.hpp
+ ../include/types/constructor/IntegerBuilder.hpp
+ ../include/utils/forward_decl.hpp
+ /compilers/compilers_course_4sem_2020/milestone5_functions/include/types/constructor/ClassBuilder.cpp
+CMakeFiles/Project.dir/include/types/constructor/Constructor.cpp.o
+ ..//debug.h
+ ../include/scopes/Symbol.hpp
+ ../include/types/Bool.hpp
+ ../include/types/Class.hpp
+ ../include/types/Integer.hpp
+ ../include/types/Object.hpp
+ ../include/types/Type.hpp
+ ../include/types/constructor/BoolBuilder.hpp
+ ../include/types/constructor/ClassBuilder.hpp
+ ../include/types/constructor/Constructor.hpp
+ ../include/types/constructor/IntegerBuilder.hpp
+ ../include/utils/forward_decl.hpp
+ /compilers/compilers_course_4sem_2020/milestone5_functions/include/types/constructor/Constructor.cpp
+CMakeFiles/Project.dir/include/types/constructor/IntegerBuilder.cpp.o
+ ..//debug.h
+ ../include/types/Bool.hpp
+ ../include/types/Integer.hpp
+ ../include/types/Object.hpp
+ ../include/types/Type.hpp
+ ../include/types/constructor/IntegerBuilder.hpp
+ ../include/utils/forward_decl.hpp
+ /compilers/compilers_course_4sem_2020/milestone5_functions/include/types/constructor/IntegerBuilder.cpp
 CMakeFiles/Project.dir/include/utils/BasicList.cpp.o
  ..//debug.h
  ../include/types/Type.hpp
@@ -460,6 +521,7 @@ CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o
  ../include/expressions/NewExpr.hpp
  ../include/expressions/NotExpr.hpp
  ../include/expressions/SubscriptExpr.hpp
+ ../include/expressions/ThisExpr.hpp
  ../include/functions/CommaExprList.hpp
  ../include/functions/Frame.hpp
  ../include/functions/FunctionStorage.hpp
@@ -490,6 +552,10 @@ CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o
  ../include/types/Object.hpp
  ../include/types/Type.hpp
  ../include/types/UninitObject.hpp
+ ../include/types/constructor/BoolBuilder.hpp
+ ../include/types/constructor/ClassBuilder.hpp
+ ../include/types/constructor/Constructor.hpp
+ ../include/types/constructor/IntegerBuilder.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/BasicList.hpp
  ../include/utils/elements.hpp
@@ -519,6 +585,7 @@ CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o
  ../include/expressions/NewExpr.hpp
  ../include/expressions/NotExpr.hpp
  ../include/expressions/SubscriptExpr.hpp
+ ../include/expressions/ThisExpr.hpp
  ../include/functions/CommaExprList.hpp
  ../include/functions/Frame.hpp
  ../include/functions/FunctionStorage.hpp
@@ -549,6 +616,10 @@ CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o
  ../include/types/Object.hpp
  ../include/types/Type.hpp
  ../include/types/UninitObject.hpp
+ ../include/types/constructor/BoolBuilder.hpp
+ ../include/types/constructor/ClassBuilder.hpp
+ ../include/types/constructor/Constructor.hpp
+ ../include/types/constructor/IntegerBuilder.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/BasicList.hpp
  ../include/utils/elements.hpp
@@ -575,6 +646,7 @@ CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o
  ../include/expressions/NewExpr.hpp
  ../include/expressions/NotExpr.hpp
  ../include/expressions/SubscriptExpr.hpp
+ ../include/expressions/ThisExpr.hpp
  ../include/functions/CommaExprList.hpp
  ../include/functions/Frame.hpp
  ../include/functions/FunctionStorage.hpp
@@ -605,6 +677,10 @@ CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o
  ../include/types/Object.hpp
  ../include/types/Type.hpp
  ../include/types/UninitObject.hpp
+ ../include/types/constructor/BoolBuilder.hpp
+ ../include/types/constructor/ClassBuilder.hpp
+ ../include/types/constructor/Constructor.hpp
+ ../include/types/constructor/IntegerBuilder.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/BasicList.hpp
  ../include/utils/elements.hpp
@@ -640,6 +716,7 @@ CMakeFiles/Project.dir/main.cpp.o
  ../include/expressions/NewExpr.hpp
  ../include/expressions/NotExpr.hpp
  ../include/expressions/SubscriptExpr.hpp
+ ../include/expressions/ThisExpr.hpp
  ../include/functions/CommaExprList.hpp
  ../include/functions/Frame.hpp
  ../include/functions/FunctionStorage.hpp
@@ -670,6 +747,10 @@ CMakeFiles/Project.dir/main.cpp.o
  ../include/types/Object.hpp
  ../include/types/Type.hpp
  ../include/types/UninitObject.hpp
+ ../include/types/constructor/BoolBuilder.hpp
+ ../include/types/constructor/ClassBuilder.hpp
+ ../include/types/constructor/Constructor.hpp
+ ../include/types/constructor/IntegerBuilder.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/BasicList.hpp
  ../include/utils/elements.hpp
@@ -703,6 +784,7 @@ CMakeFiles/Project.dir/parser.cpp.o
  ../include/expressions/NewExpr.hpp
  ../include/expressions/NotExpr.hpp
  ../include/expressions/SubscriptExpr.hpp
+ ../include/expressions/ThisExpr.hpp
  ../include/functions/CommaExprList.hpp
  ../include/functions/Frame.hpp
  ../include/functions/FunctionStorage.hpp
@@ -733,6 +815,10 @@ CMakeFiles/Project.dir/parser.cpp.o
  ../include/types/Object.hpp
  ../include/types/Type.hpp
  ../include/types/UninitObject.hpp
+ ../include/types/constructor/BoolBuilder.hpp
+ ../include/types/constructor/ClassBuilder.hpp
+ ../include/types/constructor/Constructor.hpp
+ ../include/types/constructor/IntegerBuilder.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/BasicList.hpp
  ../include/utils/elements.hpp
@@ -766,6 +852,7 @@ CMakeFiles/Project.dir/scanner.cpp.o
  ../include/expressions/NewExpr.hpp
  ../include/expressions/NotExpr.hpp
  ../include/expressions/SubscriptExpr.hpp
+ ../include/expressions/ThisExpr.hpp
  ../include/functions/CommaExprList.hpp
  ../include/functions/Frame.hpp
  ../include/functions/FunctionStorage.hpp
@@ -796,6 +883,10 @@ CMakeFiles/Project.dir/scanner.cpp.o
  ../include/types/Object.hpp
  ../include/types/Type.hpp
  ../include/types/UninitObject.hpp
+ ../include/types/constructor/BoolBuilder.hpp
+ ../include/types/constructor/ClassBuilder.hpp
+ ../include/types/constructor/Constructor.hpp
+ ../include/types/constructor/IntegerBuilder.hpp
  ../include/utils/BasicElement.hpp
  ../include/utils/BasicList.hpp
  ../include/utils/elements.hpp

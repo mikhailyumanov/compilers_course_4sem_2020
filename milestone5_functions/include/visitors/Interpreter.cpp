@@ -29,9 +29,11 @@ void Interpreter::Visit(std::shared_ptr<Program> element) {
 
   ScopeDown();
 
+  current_scope_->UnsetMain();
   element->class_decl_list->Accept(shared_from_this());
 
   ScopeDown();
+  current_scope_->SetMain();
   element->main_class->Accept(shared_from_this());
   ScopeUp();
 }
@@ -137,7 +139,7 @@ void Interpreter::Visit(std::shared_ptr<AssignmentStmt> element) {
     DEBUG("declared:")
 //  current_scope_ is "deprecated"
 //    DEBUG((bool) current_scope_->IsDeclaredAnywhere(element->lvalue->name))
-    DEBUG((bool) function_table_->IsDeclared(element->lvalue->name))
+    DEBUG((bool) current_scope_->IsDeclared(element->lvalue->name))
   DEBUG_FINISH
 //  current_scope_ is "deprecated"
 //  for (auto& pr : current_scope_->GetVars()) {
@@ -154,9 +156,34 @@ void Interpreter::Visit(std::shared_ptr<AssignmentStmt> element) {
   }
 #endif
 */
+
+  // get value depending on class/main scope
+
   auto value = Accept(element->expr);
-  size_t offset = function_table_->GetOffset(element->lvalue->name);
-  std::shared_ptr<Object> var = current_frame_->GetValue(offset);
+  std::shared_ptr<Object> var;
+  Symbol symbol = Symbol(element->lvalue->name);
+
+  if (!current_frame_->HasParent()) {
+    size_t offset = function_table_->GetOffset(symbol);
+    var = current_frame_->GetValue(offset);
+  } else {
+    if (current_scope_->IsArgument(symbol)) {
+      var = current_frame_->GetValue(
+          -current_scope_->GetArgIndex(symbol) - 2);
+    } else if (current_scope_->IsClassData(symbol)) {
+      auto This =
+        std::dynamic_pointer_cast<Class>(current_frame_->GetValue(-1));
+      DEBUG_SINGLE((This->Print(debug_output()), ""))
+
+      var = This->GetValue(symbol);
+    } else {
+      size_t offset = function_table_->GetOffset(symbol);
+      var = current_frame_->GetValue(offset);
+    }
+  }
+
+  // assign depending on class/main scope and operands' type
+
   if (element->lvalue->expr) {  // arr[i] = x
     DEBUG_SINGLE(">>> Interpreter: Assignment subscript")
     DEBUG_SINGLE(var->IsArray())
@@ -166,9 +193,28 @@ void Interpreter::Visit(std::shared_ptr<AssignmentStmt> element) {
 //    DEBUG_SINGLE('\n')
   } else {  // a = b
     DEBUG_SINGLE(">>> Interpreter: Assignment no subscript")
-    current_frame_->SetValue(
-        function_table_->GetOffset(Symbol(element->lvalue->name)),
-        value);
+    if (!current_frame_->HasParent()) {
+      current_frame_->SetValue(
+          function_table_->GetOffset(symbol),value);
+    } else {
+      if (current_scope_->IsArgument(symbol)) {
+        if (var->IsClass()) {
+          *var = *value;
+        } else {
+          current_frame_->SetValue(
+              -current_scope_->GetArgIndex(symbol) - 2, value);
+        }
+      } else if (current_scope_->IsClassData(symbol)) {
+        auto This =
+          std::dynamic_pointer_cast<Class>(current_frame_->GetValue(-1));
+        DEBUG_SINGLE((This->Print(debug_output()), ""))
+
+        This->SetValue(symbol, value);
+      } else {
+        current_frame_->SetValue(
+            function_table_->GetOffset(symbol), value);
+      }
+    }
 //    current_scope_->Get(element->lvalue->name)->Print(std::cout);
 //    DEBUG_SINGLE('\n')
   }
@@ -177,15 +223,17 @@ void Interpreter::Visit(std::shared_ptr<AssignmentStmt> element) {
 void Interpreter::Visit(std::shared_ptr<ReturnStmt> element) {
   DEBUG_SINGLE(">>> Interpreter: ReturnStmt")
 
-  element->expr->Accept(shared_from_this());
-  // TODO
+  if (current_frame_->HasParent()) {
+    current_frame_->SetParentReturnValue(Accept(element->expr));
+  }
+
+  current_frame_->SetReturned();
 }
 
 void Interpreter::Visit(std::shared_ptr<MethodStmt> element) {
   DEBUG_SINGLE(">>> Interpreter: MethodStmt")
 
   element->invocation->Accept(shared_from_this());
-  // TODO
 }
 
 void Interpreter::Visit(std::shared_ptr<BinOpExpr> element) {
@@ -251,7 +299,7 @@ void Interpreter::Visit(std::shared_ptr<IntExpr> element) {
 void Interpreter::Visit(std::shared_ptr<NewExpr> element) {
   DEBUG_SINGLE(">>> Interpreter: NewExpr")
 
-  SetTosValue(std::make_shared<Class>(element->GetType().type));
+  SetTosValue(Constructor::GetInstance().Construct(element->GetType().type));
 }
 
 void Interpreter::Visit(std::shared_ptr<NewArrayExpr> element) {
@@ -262,20 +310,8 @@ void Interpreter::Visit(std::shared_ptr<NewArrayExpr> element) {
   new_array.reserve(len);
 
   std::string type = element->type;
-  if (type == "int") {
-    for (size_t i = 0; i < len; ++i) {
-      new_array.emplace_back(std::make_shared<Integer>(0));
-    }
-  } else if (type == "boolean") {
-    for (size_t i = 0; i < len; ++i) {
-      new_array.emplace_back(std::make_shared<Bool>(false));
-    }
-  } else if (type == "void") {
-    // error thrown in symbol_tree_visitor_
-  } else {
-    for (size_t i = 0; i < len; ++i) {
-      new_array.emplace_back(std::make_shared<Class>(type));
-    }
+  for (size_t i = 0; i < len; ++i) {
+    new_array.emplace_back(Constructor::GetInstance().Construct(type));
   }
 
   SetTosValue(std::make_shared<Array>(type, new_array));
@@ -301,16 +337,40 @@ void Interpreter::Visit(std::shared_ptr<IdentExpr> element) {
   DEBUG_FINISH
 */
 
-  SetTosValue(
-    current_frame_->GetValue(
-      function_table_->GetOffset(Symbol(element->name))));
+  std::shared_ptr<Object> value;
+  Symbol symbol = Symbol(element->name);
+
+  if (!current_frame_->HasParent()) {
+    value = current_frame_->GetValue(function_table_->GetOffset(symbol));
+  } else {
+    if (current_scope_->IsArgument(symbol)) {
+      value = current_frame_->GetValue(
+          -current_scope_->GetArgIndex(symbol) - 2);
+    } else if (current_scope_->IsClassData(symbol)) {
+      auto This =
+        std::dynamic_pointer_cast<Class>(current_frame_->GetValue(-1));
+      DEBUG_SINGLE((This->Print(debug_output()), ""))
+
+      value = This->GetValue(symbol);
+    } else {
+      size_t offset = function_table_->GetOffset(symbol);
+      value = current_frame_->GetValue(function_table_->GetOffset(symbol));
+    }
+  }
+
+  SetTosValue(value);
 }
 
 void Interpreter::Visit(std::shared_ptr<MethodExpr> element) {
   DEBUG_SINGLE(">>> Interpreter: MethodExpr")
 
   element->invocation->Accept(shared_from_this());
-  // TODO
+}
+
+void Interpreter::Visit(std::shared_ptr<ThisExpr> element) {
+  DEBUG_SINGLE(">>> Interpreter: ThisExpr")
+
+  SetTosValue(current_frame_->GetValue(-1));
 }
 
 void Interpreter::Visit(std::shared_ptr<ClassDecl> element) {
@@ -346,7 +406,43 @@ void Interpreter::Visit(std::shared_ptr<Lvalue> element) {
 void Interpreter::Visit(std::shared_ptr<MethodInvocation> element) {
   DEBUG_SINGLE(">>> Interpreter: MethodInvocation")
 
-  // TODO
+  auto function = FunctionStorage::GetInstance().GetFunction(
+      element->expr->GetType().type, element->func_name);
+  auto function_type = function->function_type;
+
+  // make child frame
+  auto new_frame = std::make_shared<Frame>(function_type);
+  new_frame->SetParent(current_frame_);
+
+  // set args
+  new_frame->SetValue(-1, Accept(element->expr));
+  for (size_t i = 0; i < function_type.GetNumArgs(); ++i) {
+    new_frame->SetValue(-i - 2, Accept((*element->comma_expr_list)[i]));
+  }
+
+  // call
+  current_frame_ = new_frame;
+  ScopeDown();
+  current_scope_->AddChild(
+      std::make_shared<ScopeLayer>(
+        symbol_tree_visitor_->GetTree()
+          ->GetFunctionScope(
+            new_frame->GetValue(-1)->GetType().type, element->func_name)));
+  ScopeDown();
+  current_scope_->UnsetMain();
+
+  // process
+  for (size_t i = 0; i < function->stmt_list->GetLength(); ++i) {
+    if (!current_frame_->IsReturned()) {
+      (*function->stmt_list)[i]->Accept(shared_from_this());
+    }
+  }
+
+  // ret
+  current_frame_ = current_frame_->GetParent();
+  tos_value_ = current_frame_->GetReturnValue();
+  ScopeUp();
+  ScopeUp();
 }
 
 int Interpreter::GetResult(std::shared_ptr<Program> program) {

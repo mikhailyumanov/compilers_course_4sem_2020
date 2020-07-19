@@ -3,7 +3,7 @@
 #include "utils/elements.hpp"
 #include "visitors/Visitor.hpp"
 #include "visitors/PrintVisitor.hpp"
-
+#include "types/constructor/ClassBuilder.hpp"
 
 class SymbolTreeVisitor: public Visitor,
   public std::enable_shared_from_this<SymbolTreeVisitor> {
@@ -35,6 +35,7 @@ class SymbolTreeVisitor: public Visitor,
   void Visit(std::shared_ptr<NotExpr> element) override;
   void Visit(std::shared_ptr<IdentExpr> element) override;
   void Visit(std::shared_ptr<MethodExpr> element) override;
+  void Visit(std::shared_ptr<ThisExpr> element) override;
 
   void Visit(std::shared_ptr<VarDecl> element) override;
   void Visit(std::shared_ptr<MethodDecl> element) override;
@@ -49,15 +50,18 @@ class SymbolTreeVisitor: public Visitor,
   void ScopeUp();
   void FunctionScopeDown(FunctionType);
 
+  bool SetMethodDecl();
+  bool UnsetMethodDecl();
+  bool IsMethodDeclaration() const;
+
   friend class Interpreter;
 
  private:
   std::shared_ptr<ScopeLayerTree> tree_;
   ScopeLayerTree::Iterator current_scope_;
 
-  std::unordered_map<std::string, std::vector<std::shared_ptr<Function>>>
-    methods_;
   std::string current_class_;
+  bool method_decl_ = false;
 
   // verbose
   std::shared_ptr<PrintVisitor> print_visitor_;

@@ -259,9 +259,9 @@ local_variable_declaration: variable_declaration
 ;
 
 method_invocation: expr "." "identifier" "(" comma_expr_list ")"
-        { $$ = std::make_shared<MethodInvocation>($1, Symbol($3), $5); }
+        { $$ = std::make_shared<MethodInvocation>($1, $3, $5); }
                  | expr "." "identifier" "(" ")"
-        { $$ = std::make_shared<MethodInvocation>($1, Symbol($3), 
+        { $$ = std::make_shared<MethodInvocation>($1, $3, 
               std::make_shared<CommaExprList>()); }
 ;
 
@@ -324,7 +324,8 @@ expr: expr AND    expr
     | integer_literal
       { $$ = std::make_shared<IntExpr>($1); }
 
-    | "this"                         { /* TODO */ }
+    | "this"
+      { $$ = std::make_shared<ThisExpr>(); }
 
     | "true"
       { $$ = std::make_shared<TrueExpr>(); }

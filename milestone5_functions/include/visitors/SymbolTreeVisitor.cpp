@@ -23,8 +23,11 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<Program> element) {
   PRINT_DOWN
   ScopeDown();
 
+  current_scope_->UnsetMain();
   element->class_decl_list->Accept(shared_from_this());
+
   ScopeDown();
+  current_scope_->SetMain();
   element->main_class->Accept(shared_from_this());
   ScopeUp();
 
@@ -167,7 +170,7 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<AssignmentStmt> element) {
 void SymbolTreeVisitor::Visit(std::shared_ptr<ReturnStmt> element) {
   PRINT_DOWN
 
-  // TODO
+  element->expr->Accept(shared_from_this());
 
   PRINT_UP
 }
@@ -330,10 +333,20 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<MethodExpr> element) {
 
   Type method_type = FunctionStorage::GetInstance().GetFunction(
         element->invocation->expr->GetType().type, 
-        element->invocation->name.GetName())->function_type.GetReturnType();
+        element->invocation->func_name)->function_type.GetReturnType();
   element->SetType(method_type);
 
   PRINT_UP
+}
+
+void SymbolTreeVisitor::Visit(std::shared_ptr<ThisExpr> element) {
+  PRINT_DOWN
+
+  if (current_scope_->IsMain()) {
+    throw std::runtime_error("Cannot use 'this' keyword im main() context.");
+  }
+
+  element->SetType(Type{current_class_, false});
 }
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<ClassDecl> element) {
@@ -341,6 +354,7 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<ClassDecl> element) {
   PRINT_DOWN
 
   current_class_ = element->class_name;
+  FunctionStorage::GetInstance().DeclareClass(current_class_);
 
   element->decl_list->Accept(shared_from_this());
   ScopeUp();
@@ -353,25 +367,47 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<VarDecl> element) {
 
   DEBUG_START DEBUG(element->name) DEBUG(element->type) DEBUG_FINISH
   current_scope_->DeclareVariable(element->name, element->type);
+
+  if (!IsMethodDeclaration()) {
+    DEBUG_SINGLE("VarDecl: IsMethodDecl")
+    std::make_shared<ClassBuilder>()->SetClassParam(
+        current_class_, element->name, element->type);
+  }
 }
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<MethodDecl> element) {
   FunctionScopeDown(element->function_type);
   PRINT_DOWN
 
-  DEBUG_START DEBUG(element->name) DEBUG(element->function_type) DEBUG_FINISH
+  DEBUG_START
+    DEBUG(element->name)
+    DEBUG(element->function_type)
+    DEBUG(current_scope_->GetFunctionType())
+  DEBUG_FINISH
 
+  SetMethodDecl();
+
+  FunctionStorage::GetInstance().DeclareFunction(
+      current_class_, element->name, element->function_type);
   element->stmt_list->Accept(shared_from_this());
+
+  UnsetMethodDecl();
   ScopeUp();
 
-  DEBUG_SINGLE("MethodDecl: " + element->function_type.ToString())
+  DEBUG_START
+    DEBUG("MethodDecl: ")
+    DEBUG(element->function_type)
+    DEBUG(current_scope_->GetFunctionType())
+  DEBUG_FINISH
 
   FunctionStorage::GetInstance().SetFunction(current_class_, element->name,
       std::make_shared<Function>(element->function_type, element->stmt_list));
 
-  tree_->SetFunctionScope(current_class_, element->name, *current_scope_);
+  DEBUG_SINGLE(current_scope_->GetFunctionType())
+  tree_->SetFunctionScope(current_class_, element->name, **current_scope_);
 
   PRINT_UP
+
 }
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<Lvalue> element) {
@@ -417,10 +453,10 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<MethodInvocation> element) {
   auto expr = element->expr;
 
   expr->Accept(shared_from_this());
-  DEBUG_SINGLE(element->name.GetName())
+  DEBUG_SINGLE(element->func_name)
   comma_expr_list->Accept(shared_from_this());
   std::string class_name = expr->GetType().type;
-  std::string func_name = element->name.GetName();
+  std::string func_name = element->func_name;
 
   // check expr type
   if (!expr->GetType().IsClass()) {
@@ -496,6 +532,22 @@ void SymbolTreeVisitor::FunctionScopeDown(FunctionType function_type) {
     print_visitor_->GetStream() << "NEW FUNCTION SCOPE" << std::endl;
   }
 
+  DEBUG_SINGLE("SymbolTreeVisitor::FunctionScopeDown")
+  DEBUG_SINGLE(function_type)
   tree_->AddLayer(*current_scope_, function_type);
   current_scope_.GoDown();
+  DEBUG_SINGLE(function_type)
 }
+
+bool SymbolTreeVisitor::SetMethodDecl() {
+  method_decl_ = true;
+}
+
+bool SymbolTreeVisitor::UnsetMethodDecl() {
+  method_decl_ = false;
+}
+
+bool SymbolTreeVisitor::IsMethodDeclaration() const {
+  return method_decl_;
+}
+

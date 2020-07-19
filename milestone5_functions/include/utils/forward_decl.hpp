@@ -34,6 +34,7 @@ class NewArrayExpr;
 class NotExpr;
 class IdentExpr;
 class MethodExpr;
+class ThisExpr;
 // declarations
 class Decl;
 class VarDecl;
@@ -57,6 +58,12 @@ class Lvalue;
 // functions
 class MethodInvocation;
 class CommaExprList;
-//class Frame;
+class Frame;
+class FunctionTable;
 class FunctionStorage;
-
+// constructor
+class Constructor;
+class ObjectBuilder;
+class IntegerBuilder;
+class BoolBuilder;
+class ClassBuilder;

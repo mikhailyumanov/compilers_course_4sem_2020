@@ -8,6 +8,7 @@
 class Function : public Object {
  public:
   Function(FunctionType function_type, std::shared_ptr<StmtList> stmt_list);
+  Function(FunctionType function_type);
 
   void Print(std::ostream& stream) const override;
 

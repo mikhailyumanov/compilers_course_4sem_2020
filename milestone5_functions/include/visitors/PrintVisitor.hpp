@@ -37,6 +37,7 @@ class PrintVisitor: public Visitor,
   void Visit(std::shared_ptr<NotExpr> element) override;
   void Visit(std::shared_ptr<IdentExpr> element) override;
   void Visit(std::shared_ptr<MethodExpr> element) override;
+  void Visit(std::shared_ptr<ThisExpr> element) override;
 
   void Visit(std::shared_ptr<VarDecl> element) override;
   void Visit(std::shared_ptr<MethodDecl> element) override;

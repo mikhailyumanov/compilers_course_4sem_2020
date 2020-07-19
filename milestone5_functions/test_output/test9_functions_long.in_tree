@@ -97,6 +97,9 @@ Program
 2
 					IdentExpr num_dogs
 			ReturnStmt
+				SubscriptExpr
+					IdentExpr dogs
+					IdentExpr i
 	NEW SCOPE
 	MainClass
 		LocalVarDeclStmt

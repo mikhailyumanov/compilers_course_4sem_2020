@@ -100,6 +100,14 @@ expressions/Expression.hpp
 Expression.hpp
 ../include/expressions/Expression.hpp
 
+../include/expressions/ThisExpr.hpp
+memory
+-
+string
+-
+expressions/Expression.hpp
+../include/expressions/expressions/Expression.hpp
+
 ../include/functions/CommaExprList.hpp
 utils/BasicList.hpp
 ../include/functions/utils/BasicList.hpp
@@ -131,6 +139,8 @@ unordered_map
 -
 types/Function.hpp
 ../include/functions/types/Function.hpp
+types/FunctionType.hpp
+../include/functions/types/FunctionType.hpp
 
 ../include/functions/FunctionTable.hpp
 memory
@@ -283,8 +293,12 @@ types/Integer.hpp
 ../include/types/Class.hpp
 vector
 -
+unordered_map
+-
 types/Object.hpp
 ../include/types/types/Object.hpp
+scopes/Symbol.hpp
+../include/types/scopes/Symbol.hpp
 
 ../include/types/Function.hpp
 types/Object.hpp
@@ -325,6 +339,28 @@ debug.h
 ../include/types/UninitObject.hpp
 types/Object.hpp
 ../include/types/types/Object.hpp
+
+../include/types/constructor/BoolBuilder.hpp
+types/Bool.hpp
+../include/types/constructor/types/Bool.hpp
+
+../include/types/constructor/ClassBuilder.hpp
+types/constructor/Constructor.hpp
+../include/types/constructor/types/constructor/Constructor.hpp
+types/Class.hpp
+../include/types/constructor/types/Class.hpp
+
+../include/types/constructor/Constructor.hpp
+types/constructor/IntegerBuilder.hpp
+../include/types/constructor/types/constructor/IntegerBuilder.hpp
+types/constructor/BoolBuilder.hpp
+../include/types/constructor/types/constructor/BoolBuilder.hpp
+types/constructor/ClassBuilder.hpp
+../include/types/constructor/types/constructor/ClassBuilder.hpp
+
+../include/types/constructor/IntegerBuilder.hpp
+types/Integer.hpp
+../include/types/constructor/types/Integer.hpp
 
 ../include/utils/BasicElement.hpp
 memory
@@ -395,6 +431,8 @@ expressions/IdentExpr.hpp
 ../include/utils/expressions/IdentExpr.hpp
 expressions/MethodExpr.hpp
 ../include/utils/expressions/MethodExpr.hpp
+expressions/ThisExpr.hpp
+../include/utils/expressions/ThisExpr.hpp
 declarations/Decl.hpp
 ../include/utils/declarations/Decl.hpp
 declarations/VarDecl.hpp
@@ -441,6 +479,14 @@ functions/FunctionTable.hpp
 ../include/utils/functions/FunctionTable.hpp
 functions/FunctionStorage.hpp
 ../include/utils/functions/FunctionStorage.hpp
+types/constructor/Constructor.hpp
+../include/utils/types/constructor/Constructor.hpp
+types/constructor/IntegerBuilder.hpp
+../include/utils/types/constructor/IntegerBuilder.hpp
+types/constructor/BoolBuilder.hpp
+../include/utils/types/constructor/BoolBuilder.hpp
+types/constructor/ClassBuilder.hpp
+../include/utils/types/constructor/ClassBuilder.hpp
 
 ../include/utils/forward_decl.hpp
 types/Type.hpp
@@ -471,6 +517,8 @@ types/Bool.hpp
 ../include/visitors/types/Bool.hpp
 types/Class.hpp
 ../include/visitors/types/Class.hpp
+types/constructor/Constructor.hpp
+../include/visitors/types/constructor/Constructor.hpp
 
 ../include/visitors/PrintVisitor.hpp
 fstream
@@ -487,6 +535,8 @@ visitors/Visitor.hpp
 ../include/visitors/visitors/Visitor.hpp
 visitors/PrintVisitor.hpp
 ../include/visitors/visitors/PrintVisitor.hpp
+types/constructor/ClassBuilder.hpp
+../include/visitors/types/constructor/ClassBuilder.hpp
 
 ../include/visitors/TemplateVisitor.hpp
 utils/BasicElement.hpp
@@ -587,6 +637,10 @@ expressions/NotExpr.hpp
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/expressions/SubscriptExpr.cpp
 expressions/SubscriptExpr.hpp
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/expressions/expressions/SubscriptExpr.hpp
+
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/expressions/ThisExpr.cpp
+expressions/ThisExpr.hpp
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/expressions/expressions/ThisExpr.hpp
 
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/functions/Frame.cpp
 functions/Frame.hpp
@@ -707,6 +761,22 @@ types/UninitObject.hpp
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/types/types/UninitObject.hpp
 stdexcept
 -
+
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/types/constructor/BoolBuilder.cpp
+types/constructor/BoolBuilder.hpp
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/types/constructor/types/constructor/BoolBuilder.hpp
+
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/types/constructor/ClassBuilder.cpp
+types/constructor/ClassBuilder.hpp
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/types/constructor/types/constructor/ClassBuilder.hpp
+
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/types/constructor/Constructor.cpp
+types/constructor/Constructor.hpp
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/types/constructor/types/constructor/Constructor.hpp
+
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/types/constructor/IntegerBuilder.cpp
+types/constructor/IntegerBuilder.hpp
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/types/constructor/types/constructor/IntegerBuilder.hpp
 
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/utils/BasicList.cpp
 utils/BasicList.hpp

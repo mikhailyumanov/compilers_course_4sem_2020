@@ -31,6 +31,7 @@ class Visitor {
   virtual void Visit(std::shared_ptr<NotExpr> element) = 0;
   virtual void Visit(std::shared_ptr<IdentExpr> element) = 0;
   virtual void Visit(std::shared_ptr<MethodExpr> element) = 0;
+  virtual void Visit(std::shared_ptr<ThisExpr> element) = 0;
 
   virtual void Visit(std::shared_ptr<VarDecl> element) = 0;
   virtual void Visit(std::shared_ptr<MethodDecl> element) = 0;

@@ -1,13 +1,15 @@
 >>> Interpreter: Program
 >>> PrintVisitor: Program
 GoDown
-Current state: parent: 0x562a41794890 ; child index: 1 
+Current state: parent: 0x557ee0246860 ; child index: 1 
 GoDown
-Current state: parent: 0x562a417954c0 ; child index: 0 
+Current state: parent: 0x557ee0247490 ; child index: 0 
 >>> PrintVisitor: MainClass
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: true arr 
 arr type: int, is_array: true 
+ScopeLayer::IsArgument
+VarDecl: IsMethodDecl
 >>> PrintVisitor: AssignmentStmt
 >>> PrintVisitor: NewArrayExpr type =  int 
 >>> PrintVisitor: IntExpr 5 
@@ -52,13 +54,13 @@ arr type: int, is_array: true
 >>> PrintVisitor: LengthExpr
 >>> PrintVisitor: IdentExpr arr 
 GoUp
-Current state: parent: 0x562a41794890 ; child index: 1 
+Current state: parent: 0x557ee0246860 ; child index: 1 
 
 
 GoDown
-Current state: parent: 0x562a41794890 ; child index: 1 
+Current state: parent: 0x557ee0246860 ; child index: 1 
 GoDown
-Current state: parent: 0x562a417954c0 ; child index: 0 
+Current state: parent: 0x557ee0247490 ; child index: 0 
 >>> Interpreter: MainClass
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
@@ -148,4 +150,4 @@ Is var arr declared: 1
 >>> Interpreter: IdentExpr
 5
 GoUp
-Current state: parent: 0x562a41794890 ; child index: 1 
+Current state: parent: 0x557ee0246860 ; child index: 1 

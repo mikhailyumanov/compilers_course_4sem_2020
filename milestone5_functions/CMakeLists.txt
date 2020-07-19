@@ -56,6 +56,7 @@ set(
     include/expressions/NotExpr.cpp
     include/expressions/IdentExpr.cpp
     include/expressions/MethodExpr.cpp
+    include/expressions/ThisExpr.cpp
 
     include/utils/BasicList.cpp
 
@@ -84,6 +85,10 @@ set(
     include/functions/FunctionTable.cpp
     include/functions/FunctionStorage.cpp
 
+    include/types/constructor/Constructor.cpp
+    include/types/constructor/IntegerBuilder.cpp
+    include/types/constructor/BoolBuilder.cpp
+    include/types/constructor/ClassBuilder.cpp
 
     include/visitors/PrintVisitor.cpp
     include/visitors/Interpreter.cpp
