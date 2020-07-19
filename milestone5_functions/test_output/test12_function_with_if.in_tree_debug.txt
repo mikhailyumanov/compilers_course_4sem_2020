@@ -1,0 +1,257 @@
+>>> Interpreter: Program
+>>> PrintVisitor: Program
+GoDown
+Current state: parent: 0x5575e9deb8d0 ; child index: 1 
+GoDown
+Current state: parent: 0x5575e9dec500 ; child index: 0 
+>>> PrintVisitor: ClassDecl Dummy 
+SymbolTreeVisitor::FunctionScopeDown
+Return type: boolean; Args: 
+GoDown
+Current state: parent: 0x5575e9dec680 ; child index: 0 
+Return type: boolean; Args: 
+>>> PrintVisitor: MethodDecl Return type: boolean; Args:  AlwaysTrue 
+AlwaysTrue Return type: boolean; Args:  Return type: boolean; Args:  
+GoDown
+Current state: parent: 0x5575e9dec880 ; child index: 0 
+>>> PrintVisitor: ReturnStmt
+>>> PrintVisitor: IntExpr 1 
+GoUp
+Current state: parent: 0x5575e9dec680 ; child index: 0 
+MethodDecl:  Return type: boolean; Args:  Return type: boolean; Args:  
+Return type: boolean; Args: 
+ScopeLayerTree::SetFunctionScope Return type: boolean; Args:  Return type: boolean; Args:  
+GoUp
+Current state: parent: 0x5575e9dec500 ; child index: 0 
+SymbolTreeVisitor::FunctionScopeDown
+Return type: boolean; Args: 
+GoDown
+Current state: parent: 0x5575e9dec680 ; child index: 1 
+Return type: boolean; Args: 
+>>> PrintVisitor: MethodDecl Return type: boolean; Args:  AlwaysFalse 
+AlwaysFalse Return type: boolean; Args:  Return type: boolean; Args:  
+GoDown
+Current state: parent: 0x5575e9dece50 ; child index: 0 
+GoDown
+Current state: parent: 0x5575e9decfa0 ; child index: 0 
+>>> PrintVisitor: IfStmt
+>>> PrintVisitor: TrueExpr
+GoDown
+Current state: parent: 0x5575e9ded140 ; child index: 0 
+>>> PrintVisitor: StmtListStmt
+>>> PrintVisitor: ReturnStmt
+>>> PrintVisitor: IntExpr 0 
+GoUp
+Current state: parent: 0x5575e9decfa0 ; child index: 0 
+GoUp
+Current state: parent: 0x5575e9dece50 ; child index: 0 
+>>> PrintVisitor: ReturnStmt
+>>> PrintVisitor: IntExpr 1 
+GoUp
+Current state: parent: 0x5575e9dec680 ; child index: 1 
+MethodDecl:  Return type: boolean; Args:  Return type: boolean; Args:  
+Return type: boolean; Args: 
+ScopeLayerTree::SetFunctionScope Return type: boolean; Args:  Return type: boolean; Args:  
+GoUp
+Current state: parent: 0x5575e9dec500 ; child index: 0 
+GoUp
+Current state: parent: 0x5575e9deb8d0 ; child index: 1 
+GoDown
+Current state: parent: 0x5575e9dec500 ; child index: 1 
+>>> PrintVisitor: MainClass
+>>> PrintVisitor: LocalVarDeclStmt
+>>> PrintVisitor: VarDecl type: boolean, is_array: false res 
+res type: boolean, is_array: false 
+ScopeLayer::IsArgument
+>>> PrintVisitor: AssignmentStmt
+>>> PrintVisitor: MethodExpr
+>>> PrintVisitor: MethodInvocation
+>>> PrintVisitor: NewExpr type =  Dummy 
+AlwaysTrue
+GoDown
+Current state: parent: 0x5575e9df7f80 ; child index: 0 
+GoUp
+Current state: parent: 0x5575e9dec500 ; child index: 1 
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: IdentExpr res 
+>>> PrintVisitor: AssignmentStmt
+>>> PrintVisitor: MethodExpr
+>>> PrintVisitor: MethodInvocation
+>>> PrintVisitor: NewExpr type =  Dummy 
+AlwaysTrue
+GoDown
+Current state: parent: 0x5575e9df7f80 ; child index: 1 
+GoUp
+Current state: parent: 0x5575e9dec500 ; child index: 1 
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: IdentExpr res 
+>>> PrintVisitor: AssignmentStmt
+>>> PrintVisitor: MethodExpr
+>>> PrintVisitor: MethodInvocation
+>>> PrintVisitor: NewExpr type =  Dummy 
+AlwaysFalse
+GoDown
+Current state: parent: 0x5575e9df7f80 ; child index: 2 
+GoUp
+Current state: parent: 0x5575e9dec500 ; child index: 1 
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: IdentExpr res 
+>>> PrintVisitor: AssignmentStmt
+>>> PrintVisitor: MethodExpr
+>>> PrintVisitor: MethodInvocation
+>>> PrintVisitor: NewExpr type =  Dummy 
+AlwaysFalse
+GoDown
+Current state: parent: 0x5575e9df7f80 ; child index: 3 
+GoUp
+Current state: parent: 0x5575e9dec500 ; child index: 1 
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: IdentExpr res 
+GoUp
+Current state: parent: 0x5575e9deb8d0 ; child index: 1 
+
+
+GoDown
+Current state: parent: 0x5575e9deb8d0 ; child index: 1 
+>>> Interpreter: ClassDecl
+GoDown
+Current state: parent: 0x5575e9dec500 ; child index: 0 
+GoUp
+Current state: parent: 0x5575e9deb8d0 ; child index: 1 
+GoDown
+Current state: parent: 0x5575e9dec500 ; child index: 1 
+>>> Interpreter: MainClass
+>>> Interpreter: LocalVarDeclStmt
+>>> Interpreter: VarDecl
+>>> Interpreter: AssignmentStmt
+Is var res declared: 1 
+>>> Interpreter: MethodExpr
+>>> Interpreter: MethodInvocation
+>>> Interpreter: NewExpr
+Constructor::GetInstance
+Constructor::Construct
+Constructor::GetInstance
+GoDown
+Current state: parent: 0x5575e9df7f80 ; child index: 0 
+GoUp
+Current state: parent: 0x5575e9dec500 ; child index: 1 
+GoDown
+Current state: parent: 0x5575e9df7f80 ; child index: 0 
+GoDown
+Current state: parent: 0x5575e9df80a0 ; child index: 0 
+>>> Interpreter: ReturnStmt
+>>> Interpreter: IntExpr
+GoUp
+Current state: parent: 0x5575e9df7f80 ; child index: 0 
+GoUp
+Current state: parent: 0x5575e9dec500 ; child index: 1 
+>>> Interpreter: Assignment no subscript
+>>> Interpreter: PrintStmt
+>>> Interpreter: IdentExpr
+>>> Interpreter: IdentExpr
+1
+>>> Interpreter: AssignmentStmt
+Is var res declared: 1 
+>>> Interpreter: MethodExpr
+>>> Interpreter: MethodInvocation
+>>> Interpreter: NewExpr
+Constructor::GetInstance
+Constructor::Construct
+Constructor::GetInstance
+GoDown
+Current state: parent: 0x5575e9df7f80 ; child index: 1 
+GoUp
+Current state: parent: 0x5575e9dec500 ; child index: 1 
+GoDown
+Current state: parent: 0x5575e9df7f80 ; child index: 1 
+GoDown
+Current state: parent: 0x5575e9df81e0 ; child index: 0 
+>>> Interpreter: ReturnStmt
+>>> Interpreter: IntExpr
+GoUp
+Current state: parent: 0x5575e9df7f80 ; child index: 1 
+GoUp
+Current state: parent: 0x5575e9dec500 ; child index: 1 
+>>> Interpreter: Assignment no subscript
+>>> Interpreter: PrintStmt
+>>> Interpreter: IdentExpr
+>>> Interpreter: IdentExpr
+1
+>>> Interpreter: AssignmentStmt
+Is var res declared: 1 
+>>> Interpreter: MethodExpr
+>>> Interpreter: MethodInvocation
+>>> Interpreter: NewExpr
+Constructor::GetInstance
+Constructor::Construct
+Constructor::GetInstance
+GoDown
+Current state: parent: 0x5575e9df7f80 ; child index: 2 
+GoUp
+Current state: parent: 0x5575e9dec500 ; child index: 1 
+GoDown
+Current state: parent: 0x5575e9df7f80 ; child index: 2 
+GoDown
+Current state: parent: 0x5575e9df8330 ; child index: 0 
+>>> Interpreter: IfStmt
+GoDown
+Current state: parent: 0x5575e9dece50 ; child index: 0 
+>>> Interpreter: TrueExpr
+>>> Interpreter: StmtListStmt
+GoDown
+Current state: parent: 0x5575e9decfa0 ; child index: 0 
+>>> Interpreter: ReturnStmt
+>>> Interpreter: IntExpr
+GoUp
+Current state: parent: 0x5575e9dece50 ; child index: 0 
+GoUp
+Current state: parent: 0x5575e9df8330 ; child index: 0 
+GoUp
+Current state: parent: 0x5575e9df7f80 ; child index: 2 
+GoUp
+Current state: parent: 0x5575e9dec500 ; child index: 1 
+>>> Interpreter: Assignment no subscript
+>>> Interpreter: PrintStmt
+>>> Interpreter: IdentExpr
+>>> Interpreter: IdentExpr
+0
+>>> Interpreter: AssignmentStmt
+Is var res declared: 1 
+>>> Interpreter: MethodExpr
+>>> Interpreter: MethodInvocation
+>>> Interpreter: NewExpr
+Constructor::GetInstance
+Constructor::Construct
+Constructor::GetInstance
+GoDown
+Current state: parent: 0x5575e9df7f80 ; child index: 3 
+GoUp
+Current state: parent: 0x5575e9dec500 ; child index: 1 
+GoDown
+Current state: parent: 0x5575e9df7f80 ; child index: 3 
+GoDown
+Current state: parent: 0x5575e9df84a0 ; child index: 0 
+>>> Interpreter: IfStmt
+GoDown
+Current state: parent: 0x5575e9dece50 ; child index: 0 
+>>> Interpreter: TrueExpr
+>>> Interpreter: StmtListStmt
+GoDown
+Current state: parent: 0x5575e9decfa0 ; child index: 0 
+>>> Interpreter: ReturnStmt
+>>> Interpreter: IntExpr
+GoUp
+Current state: parent: 0x5575e9dece50 ; child index: 0 
+GoUp
+Current state: parent: 0x5575e9df84a0 ; child index: 0 
+GoUp
+Current state: parent: 0x5575e9df7f80 ; child index: 3 
+GoUp
+Current state: parent: 0x5575e9dec500 ; child index: 1 
+>>> Interpreter: Assignment no subscript
+>>> Interpreter: PrintStmt
+>>> Interpreter: IdentExpr
+>>> Interpreter: IdentExpr
+0
+GoUp
+Current state: parent: 0x5575e9deb8d0 ; child index: 1 

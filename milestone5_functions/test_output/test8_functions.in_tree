@@ -4,6 +4,7 @@ Program
 	ClassDecl Dog
 		NEW FUNCTION SCOPE
 		MethodDecl Return type: void; Args:  Bark
+			NEW SCOPE
 			PrintStmt
 				IntExpr 12345
 	NEW SCOPE

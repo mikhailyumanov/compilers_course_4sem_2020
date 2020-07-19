@@ -24,17 +24,17 @@ void ScopeLayerTree::AddLayer(
 void ScopeLayerTree::SetFunctionScope(
     std::string class_name,
     std::string func_name,
-    const ScopeLayer& func_scope) {
+    std::shared_ptr<ScopeLayer> func_scope) {
   function_scopes_[class_name][func_name] = func_scope;
 
   DEBUG_START
     DEBUG("ScopeLayerTree::SetFunctionScope")
-    DEBUG(func_scope.GetFunctionType())
-    DEBUG(function_scopes_[class_name][func_name].GetFunctionType())
+    DEBUG(func_scope->GetFunctionType())
+    DEBUG(function_scopes_[class_name][func_name]->GetFunctionType())
   DEBUG_FINISH
 }
 
-const ScopeLayer& ScopeLayerTree::GetFunctionScope(
+std::shared_ptr<ScopeLayer> ScopeLayerTree::GetFunctionScope(
     std::string class_name, std::string func_name) const {
   assert(function_scopes_.find(class_name) != function_scopes_.end());
   assert(function_scopes_.at(class_name).find(func_name) !=

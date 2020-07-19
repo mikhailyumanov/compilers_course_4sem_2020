@@ -1,28 +1,32 @@
 >>> Interpreter: Program
 >>> PrintVisitor: Program
 GoDown
-Current state: parent: 0x564cb390b880 ; child index: 1 
+Current state: parent: 0x56233f565880 ; child index: 1 
 GoDown
-Current state: parent: 0x564cb390c4d0 ; child index: 0 
+Current state: parent: 0x56233f5664d0 ; child index: 0 
 >>> PrintVisitor: ClassDecl Dog 
 SymbolTreeVisitor::FunctionScopeDown
 Return type: void; Args: 
 GoDown
-Current state: parent: 0x564cb390c620 ; child index: 0 
+Current state: parent: 0x56233f566620 ; child index: 0 
 Return type: void; Args: 
 >>> PrintVisitor: MethodDecl Return type: void; Args:  Bark 
 Bark Return type: void; Args:  Return type: void; Args:  
+GoDown
+Current state: parent: 0x56233f566820 ; child index: 0 
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IntExpr 12345 
+GoUp
+Current state: parent: 0x56233f566620 ; child index: 0 
 MethodDecl:  Return type: void; Args:  Return type: void; Args:  
 Return type: void; Args: 
 ScopeLayerTree::SetFunctionScope Return type: void; Args:  Return type: void; Args:  
 GoUp
-Current state: parent: 0x564cb390c4d0 ; child index: 0 
+Current state: parent: 0x56233f5664d0 ; child index: 0 
 GoUp
-Current state: parent: 0x564cb390b880 ; child index: 1 
+Current state: parent: 0x56233f565880 ; child index: 1 
 GoDown
-Current state: parent: 0x564cb390c4d0 ; child index: 1 
+Current state: parent: 0x56233f5664d0 ; child index: 1 
 >>> PrintVisitor: MainClass
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: Dog, is_array: false dog 
@@ -35,22 +39,22 @@ ScopeLayer::IsArgument
 >>> PrintVisitor: NewExpr type =  Dog 
 Bark
 GoDown
-Current state: parent: 0x564cb390cdb0 ; child index: 0 
+Current state: parent: 0x56233f566e30 ; child index: 0 
 GoUp
-Current state: parent: 0x564cb390c4d0 ; child index: 1 
+Current state: parent: 0x56233f5664d0 ; child index: 1 
 GoUp
-Current state: parent: 0x564cb390b880 ; child index: 1 
+Current state: parent: 0x56233f565880 ; child index: 1 
 
 
 GoDown
-Current state: parent: 0x564cb390b880 ; child index: 1 
+Current state: parent: 0x56233f565880 ; child index: 1 
 >>> Interpreter: ClassDecl
 GoDown
-Current state: parent: 0x564cb390c4d0 ; child index: 0 
+Current state: parent: 0x56233f5664d0 ; child index: 0 
 GoUp
-Current state: parent: 0x564cb390b880 ; child index: 1 
+Current state: parent: 0x56233f565880 ; child index: 1 
 GoDown
-Current state: parent: 0x564cb390c4d0 ; child index: 1 
+Current state: parent: 0x56233f5664d0 ; child index: 1 
 >>> Interpreter: MainClass
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
@@ -68,16 +72,20 @@ Constructor::GetInstance
 Constructor::Construct
 Constructor::GetInstance
 GoDown
-Current state: parent: 0x564cb390cdb0 ; child index: 0 
+Current state: parent: 0x56233f566e30 ; child index: 0 
+GoUp
+Current state: parent: 0x56233f5664d0 ; child index: 1 
 GoDown
-Current state: parent: 0x564cb390cf90 ; child index: 0 
+Current state: parent: 0x56233f566e30 ; child index: 0 
+GoDown
+Current state: parent: 0x56233f567010 ; child index: 0 
 >>> Interpreter: PrintStmt
 >>> Interpreter: IntExpr
 >>> Interpreter: IntExpr
 12345
 GoUp
-Current state: parent: 0x564cb390cdb0 ; child index: 0 
+Current state: parent: 0x56233f566e30 ; child index: 0 
 GoUp
-Current state: parent: 0x564cb390c4d0 ; child index: 1 
+Current state: parent: 0x56233f5664d0 ; child index: 1 
 GoUp
-Current state: parent: 0x564cb390b880 ; child index: 1 
+Current state: parent: 0x56233f565880 ; child index: 1 
