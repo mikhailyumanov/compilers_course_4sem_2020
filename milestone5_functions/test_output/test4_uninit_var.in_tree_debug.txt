@@ -1,30 +1,28 @@
 >>> Interpreter: Program
 >>> PrintVisitor: Program
 GoDown
-Current state: parent: 0x55fbcee09880 ; child index: 1 
+Current state: parent: 0x562dd39a3880 ; child index: 1 
 GoDown
-Current state: parent: 0x55fbcee0a4b0 ; child index: 0 
+Current state: parent: 0x562dd39a44b0 ; child index: 0 
 >>> PrintVisitor: MainClass
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false x 
 x type: int, is_array: false 
 ScopeLayer::IsArgument
-VarDecl: IsMethodDecl
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false y 
 y type: int, is_array: false 
 ScopeLayer::IsArgument
-VarDecl: IsMethodDecl
 >>> PrintVisitor: AssignmentStmt
 >>> PrintVisitor: IdentExpr x 
 GoUp
-Current state: parent: 0x55fbcee09880 ; child index: 1 
+Current state: parent: 0x562dd39a3880 ; child index: 1 
 
 
 GoDown
-Current state: parent: 0x55fbcee09880 ; child index: 1 
+Current state: parent: 0x562dd39a3880 ; child index: 1 
 GoDown
-Current state: parent: 0x55fbcee0a4b0 ; child index: 0 
+Current state: parent: 0x562dd39a44b0 ; child index: 0 
 >>> Interpreter: MainClass
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
@@ -35,4 +33,4 @@ Is var y declared: 1
 >>> Interpreter: IdentExpr
 >>> Interpreter: Assignment no subscript
 GoUp
-Current state: parent: 0x55fbcee09880 ; child index: 1 
+Current state: parent: 0x562dd39a3880 ; child index: 1 

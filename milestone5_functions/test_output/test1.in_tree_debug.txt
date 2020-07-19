@@ -1,15 +1,14 @@
 >>> Interpreter: Program
 >>> PrintVisitor: Program
 GoDown
-Current state: parent: 0x557ee0246860 ; child index: 1 
+Current state: parent: 0x5635960bd860 ; child index: 1 
 GoDown
-Current state: parent: 0x557ee0247490 ; child index: 0 
+Current state: parent: 0x5635960be490 ; child index: 0 
 >>> PrintVisitor: MainClass
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: true arr 
 arr type: int, is_array: true 
 ScopeLayer::IsArgument
-VarDecl: IsMethodDecl
 >>> PrintVisitor: AssignmentStmt
 >>> PrintVisitor: NewArrayExpr type =  int 
 >>> PrintVisitor: IntExpr 5 
@@ -54,13 +53,13 @@ VarDecl: IsMethodDecl
 >>> PrintVisitor: LengthExpr
 >>> PrintVisitor: IdentExpr arr 
 GoUp
-Current state: parent: 0x557ee0246860 ; child index: 1 
+Current state: parent: 0x5635960bd860 ; child index: 1 
 
 
 GoDown
-Current state: parent: 0x557ee0246860 ; child index: 1 
+Current state: parent: 0x5635960bd860 ; child index: 1 
 GoDown
-Current state: parent: 0x557ee0247490 ; child index: 0 
+Current state: parent: 0x5635960be490 ; child index: 0 
 >>> Interpreter: MainClass
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
@@ -68,6 +67,16 @@ Current state: parent: 0x557ee0247490 ; child index: 0
 Is var arr declared: 1 
 >>> Interpreter: NewArrayExpr
 >>> Interpreter: IntExpr
+Constructor::GetInstance
+Constructor::Construct
+Constructor::GetInstance
+Constructor::Construct
+Constructor::GetInstance
+Constructor::Construct
+Constructor::GetInstance
+Constructor::Construct
+Constructor::GetInstance
+Constructor::Construct
 >>> Interpreter: Assignment no subscript
 >>> Interpreter: AssignmentStmt
 Is var arr declared: 1 
@@ -150,4 +159,4 @@ Is var arr declared: 1
 >>> Interpreter: IdentExpr
 5
 GoUp
-Current state: parent: 0x557ee0246860 ; child index: 1 
+Current state: parent: 0x5635960bd860 ; child index: 1 

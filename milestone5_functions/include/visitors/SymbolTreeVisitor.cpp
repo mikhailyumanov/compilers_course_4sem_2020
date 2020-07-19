@@ -368,7 +368,7 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<VarDecl> element) {
   DEBUG_START DEBUG(element->name) DEBUG(element->type) DEBUG_FINISH
   current_scope_->DeclareVariable(element->name, element->type);
 
-  if (!IsMethodDeclaration()) {
+  if (!current_scope_->IsMain() && !IsMethodDeclaration()) {
     DEBUG_SINGLE("VarDecl: IsMethodDecl")
     std::make_shared<ClassBuilder>()->SetClassParam(
         current_class_, element->name, element->type);
@@ -392,7 +392,6 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<MethodDecl> element) {
   element->stmt_list->Accept(shared_from_this());
 
   UnsetMethodDecl();
-  ScopeUp();
 
   DEBUG_START
     DEBUG("MethodDecl: ")
@@ -407,7 +406,7 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<MethodDecl> element) {
   tree_->SetFunctionScope(current_class_, element->name, **current_scope_);
 
   PRINT_UP
-
+  ScopeUp();
 }
 
 void SymbolTreeVisitor::Visit(std::shared_ptr<Lvalue> element) {

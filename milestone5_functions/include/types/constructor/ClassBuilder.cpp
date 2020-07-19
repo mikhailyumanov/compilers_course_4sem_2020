@@ -9,6 +9,10 @@ std::shared_ptr<Object> ClassBuilder::CreateObject(
   auto new_object = std::make_shared<Class>(class_name);
 
   for (auto&& field : recipes_[class_name]) {
+    DEBUG_SINGLE("ClassBuilder::CreateObject: " + field.first.GetName())
+  }
+
+  for (auto&& field : recipes_[class_name]) {
     new_object->SetValue(field.first, constructor.Construct(field.second.type));
   }
 
