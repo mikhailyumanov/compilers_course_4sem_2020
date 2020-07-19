@@ -18,6 +18,16 @@ std::shared_ptr<Function> FunctionStorage::GetFunction(
   return methods_[class_name][func_name];
 }
 
+void FunctionStorage::DeclareClass(std::string class_name) {
+  methods_[class_name] =
+    std::unordered_map<std::string, std::shared_ptr<Function>>();
+}
+
+void FunctionStorage::DeclareFunction(std::string class_name,
+    std::string func_name, FunctionType function_type) {
+  methods_[class_name][func_name] = std::make_shared<Function>(function_type);
+}
+
 bool FunctionStorage::HasClass(std::string class_name) const {
   return methods_.find(class_name) != methods_.end();
 }

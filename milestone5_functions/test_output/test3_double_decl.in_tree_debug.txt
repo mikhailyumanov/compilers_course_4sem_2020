@@ -1,13 +1,15 @@
 >>> Interpreter: Program
 >>> PrintVisitor: Program
 GoDown
-Current state: parent: 0x55698184e8b0 ; child index: 1 
+Current state: parent: 0x55dbae7ef880 ; child index: 1 
 GoDown
-Current state: parent: 0x55698184f4e0 ; child index: 0 
+Current state: parent: 0x55dbae7f04b0 ; child index: 0 
 >>> PrintVisitor: MainClass
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false x 
 x type: int, is_array: false 
+ScopeLayer::IsArgument
+VarDecl: IsMethodDecl
 >>> PrintVisitor: AssignmentStmt
 >>> PrintVisitor: IntExpr 5 
 >>> PrintVisitor: LocalVarDeclStmt

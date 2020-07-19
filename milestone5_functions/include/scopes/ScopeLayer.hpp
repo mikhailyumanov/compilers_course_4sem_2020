@@ -25,8 +25,8 @@ class ScopeLayer: public std::enable_shared_from_this<ScopeLayer> {
 
   bool IsClassData(Symbol symbol) const;
   bool IsArgument(Symbol symbol) const;
+  size_t GetArgIndex(Symbol symbol) const;
   Type GetType(Symbol symbol) const;
-  void SetMain();
 
   bool IsDeclared(Symbol symbol) const;
   bool IsDeclaredAnywhere(Symbol symbol) const;
@@ -39,9 +39,17 @@ class ScopeLayer: public std::enable_shared_from_this<ScopeLayer> {
   std::shared_ptr<ScopeLayer>& GetChild(size_t index);
   std::shared_ptr<ScopeLayer>& GetParent();
 
+  bool IsMain() const;
+  void SetMain();
+  void UnsetMain();
+
+  FunctionType GetFunctionType() const;
+
+#if DEBUG_ON
   std::unordered_map<Symbol, std::shared_ptr<Object>> GetVars() const {
     return local_vars_;
   }
+#endif
 
  private:
   std::string name_;
@@ -51,5 +59,6 @@ class ScopeLayer: public std::enable_shared_from_this<ScopeLayer> {
 
   std::shared_ptr<ScopeLayer> class_scope_;
   FunctionType function_type_;
+  bool is_main_ = false;
 };
 

@@ -32,6 +32,7 @@
 #include "expressions/NotExpr.hpp"
 #include "expressions/IdentExpr.hpp"
 #include "expressions/MethodExpr.hpp"
+#include "expressions/ThisExpr.hpp"
 // declarations
 #include "declarations/Decl.hpp"
 #include "declarations/VarDecl.hpp"
@@ -60,4 +61,8 @@
 #include "functions/Frame.hpp"
 #include "functions/FunctionTable.hpp"
 #include "functions/FunctionStorage.hpp"
-
+// constructor
+#include "types/constructor/Constructor.hpp"
+#include "types/constructor/IntegerBuilder.hpp"
+#include "types/constructor/BoolBuilder.hpp"
+#include "types/constructor/ClassBuilder.hpp"

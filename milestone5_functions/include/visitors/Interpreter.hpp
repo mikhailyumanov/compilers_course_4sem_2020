@@ -11,6 +11,8 @@
 #include "types/Bool.hpp"
 #include "types/Class.hpp"
 
+#include "types/constructor/Constructor.hpp"
+
 
 class Interpreter: public TemplateVisitor<std::shared_ptr<Object>>,
   public std::enable_shared_from_this<Interpreter> {
@@ -42,6 +44,7 @@ class Interpreter: public TemplateVisitor<std::shared_ptr<Object>>,
   void Visit(std::shared_ptr<NotExpr> element) override;
   void Visit(std::shared_ptr<IdentExpr> element) override;
   void Visit(std::shared_ptr<MethodExpr> element) override;
+  void Visit(std::shared_ptr<ThisExpr> element) override;
 
   void Visit(std::shared_ptr<VarDecl> element) override;
   void Visit(std::shared_ptr<MethodDecl> element) override;

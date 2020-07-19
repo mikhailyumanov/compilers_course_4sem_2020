@@ -528,6 +528,33 @@ include/expressions/SubscriptExpr.cpp.s:
 	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.s
 .PHONY : include/expressions/SubscriptExpr.cpp.s
 
+include/expressions/ThisExpr.o: include/expressions/ThisExpr.cpp.o
+
+.PHONY : include/expressions/ThisExpr.o
+
+# target to build an object file
+include/expressions/ThisExpr.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/expressions/ThisExpr.cpp.o
+.PHONY : include/expressions/ThisExpr.cpp.o
+
+include/expressions/ThisExpr.i: include/expressions/ThisExpr.cpp.i
+
+.PHONY : include/expressions/ThisExpr.i
+
+# target to preprocess a source file
+include/expressions/ThisExpr.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/expressions/ThisExpr.cpp.i
+.PHONY : include/expressions/ThisExpr.cpp.i
+
+include/expressions/ThisExpr.s: include/expressions/ThisExpr.cpp.s
+
+.PHONY : include/expressions/ThisExpr.s
+
+# target to generate assembly for a file
+include/expressions/ThisExpr.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/expressions/ThisExpr.cpp.s
+.PHONY : include/expressions/ThisExpr.cpp.s
+
 include/functions/Frame.o: include/functions/Frame.cpp.o
 
 .PHONY : include/functions/Frame.o
@@ -1230,6 +1257,114 @@ include/types/UninitObject.cpp.s:
 	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/UninitObject.cpp.s
 .PHONY : include/types/UninitObject.cpp.s
 
+include/types/constructor/BoolBuilder.o: include/types/constructor/BoolBuilder.cpp.o
+
+.PHONY : include/types/constructor/BoolBuilder.o
+
+# target to build an object file
+include/types/constructor/BoolBuilder.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/constructor/BoolBuilder.cpp.o
+.PHONY : include/types/constructor/BoolBuilder.cpp.o
+
+include/types/constructor/BoolBuilder.i: include/types/constructor/BoolBuilder.cpp.i
+
+.PHONY : include/types/constructor/BoolBuilder.i
+
+# target to preprocess a source file
+include/types/constructor/BoolBuilder.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/constructor/BoolBuilder.cpp.i
+.PHONY : include/types/constructor/BoolBuilder.cpp.i
+
+include/types/constructor/BoolBuilder.s: include/types/constructor/BoolBuilder.cpp.s
+
+.PHONY : include/types/constructor/BoolBuilder.s
+
+# target to generate assembly for a file
+include/types/constructor/BoolBuilder.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/constructor/BoolBuilder.cpp.s
+.PHONY : include/types/constructor/BoolBuilder.cpp.s
+
+include/types/constructor/ClassBuilder.o: include/types/constructor/ClassBuilder.cpp.o
+
+.PHONY : include/types/constructor/ClassBuilder.o
+
+# target to build an object file
+include/types/constructor/ClassBuilder.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/constructor/ClassBuilder.cpp.o
+.PHONY : include/types/constructor/ClassBuilder.cpp.o
+
+include/types/constructor/ClassBuilder.i: include/types/constructor/ClassBuilder.cpp.i
+
+.PHONY : include/types/constructor/ClassBuilder.i
+
+# target to preprocess a source file
+include/types/constructor/ClassBuilder.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/constructor/ClassBuilder.cpp.i
+.PHONY : include/types/constructor/ClassBuilder.cpp.i
+
+include/types/constructor/ClassBuilder.s: include/types/constructor/ClassBuilder.cpp.s
+
+.PHONY : include/types/constructor/ClassBuilder.s
+
+# target to generate assembly for a file
+include/types/constructor/ClassBuilder.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/constructor/ClassBuilder.cpp.s
+.PHONY : include/types/constructor/ClassBuilder.cpp.s
+
+include/types/constructor/Constructor.o: include/types/constructor/Constructor.cpp.o
+
+.PHONY : include/types/constructor/Constructor.o
+
+# target to build an object file
+include/types/constructor/Constructor.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/constructor/Constructor.cpp.o
+.PHONY : include/types/constructor/Constructor.cpp.o
+
+include/types/constructor/Constructor.i: include/types/constructor/Constructor.cpp.i
+
+.PHONY : include/types/constructor/Constructor.i
+
+# target to preprocess a source file
+include/types/constructor/Constructor.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/constructor/Constructor.cpp.i
+.PHONY : include/types/constructor/Constructor.cpp.i
+
+include/types/constructor/Constructor.s: include/types/constructor/Constructor.cpp.s
+
+.PHONY : include/types/constructor/Constructor.s
+
+# target to generate assembly for a file
+include/types/constructor/Constructor.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/constructor/Constructor.cpp.s
+.PHONY : include/types/constructor/Constructor.cpp.s
+
+include/types/constructor/IntegerBuilder.o: include/types/constructor/IntegerBuilder.cpp.o
+
+.PHONY : include/types/constructor/IntegerBuilder.o
+
+# target to build an object file
+include/types/constructor/IntegerBuilder.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/constructor/IntegerBuilder.cpp.o
+.PHONY : include/types/constructor/IntegerBuilder.cpp.o
+
+include/types/constructor/IntegerBuilder.i: include/types/constructor/IntegerBuilder.cpp.i
+
+.PHONY : include/types/constructor/IntegerBuilder.i
+
+# target to preprocess a source file
+include/types/constructor/IntegerBuilder.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/constructor/IntegerBuilder.cpp.i
+.PHONY : include/types/constructor/IntegerBuilder.cpp.i
+
+include/types/constructor/IntegerBuilder.s: include/types/constructor/IntegerBuilder.cpp.s
+
+.PHONY : include/types/constructor/IntegerBuilder.s
+
+# target to generate assembly for a file
+include/types/constructor/IntegerBuilder.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/constructor/IntegerBuilder.cpp.s
+.PHONY : include/types/constructor/IntegerBuilder.cpp.s
+
 include/utils/BasicList.o: include/utils/BasicList.cpp.o
 
 .PHONY : include/utils/BasicList.o
@@ -1527,6 +1662,9 @@ help:
 	@echo "... include/expressions/SubscriptExpr.o"
 	@echo "... include/expressions/SubscriptExpr.i"
 	@echo "... include/expressions/SubscriptExpr.s"
+	@echo "... include/expressions/ThisExpr.o"
+	@echo "... include/expressions/ThisExpr.i"
+	@echo "... include/expressions/ThisExpr.s"
 	@echo "... include/functions/Frame.o"
 	@echo "... include/functions/Frame.i"
 	@echo "... include/functions/Frame.s"
@@ -1605,6 +1743,18 @@ help:
 	@echo "... include/types/UninitObject.o"
 	@echo "... include/types/UninitObject.i"
 	@echo "... include/types/UninitObject.s"
+	@echo "... include/types/constructor/BoolBuilder.o"
+	@echo "... include/types/constructor/BoolBuilder.i"
+	@echo "... include/types/constructor/BoolBuilder.s"
+	@echo "... include/types/constructor/ClassBuilder.o"
+	@echo "... include/types/constructor/ClassBuilder.i"
+	@echo "... include/types/constructor/ClassBuilder.s"
+	@echo "... include/types/constructor/Constructor.o"
+	@echo "... include/types/constructor/Constructor.i"
+	@echo "... include/types/constructor/Constructor.s"
+	@echo "... include/types/constructor/IntegerBuilder.o"
+	@echo "... include/types/constructor/IntegerBuilder.i"
+	@echo "... include/types/constructor/IntegerBuilder.s"
 	@echo "... include/utils/BasicList.o"
 	@echo "... include/utils/BasicList.i"
 	@echo "... include/utils/BasicList.s"

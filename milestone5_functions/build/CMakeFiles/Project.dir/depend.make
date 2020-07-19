@@ -21,6 +21,7 @@ CMakeFiles/Project.dir/driver.cpp.o: ../include/expressions/NewArrayExpr.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/expressions/NewExpr.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/expressions/NotExpr.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/expressions/SubscriptExpr.hpp
+CMakeFiles/Project.dir/driver.cpp.o: ../include/expressions/ThisExpr.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/functions/CommaExprList.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/functions/Frame.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/functions/FunctionStorage.hpp
@@ -51,6 +52,10 @@ CMakeFiles/Project.dir/driver.cpp.o: ../include/types/Integer.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/types/Object.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/types/Type.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/types/UninitObject.hpp
+CMakeFiles/Project.dir/driver.cpp.o: ../include/types/constructor/BoolBuilder.hpp
+CMakeFiles/Project.dir/driver.cpp.o: ../include/types/constructor/ClassBuilder.hpp
+CMakeFiles/Project.dir/driver.cpp.o: ../include/types/constructor/Constructor.hpp
+CMakeFiles/Project.dir/driver.cpp.o: ../include/types/constructor/IntegerBuilder.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/utils/BasicElement.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/utils/BasicList.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/utils/elements.hpp
@@ -192,6 +197,15 @@ CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o: ../include/utils
 CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o: ../include/utils/forward_decl.hpp
 CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o: ../include/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/expressions/SubscriptExpr.cpp.o: ../include/expressions/SubscriptExpr.cpp
+
+CMakeFiles/Project.dir/include/expressions/ThisExpr.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/expressions/ThisExpr.cpp.o: ../include/expressions/Expression.hpp
+CMakeFiles/Project.dir/include/expressions/ThisExpr.cpp.o: ../include/expressions/ThisExpr.hpp
+CMakeFiles/Project.dir/include/expressions/ThisExpr.cpp.o: ../include/types/Type.hpp
+CMakeFiles/Project.dir/include/expressions/ThisExpr.cpp.o: ../include/utils/BasicElement.hpp
+CMakeFiles/Project.dir/include/expressions/ThisExpr.cpp.o: ../include/utils/forward_decl.hpp
+CMakeFiles/Project.dir/include/expressions/ThisExpr.cpp.o: ../include/visitors/Visitor.hpp
+CMakeFiles/Project.dir/include/expressions/ThisExpr.cpp.o: ../include/expressions/ThisExpr.cpp
 
 CMakeFiles/Project.dir/include/functions/Frame.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/functions/Frame.cpp.o: ../include/functions/Frame.hpp
@@ -377,6 +391,7 @@ CMakeFiles/Project.dir/include/types/Bool.cpp.o: ../include/utils/forward_decl.h
 CMakeFiles/Project.dir/include/types/Bool.cpp.o: ../include/types/Bool.cpp
 
 CMakeFiles/Project.dir/include/types/Class.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/types/Class.cpp.o: ../include/scopes/Symbol.hpp
 CMakeFiles/Project.dir/include/types/Class.cpp.o: ../include/types/Class.hpp
 CMakeFiles/Project.dir/include/types/Class.cpp.o: ../include/types/Object.hpp
 CMakeFiles/Project.dir/include/types/Class.cpp.o: ../include/types/Type.hpp
@@ -425,6 +440,52 @@ CMakeFiles/Project.dir/include/types/UninitObject.cpp.o: ../include/types/Uninit
 CMakeFiles/Project.dir/include/types/UninitObject.cpp.o: ../include/utils/forward_decl.hpp
 CMakeFiles/Project.dir/include/types/UninitObject.cpp.o: ../include/types/UninitObject.cpp
 
+CMakeFiles/Project.dir/include/types/constructor/BoolBuilder.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/types/constructor/BoolBuilder.cpp.o: ../include/types/Bool.hpp
+CMakeFiles/Project.dir/include/types/constructor/BoolBuilder.cpp.o: ../include/types/Integer.hpp
+CMakeFiles/Project.dir/include/types/constructor/BoolBuilder.cpp.o: ../include/types/Object.hpp
+CMakeFiles/Project.dir/include/types/constructor/BoolBuilder.cpp.o: ../include/types/Type.hpp
+CMakeFiles/Project.dir/include/types/constructor/BoolBuilder.cpp.o: ../include/types/constructor/BoolBuilder.hpp
+CMakeFiles/Project.dir/include/types/constructor/BoolBuilder.cpp.o: ../include/utils/forward_decl.hpp
+CMakeFiles/Project.dir/include/types/constructor/BoolBuilder.cpp.o: ../include/types/constructor/BoolBuilder.cpp
+
+CMakeFiles/Project.dir/include/types/constructor/ClassBuilder.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/types/constructor/ClassBuilder.cpp.o: ../include/scopes/Symbol.hpp
+CMakeFiles/Project.dir/include/types/constructor/ClassBuilder.cpp.o: ../include/types/Bool.hpp
+CMakeFiles/Project.dir/include/types/constructor/ClassBuilder.cpp.o: ../include/types/Class.hpp
+CMakeFiles/Project.dir/include/types/constructor/ClassBuilder.cpp.o: ../include/types/Integer.hpp
+CMakeFiles/Project.dir/include/types/constructor/ClassBuilder.cpp.o: ../include/types/Object.hpp
+CMakeFiles/Project.dir/include/types/constructor/ClassBuilder.cpp.o: ../include/types/Type.hpp
+CMakeFiles/Project.dir/include/types/constructor/ClassBuilder.cpp.o: ../include/types/constructor/BoolBuilder.hpp
+CMakeFiles/Project.dir/include/types/constructor/ClassBuilder.cpp.o: ../include/types/constructor/ClassBuilder.hpp
+CMakeFiles/Project.dir/include/types/constructor/ClassBuilder.cpp.o: ../include/types/constructor/Constructor.hpp
+CMakeFiles/Project.dir/include/types/constructor/ClassBuilder.cpp.o: ../include/types/constructor/IntegerBuilder.hpp
+CMakeFiles/Project.dir/include/types/constructor/ClassBuilder.cpp.o: ../include/utils/forward_decl.hpp
+CMakeFiles/Project.dir/include/types/constructor/ClassBuilder.cpp.o: ../include/types/constructor/ClassBuilder.cpp
+
+CMakeFiles/Project.dir/include/types/constructor/Constructor.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/types/constructor/Constructor.cpp.o: ../include/scopes/Symbol.hpp
+CMakeFiles/Project.dir/include/types/constructor/Constructor.cpp.o: ../include/types/Bool.hpp
+CMakeFiles/Project.dir/include/types/constructor/Constructor.cpp.o: ../include/types/Class.hpp
+CMakeFiles/Project.dir/include/types/constructor/Constructor.cpp.o: ../include/types/Integer.hpp
+CMakeFiles/Project.dir/include/types/constructor/Constructor.cpp.o: ../include/types/Object.hpp
+CMakeFiles/Project.dir/include/types/constructor/Constructor.cpp.o: ../include/types/Type.hpp
+CMakeFiles/Project.dir/include/types/constructor/Constructor.cpp.o: ../include/types/constructor/BoolBuilder.hpp
+CMakeFiles/Project.dir/include/types/constructor/Constructor.cpp.o: ../include/types/constructor/ClassBuilder.hpp
+CMakeFiles/Project.dir/include/types/constructor/Constructor.cpp.o: ../include/types/constructor/Constructor.hpp
+CMakeFiles/Project.dir/include/types/constructor/Constructor.cpp.o: ../include/types/constructor/IntegerBuilder.hpp
+CMakeFiles/Project.dir/include/types/constructor/Constructor.cpp.o: ../include/utils/forward_decl.hpp
+CMakeFiles/Project.dir/include/types/constructor/Constructor.cpp.o: ../include/types/constructor/Constructor.cpp
+
+CMakeFiles/Project.dir/include/types/constructor/IntegerBuilder.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/types/constructor/IntegerBuilder.cpp.o: ../include/types/Bool.hpp
+CMakeFiles/Project.dir/include/types/constructor/IntegerBuilder.cpp.o: ../include/types/Integer.hpp
+CMakeFiles/Project.dir/include/types/constructor/IntegerBuilder.cpp.o: ../include/types/Object.hpp
+CMakeFiles/Project.dir/include/types/constructor/IntegerBuilder.cpp.o: ../include/types/Type.hpp
+CMakeFiles/Project.dir/include/types/constructor/IntegerBuilder.cpp.o: ../include/types/constructor/IntegerBuilder.hpp
+CMakeFiles/Project.dir/include/types/constructor/IntegerBuilder.cpp.o: ../include/utils/forward_decl.hpp
+CMakeFiles/Project.dir/include/types/constructor/IntegerBuilder.cpp.o: ../include/types/constructor/IntegerBuilder.cpp
+
 CMakeFiles/Project.dir/include/utils/BasicList.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/utils/BasicList.cpp.o: ../include/types/Type.hpp
 CMakeFiles/Project.dir/include/utils/BasicList.cpp.o: ../include/utils/BasicElement.hpp
@@ -459,6 +520,7 @@ CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/expression
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/expressions/NewExpr.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/expressions/NotExpr.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/expressions/SubscriptExpr.hpp
+CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/expressions/ThisExpr.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/functions/CommaExprList.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/functions/Frame.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/functions/FunctionStorage.hpp
@@ -489,6 +551,10 @@ CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/types/Inte
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/types/Object.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/types/Type.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/types/UninitObject.hpp
+CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/types/constructor/BoolBuilder.hpp
+CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/types/constructor/ClassBuilder.hpp
+CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/types/constructor/Constructor.hpp
+CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/types/constructor/IntegerBuilder.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/utils/BasicElement.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/utils/BasicList.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/utils/elements.hpp
@@ -518,6 +584,7 @@ CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/expressio
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/expressions/NewExpr.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/expressions/NotExpr.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/expressions/SubscriptExpr.hpp
+CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/expressions/ThisExpr.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/functions/CommaExprList.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/functions/Frame.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/functions/FunctionStorage.hpp
@@ -548,6 +615,10 @@ CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/types/Int
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/types/Object.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/types/Type.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/types/UninitObject.hpp
+CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/types/constructor/BoolBuilder.hpp
+CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/types/constructor/ClassBuilder.hpp
+CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/types/constructor/Constructor.hpp
+CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/types/constructor/IntegerBuilder.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/utils/BasicElement.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/utils/BasicList.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/utils/elements.hpp
@@ -574,6 +645,7 @@ CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/expr
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/expressions/NewExpr.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/expressions/NotExpr.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/expressions/SubscriptExpr.hpp
+CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/expressions/ThisExpr.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/functions/CommaExprList.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/functions/Frame.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/functions/FunctionStorage.hpp
@@ -604,6 +676,10 @@ CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/type
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/types/Object.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/types/Type.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/types/UninitObject.hpp
+CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/types/constructor/BoolBuilder.hpp
+CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/types/constructor/ClassBuilder.hpp
+CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/types/constructor/Constructor.hpp
+CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/types/constructor/IntegerBuilder.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/utils/BasicElement.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/utils/BasicList.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/utils/elements.hpp
@@ -639,6 +715,7 @@ CMakeFiles/Project.dir/main.cpp.o: ../include/expressions/NewArrayExpr.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/expressions/NewExpr.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/expressions/NotExpr.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/expressions/SubscriptExpr.hpp
+CMakeFiles/Project.dir/main.cpp.o: ../include/expressions/ThisExpr.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/functions/CommaExprList.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/functions/Frame.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/functions/FunctionStorage.hpp
@@ -669,6 +746,10 @@ CMakeFiles/Project.dir/main.cpp.o: ../include/types/Integer.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/types/Object.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/types/Type.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/types/UninitObject.hpp
+CMakeFiles/Project.dir/main.cpp.o: ../include/types/constructor/BoolBuilder.hpp
+CMakeFiles/Project.dir/main.cpp.o: ../include/types/constructor/ClassBuilder.hpp
+CMakeFiles/Project.dir/main.cpp.o: ../include/types/constructor/Constructor.hpp
+CMakeFiles/Project.dir/main.cpp.o: ../include/types/constructor/IntegerBuilder.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/utils/BasicElement.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/utils/BasicList.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/utils/elements.hpp
@@ -702,6 +783,7 @@ CMakeFiles/Project.dir/parser.cpp.o: ../include/expressions/NewArrayExpr.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/expressions/NewExpr.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/expressions/NotExpr.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/expressions/SubscriptExpr.hpp
+CMakeFiles/Project.dir/parser.cpp.o: ../include/expressions/ThisExpr.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/functions/CommaExprList.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/functions/Frame.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/functions/FunctionStorage.hpp
@@ -732,6 +814,10 @@ CMakeFiles/Project.dir/parser.cpp.o: ../include/types/Integer.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/types/Object.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/types/Type.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/types/UninitObject.hpp
+CMakeFiles/Project.dir/parser.cpp.o: ../include/types/constructor/BoolBuilder.hpp
+CMakeFiles/Project.dir/parser.cpp.o: ../include/types/constructor/ClassBuilder.hpp
+CMakeFiles/Project.dir/parser.cpp.o: ../include/types/constructor/Constructor.hpp
+CMakeFiles/Project.dir/parser.cpp.o: ../include/types/constructor/IntegerBuilder.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/utils/BasicElement.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/utils/BasicList.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/utils/elements.hpp
@@ -765,6 +851,7 @@ CMakeFiles/Project.dir/scanner.cpp.o: ../include/expressions/NewArrayExpr.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/expressions/NewExpr.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/expressions/NotExpr.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/expressions/SubscriptExpr.hpp
+CMakeFiles/Project.dir/scanner.cpp.o: ../include/expressions/ThisExpr.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/functions/CommaExprList.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/functions/Frame.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/functions/FunctionStorage.hpp
@@ -795,6 +882,10 @@ CMakeFiles/Project.dir/scanner.cpp.o: ../include/types/Integer.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/types/Object.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/types/Type.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/types/UninitObject.hpp
+CMakeFiles/Project.dir/scanner.cpp.o: ../include/types/constructor/BoolBuilder.hpp
+CMakeFiles/Project.dir/scanner.cpp.o: ../include/types/constructor/ClassBuilder.hpp
+CMakeFiles/Project.dir/scanner.cpp.o: ../include/types/constructor/Constructor.hpp
+CMakeFiles/Project.dir/scanner.cpp.o: ../include/types/constructor/IntegerBuilder.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/utils/BasicElement.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/utils/BasicList.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/utils/elements.hpp

@@ -4,6 +4,7 @@
 #include <unordered_map>
 
 #include "types/Function.hpp"
+#include "types/FunctionType.hpp"
 
 
 class FunctionStorage {
@@ -14,6 +15,10 @@ class FunctionStorage {
       std::string func_name);
 
   static FunctionStorage& GetInstance();
+
+  void DeclareClass(std::string class_name);
+  void DeclareFunction(std::string class_name, std::string func_name,
+      FunctionType function_type);
 
   bool HasClass(std::string class_name) const;
   bool HasFunction(std::string class_name, std::string func_name) const;

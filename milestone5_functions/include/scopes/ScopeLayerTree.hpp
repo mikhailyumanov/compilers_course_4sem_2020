@@ -10,9 +10,9 @@ class ScopeLayerTree: public std::enable_shared_from_this<ScopeLayerTree> {
   void AddLayer(std::shared_ptr<ScopeLayer> class_scope,
       FunctionType function_type) const;
 
-  void SetFunctionScope(std::string class_name, std::string func_name,
-      std::shared_ptr<ScopeLayer> func_scope);
-  std::shared_ptr<ScopeLayer> GetFunctionScope(
+  void SetFunctionScope(std::string class_name, std::string func_name, 
+      const ScopeLayer& func_scope);
+  const ScopeLayer& GetFunctionScope(
       std::string class_name, std::string func_name) const;
 
   std::shared_ptr<ScopeLayer> GetRoot() const;
@@ -21,8 +21,7 @@ class ScopeLayerTree: public std::enable_shared_from_this<ScopeLayerTree> {
  private:
   std::shared_ptr<ScopeLayer> root_;
   std::unordered_map<std::string,
-    std::unordered_map<std::string,
-      std::shared_ptr<ScopeLayer>>> function_scopes_;
+    std::unordered_map<std::string, ScopeLayer>> function_scopes_;
 
   // iterator
  public:

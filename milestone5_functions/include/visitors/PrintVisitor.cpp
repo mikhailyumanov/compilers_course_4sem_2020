@@ -230,6 +230,12 @@ void PrintVisitor::Visit(std::shared_ptr<MethodExpr> element) {
   GO_UP
 }
 
+void PrintVisitor::Visit(std::shared_ptr<ThisExpr> element) {
+  PrintTabs();
+  stream_ << "ThisExpr" << std::endl;
+  DEBUG_SINGLE(">>> PrintVisitor: ThisExpr")
+}
+
 void PrintVisitor::Visit(std::shared_ptr<ClassDecl> element) {
   PrintTabs();
   stream_ << "ClassDecl " << element->class_name << std::endl;
@@ -286,7 +292,7 @@ void PrintVisitor::Visit(std::shared_ptr<MethodInvocation> element) {
 
   GO_DOWN
   element->expr->Accept(shared_from_this());
-  stream_ << element->name.GetName() << std::endl;
+  stream_ << element->func_name << std::endl;
   element->comma_expr_list->Accept(shared_from_this());
   GO_UP
 }

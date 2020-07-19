@@ -1281,13 +1281,13 @@ namespace yy {
 
   case 42:
 #line 262 "parser.y"
-        { yylhs.value.as < std::shared_ptr<MethodInvocation> > () = std::make_shared<MethodInvocation>(yystack_[5].value.as < std::shared_ptr<Expression> > (), Symbol(yystack_[3].value.as < std::string > ()), yystack_[1].value.as < std::shared_ptr<CommaExprList> > ()); }
+        { yylhs.value.as < std::shared_ptr<MethodInvocation> > () = std::make_shared<MethodInvocation>(yystack_[5].value.as < std::shared_ptr<Expression> > (), yystack_[3].value.as < std::string > (), yystack_[1].value.as < std::shared_ptr<CommaExprList> > ()); }
 #line 1286 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 43:
 #line 264 "parser.y"
-        { yylhs.value.as < std::shared_ptr<MethodInvocation> > () = std::make_shared<MethodInvocation>(yystack_[4].value.as < std::shared_ptr<Expression> > (), Symbol(yystack_[2].value.as < std::string > ()), 
+        { yylhs.value.as < std::shared_ptr<MethodInvocation> > () = std::make_shared<MethodInvocation>(yystack_[4].value.as < std::shared_ptr<Expression> > (), yystack_[2].value.as < std::string > (), 
               std::make_shared<CommaExprList>()); }
 #line 1293 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
@@ -1419,43 +1419,43 @@ namespace yy {
     break;
 
   case 65:
-#line 327 "parser.y"
-                                     { /* TODO */ }
+#line 328 "parser.y"
+      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<ThisExpr>(); }
 #line 1425 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 66:
-#line 330 "parser.y"
+#line 331 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<TrueExpr>(); }
 #line 1431 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 67:
-#line 333 "parser.y"
+#line 334 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<FalseExpr>(); }
 #line 1437 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 68:
-#line 336 "parser.y"
+#line 337 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<MethodExpr>(yystack_[0].value.as < std::shared_ptr<MethodInvocation> > ()); }
 #line 1443 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 69:
-#line 339 "parser.y"
+#line 340 "parser.y"
       { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<NotExpr>(yystack_[0].value.as < std::shared_ptr<Expression> > ()); }
 #line 1449 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 70:
-#line 342 "parser.y"
+#line 343 "parser.y"
                           { yylhs.value.as < int > () = yystack_[0].value.as < int > (); }
 #line 1455 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 71:
-#line 343 "parser.y"
+#line 344 "parser.y"
                               { yylhs.value.as < int > () = -yystack_[0].value.as < int > (); }
 #line 1461 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
@@ -1994,8 +1994,8 @@ namespace yy {
      227,   230,   232,   234,   236,   238,   240,   242,   247,   251,
      253,   257,   261,   263,   268,   270,   274,   275,   285,   287,
      289,   291,   293,   295,   297,   299,   301,   303,   306,   309,
-     312,   315,   318,   321,   324,   327,   329,   332,   335,   338,
-     342,   343
+     312,   315,   318,   321,   324,   327,   330,   333,   336,   339,
+     343,   344
   };
 
   // Print the state stack on the debug stream.
@@ -2031,7 +2031,7 @@ namespace yy {
 } // yy
 #line 2033 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
 
-#line 348 "parser.y"
+#line 349 "parser.y"
 
 
 void

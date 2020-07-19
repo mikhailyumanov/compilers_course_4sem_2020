@@ -5,13 +5,18 @@
 
 
 ScopeLayer::ScopeLayer(std::shared_ptr<ScopeLayer> parent)
-  : parent_{parent}, class_scope_{parent->class_scope_},
-    function_type_{parent->function_type_} {
+  : parent_{parent},
+    class_scope_{parent->class_scope_},
+    function_type_{parent->function_type_},
+    is_main_{parent->is_main_} {
 }
 
 ScopeLayer::ScopeLayer(std::shared_ptr<ScopeLayer> parent,
     FunctionType function_type)
-  : parent_{parent}, class_scope_{parent}, function_type_{function_type} {
+  : parent_{parent},
+    class_scope_{parent}, 
+    function_type_{function_type},
+    is_main_{parent->is_main_} {
 }
 
 
@@ -71,7 +76,7 @@ void ScopeLayer::Set(Symbol symbol, std::shared_ptr<Object> value) {
 
 bool ScopeLayer::IsClassData(Symbol symbol) const {
 //  DEBUG_SINGLE("ScopeLayer::IsClassData")
-  if (function_type_.IsMain() || class_scope_ == shared_from_this()) {
+  if (IsMain() || class_scope_ == shared_from_this()) {
     return false;
   } 
 
@@ -79,12 +84,19 @@ bool ScopeLayer::IsClassData(Symbol symbol) const {
 }
 
 bool ScopeLayer::IsArgument(Symbol symbol) const {
-//  DEBUG_SINGLE("ScopeLayer::IsArgument")
-  if (function_type_.IsMain()) {
+  DEBUG_SINGLE("ScopeLayer::IsArgument")
+  if (IsMain()) {
     return false;
   } 
 
+  DEBUG_START
+    DEBUG("ScopeLayer::IsArgument not main")
+    DEBUG(function_type_)
+  DEBUG_FINISH
+
   for (auto&& name : function_type_.arg_names) {
+    DEBUG_SINGLE("ScopeLayer::IsArgument: " +
+        name + " " + symbol.GetName())
     if (name == symbol.GetName()) {
       return true;
     }
@@ -93,26 +105,30 @@ bool ScopeLayer::IsArgument(Symbol symbol) const {
   return false;
 }
 
+size_t ScopeLayer::GetArgIndex(Symbol symbol) const {
+  if (!IsArgument(symbol)) {
+    throw std::runtime_error("ScopeLayer::GetArgumentIndex: " +
+        symbol.GetName() + " is not an argument name.");
+  }
+
+  for (size_t i = 0; i < function_type_.GetNumArgs(); ++i) {
+    if (function_type_.arg_names[i] == symbol.GetName()) {
+      return i; 
+    }
+  }
+}
+
 Type ScopeLayer::GetType(Symbol symbol) const {
 //  DEBUG_SINGLE("ScopeLayer::GetType")
   if (local_vars_.find(symbol) != local_vars_.end()) {
     return Get(symbol)->GetType();
   } else if (IsArgument(symbol)) {
-    for (size_t i = 0; i < function_type_.GetNumArgs(); ++i) {
-      if (function_type_.arg_names[i] == symbol.GetName()) {
-        return function_type_.arg_types[i];
-      }
-    }
+    return function_type_.arg_types[GetArgIndex(symbol)];
   } else if (IsClassData(symbol)) {
     return class_scope_->GetType(symbol);
   } else {
     return parent_->GetType(symbol);
   }
-}
-
-void ScopeLayer::SetMain() {
-//  DEBUG_SINGLE("ScopeLayer::SetMain")
-  function_type_.is_main = true;
 }
 
 bool ScopeLayer::IsDeclared(Symbol symbol) const {
@@ -159,3 +175,18 @@ std::shared_ptr<ScopeLayer>& ScopeLayer::GetParent() {
   return parent_;
 }
 
+bool ScopeLayer::IsMain() const {
+  return is_main_;
+}
+
+void ScopeLayer::SetMain() {
+  is_main_ = true;
+}
+
+void ScopeLayer::UnsetMain() {
+  is_main_ = false;
+}
+
+FunctionType ScopeLayer::GetFunctionType() const {
+  return function_type_;
+}
