@@ -16,14 +16,10 @@ then
   mkdir bin
 fi
 
-if ! test -f ./bin/Project ;
+if ! test -d ./build
 then
-  if ! test -d ./build
-  then
-    echo "Create directory ./build"
-    mkdir build
-  fi
-  
+  echo "Create directory ./build"
+  mkdir build
 fi
 
 echo "Build project"
