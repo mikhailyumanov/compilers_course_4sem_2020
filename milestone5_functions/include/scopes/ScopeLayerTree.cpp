@@ -136,6 +136,8 @@ ScopeLayerTree::Iterator& ScopeLayerTree::Iterator::GoDown() {
     DEBUG("Current state:")
     DEBUG("parent:") DEBUG(current_parent_)
     DEBUG("; child index:") DEBUG(current_child_index_)
+    DEBUG("num_children:")
+    DEBUG(current_parent_->GetNumChildren())
   DEBUG_FINISH
 
   return *this;
@@ -151,6 +153,8 @@ ScopeLayerTree::Iterator& ScopeLayerTree::Iterator::GoUp() {
     DEBUG("Current state:")
     DEBUG("parent:") DEBUG(current_parent_)
     DEBUG("; child index:") DEBUG(current_child_index_)
+    DEBUG("num_children:")
+    DEBUG(current_parent_->GetNumChildren())
   DEBUG_FINISH
 
   return *this;

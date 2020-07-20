@@ -385,7 +385,6 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<MethodDecl> element) {
     DEBUG(current_scope_->GetFunctionType())
   DEBUG_FINISH
 
-//  ScopeDown();
   SetMethodDecl();
 
   FunctionStorage::GetInstance().DeclareFunction(
@@ -393,7 +392,6 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<MethodDecl> element) {
   element->stmt_list->Accept(shared_from_this());
 
   UnsetMethodDecl();
-//  ScopeUp();
 
   DEBUG_START
     DEBUG("MethodDecl: ")

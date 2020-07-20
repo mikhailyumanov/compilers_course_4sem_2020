@@ -17,23 +17,34 @@ Program
 4
 					IntExpr 0
 				NEW SCOPE
-				AssignmentStmt
-					Lvalue num_aux
-					IntExpr 1
 				NEW SCOPE
-				AssignmentStmt
-					Lvalue num_aux
-					BinOpExpr
-						IdentExpr num
-7
-						MethodExpr
-							MethodInvocation
-								ThisExpr
-								BinOpExpr
-									IdentExpr num
+				StmtListStmt
+					PrintStmt
+						IntExpr 0
+					AssignmentStmt
+						Lvalue num_aux
+						IntExpr 1
+				NEW SCOPE
+				NEW SCOPE
+				StmtListStmt
+					PrintStmt
+						BinOpExpr
+							IdentExpr num
 6
-									IntExpr 1
-								NEW SCOPE
+							IntExpr 1
+					AssignmentStmt
+						Lvalue num_aux
+						BinOpExpr
+							IdentExpr num
+7
+							MethodExpr
+								MethodInvocation
+									ThisExpr
+									BinOpExpr
+										IdentExpr num
+6
+										IntExpr 1
+									NEW SCOPE
 			ReturnStmt
 				IdentExpr num_aux
 	NEW SCOPE

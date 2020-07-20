@@ -425,11 +425,6 @@ void Interpreter::Visit(std::shared_ptr<MethodInvocation> element) {
   // precall
   current_frame_ = new_frame;
   
-  // precall: make copy of iterator
-  auto old_current_scope = current_scope_;
-  old_current_scope.GoDown();
-  old_current_scope.GoUp();
-
   ScopeDown();
   DEBUG_SINGLE("Method invocation: link function")
   current_scope_->AddChild(
@@ -453,7 +448,6 @@ void Interpreter::Visit(std::shared_ptr<MethodInvocation> element) {
   // postret
   current_frame_ = current_frame_->GetParent();
   tos_value_ = current_frame_->GetReturnValue();
-  current_scope_ = old_current_scope;
 }
 
 int Interpreter::GetResult(std::shared_ptr<Program> program) {
@@ -479,13 +473,20 @@ void Interpreter::UnsetTosValue(){
 }
 
 void Interpreter::ScopeDown() {
+  auto new_current_scope = current_scope_;
+  new_current_scope.GoDown();
+  new_current_scope.GoUp();
+  scope_stack_.push(new_current_scope);
+
   current_scope_.GoDown();
   current_frame_->AllocScope();
   function_table_->BeginScope();
 }
 
 void Interpreter::ScopeUp() {
-  current_scope_.GoUp();
+  current_scope_ = scope_stack_.top();
+  scope_stack_.pop();
+
   current_frame_->DeallocScope();
   function_table_->EndScope();
 }
