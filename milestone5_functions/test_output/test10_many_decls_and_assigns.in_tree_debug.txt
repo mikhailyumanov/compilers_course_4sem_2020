@@ -1,154 +1,158 @@
 >>> Interpreter: Program
 >>> PrintVisitor: Program
 GoDown
-Current state: parent: 0x556e1564f920 ; child index: 1 num_children: 2 
-operator->; current_parent: 0x556e1564f920 child_index: 1 num_children: 2 
+Current state: parent: 0x5570e808ad40 ; child index: 1 num_children: 2 
+operator->; current_parent: 0x5570e808ad40 child_index: 1 num_children: 2 
 GoDown
-Current state: parent: 0x556e15650790 ; child index: 0 num_children: 1 
-operator->; current_parent: 0x556e15650790 child_index: 0 num_children: 1 
+Current state: parent: 0x5570e808bbb0 ; child index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bbb0 child_index: 0 num_children: 1 
 >>> PrintVisitor: MainClass
-operator->; current_parent: 0x556e15650790 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bbb0 child_index: 0 num_children: 1 
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false i 
 i type: int, is_array: false 
-operator->; current_parent: 0x556e15650790 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bbb0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x556e15650790 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bbb0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5570e808bbb0 child_index: 0 num_children: 1 
 >>> PrintVisitor: AssignmentStmt
-operator->; current_parent: 0x556e15650790 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bbb0 child_index: 0 num_children: 1 
 >>> PrintVisitor: IntExpr 0 
-operator->; current_parent: 0x556e15650790 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bbb0 child_index: 0 num_children: 1 
 GoDown
-Current state: parent: 0x556e156508b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bcd0 ; child index: 0 num_children: 1 
 >>> PrintVisitor: WhileStmt
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr i 
-operator->; current_parent: 0x556e156508b0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bcd0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x556e156508b0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bcd0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 >>> PrintVisitor: IntExpr 8 
 GoDown
-Current state: parent: 0x556e15650ad0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bef0 ; child index: 0 num_children: 1 
 >>> PrintVisitor: StmtListStmt
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: boolean, is_array: true y 
 y type: boolean, is_array: true 
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 >>> PrintVisitor: AssignmentStmt
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 >>> PrintVisitor: NewArrayExpr type =  boolean 
 >>> PrintVisitor: IntExpr 3 
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 >>> PrintVisitor: AssignmentStmt
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 >>> PrintVisitor: IntExpr 0 
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr i 
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
 >>> PrintVisitor: IntExpr 3 
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 >>> PrintVisitor: AssignmentStmt
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 >>> PrintVisitor: IntExpr 1 
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr i 
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
 >>> PrintVisitor: IntExpr 4 
 >>> PrintVisitor: IntExpr 1 
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 >>> PrintVisitor: AssignmentStmt
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 >>> PrintVisitor: IntExpr 2 
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr i 
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
 >>> PrintVisitor: IntExpr 2 
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 >>> PrintVisitor: AssignmentStmt
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr i 
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
 >>> PrintVisitor: IntExpr 1 
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: SubscriptExpr
 >>> PrintVisitor: IdentExpr y 
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 >>> PrintVisitor: IntExpr 0 
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: SubscriptExpr
 >>> PrintVisitor: IdentExpr y 
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 >>> PrintVisitor: IntExpr 1 
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: SubscriptExpr
 >>> PrintVisitor: IdentExpr y 
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
-operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 >>> PrintVisitor: IntExpr 2 
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IntExpr 11111111 
 GoUp
-Current state: parent: 0x556e156508b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bcd0 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x556e15650790 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bbb0 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x556e1564f920 ; child index: 1 num_children: 2 
+Current state: parent: 0x5570e808ad40 ; child index: 1 num_children: 2 
 
 
 GoDown
-Current state: parent: 0x556e1564f920 ; child index: 1 num_children: 2 
+Current state: parent: 0x5570e808ad40 ; child index: 1 num_children: 2 
 GoUp
-Current state: parent: 0x556e1564f920 ; child index: 1 num_children: 2 
+Current state: parent: 0x5570e808ad40 ; child index: 1 num_children: 2 
 GoDown
-Current state: parent: 0x556e1564f920 ; child index: 1 num_children: 2 
-operator->; current_parent: 0x556e1564f920 child_index: 1 num_children: 2 
+Current state: parent: 0x5570e808ad40 ; child index: 1 num_children: 2 
+operator->; current_parent: 0x5570e808ad40 child_index: 1 num_children: 2 
 GoDown
-Current state: parent: 0x556e15650790 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bbb0 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x556e1564f920 ; child index: 1 num_children: 2 
+Current state: parent: 0x5570e808ad40 ; child index: 1 num_children: 2 
 GoDown
-Current state: parent: 0x556e15650790 ; child index: 0 num_children: 1 
-operator->; current_parent: 0x556e15650790 child_index: 0 num_children: 1 
+Current state: parent: 0x5570e808bbb0 ; child index: 0 num_children: 1 
+operator->; current_parent: 0x5570e808bbb0 child_index: 0 num_children: 1 
 >>> Interpreter: MainClass
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var i declared: operator->; current_parent: 0x556e15650790 child_index: 0 num_children: 1 
+Is var i declared: operator->; current_parent: 0x5570e808bbb0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: IntExpr
 >>> Interpreter: Assignment no subscript
@@ -157,22 +161,22 @@ Is var i declared: operator->; current_parent: 0x556e15650790 child_index: 0 num
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x556e156508b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bcd0 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x556e15650790 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bbb0 ; child index: 0 num_children: 1 
 GoDown
-Current state: parent: 0x556e156508b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bcd0 ; child index: 0 num_children: 1 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x556e15650ad0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bef0 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x556e156508b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bcd0 ; child index: 0 num_children: 1 
 GoDown
-Current state: parent: 0x556e15650ad0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bef0 ; child index: 0 num_children: 1 
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: NewArrayExpr
 >>> Interpreter: IntExpr
@@ -184,7 +188,7 @@ Constructor::GetInstance
 Constructor::Construct
 >>> Interpreter: Assignment no subscript
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
@@ -193,7 +197,7 @@ Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num
 1
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
@@ -204,7 +208,7 @@ Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num
 1
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
@@ -213,7 +217,7 @@ Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num
 1
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var i declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var i declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 0 
 >>> Interpreter: BinOpExpr
@@ -242,22 +246,22 @@ ScopeLayer::IsArgument
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x556e156508b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bcd0 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x556e15650790 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bbb0 ; child index: 0 num_children: 1 
 GoDown
-Current state: parent: 0x556e156508b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bcd0 ; child index: 0 num_children: 1 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x556e15650ad0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bef0 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x556e156508b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bcd0 ; child index: 0 num_children: 1 
 GoDown
-Current state: parent: 0x556e15650ad0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bef0 ; child index: 0 num_children: 1 
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: NewArrayExpr
 >>> Interpreter: IntExpr
@@ -269,7 +273,7 @@ Constructor::GetInstance
 Constructor::Construct
 >>> Interpreter: Assignment no subscript
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
@@ -278,7 +282,7 @@ Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num
 1
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
@@ -289,7 +293,7 @@ Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num
 1
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
@@ -298,7 +302,7 @@ Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num
 1
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var i declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var i declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 0 
 >>> Interpreter: BinOpExpr
@@ -327,22 +331,22 @@ ScopeLayer::IsArgument
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x556e156508b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bcd0 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x556e15650790 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bbb0 ; child index: 0 num_children: 1 
 GoDown
-Current state: parent: 0x556e156508b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bcd0 ; child index: 0 num_children: 1 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x556e15650ad0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bef0 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x556e156508b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bcd0 ; child index: 0 num_children: 1 
 GoDown
-Current state: parent: 0x556e15650ad0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bef0 ; child index: 0 num_children: 1 
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: NewArrayExpr
 >>> Interpreter: IntExpr
@@ -354,7 +358,7 @@ Constructor::GetInstance
 Constructor::Construct
 >>> Interpreter: Assignment no subscript
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
@@ -363,7 +367,7 @@ Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num
 1
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
@@ -374,7 +378,7 @@ Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num
 1
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
@@ -383,7 +387,7 @@ Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num
 1
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var i declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var i declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 0 
 >>> Interpreter: BinOpExpr
@@ -412,22 +416,22 @@ ScopeLayer::IsArgument
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x556e156508b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bcd0 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x556e15650790 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bbb0 ; child index: 0 num_children: 1 
 GoDown
-Current state: parent: 0x556e156508b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bcd0 ; child index: 0 num_children: 1 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x556e15650ad0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bef0 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x556e156508b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bcd0 ; child index: 0 num_children: 1 
 GoDown
-Current state: parent: 0x556e15650ad0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bef0 ; child index: 0 num_children: 1 
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: NewArrayExpr
 >>> Interpreter: IntExpr
@@ -439,7 +443,7 @@ Constructor::GetInstance
 Constructor::Construct
 >>> Interpreter: Assignment no subscript
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
@@ -448,7 +452,7 @@ Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num
 1
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
@@ -459,7 +463,7 @@ Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num
 1
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
@@ -468,7 +472,7 @@ Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num
 1
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var i declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var i declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 0 
 >>> Interpreter: BinOpExpr
@@ -497,22 +501,22 @@ ScopeLayer::IsArgument
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x556e156508b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bcd0 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x556e15650790 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bbb0 ; child index: 0 num_children: 1 
 GoDown
-Current state: parent: 0x556e156508b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bcd0 ; child index: 0 num_children: 1 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x556e15650ad0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bef0 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x556e156508b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bcd0 ; child index: 0 num_children: 1 
 GoDown
-Current state: parent: 0x556e15650ad0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bef0 ; child index: 0 num_children: 1 
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: NewArrayExpr
 >>> Interpreter: IntExpr
@@ -524,7 +528,7 @@ Constructor::GetInstance
 Constructor::Construct
 >>> Interpreter: Assignment no subscript
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
@@ -533,7 +537,7 @@ Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num
 1
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
@@ -544,7 +548,7 @@ Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num
 1
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
@@ -553,7 +557,7 @@ Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num
 1
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var i declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var i declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 0 
 >>> Interpreter: BinOpExpr
@@ -582,22 +586,22 @@ ScopeLayer::IsArgument
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x556e156508b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bcd0 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x556e15650790 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bbb0 ; child index: 0 num_children: 1 
 GoDown
-Current state: parent: 0x556e156508b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bcd0 ; child index: 0 num_children: 1 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x556e15650ad0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bef0 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x556e156508b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bcd0 ; child index: 0 num_children: 1 
 GoDown
-Current state: parent: 0x556e15650ad0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bef0 ; child index: 0 num_children: 1 
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: NewArrayExpr
 >>> Interpreter: IntExpr
@@ -609,7 +613,7 @@ Constructor::GetInstance
 Constructor::Construct
 >>> Interpreter: Assignment no subscript
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
@@ -618,7 +622,7 @@ Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num
 1
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
@@ -629,7 +633,7 @@ Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num
 1
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
@@ -638,7 +642,7 @@ Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num
 1
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var i declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var i declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 0 
 >>> Interpreter: BinOpExpr
@@ -667,22 +671,22 @@ ScopeLayer::IsArgument
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x556e156508b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bcd0 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x556e15650790 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bbb0 ; child index: 0 num_children: 1 
 GoDown
-Current state: parent: 0x556e156508b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bcd0 ; child index: 0 num_children: 1 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x556e15650ad0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bef0 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x556e156508b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bcd0 ; child index: 0 num_children: 1 
 GoDown
-Current state: parent: 0x556e15650ad0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bef0 ; child index: 0 num_children: 1 
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: NewArrayExpr
 >>> Interpreter: IntExpr
@@ -694,7 +698,7 @@ Constructor::GetInstance
 Constructor::Construct
 >>> Interpreter: Assignment no subscript
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
@@ -703,7 +707,7 @@ Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num
 1
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
@@ -714,7 +718,7 @@ Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num
 1
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
@@ -723,7 +727,7 @@ Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num
 1
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var i declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var i declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 0 
 >>> Interpreter: BinOpExpr
@@ -752,22 +756,22 @@ ScopeLayer::IsArgument
 >>> Interpreter: IdentExpr
 >>> Interpreter: IntExpr
 GoDown
-Current state: parent: 0x556e156508b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bcd0 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x556e15650790 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bbb0 ; child index: 0 num_children: 1 
 GoDown
-Current state: parent: 0x556e156508b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bcd0 ; child index: 0 num_children: 1 
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x556e15650ad0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bef0 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x556e156508b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bcd0 ; child index: 0 num_children: 1 
 GoDown
-Current state: parent: 0x556e15650ad0 ; child index: 0 num_children: 1 
+Current state: parent: 0x5570e808bef0 ; child index: 0 num_children: 1 
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: NewArrayExpr
 >>> Interpreter: IntExpr
@@ -779,7 +783,7 @@ Constructor::GetInstance
 Constructor::Construct
 >>> Interpreter: Assignment no subscript
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
@@ -788,7 +792,7 @@ Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num
 1
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: BinOpExpr
@@ -799,7 +803,7 @@ Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num
 1
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: BinOpExpr
 >>> Interpreter: IdentExpr
@@ -808,7 +812,7 @@ Is var y declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num
 1
 >>> Interpreter: IntExpr
 >>> Interpreter: AssignmentStmt
-Is var i declared: operator->; current_parent: 0x556e15650ad0 child_index: 0 num_children: 1 
+Is var i declared: operator->; current_parent: 0x5570e808bef0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 0 
 >>> Interpreter: BinOpExpr

@@ -1,56 +1,60 @@
 >>> Interpreter: Program
 >>> PrintVisitor: Program
 GoDown
-Current state: parent: 0x5635d17588d0 ; child index: 1 num_children: 2 
-operator->; current_parent: 0x5635d17588d0 child_index: 1 num_children: 2 
+Current state: parent: 0x5627952f9cf0 ; child index: 1 num_children: 2 
+operator->; current_parent: 0x5627952f9cf0 child_index: 1 num_children: 2 
 GoDown
-Current state: parent: 0x5635d1759740 ; child index: 0 num_children: 1 
-operator->; current_parent: 0x5635d1759740 child_index: 0 num_children: 1 
+Current state: parent: 0x5627952fab60 ; child index: 0 num_children: 1 
+operator->; current_parent: 0x5627952fab60 child_index: 0 num_children: 1 
 >>> PrintVisitor: MainClass
-operator->; current_parent: 0x5635d1759740 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5627952fab60 child_index: 0 num_children: 1 
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false x 
 x type: int, is_array: false 
-operator->; current_parent: 0x5635d1759740 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5627952fab60 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x5635d1759740 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5627952fab60 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5627952fab60 child_index: 0 num_children: 1 
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false y 
 y type: int, is_array: false 
-operator->; current_parent: 0x5635d1759740 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5627952fab60 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x5635d1759740 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5627952fab60 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5627952fab60 child_index: 0 num_children: 1 
 >>> PrintVisitor: AssignmentStmt
-operator->; current_parent: 0x5635d1759740 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5627952fab60 child_index: 0 num_children: 1 
 >>> PrintVisitor: IdentExpr x 
-operator->; current_parent: 0x5635d1759740 child_index: 0 num_children: 1 
-operator->; current_parent: 0x5635d1759740 child_index: 0 num_children: 1 
-operator->; current_parent: 0x5635d1759740 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5627952fab60 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5627952fab60 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5627952fab60 child_index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x5635d17588d0 ; child index: 1 num_children: 2 
+Current state: parent: 0x5627952f9cf0 ; child index: 1 num_children: 2 
 
 
 GoDown
-Current state: parent: 0x5635d17588d0 ; child index: 1 num_children: 2 
+Current state: parent: 0x5627952f9cf0 ; child index: 1 num_children: 2 
 GoUp
-Current state: parent: 0x5635d17588d0 ; child index: 1 num_children: 2 
+Current state: parent: 0x5627952f9cf0 ; child index: 1 num_children: 2 
 GoDown
-Current state: parent: 0x5635d17588d0 ; child index: 1 num_children: 2 
-operator->; current_parent: 0x5635d17588d0 child_index: 1 num_children: 2 
+Current state: parent: 0x5627952f9cf0 ; child index: 1 num_children: 2 
+operator->; current_parent: 0x5627952f9cf0 child_index: 1 num_children: 2 
 GoDown
-Current state: parent: 0x5635d1759740 ; child index: 0 num_children: 1 
+Current state: parent: 0x5627952fab60 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x5635d17588d0 ; child index: 1 num_children: 2 
+Current state: parent: 0x5627952f9cf0 ; child index: 1 num_children: 2 
 GoDown
-Current state: parent: 0x5635d1759740 ; child index: 0 num_children: 1 
-operator->; current_parent: 0x5635d1759740 child_index: 0 num_children: 1 
+Current state: parent: 0x5627952fab60 ; child index: 0 num_children: 1 
+operator->; current_parent: 0x5627952fab60 child_index: 0 num_children: 1 
 >>> Interpreter: MainClass
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var y declared: operator->; current_parent: 0x5635d1759740 child_index: 0 num_children: 1 
+Is var y declared: operator->; current_parent: 0x5627952fab60 child_index: 0 num_children: 1 
 1 
 >>> Interpreter: IdentExpr
 >>> Interpreter: Assignment no subscript
