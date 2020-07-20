@@ -1063,405 +1063,485 @@ namespace yy {
 
   case 7:
 #line 160 "parser.y"
-                   { yylhs.value.as < std::shared_ptr<ClassDecl> > () = std::make_shared<ClassDecl>(yystack_[3].value.as < std::string > (), yystack_[1].value.as < std::shared_ptr<DeclList> > ()); }
-#line 1068 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+                   { yylhs.value.as < std::shared_ptr<ClassDecl> > () = std::make_shared<ClassDecl>(yystack_[3].value.as < std::string > (), yystack_[1].value.as < std::shared_ptr<DeclList> > ());
+                     yylhs.value.as < std::shared_ptr<ClassDecl> > ()->SetLocation(driver.location);
+                   }
+#line 1070 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 8:
-#line 163 "parser.y"
-                   { yylhs.value.as < std::shared_ptr<ClassDecl> > () = std::make_shared<ClassDecl>(yystack_[5].value.as < std::string > (), yystack_[1].value.as < std::shared_ptr<DeclList> > ()); }
-#line 1074 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+#line 165 "parser.y"
+                   { yylhs.value.as < std::shared_ptr<ClassDecl> > () = std::make_shared<ClassDecl>(yystack_[5].value.as < std::string > (), yystack_[1].value.as < std::shared_ptr<DeclList> > ());
+                     yylhs.value.as < std::shared_ptr<ClassDecl> > ()->SetLocation(driver.location);
+                   }
+#line 1078 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 9:
-#line 167 "parser.y"
+#line 171 "parser.y"
                 { yylhs.value.as < std::shared_ptr<StmtList> > () = std::make_shared<StmtList>(); yylhs.value.as < std::shared_ptr<StmtList> > ()->AddItem(yystack_[0].value.as < std::shared_ptr<Statement> > ()); }
-#line 1080 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+#line 1084 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 10:
-#line 169 "parser.y"
+#line 173 "parser.y"
                 { yylhs.value.as < std::shared_ptr<StmtList> > () = yystack_[1].value.as < std::shared_ptr<StmtList> > (); yylhs.value.as < std::shared_ptr<StmtList> > ()->AddItem(yystack_[0].value.as < std::shared_ptr<Statement> > ()); }
-#line 1086 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+#line 1090 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 11:
-#line 173 "parser.y"
+#line 177 "parser.y"
                    { yylhs.value.as < std::shared_ptr<DeclList> > () = std::make_shared<DeclList>(); yylhs.value.as < std::shared_ptr<DeclList> > ()->AddItem(yystack_[0].value.as < std::shared_ptr<Decl> > ()); }
-#line 1092 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+#line 1096 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 12:
-#line 175 "parser.y"
+#line 179 "parser.y"
                    { yylhs.value.as < std::shared_ptr<DeclList> > () = yystack_[1].value.as < std::shared_ptr<DeclList> > (); yylhs.value.as < std::shared_ptr<DeclList> > ()->AddItem(yystack_[0].value.as < std::shared_ptr<Decl> > ()); }
-#line 1098 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+#line 1102 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 13:
-#line 179 "parser.y"
+#line 183 "parser.y"
              { yylhs.value.as < std::shared_ptr<Decl> > () = yystack_[0].value.as < std::shared_ptr<VarDecl> > (); }
-#line 1104 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+#line 1108 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 14:
-#line 181 "parser.y"
+#line 185 "parser.y"
              { yylhs.value.as < std::shared_ptr<Decl> > () = yystack_[0].value.as < std::shared_ptr<MethodDecl> > (); }
-#line 1110 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+#line 1114 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 15:
-#line 185 "parser.y"
+#line 189 "parser.y"
                     { yylhs.value.as < std::shared_ptr<MethodDecl> > () = std::make_shared<MethodDecl>(
-                          FunctionType(yystack_[5].value.as < Type > (), yystack_[3].value.as < std::pair<std::vector<Type>, std::vector<std::string>> > ().first,yystack_[3].value.as < std::pair<std::vector<Type>, std::vector<std::string>> > ().second), yystack_[4].value.as < std::string > (), yystack_[1].value.as < std::shared_ptr<StmtList> > ()); }
-#line 1117 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+                          FunctionType(yystack_[5].value.as < Type > (), yystack_[3].value.as < std::pair<std::vector<Type>, std::vector<std::string>> > ().first,yystack_[3].value.as < std::pair<std::vector<Type>, std::vector<std::string>> > ().second), yystack_[4].value.as < std::string > (), yystack_[1].value.as < std::shared_ptr<StmtList> > ()); 
+                      yylhs.value.as < std::shared_ptr<MethodDecl> > ()->SetLocation(driver.location);
+                    }
+#line 1123 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 16:
-#line 189 "parser.y"
+#line 195 "parser.y"
                    { yylhs.value.as < std::pair<std::vector<Type>, std::vector<std::string>> > () = std::pair<std::vector<Type>,
                                     std::vector<std::string>>(); }
-#line 1124 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
-    break;
-
-  case 17:
-#line 191 "parser.y"
-                                      { yylhs.value.as < std::pair<std::vector<Type>, std::vector<std::string>> > () = yystack_[1].value.as < std::pair<std::vector<Type>, std::vector<std::string>> > (); }
 #line 1130 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
+  case 17:
+#line 197 "parser.y"
+                                      { yylhs.value.as < std::pair<std::vector<Type>, std::vector<std::string>> > () = yystack_[1].value.as < std::pair<std::vector<Type>, std::vector<std::string>> > (); }
+#line 1136 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+    break;
+
   case 18:
-#line 195 "parser.y"
+#line 201 "parser.y"
                     { yylhs.value.as < std::pair<std::vector<Type>, std::vector<std::string>> > () = std::pair<std::vector<Type>,
                                      std::vector<std::string>>();
                       yylhs.value.as < std::pair<std::vector<Type>, std::vector<std::string>> > ().first.push_back(yystack_[0].value.as < std::pair<Type, std::string> > ().first);
                       yylhs.value.as < std::pair<std::vector<Type>, std::vector<std::string>> > ().second.push_back(yystack_[0].value.as < std::pair<Type, std::string> > ().second); }
-#line 1139 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+#line 1145 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 19:
-#line 200 "parser.y"
+#line 206 "parser.y"
                     { yylhs.value.as < std::pair<std::vector<Type>, std::vector<std::string>> > () = yystack_[2].value.as < std::pair<std::vector<Type>, std::vector<std::string>> > (); yylhs.value.as < std::pair<std::vector<Type>, std::vector<std::string>> > ().first.push_back(yystack_[0].value.as < std::pair<Type, std::string> > ().first);
                       yylhs.value.as < std::pair<std::vector<Type>, std::vector<std::string>> > ().second.push_back(yystack_[0].value.as < std::pair<Type, std::string> > ().second); }
-#line 1146 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
-    break;
-
-  case 20:
-#line 204 "parser.y"
-                           { yylhs.value.as < std::pair<Type, std::string> > () = std::make_pair(yystack_[1].value.as < Type > (), yystack_[0].value.as < std::string > ()); }
 #line 1152 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
-  case 21:
-#line 208 "parser.y"
-                      { yylhs.value.as < std::shared_ptr<VarDecl> > () = std::make_shared<VarDecl>(yystack_[2].value.as < Type > (), yystack_[1].value.as < std::string > ()); }
+  case 20:
+#line 210 "parser.y"
+                           { yylhs.value.as < std::pair<Type, std::string> > () = std::make_pair(yystack_[1].value.as < Type > (), yystack_[0].value.as < std::string > ()); }
 #line 1158 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
+  case 21:
+#line 214 "parser.y"
+                      { yylhs.value.as < std::shared_ptr<VarDecl> > () = std::make_shared<VarDecl>(yystack_[2].value.as < Type > (), yystack_[1].value.as < std::string > ()); 
+                        yylhs.value.as < std::shared_ptr<VarDecl> > ()->SetLocation(driver.location);
+                      }
+#line 1166 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+    break;
+
   case 22:
-#line 211 "parser.y"
+#line 219 "parser.y"
                   { yylhs.value.as < Type > () = Type{yystack_[0].value.as < std::string > (), false}; }
-#line 1164 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+#line 1172 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 23:
-#line 212 "parser.y"
+#line 220 "parser.y"
                   { yylhs.value.as < Type > () = Type{yystack_[0].value.as < std::string > (), true};  }
-#line 1170 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+#line 1178 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 24:
-#line 215 "parser.y"
+#line 223 "parser.y"
                                 { yylhs.value.as < std::string > () = yystack_[2].value.as < std::string > (); }
-#line 1176 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+#line 1184 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 25:
-#line 218 "parser.y"
+#line 226 "parser.y"
                    { yylhs.value.as < std::string > () = "int"; }
-#line 1182 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+#line 1190 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 26:
-#line 219 "parser.y"
+#line 227 "parser.y"
                        {yylhs.value.as < std::string > () = "boolean"; }
-#line 1188 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+#line 1196 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 27:
-#line 220 "parser.y"
+#line 228 "parser.y"
                     { yylhs.value.as < std::string > () = "void"; }
-#line 1194 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+#line 1202 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 28:
-#line 221 "parser.y"
+#line 229 "parser.y"
                              { yylhs.value.as < std::string > () = yystack_[0].value.as < std::string > (); }
-#line 1200 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+#line 1208 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 29:
-#line 224 "parser.y"
+#line 232 "parser.y"
                               { yylhs.value.as < std::string > () = yystack_[0].value.as < std::string > (); }
-#line 1206 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+#line 1214 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 30:
-#line 228 "parser.y"
+#line 236 "parser.y"
            { yylhs.value.as < std::shared_ptr<Statement> > () = std::static_pointer_cast<Statement>(
-              std::make_shared<AssertStmt>(yystack_[2].value.as < std::shared_ptr<Expression> > ())); }
-#line 1213 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+              std::make_shared<AssertStmt>(yystack_[2].value.as < std::shared_ptr<Expression> > ())); 
+             yylhs.value.as < std::shared_ptr<Statement> > ()->SetLocation(driver.location);
+           }
+#line 1223 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 31:
-#line 231 "parser.y"
-           { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<StmtListStmt>(yystack_[1].value.as < std::shared_ptr<StmtList> > ()); }
-#line 1219 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
-    break;
-
-  case 32:
-#line 233 "parser.y"
-           { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<IfStmt>(yystack_[2].value.as < std::shared_ptr<Expression> > (), yystack_[0].value.as < std::shared_ptr<Statement> > ()); }
-#line 1225 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
-    break;
-
-  case 33:
-#line 235 "parser.y"
-           { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<IfElseStmt>(yystack_[4].value.as < std::shared_ptr<Expression> > (), yystack_[2].value.as < std::shared_ptr<Statement> > (), yystack_[0].value.as < std::shared_ptr<Statement> > ()); }
+#line 241 "parser.y"
+           { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<StmtListStmt>(yystack_[1].value.as < std::shared_ptr<StmtList> > ()); 
+             yylhs.value.as < std::shared_ptr<Statement> > ()->SetLocation(driver.location);
+           }
 #line 1231 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
+  case 32:
+#line 245 "parser.y"
+           { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<IfStmt>(yystack_[2].value.as < std::shared_ptr<Expression> > (), yystack_[0].value.as < std::shared_ptr<Statement> > ()); 
+             yylhs.value.as < std::shared_ptr<Statement> > ()->SetLocation(driver.location);
+           }
+#line 1239 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+    break;
+
+  case 33:
+#line 249 "parser.y"
+           { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<IfElseStmt>(yystack_[4].value.as < std::shared_ptr<Expression> > (), yystack_[2].value.as < std::shared_ptr<Statement> > (), yystack_[0].value.as < std::shared_ptr<Statement> > ()); 
+             yylhs.value.as < std::shared_ptr<Statement> > ()->SetLocation(driver.location);
+           }
+#line 1247 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+    break;
+
   case 34:
-#line 237 "parser.y"
-           { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<WhileStmt>(yystack_[2].value.as < std::shared_ptr<Expression> > (), yystack_[0].value.as < std::shared_ptr<Statement> > ()); }
-#line 1237 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
-    break;
-
-  case 35:
-#line 239 "parser.y"
-           { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<PrintStmt>(yystack_[2].value.as < std::shared_ptr<Expression> > ()); }
-#line 1243 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
-    break;
-
-  case 36:
-#line 241 "parser.y"
-           { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<AssignmentStmt>(yystack_[3].value.as < std::shared_ptr<Lvalue> > (), yystack_[1].value.as < std::shared_ptr<Expression> > ()); }
-#line 1249 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
-    break;
-
-  case 37:
-#line 243 "parser.y"
-           { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<LocalVarDeclStmt>(yystack_[0].value.as < std::shared_ptr<VarDecl> > ()); }
+#line 253 "parser.y"
+           { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<WhileStmt>(yystack_[2].value.as < std::shared_ptr<Expression> > (), yystack_[0].value.as < std::shared_ptr<Statement> > ()); 
+             yylhs.value.as < std::shared_ptr<Statement> > ()->SetLocation(driver.location);
+           }
 #line 1255 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
+  case 35:
+#line 257 "parser.y"
+           { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<PrintStmt>(yystack_[2].value.as < std::shared_ptr<Expression> > ()); 
+             yylhs.value.as < std::shared_ptr<Statement> > ()->SetLocation(driver.location);
+           }
+#line 1263 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+    break;
+
+  case 36:
+#line 261 "parser.y"
+           { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<AssignmentStmt>(yystack_[3].value.as < std::shared_ptr<Lvalue> > (), yystack_[1].value.as < std::shared_ptr<Expression> > ()); 
+             yylhs.value.as < std::shared_ptr<Statement> > ()->SetLocation(driver.location);
+           }
+#line 1271 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+    break;
+
+  case 37:
+#line 265 "parser.y"
+           { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<LocalVarDeclStmt>(yystack_[0].value.as < std::shared_ptr<VarDecl> > ());
+             yylhs.value.as < std::shared_ptr<Statement> > ()->SetLocation(driver.location);
+           }
+#line 1279 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+    break;
+
   case 38:
-#line 248 "parser.y"
+#line 272 "parser.y"
            { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<LocalVarDeclStmt>(
-                 std::make_shared<VarDecl>(Type{yystack_[4].value.as < std::string > (), true}, yystack_[1].value.as < std::string > ())); }
-#line 1262 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+                 std::make_shared<VarDecl>(Type{yystack_[4].value.as < std::string > (), true}, yystack_[1].value.as < std::string > ()));
+             yylhs.value.as < std::shared_ptr<Statement> > ()->SetLocation(driver.location);
+           }
+#line 1288 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 39:
-#line 252 "parser.y"
-           { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<ReturnStmt>(yystack_[1].value.as < std::shared_ptr<Expression> > ()); }
-#line 1268 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+#line 278 "parser.y"
+           { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<ReturnStmt>(yystack_[1].value.as < std::shared_ptr<Expression> > ());
+             yylhs.value.as < std::shared_ptr<Statement> > ()->SetLocation(driver.location);
+           }
+#line 1296 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 40:
-#line 254 "parser.y"
-           { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<MethodStmt>(yystack_[1].value.as < std::shared_ptr<MethodInvocation> > ()); }
-#line 1274 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+#line 282 "parser.y"
+           { yylhs.value.as < std::shared_ptr<Statement> > () = std::make_shared<MethodStmt>(yystack_[1].value.as < std::shared_ptr<MethodInvocation> > ());
+             yylhs.value.as < std::shared_ptr<Statement> > ()->SetLocation(driver.location);
+           }
+#line 1304 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 41:
-#line 258 "parser.y"
+#line 289 "parser.y"
                             { yylhs.value.as < std::shared_ptr<VarDecl> > () = yystack_[0].value.as < std::shared_ptr<VarDecl> > (); }
-#line 1280 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+#line 1310 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 42:
-#line 262 "parser.y"
-        { yylhs.value.as < std::shared_ptr<MethodInvocation> > () = std::make_shared<MethodInvocation>(yystack_[5].value.as < std::shared_ptr<Expression> > (), yystack_[3].value.as < std::string > (), yystack_[1].value.as < std::shared_ptr<CommaExprList> > ()); }
-#line 1286 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+#line 293 "parser.y"
+        { yylhs.value.as < std::shared_ptr<MethodInvocation> > () = std::make_shared<MethodInvocation>(yystack_[5].value.as < std::shared_ptr<Expression> > (), yystack_[3].value.as < std::string > (), yystack_[1].value.as < std::shared_ptr<CommaExprList> > ());
+          yylhs.value.as < std::shared_ptr<MethodInvocation> > ()->SetLocation(driver.location);
+        }
+#line 1318 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 43:
-#line 264 "parser.y"
+#line 297 "parser.y"
         { yylhs.value.as < std::shared_ptr<MethodInvocation> > () = std::make_shared<MethodInvocation>(yystack_[4].value.as < std::shared_ptr<Expression> > (), yystack_[2].value.as < std::string > (), 
-              std::make_shared<CommaExprList>()); }
-#line 1293 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+              std::make_shared<CommaExprList>());
+          yylhs.value.as < std::shared_ptr<MethodInvocation> > ()->SetLocation(driver.location);
+        }
+#line 1327 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 44:
-#line 269 "parser.y"
-        { yylhs.value.as < std::shared_ptr<Lvalue> > () = std::make_shared<Lvalue>(yystack_[0].value.as < std::string > ()); }
-#line 1299 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
-    break;
-
-  case 45:
-#line 271 "parser.y"
-        { yylhs.value.as < std::shared_ptr<Lvalue> > () = std::make_shared<Lvalue>(yystack_[3].value.as < std::string > (), yystack_[1].value.as < std::shared_ptr<Expression> > ()); }
-#line 1305 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
-    break;
-
-  case 46:
-#line 274 "parser.y"
-                      { yylhs.value.as < std::shared_ptr<CommaExprList> > () = std::make_shared<CommaExprList>(); yylhs.value.as < std::shared_ptr<CommaExprList> > ()->AddItem(yystack_[0].value.as < std::shared_ptr<Expression> > ()); }
-#line 1311 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
-    break;
-
-  case 47:
-#line 275 "parser.y"
-                                          { yylhs.value.as < std::shared_ptr<CommaExprList> > () = yystack_[2].value.as < std::shared_ptr<CommaExprList> > (); yylhs.value.as < std::shared_ptr<CommaExprList> > ()->AddItem(yystack_[0].value.as < std::shared_ptr<Expression> > ()); }
-#line 1317 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
-    break;
-
-  case 48:
-#line 286 "parser.y"
-  {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_AND     , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1323 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
-    break;
-
-  case 49:
-#line 288 "parser.y"
-  {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_OR      , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1329 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
-    break;
-
-  case 50:
-#line 290 "parser.y"
-  {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_LESS    , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
+#line 304 "parser.y"
+        { yylhs.value.as < std::shared_ptr<Lvalue> > () = std::make_shared<Lvalue>(yystack_[0].value.as < std::string > ());
+          yylhs.value.as < std::shared_ptr<Lvalue> > ()->SetLocation(driver.location);
+        }
 #line 1335 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
-  case 51:
-#line 292 "parser.y"
-  {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_GREATER , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1341 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+  case 45:
+#line 308 "parser.y"
+        { yylhs.value.as < std::shared_ptr<Lvalue> > () = std::make_shared<Lvalue>(yystack_[3].value.as < std::string > (), yystack_[1].value.as < std::shared_ptr<Expression> > ());
+          yylhs.value.as < std::shared_ptr<Lvalue> > ()->SetLocation(driver.location);
+        }
+#line 1343 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
-  case 52:
-#line 294 "parser.y"
-  {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_EQUAL   , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1347 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+  case 46:
+#line 314 "parser.y"
+                      { yylhs.value.as < std::shared_ptr<CommaExprList> > () = std::make_shared<CommaExprList>(); yylhs.value.as < std::shared_ptr<CommaExprList> > ()->AddItem(yystack_[0].value.as < std::shared_ptr<Expression> > ()); }
+#line 1349 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
-  case 53:
-#line 296 "parser.y"
-  {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_PLUS    , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1353 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+  case 47:
+#line 315 "parser.y"
+                                          { yylhs.value.as < std::shared_ptr<CommaExprList> > () = yystack_[2].value.as < std::shared_ptr<CommaExprList> > (); yylhs.value.as < std::shared_ptr<CommaExprList> > ()->AddItem(yystack_[0].value.as < std::shared_ptr<Expression> > ()); }
+#line 1355 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
-  case 54:
-#line 298 "parser.y"
-  {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_MINUS   , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1359 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+  case 48:
+#line 326 "parser.y"
+  {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_AND     , yystack_[0].value.as < std::shared_ptr<Expression> > ());
+   yylhs.value.as < std::shared_ptr<Expression> > ()->SetLocation(driver.location);
+  }
+#line 1363 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
-  case 55:
-#line 300 "parser.y"
-  {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_STAR    , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1365 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
-    break;
-
-  case 56:
-#line 302 "parser.y"
-  {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_SLASH   , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
+  case 49:
+#line 330 "parser.y"
+  {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_OR      , yystack_[0].value.as < std::shared_ptr<Expression> > ());
+   yylhs.value.as < std::shared_ptr<Expression> > ()->SetLocation(driver.location);
+  }
 #line 1371 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
-  case 57:
-#line 304 "parser.y"
-  {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_RMNDR   , yystack_[0].value.as < std::shared_ptr<Expression> > ());}
-#line 1377 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+  case 50:
+#line 334 "parser.y"
+  {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_LESS    , yystack_[0].value.as < std::shared_ptr<Expression> > ());
+   yylhs.value.as < std::shared_ptr<Expression> > ()->SetLocation(driver.location);
+  }
+#line 1379 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
-  case 58:
-#line 307 "parser.y"
-      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<SubscriptExpr>(yystack_[3].value.as < std::shared_ptr<Expression> > (), yystack_[1].value.as < std::shared_ptr<Expression> > ()); }
-#line 1383 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+  case 51:
+#line 338 "parser.y"
+  {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_GREATER , yystack_[0].value.as < std::shared_ptr<Expression> > ());
+   yylhs.value.as < std::shared_ptr<Expression> > ()->SetLocation(driver.location);
+  }
+#line 1387 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
-  case 59:
-#line 310 "parser.y"
-      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<LengthExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > ()); }
-#line 1389 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
-    break;
-
-  case 60:
-#line 313 "parser.y"
-      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<NewArrayExpr>(yystack_[3].value.as < std::string > (), yystack_[1].value.as < std::shared_ptr<Expression> > ()); }
+  case 52:
+#line 342 "parser.y"
+  {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_EQUAL   , yystack_[0].value.as < std::shared_ptr<Expression> > ());
+   yylhs.value.as < std::shared_ptr<Expression> > ()->SetLocation(driver.location);
+  }
 #line 1395 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
-  case 61:
-#line 316 "parser.y"
-      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<NewExpr>(yystack_[2].value.as < std::string > ()); }
-#line 1401 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+  case 53:
+#line 346 "parser.y"
+  {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_PLUS    , yystack_[0].value.as < std::shared_ptr<Expression> > ());
+   yylhs.value.as < std::shared_ptr<Expression> > ()->SetLocation(driver.location);
+  }
+#line 1403 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
-  case 62:
-#line 319 "parser.y"
-      { yylhs.value.as < std::shared_ptr<Expression> > () = yystack_[1].value.as < std::shared_ptr<Expression> > (); }
-#line 1407 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+  case 54:
+#line 350 "parser.y"
+  {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_MINUS   , yystack_[0].value.as < std::shared_ptr<Expression> > ());
+   yylhs.value.as < std::shared_ptr<Expression> > ()->SetLocation(driver.location);
+  }
+#line 1411 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
-  case 63:
-#line 322 "parser.y"
-      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<IdentExpr>(yystack_[0].value.as < std::string > ()); }
-#line 1413 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
-    break;
-
-  case 64:
-#line 325 "parser.y"
-      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<IntExpr>(yystack_[0].value.as < int > ()); }
+  case 55:
+#line 354 "parser.y"
+  {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_STAR    , yystack_[0].value.as < std::shared_ptr<Expression> > ());
+   yylhs.value.as < std::shared_ptr<Expression> > ()->SetLocation(driver.location);
+  }
 #line 1419 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
-  case 65:
-#line 328 "parser.y"
-      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<ThisExpr>(); }
-#line 1425 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+  case 56:
+#line 358 "parser.y"
+  {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_SLASH   , yystack_[0].value.as < std::shared_ptr<Expression> > ());
+   yylhs.value.as < std::shared_ptr<Expression> > ()->SetLocation(driver.location);
+  }
+#line 1427 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
-  case 66:
-#line 331 "parser.y"
-      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<TrueExpr>(); }
-#line 1431 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+  case 57:
+#line 362 "parser.y"
+  {yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<BinOpExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > (), BinOpExpr::Operation::OP_RMNDR   , yystack_[0].value.as < std::shared_ptr<Expression> > ());
+   yylhs.value.as < std::shared_ptr<Expression> > ()->SetLocation(driver.location);
+  }
+#line 1435 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
-  case 67:
-#line 334 "parser.y"
-      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<FalseExpr>(); }
-#line 1437 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
-    break;
-
-  case 68:
-#line 337 "parser.y"
-      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<MethodExpr>(yystack_[0].value.as < std::shared_ptr<MethodInvocation> > ()); }
+  case 58:
+#line 367 "parser.y"
+      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<SubscriptExpr>(yystack_[3].value.as < std::shared_ptr<Expression> > (), yystack_[1].value.as < std::shared_ptr<Expression> > ());
+        yylhs.value.as < std::shared_ptr<Expression> > ()->SetLocation(driver.location);
+      }
 #line 1443 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
+  case 59:
+#line 371 "parser.y"
+      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<LengthExpr>(yystack_[2].value.as < std::shared_ptr<Expression> > ());
+        yylhs.value.as < std::shared_ptr<Expression> > ()->SetLocation(driver.location);
+      }
+#line 1451 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+    break;
+
+  case 60:
+#line 375 "parser.y"
+      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<NewArrayExpr>(yystack_[3].value.as < std::string > (), yystack_[1].value.as < std::shared_ptr<Expression> > ());
+        yylhs.value.as < std::shared_ptr<Expression> > ()->SetLocation(driver.location);
+      }
+#line 1459 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+    break;
+
+  case 61:
+#line 379 "parser.y"
+      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<NewExpr>(yystack_[2].value.as < std::string > ());
+        yylhs.value.as < std::shared_ptr<Expression> > ()->SetLocation(driver.location);
+      }
+#line 1467 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+    break;
+
+  case 62:
+#line 383 "parser.y"
+      { yylhs.value.as < std::shared_ptr<Expression> > () = yystack_[1].value.as < std::shared_ptr<Expression> > (); }
+#line 1473 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+    break;
+
+  case 63:
+#line 386 "parser.y"
+      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<IdentExpr>(yystack_[0].value.as < std::string > ());
+        yylhs.value.as < std::shared_ptr<Expression> > ()->SetLocation(driver.location);
+      }
+#line 1481 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+    break;
+
+  case 64:
+#line 390 "parser.y"
+      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<IntExpr>(yystack_[0].value.as < int > ());
+        yylhs.value.as < std::shared_ptr<Expression> > ()->SetLocation(driver.location);
+      }
+#line 1489 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+    break;
+
+  case 65:
+#line 394 "parser.y"
+      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<ThisExpr>();
+        yylhs.value.as < std::shared_ptr<Expression> > ()->SetLocation(driver.location);
+      }
+#line 1497 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+    break;
+
+  case 66:
+#line 398 "parser.y"
+      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<TrueExpr>();
+        yylhs.value.as < std::shared_ptr<Expression> > ()->SetLocation(driver.location);
+      }
+#line 1505 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+    break;
+
+  case 67:
+#line 402 "parser.y"
+      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<FalseExpr>();
+        yylhs.value.as < std::shared_ptr<Expression> > ()->SetLocation(driver.location);
+      }
+#line 1513 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+    break;
+
+  case 68:
+#line 406 "parser.y"
+      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<MethodExpr>(yystack_[0].value.as < std::shared_ptr<MethodInvocation> > ());
+        yylhs.value.as < std::shared_ptr<Expression> > ()->SetLocation(driver.location);
+      }
+#line 1521 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+    break;
+
   case 69:
-#line 340 "parser.y"
-      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<NotExpr>(yystack_[0].value.as < std::shared_ptr<Expression> > ()); }
-#line 1449 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+#line 410 "parser.y"
+      { yylhs.value.as < std::shared_ptr<Expression> > () = std::make_shared<NotExpr>(yystack_[0].value.as < std::shared_ptr<Expression> > ());
+        yylhs.value.as < std::shared_ptr<Expression> > ()->SetLocation(driver.location);
+      }
+#line 1529 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 70:
-#line 343 "parser.y"
+#line 414 "parser.y"
                           { yylhs.value.as < int > () = yystack_[0].value.as < int > (); }
-#line 1455 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+#line 1535 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
   case 71:
-#line 344 "parser.y"
+#line 415 "parser.y"
                               { yylhs.value.as < int > () = -yystack_[0].value.as < int > (); }
-#line 1461 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+#line 1541 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
     break;
 
 
-#line 1465 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+#line 1545 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
 
             default:
               break;
@@ -1988,14 +2068,14 @@ namespace yy {
   const short
   parser::yyrline_[] =
   {
-       0,   141,   141,   143,   147,   150,   154,   159,   161,   166,
-     168,   172,   174,   178,   180,   184,   189,   191,   194,   199,
-     204,   207,   211,   212,   215,   218,   219,   220,   221,   224,
-     227,   230,   232,   234,   236,   238,   240,   242,   247,   251,
-     253,   257,   261,   263,   268,   270,   274,   275,   285,   287,
-     289,   291,   293,   295,   297,   299,   301,   303,   306,   309,
-     312,   315,   318,   321,   324,   327,   330,   333,   336,   339,
-     343,   344
+       0,   141,   141,   143,   147,   150,   154,   159,   163,   170,
+     172,   176,   178,   182,   184,   188,   195,   197,   200,   205,
+     210,   213,   219,   220,   223,   226,   227,   228,   229,   232,
+     235,   240,   244,   248,   252,   256,   260,   264,   271,   277,
+     281,   288,   292,   296,   303,   307,   314,   315,   325,   329,
+     333,   337,   341,   345,   349,   353,   357,   361,   366,   370,
+     374,   378,   382,   385,   389,   393,   397,   401,   405,   409,
+     414,   415
   };
 
   // Print the state stack on the debug stream.
@@ -2029,9 +2109,9 @@ namespace yy {
 
 
 } // yy
-#line 2033 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
+#line 2113 "/compilers/compilers_course_4sem_2020/milestone5_functions/parser.cpp"
 
-#line 349 "parser.y"
+#line 420 "parser.y"
 
 
 void

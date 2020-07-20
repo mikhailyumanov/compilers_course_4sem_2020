@@ -149,18 +149,22 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<AssignmentStmt> element) {
 
   if ((object_type.is_array && !element->lvalue->expr) ^
       expr_type.is_array) {
-    throw std::runtime_error("Exactly one of types is non-array: " +
-        object_type.ToString() + " and " + expr_type.ToString());
+    ExceptionGuy::GetInstance().Throw(
+        "Exactly one of types is non-array: " +
+        object_type.ToString() + " and " + expr_type.ToString(),
+        element->GetLocation());
   }
 
   if (object_type.IsIntegral() ^ expr_type.IsIntegral()) {
-    throw std::runtime_error("Exactly one of types is not integral: " +
-        object_type.ToString() + " and " + expr_type.ToString());
+    ExceptionGuy::GetInstance().Throw(
+        "Exactly one of types is not integral: " +
+        object_type.ToString() + " and " + expr_type.ToString(),
+        element->GetLocation());
   } else {
-    if (!expr_type.IsIntegral() && 
-        object_type.type != expr_type.type) {
-      throw std::runtime_error("Cannot cast: " +
-        object_type.ToString() + " and " + expr_type.ToString());
+    if (!expr_type.IsIntegral() && object_type.type != expr_type.type) {
+      ExceptionGuy::GetInstance().Throw(
+          "Cannot cast: " + object_type.ToString() + " and " + 
+          expr_type.ToString(), element->GetLocation());
     }
   }
 
@@ -195,8 +199,9 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<BinOpExpr> element) {
   Type rt = element->rhs->GetType();
 
   if (lt.is_array || rt.is_array) {
-    throw std::runtime_error("Cannot perform bin operation over array: " +
-        lt.ToString() + " and " + rt.ToString());
+    ExceptionGuy::GetInstance().Throw(
+        "Cannot perform bin operation over array: " +
+        lt.ToString() + " and " + rt.ToString(), element->GetLocation());
   }
 
   if (element->op <= BinOpExpr::Operation::OP_EQUAL) {
@@ -216,18 +221,22 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<SubscriptExpr> element) {
 
   Type expr_type = element->expr->GetType();
   if (!expr_type.is_array) {
-    throw std::runtime_error(
-        "Cannot subscript non-array: " + expr_type.ToString());
+    ExceptionGuy::GetInstance().Throw(
+        "Cannot subscript non-array: " + expr_type.ToString(),
+        element->GetLocation());
   }
 
   Type idx_type = element->idx->GetType();
   if (idx_type.is_array) {
-    throw std::runtime_error(
-        "Index should be of non-array type: " + idx_type.ToString());
+    ExceptionGuy::GetInstance().Throw(
+        "Index should be of non-array type: " + idx_type.ToString(),
+        element->GetLocation());
   }
 
   if (!idx_type.IsIntegral()) {
-    throw std::runtime_error("Index must be integral: " + idx_type.ToString());
+    ExceptionGuy::GetInstance().Throw(
+        "Index must be integral: " + idx_type.ToString(),
+        element->GetLocation());
   }
 
   // there are no n-dim arrays with n > 1
@@ -243,8 +252,9 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<LengthExpr> element) {
 
   Type expr_type = element->expr->GetType();
   if (!expr_type.is_array) {
-    throw std::runtime_error(
-        "Non-array type has not length: " + expr_type.ToString());
+    ExceptionGuy::GetInstance().Throw(
+        "Non-array type has not length: " + expr_type.ToString(),
+        element->GetLocation());
   }
 
   element->SetType({"int", false});
@@ -284,13 +294,15 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<NewArrayExpr> element) {
 
   Type expr_type = element->expr->GetType();
   if (expr_type.is_array) {
-    throw std::runtime_error(
-        "Array size must be of non-array type: " + expr_type.ToString());
+    ExceptionGuy::GetInstance().Throw(
+        "Array size must be of non-array type: " + expr_type.ToString(),
+        element->GetLocation());
   }
 
   if (!expr_type.IsIntegral()) {
-    throw std::runtime_error(
-        "Array size must be integral: " + expr_type.ToString());
+    ExceptionGuy::GetInstance().Throw(
+        "Array size must be integral: " + expr_type.ToString(),
+        element->GetLocation());
   }
 
   element->SetType({element->type, true});
@@ -306,8 +318,9 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<NotExpr> element) {
 
   Type expr_type = element->expr->GetType();
   if (expr_type.is_array) {
-    throw std::runtime_error(
-        "'Not'-expression must be of non-array type: " + expr_type.ToString());
+    ExceptionGuy::GetInstance().Throw(
+        "'Not'-expression must be of non-array type: " + expr_type.ToString(),
+        element->GetLocation());
   }
 
   element->SetType({"boolean", false});
@@ -320,7 +333,8 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<IdentExpr> element) {
 
   // check if declared
   if (!current_scope_->IsDeclaredAnywhere(element->name)) {
-    throw std::runtime_error("Variable is not declared: " + element->name);
+    ExceptionGuy::GetInstance().Throw(
+        "Variable is not declared: " + element->name, element->GetLocation());
   }
 
   element->SetType(current_scope_->GetType(element->name));
@@ -343,7 +357,8 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<ThisExpr> element) {
   PRINT_DOWN
 
   if (current_scope_->IsMain()) {
-    throw std::runtime_error("Cannot use 'this' keyword im main() context.");
+    ExceptionGuy::GetInstance().Throw(
+        "Cannot use 'this' keyword im main() context.", element->GetLocation());
   }
 
   element->SetType(Type{current_class_, false});
@@ -366,6 +381,11 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<VarDecl> element) {
   PRINT_DOWN
 
   DEBUG_START DEBUG(element->name) DEBUG(element->type) DEBUG_FINISH
+  if (current_scope_->IsDeclared(element->name)) {
+    ExceptionGuy::GetInstance().Throw(
+        "Variable is already declared",
+        element->GetLocation());
+  }
   current_scope_->DeclareVariable(element->name, element->type);
 
   if (!current_scope_->IsMain() && !IsMethodDeclaration()) {
@@ -414,7 +434,8 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<Lvalue> element) {
 
   // check if declared
   if (!current_scope_->IsDeclaredAnywhere(element->name)) {
-    throw std::runtime_error("Variable is not declared: " + element->name);
+    ExceptionGuy::GetInstance().Throw(
+        "Variable is not declared: " + element->name, element->GetLocation());
   }
 
   if (element->expr) {
@@ -422,8 +443,9 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<Lvalue> element) {
 
     // check if object is array
     if (!object_type.is_array) {
-      throw std::runtime_error("Subscription of non-array is restricted: " +
-          object_type.ToString());
+      ExceptionGuy::GetInstance().Throw(
+          "Subscription of non-array is restricted: " + object_type.ToString(),
+          element->GetLocation());
     }
 
     element->expr->Accept(shared_from_this());
@@ -431,13 +453,15 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<Lvalue> element) {
     Type expr_type = element->expr->GetType();
 
     if (expr_type.is_array) {
-      throw std::runtime_error(
-          "Index should be of non-array type: " + expr_type.ToString());
+      ExceptionGuy::GetInstance().Throw(
+          "Index should be of non-array type: " + expr_type.ToString(),
+          element->GetLocation());
     }
    
     if (!expr_type.IsIntegral()) {
-      throw std::runtime_error(
-          "Index must be integral: " + expr_type.ToString());
+      ExceptionGuy::GetInstance().Throw(
+          "Index must be integral: " + expr_type.ToString(),
+          element->GetLocation());
     }
 
 
@@ -459,21 +483,24 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<MethodInvocation> element) {
 
   // check expr type
   if (!expr->GetType().IsClass()) {
-    throw std::runtime_error("Cannot call method of non-class: " +
-        expr->GetType().ToString());
+    ExceptionGuy::GetInstance().Throw(
+        "Cannot call method of non-class: " + expr->GetType().ToString(),
+        element->GetLocation());
   }
 
   // check if class exists
   if (!FunctionStorage::GetInstance().HasClass(class_name)) {
-    throw std::runtime_error(
-        "Class " + class_name + " is not already declared.");
+    ExceptionGuy::GetInstance().Throw(
+        "Class " + class_name + " is not already declared.",
+        element->GetLocation());
   }
 
   // check if method exists
   if (!FunctionStorage::GetInstance().HasFunction(class_name, func_name)) {
-    throw std::runtime_error(
-        "Function " + class_name + "::" + func_name +
-        " is not already declared.");
+    ExceptionGuy::GetInstance().Throw(
+        "Function " + class_name + "::" + func_name + 
+        " is not already declared.", 
+        element->GetLocation());
   }
 
   auto function = FunctionStorage::GetInstance().GetFunction(
@@ -483,8 +510,10 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<MethodInvocation> element) {
 
   // check num args
   if (comma_expr_list->GetLength() != num_args) {
-    throw std::runtime_error("Wrong number of arguments passed to function " +
-        class_name + "::" + func_name);
+    ExceptionGuy::GetInstance().Throw(
+        "Wrong number of arguments passed to function " +
+        class_name + "::" + func_name, 
+        element->GetLocation());
   }
 
   // check args types
@@ -492,9 +521,11 @@ void SymbolTreeVisitor::Visit(std::shared_ptr<MethodInvocation> element) {
     auto arg_type =
       std::dynamic_pointer_cast<Expression>((*comma_expr_list)[i])->GetType();
     if (arg_type != func_type.arg_types[i]) {
-      throw std::runtime_error("Wrong type of expr in function call: got " +
+      ExceptionGuy::GetInstance().Throw(
+          "Wrong type of expr in function call: got " +
           arg_type.ToString() + ", expected " +
-          func_type.arg_types[i].ToString() + ".");
+          func_type.arg_types[i].ToString() + ".", 
+          element->GetLocation());
     }
   }
 

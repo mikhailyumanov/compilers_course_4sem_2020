@@ -4,6 +4,7 @@
 #include "visitors/Visitor.hpp"
 #include "visitors/PrintVisitor.hpp"
 #include "types/constructor/ClassBuilder.hpp"
+#include "utils/ExceptionGuy.hpp"
 
 class SymbolTreeVisitor: public Visitor,
   public std::enable_shared_from_this<SymbolTreeVisitor> {

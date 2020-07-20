@@ -1365,6 +1365,33 @@ include/types/constructor/IntegerBuilder.cpp.s:
 	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/types/constructor/IntegerBuilder.cpp.s
 .PHONY : include/types/constructor/IntegerBuilder.cpp.s
 
+include/utils/BasicElement.o: include/utils/BasicElement.cpp.o
+
+.PHONY : include/utils/BasicElement.o
+
+# target to build an object file
+include/utils/BasicElement.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/utils/BasicElement.cpp.o
+.PHONY : include/utils/BasicElement.cpp.o
+
+include/utils/BasicElement.i: include/utils/BasicElement.cpp.i
+
+.PHONY : include/utils/BasicElement.i
+
+# target to preprocess a source file
+include/utils/BasicElement.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/utils/BasicElement.cpp.i
+.PHONY : include/utils/BasicElement.cpp.i
+
+include/utils/BasicElement.s: include/utils/BasicElement.cpp.s
+
+.PHONY : include/utils/BasicElement.s
+
+# target to generate assembly for a file
+include/utils/BasicElement.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/utils/BasicElement.cpp.s
+.PHONY : include/utils/BasicElement.cpp.s
+
 include/utils/BasicList.o: include/utils/BasicList.cpp.o
 
 .PHONY : include/utils/BasicList.o
@@ -1391,6 +1418,33 @@ include/utils/BasicList.s: include/utils/BasicList.cpp.s
 include/utils/BasicList.cpp.s:
 	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/utils/BasicList.cpp.s
 .PHONY : include/utils/BasicList.cpp.s
+
+include/utils/ExceptionGuy.o: include/utils/ExceptionGuy.cpp.o
+
+.PHONY : include/utils/ExceptionGuy.o
+
+# target to build an object file
+include/utils/ExceptionGuy.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/utils/ExceptionGuy.cpp.o
+.PHONY : include/utils/ExceptionGuy.cpp.o
+
+include/utils/ExceptionGuy.i: include/utils/ExceptionGuy.cpp.i
+
+.PHONY : include/utils/ExceptionGuy.i
+
+# target to preprocess a source file
+include/utils/ExceptionGuy.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/utils/ExceptionGuy.cpp.i
+.PHONY : include/utils/ExceptionGuy.cpp.i
+
+include/utils/ExceptionGuy.s: include/utils/ExceptionGuy.cpp.s
+
+.PHONY : include/utils/ExceptionGuy.s
+
+# target to generate assembly for a file
+include/utils/ExceptionGuy.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/utils/ExceptionGuy.cpp.s
+.PHONY : include/utils/ExceptionGuy.cpp.s
 
 include/value_categories/Lvalue.o: include/value_categories/Lvalue.cpp.o
 
@@ -1755,9 +1809,15 @@ help:
 	@echo "... include/types/constructor/IntegerBuilder.o"
 	@echo "... include/types/constructor/IntegerBuilder.i"
 	@echo "... include/types/constructor/IntegerBuilder.s"
+	@echo "... include/utils/BasicElement.o"
+	@echo "... include/utils/BasicElement.i"
+	@echo "... include/utils/BasicElement.s"
 	@echo "... include/utils/BasicList.o"
 	@echo "... include/utils/BasicList.i"
 	@echo "... include/utils/BasicList.s"
+	@echo "... include/utils/ExceptionGuy.o"
+	@echo "... include/utils/ExceptionGuy.i"
+	@echo "... include/utils/ExceptionGuy.s"
 	@echo "... include/value_categories/Lvalue.o"
 	@echo "... include/value_categories/Lvalue.i"
 	@echo "... include/value_categories/Lvalue.s"

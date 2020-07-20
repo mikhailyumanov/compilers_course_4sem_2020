@@ -157,10 +157,14 @@ main_class: "class" "identifier" "{"
 ;
 
 class_declaration: "class" "identifier" "{" declaration_list "}"
-                   { $$ = std::make_shared<ClassDecl>($2, $4); }
+                   { $$ = std::make_shared<ClassDecl>($2, $4);
+                     $$->SetLocation(driver.location);
+                   }
                  | "class" "identifier" "extends" "identifier" "{"
                    declaration_list "}"
-                   { $$ = std::make_shared<ClassDecl>($2, $6); }
+                   { $$ = std::make_shared<ClassDecl>($2, $6);
+                     $$->SetLocation(driver.location);
+                   }
 ;
 
 statement_list: statement
@@ -183,7 +187,9 @@ declaration: variable_declaration
 
 method_declaration: "public" type "identifier" args_list "{" statement_list "}"
                     { $$ = std::make_shared<MethodDecl>(
-                          FunctionType($2, $4.first,$4.second), $3, $6); }
+                          FunctionType($2, $4.first,$4.second), $3, $6); 
+                      $$->SetLocation(driver.location);
+                    }
 ;
 
 args_list: "(" ")" { $$ = std::pair<std::vector<Type>,
@@ -205,7 +211,9 @@ formals: type "identifier" { $$ = std::make_pair($1, $2); }
 ;
 
 variable_declaration: type "identifier" ";"
-                      { $$ = std::make_shared<VarDecl>($1, $2); }
+                      { $$ = std::make_shared<VarDecl>($1, $2); 
+                        $$->SetLocation(driver.location);
+                      }
 ;
 
 type: simple_type { $$ = Type{$1, false}; }
@@ -226,32 +234,55 @@ type_identifier: "identifier" { $$ = $1; }
 
 statement: "assert" "(" expr ")" ";"
            { $$ = std::static_pointer_cast<Statement>(
-              std::make_shared<AssertStmt>($3)); }
+              std::make_shared<AssertStmt>($3)); 
+             $$->SetLocation(driver.location);
+           }
          | "{" statement_list "}"
-           { $$ = std::make_shared<StmtListStmt>($2); }
+           { $$ = std::make_shared<StmtListStmt>($2); 
+             $$->SetLocation(driver.location);
+           }
          | "if"  "(" expr ")" statement
-           { $$ = std::make_shared<IfStmt>($3, $5); }
+           { $$ = std::make_shared<IfStmt>($3, $5); 
+             $$->SetLocation(driver.location);
+           }
          | "if"  "(" expr ")" statement "else" statement
-           { $$ = std::make_shared<IfElseStmt>($3, $5, $7); }
+           { $$ = std::make_shared<IfElseStmt>($3, $5, $7); 
+             $$->SetLocation(driver.location);
+           }
          | "while" "(" expr ")" statement
-           { $$ = std::make_shared<WhileStmt>($3, $5); }
+           { $$ = std::make_shared<WhileStmt>($3, $5); 
+             $$->SetLocation(driver.location);
+           }
          | "System" "." "out" "." "println" "(" expr ")" ";"
-           { $$ = std::make_shared<PrintStmt>($7); }
+           { $$ = std::make_shared<PrintStmt>($7); 
+             $$->SetLocation(driver.location);
+           }
          | lvalue "=" expr ";"
-           { $$ = std::make_shared<AssignmentStmt>($1, $3); }
+           { $$ = std::make_shared<AssignmentStmt>($1, $3); 
+             $$->SetLocation(driver.location);
+           }
          | local_variable_declaration
-           { $$ = std::make_shared<LocalVarDeclStmt>($1); }
+           { $$ = std::make_shared<LocalVarDeclStmt>($1);
+             $$->SetLocation(driver.location);
+           }
 
          // FIXME: such a terrible workaround, but stmt like
          // `Class[] class_array;` can't exist without it.
          | "identifier" "[" "]" "identifier" ";"
            { $$ = std::make_shared<LocalVarDeclStmt>(
-                 std::make_shared<VarDecl>(Type{$1, true}, $4)); }
+                 std::make_shared<VarDecl>(Type{$1, true}, $4));
+             $$->SetLocation(driver.location);
+           }
         
          | "return" expr ";" 
-           { $$ = std::make_shared<ReturnStmt>($2); }
+           { $$ = std::make_shared<ReturnStmt>($2);
+             $$->SetLocation(driver.location);
+           }
          | method_invocation ";"
-           { $$ = std::make_shared<MethodStmt>($1); }
+           { $$ = std::make_shared<MethodStmt>($1);
+             $$->SetLocation(driver.location);
+           }
+
 ;
 
 local_variable_declaration: variable_declaration
@@ -259,16 +290,25 @@ local_variable_declaration: variable_declaration
 ;
 
 method_invocation: expr "." "identifier" "(" comma_expr_list ")"
-        { $$ = std::make_shared<MethodInvocation>($1, $3, $5); }
+        { $$ = std::make_shared<MethodInvocation>($1, $3, $5);
+          $$->SetLocation(driver.location);
+        }
                  | expr "." "identifier" "(" ")"
         { $$ = std::make_shared<MethodInvocation>($1, $3, 
-              std::make_shared<CommaExprList>()); }
+              std::make_shared<CommaExprList>());
+          $$->SetLocation(driver.location);
+        }
 ;
 
 lvalue: "identifier" 
-        { $$ = std::make_shared<Lvalue>($1); }
+        { $$ = std::make_shared<Lvalue>($1);
+          $$->SetLocation(driver.location);
+        }
       | "identifier" "[" expr "]" 
-        { $$ = std::make_shared<Lvalue>($1, $3); }
+        { $$ = std::make_shared<Lvalue>($1, $3);
+          $$->SetLocation(driver.location);
+        }
+
 ;
 
 comma_expr_list: expr { $$ = std::make_shared<CommaExprList>(); $$->AddItem($1); }
@@ -283,62 +323,93 @@ comma_expr_list: expr { $$ = std::make_shared<CommaExprList>(); $$->AddItem($1);
 %left "*" "/";
 
 expr: expr AND    expr
-  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_AND     , $3);}
+  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_AND     , $3);
+   $$->SetLocation(driver.location);
+  }
    | expr OR      expr
-  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_OR      , $3);}
+  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_OR      , $3);
+   $$->SetLocation(driver.location);
+  }
    | expr LESS    expr
-  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_LESS    , $3);}
+  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_LESS    , $3);
+   $$->SetLocation(driver.location);
+  }
    | expr GREATER expr
-  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_GREATER , $3);}
+  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_GREATER , $3);
+   $$->SetLocation(driver.location);
+  }
    | expr EQUAL   expr
-  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_EQUAL   , $3);}
+  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_EQUAL   , $3);
+   $$->SetLocation(driver.location);
+  }
    | expr PLUS    expr
-  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_PLUS    , $3);}
+  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_PLUS    , $3);
+   $$->SetLocation(driver.location);
+  }
    | expr MINUS   expr
-  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_MINUS   , $3);}
+  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_MINUS   , $3);
+   $$->SetLocation(driver.location);
+  }
    | expr STAR    expr
-  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_STAR    , $3);}
+  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_STAR    , $3);
+   $$->SetLocation(driver.location);
+  }
    | expr SLASH   expr
-  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_SLASH   , $3);}
+  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_SLASH   , $3);
+   $$->SetLocation(driver.location);
+  }
    | expr RMNDR   expr
-  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_RMNDR   , $3);}
+  {$$ = std::make_shared<BinOpExpr>($1, BinOpExpr::Operation::OP_RMNDR   , $3);
+   $$->SetLocation(driver.location);
+  }
 
     | expr "[" expr "]"
-      { $$ = std::make_shared<SubscriptExpr>($1, $3); }
-
+      { $$ = std::make_shared<SubscriptExpr>($1, $3);
+        $$->SetLocation(driver.location);
+      }
     | expr "." "length"
-      { $$ = std::make_shared<LengthExpr>($1); }
-
+      { $$ = std::make_shared<LengthExpr>($1);
+        $$->SetLocation(driver.location);
+      }
     | "new" simple_type "[" expr "]"
-      { $$ = std::make_shared<NewArrayExpr>($2, $4); }
-
+      { $$ = std::make_shared<NewArrayExpr>($2, $4);
+        $$->SetLocation(driver.location);
+      }
     | "new" type_identifier "(" ")"
-      { $$ = std::make_shared<NewExpr>($2); }
-
+      { $$ = std::make_shared<NewExpr>($2);
+        $$->SetLocation(driver.location);
+      }
     | "(" expr ")"
       { $$ = $2; }
 
     | "identifier"
-      { $$ = std::make_shared<IdentExpr>($1); }
-
+      { $$ = std::make_shared<IdentExpr>($1);
+        $$->SetLocation(driver.location);
+      }
     | integer_literal
-      { $$ = std::make_shared<IntExpr>($1); }
-
+      { $$ = std::make_shared<IntExpr>($1);
+        $$->SetLocation(driver.location);
+      }
     | "this"
-      { $$ = std::make_shared<ThisExpr>(); }
-
+      { $$ = std::make_shared<ThisExpr>();
+        $$->SetLocation(driver.location);
+      }
     | "true"
-      { $$ = std::make_shared<TrueExpr>(); }
-
+      { $$ = std::make_shared<TrueExpr>();
+        $$->SetLocation(driver.location);
+      }
     | "false"
-      { $$ = std::make_shared<FalseExpr>(); }
-
+      { $$ = std::make_shared<FalseExpr>();
+        $$->SetLocation(driver.location);
+      }
     | method_invocation
-      { $$ = std::make_shared<MethodExpr>($1); }
-
+      { $$ = std::make_shared<MethodExpr>($1);
+        $$->SetLocation(driver.location);
+      }
     | "!" expr
-      { $$ = std::make_shared<NotExpr>($2); }
-
+      { $$ = std::make_shared<NotExpr>($2);
+        $$->SetLocation(driver.location);
+      }
 
 integer_literal: "number" { $$ = $1; }
                | "-" "number" { $$ = -$2; };

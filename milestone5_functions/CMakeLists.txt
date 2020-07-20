@@ -58,6 +58,7 @@ set(
     include/expressions/MethodExpr.cpp
     include/expressions/ThisExpr.cpp
 
+    include/utils/BasicElement.cpp
     include/utils/BasicList.cpp
 
     include/declarations/VarDecl.cpp
@@ -94,6 +95,8 @@ set(
     include/visitors/Interpreter.cpp
     include/visitors/TemplateVisitor.cpp
     include/visitors/SymbolTreeVisitor.cpp
+
+    include/utils/ExceptionGuy.cpp
 
     debug.cpp
 )

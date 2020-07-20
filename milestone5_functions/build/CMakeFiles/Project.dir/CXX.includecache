@@ -10,6 +10,34 @@
 iostream
 -
 
+..//parser.hh
+functional
+-
+memory
+-
+string
+-
+utils/forward_decl.hpp
+../utils/forward_decl.hpp
+cassert
+-
+cstdlib
+-
+iostream
+-
+stdexcept
+-
+string
+-
+vector
+-
+location.hh
+../location.hh
+typeinfo
+-
+cassert
+-
+
 ../include/declarations/ClassDecl.hpp
 declarations/Decl.hpp
 ../include/declarations/declarations/Decl.hpp
@@ -367,6 +395,8 @@ memory
 -
 visitors/Visitor.hpp
 ../include/utils/visitors/Visitor.hpp
+parser.hh
+../include/utils/parser.hh
 
 ../include/utils/BasicList.hpp
 memory
@@ -377,6 +407,12 @@ utils/BasicElement.hpp
 ../include/utils/utils/BasicElement.hpp
 visitors/Visitor.hpp
 ../include/utils/visitors/Visitor.hpp
+
+../include/utils/ExceptionGuy.hpp
+string
+-
+parser.hh
+../include/utils/parser.hh
 
 ../include/utils/elements.hpp
 debug.h
@@ -537,6 +573,8 @@ visitors/PrintVisitor.hpp
 ../include/visitors/visitors/PrintVisitor.hpp
 types/constructor/ClassBuilder.hpp
 ../include/visitors/types/constructor/ClassBuilder.hpp
+utils/ExceptionGuy.hpp
+../include/visitors/utils/ExceptionGuy.hpp
 
 ../include/visitors/TemplateVisitor.hpp
 utils/BasicElement.hpp
@@ -549,6 +587,12 @@ memory
 -
 utils/forward_decl.hpp
 ../include/visitors/utils/forward_decl.hpp
+
+../location.hh
+iostream
+-
+string
+-
 
 /compilers/compilers_course_4sem_2020/milestone5_functions/debug.cpp
 debug.h
@@ -778,9 +822,19 @@ types/constructor/Constructor.hpp
 types/constructor/IntegerBuilder.hpp
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/types/constructor/types/constructor/IntegerBuilder.hpp
 
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/utils/BasicElement.cpp
+utils/BasicElement.hpp
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/utils/utils/BasicElement.hpp
+
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/utils/BasicList.cpp
 utils/BasicList.hpp
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/utils/utils/BasicList.hpp
+
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/utils/ExceptionGuy.cpp
+utils/ExceptionGuy.hpp
+/compilers/compilers_course_4sem_2020/milestone5_functions/include/utils/utils/ExceptionGuy.hpp
+exception
+-
 
 /compilers/compilers_course_4sem_2020/milestone5_functions/include/value_categories/Lvalue.cpp
 value_categories/Lvalue.hpp
