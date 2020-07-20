@@ -4,12 +4,10 @@ Program
 	ClassDecl Dummy
 		NEW FUNCTION SCOPE
 		MethodDecl Return type: boolean; Args:  AlwaysTrue
-			NEW SCOPE
 			ReturnStmt
 				IntExpr 1
 		NEW FUNCTION SCOPE
 		MethodDecl Return type: boolean; Args:  AlwaysFalse
-			NEW SCOPE
 			NEW SCOPE
 			IfStmt
 				TrueExpr
