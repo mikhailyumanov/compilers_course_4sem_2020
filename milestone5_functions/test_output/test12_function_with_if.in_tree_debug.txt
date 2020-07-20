@@ -1,130 +1,152 @@
 >>> Interpreter: Program
 >>> PrintVisitor: Program
 GoDown
-Current state: parent: 0x5575e9deb8d0 ; child index: 1 
+Current state: parent: 0x555d0efa58d0 ; child index: 1 
+operator->; current_parent: 0x555d0efa58d0 child_index: 1 num_children: 2 
 GoDown
-Current state: parent: 0x5575e9dec500 ; child index: 0 
+Current state: parent: 0x555d0efa6500 ; child index: 0 
 >>> PrintVisitor: ClassDecl Dummy 
 SymbolTreeVisitor::FunctionScopeDown
 Return type: boolean; Args: 
 GoDown
-Current state: parent: 0x5575e9dec680 ; child index: 0 
+Current state: parent: 0x555d0efa6680 ; child index: 0 
 Return type: boolean; Args: 
 >>> PrintVisitor: MethodDecl Return type: boolean; Args:  AlwaysTrue 
-AlwaysTrue Return type: boolean; Args:  Return type: boolean; Args:  
-GoDown
-Current state: parent: 0x5575e9dec880 ; child index: 0 
+AlwaysTrue Return type: boolean; Args:  operator->; current_parent: 0x555d0efa6680 child_index: 0 num_children: 1 
+Return type: boolean; Args:  
 >>> PrintVisitor: ReturnStmt
 >>> PrintVisitor: IntExpr 1 
-GoUp
-Current state: parent: 0x5575e9dec680 ; child index: 0 
-MethodDecl:  Return type: boolean; Args:  Return type: boolean; Args:  
+MethodDecl:  Return type: boolean; Args:  operator->; current_parent: 0x555d0efa6680 child_index: 0 num_children: 1 
+Return type: boolean; Args:  
+operator->; current_parent: 0x555d0efa6680 child_index: 0 num_children: 1 
 Return type: boolean; Args: 
 ScopeLayerTree::SetFunctionScope Return type: boolean; Args:  Return type: boolean; Args:  
 GoUp
-Current state: parent: 0x5575e9dec500 ; child index: 0 
+Current state: parent: 0x555d0efa6500 ; child index: 0 
 SymbolTreeVisitor::FunctionScopeDown
 Return type: boolean; Args: 
 GoDown
-Current state: parent: 0x5575e9dec680 ; child index: 1 
+Current state: parent: 0x555d0efa6680 ; child index: 1 
 Return type: boolean; Args: 
 >>> PrintVisitor: MethodDecl Return type: boolean; Args:  AlwaysFalse 
-AlwaysFalse Return type: boolean; Args:  Return type: boolean; Args:  
+AlwaysFalse Return type: boolean; Args:  operator->; current_parent: 0x555d0efa6680 child_index: 1 num_children: 2 
+Return type: boolean; Args:  
 GoDown
-Current state: parent: 0x5575e9dece50 ; child index: 0 
-GoDown
-Current state: parent: 0x5575e9decfa0 ; child index: 0 
+Current state: parent: 0x555d0efa6ce0 ; child index: 0 
 >>> PrintVisitor: IfStmt
 >>> PrintVisitor: TrueExpr
 GoDown
-Current state: parent: 0x5575e9ded140 ; child index: 0 
+Current state: parent: 0x555d0efa6e80 ; child index: 0 
 >>> PrintVisitor: StmtListStmt
 >>> PrintVisitor: ReturnStmt
 >>> PrintVisitor: IntExpr 0 
 GoUp
-Current state: parent: 0x5575e9decfa0 ; child index: 0 
+Current state: parent: 0x555d0efa6ce0 ; child index: 0 
 GoUp
-Current state: parent: 0x5575e9dece50 ; child index: 0 
+Current state: parent: 0x555d0efa6680 ; child index: 1 
 >>> PrintVisitor: ReturnStmt
 >>> PrintVisitor: IntExpr 1 
-GoUp
-Current state: parent: 0x5575e9dec680 ; child index: 1 
-MethodDecl:  Return type: boolean; Args:  Return type: boolean; Args:  
+MethodDecl:  Return type: boolean; Args:  operator->; current_parent: 0x555d0efa6680 child_index: 1 num_children: 2 
+Return type: boolean; Args:  
+operator->; current_parent: 0x555d0efa6680 child_index: 1 num_children: 2 
 Return type: boolean; Args: 
 ScopeLayerTree::SetFunctionScope Return type: boolean; Args:  Return type: boolean; Args:  
 GoUp
-Current state: parent: 0x5575e9dec500 ; child index: 0 
+Current state: parent: 0x555d0efa6500 ; child index: 0 
 GoUp
-Current state: parent: 0x5575e9deb8d0 ; child index: 1 
+Current state: parent: 0x555d0efa58d0 ; child index: 1 
 GoDown
-Current state: parent: 0x5575e9dec500 ; child index: 1 
+Current state: parent: 0x555d0efa6500 ; child index: 1 
+operator->; current_parent: 0x555d0efa6500 child_index: 1 num_children: 2 
 >>> PrintVisitor: MainClass
+operator->; current_parent: 0x555d0efa6500 child_index: 1 num_children: 2 
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: boolean, is_array: false res 
 res type: boolean, is_array: false 
+operator->; current_parent: 0x555d0efa6500 child_index: 1 num_children: 2 
 ScopeLayer::IsArgument
+operator->; current_parent: 0x555d0efa6500 child_index: 1 num_children: 2 
 >>> PrintVisitor: AssignmentStmt
+operator->; current_parent: 0x555d0efa6500 child_index: 1 num_children: 2 
 >>> PrintVisitor: MethodExpr
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: NewExpr type =  Dummy 
 AlwaysTrue
 GoDown
-Current state: parent: 0x5575e9df7f80 ; child index: 0 
+Current state: parent: 0x555d0efa7260 ; child index: 0 
 GoUp
-Current state: parent: 0x5575e9dec500 ; child index: 1 
+Current state: parent: 0x555d0efa6500 ; child index: 1 
+operator->; current_parent: 0x555d0efa6500 child_index: 1 num_children: 2 
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IdentExpr res 
+operator->; current_parent: 0x555d0efa6500 child_index: 1 num_children: 2 
+operator->; current_parent: 0x555d0efa6500 child_index: 1 num_children: 2 
 >>> PrintVisitor: AssignmentStmt
+operator->; current_parent: 0x555d0efa6500 child_index: 1 num_children: 2 
 >>> PrintVisitor: MethodExpr
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: NewExpr type =  Dummy 
 AlwaysTrue
 GoDown
-Current state: parent: 0x5575e9df7f80 ; child index: 1 
+Current state: parent: 0x555d0efa7260 ; child index: 1 
 GoUp
-Current state: parent: 0x5575e9dec500 ; child index: 1 
+Current state: parent: 0x555d0efa6500 ; child index: 1 
+operator->; current_parent: 0x555d0efa6500 child_index: 1 num_children: 2 
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IdentExpr res 
+operator->; current_parent: 0x555d0efa6500 child_index: 1 num_children: 2 
+operator->; current_parent: 0x555d0efa6500 child_index: 1 num_children: 2 
 >>> PrintVisitor: AssignmentStmt
+operator->; current_parent: 0x555d0efa6500 child_index: 1 num_children: 2 
 >>> PrintVisitor: MethodExpr
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: NewExpr type =  Dummy 
 AlwaysFalse
 GoDown
-Current state: parent: 0x5575e9df7f80 ; child index: 2 
+Current state: parent: 0x555d0efa7260 ; child index: 2 
 GoUp
-Current state: parent: 0x5575e9dec500 ; child index: 1 
+Current state: parent: 0x555d0efa6500 ; child index: 1 
+operator->; current_parent: 0x555d0efa6500 child_index: 1 num_children: 2 
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IdentExpr res 
+operator->; current_parent: 0x555d0efa6500 child_index: 1 num_children: 2 
+operator->; current_parent: 0x555d0efa6500 child_index: 1 num_children: 2 
 >>> PrintVisitor: AssignmentStmt
+operator->; current_parent: 0x555d0efa6500 child_index: 1 num_children: 2 
 >>> PrintVisitor: MethodExpr
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: NewExpr type =  Dummy 
 AlwaysFalse
 GoDown
-Current state: parent: 0x5575e9df7f80 ; child index: 3 
+Current state: parent: 0x555d0efa7260 ; child index: 3 
 GoUp
-Current state: parent: 0x5575e9dec500 ; child index: 1 
+Current state: parent: 0x555d0efa6500 ; child index: 1 
+operator->; current_parent: 0x555d0efa6500 child_index: 1 num_children: 2 
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IdentExpr res 
+operator->; current_parent: 0x555d0efa6500 child_index: 1 num_children: 2 
+operator->; current_parent: 0x555d0efa6500 child_index: 1 num_children: 2 
 GoUp
-Current state: parent: 0x5575e9deb8d0 ; child index: 1 
+Current state: parent: 0x555d0efa58d0 ; child index: 1 
 
 
 GoDown
-Current state: parent: 0x5575e9deb8d0 ; child index: 1 
+Current state: parent: 0x555d0efa58d0 ; child index: 1 
+operator->; current_parent: 0x555d0efa58d0 child_index: 1 num_children: 2 
 >>> Interpreter: ClassDecl
 GoDown
-Current state: parent: 0x5575e9dec500 ; child index: 0 
+Current state: parent: 0x555d0efa6500 ; child index: 0 
 GoUp
-Current state: parent: 0x5575e9deb8d0 ; child index: 1 
+Current state: parent: 0x555d0efa58d0 ; child index: 1 
 GoDown
-Current state: parent: 0x5575e9dec500 ; child index: 1 
+Current state: parent: 0x555d0efa6500 ; child index: 1 
+operator->; current_parent: 0x555d0efa6500 child_index: 1 num_children: 2 
 >>> Interpreter: MainClass
 >>> Interpreter: LocalVarDeclStmt
 >>> Interpreter: VarDecl
 >>> Interpreter: AssignmentStmt
-Is var res declared: 1 
+Is var res declared: operator->; current_parent: 0x555d0efa6500 child_index: 1 num_children: 2 
+1 
 >>> Interpreter: MethodExpr
 >>> Interpreter: MethodInvocation
 >>> Interpreter: NewExpr
@@ -132,26 +154,30 @@ Constructor::GetInstance
 Constructor::Construct
 Constructor::GetInstance
 GoDown
-Current state: parent: 0x5575e9df7f80 ; child index: 0 
+Current state: parent: 0x555d0efa7260 ; child index: 0 
 GoUp
-Current state: parent: 0x5575e9dec500 ; child index: 1 
+Current state: parent: 0x555d0efa6500 ; child index: 1 
 GoDown
-Current state: parent: 0x5575e9df7f80 ; child index: 0 
+Current state: parent: 0x555d0efa7260 ; child index: 0 
+Method invocation: link function
+operator->; current_parent: 0x555d0efa7260 child_index: 0 num_children: 4 
+Method invocation: link function (end)
 GoDown
-Current state: parent: 0x5575e9df80a0 ; child index: 0 
+Current state: parent: 0x555d0efa7440 ; child index: 0 
+operator->; current_parent: 0x555d0efa7440 child_index: 0 num_children: 1 
 >>> Interpreter: ReturnStmt
 >>> Interpreter: IntExpr
 GoUp
-Current state: parent: 0x5575e9df7f80 ; child index: 0 
+Current state: parent: 0x555d0efa7260 ; child index: 0 
 GoUp
-Current state: parent: 0x5575e9dec500 ; child index: 1 
+Current state: parent: 0x555d0efa6500 ; child index: 1 
 >>> Interpreter: Assignment no subscript
 >>> Interpreter: PrintStmt
->>> Interpreter: IdentExpr
 >>> Interpreter: IdentExpr
 1
 >>> Interpreter: AssignmentStmt
-Is var res declared: 1 
+Is var res declared: operator->; current_parent: 0x555d0efa6500 child_index: 1 num_children: 2 
+1 
 >>> Interpreter: MethodExpr
 >>> Interpreter: MethodInvocation
 >>> Interpreter: NewExpr
@@ -159,26 +185,30 @@ Constructor::GetInstance
 Constructor::Construct
 Constructor::GetInstance
 GoDown
-Current state: parent: 0x5575e9df7f80 ; child index: 1 
+Current state: parent: 0x555d0efa7260 ; child index: 1 
 GoUp
-Current state: parent: 0x5575e9dec500 ; child index: 1 
+Current state: parent: 0x555d0efa6500 ; child index: 1 
 GoDown
-Current state: parent: 0x5575e9df7f80 ; child index: 1 
+Current state: parent: 0x555d0efa7260 ; child index: 1 
+Method invocation: link function
+operator->; current_parent: 0x555d0efa7260 child_index: 1 num_children: 4 
+Method invocation: link function (end)
 GoDown
-Current state: parent: 0x5575e9df81e0 ; child index: 0 
+Current state: parent: 0x555d0efb1f80 ; child index: 0 
+operator->; current_parent: 0x555d0efb1f80 child_index: 0 num_children: 1 
 >>> Interpreter: ReturnStmt
 >>> Interpreter: IntExpr
 GoUp
-Current state: parent: 0x5575e9df7f80 ; child index: 1 
+Current state: parent: 0x555d0efa7260 ; child index: 1 
 GoUp
-Current state: parent: 0x5575e9dec500 ; child index: 1 
+Current state: parent: 0x555d0efa6500 ; child index: 1 
 >>> Interpreter: Assignment no subscript
 >>> Interpreter: PrintStmt
->>> Interpreter: IdentExpr
 >>> Interpreter: IdentExpr
 1
 >>> Interpreter: AssignmentStmt
-Is var res declared: 1 
+Is var res declared: operator->; current_parent: 0x555d0efa6500 child_index: 1 num_children: 2 
+1 
 >>> Interpreter: MethodExpr
 >>> Interpreter: MethodInvocation
 >>> Interpreter: NewExpr
@@ -186,37 +216,41 @@ Constructor::GetInstance
 Constructor::Construct
 Constructor::GetInstance
 GoDown
-Current state: parent: 0x5575e9df7f80 ; child index: 2 
+Current state: parent: 0x555d0efa7260 ; child index: 2 
 GoUp
-Current state: parent: 0x5575e9dec500 ; child index: 1 
+Current state: parent: 0x555d0efa6500 ; child index: 1 
 GoDown
-Current state: parent: 0x5575e9df7f80 ; child index: 2 
+Current state: parent: 0x555d0efa7260 ; child index: 2 
+Method invocation: link function
+operator->; current_parent: 0x555d0efa7260 child_index: 2 num_children: 4 
+Method invocation: link function (end)
 GoDown
-Current state: parent: 0x5575e9df8330 ; child index: 0 
+Current state: parent: 0x555d0efb20a0 ; child index: 0 
+operator->; current_parent: 0x555d0efb20a0 child_index: 0 num_children: 1 
 >>> Interpreter: IfStmt
 GoDown
-Current state: parent: 0x5575e9dece50 ; child index: 0 
+Current state: parent: 0x555d0efa6ce0 ; child index: 0 
 >>> Interpreter: TrueExpr
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x5575e9decfa0 ; child index: 0 
+Current state: parent: 0x555d0efa6e80 ; child index: 0 
 >>> Interpreter: ReturnStmt
 >>> Interpreter: IntExpr
 GoUp
-Current state: parent: 0x5575e9dece50 ; child index: 0 
+Current state: parent: 0x555d0efa6ce0 ; child index: 0 
 GoUp
-Current state: parent: 0x5575e9df8330 ; child index: 0 
+Current state: parent: 0x555d0efb20a0 ; child index: 0 
 GoUp
-Current state: parent: 0x5575e9df7f80 ; child index: 2 
+Current state: parent: 0x555d0efa7260 ; child index: 2 
 GoUp
-Current state: parent: 0x5575e9dec500 ; child index: 1 
+Current state: parent: 0x555d0efa6500 ; child index: 1 
 >>> Interpreter: Assignment no subscript
 >>> Interpreter: PrintStmt
->>> Interpreter: IdentExpr
 >>> Interpreter: IdentExpr
 0
 >>> Interpreter: AssignmentStmt
-Is var res declared: 1 
+Is var res declared: operator->; current_parent: 0x555d0efa6500 child_index: 1 num_children: 2 
+1 
 >>> Interpreter: MethodExpr
 >>> Interpreter: MethodInvocation
 >>> Interpreter: NewExpr
@@ -224,34 +258,37 @@ Constructor::GetInstance
 Constructor::Construct
 Constructor::GetInstance
 GoDown
-Current state: parent: 0x5575e9df7f80 ; child index: 3 
+Current state: parent: 0x555d0efa7260 ; child index: 3 
 GoUp
-Current state: parent: 0x5575e9dec500 ; child index: 1 
+Current state: parent: 0x555d0efa6500 ; child index: 1 
 GoDown
-Current state: parent: 0x5575e9df7f80 ; child index: 3 
+Current state: parent: 0x555d0efa7260 ; child index: 3 
+Method invocation: link function
+operator->; current_parent: 0x555d0efa7260 child_index: 3 num_children: 4 
+Method invocation: link function (end)
 GoDown
-Current state: parent: 0x5575e9df84a0 ; child index: 0 
+Current state: parent: 0x555d0efb21c0 ; child index: 0 
+operator->; current_parent: 0x555d0efb21c0 child_index: 0 num_children: 1 
 >>> Interpreter: IfStmt
 GoDown
-Current state: parent: 0x5575e9dece50 ; child index: 0 
+Current state: parent: 0x555d0efa6ce0 ; child index: 0 
 >>> Interpreter: TrueExpr
 >>> Interpreter: StmtListStmt
 GoDown
-Current state: parent: 0x5575e9decfa0 ; child index: 0 
+Current state: parent: 0x555d0efa6e80 ; child index: 0 
 >>> Interpreter: ReturnStmt
 >>> Interpreter: IntExpr
 GoUp
-Current state: parent: 0x5575e9dece50 ; child index: 0 
+Current state: parent: 0x555d0efa6ce0 ; child index: 0 
 GoUp
-Current state: parent: 0x5575e9df84a0 ; child index: 0 
+Current state: parent: 0x555d0efb21c0 ; child index: 0 
 GoUp
-Current state: parent: 0x5575e9df7f80 ; child index: 3 
+Current state: parent: 0x555d0efa7260 ; child index: 3 
 GoUp
-Current state: parent: 0x5575e9dec500 ; child index: 1 
+Current state: parent: 0x555d0efa6500 ; child index: 1 
 >>> Interpreter: Assignment no subscript
 >>> Interpreter: PrintStmt
 >>> Interpreter: IdentExpr
->>> Interpreter: IdentExpr
 0
 GoUp
-Current state: parent: 0x5575e9deb8d0 ; child index: 1 
+Current state: parent: 0x555d0efa58d0 ; child index: 1 

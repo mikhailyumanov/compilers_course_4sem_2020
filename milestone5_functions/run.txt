@@ -193,7 +193,10 @@ result: 0
 START TEST test9_functions_long.in
 ./test/test9_functions_long.in
 42
+1
 79
+2
 42
+79
 result: 0
 

@@ -5,13 +5,11 @@ Program
 		VarDecl type: int, is_array: false dog_index
 		NEW FUNCTION SCOPE
 		MethodDecl Return type: void; Args: idx(type: int, is_array: false),  SetIndex
-			NEW SCOPE
 			AssignmentStmt
 				Lvalue dog_index
 				IdentExpr idx
 		NEW FUNCTION SCOPE
 		MethodDecl Return type: void; Args:  Bark
-			NEW SCOPE
 			PrintStmt
 				IdentExpr dog_index
 	NEW SCOPE
@@ -20,23 +18,27 @@ Program
 		VarDecl type: int, is_array: false num_dogs
 		NEW FUNCTION SCOPE
 		MethodDecl Return type: void; Args: new_num(type: int, is_array: false),  SetNumDogs
-			NEW SCOPE
 			AssignmentStmt
 				Lvalue num_dogs
 				IdentExpr new_num
 		NEW FUNCTION SCOPE
+		MethodDecl Return type: int; Args:  GetNumDogs
+			ReturnStmt
+				IdentExpr num_dogs
+		NEW FUNCTION SCOPE
 		MethodDecl Return type: void; Args: new_dogs(type: Dog, is_array: true),  SetDogs
-			NEW SCOPE
 			AssignmentStmt
 				Lvalue dogs
 				IdentExpr new_dogs
 		NEW FUNCTION SCOPE
-		MethodDecl Return type: void; Args: new_dog(type: Dog, is_array: false),  AddDog
-			NEW SCOPE
+		MethodDecl Return type: void; Args: dog_index(type: int, is_array: false),  AddDog
 			NEW SCOPE
 			IfStmt
 				BinOpExpr
-					IdentExpr num_dogs
+					MethodExpr
+						MethodInvocation
+							ThisExpr
+							NEW SCOPE
 4
 					LengthExpr
 						IdentExpr dogs
@@ -79,6 +81,20 @@ Program
 					AssignmentStmt
 						Lvalue dogs
 						IdentExpr new_dogs
+			LocalVarDeclStmt
+				VarDecl type: Dog, is_array: false new_dog
+			AssignmentStmt
+				Lvalue new_dog
+				NewExpr type = Dog
+			MethodStmt
+				MethodInvocation
+					IdentExpr new_dog
+					IdentExpr dog_index
+					NEW SCOPE
+			MethodStmt
+				MethodInvocation
+					IdentExpr new_dog
+					NEW SCOPE
 			AssignmentStmt
 				Lvalue dogs
 					IdentExpr num_dogs
@@ -91,7 +107,6 @@ Program
 					IntExpr 1
 		NEW FUNCTION SCOPE
 		MethodDecl Return type: Dog; Args: i(type: int, is_array: false),  GetDog
-			NEW SCOPE
 			AssertStmt
 				BinOpExpr
 					IdentExpr i
@@ -140,47 +155,39 @@ Program
 					VarDecl type: House, is_array: false h
 				LocalVarDeclStmt
 					VarDecl type: House, is_array: true g
-		LocalVarDeclStmt
-			VarDecl type: Dog, is_array: false dog
-		AssignmentStmt
-			Lvalue dog
-			NewExpr type = Dog
 		MethodStmt
 			MethodInvocation
-				IdentExpr dog
+				IdentExpr house
 				IntExpr 42
 				NEW SCOPE
-		MethodStmt
-			MethodInvocation
-				IdentExpr dog
-				NEW SCOPE
+		PrintStmt
+			MethodExpr
+				MethodInvocation
+					IdentExpr house
+					NEW SCOPE
 		MethodStmt
 			MethodInvocation
 				IdentExpr house
-				IdentExpr dog
-				NEW SCOPE
-		AssignmentStmt
-			Lvalue dog
-			NewExpr type = Dog
-		MethodStmt
-			MethodInvocation
-				IdentExpr dog
 				IntExpr 79
 				NEW SCOPE
-		MethodStmt
-			MethodInvocation
-				IdentExpr dog
-				NEW SCOPE
-		MethodStmt
-			MethodInvocation
-				IdentExpr house
-				IdentExpr dog
-				NEW SCOPE
+		PrintStmt
+			MethodExpr
+				MethodInvocation
+					IdentExpr house
+					NEW SCOPE
 		MethodStmt
 			MethodInvocation
 				MethodExpr
 					MethodInvocation
 						IdentExpr house
 						IntExpr 0
+						NEW SCOPE
+				NEW SCOPE
+		MethodStmt
+			MethodInvocation
+				MethodExpr
+					MethodInvocation
+						IdentExpr house
+						IntExpr 1
 						NEW SCOPE
 				NEW SCOPE

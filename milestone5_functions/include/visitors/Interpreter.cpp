@@ -122,10 +122,12 @@ void Interpreter::Visit(std::shared_ptr<WhileStmt> element) {
 void Interpreter::Visit(std::shared_ptr<PrintStmt> element) {
   DEBUG_SINGLE(">>> Interpreter: PrintStmt")
 
-  Accept(element->expr)->Print(std::cout);
+  auto value = Accept(element->expr);
+  
+  value->Print(std::cout);
   std::cout << std::endl;
 
-  DEBUG_SINGLE((Accept(element->expr)->Print(debug_output()), ""))
+  DEBUG_SINGLE((value->Print(debug_output()), ""))
 
   UnsetTosValue();
 }
@@ -429,9 +431,11 @@ void Interpreter::Visit(std::shared_ptr<MethodInvocation> element) {
   old_current_scope.GoUp();
 
   ScopeDown();
+  DEBUG_SINGLE("Method invocation: link function")
   current_scope_->AddChild(
       symbol_tree_visitor_->GetTree()->GetFunctionScope(
         new_frame->GetValue(-1)->GetType().type, element->func_name));
+  DEBUG_SINGLE("Method invocation: link function (end)")
   ScopeDown();
   current_scope_->UnsetMain();
 

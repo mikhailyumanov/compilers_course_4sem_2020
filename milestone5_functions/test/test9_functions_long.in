@@ -12,18 +12,14 @@ class Main {
       House[] g;
     }
 
-    Dog dog;
-    dog = new Dog();
-    dog.SetIndex(42);
-    dog.Bark();
-    house.AddDog(dog);
+    house.AddDog(42);
+    System.out.println(house.GetNumDogs());
 
-    dog = new Dog();
-    dog.SetIndex(79);
-    dog.Bark();
-    house.AddDog(dog);
+    house.AddDog(79);
+    System.out.println(house.GetNumDogs());
 
     (house.GetDog(0)).Bark();
+    (house.GetDog(1)).Bark();
   }
 }
 
@@ -47,12 +43,16 @@ class House {
     num_dogs = new_num;
   }
 
+  public int GetNumDogs() {
+    return num_dogs;
+  }
+
   public void SetDogs(Dog[] new_dogs) {
     dogs = new_dogs;
   }
 
-  public void AddDog(Dog new_dog) {
-    if (num_dogs == dogs.length) {
+  public void AddDog(int dog_index) {
+    if (this.GetNumDogs() == dogs.length) {
       Dog[] new_dogs;
       new_dogs = new Dog[num_dogs * 2];
   
@@ -64,6 +64,11 @@ class House {
       }
       dogs = new_dogs;
     }
+
+    Dog new_dog;
+    new_dog = new Dog();
+    new_dog.SetIndex(dog_index);
+    new_dog.Bark();
 
     dogs[num_dogs] = new_dog;
     num_dogs = num_dogs + 1;

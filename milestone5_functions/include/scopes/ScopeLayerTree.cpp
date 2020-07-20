@@ -106,6 +106,14 @@ ScopeLayerTree::Iterator::reference
 
 std::shared_ptr<ScopeLayer> 
     ScopeLayerTree::Iterator::operator->() const {
+  DEBUG_START
+    DEBUG("operator->; current_parent:")
+    DEBUG(current_parent_)
+    DEBUG("child_index:")
+    DEBUG(current_child_index_)
+    DEBUG("num_children:")
+    DEBUG(current_parent_->GetNumChildren())
+  DEBUG_FINISH
   return **this;
 }
 

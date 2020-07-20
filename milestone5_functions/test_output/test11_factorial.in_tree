@@ -4,7 +4,6 @@ Program
 	ClassDecl Fac
 		NEW FUNCTION SCOPE
 		MethodDecl Return type: int; Args: num(type: int, is_array: false),  ComputeFac
-			NEW SCOPE
 			AssertStmt
 				BinOpExpr
 					IdentExpr num
