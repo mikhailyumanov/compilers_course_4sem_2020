@@ -69,4 +69,6 @@ class Interpreter: public TemplateVisitor<std::shared_ptr<Object>>,
   ScopeLayerTree::Iterator current_scope_;
   std::shared_ptr<Frame> current_frame_;
   std::shared_ptr<FunctionTable> function_table_;
+
+  std::stack<ScopeLayerTree::Iterator> scope_stack_;
 };

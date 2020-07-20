@@ -1,24 +1,24 @@
 >>> Interpreter: Program
 >>> PrintVisitor: Program
 GoDown
-Current state: parent: 0x562d07aac880 ; child index: 1 
-operator->; current_parent: 0x562d07aac880 child_index: 1 num_children: 2 
+Current state: parent: 0x55e1596438d0 ; child index: 1 num_children: 2 
+operator->; current_parent: 0x55e1596438d0 child_index: 1 num_children: 2 
 GoDown
-Current state: parent: 0x562d07aad4b0 ; child index: 0 
-operator->; current_parent: 0x562d07aad4b0 child_index: 0 num_children: 1 
+Current state: parent: 0x55e159644740 ; child index: 0 num_children: 1 
+operator->; current_parent: 0x55e159644740 child_index: 0 num_children: 1 
 >>> PrintVisitor: MainClass
-operator->; current_parent: 0x562d07aad4b0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55e159644740 child_index: 0 num_children: 1 
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false x 
 x type: int, is_array: false 
-operator->; current_parent: 0x562d07aad4b0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55e159644740 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x562d07aad4b0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55e159644740 child_index: 0 num_children: 1 
 >>> PrintVisitor: AssignmentStmt
-operator->; current_parent: 0x562d07aad4b0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55e159644740 child_index: 0 num_children: 1 
 >>> PrintVisitor: IntExpr 5 
-operator->; current_parent: 0x562d07aad4b0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55e159644740 child_index: 0 num_children: 1 
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false x 
 x type: int, is_array: false 
-operator->; current_parent: 0x562d07aad4b0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55e159644740 child_index: 0 num_children: 1 
