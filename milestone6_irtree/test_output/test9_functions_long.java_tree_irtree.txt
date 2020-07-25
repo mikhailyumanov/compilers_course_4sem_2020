@@ -111,45 +111,6 @@ SeqStatement:
 																ConstExpression 0
 														ConstExpression 1
 SeqStatement:
-	LabelStatement: Person::SetDogs
-	MoveStatement:
-		MemExpression: 
-			BinopExpression: PLUS
-				MemExpression: 
-					BinopExpression: PLUS
-						TempExpression: ::fp
-						ConstExpression 0
-				BinopExpression: MUL
-					ConstExpression 0
-					ConstExpression 4
-		MemExpression: 
-			BinopExpression: PLUS
-				TempExpression: ::fp
-				ConstExpression 4
-SeqStatement:
-	LabelStatement: House::GetDog
-	MoveStatement:
-		TempExpression: ::return_value
-		MemExpression: 
-			BinopExpression: PLUS
-				MemExpression: 
-					BinopExpression: PLUS
-						MemExpression: 
-							BinopExpression: PLUS
-								TempExpression: ::fp
-								ConstExpression 0
-						BinopExpression: MUL
-							ConstExpression 0
-							ConstExpression 4
-				BinopExpression: MUL
-					BinopExpression: PLUS
-						MemExpression: 
-							BinopExpression: PLUS
-								TempExpression: ::fp
-								ConstExpression 4
-						ConstExpression 1
-					ConstExpression 4
-SeqStatement:
 	LabelStatement: Dog::Bark
 	ExpStatement:
 		CallExpression: 
@@ -165,38 +126,6 @@ SeqStatement:
 							ConstExpression 0
 							ConstExpression 4
 SeqStatement:
-	LabelStatement: Dog::SetIndex
-	MoveStatement:
-		MemExpression: 
-			BinopExpression: PLUS
-				MemExpression: 
-					BinopExpression: PLUS
-						TempExpression: ::fp
-						ConstExpression 0
-				BinopExpression: MUL
-					ConstExpression 0
-					ConstExpression 4
-		MemExpression: 
-			BinopExpression: PLUS
-				TempExpression: ::fp
-				ConstExpression 4
-SeqStatement:
-	LabelStatement: House::SetNumDogs
-	MoveStatement:
-		MemExpression: 
-			BinopExpression: PLUS
-				MemExpression: 
-					BinopExpression: PLUS
-						TempExpression: ::fp
-						ConstExpression 0
-				BinopExpression: MUL
-					ConstExpression 1
-					ConstExpression 4
-		MemExpression: 
-			BinopExpression: PLUS
-				TempExpression: ::fp
-				ConstExpression 4
-SeqStatement:
 	LabelStatement: House::GetNumDogs
 	MoveStatement:
 		TempExpression: ::return_value
@@ -209,22 +138,6 @@ SeqStatement:
 				BinopExpression: MUL
 					ConstExpression 1
 					ConstExpression 4
-SeqStatement:
-	LabelStatement: House::SetDogs
-	MoveStatement:
-		MemExpression: 
-			BinopExpression: PLUS
-				MemExpression: 
-					BinopExpression: PLUS
-						TempExpression: ::fp
-						ConstExpression 0
-				BinopExpression: MUL
-					ConstExpression 0
-					ConstExpression 4
-		MemExpression: 
-			BinopExpression: PLUS
-				TempExpression: ::fp
-				ConstExpression 4
 SeqStatement:
 	LabelStatement: House::AddDog
 	SeqStatement:
@@ -451,3 +364,74 @@ SeqStatement:
 											ConstExpression 1
 											ConstExpression 4
 								ConstExpression 1
+SeqStatement:
+	LabelStatement: House::SetNumDogs
+	MoveStatement:
+		MemExpression: 
+			BinopExpression: PLUS
+				MemExpression: 
+					BinopExpression: PLUS
+						TempExpression: ::fp
+						ConstExpression 0
+				BinopExpression: MUL
+					ConstExpression 1
+					ConstExpression 4
+		MemExpression: 
+			BinopExpression: PLUS
+				TempExpression: ::fp
+				ConstExpression 4
+SeqStatement:
+	LabelStatement: House::GetDog
+	MoveStatement:
+		TempExpression: ::return_value
+		MemExpression: 
+			BinopExpression: PLUS
+				MemExpression: 
+					BinopExpression: PLUS
+						MemExpression: 
+							BinopExpression: PLUS
+								TempExpression: ::fp
+								ConstExpression 0
+						BinopExpression: MUL
+							ConstExpression 0
+							ConstExpression 4
+				BinopExpression: MUL
+					BinopExpression: PLUS
+						MemExpression: 
+							BinopExpression: PLUS
+								TempExpression: ::fp
+								ConstExpression 4
+						ConstExpression 1
+					ConstExpression 4
+SeqStatement:
+	LabelStatement: Dog::SetIndex
+	MoveStatement:
+		MemExpression: 
+			BinopExpression: PLUS
+				MemExpression: 
+					BinopExpression: PLUS
+						TempExpression: ::fp
+						ConstExpression 0
+				BinopExpression: MUL
+					ConstExpression 0
+					ConstExpression 4
+		MemExpression: 
+			BinopExpression: PLUS
+				TempExpression: ::fp
+				ConstExpression 4
+SeqStatement:
+	LabelStatement: Person::SetDogs
+	MoveStatement:
+		MemExpression: 
+			BinopExpression: PLUS
+				MemExpression: 
+					BinopExpression: PLUS
+						TempExpression: ::fp
+						ConstExpression 0
+				BinopExpression: MUL
+					ConstExpression 0
+					ConstExpression 4
+		MemExpression: 
+			BinopExpression: PLUS
+				TempExpression: ::fp
+				ConstExpression 4
