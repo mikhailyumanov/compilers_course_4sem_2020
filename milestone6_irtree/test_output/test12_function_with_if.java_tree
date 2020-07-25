@@ -1,0 +1,55 @@
+Program
+	NEW SCOPE
+	NEW SCOPE
+	ClassDecl Dummy
+		NEW FUNCTION SCOPE
+		MethodDecl Return type: boolean; Args:  AlwaysTrue
+			ReturnStmt
+				IntExpr 1
+		NEW FUNCTION SCOPE
+		MethodDecl Return type: boolean; Args:  AlwaysFalse
+			NEW SCOPE
+			IfStmt
+				TrueExpr
+				NEW SCOPE
+				StmtListStmt
+					ReturnStmt
+						IntExpr 0
+			ReturnStmt
+				IntExpr 1
+	NEW SCOPE
+	MainClass
+		LocalVarDeclStmt
+			VarDecl type: boolean, is_array: false res
+		AssignmentStmt
+			Lvalue res
+			MethodExpr
+				MethodInvocation
+					NewExpr type = Dummy
+					NEW SCOPE
+		PrintStmt
+			IdentExpr res
+		AssignmentStmt
+			Lvalue res
+			MethodExpr
+				MethodInvocation
+					NewExpr type = Dummy
+					NEW SCOPE
+		PrintStmt
+			IdentExpr res
+		AssignmentStmt
+			Lvalue res
+			MethodExpr
+				MethodInvocation
+					NewExpr type = Dummy
+					NEW SCOPE
+		PrintStmt
+			IdentExpr res
+		AssignmentStmt
+			Lvalue res
+			MethodExpr
+				MethodInvocation
+					NewExpr type = Dummy
+					NEW SCOPE
+		PrintStmt
+			IdentExpr res

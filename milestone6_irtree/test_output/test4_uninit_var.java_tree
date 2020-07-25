@@ -1,0 +1,11 @@
+Program
+	NEW SCOPE
+	NEW SCOPE
+	MainClass
+		LocalVarDeclStmt
+			VarDecl type: int, is_array: false x
+		LocalVarDeclStmt
+			VarDecl type: int, is_array: false y
+		AssignmentStmt
+			Lvalue y
+			IdentExpr x

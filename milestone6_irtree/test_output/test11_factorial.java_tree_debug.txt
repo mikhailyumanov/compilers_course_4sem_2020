@@ -1,0 +1,275 @@
+>>> IrtreeBuildVisitor: Program
+>>> PrintVisitor: Program
+GoDown
+Current state: parent: 0x55a997ee3760 ; child index: 1 num_children: 2 
+operator->; current_parent: 0x55a997ee3760 child_index: 1 num_children: 2 
+GoDown
+Current state: parent: 0x55a997ee3d10 ; child index: 0 num_children: 1 
+>>> PrintVisitor: ClassDecl Fac 
+SymbolTreeVisitor::FunctionScopeDown
+Return type: int; Args: num(type: int, is_array: false), 
+GoDown
+Current state: parent: 0x55a997ee3e30 ; child index: 0 num_children: 1 
+Return type: int; Args: num(type: int, is_array: false), 
+>>> PrintVisitor: MethodDecl Return type: int; Args: num(type: int, is_array: false),  ComputeFac 
+ComputeFac Return type: int; Args: num(type: int, is_array: false),  operator->; current_parent: 0x55a997ee3e30 child_index: 0 num_children: 1 
+Return type: int; Args: num(type: int, is_array: false),  
+>>> PrintVisitor: AssertStmt
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: IdentExpr num 
+operator->; current_parent: 0x55a997ee3e30 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
+ScopeLayer::IsArgument: num num
+operator->; current_parent: 0x55a997ee3e30 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
+ScopeLayer::IsArgument: num num
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
+ScopeLayer::IsArgument: num num
+>>> PrintVisitor: IntExpr -1 
+>>> PrintVisitor: LocalVarDeclStmt
+>>> PrintVisitor: VarDecl type: int, is_array: false num_aux 
+num_aux type: int, is_array: false 
+operator->; current_parent: 0x55a997ee3e30 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
+ScopeLayer::IsArgument: num num_aux
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+operator->; current_parent: 0x55a997ee3e30 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
+ScopeLayer::IsArgument: num num_aux
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+operator->; current_parent: 0x55a997ee3e30 child_index: 0 num_children: 1 
+>>> PrintVisitor: IfElseStmt
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: IdentExpr num 
+operator->; current_parent: 0x55a997ee3e30 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
+ScopeLayer::IsArgument: num num
+operator->; current_parent: 0x55a997ee3e30 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
+ScopeLayer::IsArgument: num num
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
+ScopeLayer::IsArgument: num num
+>>> PrintVisitor: IntExpr 0 
+GoDown
+Current state: parent: 0x55a997ee4090 ; child index: 0 num_children: 1 
+GoDown
+Current state: parent: 0x55a997ee4510 ; child index: 0 num_children: 1 
+>>> PrintVisitor: StmtListStmt
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: IntExpr 0 
+>>> PrintVisitor: AssignmentStmt
+operator->; current_parent: 0x55a997ee4510 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
+ScopeLayer::IsArgument: num num_aux
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
+ScopeLayer::IsArgument: num num_aux
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+>>> PrintVisitor: IntExpr 1 
+operator->; current_parent: 0x55a997ee4510 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
+ScopeLayer::IsArgument: num num_aux
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
+ScopeLayer::IsArgument: num num_aux
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+GoUp
+Current state: parent: 0x55a997ee4090 ; child index: 0 num_children: 1 
+GoUp
+Current state: parent: 0x55a997ee3e30 ; child index: 0 num_children: 1 
+GoDown
+Current state: parent: 0x55a997ee4090 ; child index: 1 num_children: 2 
+GoDown
+Current state: parent: 0x55a997ee4820 ; child index: 0 num_children: 1 
+>>> PrintVisitor: StmtListStmt
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: IdentExpr num 
+operator->; current_parent: 0x55a997ee4820 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
+ScopeLayer::IsArgument: num num
+operator->; current_parent: 0x55a997ee4820 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
+ScopeLayer::IsArgument: num num
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
+ScopeLayer::IsArgument: num num
+>>> PrintVisitor: IntExpr 1 
+>>> PrintVisitor: AssignmentStmt
+operator->; current_parent: 0x55a997ee4820 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
+ScopeLayer::IsArgument: num num_aux
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
+ScopeLayer::IsArgument: num num_aux
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: IdentExpr num 
+operator->; current_parent: 0x55a997ee4820 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
+ScopeLayer::IsArgument: num num
+operator->; current_parent: 0x55a997ee4820 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
+ScopeLayer::IsArgument: num num
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
+ScopeLayer::IsArgument: num num
+>>> PrintVisitor: MethodExpr
+>>> PrintVisitor: MethodInvocation
+>>> PrintVisitor: ThisExpr
+operator->; current_parent: 0x55a997ee4820 child_index: 0 num_children: 1 
+ComputeFac
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: IdentExpr num 
+operator->; current_parent: 0x55a997ee4820 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
+ScopeLayer::IsArgument: num num
+operator->; current_parent: 0x55a997ee4820 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
+ScopeLayer::IsArgument: num num
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
+ScopeLayer::IsArgument: num num
+>>> PrintVisitor: IntExpr 1 
+GoDown
+Current state: parent: 0x55a997eef870 ; child index: 0 num_children: 1 
+GoUp
+Current state: parent: 0x55a997ee4820 ; child index: 0 num_children: 1 
+operator->; current_parent: 0x55a997ee4820 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
+ScopeLayer::IsArgument: num num_aux
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: int; Args: num(type: int, is_array: false),  
+ScopeLayer::IsArgument: num num_aux
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+GoUp
+Current state: parent: 0x55a997ee4090 ; child index: 1 num_children: 2 
+GoUp
+Current state: parent: 0x55a997ee3e30 ; child index: 0 num_children: 1 
+>>> PrintVisitor: ReturnStmt
+>>> PrintVisitor: IdentExpr num_aux 
+operator->; current_parent: 0x55a997ee3e30 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55a997ee3e30 child_index: 0 num_children: 1 
+MethodDecl:  Return type: int; Args: num(type: int, is_array: false),  operator->; current_parent: 0x55a997ee3e30 child_index: 0 num_children: 1 
+Return type: int; Args: num(type: int, is_array: false),  
+operator->; current_parent: 0x55a997ee3e30 child_index: 0 num_children: 1 
+Return type: int; Args: num(type: int, is_array: false), 
+ScopeLayerTree::SetFunctionScope Return type: int; Args: num(type: int, is_array: false),  Return type: int; Args: num(type: int, is_array: false),  
+GoUp
+Current state: parent: 0x55a997ee3d10 ; child index: 0 num_children: 1 
+GoUp
+Current state: parent: 0x55a997ee3760 ; child index: 1 num_children: 2 
+GoDown
+Current state: parent: 0x55a997ee3d10 ; child index: 1 num_children: 2 
+operator->; current_parent: 0x55a997ee3d10 child_index: 1 num_children: 2 
+>>> PrintVisitor: MainClass
+operator->; current_parent: 0x55a997ee3d10 child_index: 1 num_children: 2 
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: MethodExpr
+>>> PrintVisitor: MethodInvocation
+>>> PrintVisitor: NewExpr type =  Fac 
+ComputeFac
+>>> PrintVisitor: IntExpr 10 
+GoDown
+Current state: parent: 0x55a997eefe60 ; child index: 0 num_children: 1 
+GoUp
+Current state: parent: 0x55a997ee3d10 ; child index: 1 num_children: 2 
+GoUp
+Current state: parent: 0x55a997ee3760 ; child index: 1 num_children: 2 
+>>> IrtreeBuildVisitor: ClassDecl
+>>> IrtreeBuildVisitor: MethodDecl
+>>> IrtreeBuildVisitor: AssertStmt
+>>> IrtreeBuildVisitor: LocalVarDeclStmt
+>>> IrtreeBuildVisitor: VarDecl
+>>> IrtreeBuildVisitor: IfElseStmt
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: StmtListStmt
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: AssignmentStmt
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: StmtListStmt
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: AssignmentStmt
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: MethodExpr
+>>> IrtreeBuildVisitor: MethodInvocation
+>>> IrtreeBuildVisitor: ThisExpr
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: ReturnStmt
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: MainClass
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: MethodExpr
+>>> IrtreeBuildVisitor: MethodInvocation
+>>> IrtreeBuildVisitor: NewExpr
+>>> IrtreeBuildVisitor: IntExpr
+main
+Fac::ComputeFac

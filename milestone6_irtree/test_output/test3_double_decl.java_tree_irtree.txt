@@ -1,0 +1,6 @@
+MoveStatement:
+	MemExpression: 
+		BinopExpression: PLUS
+			TempExpression: ::fp
+			ConstExpression 0
+	ConstExpression 5
