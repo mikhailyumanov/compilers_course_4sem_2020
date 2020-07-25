@@ -1,0 +1,641 @@
+>>> IrtreeBuildVisitor: Program
+>>> PrintVisitor: Program
+GoDown
+Current state: parent: 0x5601a220f6b0 ; child index: 1 num_children: 2 
+operator->; current_parent: 0x5601a220f6b0 child_index: 1 num_children: 2 
+GoDown
+Current state: parent: 0x5601a220fc60 ; child index: 0 num_children: 1 
+operator->; current_parent: 0x5601a220fc60 child_index: 0 num_children: 1 
+>>> PrintVisitor: MainClass
+operator->; current_parent: 0x5601a220fc60 child_index: 0 num_children: 1 
+>>> PrintVisitor: LocalVarDeclStmt
+>>> PrintVisitor: VarDecl type: int, is_array: false i 
+i type: int, is_array: false 
+operator->; current_parent: 0x5601a220fc60 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a220fc60 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a220fc60 child_index: 0 num_children: 1 
+>>> PrintVisitor: AssignmentStmt
+operator->; current_parent: 0x5601a220fc60 child_index: 0 num_children: 1 
+>>> PrintVisitor: IntExpr 5 
+operator->; current_parent: 0x5601a220fc60 child_index: 0 num_children: 1 
+>>> PrintVisitor: LocalVarDeclStmt
+>>> PrintVisitor: VarDecl type: int, is_array: false x 
+x type: int, is_array: false 
+operator->; current_parent: 0x5601a220fc60 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a220fc60 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a220fc60 child_index: 0 num_children: 1 
+>>> PrintVisitor: AssignmentStmt
+operator->; current_parent: 0x5601a220fc60 child_index: 0 num_children: 1 
+>>> PrintVisitor: IntExpr 0 
+operator->; current_parent: 0x5601a220fc60 child_index: 0 num_children: 1 
+>>> PrintVisitor: LocalVarDeclStmt
+>>> PrintVisitor: VarDecl type: int, is_array: false n 
+n type: int, is_array: false 
+operator->; current_parent: 0x5601a220fc60 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a220fc60 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a220fc60 child_index: 0 num_children: 1 
+>>> PrintVisitor: AssignmentStmt
+operator->; current_parent: 0x5601a220fc60 child_index: 0 num_children: 1 
+>>> PrintVisitor: IntExpr 6 
+operator->; current_parent: 0x5601a220fc60 child_index: 0 num_children: 1 
+GoDown
+Current state: parent: 0x5601a220fde0 ; child index: 0 num_children: 1 
+>>> PrintVisitor: WhileStmt
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: IdentExpr x 
+operator->; current_parent: 0x5601a220fde0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a220fde0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+>>> PrintVisitor: IdentExpr n 
+operator->; current_parent: 0x5601a220fde0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a220fde0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+GoDown
+Current state: parent: 0x5601a22101e0 ; child index: 0 num_children: 1 
+>>> PrintVisitor: StmtListStmt
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: IntExpr 111111111 
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: IdentExpr x 
+operator->; current_parent: 0x5601a22101e0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a22101e0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: IdentExpr n 
+operator->; current_parent: 0x5601a22101e0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a22101e0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+>>> PrintVisitor: LocalVarDeclStmt
+>>> PrintVisitor: VarDecl type: int, is_array: false y 
+y type: int, is_array: false 
+operator->; current_parent: 0x5601a22101e0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a22101e0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a22101e0 child_index: 0 num_children: 1 
+>>> PrintVisitor: AssignmentStmt
+operator->; current_parent: 0x5601a22101e0 child_index: 0 num_children: 1 
+>>> PrintVisitor: IntExpr 11 
+operator->; current_parent: 0x5601a22101e0 child_index: 0 num_children: 1 
+GoDown
+Current state: parent: 0x5601a2210340 ; child index: 0 num_children: 1 
+>>> PrintVisitor: WhileStmt
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: IdentExpr y 
+operator->; current_parent: 0x5601a2210340 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a2210340 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: IdentExpr n 
+operator->; current_parent: 0x5601a2210340 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a2210340 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+>>> PrintVisitor: IntExpr 2 
+GoDown
+Current state: parent: 0x5601a22105a0 ; child index: 0 num_children: 1 
+>>> PrintVisitor: StmtListStmt
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: IntExpr 222222222 
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: IdentExpr x 
+operator->; current_parent: 0x5601a22105a0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a22105a0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: IdentExpr n 
+operator->; current_parent: 0x5601a22105a0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a22105a0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: IdentExpr y 
+operator->; current_parent: 0x5601a22105a0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a22105a0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+>>> PrintVisitor: LocalVarDeclStmt
+>>> PrintVisitor: VarDecl type: int, is_array: false d 
+d type: int, is_array: false 
+operator->; current_parent: 0x5601a22105a0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a22105a0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a22105a0 child_index: 0 num_children: 1 
+>>> PrintVisitor: AssignmentStmt
+operator->; current_parent: 0x5601a22105a0 child_index: 0 num_children: 1 
+>>> PrintVisitor: IntExpr 0 
+operator->; current_parent: 0x5601a22105a0 child_index: 0 num_children: 1 
+GoDown
+Current state: parent: 0x5601a22106e0 ; child index: 0 num_children: 1 
+>>> PrintVisitor: IfStmt
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: IdentExpr x 
+operator->; current_parent: 0x5601a22106e0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a22106e0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: IdentExpr n 
+operator->; current_parent: 0x5601a22106e0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a22106e0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+>>> PrintVisitor: IntExpr 2 
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: IdentExpr x 
+operator->; current_parent: 0x5601a22106e0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a22106e0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: IdentExpr n 
+operator->; current_parent: 0x5601a22106e0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a22106e0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+>>> PrintVisitor: IntExpr 2 
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: IdentExpr y 
+operator->; current_parent: 0x5601a22106e0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a22106e0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+>>> PrintVisitor: IdentExpr n 
+operator->; current_parent: 0x5601a22106e0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a22106e0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: IdentExpr y 
+operator->; current_parent: 0x5601a22106e0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a22106e0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+>>> PrintVisitor: IdentExpr n 
+operator->; current_parent: 0x5601a22106e0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a22106e0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+>>> PrintVisitor: IntExpr 4 
+>>> PrintVisitor: IntExpr 25 
+GoDown
+Current state: parent: 0x5601a221f200 ; child index: 0 num_children: 1 
+>>> PrintVisitor: StmtListStmt
+>>> PrintVisitor: AssignmentStmt
+operator->; current_parent: 0x5601a221f200 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+>>> PrintVisitor: IntExpr 7 
+operator->; current_parent: 0x5601a221f200 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+GoUp
+Current state: parent: 0x5601a22106e0 ; child index: 0 num_children: 1 
+GoUp
+Current state: parent: 0x5601a22105a0 ; child index: 0 num_children: 1 
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: IntExpr 123 
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: IdentExpr d 
+operator->; current_parent: 0x5601a22105a0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5601a22105a0 child_index: 0 num_children: 1 
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: IntExpr 456 
+>>> PrintVisitor: IfElseStmt
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: IdentExpr y 
+operator->; current_parent: 0x5601a22105a0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a22105a0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: IdentExpr n 
+operator->; current_parent: 0x5601a22105a0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a22105a0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+>>> PrintVisitor: IntExpr 2 
+>>> PrintVisitor: IntExpr 1 
+GoDown
+Current state: parent: 0x5601a22106e0 ; child index: 1 num_children: 2 
+GoDown
+Current state: parent: 0x5601a221f470 ; child index: 0 num_children: 1 
+>>> PrintVisitor: StmtListStmt
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: IntExpr 789 
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: IdentExpr d 
+operator->; current_parent: 0x5601a221f470 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a221f470 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: IntExpr 987 
+GoUp
+Current state: parent: 0x5601a22106e0 ; child index: 1 num_children: 2 
+GoUp
+Current state: parent: 0x5601a22105a0 ; child index: 0 num_children: 1 
+GoDown
+Current state: parent: 0x5601a22106e0 ; child index: 2 num_children: 3 
+GoDown
+Current state: parent: 0x5601a221f710 ; child index: 0 num_children: 1 
+>>> PrintVisitor: StmtListStmt
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: IdentExpr d 
+operator->; current_parent: 0x5601a221f710 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a221f710 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+GoUp
+Current state: parent: 0x5601a22106e0 ; child index: 2 num_children: 3 
+GoUp
+Current state: parent: 0x5601a22105a0 ; child index: 0 num_children: 1 
+>>> PrintVisitor: AssignmentStmt
+operator->; current_parent: 0x5601a22105a0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: IdentExpr y 
+operator->; current_parent: 0x5601a22105a0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a22105a0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+>>> PrintVisitor: IntExpr 1 
+operator->; current_parent: 0x5601a22105a0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+GoUp
+Current state: parent: 0x5601a2210340 ; child index: 0 num_children: 1 
+GoUp
+Current state: parent: 0x5601a22101e0 ; child index: 0 num_children: 1 
+>>> PrintVisitor: AssignmentStmt
+operator->; current_parent: 0x5601a22101e0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: IdentExpr x 
+operator->; current_parent: 0x5601a22101e0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a22101e0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+>>> PrintVisitor: IntExpr 1 
+operator->; current_parent: 0x5601a22101e0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+GoUp
+Current state: parent: 0x5601a220fde0 ; child index: 0 num_children: 1 
+GoUp
+Current state: parent: 0x5601a220fc60 ; child index: 0 num_children: 1 
+GoDown
+Current state: parent: 0x5601a220fde0 ; child index: 1 num_children: 2 
+>>> PrintVisitor: WhileStmt
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: IdentExpr i 
+operator->; current_parent: 0x5601a220fde0 child_index: 1 num_children: 2 
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a220fde0 child_index: 1 num_children: 2 
+ScopeLayer::IsArgument
+>>> PrintVisitor: IntExpr 5 
+GoDown
+Current state: parent: 0x5601a221f9c0 ; child index: 0 num_children: 1 
+>>> PrintVisitor: StmtListStmt
+>>> PrintVisitor: IfElseStmt
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: IdentExpr i 
+operator->; current_parent: 0x5601a221f9c0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a221f9c0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+>>> PrintVisitor: IntExpr 2 
+>>> PrintVisitor: IntExpr 0 
+GoDown
+Current state: parent: 0x5601a221fb10 ; child index: 0 num_children: 1 
+GoDown
+Current state: parent: 0x5601a221fc60 ; child index: 0 num_children: 1 
+>>> PrintVisitor: StmtListStmt
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: IntExpr 1337 
+GoUp
+Current state: parent: 0x5601a221fb10 ; child index: 0 num_children: 1 
+GoUp
+Current state: parent: 0x5601a221f9c0 ; child index: 0 num_children: 1 
+GoDown
+Current state: parent: 0x5601a221fb10 ; child index: 1 num_children: 2 
+GoDown
+Current state: parent: 0x5601a221ff40 ; child index: 0 num_children: 1 
+>>> PrintVisitor: StmtListStmt
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: IntExpr 420 
+GoUp
+Current state: parent: 0x5601a221fb10 ; child index: 1 num_children: 2 
+GoUp
+Current state: parent: 0x5601a221f9c0 ; child index: 0 num_children: 1 
+>>> PrintVisitor: AssignmentStmt
+operator->; current_parent: 0x5601a221f9c0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: IdentExpr i 
+operator->; current_parent: 0x5601a221f9c0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5601a221f9c0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+>>> PrintVisitor: IntExpr 1 
+operator->; current_parent: 0x5601a221f9c0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+GoUp
+Current state: parent: 0x5601a220fde0 ; child index: 1 num_children: 2 
+GoUp
+Current state: parent: 0x5601a220fc60 ; child index: 0 num_children: 1 
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: IdentExpr i 
+operator->; current_parent: 0x5601a220fc60 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5601a220fc60 child_index: 0 num_children: 1 
+GoUp
+Current state: parent: 0x5601a220f6b0 ; child index: 1 num_children: 2 
+>>> IrtreeBuildVisitor: MainClass
+>>> IrtreeBuildVisitor: LocalVarDeclStmt
+>>> IrtreeBuildVisitor: VarDecl
+>>> IrtreeBuildVisitor: AssignmentStmt
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: LocalVarDeclStmt
+>>> IrtreeBuildVisitor: VarDecl
+>>> IrtreeBuildVisitor: AssignmentStmt
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: LocalVarDeclStmt
+>>> IrtreeBuildVisitor: VarDecl
+>>> IrtreeBuildVisitor: AssignmentStmt
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: WhileStmt
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: StmtListStmt
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: LocalVarDeclStmt
+>>> IrtreeBuildVisitor: VarDecl
+>>> IrtreeBuildVisitor: AssignmentStmt
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: WhileStmt
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: StmtListStmt
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: LocalVarDeclStmt
+>>> IrtreeBuildVisitor: VarDecl
+>>> IrtreeBuildVisitor: AssignmentStmt
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: IfStmt
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: StmtListStmt
+>>> IrtreeBuildVisitor: AssignmentStmt
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: IfElseStmt
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: StmtListStmt
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: StmtListStmt
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: AssignmentStmt
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: AssignmentStmt
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: WhileStmt
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: StmtListStmt
+>>> IrtreeBuildVisitor: IfElseStmt
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: StmtListStmt
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: StmtListStmt
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: AssignmentStmt
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+main

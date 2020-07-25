@@ -1,0 +1,39 @@
+class Class {
+  public static void main() {
+    System.out.println(1);
+    System.out.println(2 + 3 * 5);
+    System.out.println(2 * 3 + 5 / 7);
+    System.out.println((2 * 3) + (5 / 7));
+    System.out.println(4 - 7);
+    System.out.println(!(2 > 3) == true);
+
+    System.out.println(123454321);    
+
+    int i;
+    i = 0;
+    
+    if (i) {
+      System.out.println(59); // never prints
+    }
+
+    while (i < 10) {
+      if (i % 2) {
+        System.out.println(i);
+      }
+
+      if (i == 5) {
+        System.out.println(42);
+      } else {
+        System.out.println(99);
+      }
+
+      i = i + 1;
+    }
+  }
+}
+
+class MyClass {
+  int x;
+  int y;
+  int z;
+}
