@@ -47,8 +47,8 @@ START TEST test6_correct_scope.java
 result: 0
 
 ================================================================================
-START TEST test7_bad_scopes.java
-./test/test7_bad_scopes.java
+START TEST test7_big_scopes.java
+./test/test7_big_scopes.java
 result: 0
 
 ================================================================================
