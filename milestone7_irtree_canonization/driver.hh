@@ -7,10 +7,16 @@
 #include "scanner.h"
 #include "parser.hh"
 #include "program/Program.hpp"
+
 #include "visitors/PrintVisitor.hpp"
 #include "visitors/Interpreter.hpp"
 #include "visitors/SymbolTreeVisitor.hpp"
 #include "visitors/IrtreeBuildVisitor.hpp"
+
+#include "irtree/visitors/PrintVisitor.hpp"
+#include "irtree/visitors/DoubleCallEliminationVisitor.hpp"
+#include "irtree/visitors/EseqEliminationVisitor.hpp"
+#include "irtree/visitors/LinearizeVisitor.hpp"
 
 
 class Driver {

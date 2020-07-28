@@ -31,9 +31,5 @@
 #include "irtree/nodes/expressions/EseqExpression.hpp"
 #include "irtree/nodes/ExpressionList.hpp"
 
-#include "irtree/visitors/Visitor.hpp"
-#include "irtree/visitors/PrintVisitor.hpp"
-#include "irtree/visitors/BaseElements.hpp"
-
 #include "irtree/types/LogicOperatorType.hpp"
 #include "irtree/types/BinaryOperatorType.hpp"

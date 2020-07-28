@@ -24,6 +24,11 @@ START TEST test12_function_with_if.java
 result: 0
 
 ================================================================================
+START TEST test13_double_call.java
+./test/test13_double_call.java
+result: 0
+
+================================================================================
 START TEST test2.java
 ./test/test2.java
 result: 0

@@ -1,4 +1,4 @@
-# Install script for directory: /compilers/compilers_course_4sem_2020/milestone6_irtree
+# Install script for directory: /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/compilers/compilers_course_4sem_2020/milestone6_irtree/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

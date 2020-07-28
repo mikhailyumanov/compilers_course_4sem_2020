@@ -33,6 +33,7 @@ CMakeFiles/Project.dir/driver.cpp.o: ../include/functions/address/Address.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/functions/address/AddressInFrame.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/functions/address/AddressInRegister.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/irtree/elements.hpp
+CMakeFiles/Project.dir/driver.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/irtree/generators/Label.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/irtree/generators/Temporary.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/irtree/nodes/BaseElement.hpp
@@ -63,8 +64,14 @@ CMakeFiles/Project.dir/driver.cpp.o: ../include/irtree/tree_wrappers/conditional
 CMakeFiles/Project.dir/driver.cpp.o: ../include/irtree/types/BinaryOperatorType.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/irtree/types/LogicOperatorType.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/irtree/visitors/BaseElements.hpp
+CMakeFiles/Project.dir/driver.cpp.o: ../include/irtree/visitors/DoubleCallEliminationVisitor.hpp
+CMakeFiles/Project.dir/driver.cpp.o: ../include/irtree/visitors/EseqEliminationVisitor.hpp
+CMakeFiles/Project.dir/driver.cpp.o: ../include/irtree/visitors/IdentVisitor.hpp
+CMakeFiles/Project.dir/driver.cpp.o: ../include/irtree/visitors/LinearizeVisitor.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/irtree/visitors/PrintVisitor.hpp
+CMakeFiles/Project.dir/driver.cpp.o: ../include/irtree/visitors/TemplateVisitor.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/irtree/visitors/Visitor.hpp
+CMakeFiles/Project.dir/driver.cpp.o: ../include/irtree/visitors/VisitorStruct.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/program/ClassDeclList.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/program/MainClass.hpp
 CMakeFiles/Project.dir/driver.cpp.o: ../include/program/Program.hpp
@@ -284,10 +291,12 @@ CMakeFiles/Project.dir/include/functions/FrameEmulator.cpp.o: ../include/types/U
 CMakeFiles/Project.dir/include/functions/FrameEmulator.cpp.o: ../include/utils/forward_decl.hpp
 CMakeFiles/Project.dir/include/functions/FrameEmulator.cpp.o: ../include/functions/FrameEmulator.cpp
 
+CMakeFiles/Project.dir/include/functions/FrameTranslator.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/functions/FrameTranslator.cpp.o: ../include/functions/FrameTranslator.hpp
 CMakeFiles/Project.dir/include/functions/FrameTranslator.cpp.o: ../include/functions/address/Address.hpp
 CMakeFiles/Project.dir/include/functions/FrameTranslator.cpp.o: ../include/functions/address/AddressInFrame.hpp
 CMakeFiles/Project.dir/include/functions/FrameTranslator.cpp.o: ../include/functions/address/AddressInRegister.hpp
+CMakeFiles/Project.dir/include/functions/FrameTranslator.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/functions/FrameTranslator.cpp.o: ../include/irtree/generators/Temporary.hpp
 CMakeFiles/Project.dir/include/functions/FrameTranslator.cpp.o: ../include/irtree/nodes/BaseElement.hpp
 CMakeFiles/Project.dir/include/functions/FrameTranslator.cpp.o: ../include/irtree/nodes/expressions/ConstExpression.hpp
@@ -329,8 +338,10 @@ CMakeFiles/Project.dir/include/functions/MethodInvocation.cpp.o: ../include/visi
 CMakeFiles/Project.dir/include/functions/MethodInvocation.cpp.o: ../location.hh
 CMakeFiles/Project.dir/include/functions/MethodInvocation.cpp.o: ../include/functions/MethodInvocation.cpp
 
+CMakeFiles/Project.dir/include/functions/address/AddressInFrame.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/functions/address/AddressInFrame.cpp.o: ../include/functions/address/Address.hpp
 CMakeFiles/Project.dir/include/functions/address/AddressInFrame.cpp.o: ../include/functions/address/AddressInFrame.hpp
+CMakeFiles/Project.dir/include/functions/address/AddressInFrame.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/functions/address/AddressInFrame.cpp.o: ../include/irtree/nodes/BaseElement.hpp
 CMakeFiles/Project.dir/include/functions/address/AddressInFrame.cpp.o: ../include/irtree/nodes/expressions/BinopExpression.hpp
 CMakeFiles/Project.dir/include/functions/address/AddressInFrame.cpp.o: ../include/irtree/nodes/expressions/ConstExpression.hpp
@@ -340,8 +351,10 @@ CMakeFiles/Project.dir/include/functions/address/AddressInFrame.cpp.o: ../includ
 CMakeFiles/Project.dir/include/functions/address/AddressInFrame.cpp.o: ../include/irtree/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/functions/address/AddressInFrame.cpp.o: ../include/functions/address/AddressInFrame.cpp
 
+CMakeFiles/Project.dir/include/functions/address/AddressInRegister.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/functions/address/AddressInRegister.cpp.o: ../include/functions/address/Address.hpp
 CMakeFiles/Project.dir/include/functions/address/AddressInRegister.cpp.o: ../include/functions/address/AddressInRegister.hpp
+CMakeFiles/Project.dir/include/functions/address/AddressInRegister.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/functions/address/AddressInRegister.cpp.o: ../include/irtree/generators/Temporary.hpp
 CMakeFiles/Project.dir/include/functions/address/AddressInRegister.cpp.o: ../include/irtree/nodes/BaseElement.hpp
 CMakeFiles/Project.dir/include/functions/address/AddressInRegister.cpp.o: ../include/irtree/nodes/expressions/Expression.hpp
@@ -355,11 +368,15 @@ CMakeFiles/Project.dir/include/irtree/generators/Label.cpp.o: ../include/irtree/
 CMakeFiles/Project.dir/include/irtree/generators/Temporary.cpp.o: ../include/irtree/generators/Temporary.hpp
 CMakeFiles/Project.dir/include/irtree/generators/Temporary.cpp.o: ../include/irtree/generators/Temporary.cpp
 
+CMakeFiles/Project.dir/include/irtree/nodes/ExpressionList.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/nodes/ExpressionList.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/ExpressionList.cpp.o: ../include/irtree/nodes/BaseElement.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/ExpressionList.cpp.o: ../include/irtree/nodes/ExpressionList.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/ExpressionList.cpp.o: ../include/irtree/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/ExpressionList.cpp.o: ../include/irtree/nodes/ExpressionList.cpp
 
+CMakeFiles/Project.dir/include/irtree/nodes/expressions/BinopExpression.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/nodes/expressions/BinopExpression.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/BinopExpression.cpp.o: ../include/irtree/nodes/BaseElement.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/BinopExpression.cpp.o: ../include/irtree/nodes/expressions/BinopExpression.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/BinopExpression.cpp.o: ../include/irtree/nodes/expressions/Expression.hpp
@@ -367,18 +384,24 @@ CMakeFiles/Project.dir/include/irtree/nodes/expressions/BinopExpression.cpp.o: .
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/BinopExpression.cpp.o: ../include/irtree/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/BinopExpression.cpp.o: ../include/irtree/nodes/expressions/BinopExpression.cpp
 
+CMakeFiles/Project.dir/include/irtree/nodes/expressions/CallExpression.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/nodes/expressions/CallExpression.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/CallExpression.cpp.o: ../include/irtree/nodes/BaseElement.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/CallExpression.cpp.o: ../include/irtree/nodes/expressions/CallExpression.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/CallExpression.cpp.o: ../include/irtree/nodes/expressions/Expression.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/CallExpression.cpp.o: ../include/irtree/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/CallExpression.cpp.o: ../include/irtree/nodes/expressions/CallExpression.cpp
 
+CMakeFiles/Project.dir/include/irtree/nodes/expressions/ConstExpression.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/nodes/expressions/ConstExpression.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/ConstExpression.cpp.o: ../include/irtree/nodes/BaseElement.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/ConstExpression.cpp.o: ../include/irtree/nodes/expressions/ConstExpression.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/ConstExpression.cpp.o: ../include/irtree/nodes/expressions/Expression.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/ConstExpression.cpp.o: ../include/irtree/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/ConstExpression.cpp.o: ../include/irtree/nodes/expressions/ConstExpression.cpp
 
+CMakeFiles/Project.dir/include/irtree/nodes/expressions/EseqExpression.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/nodes/expressions/EseqExpression.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/EseqExpression.cpp.o: ../include/irtree/nodes/BaseElement.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/EseqExpression.cpp.o: ../include/irtree/nodes/expressions/EseqExpression.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/EseqExpression.cpp.o: ../include/irtree/nodes/expressions/Expression.hpp
@@ -386,12 +409,16 @@ CMakeFiles/Project.dir/include/irtree/nodes/expressions/EseqExpression.cpp.o: ..
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/EseqExpression.cpp.o: ../include/irtree/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/EseqExpression.cpp.o: ../include/irtree/nodes/expressions/EseqExpression.cpp
 
+CMakeFiles/Project.dir/include/irtree/nodes/expressions/MemExpression.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/nodes/expressions/MemExpression.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/MemExpression.cpp.o: ../include/irtree/nodes/BaseElement.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/MemExpression.cpp.o: ../include/irtree/nodes/expressions/Expression.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/MemExpression.cpp.o: ../include/irtree/nodes/expressions/MemExpression.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/MemExpression.cpp.o: ../include/irtree/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/MemExpression.cpp.o: ../include/irtree/nodes/expressions/MemExpression.cpp
 
+CMakeFiles/Project.dir/include/irtree/nodes/expressions/NameExpression.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/nodes/expressions/NameExpression.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/NameExpression.cpp.o: ../include/irtree/generators/Label.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/NameExpression.cpp.o: ../include/irtree/nodes/BaseElement.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/NameExpression.cpp.o: ../include/irtree/nodes/expressions/Expression.hpp
@@ -399,6 +426,8 @@ CMakeFiles/Project.dir/include/irtree/nodes/expressions/NameExpression.cpp.o: ..
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/NameExpression.cpp.o: ../include/irtree/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/NameExpression.cpp.o: ../include/irtree/nodes/expressions/NameExpression.cpp
 
+CMakeFiles/Project.dir/include/irtree/nodes/expressions/TempExpression.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/nodes/expressions/TempExpression.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/TempExpression.cpp.o: ../include/irtree/generators/Temporary.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/TempExpression.cpp.o: ../include/irtree/nodes/BaseElement.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/TempExpression.cpp.o: ../include/irtree/nodes/expressions/Expression.hpp
@@ -406,6 +435,8 @@ CMakeFiles/Project.dir/include/irtree/nodes/expressions/TempExpression.cpp.o: ..
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/TempExpression.cpp.o: ../include/irtree/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/expressions/TempExpression.cpp.o: ../include/irtree/nodes/expressions/TempExpression.cpp
 
+CMakeFiles/Project.dir/include/irtree/nodes/statements/ExpStatement.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/nodes/statements/ExpStatement.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/statements/ExpStatement.cpp.o: ../include/irtree/nodes/BaseElement.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/statements/ExpStatement.cpp.o: ../include/irtree/nodes/expressions/Expression.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/statements/ExpStatement.cpp.o: ../include/irtree/nodes/statements/ExpStatement.hpp
@@ -413,6 +444,8 @@ CMakeFiles/Project.dir/include/irtree/nodes/statements/ExpStatement.cpp.o: ../in
 CMakeFiles/Project.dir/include/irtree/nodes/statements/ExpStatement.cpp.o: ../include/irtree/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/statements/ExpStatement.cpp.o: ../include/irtree/nodes/statements/ExpStatement.cpp
 
+CMakeFiles/Project.dir/include/irtree/nodes/statements/JumpConditionalStatement.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/nodes/statements/JumpConditionalStatement.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/statements/JumpConditionalStatement.cpp.o: ../include/irtree/generators/Label.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/statements/JumpConditionalStatement.cpp.o: ../include/irtree/nodes/BaseElement.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/statements/JumpConditionalStatement.cpp.o: ../include/irtree/nodes/expressions/Expression.hpp
@@ -422,6 +455,8 @@ CMakeFiles/Project.dir/include/irtree/nodes/statements/JumpConditionalStatement.
 CMakeFiles/Project.dir/include/irtree/nodes/statements/JumpConditionalStatement.cpp.o: ../include/irtree/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/statements/JumpConditionalStatement.cpp.o: ../include/irtree/nodes/statements/JumpConditionalStatement.cpp
 
+CMakeFiles/Project.dir/include/irtree/nodes/statements/JumpStatement.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/nodes/statements/JumpStatement.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/statements/JumpStatement.cpp.o: ../include/irtree/generators/Label.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/statements/JumpStatement.cpp.o: ../include/irtree/nodes/BaseElement.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/statements/JumpStatement.cpp.o: ../include/irtree/nodes/statements/JumpStatement.hpp
@@ -429,6 +464,8 @@ CMakeFiles/Project.dir/include/irtree/nodes/statements/JumpStatement.cpp.o: ../i
 CMakeFiles/Project.dir/include/irtree/nodes/statements/JumpStatement.cpp.o: ../include/irtree/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/statements/JumpStatement.cpp.o: ../include/irtree/nodes/statements/JumpStatement.cpp
 
+CMakeFiles/Project.dir/include/irtree/nodes/statements/LabelStatement.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/nodes/statements/LabelStatement.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/statements/LabelStatement.cpp.o: ../include/irtree/generators/Label.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/statements/LabelStatement.cpp.o: ../include/irtree/nodes/BaseElement.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/statements/LabelStatement.cpp.o: ../include/irtree/nodes/statements/LabelStatement.hpp
@@ -436,6 +473,8 @@ CMakeFiles/Project.dir/include/irtree/nodes/statements/LabelStatement.cpp.o: ../
 CMakeFiles/Project.dir/include/irtree/nodes/statements/LabelStatement.cpp.o: ../include/irtree/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/statements/LabelStatement.cpp.o: ../include/irtree/nodes/statements/LabelStatement.cpp
 
+CMakeFiles/Project.dir/include/irtree/nodes/statements/MoveStatement.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/nodes/statements/MoveStatement.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/statements/MoveStatement.cpp.o: ../include/irtree/nodes/BaseElement.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/statements/MoveStatement.cpp.o: ../include/irtree/nodes/expressions/Expression.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/statements/MoveStatement.cpp.o: ../include/irtree/nodes/statements/MoveStatement.hpp
@@ -443,12 +482,16 @@ CMakeFiles/Project.dir/include/irtree/nodes/statements/MoveStatement.cpp.o: ../i
 CMakeFiles/Project.dir/include/irtree/nodes/statements/MoveStatement.cpp.o: ../include/irtree/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/statements/MoveStatement.cpp.o: ../include/irtree/nodes/statements/MoveStatement.cpp
 
+CMakeFiles/Project.dir/include/irtree/nodes/statements/SeqStatement.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/nodes/statements/SeqStatement.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/statements/SeqStatement.cpp.o: ../include/irtree/nodes/BaseElement.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/statements/SeqStatement.cpp.o: ../include/irtree/nodes/statements/SeqStatement.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/statements/SeqStatement.cpp.o: ../include/irtree/nodes/statements/Statement.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/statements/SeqStatement.cpp.o: ../include/irtree/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/irtree/nodes/statements/SeqStatement.cpp.o: ../include/irtree/nodes/statements/SeqStatement.cpp
 
+CMakeFiles/Project.dir/include/irtree/tree_wrappers/ExpressionWrapper.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/tree_wrappers/ExpressionWrapper.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/ExpressionWrapper.cpp.o: ../include/irtree/generators/Label.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/ExpressionWrapper.cpp.o: ../include/irtree/nodes/BaseElement.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/ExpressionWrapper.cpp.o: ../include/irtree/nodes/expressions/ConstExpression.hpp
@@ -462,6 +505,8 @@ CMakeFiles/Project.dir/include/irtree/tree_wrappers/ExpressionWrapper.cpp.o: ../
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/ExpressionWrapper.cpp.o: ../include/irtree/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/ExpressionWrapper.cpp.o: ../include/irtree/tree_wrappers/ExpressionWrapper.cpp
 
+CMakeFiles/Project.dir/include/irtree/tree_wrappers/StatementWrapper.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/tree_wrappers/StatementWrapper.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/StatementWrapper.cpp.o: ../include/irtree/generators/Label.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/StatementWrapper.cpp.o: ../include/irtree/nodes/BaseElement.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/StatementWrapper.cpp.o: ../include/irtree/nodes/expressions/Expression.hpp
@@ -471,6 +516,8 @@ CMakeFiles/Project.dir/include/irtree/tree_wrappers/StatementWrapper.cpp.o: ../i
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/StatementWrapper.cpp.o: ../include/irtree/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/StatementWrapper.cpp.o: ../include/irtree/tree_wrappers/StatementWrapper.cpp
 
+CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/AndConditionalWrapper.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/AndConditionalWrapper.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/AndConditionalWrapper.cpp.o: ../include/irtree/generators/Label.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/AndConditionalWrapper.cpp.o: ../include/irtree/nodes/BaseElement.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/AndConditionalWrapper.cpp.o: ../include/irtree/nodes/expressions/Expression.hpp
@@ -483,6 +530,8 @@ CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/AndCond
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/AndConditionalWrapper.cpp.o: ../include/irtree/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/AndConditionalWrapper.cpp.o: ../include/irtree/tree_wrappers/conditional_wrappers/AndConditionalWrapper.cpp
 
+CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/ConditionalWrapper.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/ConditionalWrapper.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/ConditionalWrapper.cpp.o: ../include/irtree/generators/Label.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/ConditionalWrapper.cpp.o: ../include/irtree/generators/Temporary.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/ConditionalWrapper.cpp.o: ../include/irtree/nodes/BaseElement.hpp
@@ -499,6 +548,8 @@ CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/Conditi
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/ConditionalWrapper.cpp.o: ../include/irtree/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/ConditionalWrapper.cpp.o: ../include/irtree/tree_wrappers/conditional_wrappers/ConditionalWrapper.cpp
 
+CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/NegateConditionalWrapper.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/NegateConditionalWrapper.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/NegateConditionalWrapper.cpp.o: ../include/irtree/generators/Label.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/NegateConditionalWrapper.cpp.o: ../include/irtree/nodes/BaseElement.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/NegateConditionalWrapper.cpp.o: ../include/irtree/nodes/expressions/Expression.hpp
@@ -509,6 +560,8 @@ CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/NegateC
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/NegateConditionalWrapper.cpp.o: ../include/irtree/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/NegateConditionalWrapper.cpp.o: ../include/irtree/tree_wrappers/conditional_wrappers/NegateConditionalWrapper.cpp
 
+CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/OrConditionalWrapper.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/OrConditionalWrapper.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/OrConditionalWrapper.cpp.o: ../include/irtree/generators/Label.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/OrConditionalWrapper.cpp.o: ../include/irtree/nodes/BaseElement.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/OrConditionalWrapper.cpp.o: ../include/irtree/nodes/expressions/Expression.hpp
@@ -521,6 +574,8 @@ CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/OrCondi
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/OrConditionalWrapper.cpp.o: ../include/irtree/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/OrConditionalWrapper.cpp.o: ../include/irtree/tree_wrappers/conditional_wrappers/OrConditionalWrapper.cpp
 
+CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/RelativeConditionalWrapper.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/RelativeConditionalWrapper.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/RelativeConditionalWrapper.cpp.o: ../include/irtree/generators/Label.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/RelativeConditionalWrapper.cpp.o: ../include/irtree/nodes/BaseElement.hpp
 CMakeFiles/Project.dir/include/irtree/tree_wrappers/conditional_wrappers/RelativeConditionalWrapper.cpp.o: ../include/irtree/nodes/expressions/Expression.hpp
@@ -539,6 +594,130 @@ CMakeFiles/Project.dir/include/irtree/types/BinaryOperatorType.cpp.o: ../include
 CMakeFiles/Project.dir/include/irtree/types/LogicOperatorType.cpp.o: ../include/irtree/types/LogicOperatorType.hpp
 CMakeFiles/Project.dir/include/irtree/types/LogicOperatorType.cpp.o: ../include/irtree/types/LogicOperatorType.cpp
 
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/forward_decl.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/generators/Label.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/generators/Temporary.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/nodes/BaseElement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/nodes/ExpressionList.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/nodes/expressions/BinopExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/nodes/expressions/CallExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/nodes/expressions/ConstExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/nodes/expressions/EseqExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/nodes/expressions/Expression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/nodes/expressions/MemExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/nodes/expressions/NameExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/nodes/expressions/TempExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/nodes/statements/ExpStatement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/nodes/statements/JumpConditionalStatement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/nodes/statements/JumpStatement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/nodes/statements/LabelStatement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/nodes/statements/MoveStatement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/nodes/statements/SeqStatement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/nodes/statements/Statement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/types/BinaryOperatorType.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/types/LogicOperatorType.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/visitors/BaseElements.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/visitors/DoubleCallEliminationVisitor.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/visitors/IdentVisitor.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/visitors/TemplateVisitor.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/visitors/Visitor.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/visitors/VisitorStruct.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/visitors/DoubleCallEliminationVisitor.cpp
+
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/forward_decl.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/generators/Label.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/generators/Temporary.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/nodes/BaseElement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/nodes/ExpressionList.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/nodes/expressions/BinopExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/nodes/expressions/CallExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/nodes/expressions/ConstExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/nodes/expressions/EseqExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/nodes/expressions/Expression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/nodes/expressions/MemExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/nodes/expressions/NameExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/nodes/expressions/TempExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/nodes/statements/ExpStatement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/nodes/statements/JumpConditionalStatement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/nodes/statements/JumpStatement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/nodes/statements/LabelStatement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/nodes/statements/MoveStatement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/nodes/statements/SeqStatement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/nodes/statements/Statement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/types/BinaryOperatorType.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/types/LogicOperatorType.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/visitors/BaseElements.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/visitors/EseqEliminationVisitor.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/visitors/IdentVisitor.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/visitors/TemplateVisitor.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/visitors/Visitor.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/visitors/VisitorStruct.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/visitors/EseqEliminationVisitor.cpp
+
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/forward_decl.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/generators/Label.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/generators/Temporary.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/nodes/BaseElement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/nodes/ExpressionList.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/nodes/expressions/BinopExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/nodes/expressions/CallExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/nodes/expressions/ConstExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/nodes/expressions/EseqExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/nodes/expressions/Expression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/nodes/expressions/MemExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/nodes/expressions/NameExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/nodes/expressions/TempExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/nodes/statements/ExpStatement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/nodes/statements/JumpConditionalStatement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/nodes/statements/JumpStatement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/nodes/statements/LabelStatement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/nodes/statements/MoveStatement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/nodes/statements/SeqStatement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/nodes/statements/Statement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/types/BinaryOperatorType.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/types/LogicOperatorType.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/visitors/BaseElements.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/visitors/IdentVisitor.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/visitors/TemplateVisitor.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/visitors/Visitor.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/visitors/IdentVisitor.cpp
+
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/forward_decl.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/generators/Label.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/generators/Temporary.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/nodes/BaseElement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/nodes/ExpressionList.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/nodes/expressions/BinopExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/nodes/expressions/CallExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/nodes/expressions/ConstExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/nodes/expressions/EseqExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/nodes/expressions/Expression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/nodes/expressions/MemExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/nodes/expressions/NameExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/nodes/expressions/TempExpression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/nodes/statements/ExpStatement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/nodes/statements/JumpConditionalStatement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/nodes/statements/JumpStatement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/nodes/statements/LabelStatement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/nodes/statements/MoveStatement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/nodes/statements/SeqStatement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/nodes/statements/Statement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/types/BinaryOperatorType.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/types/LogicOperatorType.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/visitors/BaseElements.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/visitors/IdentVisitor.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/visitors/LinearizeVisitor.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/visitors/TemplateVisitor.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/visitors/Visitor.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/visitors/VisitorStruct.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/visitors/LinearizeVisitor.cpp
+
+CMakeFiles/Project.dir/include/irtree/visitors/PrintVisitor.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/visitors/PrintVisitor.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/irtree/visitors/PrintVisitor.cpp.o: ../include/irtree/generators/Label.hpp
 CMakeFiles/Project.dir/include/irtree/visitors/PrintVisitor.cpp.o: ../include/irtree/generators/Temporary.hpp
 CMakeFiles/Project.dir/include/irtree/visitors/PrintVisitor.cpp.o: ../include/irtree/nodes/BaseElement.hpp
@@ -564,6 +743,16 @@ CMakeFiles/Project.dir/include/irtree/visitors/PrintVisitor.cpp.o: ../include/ir
 CMakeFiles/Project.dir/include/irtree/visitors/PrintVisitor.cpp.o: ../include/irtree/visitors/PrintVisitor.hpp
 CMakeFiles/Project.dir/include/irtree/visitors/PrintVisitor.cpp.o: ../include/irtree/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/irtree/visitors/PrintVisitor.cpp.o: ../include/irtree/visitors/PrintVisitor.cpp
+
+CMakeFiles/Project.dir/include/irtree/visitors/TemplateVisitor.cpp.o: ../debug.h
+CMakeFiles/Project.dir/include/irtree/visitors/TemplateVisitor.cpp.o: ../include/irtree/forward_decl.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/TemplateVisitor.cpp.o: ../include/irtree/nodes/BaseElement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/TemplateVisitor.cpp.o: ../include/irtree/nodes/expressions/Expression.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/TemplateVisitor.cpp.o: ../include/irtree/nodes/statements/Statement.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/TemplateVisitor.cpp.o: ../include/irtree/visitors/TemplateVisitor.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/TemplateVisitor.cpp.o: ../include/irtree/visitors/Visitor.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/TemplateVisitor.cpp.o: ../include/irtree/visitors/VisitorStruct.hpp
+CMakeFiles/Project.dir/include/irtree/visitors/TemplateVisitor.cpp.o: ../include/irtree/visitors/TemplateVisitor.cpp
 
 CMakeFiles/Project.dir/include/program/MainClass.cpp.o: ../debug.h
 CMakeFiles/Project.dir/include/program/MainClass.cpp.o: ../include/program/MainClass.hpp
@@ -892,6 +1081,7 @@ CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/functions/
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/functions/address/AddressInFrame.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/functions/address/AddressInRegister.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/irtree/elements.hpp
+CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/irtree/generators/Label.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/irtree/generators/Temporary.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/irtree/nodes/BaseElement.hpp
@@ -921,8 +1111,6 @@ CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/irtree/tre
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/irtree/tree_wrappers/conditional_wrappers/RelativeConditionalWrapper.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/irtree/types/BinaryOperatorType.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/irtree/types/LogicOperatorType.hpp
-CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/irtree/visitors/BaseElements.hpp
-CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/irtree/visitors/PrintVisitor.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/irtree/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/program/ClassDeclList.hpp
 CMakeFiles/Project.dir/include/visitors/Interpreter.cpp.o: ../include/program/MainClass.hpp
@@ -997,6 +1185,7 @@ CMakeFiles/Project.dir/include/visitors/IrtreeBuildVisitor.cpp.o: ../include/fun
 CMakeFiles/Project.dir/include/visitors/IrtreeBuildVisitor.cpp.o: ../include/functions/address/AddressInFrame.hpp
 CMakeFiles/Project.dir/include/visitors/IrtreeBuildVisitor.cpp.o: ../include/functions/address/AddressInRegister.hpp
 CMakeFiles/Project.dir/include/visitors/IrtreeBuildVisitor.cpp.o: ../include/irtree/elements.hpp
+CMakeFiles/Project.dir/include/visitors/IrtreeBuildVisitor.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/visitors/IrtreeBuildVisitor.cpp.o: ../include/irtree/generators/Label.hpp
 CMakeFiles/Project.dir/include/visitors/IrtreeBuildVisitor.cpp.o: ../include/irtree/generators/Temporary.hpp
 CMakeFiles/Project.dir/include/visitors/IrtreeBuildVisitor.cpp.o: ../include/irtree/nodes/BaseElement.hpp
@@ -1026,8 +1215,6 @@ CMakeFiles/Project.dir/include/visitors/IrtreeBuildVisitor.cpp.o: ../include/irt
 CMakeFiles/Project.dir/include/visitors/IrtreeBuildVisitor.cpp.o: ../include/irtree/tree_wrappers/conditional_wrappers/RelativeConditionalWrapper.hpp
 CMakeFiles/Project.dir/include/visitors/IrtreeBuildVisitor.cpp.o: ../include/irtree/types/BinaryOperatorType.hpp
 CMakeFiles/Project.dir/include/visitors/IrtreeBuildVisitor.cpp.o: ../include/irtree/types/LogicOperatorType.hpp
-CMakeFiles/Project.dir/include/visitors/IrtreeBuildVisitor.cpp.o: ../include/irtree/visitors/BaseElements.hpp
-CMakeFiles/Project.dir/include/visitors/IrtreeBuildVisitor.cpp.o: ../include/irtree/visitors/PrintVisitor.hpp
 CMakeFiles/Project.dir/include/visitors/IrtreeBuildVisitor.cpp.o: ../include/irtree/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/visitors/IrtreeBuildVisitor.cpp.o: ../include/program/ClassDeclList.hpp
 CMakeFiles/Project.dir/include/visitors/IrtreeBuildVisitor.cpp.o: ../include/program/MainClass.hpp
@@ -1101,6 +1288,7 @@ CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/functions
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/functions/address/AddressInFrame.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/functions/address/AddressInRegister.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/irtree/elements.hpp
+CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/irtree/generators/Label.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/irtree/generators/Temporary.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/irtree/nodes/BaseElement.hpp
@@ -1130,8 +1318,6 @@ CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/irtree/tr
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/irtree/tree_wrappers/conditional_wrappers/RelativeConditionalWrapper.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/irtree/types/BinaryOperatorType.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/irtree/types/LogicOperatorType.hpp
-CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/irtree/visitors/BaseElements.hpp
-CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/irtree/visitors/PrintVisitor.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/irtree/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/program/ClassDeclList.hpp
 CMakeFiles/Project.dir/include/visitors/PrintVisitor.cpp.o: ../include/program/MainClass.hpp
@@ -1201,6 +1387,7 @@ CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/func
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/functions/address/AddressInFrame.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/functions/address/AddressInRegister.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/irtree/elements.hpp
+CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/irtree/generators/Label.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/irtree/generators/Temporary.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/irtree/nodes/BaseElement.hpp
@@ -1230,8 +1417,6 @@ CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/irtr
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/irtree/tree_wrappers/conditional_wrappers/RelativeConditionalWrapper.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/irtree/types/BinaryOperatorType.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/irtree/types/LogicOperatorType.hpp
-CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/irtree/visitors/BaseElements.hpp
-CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/irtree/visitors/PrintVisitor.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/irtree/visitors/Visitor.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/program/ClassDeclList.hpp
 CMakeFiles/Project.dir/include/visitors/SymbolTreeVisitor.cpp.o: ../include/program/MainClass.hpp
@@ -1313,6 +1498,7 @@ CMakeFiles/Project.dir/main.cpp.o: ../include/functions/address/Address.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/functions/address/AddressInFrame.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/functions/address/AddressInRegister.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/irtree/elements.hpp
+CMakeFiles/Project.dir/main.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/irtree/generators/Label.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/irtree/generators/Temporary.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/irtree/nodes/BaseElement.hpp
@@ -1343,8 +1529,14 @@ CMakeFiles/Project.dir/main.cpp.o: ../include/irtree/tree_wrappers/conditional_w
 CMakeFiles/Project.dir/main.cpp.o: ../include/irtree/types/BinaryOperatorType.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/irtree/types/LogicOperatorType.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/irtree/visitors/BaseElements.hpp
+CMakeFiles/Project.dir/main.cpp.o: ../include/irtree/visitors/DoubleCallEliminationVisitor.hpp
+CMakeFiles/Project.dir/main.cpp.o: ../include/irtree/visitors/EseqEliminationVisitor.hpp
+CMakeFiles/Project.dir/main.cpp.o: ../include/irtree/visitors/IdentVisitor.hpp
+CMakeFiles/Project.dir/main.cpp.o: ../include/irtree/visitors/LinearizeVisitor.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/irtree/visitors/PrintVisitor.hpp
+CMakeFiles/Project.dir/main.cpp.o: ../include/irtree/visitors/TemplateVisitor.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/irtree/visitors/Visitor.hpp
+CMakeFiles/Project.dir/main.cpp.o: ../include/irtree/visitors/VisitorStruct.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/program/ClassDeclList.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/program/MainClass.hpp
 CMakeFiles/Project.dir/main.cpp.o: ../include/program/Program.hpp
@@ -1421,6 +1613,7 @@ CMakeFiles/Project.dir/parser.cpp.o: ../include/functions/address/Address.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/functions/address/AddressInFrame.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/functions/address/AddressInRegister.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/irtree/elements.hpp
+CMakeFiles/Project.dir/parser.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/irtree/generators/Label.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/irtree/generators/Temporary.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/irtree/nodes/BaseElement.hpp
@@ -1451,8 +1644,14 @@ CMakeFiles/Project.dir/parser.cpp.o: ../include/irtree/tree_wrappers/conditional
 CMakeFiles/Project.dir/parser.cpp.o: ../include/irtree/types/BinaryOperatorType.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/irtree/types/LogicOperatorType.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/irtree/visitors/BaseElements.hpp
+CMakeFiles/Project.dir/parser.cpp.o: ../include/irtree/visitors/DoubleCallEliminationVisitor.hpp
+CMakeFiles/Project.dir/parser.cpp.o: ../include/irtree/visitors/EseqEliminationVisitor.hpp
+CMakeFiles/Project.dir/parser.cpp.o: ../include/irtree/visitors/IdentVisitor.hpp
+CMakeFiles/Project.dir/parser.cpp.o: ../include/irtree/visitors/LinearizeVisitor.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/irtree/visitors/PrintVisitor.hpp
+CMakeFiles/Project.dir/parser.cpp.o: ../include/irtree/visitors/TemplateVisitor.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/irtree/visitors/Visitor.hpp
+CMakeFiles/Project.dir/parser.cpp.o: ../include/irtree/visitors/VisitorStruct.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/program/ClassDeclList.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/program/MainClass.hpp
 CMakeFiles/Project.dir/parser.cpp.o: ../include/program/Program.hpp
@@ -1529,6 +1728,7 @@ CMakeFiles/Project.dir/scanner.cpp.o: ../include/functions/address/Address.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/functions/address/AddressInFrame.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/functions/address/AddressInRegister.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/irtree/elements.hpp
+CMakeFiles/Project.dir/scanner.cpp.o: ../include/irtree/forward_decl.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/irtree/generators/Label.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/irtree/generators/Temporary.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/irtree/nodes/BaseElement.hpp
@@ -1559,8 +1759,14 @@ CMakeFiles/Project.dir/scanner.cpp.o: ../include/irtree/tree_wrappers/conditiona
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/irtree/types/BinaryOperatorType.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/irtree/types/LogicOperatorType.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/irtree/visitors/BaseElements.hpp
+CMakeFiles/Project.dir/scanner.cpp.o: ../include/irtree/visitors/DoubleCallEliminationVisitor.hpp
+CMakeFiles/Project.dir/scanner.cpp.o: ../include/irtree/visitors/EseqEliminationVisitor.hpp
+CMakeFiles/Project.dir/scanner.cpp.o: ../include/irtree/visitors/IdentVisitor.hpp
+CMakeFiles/Project.dir/scanner.cpp.o: ../include/irtree/visitors/LinearizeVisitor.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/irtree/visitors/PrintVisitor.hpp
+CMakeFiles/Project.dir/scanner.cpp.o: ../include/irtree/visitors/TemplateVisitor.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/irtree/visitors/Visitor.hpp
+CMakeFiles/Project.dir/scanner.cpp.o: ../include/irtree/visitors/VisitorStruct.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/program/ClassDeclList.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/program/MainClass.hpp
 CMakeFiles/Project.dir/scanner.cpp.o: ../include/program/Program.hpp

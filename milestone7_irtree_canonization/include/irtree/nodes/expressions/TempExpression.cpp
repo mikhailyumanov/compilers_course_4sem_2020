@@ -7,7 +7,7 @@
 
 
 IRT::TempExpression::TempExpression(const IRT::Temporary& temporary)
-  : temporary(temporary) {
+  : temp(temporary) {
 }
 
 void IRT::TempExpression::Accept(std::shared_ptr<IRT::Visitor> visitor) {

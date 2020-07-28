@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/compilers/compilers_course_4sem_2020/milestone6_irtree -I/compilers/compilers_course_4sem_2020/milestone6_irtree/include 
+CXX_INCLUDES = -I/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization -I/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/include 
 

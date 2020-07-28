@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /compilers/compilers_course_4sem_2020/milestone6_irtree
+CMAKE_SOURCE_DIR = /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /compilers/compilers_course_4sem_2020/milestone6_irtree/build
+CMAKE_BINARY_DIR = /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles /compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1419,6 +1419,114 @@ include/irtree/types/LogicOperatorType.cpp.s:
 	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/irtree/types/LogicOperatorType.cpp.s
 .PHONY : include/irtree/types/LogicOperatorType.cpp.s
 
+include/irtree/visitors/DoubleCallEliminationVisitor.o: include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o
+
+.PHONY : include/irtree/visitors/DoubleCallEliminationVisitor.o
+
+# target to build an object file
+include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o
+.PHONY : include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o
+
+include/irtree/visitors/DoubleCallEliminationVisitor.i: include/irtree/visitors/DoubleCallEliminationVisitor.cpp.i
+
+.PHONY : include/irtree/visitors/DoubleCallEliminationVisitor.i
+
+# target to preprocess a source file
+include/irtree/visitors/DoubleCallEliminationVisitor.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.i
+.PHONY : include/irtree/visitors/DoubleCallEliminationVisitor.cpp.i
+
+include/irtree/visitors/DoubleCallEliminationVisitor.s: include/irtree/visitors/DoubleCallEliminationVisitor.cpp.s
+
+.PHONY : include/irtree/visitors/DoubleCallEliminationVisitor.s
+
+# target to generate assembly for a file
+include/irtree/visitors/DoubleCallEliminationVisitor.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.s
+.PHONY : include/irtree/visitors/DoubleCallEliminationVisitor.cpp.s
+
+include/irtree/visitors/EseqEliminationVisitor.o: include/irtree/visitors/EseqEliminationVisitor.cpp.o
+
+.PHONY : include/irtree/visitors/EseqEliminationVisitor.o
+
+# target to build an object file
+include/irtree/visitors/EseqEliminationVisitor.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o
+.PHONY : include/irtree/visitors/EseqEliminationVisitor.cpp.o
+
+include/irtree/visitors/EseqEliminationVisitor.i: include/irtree/visitors/EseqEliminationVisitor.cpp.i
+
+.PHONY : include/irtree/visitors/EseqEliminationVisitor.i
+
+# target to preprocess a source file
+include/irtree/visitors/EseqEliminationVisitor.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.i
+.PHONY : include/irtree/visitors/EseqEliminationVisitor.cpp.i
+
+include/irtree/visitors/EseqEliminationVisitor.s: include/irtree/visitors/EseqEliminationVisitor.cpp.s
+
+.PHONY : include/irtree/visitors/EseqEliminationVisitor.s
+
+# target to generate assembly for a file
+include/irtree/visitors/EseqEliminationVisitor.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.s
+.PHONY : include/irtree/visitors/EseqEliminationVisitor.cpp.s
+
+include/irtree/visitors/IdentVisitor.o: include/irtree/visitors/IdentVisitor.cpp.o
+
+.PHONY : include/irtree/visitors/IdentVisitor.o
+
+# target to build an object file
+include/irtree/visitors/IdentVisitor.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o
+.PHONY : include/irtree/visitors/IdentVisitor.cpp.o
+
+include/irtree/visitors/IdentVisitor.i: include/irtree/visitors/IdentVisitor.cpp.i
+
+.PHONY : include/irtree/visitors/IdentVisitor.i
+
+# target to preprocess a source file
+include/irtree/visitors/IdentVisitor.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.i
+.PHONY : include/irtree/visitors/IdentVisitor.cpp.i
+
+include/irtree/visitors/IdentVisitor.s: include/irtree/visitors/IdentVisitor.cpp.s
+
+.PHONY : include/irtree/visitors/IdentVisitor.s
+
+# target to generate assembly for a file
+include/irtree/visitors/IdentVisitor.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.s
+.PHONY : include/irtree/visitors/IdentVisitor.cpp.s
+
+include/irtree/visitors/LinearizeVisitor.o: include/irtree/visitors/LinearizeVisitor.cpp.o
+
+.PHONY : include/irtree/visitors/LinearizeVisitor.o
+
+# target to build an object file
+include/irtree/visitors/LinearizeVisitor.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o
+.PHONY : include/irtree/visitors/LinearizeVisitor.cpp.o
+
+include/irtree/visitors/LinearizeVisitor.i: include/irtree/visitors/LinearizeVisitor.cpp.i
+
+.PHONY : include/irtree/visitors/LinearizeVisitor.i
+
+# target to preprocess a source file
+include/irtree/visitors/LinearizeVisitor.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.i
+.PHONY : include/irtree/visitors/LinearizeVisitor.cpp.i
+
+include/irtree/visitors/LinearizeVisitor.s: include/irtree/visitors/LinearizeVisitor.cpp.s
+
+.PHONY : include/irtree/visitors/LinearizeVisitor.s
+
+# target to generate assembly for a file
+include/irtree/visitors/LinearizeVisitor.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.s
+.PHONY : include/irtree/visitors/LinearizeVisitor.cpp.s
+
 include/irtree/visitors/PrintVisitor.o: include/irtree/visitors/PrintVisitor.cpp.o
 
 .PHONY : include/irtree/visitors/PrintVisitor.o
@@ -1445,6 +1553,33 @@ include/irtree/visitors/PrintVisitor.s: include/irtree/visitors/PrintVisitor.cpp
 include/irtree/visitors/PrintVisitor.cpp.s:
 	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/irtree/visitors/PrintVisitor.cpp.s
 .PHONY : include/irtree/visitors/PrintVisitor.cpp.s
+
+include/irtree/visitors/TemplateVisitor.o: include/irtree/visitors/TemplateVisitor.cpp.o
+
+.PHONY : include/irtree/visitors/TemplateVisitor.o
+
+# target to build an object file
+include/irtree/visitors/TemplateVisitor.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/irtree/visitors/TemplateVisitor.cpp.o
+.PHONY : include/irtree/visitors/TemplateVisitor.cpp.o
+
+include/irtree/visitors/TemplateVisitor.i: include/irtree/visitors/TemplateVisitor.cpp.i
+
+.PHONY : include/irtree/visitors/TemplateVisitor.i
+
+# target to preprocess a source file
+include/irtree/visitors/TemplateVisitor.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/irtree/visitors/TemplateVisitor.cpp.i
+.PHONY : include/irtree/visitors/TemplateVisitor.cpp.i
+
+include/irtree/visitors/TemplateVisitor.s: include/irtree/visitors/TemplateVisitor.cpp.s
+
+.PHONY : include/irtree/visitors/TemplateVisitor.s
+
+# target to generate assembly for a file
+include/irtree/visitors/TemplateVisitor.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/irtree/visitors/TemplateVisitor.cpp.s
+.PHONY : include/irtree/visitors/TemplateVisitor.cpp.s
 
 include/program/MainClass.o: include/program/MainClass.cpp.o
 
@@ -2625,9 +2760,24 @@ help:
 	@echo "... include/irtree/types/LogicOperatorType.o"
 	@echo "... include/irtree/types/LogicOperatorType.i"
 	@echo "... include/irtree/types/LogicOperatorType.s"
+	@echo "... include/irtree/visitors/DoubleCallEliminationVisitor.o"
+	@echo "... include/irtree/visitors/DoubleCallEliminationVisitor.i"
+	@echo "... include/irtree/visitors/DoubleCallEliminationVisitor.s"
+	@echo "... include/irtree/visitors/EseqEliminationVisitor.o"
+	@echo "... include/irtree/visitors/EseqEliminationVisitor.i"
+	@echo "... include/irtree/visitors/EseqEliminationVisitor.s"
+	@echo "... include/irtree/visitors/IdentVisitor.o"
+	@echo "... include/irtree/visitors/IdentVisitor.i"
+	@echo "... include/irtree/visitors/IdentVisitor.s"
+	@echo "... include/irtree/visitors/LinearizeVisitor.o"
+	@echo "... include/irtree/visitors/LinearizeVisitor.i"
+	@echo "... include/irtree/visitors/LinearizeVisitor.s"
 	@echo "... include/irtree/visitors/PrintVisitor.o"
 	@echo "... include/irtree/visitors/PrintVisitor.i"
 	@echo "... include/irtree/visitors/PrintVisitor.s"
+	@echo "... include/irtree/visitors/TemplateVisitor.o"
+	@echo "... include/irtree/visitors/TemplateVisitor.i"
+	@echo "... include/irtree/visitors/TemplateVisitor.s"
 	@echo "... include/program/MainClass.o"
 	@echo "... include/program/MainClass.i"
 	@echo "... include/program/MainClass.s"

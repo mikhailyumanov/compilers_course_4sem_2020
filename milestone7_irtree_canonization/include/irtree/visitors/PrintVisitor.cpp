@@ -25,11 +25,6 @@ void PrintVisitor::Visit(std::shared_ptr<ExpStatement> element) {
   PRINT_UP
 }
 
-void PrintVisitor::Visit(std::shared_ptr<ConstExpression> element) {
-  PrintTabs();
-  stream_ << "ConstExpression " << element->GetValue() << std::endl;
-}
-
 void PrintVisitor::Visit(std::shared_ptr<JumpConditionalStatement> element) {
   PrintTabs();
   stream_ << "JumpConditionalStatement: "
@@ -54,8 +49,8 @@ void PrintVisitor::Visit(std::shared_ptr<MoveStatement> element) {
   stream_ << "MoveStatement:" << std::endl;
 
   PRINT_DOWN
-  element->source->Accept(shared_from_this());
   element->target->Accept(shared_from_this());
+  element->source->Accept(shared_from_this());
   PRINT_UP
 }
 
@@ -75,6 +70,17 @@ void PrintVisitor::Visit(std::shared_ptr<LabelStatement> element) {
           << element->label.ToString() << std::endl;
 }
 
+void PrintVisitor::Visit(std::shared_ptr<JumpStatement> element) {
+  PrintTabs();
+  stream_ << "JumpStatement: "
+          << element->label.ToString() << std::endl;
+}
+
+void PrintVisitor::Visit(std::shared_ptr<ConstExpression> element) {
+  PrintTabs();
+  stream_ << "ConstExpression " << element->GetValue() << std::endl;
+}
+
 void PrintVisitor::Visit(std::shared_ptr<BinopExpression> element) {
   PrintTabs();
   stream_ << "BinopExpression: "
@@ -89,7 +95,7 @@ void PrintVisitor::Visit(std::shared_ptr<BinopExpression> element) {
 void PrintVisitor::Visit(std::shared_ptr<TempExpression> element) {
   PrintTabs();
   stream_ << "TempExpression: "
-          << element->temporary.ToString() << std::endl;
+          << element->temp.ToString() << std::endl;
 }
 
 void PrintVisitor::Visit(std::shared_ptr<MemExpression> element) {
@@ -97,14 +103,8 @@ void PrintVisitor::Visit(std::shared_ptr<MemExpression> element) {
   stream_ << "MemExpression: " << std::endl;
 
   PRINT_DOWN
-  element->expression->Accept(shared_from_this());
+  element->expr->Accept(shared_from_this());
   PRINT_UP
-}
-
-void PrintVisitor::Visit(std::shared_ptr<JumpStatement> element) {
-  PrintTabs();
-  stream_ << "JumpStatement: "
-          << element->label.ToString() << std::endl;
 }
 
 void PrintVisitor::Visit(std::shared_ptr<CallExpression> element) {
@@ -122,8 +122,8 @@ void PrintVisitor::Visit(std::shared_ptr<ExpressionList> element) {
   stream_ << "ExpressionList: " << std::endl;
 
   PRINT_DOWN
-  for (auto&& expression: element->expressions) {
-    expression->Accept(shared_from_this());
+  for (auto&& expr: element->expr_list) {
+    expr->Accept(shared_from_this());
   }
   PRINT_UP
 }
@@ -134,12 +134,12 @@ void PrintVisitor::Visit(std::shared_ptr<NameExpression> element) {
           << element->label.ToString() << std::endl;
 }
 
-void PrintVisitor::Visit(std::shared_ptr<EseqExpression> eseq_expression) {
+void PrintVisitor::Visit(std::shared_ptr<EseqExpression> element) {
   PrintTabs();
   stream_ << "EseqExpression:" << std::endl;
   PRINT_DOWN
-  eseq_expression->statement->Accept(shared_from_this());
-  eseq_expression->expression->Accept(shared_from_this());
+  element->stmt->Accept(shared_from_this());
+  element->expr->Accept(shared_from_this());
   PRINT_UP
 
 }

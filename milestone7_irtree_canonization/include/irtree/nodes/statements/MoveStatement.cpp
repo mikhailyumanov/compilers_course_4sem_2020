@@ -8,8 +8,8 @@
 
 namespace IRT {
 
-MoveStatement::MoveStatement(std::shared_ptr<Expression> source, 
-    std::shared_ptr<Expression> target)
+MoveStatement::MoveStatement(std::shared_ptr<Expression> target, 
+    std::shared_ptr<Expression> source)
   : source(source), target(target) {
 }
 

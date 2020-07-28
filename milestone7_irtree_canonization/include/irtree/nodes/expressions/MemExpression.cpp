@@ -8,7 +8,7 @@
 namespace IRT {
 
 MemExpression::MemExpression(std::shared_ptr<Expression> expression)
-  : expression(expression) {
+  : expr(expression) {
 }
 
 void MemExpression::Accept(std::shared_ptr<Visitor> visitor) {

@@ -10,7 +10,7 @@ namespace IRT {
 
 EseqExpression::EseqExpression(std::shared_ptr<Statement> statement,
     std::shared_ptr<Expression> expression)
-  : statement(statement), expression(expression) {
+  : stmt(statement), expr(expression) {
 }
 
 void EseqExpression::Accept(std::shared_ptr<Visitor> visitor) {

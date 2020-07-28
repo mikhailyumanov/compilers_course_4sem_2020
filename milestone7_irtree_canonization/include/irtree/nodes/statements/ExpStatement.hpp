@@ -17,12 +17,13 @@ class ExpStatement: public Statement,
   explicit ExpStatement(std::shared_ptr<Expression> expression);
 
   std::shared_ptr<Expression> GetExpression();
+  void SetExpression(std::shared_ptr<Expression> expr);
   void Accept(std::shared_ptr<Visitor> visitor) override;
 
   ~ExpStatement() override = default;
 
  private:
-  std::shared_ptr<Expression> expression_;
+  std::shared_ptr<Expression> expr_;
 };
 
 }

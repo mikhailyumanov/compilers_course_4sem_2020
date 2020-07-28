@@ -9,11 +9,15 @@
 namespace IRT {
 
 ExpStatement::ExpStatement(std::shared_ptr<Expression> expression)
-  : expression_(expression) {
+  : expr_(expression) {
 }
 
 std::shared_ptr<Expression> ExpStatement::GetExpression() {
-  return expression_;
+  return expr_;
+}
+
+void ExpStatement::SetExpression(std::shared_ptr<Expression> expr) {
+  expr_ = expr;
 }
 
 void ExpStatement::Accept(std::shared_ptr<Visitor> visitor) {

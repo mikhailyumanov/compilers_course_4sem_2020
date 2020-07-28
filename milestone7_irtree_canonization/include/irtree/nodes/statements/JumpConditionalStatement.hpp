@@ -28,10 +28,10 @@ class JumpConditionalStatement: public Statement,
 
  public:
   LogicOperatorType operator_type;
-  Label label_true;
-  Label label_false;
   std::shared_ptr<Expression> lhs;
   std::shared_ptr<Expression> rhs;
+  Label label_true;
+  Label label_false;
 };
 
 }

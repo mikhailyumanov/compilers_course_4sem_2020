@@ -20,8 +20,8 @@ class EseqExpression: public Expression,
   void Accept(std::shared_ptr<Visitor> visitor) override;
 
  public:
-  std::shared_ptr<Statement> statement;
-  std::shared_ptr<Expression> expression;
+  std::shared_ptr<Statement> stmt;
+  std::shared_ptr<Expression> expr;
 };
 
 }

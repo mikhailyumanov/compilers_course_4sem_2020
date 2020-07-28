@@ -9,7 +9,7 @@
 namespace IRT {
 
 void ExpressionList::AddItem(std::shared_ptr<Expression> expression) {
-  expressions.push_back(expression);
+  expr_list.push_back(expression);
 }
 
 void ExpressionList::Accept(std::shared_ptr<Visitor> visitor) {

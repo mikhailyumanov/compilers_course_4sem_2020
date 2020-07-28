@@ -14,8 +14,8 @@ namespace IRT {
 class MoveStatement: public Statement,
  public std::enable_shared_from_this<MoveStatement> {
  public:
-  MoveStatement(std::shared_ptr<Expression> source,
-      std::shared_ptr<Expression> target);
+  MoveStatement(std::shared_ptr<Expression> target,
+      std::shared_ptr<Expression> source);
 
   void Accept(std::shared_ptr<Visitor> visitor) override;
 

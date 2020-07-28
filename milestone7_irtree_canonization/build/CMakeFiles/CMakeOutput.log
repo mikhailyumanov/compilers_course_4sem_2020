@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/3.10.2/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/3.10.2/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
@@ -23,33 +23,33 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/3.10.2/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/3.10.2/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp
+Change Dir: /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_85390/fast"
-/usr/bin/make -f CMakeFiles/cmTC_85390.dir/build.make CMakeFiles/cmTC_85390.dir/build
-make[1]: Entering directory '/compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_85390.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_85390.dir/testCCompiler.c.o   -c /compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_85390
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85390.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_85390.dir/testCCompiler.c.o  -o cmTC_85390 
-make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_f3351/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f3351.dir/build.make CMakeFiles/cmTC_f3351.dir/build
+make[1]: Entering directory '/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f3351.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_f3351.dir/testCCompiler.c.o   -c /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_f3351
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f3351.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_f3351.dir/testCCompiler.c.o  -o cmTC_f3351 
+make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp
+Change Dir: /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8c635/fast"
-/usr/bin/make -f CMakeFiles/cmTC_8c635.dir/build.make CMakeFiles/cmTC_8c635.dir/build
-make[1]: Entering directory '/compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8c635.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_8c635.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_8c635
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8c635.dir/link.txt --verbose=1
-/usr/bin/cc     -v CMakeFiles/cmTC_8c635.dir/CMakeCCompilerABI.c.o  -o cmTC_8c635 
+Run Build Command:"/usr/bin/make" "cmTC_30e81/fast"
+/usr/bin/make -f CMakeFiles/cmTC_30e81.dir/build.make CMakeFiles/cmTC_30e81.dir/build
+make[1]: Entering directory '/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_30e81.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_30e81.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_30e81
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_30e81.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTC_30e81.dir/CMakeCCompilerABI.c.o  -o cmTC_30e81 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -61,24 +61,24 @@ Thread model: posix
 gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8c635' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cccYIBYt.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_8c635 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_8c635.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8c635' '-mtune=generic' '-march=x86-64'
-make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_30e81' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccugiHtL.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_30e81 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_30e81.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_30e81' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_8c635/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_8c635.dir/build.make CMakeFiles/cmTC_8c635.dir/build]
-  ignore line: [make[1]: Entering directory '/compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_8c635.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_8c635.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_8c635]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8c635.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_8c635.dir/CMakeCCompilerABI.c.o  -o cmTC_8c635 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_30e81/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_30e81.dir/build.make CMakeFiles/cmTC_30e81.dir/build]
+  ignore line: [make[1]: Entering directory '/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_30e81.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_30e81.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_30e81]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_30e81.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_30e81.dir/CMakeCCompilerABI.c.o  -o cmTC_30e81 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -90,13 +90,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8c635' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cccYIBYt.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_8c635 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_8c635.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_30e81' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccugiHtL.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_30e81 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_30e81.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cccYIBYt.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccugiHtL.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -115,7 +115,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_8c635] ==> ignore
+    arg [cmTC_30e81] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -127,7 +127,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_8c635.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_30e81.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -157,17 +157,17 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp
+Change Dir: /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_55468/fast"
-/usr/bin/make -f CMakeFiles/cmTC_55468.dir/build.make CMakeFiles/cmTC_55468.dir/build
-make[1]: Entering directory '/compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_55468.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_55468.dir/feature_tests.c.o   -c /compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_55468
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_55468.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_55468.dir/feature_tests.c.o  -o cmTC_55468 
-make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_5ad30/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5ad30.dir/build.make CMakeFiles/cmTC_5ad30.dir/build
+make[1]: Entering directory '/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5ad30.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_5ad30.dir/feature_tests.c.o   -c /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_5ad30
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ad30.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_5ad30.dir/feature_tests.c.o  -o cmTC_5ad30 
+make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -177,17 +177,17 @@ make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone6_irt
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp
+Change Dir: /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c6973/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c6973.dir/build.make CMakeFiles/cmTC_c6973.dir/build
-make[1]: Entering directory '/compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c6973.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_c6973.dir/feature_tests.c.o   -c /compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_c6973
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c6973.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_c6973.dir/feature_tests.c.o  -o cmTC_c6973 
-make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_0be61/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0be61.dir/build.make CMakeFiles/cmTC_0be61.dir/build
+make[1]: Entering directory '/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0be61.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_0be61.dir/feature_tests.c.o   -c /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_0be61
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0be61.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_0be61.dir/feature_tests.c.o  -o cmTC_0be61 
+make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -197,17 +197,17 @@ make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone6_irt
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp
+Change Dir: /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_31a5e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_31a5e.dir/build.make CMakeFiles/cmTC_31a5e.dir/build
-make[1]: Entering directory '/compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_31a5e.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_31a5e.dir/feature_tests.c.o   -c /compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_31a5e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31a5e.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_31a5e.dir/feature_tests.c.o  -o cmTC_31a5e 
-make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_aaa42/fast"
+/usr/bin/make -f CMakeFiles/cmTC_aaa42.dir/build.make CMakeFiles/cmTC_aaa42.dir/build
+make[1]: Entering directory '/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_aaa42.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_aaa42.dir/feature_tests.c.o   -c /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_aaa42
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aaa42.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_aaa42.dir/feature_tests.c.o  -o cmTC_aaa42 
+make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -215,30 +215,30 @@ make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone6_irt
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp
+Change Dir: /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e07f5/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e07f5.dir/build.make CMakeFiles/cmTC_e07f5.dir/build
-make[1]: Entering directory '/compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_e07f5.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_e07f5.dir/testCXXCompiler.cxx.o -c /compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_e07f5
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e07f5.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_e07f5.dir/testCXXCompiler.cxx.o  -o cmTC_e07f5 
-make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_47898/fast"
+/usr/bin/make -f CMakeFiles/cmTC_47898.dir/build.make CMakeFiles/cmTC_47898.dir/build
+make[1]: Entering directory '/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_47898.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_47898.dir/testCXXCompiler.cxx.o -c /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_47898
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_47898.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_47898.dir/testCXXCompiler.cxx.o  -o cmTC_47898 
+make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp
+Change Dir: /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_10d95/fast"
-/usr/bin/make -f CMakeFiles/cmTC_10d95.dir/build.make CMakeFiles/cmTC_10d95.dir/build
-make[1]: Entering directory '/compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_10d95.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_10d95.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_10d95
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_10d95.dir/link.txt --verbose=1
-/usr/bin/c++      -v CMakeFiles/cmTC_10d95.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_10d95 
+Run Build Command:"/usr/bin/make" "cmTC_e0ceb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e0ceb.dir/build.make CMakeFiles/cmTC_e0ceb.dir/build
+make[1]: Entering directory '/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e0ceb.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_e0ceb.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_e0ceb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e0ceb.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTC_e0ceb.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_e0ceb 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -250,24 +250,24 @@ Thread model: posix
 gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_10d95' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccn18qy1.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_10d95 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_10d95.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_10d95' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e0ceb' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccqJPrZm.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_e0ceb /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_e0ceb.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e0ceb' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_10d95/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_10d95.dir/build.make CMakeFiles/cmTC_10d95.dir/build]
-  ignore line: [make[1]: Entering directory '/compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_10d95.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_10d95.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_10d95]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_10d95.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_10d95.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_10d95 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_e0ceb/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_e0ceb.dir/build.make CMakeFiles/cmTC_e0ceb.dir/build]
+  ignore line: [make[1]: Entering directory '/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_e0ceb.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_e0ceb.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_e0ceb]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e0ceb.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_e0ceb.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_e0ceb ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -279,13 +279,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_10d95' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccn18qy1.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_10d95 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_10d95.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e0ceb' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccqJPrZm.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_e0ceb /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_e0ceb.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccn18qy1.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccqJPrZm.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -304,7 +304,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_10d95] ==> ignore
+    arg [cmTC_e0ceb] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -316,7 +316,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_10d95.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_e0ceb.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -342,17 +342,17 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
-Change Dir: /compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp
+Change Dir: /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2946e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2946e.dir/build.make CMakeFiles/cmTC_2946e.dir/build
-make[1]: Entering directory '/compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_2946e.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_2946e.dir/feature_tests.cxx.o -c /compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_2946e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2946e.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_2946e.dir/feature_tests.cxx.o  -o cmTC_2946e 
-make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_b1b8c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b1b8c.dir/build.make CMakeFiles/cmTC_b1b8c.dir/build
+make[1]: Entering directory '/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b1b8c.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_b1b8c.dir/feature_tests.cxx.o -c /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_b1b8c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b1b8c.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_b1b8c.dir/feature_tests.cxx.o  -o cmTC_b1b8c 
+make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -415,17 +415,17 @@ make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone6_irt
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp
+Change Dir: /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_38a75/fast"
-/usr/bin/make -f CMakeFiles/cmTC_38a75.dir/build.make CMakeFiles/cmTC_38a75.dir/build
-make[1]: Entering directory '/compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_38a75.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_38a75.dir/feature_tests.cxx.o -c /compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_38a75
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_38a75.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_38a75.dir/feature_tests.cxx.o  -o cmTC_38a75 
-make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_61f0f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_61f0f.dir/build.make CMakeFiles/cmTC_61f0f.dir/build
+make[1]: Entering directory '/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_61f0f.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_61f0f.dir/feature_tests.cxx.o -c /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_61f0f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_61f0f.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_61f0f.dir/feature_tests.cxx.o  -o cmTC_61f0f 
+make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -488,17 +488,17 @@ make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone6_irt
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp
+Change Dir: /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f7329/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f7329.dir/build.make CMakeFiles/cmTC_f7329.dir/build
-make[1]: Entering directory '/compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f7329.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_f7329.dir/feature_tests.cxx.o -c /compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_f7329
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f7329.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_f7329.dir/feature_tests.cxx.o  -o cmTC_f7329 
-make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_c208b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c208b.dir/build.make CMakeFiles/cmTC_c208b.dir/build
+make[1]: Entering directory '/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c208b.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_c208b.dir/feature_tests.cxx.o -c /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_c208b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c208b.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_c208b.dir/feature_tests.cxx.o  -o cmTC_c208b 
+make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -561,17 +561,17 @@ make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone6_irt
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp
+Change Dir: /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ad358/fast"
-/usr/bin/make -f CMakeFiles/cmTC_ad358.dir/build.make CMakeFiles/cmTC_ad358.dir/build
-make[1]: Entering directory '/compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_ad358.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_ad358.dir/feature_tests.cxx.o -c /compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_ad358
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad358.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_ad358.dir/feature_tests.cxx.o  -o cmTC_ad358 
-make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone6_irtree/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_93f01/fast"
+/usr/bin/make -f CMakeFiles/cmTC_93f01.dir/build.make CMakeFiles/cmTC_93f01.dir/build
+make[1]: Entering directory '/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_93f01.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_93f01.dir/feature_tests.cxx.o -c /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_93f01
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_93f01.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_93f01.dir/feature_tests.cxx.o  -o cmTC_93f01 
+make[1]: Leaving directory '/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers

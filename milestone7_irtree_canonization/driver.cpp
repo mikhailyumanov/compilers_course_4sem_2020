@@ -106,8 +106,9 @@ int Driver::Eval() const {
 void Driver::PrintIrtree(const std::string& filename) const {
   auto irtree_build_visitor = std::make_shared<IrtreeBuildVisitor>(filename);
   irtree_build_visitor->Visit(program);
-
   IrtMapping methods = irtree_build_visitor->GetTrees();
+
+  // Print IR tree without canonization
   auto print_visitor = std::make_shared<IRT::PrintVisitor>(
       filename + "_irtree.txt");
 
@@ -115,5 +116,42 @@ void Driver::PrintIrtree(const std::string& filename) const {
     DEBUG_SINGLE(pair.first)
     pair.second->Accept(print_visitor);
   }
+
+
+  // Eliminate double calls and print
+  auto print_visitor_double_call = std::make_shared<IRT::PrintVisitor>(
+      filename + "_irtree_without_double_calls.txt");
+
+  for (auto&& pair : methods) {
+    DEBUG_SINGLE(pair.first)
+    pair.second->Accept(
+        std::make_shared<IRT::DoubleCallEliminationVisitor>());
+    pair.second->Accept(print_visitor_double_call);
+  }
+
+
+  // Eliminate eseq and print
+  auto print_visitor_eseq = std::make_shared<IRT::PrintVisitor>(
+      filename + "_irtree_without_eseq.txt");
+
+  for (auto&& pair : methods) {
+    DEBUG_SINGLE(pair.first)
+    pair.second->Accept(
+        std::make_shared<IRT::EseqEliminationVisitor>());
+    pair.second->Accept(print_visitor_eseq);
+  }
+
+
+  // Linearize eseq and print
+  auto print_visitor_linear = std::make_shared<IRT::PrintVisitor>(
+      filename + "_irtree_linear.txt");
+
+  for (auto&& pair : methods) {
+    DEBUG_SINGLE(pair.first)
+    pair.second->Accept(
+        std::make_shared<IRT::LinearizeVisitor>());
+    pair.second->Accept(print_visitor_linear);
+  }
 }
+
 

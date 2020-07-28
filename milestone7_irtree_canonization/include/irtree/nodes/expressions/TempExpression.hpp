@@ -19,7 +19,7 @@ class TempExpression: public Expression,
   void Accept(std::shared_ptr<Visitor> visitor) override;
 
  public:
-  Temporary temporary;
+  Temporary temp;
 };
 
 }

@@ -23,7 +23,7 @@ class ExpressionList : public BaseElement,
   void Accept(std::shared_ptr<Visitor> visitor) override;
 
  public:
-  std::vector<std::shared_ptr<Expression>> expressions;
+  std::vector<std::shared_ptr<Expression>> expr_list;
 };
 
 }
