@@ -1,26 +1,26 @@
 >>> IrtreeBuildVisitor: Program
 >>> PrintVisitor: Program
 GoDown
-Current state: parent: 0x557421465740 ; child index: 1 num_children: 2 
-operator->; current_parent: 0x557421465740 child_index: 1 num_children: 2 
+Current state: parent: 0x55e75d110b60 ; child index: 1 num_children: 2 
+operator->; current_parent: 0x55e75d110b60 child_index: 1 num_children: 2 
 GoDown
-Current state: parent: 0x557421465cf0 ; child index: 0 num_children: 1 
-operator->; current_parent: 0x557421465cf0 child_index: 0 num_children: 1 
+Current state: parent: 0x55e75d111110 ; child index: 0 num_children: 1 
+operator->; current_parent: 0x55e75d111110 child_index: 0 num_children: 1 
 >>> PrintVisitor: MainClass
-operator->; current_parent: 0x557421465cf0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55e75d111110 child_index: 0 num_children: 1 
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false x 
 x type: int, is_array: false 
-operator->; current_parent: 0x557421465cf0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55e75d111110 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x557421465cf0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55e75d111110 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x557421465cf0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55e75d111110 child_index: 0 num_children: 1 
 >>> PrintVisitor: AssignmentStmt
-operator->; current_parent: 0x557421465cf0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55e75d111110 child_index: 0 num_children: 1 
 >>> PrintVisitor: IntExpr 5 
-operator->; current_parent: 0x557421465cf0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55e75d111110 child_index: 0 num_children: 1 
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false x 
 x type: int, is_array: false 
-operator->; current_parent: 0x557421465cf0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55e75d111110 child_index: 0 num_children: 1 

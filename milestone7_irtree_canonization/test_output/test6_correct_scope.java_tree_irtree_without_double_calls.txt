@@ -1,0 +1,83 @@
+SeqStatement:
+	MoveStatement:
+		MemExpression: 
+			BinopExpression: PLUS
+				TempExpression: ::fp
+				ConstExpression 0
+		ConstExpression 5
+	SeqStatement:
+		MoveStatement:
+			MemExpression: 
+				BinopExpression: PLUS
+					TempExpression: ::fp
+					ConstExpression 4
+			MemExpression: 
+				BinopExpression: PLUS
+					TempExpression: ::fp
+					ConstExpression 0
+		SeqStatement:
+			MoveStatement:
+				MemExpression: 
+					BinopExpression: PLUS
+						TempExpression: ::fp
+						ConstExpression 8
+				MemExpression: 
+					BinopExpression: PLUS
+						TempExpression: ::fp
+						ConstExpression 0
+			SeqStatement:
+				JumpConditionalStatement: GT
+				TrueLabel: L0
+				FalseLabel: L1
+					MemExpression: 
+						BinopExpression: PLUS
+							TempExpression: ::fp
+							ConstExpression 0
+					ConstExpression 5
+				SeqStatement:
+					LabelStatement: L0
+					SeqStatement:
+						SeqStatement:
+							MoveStatement:
+								MemExpression: 
+									BinopExpression: PLUS
+										TempExpression: ::fp
+										ConstExpression 12
+								ConstExpression 6
+							ExpStatement:
+								EseqExpression:
+									MoveStatement:
+										TempExpression: %0
+										CallExpression: 
+											NameExpression: printf
+											ExpressionList: 
+												MemExpression: 
+													BinopExpression: PLUS
+														TempExpression: ::fp
+														ConstExpression 12
+									TempExpression: %0
+						SeqStatement:
+							JumpStatement: L2
+							SeqStatement:
+								LabelStatement: L1
+								SeqStatement:
+									SeqStatement:
+										MoveStatement:
+											MemExpression: 
+												BinopExpression: PLUS
+													TempExpression: ::fp
+													ConstExpression 16
+											ConstExpression 7
+										ExpStatement:
+											EseqExpression:
+												MoveStatement:
+													TempExpression: %1
+													CallExpression: 
+														NameExpression: printf
+														ExpressionList: 
+															MemExpression: 
+																BinopExpression: PLUS
+																	TempExpression: ::fp
+																	ConstExpression 16
+												TempExpression: %1
+									LabelStatement: L2
