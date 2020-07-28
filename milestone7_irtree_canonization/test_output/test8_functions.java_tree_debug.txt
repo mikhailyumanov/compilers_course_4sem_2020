@@ -1,57 +1,57 @@
 >>> IrtreeBuildVisitor: Program
 >>> PrintVisitor: Program
 GoDown
-Current state: parent: 0x55fbbba16b30 ; child index: 1 num_children: 2 
-operator->; current_parent: 0x55fbbba16b30 child_index: 1 num_children: 2 
+Current state: parent: 0x557acac73b30 ; child index: 1 num_children: 2 
+operator->; current_parent: 0x557acac73b30 child_index: 1 num_children: 2 
 GoDown
-Current state: parent: 0x55fbbba170e0 ; child index: 0 num_children: 1 
+Current state: parent: 0x557acac740e0 ; child index: 0 num_children: 1 
 >>> PrintVisitor: ClassDecl Dog 
 SymbolTreeVisitor::FunctionScopeDown
 Return type: void; Args: 
 GoDown
-Current state: parent: 0x55fbbba17230 ; child index: 0 num_children: 1 
+Current state: parent: 0x557acac74230 ; child index: 0 num_children: 1 
 Return type: void; Args: 
 >>> PrintVisitor: MethodDecl Return type: void; Args:  Bark 
-Bark Return type: void; Args:  operator->; current_parent: 0x55fbbba17230 child_index: 0 num_children: 1 
+Bark Return type: void; Args:  operator->; current_parent: 0x557acac74230 child_index: 0 num_children: 1 
 Return type: void; Args:  
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IntExpr 12345 
-MethodDecl:  Return type: void; Args:  operator->; current_parent: 0x55fbbba17230 child_index: 0 num_children: 1 
+MethodDecl:  Return type: void; Args:  operator->; current_parent: 0x557acac74230 child_index: 0 num_children: 1 
 Return type: void; Args:  
-operator->; current_parent: 0x55fbbba17230 child_index: 0 num_children: 1 
+operator->; current_parent: 0x557acac74230 child_index: 0 num_children: 1 
 Return type: void; Args: 
 ScopeLayerTree::SetFunctionScope Return type: void; Args:  Return type: void; Args:  
 GoUp
-Current state: parent: 0x55fbbba170e0 ; child index: 0 num_children: 1 
+Current state: parent: 0x557acac740e0 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x55fbbba16b30 ; child index: 1 num_children: 2 
+Current state: parent: 0x557acac73b30 ; child index: 1 num_children: 2 
 GoDown
-Current state: parent: 0x55fbbba170e0 ; child index: 1 num_children: 2 
-operator->; current_parent: 0x55fbbba170e0 child_index: 1 num_children: 2 
+Current state: parent: 0x557acac740e0 ; child index: 1 num_children: 2 
+operator->; current_parent: 0x557acac740e0 child_index: 1 num_children: 2 
 >>> PrintVisitor: MainClass
-operator->; current_parent: 0x55fbbba170e0 child_index: 1 num_children: 2 
+operator->; current_parent: 0x557acac740e0 child_index: 1 num_children: 2 
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: Dog, is_array: false dog 
 dog type: Dog, is_array: false 
-operator->; current_parent: 0x55fbbba170e0 child_index: 1 num_children: 2 
+operator->; current_parent: 0x557acac740e0 child_index: 1 num_children: 2 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x55fbbba170e0 child_index: 1 num_children: 2 
+operator->; current_parent: 0x557acac740e0 child_index: 1 num_children: 2 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x55fbbba170e0 child_index: 1 num_children: 2 
+operator->; current_parent: 0x557acac740e0 child_index: 1 num_children: 2 
 >>> PrintVisitor: AssignmentStmt
-operator->; current_parent: 0x55fbbba170e0 child_index: 1 num_children: 2 
+operator->; current_parent: 0x557acac740e0 child_index: 1 num_children: 2 
 >>> PrintVisitor: NewExpr type =  Dog 
-operator->; current_parent: 0x55fbbba170e0 child_index: 1 num_children: 2 
+operator->; current_parent: 0x557acac740e0 child_index: 1 num_children: 2 
 >>> PrintVisitor: MethodStmt
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: NewExpr type =  Dog 
 Bark
 GoDown
-Current state: parent: 0x55fbbba178d0 ; child index: 0 num_children: 1 
+Current state: parent: 0x557acac748d0 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x55fbbba170e0 ; child index: 1 num_children: 2 
+Current state: parent: 0x557acac740e0 ; child index: 1 num_children: 2 
 GoUp
-Current state: parent: 0x55fbbba16b30 ; child index: 1 num_children: 2 
+Current state: parent: 0x557acac73b30 ; child index: 1 num_children: 2 
 >>> IrtreeBuildVisitor: ClassDecl
 >>> IrtreeBuildVisitor: MethodDecl
 >>> IrtreeBuildVisitor: PrintStmt

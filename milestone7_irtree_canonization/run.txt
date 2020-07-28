@@ -29,6 +29,11 @@ START TEST test13_double_call.java
 result: 0
 
 ================================================================================
+START TEST test14_cjump.java
+./test/test14_cjump.java
+result: 0
+
+================================================================================
 START TEST test2.java
 ./test/test2.java
 result: 0
