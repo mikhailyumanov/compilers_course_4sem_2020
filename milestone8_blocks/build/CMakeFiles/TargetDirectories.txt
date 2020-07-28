@@ -1,3 +1,0 @@
-/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/rebuild_cache.dir
-/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/Project.dir
-/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/build/CMakeFiles/edit_cache.dir
