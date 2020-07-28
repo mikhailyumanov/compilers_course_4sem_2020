@@ -1,0 +1,114 @@
+SeqStatement:
+	MoveStatement:
+		MemExpression: 
+			BinopExpression: PLUS
+				TempExpression: ::fp
+				ConstExpression 0
+		CallExpression: 
+			NameExpression: malloc
+			ExpressionList: 
+				ConstExpression 4
+	SeqStatement:
+		ExpStatement:
+			CallExpression: 
+				NameExpression: Number::SetNumber
+				ExpressionList: 
+					MemExpression: 
+						BinopExpression: PLUS
+							TempExpression: ::fp
+							ConstExpression 0
+					ConstExpression 0
+		SeqStatement:
+			MoveStatement:
+				MemExpression: 
+					BinopExpression: PLUS
+						TempExpression: ::fp
+						ConstExpression 4
+				CallExpression: 
+					NameExpression: malloc
+					ExpressionList: 
+						ConstExpression 1
+			SeqStatement:
+				LabelStatement: L0
+				SeqStatement:
+					JumpConditionalStatement: LT
+					TrueLabel: L1
+					FalseLabel: L2
+						CallExpression: 
+							NameExpression: Number::GetNumber
+							ExpressionList: 
+								MemExpression: 
+									BinopExpression: PLUS
+										TempExpression: ::fp
+										ConstExpression 0
+						CallExpression: 
+							NameExpression: Five::GetNumber
+							ExpressionList: 
+								MemExpression: 
+									BinopExpression: PLUS
+										TempExpression: ::fp
+										ConstExpression 4
+					SeqStatement:
+						LabelStatement: L1
+						SeqStatement:
+							SeqStatement:
+								ExpStatement:
+									CallExpression: 
+										NameExpression: printf
+										ExpressionList: 
+											CallExpression: 
+												NameExpression: Number::GetNumber
+												ExpressionList: 
+													MemExpression: 
+														BinopExpression: PLUS
+															TempExpression: ::fp
+															ConstExpression 0
+								ExpStatement:
+									CallExpression: 
+										NameExpression: Number::SetNumber
+										ExpressionList: 
+											MemExpression: 
+												BinopExpression: PLUS
+													TempExpression: ::fp
+													ConstExpression 0
+											BinopExpression: PLUS
+												CallExpression: 
+													NameExpression: Number::GetNumber
+													ExpressionList: 
+														MemExpression: 
+															BinopExpression: PLUS
+																TempExpression: ::fp
+																ConstExpression 0
+												ConstExpression 1
+							SeqStatement:
+								JumpStatement: L0
+								LabelStatement: L2
+SeqStatement:
+	LabelStatement: Number::GetNumber
+	MoveStatement:
+		TempExpression: ::return_value
+		MemExpression: 
+			BinopExpression: PLUS
+				MemExpression: 
+					BinopExpression: PLUS
+						TempExpression: ::fp
+						ConstExpression 0
+				BinopExpression: MUL
+					ConstExpression 0
+					ConstExpression 4
+SeqStatement:
+	LabelStatement: Number::SetNumber
+	MoveStatement:
+		MemExpression: 
+			BinopExpression: PLUS
+				MemExpression: 
+					BinopExpression: PLUS
+						TempExpression: ::fp
+						ConstExpression 0
+				BinopExpression: MUL
+					ConstExpression 0
+					ConstExpression 4
+		MemExpression: 
+			BinopExpression: PLUS
+				TempExpression: ::fp
+				ConstExpression 4
