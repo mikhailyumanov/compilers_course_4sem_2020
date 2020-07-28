@@ -3,6 +3,10 @@
 See test 13 to know how irtree canonization visitors work.
 
 There are 4 log files of subsequent visitors using:
+* ...irtree.txt
+
+initial irtree.
+
 * DoubleCallEliminationVisitor - in ...irtree_without_double_calls.txt
 
 the visitor replaces *all* CALL(f, args) with ESEQ(MOVE(TEMP t, CALL(f, args)), t).
