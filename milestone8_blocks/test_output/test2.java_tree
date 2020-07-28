@@ -1,0 +1,108 @@
+Program
+	NEW SCOPE
+	NEW SCOPE
+	ClassDecl MyClass
+		VarDecl type: int, is_array: false x
+		VarDecl type: int, is_array: false y
+		VarDecl type: int, is_array: false z
+	NEW SCOPE
+	MainClass
+		PrintStmt
+			IntExpr 1
+		PrintStmt
+			BinOpExpr
+				IntExpr 2
+5
+				BinOpExpr
+					IntExpr 3
+7
+					IntExpr 5
+		PrintStmt
+			BinOpExpr
+				BinOpExpr
+					IntExpr 2
+7
+					IntExpr 3
+5
+				BinOpExpr
+					IntExpr 5
+8
+					IntExpr 7
+		PrintStmt
+			BinOpExpr
+				BinOpExpr
+					IntExpr 2
+7
+					IntExpr 3
+5
+				BinOpExpr
+					IntExpr 5
+8
+					IntExpr 7
+		PrintStmt
+			BinOpExpr
+				IntExpr 4
+6
+				IntExpr 7
+		PrintStmt
+			BinOpExpr
+				NotExpr
+					BinOpExpr
+						IntExpr 2
+3
+						IntExpr 3
+4
+				TrueExpr
+		PrintStmt
+			IntExpr 123454321
+		LocalVarDeclStmt
+			VarDecl type: int, is_array: false i
+		AssignmentStmt
+			Lvalue i
+			IntExpr 0
+		NEW SCOPE
+		IfStmt
+			IdentExpr i
+			NEW SCOPE
+			StmtListStmt
+				PrintStmt
+					IntExpr 59
+		NEW SCOPE
+		WhileStmt
+			BinOpExpr
+				IdentExpr i
+2
+				IntExpr 10
+			NEW SCOPE
+			StmtListStmt
+				NEW SCOPE
+				IfStmt
+					BinOpExpr
+						IdentExpr i
+9
+						IntExpr 2
+					NEW SCOPE
+					StmtListStmt
+						PrintStmt
+							IdentExpr i
+				IfElseStmt
+					BinOpExpr
+						IdentExpr i
+4
+						IntExpr 5
+					NEW SCOPE
+					NEW SCOPE
+					StmtListStmt
+						PrintStmt
+							IntExpr 42
+					NEW SCOPE
+					NEW SCOPE
+					StmtListStmt
+						PrintStmt
+							IntExpr 99
+				AssignmentStmt
+					Lvalue i
+					BinOpExpr
+						IdentExpr i
+5
+						IntExpr 1
