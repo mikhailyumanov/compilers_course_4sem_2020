@@ -2,7 +2,7 @@
 
 See test 13 to know how irtree canonization visitors work.
 
-There are 4 log files of subsequent visitors using:
+There are 4 log files of sequential use of visitors:
 * ...irtree.txt
 
 initial irtree.
