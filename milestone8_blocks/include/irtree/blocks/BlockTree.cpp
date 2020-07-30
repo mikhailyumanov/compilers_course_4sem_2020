@@ -8,8 +8,7 @@
 
 namespace IRT {
 
-BlockTree::BlockTree(std::shared_ptr<Statement> pre_root)
-  : ident_visitor_{std::make_shared<IdentVisitor>()} {
+BlockTree::BlockTree(std::shared_ptr<Statement> pre_root) {
   assert(pre_root != nullptr);
   CanonizeIrtree(pre_root);
 
@@ -158,7 +157,7 @@ void BlockTree::BuildBlocks(std::shared_ptr<SeqStatement> root) {
       auto jump = GetCJumpStmt(GetStmt(parent->GetJumpSeq()));
       auto true_child = block_mapping[jump->label_true.ToString()];
       auto false_child = block_mapping[jump->label_false.ToString()];
-      parent->AddNext(false_child); // false lablel first
+      parent->AddNext(false_child); // false lable first
       parent->AddNext(true_child);
       true_child->AddPrev(parent);
       false_child->AddPrev(parent);
@@ -172,7 +171,7 @@ std::shared_ptr<Statement> BlockTree::GetStmt(
 }
 
 std::shared_ptr<SeqStatement> BlockTree::GetNextSeq(
-    std::shared_ptr<SeqStatement> element) {
+    std::shared_ptr<SeqStatement> element) const {
   return GetSeqStmt(element->rhs);
 }
 
@@ -182,30 +181,30 @@ void BlockTree::SetJump(std::shared_ptr<SeqStatement> element, Label label) {
   element->rhs = std::make_shared<SeqStatement>(tmp, element->rhs);
 }
 
-NodeType BlockTree::GetType(std::shared_ptr<Statement> stmt) {
-  return ident_visitor_->Accept(stmt);
+NodeType BlockTree::GetType(std::shared_ptr<Statement> stmt) const {
+  return std::make_shared<IdentVisitor>()->Accept(stmt);
 }
 
 std::shared_ptr<SeqStatement> BlockTree::GetSeqStmt(
-    std::shared_ptr<Statement> stmt) {
+    std::shared_ptr<Statement> stmt) const {
   assert(GetType(stmt) == NodeType::SeqStatement);
   return std::dynamic_pointer_cast<SeqStatement>(stmt);
 }
 
 std::shared_ptr<LabelStatement> BlockTree::GetLabelStmt(
-    std::shared_ptr<Statement> stmt) {
+    std::shared_ptr<Statement> stmt) const {
   assert(GetType(stmt) == NodeType::LabelStatement);
   return std::dynamic_pointer_cast<LabelStatement>(stmt);
 }
 
 std::shared_ptr<JumpStatement> BlockTree::GetJumpStmt(
-    std::shared_ptr<Statement> stmt) {
+    std::shared_ptr<Statement> stmt) const {
   assert(GetType(stmt) == NodeType::JumpStatement);
   return std::dynamic_pointer_cast<JumpStatement>(stmt);
 }
 
 std::shared_ptr<JumpConditionalStatement> BlockTree::GetCJumpStmt(
-    std::shared_ptr<Statement> stmt) {
+    std::shared_ptr<Statement> stmt) const {
   assert(GetType(stmt) == NodeType::JumpConditionalStatement);
   return std::dynamic_pointer_cast<JumpConditionalStatement>(stmt);
 }

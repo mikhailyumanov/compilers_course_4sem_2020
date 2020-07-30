@@ -3,6 +3,7 @@
 #include <functional>
 
 #include "irtree/blocks/Block.hpp"
+//#include "irtree/blocks/Trace.hpp"
 #include "irtree/visitors/IdentVisitor.hpp"
 
 namespace IRT {
@@ -23,22 +24,23 @@ class BlockTree: public std::enable_shared_from_this<BlockTree> {
   std::shared_ptr<Statement> GetStmt(
       std::shared_ptr<SeqStatement> element) const;
   std::shared_ptr<SeqStatement> GetNextSeq(
-      std::shared_ptr<SeqStatement> element);
-  NodeType GetType(std::shared_ptr<Statement> stmt);
+      std::shared_ptr<SeqStatement> element) const;
+  NodeType GetType(std::shared_ptr<Statement> stmt) const;
   void SetJump(std::shared_ptr<SeqStatement> element,
       Label label);
 
  private:
-  std::shared_ptr<SeqStatement> GetSeqStmt(std::shared_ptr<Statement>);
-  std::shared_ptr<LabelStatement> GetLabelStmt(
-      std::shared_ptr<Statement>);
-  std::shared_ptr<JumpStatement> GetJumpStmt(std::shared_ptr<Statement>);
-  std::shared_ptr<JumpConditionalStatement> GetCJumpStmt(
-      std::shared_ptr<Statement>);
+  std::shared_ptr<SeqStatement> 
+    GetSeqStmt(std::shared_ptr<Statement>) const;
+  std::shared_ptr<LabelStatement> 
+    GetLabelStmt(std::shared_ptr<Statement>) const;
+  std::shared_ptr<JumpStatement> 
+    GetJumpStmt(std::shared_ptr<Statement>) const;
+  std::shared_ptr<JumpConditionalStatement> 
+    GetCJumpStmt(std::shared_ptr<Statement>) const;
 
  private:
   std::shared_ptr<Block> root_;
-  std::shared_ptr<IdentVisitor> ident_visitor_;
 };
 
 }

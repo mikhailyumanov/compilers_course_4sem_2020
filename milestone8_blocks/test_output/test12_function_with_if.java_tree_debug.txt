@@ -1,135 +1,135 @@
 >>> IrtreeBuildVisitor: Program
 >>> PrintVisitor: Program
 GoDown
-Current state: parent: 0x557134f21b50 ; child index: 1 num_children: 2 
-operator->; current_parent: 0x557134f21b50 child_index: 1 num_children: 2 
+Current state: parent: 0x56201c05cb50 ; child index: 1 num_children: 2 
+operator->; current_parent: 0x56201c05cb50 child_index: 1 num_children: 2 
 GoDown
-Current state: parent: 0x557134f220b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x56201c05d0b0 ; child index: 0 num_children: 1 
 >>> PrintVisitor: ClassDecl Dummy 
 SymbolTreeVisitor::FunctionScopeDown
 Return type: boolean; Args: 
 GoDown
-Current state: parent: 0x557134f22230 ; child index: 0 num_children: 1 
+Current state: parent: 0x56201c05d230 ; child index: 0 num_children: 1 
 Return type: boolean; Args: 
 >>> PrintVisitor: MethodDecl Return type: boolean; Args:  AlwaysTrue 
-AlwaysTrue Return type: boolean; Args:  operator->; current_parent: 0x557134f22230 child_index: 0 num_children: 1 
+AlwaysTrue Return type: boolean; Args:  operator->; current_parent: 0x56201c05d230 child_index: 0 num_children: 1 
 Return type: boolean; Args:  
 >>> PrintVisitor: ReturnStmt
 >>> PrintVisitor: IntExpr 1 
-MethodDecl:  Return type: boolean; Args:  operator->; current_parent: 0x557134f22230 child_index: 0 num_children: 1 
+MethodDecl:  Return type: boolean; Args:  operator->; current_parent: 0x56201c05d230 child_index: 0 num_children: 1 
 Return type: boolean; Args:  
-operator->; current_parent: 0x557134f22230 child_index: 0 num_children: 1 
+operator->; current_parent: 0x56201c05d230 child_index: 0 num_children: 1 
 Return type: boolean; Args: 
 ScopeLayerTree::SetFunctionScope Return type: boolean; Args:  Return type: boolean; Args:  
 GoUp
-Current state: parent: 0x557134f220b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x56201c05d0b0 ; child index: 0 num_children: 1 
 SymbolTreeVisitor::FunctionScopeDown
 Return type: boolean; Args: 
 GoDown
-Current state: parent: 0x557134f22230 ; child index: 1 num_children: 2 
+Current state: parent: 0x56201c05d230 ; child index: 1 num_children: 2 
 Return type: boolean; Args: 
 >>> PrintVisitor: MethodDecl Return type: boolean; Args:  AlwaysFalse 
-AlwaysFalse Return type: boolean; Args:  operator->; current_parent: 0x557134f22230 child_index: 1 num_children: 2 
+AlwaysFalse Return type: boolean; Args:  operator->; current_parent: 0x56201c05d230 child_index: 1 num_children: 2 
 Return type: boolean; Args:  
 GoDown
-Current state: parent: 0x557134f228c0 ; child index: 0 num_children: 1 
+Current state: parent: 0x56201c05d8c0 ; child index: 0 num_children: 1 
 >>> PrintVisitor: IfStmt
 >>> PrintVisitor: TrueExpr
 GoDown
-Current state: parent: 0x557134f22a60 ; child index: 0 num_children: 1 
+Current state: parent: 0x56201c05da60 ; child index: 0 num_children: 1 
 >>> PrintVisitor: StmtListStmt
 >>> PrintVisitor: ReturnStmt
 >>> PrintVisitor: IntExpr 0 
 GoUp
-Current state: parent: 0x557134f228c0 ; child index: 0 num_children: 1 
+Current state: parent: 0x56201c05d8c0 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x557134f22230 ; child index: 1 num_children: 2 
+Current state: parent: 0x56201c05d230 ; child index: 1 num_children: 2 
 >>> PrintVisitor: ReturnStmt
 >>> PrintVisitor: IntExpr 1 
-MethodDecl:  Return type: boolean; Args:  operator->; current_parent: 0x557134f22230 child_index: 1 num_children: 2 
+MethodDecl:  Return type: boolean; Args:  operator->; current_parent: 0x56201c05d230 child_index: 1 num_children: 2 
 Return type: boolean; Args:  
-operator->; current_parent: 0x557134f22230 child_index: 1 num_children: 2 
+operator->; current_parent: 0x56201c05d230 child_index: 1 num_children: 2 
 Return type: boolean; Args: 
 ScopeLayerTree::SetFunctionScope Return type: boolean; Args:  Return type: boolean; Args:  
 GoUp
-Current state: parent: 0x557134f220b0 ; child index: 0 num_children: 1 
+Current state: parent: 0x56201c05d0b0 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x557134f21b50 ; child index: 1 num_children: 2 
+Current state: parent: 0x56201c05cb50 ; child index: 1 num_children: 2 
 GoDown
-Current state: parent: 0x557134f220b0 ; child index: 1 num_children: 2 
-operator->; current_parent: 0x557134f220b0 child_index: 1 num_children: 2 
+Current state: parent: 0x56201c05d0b0 ; child index: 1 num_children: 2 
+operator->; current_parent: 0x56201c05d0b0 child_index: 1 num_children: 2 
 >>> PrintVisitor: MainClass
-operator->; current_parent: 0x557134f220b0 child_index: 1 num_children: 2 
+operator->; current_parent: 0x56201c05d0b0 child_index: 1 num_children: 2 
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: boolean, is_array: false res 
 res type: boolean, is_array: false 
-operator->; current_parent: 0x557134f220b0 child_index: 1 num_children: 2 
+operator->; current_parent: 0x56201c05d0b0 child_index: 1 num_children: 2 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x557134f220b0 child_index: 1 num_children: 2 
+operator->; current_parent: 0x56201c05d0b0 child_index: 1 num_children: 2 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x557134f220b0 child_index: 1 num_children: 2 
+operator->; current_parent: 0x56201c05d0b0 child_index: 1 num_children: 2 
 >>> PrintVisitor: AssignmentStmt
-operator->; current_parent: 0x557134f220b0 child_index: 1 num_children: 2 
+operator->; current_parent: 0x56201c05d0b0 child_index: 1 num_children: 2 
 >>> PrintVisitor: MethodExpr
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: NewExpr type =  Dummy 
 AlwaysTrue
 GoDown
-Current state: parent: 0x557134f2dd90 ; child index: 0 num_children: 1 
+Current state: parent: 0x56201c068d90 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x557134f220b0 ; child index: 1 num_children: 2 
-operator->; current_parent: 0x557134f220b0 child_index: 1 num_children: 2 
+Current state: parent: 0x56201c05d0b0 ; child index: 1 num_children: 2 
+operator->; current_parent: 0x56201c05d0b0 child_index: 1 num_children: 2 
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IdentExpr res 
-operator->; current_parent: 0x557134f220b0 child_index: 1 num_children: 2 
-operator->; current_parent: 0x557134f220b0 child_index: 1 num_children: 2 
+operator->; current_parent: 0x56201c05d0b0 child_index: 1 num_children: 2 
+operator->; current_parent: 0x56201c05d0b0 child_index: 1 num_children: 2 
 >>> PrintVisitor: AssignmentStmt
-operator->; current_parent: 0x557134f220b0 child_index: 1 num_children: 2 
+operator->; current_parent: 0x56201c05d0b0 child_index: 1 num_children: 2 
 >>> PrintVisitor: MethodExpr
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: NewExpr type =  Dummy 
 AlwaysTrue
 GoDown
-Current state: parent: 0x557134f2dd90 ; child index: 1 num_children: 2 
+Current state: parent: 0x56201c068d90 ; child index: 1 num_children: 2 
 GoUp
-Current state: parent: 0x557134f220b0 ; child index: 1 num_children: 2 
-operator->; current_parent: 0x557134f220b0 child_index: 1 num_children: 2 
+Current state: parent: 0x56201c05d0b0 ; child index: 1 num_children: 2 
+operator->; current_parent: 0x56201c05d0b0 child_index: 1 num_children: 2 
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IdentExpr res 
-operator->; current_parent: 0x557134f220b0 child_index: 1 num_children: 2 
-operator->; current_parent: 0x557134f220b0 child_index: 1 num_children: 2 
+operator->; current_parent: 0x56201c05d0b0 child_index: 1 num_children: 2 
+operator->; current_parent: 0x56201c05d0b0 child_index: 1 num_children: 2 
 >>> PrintVisitor: AssignmentStmt
-operator->; current_parent: 0x557134f220b0 child_index: 1 num_children: 2 
+operator->; current_parent: 0x56201c05d0b0 child_index: 1 num_children: 2 
 >>> PrintVisitor: MethodExpr
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: NewExpr type =  Dummy 
 AlwaysFalse
 GoDown
-Current state: parent: 0x557134f2dd90 ; child index: 2 num_children: 3 
+Current state: parent: 0x56201c068d90 ; child index: 2 num_children: 3 
 GoUp
-Current state: parent: 0x557134f220b0 ; child index: 1 num_children: 2 
-operator->; current_parent: 0x557134f220b0 child_index: 1 num_children: 2 
+Current state: parent: 0x56201c05d0b0 ; child index: 1 num_children: 2 
+operator->; current_parent: 0x56201c05d0b0 child_index: 1 num_children: 2 
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IdentExpr res 
-operator->; current_parent: 0x557134f220b0 child_index: 1 num_children: 2 
-operator->; current_parent: 0x557134f220b0 child_index: 1 num_children: 2 
+operator->; current_parent: 0x56201c05d0b0 child_index: 1 num_children: 2 
+operator->; current_parent: 0x56201c05d0b0 child_index: 1 num_children: 2 
 >>> PrintVisitor: AssignmentStmt
-operator->; current_parent: 0x557134f220b0 child_index: 1 num_children: 2 
+operator->; current_parent: 0x56201c05d0b0 child_index: 1 num_children: 2 
 >>> PrintVisitor: MethodExpr
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: NewExpr type =  Dummy 
 AlwaysFalse
 GoDown
-Current state: parent: 0x557134f2dd90 ; child index: 3 num_children: 4 
+Current state: parent: 0x56201c068d90 ; child index: 3 num_children: 4 
 GoUp
-Current state: parent: 0x557134f220b0 ; child index: 1 num_children: 2 
-operator->; current_parent: 0x557134f220b0 child_index: 1 num_children: 2 
+Current state: parent: 0x56201c05d0b0 ; child index: 1 num_children: 2 
+operator->; current_parent: 0x56201c05d0b0 child_index: 1 num_children: 2 
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IdentExpr res 
-operator->; current_parent: 0x557134f220b0 child_index: 1 num_children: 2 
-operator->; current_parent: 0x557134f220b0 child_index: 1 num_children: 2 
+operator->; current_parent: 0x56201c05d0b0 child_index: 1 num_children: 2 
+operator->; current_parent: 0x56201c05d0b0 child_index: 1 num_children: 2 
 GoUp
-Current state: parent: 0x557134f21b50 ; child index: 1 num_children: 2 
+Current state: parent: 0x56201c05cb50 ; child index: 1 num_children: 2 
 >>> IrtreeBuildVisitor: ClassDecl
 >>> IrtreeBuildVisitor: MethodDecl
 >>> IrtreeBuildVisitor: ReturnStmt
