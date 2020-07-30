@@ -1,137 +1,137 @@
 >>> IrtreeBuildVisitor: Program
 >>> PrintVisitor: Program
 GoDown
-Current state: parent: 0x563a6fe3c9b0 ; child index: 1 num_children: 2 
-operator->; current_parent: 0x563a6fe3c9b0 child_index: 1 num_children: 2 
+Current state: parent: 0x55cf855dabf0 ; child index: 1 num_children: 2 
+operator->; current_parent: 0x55cf855dabf0 child_index: 1 num_children: 2 
 GoDown
-Current state: parent: 0x563a6fe3cf40 ; child index: 0 num_children: 1 
-operator->; current_parent: 0x563a6fe3cf40 child_index: 0 num_children: 1 
+Current state: parent: 0x55cf855db150 ; child index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db150 child_index: 0 num_children: 1 
 >>> PrintVisitor: MainClass
-operator->; current_parent: 0x563a6fe3cf40 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db150 child_index: 0 num_children: 1 
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false i 
 i type: int, is_array: false 
-operator->; current_parent: 0x563a6fe3cf40 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db150 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x563a6fe3cf40 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db150 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x563a6fe3cf40 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db150 child_index: 0 num_children: 1 
 >>> PrintVisitor: AssignmentStmt
-operator->; current_parent: 0x563a6fe3cf40 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db150 child_index: 0 num_children: 1 
 >>> PrintVisitor: IntExpr 0 
-operator->; current_parent: 0x563a6fe3cf40 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db150 child_index: 0 num_children: 1 
 GoDown
-Current state: parent: 0x563a6fe3d090 ; child index: 0 num_children: 1 
+Current state: parent: 0x55cf855db270 ; child index: 0 num_children: 1 
 >>> PrintVisitor: WhileStmt
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr i 
-operator->; current_parent: 0x563a6fe3d090 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db270 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x563a6fe3d090 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db270 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 >>> PrintVisitor: IntExpr 8 
 GoDown
-Current state: parent: 0x563a6fe3d320 ; child index: 0 num_children: 1 
+Current state: parent: 0x55cf855db4f0 ; child index: 0 num_children: 1 
 >>> PrintVisitor: StmtListStmt
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: boolean, is_array: true y 
 y type: boolean, is_array: true 
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
 >>> PrintVisitor: AssignmentStmt
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
 >>> PrintVisitor: NewArrayExpr type =  boolean 
 >>> PrintVisitor: IntExpr 3 
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
 >>> PrintVisitor: AssignmentStmt
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
 >>> PrintVisitor: IntExpr 0 
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr i 
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
 >>> PrintVisitor: IntExpr 3 
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
 >>> PrintVisitor: AssignmentStmt
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
 >>> PrintVisitor: IntExpr 1 
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr i 
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
 >>> PrintVisitor: IntExpr 4 
 >>> PrintVisitor: IntExpr 1 
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
 >>> PrintVisitor: AssignmentStmt
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
 >>> PrintVisitor: IntExpr 2 
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr i 
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
 >>> PrintVisitor: IntExpr 2 
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
 >>> PrintVisitor: AssignmentStmt
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: IdentExpr i 
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
 >>> PrintVisitor: IntExpr 1 
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: SubscriptExpr
 >>> PrintVisitor: IdentExpr y 
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
 >>> PrintVisitor: IntExpr 0 
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: SubscriptExpr
 >>> PrintVisitor: IdentExpr y 
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
 >>> PrintVisitor: IntExpr 1 
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: SubscriptExpr
 >>> PrintVisitor: IdentExpr y 
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
-operator->; current_parent: 0x563a6fe3d320 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55cf855db4f0 child_index: 0 num_children: 1 
 >>> PrintVisitor: IntExpr 2 
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IntExpr 11111111 
 GoUp
-Current state: parent: 0x563a6fe3d090 ; child index: 0 num_children: 1 
+Current state: parent: 0x55cf855db270 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x563a6fe3cf40 ; child index: 0 num_children: 1 
+Current state: parent: 0x55cf855db150 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x563a6fe3c9b0 ; child index: 1 num_children: 2 
+Current state: parent: 0x55cf855dabf0 ; child index: 1 num_children: 2 
 >>> IrtreeBuildVisitor: MainClass
 >>> IrtreeBuildVisitor: LocalVarDeclStmt
 >>> IrtreeBuildVisitor: VarDecl
@@ -772,4 +772,302 @@ EseqElimination::SeqStatement (finish)
 EseqElimination::SeqStatement (finish)
 EseqElimination::SeqStatement (finish)
 EseqElimination::SeqStatement (finish)
-BlockTree::BlockTree
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+0
+build blocks: L2
+build blocks: 1
+build blocks: L3
+build blocks: 1
+build blocks: L6
+build blocks: 1
+build blocks: L4
+build blocks: 1
+build blocks: L0
+build blocks: 1
+build blocks: L7
+build blocks: 1
+build blocks: L5
+build blocks: 1
+build blocks: L1
+build blocks: 1
+BlockTree::PrintTree
+SeqStatement:
+LabelStatement: 
+SeqStatement:
+MoveStatement:
+MemExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+ConstExpression 
+SeqStatement:
+JumpStatement: 
+SeqStatement:
+LabelStatement: 
+SeqStatement:
+JumpConditionalStatement: 
+MemExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+ConstExpression 
+SeqStatement:
+LabelStatement: 
+SeqStatement:
+MoveStatement:
+TempExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+SeqStatement:
+MoveStatement:
+TempExpression: 
+CallExpression: 
+NameExpression: 
+ExpressionList: 
+BinopExpression: 
+ConstExpression 
+ConstExpression 
+SeqStatement:
+MoveStatement:
+MemExpression: 
+TempExpression: 
+TempExpression: 
+SeqStatement:
+MoveStatement:
+TempExpression: 
+BinopExpression: 
+MemExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+BinopExpression: 
+BinopExpression: 
+ConstExpression 
+ConstExpression 
+ConstExpression 
+SeqStatement:
+MoveStatement:
+TempExpression: 
+ConstExpression 
+SeqStatement:
+JumpConditionalStatement: 
+MemExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+ConstExpression 
+SeqStatement:
+LabelStatement: 
+SeqStatement:
+MoveStatement:
+TempExpression: 
+ConstExpression 
+SeqStatement:
+JumpStatement: 
+SeqStatement:
+LabelStatement: 
+SeqStatement:
+MoveStatement:
+MemExpression: 
+TempExpression: 
+TempExpression: 
+SeqStatement:
+MoveStatement:
+TempExpression: 
+BinopExpression: 
+MemExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+BinopExpression: 
+BinopExpression: 
+ConstExpression 
+ConstExpression 
+ConstExpression 
+SeqStatement:
+MoveStatement:
+TempExpression: 
+ConstExpression 
+SeqStatement:
+JumpConditionalStatement: 
+BinopExpression: 
+MemExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+BinopExpression: 
+ConstExpression 
+BinopExpression: 
+MemExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+ConstExpression 
+ConstExpression 
+SeqStatement:
+LabelStatement: 
+SeqStatement:
+MoveStatement:
+TempExpression: 
+ConstExpression 
+SeqStatement:
+JumpStatement: 
+SeqStatement:
+LabelStatement: 
+SeqStatement:
+MoveStatement:
+MemExpression: 
+TempExpression: 
+TempExpression: 
+SeqStatement:
+MoveStatement:
+MemExpression: 
+BinopExpression: 
+MemExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+BinopExpression: 
+BinopExpression: 
+ConstExpression 
+ConstExpression 
+ConstExpression 
+BinopExpression: 
+MemExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+BinopExpression: 
+ConstExpression 
+BinopExpression: 
+MemExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+ConstExpression 
+SeqStatement:
+MoveStatement:
+MemExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+BinopExpression: 
+MemExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+ConstExpression 
+SeqStatement:
+MoveStatement:
+TempExpression: 
+CallExpression: 
+NameExpression: 
+ExpressionList: 
+MemExpression: 
+BinopExpression: 
+MemExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+BinopExpression: 
+BinopExpression: 
+ConstExpression 
+ConstExpression 
+ConstExpression 
+SeqStatement:
+MoveStatement:
+TempExpression: 
+CallExpression: 
+NameExpression: 
+ExpressionList: 
+MemExpression: 
+BinopExpression: 
+MemExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+BinopExpression: 
+BinopExpression: 
+ConstExpression 
+ConstExpression 
+ConstExpression 
+SeqStatement:
+MoveStatement:
+TempExpression: 
+CallExpression: 
+NameExpression: 
+ExpressionList: 
+MemExpression: 
+BinopExpression: 
+MemExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+BinopExpression: 
+BinopExpression: 
+ConstExpression 
+ConstExpression 
+ConstExpression 
+SeqStatement:
+MoveStatement:
+TempExpression: 
+CallExpression: 
+NameExpression: 
+ExpressionList: 
+ConstExpression 
+SeqStatement:
+JumpStatement: 
+SeqStatement:
+LabelStatement: 
+SeqStatement:
+JumpStatement: 
+SeqStatement:
+LabelStatement: 
+LabelStatement: 
+BFS
+BFS
+BFS
+BFS
+BFS
+BFS
+BFS
+BFS
+BFS
+BFS
+BFS
+BFS
+BFS
+BFS finished

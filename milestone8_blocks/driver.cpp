@@ -113,11 +113,11 @@ void Driver::PrintIrtree(const std::string& filename) const {
   auto print_visitor = std::make_shared<IRT::PrintVisitor>(
       filename + "_irtree.txt");
 
-  for (auto&& pair : methods) {
+  for (auto& pair : methods) {
     DEBUG_SINGLE(pair.first)
-    pair.second->Accept(std::make_shared<IRT::DoubleCallEliminationVisitor>());
-    pair.second->Accept(std::make_shared<IRT::EseqEliminationVisitor>());
-    pair.second->Accept(std::make_shared<IRT::LinearizeVisitor>());
+    pair.second = std::make_shared<IRT::DoubleCallEliminationVisitor>()->Accept(pair.second).stmt;
+    pair.second = std::make_shared<IRT::EseqEliminationVisitor>()->Accept(pair.second).stmt;
+    pair.second = std::make_shared<IRT::LinearizeVisitor>()->Accept(pair.second).stmt;
     pair.second->Accept(print_visitor);
   }
 }
@@ -127,12 +127,10 @@ void Driver::PrintBlockTree(const std::string& filename) const {
   irtree_build_visitor->Visit(program);
   IrtMapping methods = irtree_build_visitor->GetTrees();
   
-
-  auto print_visitor = std::make_shared<IRT::PrintVisitor>(
-      filename + "_irtree.txt");
-
-  for (auto&& pair : methods) {
-    std::make_shared<IRT::BlockTree>(pair.second)->PrintTree(filename + "_blocks");
+  std::string output = filename + "_irtree.txt";
+  for (auto& pair : methods) {
+    auto block_tree = std::make_shared<IRT::BlockTree>(pair.second);
+    block_tree->PrintTree(output);
   }
 }
 

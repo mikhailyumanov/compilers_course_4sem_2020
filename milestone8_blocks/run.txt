@@ -1,34 +1,42 @@
 ================================================================================
 START TEST simple_test.java
 ./test/simple_test.java
-
-================================================================================
-START TEST test1.java
-./test/test1.java
+result: 0
 
 ================================================================================
 START TEST test10_many_decls_and_assigns.java
 ./test/test10_many_decls_and_assigns.java
+result: 0
 
 ================================================================================
 START TEST test11_factorial.java
 ./test/test11_factorial.java
+result: 0
 
 ================================================================================
 START TEST test12_function_with_if.java
 ./test/test12_function_with_if.java
+result: 0
 
 ================================================================================
 START TEST test13_double_call.java
 ./test/test13_double_call.java
+result: 0
 
 ================================================================================
 START TEST test14_cjump.java
 ./test/test14_cjump.java
+result: 0
+
+================================================================================
+START TEST test1.java
+./test/test1.java
+result: 0
 
 ================================================================================
 START TEST test2.java
 ./test/test2.java
+result: 0
 
 ================================================================================
 START TEST test3_double_decl.java
@@ -37,6 +45,7 @@ START TEST test3_double_decl.java
 ================================================================================
 START TEST test4_uninit_var.java
 ./test/test4_uninit_var.java
+result: 0
 
 ================================================================================
 START TEST test5_wrong_scope.java
@@ -45,16 +54,20 @@ START TEST test5_wrong_scope.java
 ================================================================================
 START TEST test6_correct_scope.java
 ./test/test6_correct_scope.java
+result: 0
 
 ================================================================================
 START TEST test7_big_scopes.java
 ./test/test7_big_scopes.java
+result: 0
 
 ================================================================================
 START TEST test8_functions.java
 ./test/test8_functions.java
+result: 0
 
 ================================================================================
 START TEST test9_functions_long.java
 ./test/test9_functions_long.java
+result: 0
 

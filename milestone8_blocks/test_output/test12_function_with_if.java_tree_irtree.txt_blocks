@@ -1,0 +1,24 @@
+Current: Dummy::AlwaysFalse
+Prev: 
+ > 
+Next: 
+ > L1, L0, 
+
+Current: L1
+Prev: 
+ > Dummy::AlwaysFalse, L0, 
+Next: 
+ > %done, 
+
+Current: L0
+Prev: 
+ > Dummy::AlwaysFalse, 
+Next: 
+ > L1, 
+
+Current: %done
+Prev: 
+ > L1, 
+Next: 
+ > 
+

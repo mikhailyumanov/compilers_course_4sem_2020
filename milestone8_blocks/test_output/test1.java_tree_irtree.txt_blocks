@@ -1,0 +1,72 @@
+Current: L4
+Prev: 
+ > 
+Next: 
+ > L1, L0, 
+
+Current: L1
+Prev: 
+ > L4, 
+Next: 
+ > L0, 
+
+Current: L0
+Prev: 
+ > L1, L4, 
+Next: 
+ > L3, L2, 
+
+Current: L0
+Prev: 
+ > L1, L4, 
+Next: 
+ > L3, L2, 
+
+Current: L3
+Prev: 
+ > L0, 
+Next: 
+ > L2, 
+
+Current: L2
+Prev: 
+ > L0, L3, 
+Next: 
+ > %done, 
+
+Current: L3
+Prev: 
+ > L0, 
+Next: 
+ > L2, 
+
+Current: L2
+Prev: 
+ > L0, L3, 
+Next: 
+ > %done, 
+
+Current: L2
+Prev: 
+ > L0, L3, 
+Next: 
+ > %done, 
+
+Current: %done
+Prev: 
+ > L2, 
+Next: 
+ > 
+
+Current: %done
+Prev: 
+ > L2, 
+Next: 
+ > 
+
+Current: %done
+Prev: 
+ > L2, 
+Next: 
+ > 
+
