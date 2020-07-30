@@ -134,6 +134,9 @@ set(
     include/irtree/nodes/expressions/NameExpression.cpp 
     include/irtree/nodes/expressions/EseqExpression.cpp 
 
+    include/irtree/blocks/Block.cpp
+    include/irtree/blocks/BlockTree.cpp
+
     include/irtree/visitors/PrintVisitor.cpp 
     include/irtree/visitors/TemplateVisitor.cpp
     include/irtree/visitors/IdentVisitor.cpp

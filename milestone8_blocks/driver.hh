@@ -13,10 +13,10 @@
 #include "visitors/SymbolTreeVisitor.hpp"
 #include "visitors/IrtreeBuildVisitor.hpp"
 
-#include "irtree/visitors/PrintVisitor.hpp"
-#include "irtree/visitors/DoubleCallEliminationVisitor.hpp"
-#include "irtree/visitors/EseqEliminationVisitor.hpp"
-#include "irtree/visitors/LinearizeVisitor.hpp"
+#include "irtree/blocks/Block.hpp"
+#include "irtree/blocks/BlockTree.hpp"
+
+#include "irtree/elements.hpp"
 
 
 class Driver {
@@ -30,6 +30,7 @@ class Driver {
   void BuildSymbolTree(const std::string& filename) const;
   void PrintTree(const std::string& filename) const;
   void PrintIrtree(const std::string& filename) const;
+  void PrintBlockTree(const std::string& filename) const;
   int Eval() const;
 
  public:

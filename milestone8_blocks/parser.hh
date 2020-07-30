@@ -32,7 +32,7 @@
 
 
 /**
- ** \file /compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/parser.hh
+ ** \file /compilers/compilers_course_4sem_2020/milestone8_blocks/parser.hh
  ** Define the yy::parser class.
  */
 
@@ -41,8 +41,8 @@
 // Undocumented macros, especially those whose name start with YY_,
 // are private implementation details.  Do not rely on them.
 
-#ifndef YY_YY_COMPILERS_COMPILERS_COURSE_4SEM_2020_MILESTONE7_IRTREE_CANONIZATION_PARSER_HH_INCLUDED
-# define YY_YY_COMPILERS_COMPILERS_COURSE_4SEM_2020_MILESTONE7_IRTREE_CANONIZATION_PARSER_HH_INCLUDED
+#ifndef YY_YY_COMPILERS_COMPILERS_COURSE_4SEM_2020_MILESTONE8_BLOCKS_PARSER_HH_INCLUDED
+# define YY_YY_COMPILERS_COMPILERS_COURSE_4SEM_2020_MILESTONE8_BLOCKS_PARSER_HH_INCLUDED
 // "%code requires" blocks.
 #line 9 "parser.y"
 
@@ -55,7 +55,7 @@
     class Scanner;
     class Driver;
 
-#line 59 "/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/parser.hh"
+#line 59 "/compilers/compilers_course_4sem_2020/milestone8_blocks/parser.hh"
 
 # include <cassert>
 # include <cstdlib> // std::abort
@@ -189,7 +189,7 @@
 #endif
 
 namespace yy {
-#line 193 "/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/parser.hh"
+#line 193 "/compilers/compilers_course_4sem_2020/milestone8_blocks/parser.hh"
 
 
 
@@ -2543,10 +2543,10 @@ switch (yytype)
   }
 
 } // yy
-#line 2547 "/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/parser.hh"
+#line 2547 "/compilers/compilers_course_4sem_2020/milestone8_blocks/parser.hh"
 
 
 
 
 
-#endif // !YY_YY_COMPILERS_COMPILERS_COURSE_4SEM_2020_MILESTONE7_IRTREE_CANONIZATION_PARSER_HH_INCLUDED
+#endif // !YY_YY_COMPILERS_COMPILERS_COURSE_4SEM_2020_MILESTONE8_BLOCKS_PARSER_HH_INCLUDED

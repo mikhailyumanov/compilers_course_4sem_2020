@@ -35,7 +35,9 @@ debug_output_stream = std::ofstream(tree_output + "_debug.txt");
     }
 */
 
-    PrintIrtree(tree_output);
+//    PrintIrtree(tree_output);
+
+    PrintBlockTree(tree_output);
 
     return res;
 }
@@ -108,50 +110,29 @@ void Driver::PrintIrtree(const std::string& filename) const {
   irtree_build_visitor->Visit(program);
   IrtMapping methods = irtree_build_visitor->GetTrees();
 
-  // Print IR tree without canonization
   auto print_visitor = std::make_shared<IRT::PrintVisitor>(
       filename + "_irtree.txt");
 
   for (auto&& pair : methods) {
     DEBUG_SINGLE(pair.first)
+    pair.second->Accept(std::make_shared<IRT::DoubleCallEliminationVisitor>());
+    pair.second->Accept(std::make_shared<IRT::EseqEliminationVisitor>());
+    pair.second->Accept(std::make_shared<IRT::LinearizeVisitor>());
     pair.second->Accept(print_visitor);
-  }
-
-
-  // Eliminate double calls and print
-  auto print_visitor_double_call = std::make_shared<IRT::PrintVisitor>(
-      filename + "_irtree_without_double_calls.txt");
-
-  for (auto&& pair : methods) {
-    DEBUG_SINGLE(pair.first)
-    pair.second->Accept(
-        std::make_shared<IRT::DoubleCallEliminationVisitor>());
-    pair.second->Accept(print_visitor_double_call);
-  }
-
-
-  // Eliminate eseq and print
-  auto print_visitor_eseq = std::make_shared<IRT::PrintVisitor>(
-      filename + "_irtree_without_eseq.txt");
-
-  for (auto&& pair : methods) {
-    DEBUG_SINGLE(pair.first)
-    pair.second->Accept(
-        std::make_shared<IRT::EseqEliminationVisitor>());
-    pair.second->Accept(print_visitor_eseq);
-  }
-
-
-  // Linearize eseq and print
-  auto print_visitor_linear = std::make_shared<IRT::PrintVisitor>(
-      filename + "_irtree_linear.txt");
-
-  for (auto&& pair : methods) {
-    DEBUG_SINGLE(pair.first)
-    pair.second->Accept(
-        std::make_shared<IRT::LinearizeVisitor>());
-    pair.second->Accept(print_visitor_linear);
   }
 }
 
+void Driver::PrintBlockTree(const std::string& filename) const {
+  auto irtree_build_visitor = std::make_shared<IrtreeBuildVisitor>(filename);
+  irtree_build_visitor->Visit(program);
+  IrtMapping methods = irtree_build_visitor->GetTrees();
+  
+
+  auto print_visitor = std::make_shared<IRT::PrintVisitor>(
+      filename + "_irtree.txt");
+
+  for (auto&& pair : methods) {
+    std::make_shared<IRT::BlockTree>(pair.second)->PrintTree(filename + "_blocks");
+  }
+}
 

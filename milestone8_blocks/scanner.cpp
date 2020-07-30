@@ -1,6 +1,6 @@
-#line 2 "/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/scanner.cpp"
+#line 2 "/compilers/compilers_course_4sem_2020/milestone8_blocks/scanner.cpp"
 
-#line 4 "/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/scanner.cpp"
+#line 4 "/compilers/compilers_course_4sem_2020/milestone8_blocks/scanner.cpp"
 
 #define  YY_INT_ALIGNED short int
 
@@ -586,7 +586,7 @@ static const flex_int16_t yy_rule_linenum[55] =
     #include "parser.hh"
 
 #define TOKEN yy::parser::token
-#line 590 "/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/scanner.cpp"
+#line 590 "/compilers/compilers_course_4sem_2020/milestone8_blocks/scanner.cpp"
 #define YY_NO_INPUT 1
 #line 20 "scanner.l"
   // A number symbol corresponding to the value in S.
@@ -594,13 +594,13 @@ static const flex_int16_t yy_rule_linenum[55] =
     const std::string &s,
     const yy::parser::location_type& loc
   );
-#line 598 "/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/scanner.cpp"
+#line 598 "/compilers/compilers_course_4sem_2020/milestone8_blocks/scanner.cpp"
 
 #line 35 "scanner.l"
   // Code run each time a pattern is matched.
   # define YY_USER_ACTION  loc.columns (yyleng);
-#line 603 "/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/scanner.cpp"
-#line 604 "/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/scanner.cpp"
+#line 603 "/compilers/compilers_course_4sem_2020/milestone8_blocks/scanner.cpp"
+#line 604 "/compilers/compilers_course_4sem_2020/milestone8_blocks/scanner.cpp"
 
 #define INITIAL 0
 #define cpp_comment 1
@@ -804,7 +804,7 @@ YY_DECL
   loc.step();
 
 
-#line 808 "/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/scanner.cpp"
+#line 808 "/compilers/compilers_course_4sem_2020/milestone8_blocks/scanner.cpp"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -1175,7 +1175,7 @@ YY_RULE_SETUP
 #line 124 "scanner.l"
 ECHO;
 	YY_BREAK
-#line 1179 "/compilers/compilers_course_4sem_2020/milestone7_irtree_canonization/scanner.cpp"
+#line 1179 "/compilers/compilers_course_4sem_2020/milestone8_blocks/scanner.cpp"
 
 	case YY_END_OF_BUFFER:
 		{

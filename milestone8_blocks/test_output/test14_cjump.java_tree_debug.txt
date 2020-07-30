@@ -1,201 +1,201 @@
 >>> IrtreeBuildVisitor: Program
 >>> PrintVisitor: Program
 GoDown
-Current state: parent: 0x55bd9bf4bb10 ; child index: 1 num_children: 2 
-operator->; current_parent: 0x55bd9bf4bb10 child_index: 1 num_children: 2 
+Current state: parent: 0x55ab7248c8f0 ; child index: 1 num_children: 2 
+operator->; current_parent: 0x55ab7248c8f0 child_index: 1 num_children: 2 
 GoDown
-Current state: parent: 0x55bd9bf4c0c0 ; child index: 0 num_children: 1 
+Current state: parent: 0x55ab7248ce80 ; child index: 0 num_children: 1 
 >>> PrintVisitor: ClassDecl Five 
 SymbolTreeVisitor::FunctionScopeDown
 Return type: int; Args: 
 GoDown
-Current state: parent: 0x55bd9bf4c1e0 ; child index: 0 num_children: 1 
+Current state: parent: 0x55ab7248d000 ; child index: 0 num_children: 1 
 Return type: int; Args: 
 >>> PrintVisitor: MethodDecl Return type: int; Args:  GetNumber 
-GetNumber Return type: int; Args:  operator->; current_parent: 0x55bd9bf4c1e0 child_index: 0 num_children: 1 
+GetNumber Return type: int; Args:  operator->; current_parent: 0x55ab7248d000 child_index: 0 num_children: 1 
 Return type: int; Args:  
 >>> PrintVisitor: ReturnStmt
 >>> PrintVisitor: IntExpr 5 
-MethodDecl:  Return type: int; Args:  operator->; current_parent: 0x55bd9bf4c1e0 child_index: 0 num_children: 1 
+MethodDecl:  Return type: int; Args:  operator->; current_parent: 0x55ab7248d000 child_index: 0 num_children: 1 
 Return type: int; Args:  
-operator->; current_parent: 0x55bd9bf4c1e0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55ab7248d000 child_index: 0 num_children: 1 
 Return type: int; Args: 
 ScopeLayerTree::SetFunctionScope Return type: int; Args:  Return type: int; Args:  
 GoUp
-Current state: parent: 0x55bd9bf4c0c0 ; child index: 0 num_children: 1 
+Current state: parent: 0x55ab7248ce80 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x55bd9bf4bb10 ; child index: 1 num_children: 2 
+Current state: parent: 0x55ab7248c8f0 ; child index: 1 num_children: 2 
 GoDown
-Current state: parent: 0x55bd9bf4c0c0 ; child index: 1 num_children: 2 
+Current state: parent: 0x55ab7248ce80 ; child index: 1 num_children: 2 
 >>> PrintVisitor: ClassDecl Number 
 >>> PrintVisitor: VarDecl type: int, is_array: false value 
 value type: int, is_array: false 
-operator->; current_parent: 0x55bd9bf4c0c0 child_index: 1 num_children: 2 
+operator->; current_parent: 0x55ab7248ce80 child_index: 1 num_children: 2 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: ; Args:  
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: ; Args:  
-operator->; current_parent: 0x55bd9bf4c0c0 child_index: 1 num_children: 2 
+operator->; current_parent: 0x55ab7248ce80 child_index: 1 num_children: 2 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: ; Args:  
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: ; Args:  
-operator->; current_parent: 0x55bd9bf4c0c0 child_index: 1 num_children: 2 
+operator->; current_parent: 0x55ab7248ce80 child_index: 1 num_children: 2 
 VarDecl: IsMethodDecl
 SymbolTreeVisitor::FunctionScopeDown
 Return type: int; Args: 
 GoDown
-Current state: parent: 0x55bd9bf4c820 ; child index: 0 num_children: 1 
+Current state: parent: 0x55ab7248d590 ; child index: 0 num_children: 1 
 Return type: int; Args: 
 >>> PrintVisitor: MethodDecl Return type: int; Args:  GetNumber 
-GetNumber Return type: int; Args:  operator->; current_parent: 0x55bd9bf4c820 child_index: 0 num_children: 1 
+GetNumber Return type: int; Args:  operator->; current_parent: 0x55ab7248d590 child_index: 0 num_children: 1 
 Return type: int; Args:  
 >>> PrintVisitor: ReturnStmt
 >>> PrintVisitor: IdentExpr value 
-operator->; current_parent: 0x55bd9bf4c820 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55ab7248d590 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: int; Args:  
-operator->; current_parent: 0x55bd9bf4c820 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55ab7248d590 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: int; Args:  
-MethodDecl:  Return type: int; Args:  operator->; current_parent: 0x55bd9bf4c820 child_index: 0 num_children: 1 
+MethodDecl:  Return type: int; Args:  operator->; current_parent: 0x55ab7248d590 child_index: 0 num_children: 1 
 Return type: int; Args:  
-operator->; current_parent: 0x55bd9bf4c820 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55ab7248d590 child_index: 0 num_children: 1 
 Return type: int; Args: 
 ScopeLayerTree::SetFunctionScope Return type: int; Args:  Return type: int; Args:  
 GoUp
-Current state: parent: 0x55bd9bf4c0c0 ; child index: 1 num_children: 2 
+Current state: parent: 0x55ab7248ce80 ; child index: 1 num_children: 2 
 SymbolTreeVisitor::FunctionScopeDown
 Return type: void; Args: new_value(type: int, is_array: false), 
 GoDown
-Current state: parent: 0x55bd9bf4c820 ; child index: 1 num_children: 2 
+Current state: parent: 0x55ab7248d590 ; child index: 1 num_children: 2 
 Return type: void; Args: new_value(type: int, is_array: false), 
 >>> PrintVisitor: MethodDecl Return type: void; Args: new_value(type: int, is_array: false),  SetNumber 
-SetNumber Return type: void; Args: new_value(type: int, is_array: false),  operator->; current_parent: 0x55bd9bf4c820 child_index: 1 num_children: 2 
+SetNumber Return type: void; Args: new_value(type: int, is_array: false),  operator->; current_parent: 0x55ab7248d590 child_index: 1 num_children: 2 
 Return type: void; Args: new_value(type: int, is_array: false),  
 >>> PrintVisitor: AssignmentStmt
-operator->; current_parent: 0x55bd9bf4c820 child_index: 1 num_children: 2 
+operator->; current_parent: 0x55ab7248d590 child_index: 1 num_children: 2 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: void; Args: new_value(type: int, is_array: false),  
 ScopeLayer::IsArgument: new_value value
 >>> PrintVisitor: IdentExpr new_value 
-operator->; current_parent: 0x55bd9bf4c820 child_index: 1 num_children: 2 
+operator->; current_parent: 0x55ab7248d590 child_index: 1 num_children: 2 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: void; Args: new_value(type: int, is_array: false),  
 ScopeLayer::IsArgument: new_value new_value
-operator->; current_parent: 0x55bd9bf4c820 child_index: 1 num_children: 2 
+operator->; current_parent: 0x55ab7248d590 child_index: 1 num_children: 2 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: void; Args: new_value(type: int, is_array: false),  
 ScopeLayer::IsArgument: new_value new_value
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: void; Args: new_value(type: int, is_array: false),  
 ScopeLayer::IsArgument: new_value new_value
-operator->; current_parent: 0x55bd9bf4c820 child_index: 1 num_children: 2 
+operator->; current_parent: 0x55ab7248d590 child_index: 1 num_children: 2 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument not main Return type: void; Args: new_value(type: int, is_array: false),  
 ScopeLayer::IsArgument: new_value value
-MethodDecl:  Return type: void; Args: new_value(type: int, is_array: false),  operator->; current_parent: 0x55bd9bf4c820 child_index: 1 num_children: 2 
+MethodDecl:  Return type: void; Args: new_value(type: int, is_array: false),  operator->; current_parent: 0x55ab7248d590 child_index: 1 num_children: 2 
 Return type: void; Args: new_value(type: int, is_array: false),  
-operator->; current_parent: 0x55bd9bf4c820 child_index: 1 num_children: 2 
+operator->; current_parent: 0x55ab7248d590 child_index: 1 num_children: 2 
 Return type: void; Args: new_value(type: int, is_array: false), 
 ScopeLayerTree::SetFunctionScope Return type: void; Args: new_value(type: int, is_array: false),  Return type: void; Args: new_value(type: int, is_array: false),  
 GoUp
-Current state: parent: 0x55bd9bf4c0c0 ; child index: 1 num_children: 2 
+Current state: parent: 0x55ab7248ce80 ; child index: 1 num_children: 2 
 GoUp
-Current state: parent: 0x55bd9bf4bb10 ; child index: 1 num_children: 2 
+Current state: parent: 0x55ab7248c8f0 ; child index: 1 num_children: 2 
 GoDown
-Current state: parent: 0x55bd9bf4c0c0 ; child index: 2 num_children: 3 
-operator->; current_parent: 0x55bd9bf4c0c0 child_index: 2 num_children: 3 
+Current state: parent: 0x55ab7248ce80 ; child index: 2 num_children: 3 
+operator->; current_parent: 0x55ab7248ce80 child_index: 2 num_children: 3 
 >>> PrintVisitor: MainClass
-operator->; current_parent: 0x55bd9bf4c0c0 child_index: 2 num_children: 3 
+operator->; current_parent: 0x55ab7248ce80 child_index: 2 num_children: 3 
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: Number, is_array: false n 
 n type: Number, is_array: false 
-operator->; current_parent: 0x55bd9bf4c0c0 child_index: 2 num_children: 3 
+operator->; current_parent: 0x55ab7248ce80 child_index: 2 num_children: 3 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x55bd9bf4c0c0 child_index: 2 num_children: 3 
+operator->; current_parent: 0x55ab7248ce80 child_index: 2 num_children: 3 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x55bd9bf4c0c0 child_index: 2 num_children: 3 
+operator->; current_parent: 0x55ab7248ce80 child_index: 2 num_children: 3 
 >>> PrintVisitor: AssignmentStmt
-operator->; current_parent: 0x55bd9bf4c0c0 child_index: 2 num_children: 3 
+operator->; current_parent: 0x55ab7248ce80 child_index: 2 num_children: 3 
 >>> PrintVisitor: NewExpr type =  Number 
-operator->; current_parent: 0x55bd9bf4c0c0 child_index: 2 num_children: 3 
+operator->; current_parent: 0x55ab7248ce80 child_index: 2 num_children: 3 
 >>> PrintVisitor: MethodStmt
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: IdentExpr n 
-operator->; current_parent: 0x55bd9bf4c0c0 child_index: 2 num_children: 3 
-operator->; current_parent: 0x55bd9bf4c0c0 child_index: 2 num_children: 3 
+operator->; current_parent: 0x55ab7248ce80 child_index: 2 num_children: 3 
+operator->; current_parent: 0x55ab7248ce80 child_index: 2 num_children: 3 
 SetNumber
 >>> PrintVisitor: IntExpr 0 
 GoDown
-Current state: parent: 0x55bd9bf58d10 ; child index: 0 num_children: 1 
+Current state: parent: 0x55ab72499ad0 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x55bd9bf4c0c0 ; child index: 2 num_children: 3 
+Current state: parent: 0x55ab7248ce80 ; child index: 2 num_children: 3 
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: Five, is_array: false f 
 f type: Five, is_array: false 
-operator->; current_parent: 0x55bd9bf4c0c0 child_index: 2 num_children: 3 
+operator->; current_parent: 0x55ab7248ce80 child_index: 2 num_children: 3 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x55bd9bf4c0c0 child_index: 2 num_children: 3 
+operator->; current_parent: 0x55ab7248ce80 child_index: 2 num_children: 3 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x55bd9bf4c0c0 child_index: 2 num_children: 3 
+operator->; current_parent: 0x55ab7248ce80 child_index: 2 num_children: 3 
 >>> PrintVisitor: AssignmentStmt
-operator->; current_parent: 0x55bd9bf4c0c0 child_index: 2 num_children: 3 
+operator->; current_parent: 0x55ab7248ce80 child_index: 2 num_children: 3 
 >>> PrintVisitor: NewExpr type =  Five 
-operator->; current_parent: 0x55bd9bf4c0c0 child_index: 2 num_children: 3 
+operator->; current_parent: 0x55ab7248ce80 child_index: 2 num_children: 3 
 GoDown
-Current state: parent: 0x55bd9bf58d10 ; child index: 1 num_children: 2 
+Current state: parent: 0x55ab72499ad0 ; child index: 1 num_children: 2 
 >>> PrintVisitor: WhileStmt
 >>> PrintVisitor: BinOpExpr
 >>> PrintVisitor: MethodExpr
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: IdentExpr n 
-operator->; current_parent: 0x55bd9bf58d10 child_index: 1 num_children: 2 
+operator->; current_parent: 0x55ab72499ad0 child_index: 1 num_children: 2 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x55bd9bf58d10 child_index: 1 num_children: 2 
+operator->; current_parent: 0x55ab72499ad0 child_index: 1 num_children: 2 
 ScopeLayer::IsArgument
 GetNumber
 GoDown
-Current state: parent: 0x55bd9bf59140 ; child index: 0 num_children: 1 
+Current state: parent: 0x55ab72499ef0 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x55bd9bf58d10 ; child index: 1 num_children: 2 
+Current state: parent: 0x55ab72499ad0 ; child index: 1 num_children: 2 
 >>> PrintVisitor: MethodExpr
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: IdentExpr f 
-operator->; current_parent: 0x55bd9bf58d10 child_index: 1 num_children: 2 
+operator->; current_parent: 0x55ab72499ad0 child_index: 1 num_children: 2 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x55bd9bf58d10 child_index: 1 num_children: 2 
+operator->; current_parent: 0x55ab72499ad0 child_index: 1 num_children: 2 
 ScopeLayer::IsArgument
 GetNumber
 GoDown
-Current state: parent: 0x55bd9bf59140 ; child index: 1 num_children: 2 
+Current state: parent: 0x55ab72499ef0 ; child index: 1 num_children: 2 
 GoUp
-Current state: parent: 0x55bd9bf58d10 ; child index: 1 num_children: 2 
+Current state: parent: 0x55ab72499ad0 ; child index: 1 num_children: 2 
 GoDown
-Current state: parent: 0x55bd9bf59140 ; child index: 2 num_children: 3 
+Current state: parent: 0x55ab72499ef0 ; child index: 2 num_children: 3 
 >>> PrintVisitor: StmtListStmt
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: MethodExpr
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: IdentExpr n 
-operator->; current_parent: 0x55bd9bf59140 child_index: 2 num_children: 3 
+operator->; current_parent: 0x55ab72499ef0 child_index: 2 num_children: 3 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
-operator->; current_parent: 0x55bd9bf59140 child_index: 2 num_children: 3 
+operator->; current_parent: 0x55ab72499ef0 child_index: 2 num_children: 3 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
 GetNumber
 GoDown
-Current state: parent: 0x55bd9bf594a0 ; child index: 0 num_children: 1 
+Current state: parent: 0x55ab7249a250 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x55bd9bf59140 ; child index: 2 num_children: 3 
+Current state: parent: 0x55ab72499ef0 ; child index: 2 num_children: 3 
 >>> PrintVisitor: MethodStmt
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: IdentExpr n 
-operator->; current_parent: 0x55bd9bf59140 child_index: 2 num_children: 3 
+operator->; current_parent: 0x55ab72499ef0 child_index: 2 num_children: 3 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
-operator->; current_parent: 0x55bd9bf59140 child_index: 2 num_children: 3 
+operator->; current_parent: 0x55ab72499ef0 child_index: 2 num_children: 3 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
 SetNumber
@@ -203,28 +203,28 @@ SetNumber
 >>> PrintVisitor: MethodExpr
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: IdentExpr n 
-operator->; current_parent: 0x55bd9bf59140 child_index: 2 num_children: 3 
+operator->; current_parent: 0x55ab72499ef0 child_index: 2 num_children: 3 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
-operator->; current_parent: 0x55bd9bf59140 child_index: 2 num_children: 3 
+operator->; current_parent: 0x55ab72499ef0 child_index: 2 num_children: 3 
 ScopeLayer::IsArgument
 ScopeLayer::IsArgument
 GetNumber
 GoDown
-Current state: parent: 0x55bd9bf594a0 ; child index: 1 num_children: 2 
+Current state: parent: 0x55ab7249a250 ; child index: 1 num_children: 2 
 GoUp
-Current state: parent: 0x55bd9bf59140 ; child index: 2 num_children: 3 
+Current state: parent: 0x55ab72499ef0 ; child index: 2 num_children: 3 
 >>> PrintVisitor: IntExpr 1 
 GoDown
-Current state: parent: 0x55bd9bf594a0 ; child index: 2 num_children: 3 
+Current state: parent: 0x55ab7249a250 ; child index: 2 num_children: 3 
 GoUp
-Current state: parent: 0x55bd9bf59140 ; child index: 2 num_children: 3 
+Current state: parent: 0x55ab72499ef0 ; child index: 2 num_children: 3 
 GoUp
-Current state: parent: 0x55bd9bf58d10 ; child index: 1 num_children: 2 
+Current state: parent: 0x55ab72499ad0 ; child index: 1 num_children: 2 
 GoUp
-Current state: parent: 0x55bd9bf4c0c0 ; child index: 2 num_children: 3 
+Current state: parent: 0x55ab7248ce80 ; child index: 2 num_children: 3 
 GoUp
-Current state: parent: 0x55bd9bf4bb10 ; child index: 1 num_children: 2 
+Current state: parent: 0x55ab7248c8f0 ; child index: 1 num_children: 2 
 >>> IrtreeBuildVisitor: ClassDecl
 >>> IrtreeBuildVisitor: MethodDecl
 >>> IrtreeBuildVisitor: ReturnStmt
@@ -284,13 +284,6 @@ IRTree::Subscript
 >>> IrtreeBuildVisitor: IdentExpr
 >>> IrtreeBuildVisitor: Lvalue
 >>> IrtreeBuildVisitor: IntExpr
-main
-GetNumber
-SetNumber
-main
-GetNumber
-SetNumber
-main
 EseqElimination::SeqStatement
 EseqElimination::MoveStatement
 EseqElimination::MemExpression
@@ -579,85 +572,4 @@ EseqElimination::SeqStatement (finish)
 EseqElimination::SeqStatement (finish)
 EseqElimination::SeqStatement (finish)
 EseqElimination::SeqStatement (finish)
-GetNumber
-EseqElimination::SeqStatement
-EseqElimination::LabelStatement
-EseqElimination::MoveStatement
-EseqElimination::TempExpression
-EseqElimination::MemExpression
-EseqElimination::BinopExpression
-EseqElimination::MemExpression
-EseqElimination::BinopExpression
-EseqElimination::TempExpression
-EseqElimination::ConstExpression
-EseqElimination::IsEseq element type: 9 
-EseqElimination::IsEseq element type: 7 
-binop: !is_lhs_eseq && !is_rhs_eseq
-EseqElimination::BinopExpression (finish)
-EseqElimination::IsEseq element type: 8 
-EseqElimination::MemExpression (finish)
-EseqElimination::BinopExpression
-EseqElimination::ConstExpression
-EseqElimination::ConstExpression
-EseqElimination::IsEseq element type: 7 
-EseqElimination::IsEseq element type: 7 
-binop: !is_lhs_eseq && !is_rhs_eseq
-EseqElimination::BinopExpression (finish)
-EseqElimination::IsEseq element type: 10 
-EseqElimination::IsEseq element type: 8 
-binop: !is_lhs_eseq && !is_rhs_eseq
-EseqElimination::BinopExpression (finish)
-EseqElimination::IsEseq element type: 8 
-EseqElimination::MemExpression (finish)
-EseqElimination::IsEseq element type: 9 
-EseqElimination::IsEseq element type: 10 
-move: !is_target_eseq && !is_source_eseq
-EseqElimination::MoveStatement (finish)
-EseqElimination::SeqStatement (finish)
-SetNumber
-EseqElimination::SeqStatement
-EseqElimination::LabelStatement
-EseqElimination::MoveStatement
-EseqElimination::MemExpression
-EseqElimination::BinopExpression
-EseqElimination::MemExpression
-EseqElimination::BinopExpression
-EseqElimination::TempExpression
-EseqElimination::ConstExpression
-EseqElimination::IsEseq element type: 9 
-EseqElimination::IsEseq element type: 7 
-binop: !is_lhs_eseq && !is_rhs_eseq
-EseqElimination::BinopExpression (finish)
-EseqElimination::IsEseq element type: 8 
-EseqElimination::MemExpression (finish)
-EseqElimination::BinopExpression
-EseqElimination::ConstExpression
-EseqElimination::ConstExpression
-EseqElimination::IsEseq element type: 7 
-EseqElimination::IsEseq element type: 7 
-binop: !is_lhs_eseq && !is_rhs_eseq
-EseqElimination::BinopExpression (finish)
-EseqElimination::IsEseq element type: 10 
-EseqElimination::IsEseq element type: 8 
-binop: !is_lhs_eseq && !is_rhs_eseq
-EseqElimination::BinopExpression (finish)
-EseqElimination::IsEseq element type: 8 
-EseqElimination::MemExpression (finish)
-EseqElimination::MemExpression
-EseqElimination::BinopExpression
-EseqElimination::TempExpression
-EseqElimination::ConstExpression
-EseqElimination::IsEseq element type: 9 
-EseqElimination::IsEseq element type: 7 
-binop: !is_lhs_eseq && !is_rhs_eseq
-EseqElimination::BinopExpression (finish)
-EseqElimination::IsEseq element type: 8 
-EseqElimination::MemExpression (finish)
-EseqElimination::IsEseq element type: 10 
-EseqElimination::IsEseq element type: 10 
-move: !is_target_eseq && !is_source_eseq
-EseqElimination::MoveStatement (finish)
-EseqElimination::SeqStatement (finish)
-main
-GetNumber
-SetNumber
+BlockTree::BlockTree

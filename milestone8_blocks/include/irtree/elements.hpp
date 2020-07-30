@@ -31,5 +31,10 @@
 #include "irtree/nodes/expressions/EseqExpression.hpp"
 #include "irtree/nodes/ExpressionList.hpp"
 
+#include "irtree/visitors/PrintVisitor.hpp"
+#include "irtree/visitors/DoubleCallEliminationVisitor.hpp"
+#include "irtree/visitors/EseqEliminationVisitor.hpp"
+#include "irtree/visitors/LinearizeVisitor.hpp"
+
 #include "irtree/types/LogicOperatorType.hpp"
 #include "irtree/types/BinaryOperatorType.hpp"
