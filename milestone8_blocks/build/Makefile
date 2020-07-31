@@ -815,6 +815,60 @@ include/irtree/blocks/BlockTree.cpp.s:
 	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/irtree/blocks/BlockTree.cpp.s
 .PHONY : include/irtree/blocks/BlockTree.cpp.s
 
+include/irtree/blocks/NodeAdapter.o: include/irtree/blocks/NodeAdapter.cpp.o
+
+.PHONY : include/irtree/blocks/NodeAdapter.o
+
+# target to build an object file
+include/irtree/blocks/NodeAdapter.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/irtree/blocks/NodeAdapter.cpp.o
+.PHONY : include/irtree/blocks/NodeAdapter.cpp.o
+
+include/irtree/blocks/NodeAdapter.i: include/irtree/blocks/NodeAdapter.cpp.i
+
+.PHONY : include/irtree/blocks/NodeAdapter.i
+
+# target to preprocess a source file
+include/irtree/blocks/NodeAdapter.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/irtree/blocks/NodeAdapter.cpp.i
+.PHONY : include/irtree/blocks/NodeAdapter.cpp.i
+
+include/irtree/blocks/NodeAdapter.s: include/irtree/blocks/NodeAdapter.cpp.s
+
+.PHONY : include/irtree/blocks/NodeAdapter.s
+
+# target to generate assembly for a file
+include/irtree/blocks/NodeAdapter.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/irtree/blocks/NodeAdapter.cpp.s
+.PHONY : include/irtree/blocks/NodeAdapter.cpp.s
+
+include/irtree/blocks/Trace.o: include/irtree/blocks/Trace.cpp.o
+
+.PHONY : include/irtree/blocks/Trace.o
+
+# target to build an object file
+include/irtree/blocks/Trace.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/irtree/blocks/Trace.cpp.o
+.PHONY : include/irtree/blocks/Trace.cpp.o
+
+include/irtree/blocks/Trace.i: include/irtree/blocks/Trace.cpp.i
+
+.PHONY : include/irtree/blocks/Trace.i
+
+# target to preprocess a source file
+include/irtree/blocks/Trace.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/irtree/blocks/Trace.cpp.i
+.PHONY : include/irtree/blocks/Trace.cpp.i
+
+include/irtree/blocks/Trace.s: include/irtree/blocks/Trace.cpp.s
+
+.PHONY : include/irtree/blocks/Trace.s
+
+# target to generate assembly for a file
+include/irtree/blocks/Trace.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/include/irtree/blocks/Trace.cpp.s
+.PHONY : include/irtree/blocks/Trace.cpp.s
+
 include/irtree/generators/Label.o: include/irtree/generators/Label.cpp.o
 
 .PHONY : include/irtree/generators/Label.o
@@ -2762,6 +2816,12 @@ help:
 	@echo "... include/irtree/blocks/BlockTree.o"
 	@echo "... include/irtree/blocks/BlockTree.i"
 	@echo "... include/irtree/blocks/BlockTree.s"
+	@echo "... include/irtree/blocks/NodeAdapter.o"
+	@echo "... include/irtree/blocks/NodeAdapter.i"
+	@echo "... include/irtree/blocks/NodeAdapter.s"
+	@echo "... include/irtree/blocks/Trace.o"
+	@echo "... include/irtree/blocks/Trace.i"
+	@echo "... include/irtree/blocks/Trace.s"
 	@echo "... include/irtree/generators/Label.o"
 	@echo "... include/irtree/generators/Label.i"
 	@echo "... include/irtree/generators/Label.s"

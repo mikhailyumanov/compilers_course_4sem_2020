@@ -1191,9 +1191,35 @@ CMakeFiles/Project.dir/include/irtree/blocks/Block.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/include/irtree/blocks/Block.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/include/irtree/blocks/Block.cpp -o CMakeFiles/Project.dir/include/irtree/blocks/Block.cpp.s
 
+CMakeFiles/Project.dir/include/irtree/blocks/NodeAdapter.cpp.o: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/include/irtree/blocks/NodeAdapter.cpp.o: ../include/irtree/blocks/NodeAdapter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object CMakeFiles/Project.dir/include/irtree/blocks/NodeAdapter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/irtree/blocks/NodeAdapter.cpp.o -c /mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/include/irtree/blocks/NodeAdapter.cpp
+
+CMakeFiles/Project.dir/include/irtree/blocks/NodeAdapter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/include/irtree/blocks/NodeAdapter.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/include/irtree/blocks/NodeAdapter.cpp > CMakeFiles/Project.dir/include/irtree/blocks/NodeAdapter.cpp.i
+
+CMakeFiles/Project.dir/include/irtree/blocks/NodeAdapter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/include/irtree/blocks/NodeAdapter.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/include/irtree/blocks/NodeAdapter.cpp -o CMakeFiles/Project.dir/include/irtree/blocks/NodeAdapter.cpp.s
+
+CMakeFiles/Project.dir/include/irtree/blocks/Trace.cpp.o: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/include/irtree/blocks/Trace.cpp.o: ../include/irtree/blocks/Trace.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object CMakeFiles/Project.dir/include/irtree/blocks/Trace.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/irtree/blocks/Trace.cpp.o -c /mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/include/irtree/blocks/Trace.cpp
+
+CMakeFiles/Project.dir/include/irtree/blocks/Trace.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/include/irtree/blocks/Trace.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/include/irtree/blocks/Trace.cpp > CMakeFiles/Project.dir/include/irtree/blocks/Trace.cpp.i
+
+CMakeFiles/Project.dir/include/irtree/blocks/Trace.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/include/irtree/blocks/Trace.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/include/irtree/blocks/Trace.cpp -o CMakeFiles/Project.dir/include/irtree/blocks/Trace.cpp.s
+
 CMakeFiles/Project.dir/include/irtree/blocks/BlockTree.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/irtree/blocks/BlockTree.cpp.o: ../include/irtree/blocks/BlockTree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object CMakeFiles/Project.dir/include/irtree/blocks/BlockTree.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object CMakeFiles/Project.dir/include/irtree/blocks/BlockTree.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/irtree/blocks/BlockTree.cpp.o -c /mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/include/irtree/blocks/BlockTree.cpp
 
 CMakeFiles/Project.dir/include/irtree/blocks/BlockTree.cpp.i: cmake_force
@@ -1206,7 +1232,7 @@ CMakeFiles/Project.dir/include/irtree/blocks/BlockTree.cpp.s: cmake_force
 
 CMakeFiles/Project.dir/include/irtree/visitors/PrintVisitor.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/irtree/visitors/PrintVisitor.cpp.o: ../include/irtree/visitors/PrintVisitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object CMakeFiles/Project.dir/include/irtree/visitors/PrintVisitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object CMakeFiles/Project.dir/include/irtree/visitors/PrintVisitor.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/irtree/visitors/PrintVisitor.cpp.o -c /mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/include/irtree/visitors/PrintVisitor.cpp
 
 CMakeFiles/Project.dir/include/irtree/visitors/PrintVisitor.cpp.i: cmake_force
@@ -1219,7 +1245,7 @@ CMakeFiles/Project.dir/include/irtree/visitors/PrintVisitor.cpp.s: cmake_force
 
 CMakeFiles/Project.dir/include/irtree/visitors/TemplateVisitor.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/irtree/visitors/TemplateVisitor.cpp.o: ../include/irtree/visitors/TemplateVisitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object CMakeFiles/Project.dir/include/irtree/visitors/TemplateVisitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object CMakeFiles/Project.dir/include/irtree/visitors/TemplateVisitor.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/irtree/visitors/TemplateVisitor.cpp.o -c /mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/include/irtree/visitors/TemplateVisitor.cpp
 
 CMakeFiles/Project.dir/include/irtree/visitors/TemplateVisitor.cpp.i: cmake_force
@@ -1232,7 +1258,7 @@ CMakeFiles/Project.dir/include/irtree/visitors/TemplateVisitor.cpp.s: cmake_forc
 
 CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o: ../include/irtree/visitors/IdentVisitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.o -c /mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/include/irtree/visitors/IdentVisitor.cpp
 
 CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.i: cmake_force
@@ -1245,7 +1271,7 @@ CMakeFiles/Project.dir/include/irtree/visitors/IdentVisitor.cpp.s: cmake_force
 
 CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o: ../include/irtree/visitors/DoubleCallEliminationVisitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.o -c /mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/include/irtree/visitors/DoubleCallEliminationVisitor.cpp
 
 CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.i: cmake_force
@@ -1258,7 +1284,7 @@ CMakeFiles/Project.dir/include/irtree/visitors/DoubleCallEliminationVisitor.cpp.
 
 CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o: ../include/irtree/visitors/EseqEliminationVisitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.o -c /mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/include/irtree/visitors/EseqEliminationVisitor.cpp
 
 CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.i: cmake_force
@@ -1271,7 +1297,7 @@ CMakeFiles/Project.dir/include/irtree/visitors/EseqEliminationVisitor.cpp.s: cma
 
 CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o: ../include/irtree/visitors/LinearizeVisitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.o -c /mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/include/irtree/visitors/LinearizeVisitor.cpp
 
 CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.i: cmake_force
@@ -1284,7 +1310,7 @@ CMakeFiles/Project.dir/include/irtree/visitors/LinearizeVisitor.cpp.s: cmake_for
 
 CMakeFiles/Project.dir/include/irtree/types/LogicOperatorType.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/irtree/types/LogicOperatorType.cpp.o: ../include/irtree/types/LogicOperatorType.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object CMakeFiles/Project.dir/include/irtree/types/LogicOperatorType.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building CXX object CMakeFiles/Project.dir/include/irtree/types/LogicOperatorType.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/irtree/types/LogicOperatorType.cpp.o -c /mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/include/irtree/types/LogicOperatorType.cpp
 
 CMakeFiles/Project.dir/include/irtree/types/LogicOperatorType.cpp.i: cmake_force
@@ -1297,7 +1323,7 @@ CMakeFiles/Project.dir/include/irtree/types/LogicOperatorType.cpp.s: cmake_force
 
 CMakeFiles/Project.dir/include/irtree/types/BinaryOperatorType.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/include/irtree/types/BinaryOperatorType.cpp.o: ../include/irtree/types/BinaryOperatorType.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object CMakeFiles/Project.dir/include/irtree/types/BinaryOperatorType.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building CXX object CMakeFiles/Project.dir/include/irtree/types/BinaryOperatorType.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/include/irtree/types/BinaryOperatorType.cpp.o -c /mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/include/irtree/types/BinaryOperatorType.cpp
 
 CMakeFiles/Project.dir/include/irtree/types/BinaryOperatorType.cpp.i: cmake_force
@@ -1395,6 +1421,8 @@ Project_OBJECTS = \
 "CMakeFiles/Project.dir/include/irtree/nodes/expressions/NameExpression.cpp.o" \
 "CMakeFiles/Project.dir/include/irtree/nodes/expressions/EseqExpression.cpp.o" \
 "CMakeFiles/Project.dir/include/irtree/blocks/Block.cpp.o" \
+"CMakeFiles/Project.dir/include/irtree/blocks/NodeAdapter.cpp.o" \
+"CMakeFiles/Project.dir/include/irtree/blocks/Trace.cpp.o" \
 "CMakeFiles/Project.dir/include/irtree/blocks/BlockTree.cpp.o" \
 "CMakeFiles/Project.dir/include/irtree/visitors/PrintVisitor.cpp.o" \
 "CMakeFiles/Project.dir/include/irtree/visitors/TemplateVisitor.cpp.o" \
@@ -1493,6 +1521,8 @@ Project_EXTERNAL_OBJECTS =
 ../bin/Project: CMakeFiles/Project.dir/include/irtree/nodes/expressions/NameExpression.cpp.o
 ../bin/Project: CMakeFiles/Project.dir/include/irtree/nodes/expressions/EseqExpression.cpp.o
 ../bin/Project: CMakeFiles/Project.dir/include/irtree/blocks/Block.cpp.o
+../bin/Project: CMakeFiles/Project.dir/include/irtree/blocks/NodeAdapter.cpp.o
+../bin/Project: CMakeFiles/Project.dir/include/irtree/blocks/Trace.cpp.o
 ../bin/Project: CMakeFiles/Project.dir/include/irtree/blocks/BlockTree.cpp.o
 ../bin/Project: CMakeFiles/Project.dir/include/irtree/visitors/PrintVisitor.cpp.o
 ../bin/Project: CMakeFiles/Project.dir/include/irtree/visitors/TemplateVisitor.cpp.o
@@ -1504,7 +1534,7 @@ Project_EXTERNAL_OBJECTS =
 ../bin/Project: CMakeFiles/Project.dir/include/irtree/types/BinaryOperatorType.cpp.o
 ../bin/Project: CMakeFiles/Project.dir/build.make
 ../bin/Project: CMakeFiles/Project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Linking CXX executable ../bin/Project"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Linking CXX executable ../bin/Project"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Project.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

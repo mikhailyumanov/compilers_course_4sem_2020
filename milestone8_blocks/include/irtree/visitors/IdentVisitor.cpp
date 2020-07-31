@@ -64,4 +64,12 @@ NodeType IdentVisitor::Accept(std::shared_ptr<BaseElement> element) {
   return tos_value_;
 }
 
+
+////////////////// GET TYPE //////////////////
+
+NodeType GetNodeType(std::shared_ptr<BaseElement> element) {
+  static auto ident_visitor = std::make_shared<IdentVisitor>();
+  return ident_visitor->Accept(element);
+}
+
 }

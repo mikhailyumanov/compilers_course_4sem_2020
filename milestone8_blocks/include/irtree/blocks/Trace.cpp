@@ -1,20 +1,20 @@
 #include "irtree/blocks/Trace.hpp"
+#include "irtree/blocks/NodeAdapter.hpp"
 
 
 namespace IRT {
 
-Trace::Trace(std::shared_ptr<Block> first, std::shared_ptr<Block> last) 
-  : first_{first}, last_{last} {
+Trace::Trace(std::vector<std::shared_ptr<Block>> trace)
+  : trace_{trace} {
 }
 
 void Trace::PrintTrace(const std::string& filename) const {
-  static std::ofstream stream(filename + "_traces");
+  static std::ofstream stream(filename);
 
-  stream << "Start trace" << std::endl;
-  for (auto it = start_; it != last_; it = GetNext(it)) {
+  for (auto&& it : trace_) {
     stream << it->GetLabelName() << " -> ";
   }
-  stream << last_->GetLabelName() << std::endl << std::endl;
+  stream << std::endl;
 }
 
 }

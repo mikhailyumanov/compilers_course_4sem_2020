@@ -48,4 +48,7 @@ class IdentVisitor: public TemplateVisitor<NodeType>,
   NodeType Accept(std::shared_ptr<BaseElement> element) override;
 };
 
+
+NodeType GetNodeType(std::shared_ptr<BaseElement>);
+
 }

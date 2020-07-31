@@ -29,6 +29,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Project.dir/include/functions/address/AddressInRegister.cpp.o"
   "CMakeFiles/Project.dir/include/irtree/blocks/Block.cpp.o"
   "CMakeFiles/Project.dir/include/irtree/blocks/BlockTree.cpp.o"
+  "CMakeFiles/Project.dir/include/irtree/blocks/NodeAdapter.cpp.o"
+  "CMakeFiles/Project.dir/include/irtree/blocks/Trace.cpp.o"
   "CMakeFiles/Project.dir/include/irtree/generators/Label.cpp.o"
   "CMakeFiles/Project.dir/include/irtree/generators/Temporary.cpp.o"
   "CMakeFiles/Project.dir/include/irtree/nodes/ExpressionList.cpp.o"

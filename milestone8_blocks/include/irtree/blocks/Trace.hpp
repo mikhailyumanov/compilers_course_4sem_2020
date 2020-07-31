@@ -7,15 +7,11 @@ namespace IRT {
 
 class Trace: public std::enable_shared_from_this<Trace> {
  public:
-  Trace(std::shared_ptr<Block> first, std::shared_ptr<Block> last);
-
+  Trace(std::vector<std::shared_ptr<Block>> trace);
   void PrintTrace(const std::string& filename) const;
 
  private:
-  std::shared_ptr<Block> GetNext() const;
-
-  std::shared_ptr<Block> first_;
-  std::shared_ptr<Block> last_;
+  std::vector<std::shared_ptr<Block>> trace_;
 };
 
 }

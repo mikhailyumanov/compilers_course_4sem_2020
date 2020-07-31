@@ -111,7 +111,7 @@ void Driver::PrintIrtree(const std::string& filename) const {
   IrtMapping methods = irtree_build_visitor->GetTrees();
 
   auto print_visitor = std::make_shared<IRT::PrintVisitor>(
-      filename + "_irtree.txt");
+      filename + "_irtree");
 
   for (auto& pair : methods) {
     DEBUG_SINGLE(pair.first)
@@ -127,10 +127,14 @@ void Driver::PrintBlockTree(const std::string& filename) const {
   irtree_build_visitor->Visit(program);
   IrtMapping methods = irtree_build_visitor->GetTrees();
   
-  std::string output = filename + "_irtree.txt";
+  std::string output = filename + "_irtree";
   for (auto& pair : methods) {
     auto block_tree = std::make_shared<IRT::BlockTree>(pair.second);
     block_tree->PrintTree(output);
+    auto traces = block_tree->GetTraces();
+    for (auto&& trace : traces) {
+      trace->PrintTrace(output + "_traces");
+    }
   }
 }
 

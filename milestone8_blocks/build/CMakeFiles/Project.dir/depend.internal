@@ -34,6 +34,8 @@ CMakeFiles/Project.dir/driver.cpp.o
  ../include/functions/address/AddressInRegister.hpp
  ../include/irtree/blocks/Block.hpp
  ../include/irtree/blocks/BlockTree.hpp
+ ../include/irtree/blocks/NodeAdapter.hpp
+ ../include/irtree/blocks/Trace.hpp
  ../include/irtree/elements.hpp
  ../include/irtree/forward_decl.hpp
  ../include/irtree/generators/Label.hpp
@@ -411,6 +413,8 @@ CMakeFiles/Project.dir/include/irtree/blocks/BlockTree.cpp.o
  ../debug.h
  ../include/irtree/blocks/Block.hpp
  ../include/irtree/blocks/BlockTree.hpp
+ ../include/irtree/blocks/NodeAdapter.hpp
+ ../include/irtree/blocks/Trace.hpp
  ../include/irtree/elements.hpp
  ../include/irtree/forward_decl.hpp
  ../include/irtree/generators/Label.hpp
@@ -452,6 +456,96 @@ CMakeFiles/Project.dir/include/irtree/blocks/BlockTree.cpp.o
  ../include/irtree/visitors/Visitor.hpp
  ../include/irtree/visitors/VisitorStruct.hpp
  /mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/include/irtree/blocks/BlockTree.cpp
+CMakeFiles/Project.dir/include/irtree/blocks/NodeAdapter.cpp.o
+ ../debug.h
+ ../include/irtree/blocks/NodeAdapter.hpp
+ ../include/irtree/elements.hpp
+ ../include/irtree/forward_decl.hpp
+ ../include/irtree/generators/Label.hpp
+ ../include/irtree/generators/Temporary.hpp
+ ../include/irtree/nodes/BaseElement.hpp
+ ../include/irtree/nodes/ExpressionList.hpp
+ ../include/irtree/nodes/expressions/BinopExpression.hpp
+ ../include/irtree/nodes/expressions/CallExpression.hpp
+ ../include/irtree/nodes/expressions/ConstExpression.hpp
+ ../include/irtree/nodes/expressions/EseqExpression.hpp
+ ../include/irtree/nodes/expressions/Expression.hpp
+ ../include/irtree/nodes/expressions/MemExpression.hpp
+ ../include/irtree/nodes/expressions/NameExpression.hpp
+ ../include/irtree/nodes/expressions/TempExpression.hpp
+ ../include/irtree/nodes/statements/ExpStatement.hpp
+ ../include/irtree/nodes/statements/JumpConditionalStatement.hpp
+ ../include/irtree/nodes/statements/JumpStatement.hpp
+ ../include/irtree/nodes/statements/LabelStatement.hpp
+ ../include/irtree/nodes/statements/MoveStatement.hpp
+ ../include/irtree/nodes/statements/SeqStatement.hpp
+ ../include/irtree/nodes/statements/Statement.hpp
+ ../include/irtree/tree_wrappers/ExpressionWrapper.hpp
+ ../include/irtree/tree_wrappers/StatementWrapper.hpp
+ ../include/irtree/tree_wrappers/SubtreeWrapper.hpp
+ ../include/irtree/tree_wrappers/conditional_wrappers/AndConditionalWrapper.hpp
+ ../include/irtree/tree_wrappers/conditional_wrappers/ConditionalWrapper.hpp
+ ../include/irtree/tree_wrappers/conditional_wrappers/NegateConditionalWrapper.hpp
+ ../include/irtree/tree_wrappers/conditional_wrappers/OrConditionalWrapper.hpp
+ ../include/irtree/tree_wrappers/conditional_wrappers/RelativeConditionalWrapper.hpp
+ ../include/irtree/types/BinaryOperatorType.hpp
+ ../include/irtree/types/LogicOperatorType.hpp
+ ../include/irtree/visitors/BaseElements.hpp
+ ../include/irtree/visitors/DoubleCallEliminationVisitor.hpp
+ ../include/irtree/visitors/EseqEliminationVisitor.hpp
+ ../include/irtree/visitors/IdentVisitor.hpp
+ ../include/irtree/visitors/LinearizeVisitor.hpp
+ ../include/irtree/visitors/PrintVisitor.hpp
+ ../include/irtree/visitors/TemplateVisitor.hpp
+ ../include/irtree/visitors/Visitor.hpp
+ ../include/irtree/visitors/VisitorStruct.hpp
+ /mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/include/irtree/blocks/NodeAdapter.cpp
+CMakeFiles/Project.dir/include/irtree/blocks/Trace.cpp.o
+ ../debug.h
+ ../include/irtree/blocks/Block.hpp
+ ../include/irtree/blocks/NodeAdapter.hpp
+ ../include/irtree/blocks/Trace.hpp
+ ../include/irtree/elements.hpp
+ ../include/irtree/forward_decl.hpp
+ ../include/irtree/generators/Label.hpp
+ ../include/irtree/generators/Temporary.hpp
+ ../include/irtree/nodes/BaseElement.hpp
+ ../include/irtree/nodes/ExpressionList.hpp
+ ../include/irtree/nodes/expressions/BinopExpression.hpp
+ ../include/irtree/nodes/expressions/CallExpression.hpp
+ ../include/irtree/nodes/expressions/ConstExpression.hpp
+ ../include/irtree/nodes/expressions/EseqExpression.hpp
+ ../include/irtree/nodes/expressions/Expression.hpp
+ ../include/irtree/nodes/expressions/MemExpression.hpp
+ ../include/irtree/nodes/expressions/NameExpression.hpp
+ ../include/irtree/nodes/expressions/TempExpression.hpp
+ ../include/irtree/nodes/statements/ExpStatement.hpp
+ ../include/irtree/nodes/statements/JumpConditionalStatement.hpp
+ ../include/irtree/nodes/statements/JumpStatement.hpp
+ ../include/irtree/nodes/statements/LabelStatement.hpp
+ ../include/irtree/nodes/statements/MoveStatement.hpp
+ ../include/irtree/nodes/statements/SeqStatement.hpp
+ ../include/irtree/nodes/statements/Statement.hpp
+ ../include/irtree/tree_wrappers/ExpressionWrapper.hpp
+ ../include/irtree/tree_wrappers/StatementWrapper.hpp
+ ../include/irtree/tree_wrappers/SubtreeWrapper.hpp
+ ../include/irtree/tree_wrappers/conditional_wrappers/AndConditionalWrapper.hpp
+ ../include/irtree/tree_wrappers/conditional_wrappers/ConditionalWrapper.hpp
+ ../include/irtree/tree_wrappers/conditional_wrappers/NegateConditionalWrapper.hpp
+ ../include/irtree/tree_wrappers/conditional_wrappers/OrConditionalWrapper.hpp
+ ../include/irtree/tree_wrappers/conditional_wrappers/RelativeConditionalWrapper.hpp
+ ../include/irtree/types/BinaryOperatorType.hpp
+ ../include/irtree/types/LogicOperatorType.hpp
+ ../include/irtree/visitors/BaseElements.hpp
+ ../include/irtree/visitors/DoubleCallEliminationVisitor.hpp
+ ../include/irtree/visitors/EseqEliminationVisitor.hpp
+ ../include/irtree/visitors/IdentVisitor.hpp
+ ../include/irtree/visitors/LinearizeVisitor.hpp
+ ../include/irtree/visitors/PrintVisitor.hpp
+ ../include/irtree/visitors/TemplateVisitor.hpp
+ ../include/irtree/visitors/Visitor.hpp
+ ../include/irtree/visitors/VisitorStruct.hpp
+ /mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/include/irtree/blocks/Trace.cpp
 CMakeFiles/Project.dir/include/irtree/generators/Label.cpp.o
  ../include/irtree/generators/Label.hpp
  /mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/include/irtree/generators/Label.cpp
@@ -1620,6 +1714,8 @@ CMakeFiles/Project.dir/main.cpp.o
  ../include/functions/address/AddressInRegister.hpp
  ../include/irtree/blocks/Block.hpp
  ../include/irtree/blocks/BlockTree.hpp
+ ../include/irtree/blocks/NodeAdapter.hpp
+ ../include/irtree/blocks/Trace.hpp
  ../include/irtree/elements.hpp
  ../include/irtree/forward_decl.hpp
  ../include/irtree/generators/Label.hpp
@@ -1736,6 +1832,8 @@ CMakeFiles/Project.dir/parser.cpp.o
  ../include/functions/address/AddressInRegister.hpp
  ../include/irtree/blocks/Block.hpp
  ../include/irtree/blocks/BlockTree.hpp
+ ../include/irtree/blocks/NodeAdapter.hpp
+ ../include/irtree/blocks/Trace.hpp
  ../include/irtree/elements.hpp
  ../include/irtree/forward_decl.hpp
  ../include/irtree/generators/Label.hpp
@@ -1852,6 +1950,8 @@ CMakeFiles/Project.dir/scanner.cpp.o
  ../include/functions/address/AddressInRegister.hpp
  ../include/irtree/blocks/Block.hpp
  ../include/irtree/blocks/BlockTree.hpp
+ ../include/irtree/blocks/NodeAdapter.hpp
+ ../include/irtree/blocks/Trace.hpp
  ../include/irtree/elements.hpp
  ../include/irtree/forward_decl.hpp
  ../include/irtree/generators/Label.hpp

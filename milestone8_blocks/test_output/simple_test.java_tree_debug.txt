@@ -1,31 +1,31 @@
 >>> IrtreeBuildVisitor: Program
 >>> PrintVisitor: Program
 GoDown
-Current state: parent: 0x558807a37af0 ; child index: 1 num_children: 2 
-operator->; current_parent: 0x558807a37af0 child_index: 1 num_children: 2 
+Current state: parent: 0x55f106c28af0 ; child index: 1 num_children: 2 
+operator->; current_parent: 0x55f106c28af0 child_index: 1 num_children: 2 
 GoDown
-Current state: parent: 0x558807a38050 ; child index: 0 num_children: 1 
-operator->; current_parent: 0x558807a38050 child_index: 0 num_children: 1 
+Current state: parent: 0x55f106c29050 ; child index: 0 num_children: 1 
+operator->; current_parent: 0x55f106c29050 child_index: 0 num_children: 1 
 >>> PrintVisitor: MainClass
-operator->; current_parent: 0x558807a38050 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55f106c29050 child_index: 0 num_children: 1 
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IntExpr 6 
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: int, is_array: false x 
 x type: int, is_array: false 
-operator->; current_parent: 0x558807a38050 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55f106c29050 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x558807a38050 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55f106c29050 child_index: 0 num_children: 1 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x558807a38050 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55f106c29050 child_index: 0 num_children: 1 
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IntExpr 7 
 >>> PrintVisitor: AssignmentStmt
-operator->; current_parent: 0x558807a38050 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55f106c29050 child_index: 0 num_children: 1 
 >>> PrintVisitor: IntExpr 5 
-operator->; current_parent: 0x558807a38050 child_index: 0 num_children: 1 
+operator->; current_parent: 0x55f106c29050 child_index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x558807a37af0 ; child index: 1 num_children: 2 
+Current state: parent: 0x55f106c28af0 ; child index: 1 num_children: 2 
 >>> IrtreeBuildVisitor: MainClass
 >>> IrtreeBuildVisitor: PrintStmt
 >>> IrtreeBuildVisitor: IntExpr
@@ -98,11 +98,11 @@ move: !is_target_eseq && !is_source_eseq
 EseqElimination::MoveStatement (finish)
 EseqElimination::SeqStatement (finish)
 EseqElimination::SeqStatement (finish)
-1
-1
-1
-1
 0
+0
+0
+0
+1
 build blocks: L0
 build blocks: 1
 BlockTree::PrintTree
@@ -137,3 +137,10 @@ LabelStatement:
 BFS
 BFS
 BFS finished
+DFS
+L0
+DFS
+%done
+DFS
+DFS
+DFS
