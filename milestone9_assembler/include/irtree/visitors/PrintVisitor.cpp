@@ -4,8 +4,7 @@
 //
 
 #include "irtree/visitors/PrintVisitor.hpp"
-#include "irtree/visitors/BaseElements.hpp"
-#include "irtree/nodes/expressions/EseqExpression.hpp"
+#include "irtree/base_elements.hpp"
 
 #define PRINT_DOWN ++num_tabs_;
 #define PRINT_UP --num_tabs_;
@@ -82,6 +81,12 @@ void PrintVisitor::Visit(std::shared_ptr<JumpStatement> element) {
   DEBUG_SINGLE("JumpStatement: ")
 }
 
+void PrintVisitor::Visit(std::shared_ptr<ReturnStatement> element) {
+  PrintTabs();
+  stream_ << "ReturnStatement" << std::endl;
+  DEBUG_SINGLE("ReturnStatement")
+}
+
 void PrintVisitor::Visit(std::shared_ptr<ConstExpression> element) {
   PrintTabs();
   stream_ << "ConstExpression " << element->GetValue() << std::endl;
@@ -156,7 +161,10 @@ void PrintVisitor::Visit(std::shared_ptr<EseqExpression> element) {
   element->stmt->Accept(shared_from_this());
   element->expr->Accept(shared_from_this());
   PRINT_UP
+}
 
+std::ofstream& PrintVisitor::GetStream() {
+  return stream_;
 }
 
 void PrintVisitor::PrintTabs() {

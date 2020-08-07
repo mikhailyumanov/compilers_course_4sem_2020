@@ -1,0 +1,41 @@
+
+%main:
+	addi		[%3], %null, 1
+	call		[%0], malloc, %3
+	addi		[%5], %null, 10
+	call		[%1], Fac::ComputeFac, %0, %5
+	call		[%2], printf, %1
+	jump		%done
+
+Fac::ComputeFac:
+	load		[%13], ::fp, 4
+	addi		[%14], %null, 0
+	sub		[%15], %13, %14
+	beq		L0, %15
+
+L1:
+	load		[%17], ::fp, 4
+	subi		[%16], %17, 1
+	call		[%9], printf, %16
+	addi		[%12], ::fp, 12
+	load		[%11], ::fp, 4
+	load		[%21], ::fp, 0
+	load		[%23], ::fp, 4
+	subi		[%22], %23, 1
+	call		[%10], Fac::ComputeFac, %21, %22
+	mul		[%25], %11, %11
+	store		%12, 0, %25
+	jump		L2
+
+L2:
+	load		[::return_value], ::fp, 12
+	return
+
+L0:
+	addi		[%27], %null, 0
+	call		[%8], printf, %27
+	addi		[%29], %null, 1
+	store		::fp, 12, %29
+	jump		L2
+
+%done:

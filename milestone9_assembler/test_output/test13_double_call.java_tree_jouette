@@ -1,0 +1,11 @@
+SeqStatement:
+	LabelStatement: Six::GetNum
+	SeqStatement:
+		MoveStatement:
+			TempExpression: ::return_value
+			ConstExpression 6
+		SeqStatement:
+			JumpStatement: %done
+			SeqStatement:
+				LabelStatement: %done
+				LabelStatement: L3

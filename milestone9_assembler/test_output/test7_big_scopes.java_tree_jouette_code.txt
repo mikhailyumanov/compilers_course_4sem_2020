@@ -1,0 +1,160 @@
+
+%main:
+	addi		[%17], %null, 5
+	store		::fp, 0, %17
+	addi		[%18], %null, 0
+	store		::fp, 4, %18
+	addi		[%19], %null, 6
+	store		::fp, 8, %19
+	jump		L8
+
+L8:
+	load		[%20], ::fp, 4
+	load		[%21], ::fp, 8
+	sub		[%22], %20, %21
+	blt		L9, %22
+
+L10:
+	jump		L14
+
+L14:
+	load		[%23], ::fp, 0
+	addi		[%24], %null, 5
+	sub		[%25], %23, %24
+	blt		L15, %25
+
+L16:
+	load		[%26], ::fp, 0
+	call		[%16], printf, %26
+	jump		%done
+
+L15:
+	load		[%29], ::fp, 0
+	addi		[%31], %null, 2
+	load		[%33], ::fp, 0
+	addi		[%34], %null, 2
+	div		[%32], %33, %34
+	mul		[%30], %31, %32
+	sub		[%28], %29, %30
+	addi		[%35], %null, 0
+	sub		[%36], %28, %35
+	beq		L11, %36
+
+L12:
+	addi		[%37], %null, 420
+	call		[%15], printf, %37
+	jump		L13
+
+L13:
+	load		[%40], ::fp, 0
+	addi		[%39], %40, 1
+	store		::fp, 0, %39
+	jump		L14
+
+L11:
+	addi		[%41], %null, 1337
+	call		[%14], printf, %41
+	jump		L13
+
+L9:
+	addi		[%43], %null, 111111111
+	call		[%0], printf, %43
+	load		[%45], ::fp, 4
+	call		[%1], printf, %45
+	load		[%47], ::fp, 8
+	call		[%2], printf, %47
+	addi		[%49], %null, 11
+	store		::fp, 12, %49
+	jump		L5
+
+L5:
+	load		[%50], ::fp, 12
+	load		[%52], ::fp, 8
+	addi		[%53], %null, 2
+	mul		[%51], %52, %53
+	sub		[%54], %50, %51
+	blt		L6, %54
+
+L7:
+	load		[%56], ::fp, 4
+	addi		[%55], %56, 1
+	store		::fp, 4, %55
+	jump		L8
+
+L6:
+	addi		[%57], %null, 222222222
+	call		[%3], printf, %57
+	load		[%59], ::fp, 4
+	call		[%4], printf, %59
+	load		[%61], ::fp, 8
+	call		[%5], printf, %61
+	load		[%63], ::fp, 12
+	call		[%6], printf, %63
+	addi		[%65], %null, 0
+	store		::fp, 16, %65
+	load		[%69], ::fp, 4
+	load		[%71], ::fp, 8
+	addi		[%72], %null, 2
+	div		[%70], %71, %72
+	sub		[%68], %69, %70
+	load		[%74], ::fp, 4
+	load		[%76], ::fp, 8
+	addi		[%77], %null, 2
+	div		[%75], %76, %77
+	sub		[%73], %74, %75
+	mul		[%67], %68, %73
+	load		[%81], ::fp, 12
+	load		[%82], ::fp, 8
+	sub		[%80], %81, %82
+	load		[%84], ::fp, 12
+	load		[%85], ::fp, 8
+	sub		[%83], %84, %85
+	mul		[%79], %80, %83
+	addi		[%86], %null, 4
+	div		[%78], %79, %86
+	add		[%66], %67, %78
+	addi		[%87], %null, 25
+	sub		[%88], %66, %87
+	blt		L0, %88
+
+L1:
+	addi		[%89], %null, 123
+	call		[%7], printf, %89
+	load		[%91], ::fp, 16
+	call		[%8], printf, %91
+	addi		[%93], %null, 456
+	call		[%9], printf, %93
+	load		[%95], ::fp, 12
+	load		[%98], ::fp, 8
+	addi		[%99], %null, 2
+	mul		[%97], %98, %99
+	subi		[%96], %97, 1
+	sub		[%100], %95, %96
+	blt		L2, %100
+
+L3:
+	load		[%101], ::fp, 16
+	call		[%13], printf, %101
+	jump		L4
+
+L4:
+	load		[%104], ::fp, 12
+	addi		[%103], %104, 1
+	store		::fp, 12, %103
+	jump		L5
+
+L2:
+	addi		[%105], %null, 789
+	call		[%10], printf, %105
+	load		[%107], ::fp, 16
+	call		[%11], printf, %107
+	addi		[%109], %null, 987
+	call		[%12], printf, %109
+	jump		L4
+
+L0:
+	addi		[%111], %null, 7
+	store		::fp, 16, %111
+	jump		L1
+
+%done:

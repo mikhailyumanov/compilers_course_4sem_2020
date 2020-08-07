@@ -73,3 +73,5 @@
 #include "types/constructor/ClassBuilder.hpp"
 // irtree
 #include "irtree/elements.hpp"
+// jouette
+#include "jouette/elements.hpp"

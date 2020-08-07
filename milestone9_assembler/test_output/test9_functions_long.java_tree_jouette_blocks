@@ -1,0 +1,52 @@
+House::AddDog L4
+House::AddDog L3
+
+
+L4 %done
+
+
+L3 L0
+
+
+
+
+L0 L2
+L0 L1
+
+
+L2 L4
+
+
+L1 L0
+
+
+Dog::Bark %done
+
+
+
+
+Dog::SetIndex %done
+
+
+
+
+House::SetNumDogs %done
+
+
+
+
+House::GetDog %done
+
+
+
+
+House::GetNumDogs %done
+
+
+
+
+Person::SetDogs %done
+
+
+
+

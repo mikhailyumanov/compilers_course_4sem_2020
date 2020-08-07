@@ -30,6 +30,10 @@ NodeType NodeAdapter::GetType() const {
   return IRT::GetNodeType(GetStmt());
 }
 
+Label NodeAdapter::GetLabel() const {
+  return GetLabelStmt()->label;
+}
+
 std::shared_ptr<LabelStatement> NodeAdapter::GetLabelStmt() const {
   assert(GetType() == NodeType::LabelStatement);
   return std::dynamic_pointer_cast<LabelStatement>(GetStmt());

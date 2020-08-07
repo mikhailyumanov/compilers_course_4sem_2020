@@ -577,11 +577,11 @@ void SymbolTreeVisitor::FunctionScopeDown(FunctionType function_type) {
   DEBUG_SINGLE(function_type)
 }
 
-bool SymbolTreeVisitor::SetMethodDecl() {
+void SymbolTreeVisitor::SetMethodDecl() {
   method_decl_ = true;
 }
 
-bool SymbolTreeVisitor::UnsetMethodDecl() {
+void SymbolTreeVisitor::UnsetMethodDecl() {
   method_decl_ = false;
 }
 

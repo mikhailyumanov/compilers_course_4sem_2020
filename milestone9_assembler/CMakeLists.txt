@@ -120,19 +120,20 @@ set(
     include/irtree/generators/Temporary.cpp 
 
     include/irtree/nodes/statements/ExpStatement.cpp 
-    include/irtree/nodes/expressions/ConstExpression.cpp 
     include/irtree/nodes/statements/JumpConditionalStatement.cpp 
     include/irtree/nodes/statements/MoveStatement.cpp 
     include/irtree/nodes/statements/SeqStatement.cpp 
     include/irtree/nodes/statements/LabelStatement.cpp 
+    include/irtree/nodes/statements/JumpStatement.cpp 
+    include/irtree/nodes/statements/ReturnStatement.cpp 
+    include/irtree/nodes/expressions/ConstExpression.cpp 
     include/irtree/nodes/expressions/BinopExpression.cpp 
     include/irtree/nodes/expressions/TempExpression.cpp 
     include/irtree/nodes/expressions/MemExpression.cpp 
-    include/irtree/nodes/statements/JumpStatement.cpp 
     include/irtree/nodes/expressions/CallExpression.cpp 
-    include/irtree/nodes/ExpressionList.cpp 
     include/irtree/nodes/expressions/NameExpression.cpp 
     include/irtree/nodes/expressions/EseqExpression.cpp 
+    include/irtree/nodes/ExpressionList.cpp 
 
     include/irtree/blocks/Block.cpp
     include/irtree/blocks/NodeAdapter.cpp
@@ -145,9 +146,50 @@ set(
     include/irtree/visitors/DoubleCallEliminationVisitor.cpp
     include/irtree/visitors/EseqEliminationVisitor.cpp
     include/irtree/visitors/LinearizeVisitor.cpp
+    include/irtree/visitors/JouetteVisitor.cpp
 
     include/irtree/types/LogicOperatorType.cpp 
     include/irtree/types/BinaryOperatorType.cpp 
+
+    #=======  jouette =======
+
+    include/jouette/instructions/expressions/BinOneRegInstruction.cpp
+    include/jouette/instructions/expressions/BinTwoRegInstruction.cpp
+    include/jouette/instructions/expressions/Call.cpp
+    include/jouette/instructions/commands/Return.cpp
+    include/jouette/instructions/commands/LoadStore.cpp
+    include/jouette/instructions/commands/MoveInstruction.cpp
+    include/jouette/instructions/commands/Label.cpp
+    include/jouette/instructions/commands/CJumpInstruction.cpp
+    include/jouette/instructions/commands/Jump.cpp
+
+    include/jouette/registers/Register.cpp
+
+    include/irtree/jouette_rules/AddRule.cpp
+    include/irtree/jouette_rules/SubRule.cpp
+    include/irtree/jouette_rules/MulRule.cpp
+    include/irtree/jouette_rules/DivRule.cpp
+    
+    include/irtree/jouette_rules/AddiConstRule.cpp
+    include/irtree/jouette_rules/AddiLeftConstRule.cpp
+    include/irtree/jouette_rules/AddiRightConstRule.cpp
+    
+    include/irtree/jouette_rules/SubiRule.cpp
+    
+    include/irtree/jouette_rules/LoadConstRule.cpp
+    include/irtree/jouette_rules/LoadLeftConstRule.cpp
+    include/irtree/jouette_rules/LoadRightConstRule.cpp
+    include/irtree/jouette_rules/LoadRule.cpp
+    
+    include/irtree/jouette_rules/StoreConstRule.cpp
+    include/irtree/jouette_rules/StoreLeftConstRule.cpp
+    include/irtree/jouette_rules/StoreRightConstRule.cpp
+    include/irtree/jouette_rules/StoreRule.cpp
+    
+    include/irtree/jouette_rules/MovemRule.cpp
+    include/irtree/jouette_rules/MoveTempRule.cpp
+
+    include/jouette/visitors/PrintVisitor.cpp
 )
 
 add_executable(

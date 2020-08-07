@@ -243,8 +243,8 @@ void IrtreeBuildVisitor::Visit(std::shared_ptr<ReturnStmt> element) {
   tos_value_ = std::make_shared<IRT::StatementWrapper>(
       std::make_shared<IRT::MoveStatement>(
         current_frame_->GetReturnValueAddress()->ToExpression(),
-        return_expr->ToExpression()
-  ));
+        return_expr->ToExpression())
+  );
 }
 
 void IrtreeBuildVisitor::Visit(std::shared_ptr<MethodStmt> element) {

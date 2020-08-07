@@ -1,0 +1,168 @@
+>>> IrtreeBuildVisitor: Program
+>>> PrintVisitor: Program
+GoDown
+Current state: parent: 0x55d9a8f80f10 ; child index: 1 num_children: 2 
+operator->; current_parent: 0x55d9a8f80f10 child_index: 1 num_children: 2 
+GoDown
+Current state: parent: 0x55d9a8f81470 ; child index: 0 num_children: 1 
+operator->; current_parent: 0x55d9a8f81470 child_index: 0 num_children: 1 
+>>> PrintVisitor: MainClass
+operator->; current_parent: 0x55d9a8f81470 child_index: 0 num_children: 1 
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: IntExpr 6 
+>>> PrintVisitor: LocalVarDeclStmt
+>>> PrintVisitor: VarDecl type: int, is_array: false x 
+x type: int, is_array: false 
+operator->; current_parent: 0x55d9a8f81470 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+operator->; current_parent: 0x55d9a8f81470 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+operator->; current_parent: 0x55d9a8f81470 child_index: 0 num_children: 1 
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: IntExpr 7 
+>>> PrintVisitor: AssignmentStmt
+operator->; current_parent: 0x55d9a8f81470 child_index: 0 num_children: 1 
+>>> PrintVisitor: IntExpr 5 
+operator->; current_parent: 0x55d9a8f81470 child_index: 0 num_children: 1 
+GoUp
+Current state: parent: 0x55d9a8f80f10 ; child index: 1 num_children: 2 
+>>> IrtreeBuildVisitor: MainClass
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: LocalVarDeclStmt
+>>> IrtreeBuildVisitor: VarDecl
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: AssignmentStmt
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+EseqElimination::SeqStatement
+EseqElimination::ExpStatement
+EseqElimination::EseqExpression
+EseqElimination::MoveStatement
+EseqElimination::TempExpression
+EseqElimination::CallExpression
+EseqElimination::NameExpression
+EseqElimination::ExpressionList
+EseqElimination::ConstExpression
+EseqElimination::ExpressionList (finish)
+EseqElimination::IsEseq element type: 8 
+EseqElimination::CallExpression (finish)
+EseqElimination::IsEseq element type: 10 
+EseqElimination::IsEseq element type: 12 
+move: !is_target_eseq && !is_source_eseq
+EseqElimination::MoveStatement (finish)
+EseqElimination::TempExpression
+EseqElimination::IsEseq element type: 10 
+EseqElimination::EseqExpression (finish)
+exp stmt: pre `is eseq`
+EseqElimination::IsEseq element type: 14 
+EseqElimination::ExpStatement (finish)
+EseqElimination::SeqStatement
+EseqElimination::ExpStatement
+EseqElimination::EseqExpression
+EseqElimination::MoveStatement
+EseqElimination::TempExpression
+EseqElimination::CallExpression
+EseqElimination::NameExpression
+EseqElimination::ExpressionList
+EseqElimination::ConstExpression
+EseqElimination::ExpressionList (finish)
+EseqElimination::IsEseq element type: 8 
+EseqElimination::CallExpression (finish)
+EseqElimination::IsEseq element type: 10 
+EseqElimination::IsEseq element type: 12 
+move: !is_target_eseq && !is_source_eseq
+EseqElimination::MoveStatement (finish)
+EseqElimination::TempExpression
+EseqElimination::IsEseq element type: 10 
+EseqElimination::EseqExpression (finish)
+exp stmt: pre `is eseq`
+EseqElimination::IsEseq element type: 14 
+EseqElimination::ExpStatement (finish)
+EseqElimination::MoveStatement
+EseqElimination::MemExpression
+EseqElimination::BinopExpression
+EseqElimination::TempExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 10 
+EseqElimination::IsEseq element type: 8 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 9 
+EseqElimination::MemExpression (finish)
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 11 
+EseqElimination::IsEseq element type: 8 
+move: !is_target_eseq && !is_source_eseq
+EseqElimination::MoveStatement (finish)
+EseqElimination::SeqStatement (finish)
+EseqElimination::SeqStatement (finish)
+0
+0
+0
+0
+1
+build blocks: %main
+build blocks: 1
+BlockTree::PrintJouette
+DFS
+%main
+DFS
+%done
+DFS
+DFS
+DFS
+DFS
+%main
+DFS
+%done
+DFS
+DFS
+DFS
+JouetteAssembler::LabelStatement
+JouetteAssembler::MoveStatement start
+JouetteAssembler::TempExpression
+JouetteAssembler::ConstExpression
+JouetteAssembler::CallExpression
+JouetteAssembler::MoveStatement
+JouetteAssembler::MoveStatement start
+JouetteAssembler::TempExpression
+JouetteAssembler::ConstExpression
+JouetteAssembler::CallExpression
+JouetteAssembler::MoveStatement
+JouetteAssembler::MoveStatement start
+JouetteAssembler::TempExpression
+JouetteAssembler::ConstExpression
+JouetteAssembler::MoveStatement
+JouetteAssembler::JumpStatement
+Label::Accept
+PrintVisitor::Label (start)
+Label operator<<
+Label operator<< (end)
+PrintVisitor::Label
+PrintVisitor::Addi start
+PrintVisitor::Addi
+PrintVisitor::Call start
+Label operator<<
+Label operator<< (end)
+PrintVisitor::Call
+PrintVisitor::Addi start
+PrintVisitor::Addi
+PrintVisitor::Call start
+Label operator<<
+Label operator<< (end)
+PrintVisitor::Call
+PrintVisitor::Addi start
+PrintVisitor::Addi
+PrintVisitor::Store start
+PrintVisitor::Store
+PrintVisitor::Jump start
+Label operator<<
+Label operator<< (end)
+PrintVisitor::Jump
+Label::Accept
+PrintVisitor::Label (start)
+Label operator<<
+Label operator<< (end)
+PrintVisitor::Label

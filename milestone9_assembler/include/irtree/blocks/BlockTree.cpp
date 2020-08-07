@@ -9,23 +9,25 @@
 
 namespace IRT {
 
-BlockTree::BlockTree(std::shared_ptr<Statement> pre_root) {
+BlockTree::BlockTree(std::shared_ptr<Statement> pre_root, bool is_main)
+  : is_main_{is_main} {
+
   assert(pre_root != nullptr);
   CanonizeIrtree(pre_root);
 
   std::shared_ptr<SeqStatement> root;
   if (IRT::GetNodeType(pre_root) != NodeType::SeqStatement) {
     root = std::make_shared<SeqStatement>(
-        std::make_shared<LabelStatement>(Label()),
+        std::make_shared<LabelStatement>(is_main ? GetMainLabel() : Label()),
         pre_root);
   } else {
-    root = std::dynamic_pointer_cast<SeqStatement>(pre_root);
+    root = GetSeqStmt(pre_root);
   }
 
   //check if first stmt is Label
   if (NodeAdapter(root).GetType() != NodeType::LabelStatement) {
     root = std::make_shared<SeqStatement>(
-        std::make_shared<LabelStatement>(Label()),
+        std::make_shared<LabelStatement>(is_main ? GetMainLabel() : Label()),
         root);
   }
 
@@ -36,9 +38,9 @@ BlockTree::BlockTree(std::shared_ptr<Statement> pre_root) {
   it.GetSeq()->rhs = std::make_shared<SeqStatement>(
       tmp, 
       std::make_shared<SeqStatement>(
-        std::make_shared<JumpStatement>(Label("%done")),
+        std::make_shared<JumpStatement>(GetDoneLabel()),
         std::make_shared<SeqStatement>(
-          std::make_shared<LabelStatement>(Label("%done")),
+          std::make_shared<LabelStatement>(GetDoneLabel()),
           std::make_shared<LabelStatement>(Label()))));
 
   //set jumps
@@ -89,8 +91,8 @@ void BlockTree::PrintTree(const std::string& filename) const {
   static auto print_visitor = std::make_shared<PrintVisitor>(filename);
   root_->GetLabelSeq()->Accept(print_visitor);
 
-  std::ofstream stream(filename + "_blocks");
-  Routine routine = [&stream](std::shared_ptr<Block> it) {
+  Routine routine = [&filename](std::shared_ptr<Block> it) {
+    static std::ofstream stream(filename + "_blocks");
 //    stream << "Current: " << it->GetLabelName() << std::endl;
 //    stream << "Prev: " << std::endl << " > ";
 //    for (auto&& prev : it->GetPrev()) {
@@ -106,8 +108,22 @@ void BlockTree::PrintTree(const std::string& filename) const {
   BFS(routine);
 
   DEBUG_SINGLE("BFS finished")
+}
 
-  stream.close();
+void BlockTree::PrintJouette(const std::string& filename) const {
+  DEBUG_SINGLE("BlockTree::PrintJouette")
+
+  auto traces = GetTraces();
+  for (auto&& trace : GetTraces()) {
+    for (auto&& block : trace->GetBlocks()) {
+      block->PrintBlock(filename, is_main_);
+    }
+  }
+}
+
+std::shared_ptr<Jouette::PrintVisitor> BlockTree::GetPrinter(
+      const std::string& filename) const {
+  return Block().GetPrinter(filename);
 }
 
 void BlockTree::BFS(Routine routine) const {
@@ -176,7 +192,7 @@ void BlockTree::BuildBlocks(std::shared_ptr<SeqStatement> root) {
   }
 
   // make 'done' block
-  block_mapping["%done"] = std::make_shared<Block>(
+  block_mapping[GetDoneLabel().ToString()] = std::make_shared<Block>(
       it.GetSeq(), // 'it' points to SeqStmt-parent of 'done' label now.
       std::make_shared<SeqStatement>(
         std::make_shared<JumpStatement>(Label()),
@@ -187,7 +203,7 @@ void BlockTree::BuildBlocks(std::shared_ptr<SeqStatement> root) {
 
   // bind blocks together
   for (auto&& pair : block_mapping) {
-    if (pair.first == "%done") {
+    if (pair.first == GetDoneLabel().ToString()) {
       continue;
     }
 

@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks
+# Install script for directory: /mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone9_assembler
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone9_assembler/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

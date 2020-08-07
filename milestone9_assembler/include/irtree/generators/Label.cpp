@@ -18,3 +18,20 @@ std::string IRT::Label::ToString() const {
 
 int IRT::Label::counter_ = 0;
 
+IRT::Label& IRT::GetDoneLabel() {
+  static Label done_label{"%done"};
+  return done_label;
+}
+
+bool IRT::IsDoneLabel(const IRT::Label& label) {
+  return IRT::GetDoneLabel().ToString() == label.ToString();
+}
+
+IRT::Label& IRT::GetMainLabel() {
+  static Label main_label{"%main"};
+  return main_label;
+}
+
+bool IRT::IsMainLabel(const IRT::Label& label) {
+  return IRT::GetMainLabel().ToString() == label.ToString();
+}

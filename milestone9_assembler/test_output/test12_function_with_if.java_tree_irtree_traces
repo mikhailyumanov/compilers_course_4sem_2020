@@ -1,4 +1,0 @@
-L2 -> %done -> 
-Dummy::AlwaysTrue -> %done -> 
-Dummy::AlwaysFalse -> L1 -> %done -> 
-L0 -> 

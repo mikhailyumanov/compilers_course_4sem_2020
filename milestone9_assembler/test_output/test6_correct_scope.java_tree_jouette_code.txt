@@ -1,0 +1,32 @@
+
+%main:
+	addi		[%2], %null, 5
+	store		::fp, 0, %2
+	load		[%3], ::fp, 0
+	store		::fp, 4, %3
+	load		[%4], ::fp, 0
+	store		::fp, 8, %4
+	load		[%5], ::fp, 0
+	addi		[%6], %null, 5
+	sub		[%7], %5, %6
+	blt		L1, %7
+	bne		L0, %7
+
+L1:
+	addi		[%8], %null, 7
+	store		::fp, 16, %8
+	load		[%9], ::fp, 16
+	call		[%1], printf, %9
+	jump		L2
+
+L2:
+	jump		%done
+
+L0:
+	addi		[%11], %null, 6
+	store		::fp, 12, %11
+	load		[%12], ::fp, 12
+	call		[%0], printf, %12
+	jump		L2
+
+%done:

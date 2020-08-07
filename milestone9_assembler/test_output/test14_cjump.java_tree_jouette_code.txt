@@ -1,0 +1,58 @@
+
+%main:
+	addi		[%9], ::fp, 0
+	addi		[%14], %null, 4
+	call		[%0], malloc, %14
+	store		%9, 0, %0
+	load		[%16], ::fp, 0
+	addi		[%17], %null, 0
+	call		[%1], Number::SetNumber, %16, %17
+	addi		[%10], ::fp, 4
+	addi		[%20], %null, 1
+	call		[%2], malloc, %20
+	store		%10, 0, %2
+	jump		L0
+
+L0:
+	load		[%22], ::fp, 0
+	call		[%3], Number::GetNumber, %22
+	load		[%24], ::fp, 4
+	call		[%4], Five::GetNumber, %24
+	sub		[%26], %11, %4
+	blt		L1, %26
+
+L2:
+	jump		%done
+
+L1:
+	load		[%27], ::fp, 0
+	call		[%5], Number::GetNumber, %27
+	call		[%6], printf, %5
+	load		[%12], ::fp, 0
+	load		[%31], ::fp, 0
+	call		[%7], Number::GetNumber, %31
+	addi		[%33], %7, 1
+	call		[%8], Number::SetNumber, %12, %33
+	jump		L0
+
+Number::GetNumber:
+	load		[%37], ::fp, 0
+	addi		[%39], %null, 0
+	addi		[%40], %null, 4
+	mul		[%38], %39, %40
+	add		[%36], %37, %38
+	load		[::return_value], %36, 0
+	return
+
+Number::SetNumber:
+	load		[%43], ::fp, 0
+	addi		[%45], %null, 0
+	addi		[%46], %null, 4
+	mul		[%44], %45, %46
+	add		[%42], %43, %44
+	load		[%41], %42, 0
+	load		[%47], ::fp, 4
+	movem		[%41], %47 
+	return
+
+%done:

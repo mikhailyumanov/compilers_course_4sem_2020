@@ -13,10 +13,14 @@ using Routine = std::function<void(std::shared_ptr<Block>)>;
 
 class BlockTree: public std::enable_shared_from_this<BlockTree> {
  public:
-  explicit BlockTree(std::shared_ptr<Statement> root);
+  BlockTree() = default;
+  explicit BlockTree(std::shared_ptr<Statement> root, bool is_main = false);
 
   std::vector<std::shared_ptr<Trace>> GetTraces() const;
   void PrintTree(const std::string& filename) const;
+  void PrintJouette(const std::string& filename) const;
+
+  std::shared_ptr<Jouette::PrintVisitor> GetPrinter(const std::string&) const;
 
  private:
   void DFS(Routine f) const;
@@ -28,6 +32,7 @@ class BlockTree: public std::enable_shared_from_this<BlockTree> {
 
  private:
   std::shared_ptr<Block> root_;
+  bool is_main_ = false;
 };
 
 }

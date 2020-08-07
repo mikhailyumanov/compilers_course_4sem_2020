@@ -1,4 +1,4 @@
-// A Bison parser, made by GNU Bison 3.5.2.
+// A Bison parser, made by GNU Bison 3.5.3.
 
 // Skeleton interface for Bison LALR(1) parsers in C++
 
@@ -32,7 +32,7 @@
 
 
 /**
- ** \file /compilers/compilers_course_4sem_2020/milestone8_blocks/parser.hh
+ ** \file /mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone9_assembler/parser.hh
  ** Define the yy::parser class.
  */
 
@@ -41,8 +41,8 @@
 // Undocumented macros, especially those whose name start with YY_,
 // are private implementation details.  Do not rely on them.
 
-#ifndef YY_YY_COMPILERS_COMPILERS_COURSE_4SEM_2020_MILESTONE8_BLOCKS_PARSER_HH_INCLUDED
-# define YY_YY_COMPILERS_COMPILERS_COURSE_4SEM_2020_MILESTONE8_BLOCKS_PARSER_HH_INCLUDED
+#ifndef YY_YY_MNT_WINDOWS_DATA_MISHA_STUDY_MIPT_2GRADE_2SEM_COMPILERS_COMPILERS_COURSE_4SEM_2020_MILESTONE9_ASSEMBLER_PARSER_HH_INCLUDED
+# define YY_YY_MNT_WINDOWS_DATA_MISHA_STUDY_MIPT_2GRADE_2SEM_COMPILERS_COMPILERS_COURSE_4SEM_2020_MILESTONE9_ASSEMBLER_PARSER_HH_INCLUDED
 // "%code requires" blocks.
 #line 9 "parser.y"
 
@@ -55,7 +55,7 @@
     class Scanner;
     class Driver;
 
-#line 59 "/compilers/compilers_course_4sem_2020/milestone8_blocks/parser.hh"
+#line 59 "/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone9_assembler/parser.hh"
 
 # include <cassert>
 # include <cstdlib> // std::abort
@@ -189,7 +189,7 @@
 #endif
 
 namespace yy {
-#line 193 "/compilers/compilers_course_4sem_2020/milestone8_blocks/parser.hh"
+#line 193 "/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone9_assembler/parser.hh"
 
 
 
@@ -2543,10 +2543,10 @@ switch (yytype)
   }
 
 } // yy
-#line 2547 "/compilers/compilers_course_4sem_2020/milestone8_blocks/parser.hh"
+#line 2547 "/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone9_assembler/parser.hh"
 
 
 
 
 
-#endif // !YY_YY_COMPILERS_COMPILERS_COURSE_4SEM_2020_MILESTONE8_BLOCKS_PARSER_HH_INCLUDED
+#endif // !YY_YY_MNT_WINDOWS_DATA_MISHA_STUDY_MIPT_2GRADE_2SEM_COMPILERS_COMPILERS_COURSE_4SEM_2020_MILESTONE9_ASSEMBLER_PARSER_HH_INCLUDED

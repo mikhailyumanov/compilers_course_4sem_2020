@@ -1,0 +1,111 @@
+SeqStatement:
+	LabelStatement: Fac::ComputeFac
+	SeqStatement:
+		JumpConditionalStatement: EQ
+		TrueLabel: L0
+		FalseLabel: L1
+			MemExpression: 
+				BinopExpression: PLUS
+					TempExpression: ::fp
+					ConstExpression 4
+			ConstExpression 0
+		SeqStatement:
+			LabelStatement: L0
+			SeqStatement:
+				MoveStatement:
+					TempExpression: %8
+					CallExpression: 
+						NameExpression: printf
+						ExpressionList: 
+							ConstExpression 0
+				SeqStatement:
+					MoveStatement:
+						MemExpression: 
+							BinopExpression: PLUS
+								TempExpression: ::fp
+								ConstExpression 12
+						ConstExpression 1
+					SeqStatement:
+						JumpStatement: L2
+						SeqStatement:
+							LabelStatement: L1
+							SeqStatement:
+								MoveStatement:
+									TempExpression: %9
+									CallExpression: 
+										NameExpression: printf
+										ExpressionList: 
+											BinopExpression: MINUS
+												MemExpression: 
+													BinopExpression: PLUS
+														TempExpression: ::fp
+														ConstExpression 4
+												ConstExpression 1
+								SeqStatement:
+									MoveStatement:
+										TempExpression: %12
+										BinopExpression: PLUS
+											TempExpression: ::fp
+											ConstExpression 12
+									SeqStatement:
+										MoveStatement:
+											TempExpression: %11
+											MemExpression: 
+												BinopExpression: PLUS
+													TempExpression: ::fp
+													ConstExpression 4
+										SeqStatement:
+											MoveStatement:
+												TempExpression: %10
+												CallExpression: 
+													NameExpression: Fac::ComputeFac
+													ExpressionList: 
+														MemExpression: 
+															BinopExpression: PLUS
+																TempExpression: ::fp
+																ConstExpression 0
+														BinopExpression: MINUS
+															MemExpression: 
+																BinopExpression: PLUS
+																	TempExpression: ::fp
+																	ConstExpression 4
+															ConstExpression 1
+											SeqStatement:
+												MoveStatement:
+													MemExpression: 
+														TempExpression: %12
+													BinopExpression: MUL
+														TempExpression: %11
+														EseqExpression:
+															MoveStatement:
+																TempExpression: %10
+																CallExpression: 
+																	NameExpression: Fac::ComputeFac
+																	ExpressionList: 
+																		MemExpression: 
+																			BinopExpression: PLUS
+																				TempExpression: ::fp
+																				ConstExpression 0
+																		BinopExpression: MINUS
+																			MemExpression: 
+																				BinopExpression: PLUS
+																					TempExpression: ::fp
+																					ConstExpression 4
+																			ConstExpression 1
+															TempExpression: %10
+												SeqStatement:
+													JumpStatement: L2
+													SeqStatement:
+														LabelStatement: L2
+														SeqStatement:
+															MoveStatement:
+																TempExpression: ::return_value
+																MemExpression: 
+																	BinopExpression: PLUS
+																		TempExpression: ::fp
+																		ConstExpression 12
+															SeqStatement:
+																JumpStatement: %done
+																SeqStatement:
+																	LabelStatement: %done
+																	LabelStatement: L6

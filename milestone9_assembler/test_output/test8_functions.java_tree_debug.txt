@@ -1,57 +1,57 @@
 >>> IrtreeBuildVisitor: Program
 >>> PrintVisitor: Program
 GoDown
-Current state: parent: 0x55e0a7944b20 ; child index: 1 num_children: 2 
-operator->; current_parent: 0x55e0a7944b20 child_index: 1 num_children: 2 
+Current state: parent: 0x56009802ef40 ; child index: 1 num_children: 2 
+operator->; current_parent: 0x56009802ef40 child_index: 1 num_children: 2 
 GoDown
-Current state: parent: 0x55e0a7945080 ; child index: 0 num_children: 1 
+Current state: parent: 0x56009802f4a0 ; child index: 0 num_children: 1 
 >>> PrintVisitor: ClassDecl Dog 
 SymbolTreeVisitor::FunctionScopeDown
 Return type: void; Args: 
 GoDown
-Current state: parent: 0x55e0a79451d0 ; child index: 0 num_children: 1 
+Current state: parent: 0x56009802f5f0 ; child index: 0 num_children: 1 
 Return type: void; Args: 
 >>> PrintVisitor: MethodDecl Return type: void; Args:  Bark 
-Bark Return type: void; Args:  operator->; current_parent: 0x55e0a79451d0 child_index: 0 num_children: 1 
+Bark Return type: void; Args:  operator->; current_parent: 0x56009802f5f0 child_index: 0 num_children: 1 
 Return type: void; Args:  
 >>> PrintVisitor: PrintStmt
 >>> PrintVisitor: IntExpr 12345 
-MethodDecl:  Return type: void; Args:  operator->; current_parent: 0x55e0a79451d0 child_index: 0 num_children: 1 
+MethodDecl:  Return type: void; Args:  operator->; current_parent: 0x56009802f5f0 child_index: 0 num_children: 1 
 Return type: void; Args:  
-operator->; current_parent: 0x55e0a79451d0 child_index: 0 num_children: 1 
+operator->; current_parent: 0x56009802f5f0 child_index: 0 num_children: 1 
 Return type: void; Args: 
 ScopeLayerTree::SetFunctionScope Return type: void; Args:  Return type: void; Args:  
 GoUp
-Current state: parent: 0x55e0a7945080 ; child index: 0 num_children: 1 
+Current state: parent: 0x56009802f4a0 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x55e0a7944b20 ; child index: 1 num_children: 2 
+Current state: parent: 0x56009802ef40 ; child index: 1 num_children: 2 
 GoDown
-Current state: parent: 0x55e0a7945080 ; child index: 1 num_children: 2 
-operator->; current_parent: 0x55e0a7945080 child_index: 1 num_children: 2 
+Current state: parent: 0x56009802f4a0 ; child index: 1 num_children: 2 
+operator->; current_parent: 0x56009802f4a0 child_index: 1 num_children: 2 
 >>> PrintVisitor: MainClass
-operator->; current_parent: 0x55e0a7945080 child_index: 1 num_children: 2 
+operator->; current_parent: 0x56009802f4a0 child_index: 1 num_children: 2 
 >>> PrintVisitor: LocalVarDeclStmt
 >>> PrintVisitor: VarDecl type: Dog, is_array: false dog 
 dog type: Dog, is_array: false 
-operator->; current_parent: 0x55e0a7945080 child_index: 1 num_children: 2 
+operator->; current_parent: 0x56009802f4a0 child_index: 1 num_children: 2 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x55e0a7945080 child_index: 1 num_children: 2 
+operator->; current_parent: 0x56009802f4a0 child_index: 1 num_children: 2 
 ScopeLayer::IsArgument
-operator->; current_parent: 0x55e0a7945080 child_index: 1 num_children: 2 
+operator->; current_parent: 0x56009802f4a0 child_index: 1 num_children: 2 
 >>> PrintVisitor: AssignmentStmt
-operator->; current_parent: 0x55e0a7945080 child_index: 1 num_children: 2 
+operator->; current_parent: 0x56009802f4a0 child_index: 1 num_children: 2 
 >>> PrintVisitor: NewExpr type =  Dog 
-operator->; current_parent: 0x55e0a7945080 child_index: 1 num_children: 2 
+operator->; current_parent: 0x56009802f4a0 child_index: 1 num_children: 2 
 >>> PrintVisitor: MethodStmt
 >>> PrintVisitor: MethodInvocation
 >>> PrintVisitor: NewExpr type =  Dog 
 Bark
 GoDown
-Current state: parent: 0x55e0a7945860 ; child index: 0 num_children: 1 
+Current state: parent: 0x56009802fc80 ; child index: 0 num_children: 1 
 GoUp
-Current state: parent: 0x55e0a7945080 ; child index: 1 num_children: 2 
+Current state: parent: 0x56009802f4a0 ; child index: 1 num_children: 2 
 GoUp
-Current state: parent: 0x55e0a7944b20 ; child index: 1 num_children: 2 
+Current state: parent: 0x56009802ef40 ; child index: 1 num_children: 2 
 >>> IrtreeBuildVisitor: ClassDecl
 >>> IrtreeBuildVisitor: MethodDecl
 >>> IrtreeBuildVisitor: PrintStmt
@@ -71,11 +71,11 @@ EseqElimination::MemExpression
 EseqElimination::BinopExpression
 EseqElimination::TempExpression
 EseqElimination::ConstExpression
-EseqElimination::IsEseq element type: 9 
-EseqElimination::IsEseq element type: 7 
+EseqElimination::IsEseq element type: 10 
+EseqElimination::IsEseq element type: 8 
 binop: !is_lhs_eseq && !is_rhs_eseq
 EseqElimination::BinopExpression (finish)
-EseqElimination::IsEseq element type: 8 
+EseqElimination::IsEseq element type: 9 
 EseqElimination::MemExpression (finish)
 EseqElimination::EseqExpression
 EseqElimination::MoveStatement
@@ -85,17 +85,17 @@ EseqElimination::NameExpression
 EseqElimination::ExpressionList
 EseqElimination::ConstExpression
 EseqElimination::ExpressionList (finish)
-EseqElimination::IsEseq element type: 7 
+EseqElimination::IsEseq element type: 8 
 EseqElimination::CallExpression (finish)
-EseqElimination::IsEseq element type: 9 
-EseqElimination::IsEseq element type: 11 
+EseqElimination::IsEseq element type: 10 
+EseqElimination::IsEseq element type: 12 
 move: !is_target_eseq && !is_source_eseq
 EseqElimination::MoveStatement (finish)
 EseqElimination::TempExpression
-EseqElimination::IsEseq element type: 9 
-EseqElimination::EseqExpression (finish)
 EseqElimination::IsEseq element type: 10 
-EseqElimination::IsEseq element type: 13 
+EseqElimination::EseqExpression (finish)
+EseqElimination::IsEseq element type: 11 
+EseqElimination::IsEseq element type: 14 
 move: !is_target_eseq && is_source_eseq
 move: target is MemExpr
 EseqElimination::MoveStatement (finish)
@@ -114,28 +114,28 @@ EseqElimination::NameExpression
 EseqElimination::ExpressionList
 EseqElimination::ConstExpression
 EseqElimination::ExpressionList (finish)
-EseqElimination::IsEseq element type: 7 
+EseqElimination::IsEseq element type: 8 
 EseqElimination::CallExpression (finish)
-EseqElimination::IsEseq element type: 9 
-EseqElimination::IsEseq element type: 11 
+EseqElimination::IsEseq element type: 10 
+EseqElimination::IsEseq element type: 12 
 move: !is_target_eseq && !is_source_eseq
 EseqElimination::MoveStatement (finish)
 EseqElimination::TempExpression
-EseqElimination::IsEseq element type: 9 
+EseqElimination::IsEseq element type: 10 
 EseqElimination::EseqExpression (finish)
 EseqElimination::ExpressionList (finish)
-EseqElimination::IsEseq element type: 13 
+EseqElimination::IsEseq element type: 14 
 EseqElimination::CallExpression (finish)
-EseqElimination::IsEseq element type: 9 
-EseqElimination::IsEseq element type: 13 
+EseqElimination::IsEseq element type: 10 
+EseqElimination::IsEseq element type: 14 
 move: !is_target_eseq && is_source_eseq
 move: target is temp
 EseqElimination::MoveStatement (finish)
 EseqElimination::TempExpression
-EseqElimination::IsEseq element type: 9 
+EseqElimination::IsEseq element type: 10 
 EseqElimination::EseqExpression (finish)
 exp stmt: pre `is eseq`
-EseqElimination::IsEseq element type: 13 
+EseqElimination::IsEseq element type: 14 
 EseqElimination::ExpStatement (finish)
 EseqElimination::SeqStatement (finish)
 0
@@ -145,58 +145,78 @@ EseqElimination::SeqStatement (finish)
 0
 0
 1
-build blocks: L0
+build blocks: %main
 build blocks: 1
-BlockTree::PrintTree
-SeqStatement:
-LabelStatement: 
-SeqStatement:
-MoveStatement:
-TempExpression: 
-BinopExpression: 
-TempExpression: 
-ConstExpression 
-SeqStatement:
-MoveStatement:
-TempExpression: 
-CallExpression: 
-NameExpression: 
-ExpressionList: 
-ConstExpression 
-SeqStatement:
-MoveStatement:
-MemExpression: 
-TempExpression: 
-TempExpression: 
-SeqStatement:
-MoveStatement:
-TempExpression: 
-CallExpression: 
-NameExpression: 
-ExpressionList: 
-ConstExpression 
-SeqStatement:
-MoveStatement:
-TempExpression: 
-CallExpression: 
-NameExpression: 
-ExpressionList: 
-TempExpression: 
-SeqStatement:
-JumpStatement: 
-SeqStatement:
-LabelStatement: 
-LabelStatement: 
-BFS
-BFS
-BFS finished
+BlockTree::PrintJouette
 DFS
-L0
+%main
 DFS
 %done
 DFS
 DFS
 DFS
+DFS
+%main
+DFS
+%done
+DFS
+DFS
+DFS
+JouetteAssembler::LabelStatement
+JouetteAssembler::MoveStatement start
+JouetteAssembler::TempExpression
+JouetteAssembler::TempExpression
+JouetteAssembler::BinopExpression
+JouetteAssembler::MoveStatement
+JouetteAssembler::MoveStatement start
+JouetteAssembler::TempExpression
+JouetteAssembler::ConstExpression
+JouetteAssembler::CallExpression
+JouetteAssembler::MoveStatement
+JouetteAssembler::MoveStatement start
+JouetteAssembler::TempExpression
+JouetteAssembler::TempExpression
+JouetteAssembler::MoveStatement
+JouetteAssembler::MoveStatement start
+JouetteAssembler::TempExpression
+JouetteAssembler::ConstExpression
+JouetteAssembler::CallExpression
+JouetteAssembler::MoveStatement
+JouetteAssembler::MoveStatement start
+JouetteAssembler::TempExpression
+JouetteAssembler::TempExpression
+JouetteAssembler::CallExpression
+JouetteAssembler::MoveStatement
+JouetteAssembler::JumpStatement
+Label::Accept
+PrintVisitor::Label (start)
+Label operator<<
+Label operator<< (end)
+PrintVisitor::Label
+PrintVisitor::Addi start
+PrintVisitor::Addi
+PrintVisitor::Addi start
+PrintVisitor::Addi
+PrintVisitor::Call start
+Label operator<<
+Label operator<< (end)
+PrintVisitor::Call
+PrintVisitor::Store start
+PrintVisitor::Store
+PrintVisitor::Addi start
+PrintVisitor::Addi
+PrintVisitor::Call start
+Label operator<<
+Label operator<< (end)
+PrintVisitor::Call
+PrintVisitor::Call start
+Label operator<<
+Label operator<< (end)
+PrintVisitor::Call
+PrintVisitor::Jump start
+Label operator<<
+Label operator<< (end)
+PrintVisitor::Jump
 EseqElimination::SeqStatement
 EseqElimination::LabelStatement
 EseqElimination::ExpStatement
@@ -208,17 +228,17 @@ EseqElimination::NameExpression
 EseqElimination::ExpressionList
 EseqElimination::ConstExpression
 EseqElimination::ExpressionList (finish)
-EseqElimination::IsEseq element type: 7 
+EseqElimination::IsEseq element type: 8 
 EseqElimination::CallExpression (finish)
-EseqElimination::IsEseq element type: 9 
-EseqElimination::IsEseq element type: 11 
+EseqElimination::IsEseq element type: 10 
+EseqElimination::IsEseq element type: 12 
 move: !is_target_eseq && !is_source_eseq
 EseqElimination::MoveStatement (finish)
 EseqElimination::TempExpression
-EseqElimination::IsEseq element type: 9 
+EseqElimination::IsEseq element type: 10 
 EseqElimination::EseqExpression (finish)
 exp stmt: pre `is eseq`
-EseqElimination::IsEseq element type: 13 
+EseqElimination::IsEseq element type: 14 
 EseqElimination::ExpStatement (finish)
 EseqElimination::SeqStatement (finish)
 0
@@ -244,6 +264,7 @@ LabelStatement:
 BFS
 BFS
 BFS finished
+BlockTree::PrintJouette
 DFS
 Dog::Bark
 DFS
@@ -251,3 +272,35 @@ DFS
 DFS
 DFS
 DFS
+DFS
+Dog::Bark
+DFS
+%done
+DFS
+DFS
+DFS
+JouetteAssembler::LabelStatement
+JouetteAssembler::MoveStatement start
+JouetteAssembler::TempExpression
+JouetteAssembler::ConstExpression
+JouetteAssembler::CallExpression
+JouetteAssembler::MoveStatement
+JouetteAssembler::ReturnStatement
+Label::Accept
+PrintVisitor::Label (start)
+Label operator<<
+Label operator<< (end)
+PrintVisitor::Label
+PrintVisitor::Addi start
+PrintVisitor::Addi
+PrintVisitor::Call start
+Label operator<<
+Label operator<< (end)
+PrintVisitor::Call
+PrintVisitor::Return start
+PrintVisitor::Return
+Label::Accept
+PrintVisitor::Label (start)
+Label operator<<
+Label operator<< (end)
+PrintVisitor::Label

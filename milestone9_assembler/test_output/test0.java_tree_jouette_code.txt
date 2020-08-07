@@ -1,0 +1,11 @@
+
+%main:
+	addi		[%2], %null, 6
+	call		[%0], printf, %2
+	addi		[%4], %null, 7
+	call		[%1], printf, %4
+	addi		[%6], %null, 5
+	store		::fp, 0, %6
+	jump		%done
+
+%done:

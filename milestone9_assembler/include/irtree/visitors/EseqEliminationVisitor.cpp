@@ -5,8 +5,7 @@
 
 namespace IRT {
 
-EseqEliminationVisitor::EseqEliminationVisitor()
-  : ident_visitor_{std::make_shared<IdentVisitor>()} {
+EseqEliminationVisitor::EseqEliminationVisitor() {
 }
 
 void EseqEliminationVisitor::Visit(std::shared_ptr<ExpStatement> element) {
@@ -139,7 +138,7 @@ void EseqEliminationVisitor::Visit(std::shared_ptr<MoveStatement> element) {
 
     auto eseq = std::dynamic_pointer_cast<IRT::EseqExpression>(
           element->source);
-    if (ident_visitor_->Accept(element->target) == NodeType::TempExpression) {
+    if (IRT::GetNodeType(element->target) == NodeType::TempExpression) {
       DEBUG_SINGLE("move: target is temp")
 
       tmp = std::make_shared<IRT::SeqStatement>(
@@ -175,7 +174,7 @@ void EseqEliminationVisitor::Visit(std::shared_ptr<MoveStatement> element) {
     auto eseq_source = std::dynamic_pointer_cast<IRT::EseqExpression>(
         element->source);
 
-    if (ident_visitor_->Accept(element->target) == NodeType::TempExpression) {
+    if (IRT::GetNodeType(element->target) == NodeType::TempExpression) {
       DEBUG_SINGLE("move: target is temp")
 
       tmp = std::make_shared<IRT::SeqStatement>(
@@ -242,6 +241,12 @@ void EseqEliminationVisitor::Visit(std::shared_ptr<LabelStatement> element) {
 
 void EseqEliminationVisitor::Visit(std::shared_ptr<JumpStatement> element) {
   DEBUG_SINGLE("EseqElimination::JumpStatement")
+
+  tos_value_.stmt = element;
+}
+
+void EseqEliminationVisitor::Visit(std::shared_ptr<ReturnStatement> element) {
+  DEBUG_SINGLE("EseqElimination::ReturnStatement")
 
   tos_value_.stmt = element;
 }
@@ -486,10 +491,10 @@ bool EseqEliminationVisitor::IsEseq(std::shared_ptr<BaseElement> element) {
   DEBUG_START
     DEBUG("EseqElimination::IsEseq")
     DEBUG("element type:")
-    DEBUG((int) ident_visitor_->Accept(element))
+    DEBUG((int) IRT::GetNodeType(element))
   DEBUG_FINISH
 
-  return ident_visitor_->Accept(element) == NodeType::EseqExpression;
+  return IRT::GetNodeType(element) == NodeType::EseqExpression;
 }
 
 void EseqEliminationVisitor::Rehang(std::shared_ptr<EseqExpression> element) {

@@ -3,9 +3,7 @@
 
 namespace IRT {
 
-LinearizeVisitor::LinearizeVisitor()
-  : ident_visitor_{std::make_shared<IdentVisitor>()} {
-
+LinearizeVisitor::LinearizeVisitor() {
 }
 
 void LinearizeVisitor::Visit(std::shared_ptr<ExpStatement> element) {
@@ -37,7 +35,7 @@ void LinearizeVisitor::Visit(std::shared_ptr<MoveStatement> element) {
 void LinearizeVisitor::Visit(std::shared_ptr<SeqStatement> element) {
   auto lhs = Accept(element->lhs).stmt;
 
-  if (ident_visitor_->Accept(lhs) == NodeType::SeqStatement) {
+  if (IRT::GetNodeType(lhs) == NodeType::SeqStatement) {
     auto seq_stmt = std::dynamic_pointer_cast<IRT::SeqStatement>(lhs);
     auto new_lhs = seq_stmt->lhs;
     auto new_rhs = std::make_shared<IRT::SeqStatement>(
@@ -60,6 +58,10 @@ void LinearizeVisitor::Visit(std::shared_ptr<LabelStatement> element) {
 }
 
 void LinearizeVisitor::Visit(std::shared_ptr<JumpStatement> element) {
+  tos_value_.stmt = element;
+}
+
+void LinearizeVisitor::Visit(std::shared_ptr<ReturnStatement> element) {
   tos_value_.stmt = element;
 }
 

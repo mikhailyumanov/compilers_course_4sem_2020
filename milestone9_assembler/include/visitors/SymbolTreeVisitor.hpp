@@ -1,7 +1,6 @@
 #pragma once
 
 #include "utils/elements.hpp"
-#include "visitors/Visitor.hpp"
 #include "visitors/PrintVisitor.hpp"
 #include "types/constructor/ClassBuilder.hpp"
 #include "utils/ExceptionGuy.hpp"
@@ -51,8 +50,8 @@ class SymbolTreeVisitor: public Visitor,
   void ScopeUp();
   void FunctionScopeDown(FunctionType);
 
-  bool SetMethodDecl();
-  bool UnsetMethodDecl();
+  void SetMethodDecl();
+  void UnsetMethodDecl();
   bool IsMethodDeclaration() const;
 
   friend class Interpreter;

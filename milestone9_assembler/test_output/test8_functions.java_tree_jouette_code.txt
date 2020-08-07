@@ -1,0 +1,17 @@
+
+%main:
+	addi		[%3], ::fp, 0
+	addi		[%5], %null, 1
+	call		[%0], malloc, %5
+	store		%3, 0, %0
+	addi		[%7], %null, 1
+	call		[%1], malloc, %7
+	call		[%2], Dog::Bark, %1
+	jump		%done
+
+Dog::Bark:
+	addi		[%11], %null, 12345
+	call		[%10], printf, %11
+	return
+
+%done:

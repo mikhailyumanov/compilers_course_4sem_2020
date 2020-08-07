@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks -I/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone8_blocks/include 
+CXX_INCLUDES = -I/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone9_assembler -I/mnt/windows_data/MISHA/STUDY/MIPT/2grade/2sem/compilers/compilers_course_4sem_2020/milestone9_assembler/include 
 

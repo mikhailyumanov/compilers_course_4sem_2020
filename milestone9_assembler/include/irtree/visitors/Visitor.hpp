@@ -3,12 +3,10 @@
 #include <memory>
 
 #include "debug.h"
+#include "irtree/forward_decl.hpp"
 
 
 namespace IRT {
-
-#include "irtree/forward_decl.hpp"
-
 
 class Visitor {
  public:
@@ -20,6 +18,7 @@ class Visitor {
   virtual void Visit(std::shared_ptr<SeqStatement> element) = 0;
   virtual void Visit(std::shared_ptr<LabelStatement> element) = 0;
   virtual void Visit(std::shared_ptr<JumpStatement> element) = 0;
+  virtual void Visit(std::shared_ptr<ReturnStatement> element) = 0;
 
   virtual void Visit(std::shared_ptr<ConstExpression> element) = 0;
   virtual void Visit(std::shared_ptr<BinopExpression> element) = 0;

@@ -18,6 +18,7 @@ class EseqEliminationVisitor: public TemplateVisitor<IRT::IrtStorage>,
   void Visit(std::shared_ptr<SeqStatement> element) override;
   void Visit(std::shared_ptr<LabelStatement> element) override;
   void Visit(std::shared_ptr<JumpStatement> element) override;
+  void Visit(std::shared_ptr<ReturnStatement> element) override;
 
   void Visit(std::shared_ptr<ConstExpression> element) override;
   void Visit(std::shared_ptr<BinopExpression> element) override;

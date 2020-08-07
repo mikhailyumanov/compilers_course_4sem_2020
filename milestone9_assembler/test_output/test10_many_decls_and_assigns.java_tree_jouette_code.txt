@@ -1,0 +1,112 @@
+
+%main:
+	addi		[%10], %null, 0
+	store		::fp, 0, %10
+	jump		L4
+
+L4:
+	load		[%11], ::fp, 0
+	addi		[%12], %null, 8
+	sub		[%13], %11, %12
+	blt		L5, %13
+
+L6:
+	jump		%done
+
+L5:
+	addi		[%7], ::fp, 4
+	addi		[%16], %null, 3
+	addi		[%17], %null, 4
+	mul		[%15], %16, %17
+	call		[%2], malloc, %15
+	store		%7, 0, %2
+	load		[%20], ::fp, 4
+	addi		[%23], %null, 1
+	addi		[%22], %23, 0
+	addi		[%24], %null, 4
+	mul		[%21], %22, %24
+	add		[%8], %20, %21
+	addi		[%0], %null, 1
+	load		[%26], ::fp, 0
+	addi		[%27], %null, 3
+	sub		[%28], %26, %27
+	blt		L1, %28
+	bne		L0, %28
+
+L1:
+	addi		[%0], %null, 0
+	jump		L0
+
+L0:
+	store		%8, 0, %0
+	load		[%31], ::fp, 4
+	addi		[%34], %null, 1
+	addi		[%33], %34, 1
+	addi		[%35], %null, 4
+	mul		[%32], %33, %35
+	add		[%9], %31, %32
+	addi		[%1], %null, 1
+	load		[%38], ::fp, 0
+	addi		[%40], %null, 4
+	load		[%42], ::fp, 0
+	addi		[%43], %null, 4
+	div		[%41], %42, %43
+	mul		[%39], %40, %41
+	sub		[%37], %38, %39
+	addi		[%44], %null, 1
+	sub		[%45], %37, %44
+	blt		L3, %45
+	bne		L2, %45
+
+L3:
+	addi		[%1], %null, 0
+	jump		L2
+
+L2:
+	store		%9, 0, %1
+	load		[%48], ::fp, 4
+	addi		[%51], %null, 1
+	addi		[%50], %51, 2
+	addi		[%52], %null, 4
+	mul		[%49], %50, %52
+	add		[%47], %48, %49
+	load		[%54], ::fp, 0
+	addi		[%56], %null, 2
+	load		[%58], ::fp, 0
+	addi		[%59], %null, 2
+	div		[%57], %58, %59
+	mul		[%55], %56, %57
+	sub		[%53], %54, %55
+	store		%47, 0, %53
+	load		[%61], ::fp, 0
+	addi		[%60], %61, 1
+	store		::fp, 0, %60
+	load		[%64], ::fp, 4
+	addi		[%67], %null, 1
+	addi		[%66], %67, 0
+	addi		[%68], %null, 4
+	mul		[%65], %66, %68
+	add		[%63], %64, %65
+	load		[%62], %63, 0
+	call		[%3], printf, %62
+	load		[%72], ::fp, 4
+	addi		[%75], %null, 1
+	addi		[%74], %75, 1
+	addi		[%76], %null, 4
+	mul		[%73], %74, %76
+	add		[%71], %72, %73
+	load		[%70], %71, 0
+	call		[%4], printf, %70
+	load		[%80], ::fp, 4
+	addi		[%83], %null, 1
+	addi		[%82], %83, 2
+	addi		[%84], %null, 4
+	mul		[%81], %82, %84
+	add		[%79], %80, %81
+	load		[%78], %79, 0
+	call		[%5], printf, %78
+	addi		[%86], %null, 11111111
+	call		[%6], printf, %86
+	jump		L4
+
+%done:

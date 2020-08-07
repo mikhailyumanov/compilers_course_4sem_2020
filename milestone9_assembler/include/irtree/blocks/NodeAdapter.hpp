@@ -15,6 +15,8 @@ class NodeAdapter: public std::enable_shared_from_this<NodeAdapter> {
   std::shared_ptr<SeqStatement> GetNextSeq() const;
   NodeType GetType() const;
 
+  Label GetLabel() const;
+
   std::shared_ptr<SeqStatement> GetSeqStmt() const;
   std::shared_ptr<LabelStatement> GetLabelStmt() const;
   std::shared_ptr<JumpStatement> GetJumpStmt() const;

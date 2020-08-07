@@ -1,0 +1,235 @@
+
+%main:
+	addi		[%14], ::fp, 0
+	addi		[%17], %null, 8
+	call		[%0], malloc, %17
+	store		%14, 0, %0
+	load		[%19], ::fp, 0
+	addi		[%20], %null, 0
+	call		[%1], House::SetNumDogs, %19, %20
+	load		[%15], ::fp, 0
+	addi		[%24], %null, 1
+	addi		[%25], %null, 4
+	mul		[%23], %24, %25
+	call		[%2], malloc, %23
+	call		[%3], House::SetDogs, %15, %2
+	addi		[%28], %null, 3
+	addi		[%29], %null, 2
+	sub		[%30], %28, %29
+	blt		L6, %30
+	bne		L6, %30
+
+L6:
+	load		[%31], ::fp, 0
+	addi		[%32], %null, 42
+	call		[%4], House::AddDog, %31, %32
+	load		[%34], ::fp, 0
+	call		[%5], House::GetNumDogs, %34
+	call		[%6], printf, %5
+	load		[%37], ::fp, 0
+	addi		[%38], %null, 79
+	call		[%7], House::AddDog, %37, %38
+	load		[%40], ::fp, 0
+	call		[%8], House::GetNumDogs, %40
+	call		[%9], printf, %8
+	load		[%43], ::fp, 0
+	addi		[%44], %null, 0
+	call		[%10], House::GetDog, %43, %44
+	call		[%11], Dog::Bark, %10
+	load		[%47], ::fp, 0
+	addi		[%48], %null, 1
+	call		[%12], House::GetDog, %47, %48
+	call		[%13], Dog::Bark, %12
+	jump		%done
+
+House::AddDog:
+	load		[%58], ::fp, 0
+	call		[%51], House::GetNumDogs, %58
+	load		[%63], ::fp, 0
+	addi		[%65], %null, 0
+	addi		[%66], %null, 4
+	mul		[%64], %65, %66
+	add		[%62], %63, %64
+	load		[%61], %62, 0
+	load		[%60], %61, 0
+	sub		[%67], %51, %60
+	beq		L3, %67
+
+L4:
+	addi		[%57], ::fp, 20
+	addi		[%69], %null, 4
+	call		[%53], malloc, %69
+	store		%57, 0, %53
+	load		[%71], ::fp, 20
+	load		[%72], ::fp, 4
+	call		[%54], Dog::SetIndex, %71, %72
+	load		[%74], ::fp, 20
+	call		[%55], Dog::Bark, %74
+	load		[%80], ::fp, 0
+	addi		[%82], %null, 0
+	addi		[%83], %null, 4
+	mul		[%81], %82, %83
+	add		[%79], %80, %81
+	load		[%78], %79, 0
+	load		[%88], ::fp, 0
+	addi		[%90], %null, 1
+	addi		[%91], %null, 4
+	mul		[%89], %90, %91
+	add		[%87], %88, %89
+	load		[%86], %87, 0
+	addi		[%85], %86, 1
+	addi		[%92], %null, 4
+	mul		[%84], %85, %92
+	add		[%77], %78, %84
+	load		[%76], %77, 0
+	load		[%93], ::fp, 20
+	movem		[%76], %93 
+	load		[%95], ::fp, 0
+	addi		[%97], %null, 1
+	addi		[%98], %null, 4
+	mul		[%96], %97, %98
+	add		[%94], %95, %96
+	load		[%102], ::fp, 0
+	addi		[%104], %null, 1
+	addi		[%105], %null, 4
+	mul		[%103], %104, %105
+	add		[%101], %102, %103
+	load		[%100], %101, 0
+	addi		[%99], %100, 1
+	store		%94, 0, %99
+	return
+
+L3:
+	addi		[%56], ::fp, 12
+	load		[%111], ::fp, 0
+	addi		[%113], %null, 1
+	addi		[%114], %null, 4
+	mul		[%112], %113, %114
+	add		[%110], %111, %112
+	load		[%109], %110, 0
+	addi		[%115], %null, 2
+	mul		[%108], %109, %115
+	addi		[%116], %null, 4
+	mul		[%107], %108, %116
+	call		[%52], malloc, %107
+	store		%56, 0, %52
+	addi		[%118], %null, 0
+	store		::fp, 16, %118
+	jump		L0
+
+L0:
+	load		[%119], ::fp, 16
+	load		[%122], ::fp, 0
+	addi		[%124], %null, 1
+	addi		[%125], %null, 4
+	mul		[%123], %124, %125
+	add		[%121], %122, %123
+	load		[%120], %121, 0
+	sub		[%126], %119, %120
+	blt		L1, %126
+
+L2:
+	load		[%129], ::fp, 0
+	addi		[%131], %null, 0
+	addi		[%132], %null, 4
+	mul		[%130], %131, %132
+	add		[%128], %129, %130
+	load		[%127], %128, 0
+	load		[%133], ::fp, 12
+	movem		[%127], %133 
+	jump		L4
+
+L1:
+	load		[%136], ::fp, 12
+	load		[%139], ::fp, 16
+	addi		[%138], %139, 1
+	addi		[%140], %null, 4
+	mul		[%137], %138, %140
+	add		[%135], %136, %137
+	load		[%134], %135, 0
+	load		[%145], ::fp, 0
+	addi		[%147], %null, 0
+	addi		[%148], %null, 4
+	mul		[%146], %147, %148
+	add		[%144], %145, %146
+	load		[%143], %144, 0
+	load		[%151], ::fp, 16
+	addi		[%150], %151, 1
+	addi		[%152], %null, 4
+	mul		[%149], %150, %152
+	add		[%142], %143, %149
+	load		[%141], %142, 0
+	movem		[%134], %141 
+	load		[%154], ::fp, 16
+	addi		[%153], %154, 1
+	store		::fp, 16, %153
+	jump		L0
+
+Dog::Bark:
+	load		[%158], ::fp, 0
+	addi		[%160], %null, 0
+	addi		[%161], %null, 4
+	mul		[%159], %160, %161
+	add		[%157], %158, %159
+	load		[%156], %157, 0
+	call		[%155], printf, %156
+	return
+
+Dog::SetIndex:
+	load		[%165], ::fp, 0
+	addi		[%167], %null, 0
+	addi		[%168], %null, 4
+	mul		[%166], %167, %168
+	add		[%164], %165, %166
+	load		[%163], %164, 0
+	load		[%169], ::fp, 4
+	movem		[%163], %169 
+	return
+
+House::SetNumDogs:
+	load		[%172], ::fp, 0
+	addi		[%174], %null, 1
+	addi		[%175], %null, 4
+	mul		[%173], %174, %175
+	add		[%171], %172, %173
+	load		[%170], %171, 0
+	load		[%176], ::fp, 4
+	movem		[%170], %176 
+	return
+
+House::GetDog:
+	load		[%181], ::fp, 0
+	addi		[%183], %null, 0
+	addi		[%184], %null, 4
+	mul		[%182], %183, %184
+	add		[%180], %181, %182
+	load		[%179], %180, 0
+	load		[%187], ::fp, 4
+	addi		[%186], %187, 1
+	addi		[%188], %null, 4
+	mul		[%185], %186, %188
+	add		[%178], %179, %185
+	load		[::return_value], %178, 0
+	return
+
+House::GetNumDogs:
+	load		[%191], ::fp, 0
+	addi		[%193], %null, 1
+	addi		[%194], %null, 4
+	mul		[%192], %193, %194
+	add		[%190], %191, %192
+	load		[::return_value], %190, 0
+	return
+
+Person::SetDogs:
+	load		[%197], ::fp, 0
+	addi		[%199], %null, 0
+	addi		[%200], %null, 4
+	mul		[%198], %199, %200
+	add		[%196], %197, %198
+	load		[%195], %196, 0
+	load		[%201], ::fp, 4
+	movem		[%195], %201 
+	return
+
+%done:

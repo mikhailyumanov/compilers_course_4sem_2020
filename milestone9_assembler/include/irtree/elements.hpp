@@ -12,29 +12,17 @@
 #include "irtree/generators/Label.hpp"
 #include "irtree/generators/Temporary.hpp"
 
-#include "irtree/nodes/expressions/Expression.hpp"
-#include "irtree/nodes/BaseElement.hpp"
-#include "irtree/nodes/statements/Statement.hpp"
-#include "irtree/nodes/statements/ExpStatement.hpp"
-#include "irtree/nodes/statements/JumpConditionalStatement.hpp"
-#include "irtree/nodes/statements/JumpStatement.hpp"
-#include "irtree/nodes/statements/MoveStatement.hpp"
-#include "irtree/nodes/statements/SeqStatement.hpp"
-#include "irtree/nodes/statements/LabelStatement.hpp"
-
-#include "irtree/nodes/expressions/ConstExpression.hpp"
-#include "irtree/nodes/expressions/BinopExpression.hpp"
-#include "irtree/nodes/expressions/TempExpression.hpp"
-#include "irtree/nodes/expressions/MemExpression.hpp"
-#include "irtree/nodes/expressions/CallExpression.hpp"
-#include "irtree/nodes/expressions/NameExpression.hpp"
-#include "irtree/nodes/expressions/EseqExpression.hpp"
-#include "irtree/nodes/ExpressionList.hpp"
+#include "irtree/base_elements.hpp"
 
 #include "irtree/visitors/PrintVisitor.hpp"
 #include "irtree/visitors/DoubleCallEliminationVisitor.hpp"
 #include "irtree/visitors/EseqEliminationVisitor.hpp"
 #include "irtree/visitors/LinearizeVisitor.hpp"
+#include "irtree/visitors/JouetteVisitor.hpp"
 
 #include "irtree/types/LogicOperatorType.hpp"
 #include "irtree/types/BinaryOperatorType.hpp"
+
+#include "irtree/blocks/BlockTree.hpp"
+
+#include "irtree/jouette_rules/elements.hpp"

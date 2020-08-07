@@ -1,0 +1,23 @@
+
+%main:
+	addi		[%5], ::fp, 0
+	addi		[%9], %null, 1
+	call		[%0], malloc, %9
+	store		%5, 0, %0
+	addi		[%6], ::fp, 4
+	addi		[%12], %null, 1
+	call		[%1], malloc, %12
+	store		%6, 0, %1
+	load		[%14], ::fp, 0
+	call		[%2], Five::GetNum, %14
+	load		[%16], ::fp, 4
+	call		[%3], Six::GetNum, %16
+	add		[%18], %7, %3
+	call		[%4], printf, %18
+	jump		%done
+
+Six::GetNum:
+	addi		[::return_value], %null, 6
+	return
+
+%done:

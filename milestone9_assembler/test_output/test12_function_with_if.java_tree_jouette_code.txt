@@ -1,0 +1,51 @@
+
+%main:
+	addi		[%12], ::fp, 0
+	addi		[%17], %null, 1
+	call		[%0], malloc, %17
+	call		[%1], Dummy::AlwaysTrue, %0
+	store		%12, 0, %1
+	load		[%20], ::fp, 0
+	call		[%2], printf, %20
+	addi		[%13], ::fp, 0
+	addi		[%23], %null, 1
+	call		[%3], malloc, %23
+	call		[%4], Dummy::AlwaysTrue, %3
+	store		%13, 0, %4
+	load		[%26], ::fp, 0
+	call		[%5], printf, %26
+	addi		[%14], ::fp, 0
+	addi		[%29], %null, 1
+	call		[%6], malloc, %29
+	call		[%7], Dummy::AlwaysFalse, %6
+	store		%14, 0, %7
+	load		[%32], ::fp, 0
+	call		[%8], printf, %32
+	addi		[%15], ::fp, 0
+	addi		[%35], %null, 1
+	call		[%9], malloc, %35
+	call		[%10], Dummy::AlwaysFalse, %9
+	store		%15, 0, %10
+	load		[%38], ::fp, 0
+	call		[%11], printf, %38
+	jump		%done
+
+Dummy::AlwaysTrue:
+	addi		[::return_value], %null, 1
+	return
+
+Dummy::AlwaysFalse:
+	addi		[%41], %null, 1
+	addi		[%42], %null, 0
+	sub		[%43], %41, %42
+	bne		L0, %43
+
+L1:
+	addi		[::return_value], %null, 1
+	return
+
+L0:
+	addi		[::return_value], %null, 0
+	jump		L1
+
+%done:

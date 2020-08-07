@@ -12,7 +12,7 @@
 namespace IRT {
 
 class JumpStatement: public Statement,
- public std::enable_shared_from_this<JumpStatement> {
+  public std::enable_shared_from_this<JumpStatement> {
  public:
   explicit JumpStatement(Label label);
 

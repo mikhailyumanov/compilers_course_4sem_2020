@@ -37,7 +37,9 @@ debug_output_stream = std::ofstream(tree_output + "_debug.txt");
 
 //    PrintIrtree(tree_output);
 
-    PrintBlockTree(tree_output);
+//    PrintBlockTree(tree_output);
+
+    PrintJouette(tree_output);
 
     return res;
 }
@@ -136,5 +138,31 @@ void Driver::PrintBlockTree(const std::string& filename) const {
       trace->PrintTrace(output + "_traces");
     }
   }
+}
+
+void Driver::PrintJouette(const std::string& filename) const {
+  auto irtree_build_visitor = std::make_shared<IrtreeBuildVisitor>(filename);
+  irtree_build_visitor->Visit(program);
+  IrtMapping methods = irtree_build_visitor->GetTrees();
+  
+  std::string output = filename + "_jouette";
+  auto main_method = methods["main"];
+  methods.erase("main");
+
+  std::string jouette_output = output + "_code.txt";
+  std::make_shared<IRT::BlockTree>(
+      main_method, true)->PrintJouette(jouette_output);
+
+  auto jouette_visitor = std::make_shared<IRT::JouetteVisitor>();
+  std::unordered_map<std::string, std::shared_ptr<IRT::BlockTree>> block_trees;
+  for (auto& pair : methods) {
+    auto block_tree = std::make_shared<IRT::BlockTree>(pair.second);
+    block_trees[pair.first] = block_tree;
+    block_tree->PrintTree(output);
+    block_tree->PrintJouette(jouette_output);
+  }
+
+  std::make_shared<Jouette::Label>(IRT::GetDoneLabel())->Accept(
+      IRT::BlockTree().GetPrinter(jouette_output));
 }
 

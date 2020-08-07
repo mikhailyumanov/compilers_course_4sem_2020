@@ -26,6 +26,7 @@ class PrintVisitor: public Visitor,
   void Visit(std::shared_ptr<SeqStatement> element) override;
   void Visit(std::shared_ptr<LabelStatement> element) override;
   void Visit(std::shared_ptr<JumpStatement> element) override;
+  void Visit(std::shared_ptr<ReturnStatement> element) override;
 
   void Visit(std::shared_ptr<ConstExpression> element) override;
   void Visit(std::shared_ptr<BinopExpression> element) override;
@@ -36,6 +37,8 @@ class PrintVisitor: public Visitor,
   void Visit(std::shared_ptr<EseqExpression> element) override;
 
   void Visit(std::shared_ptr<ExpressionList> element) override;
+
+  std::ofstream& GetStream();
 
  private:
   std::ofstream stream_;

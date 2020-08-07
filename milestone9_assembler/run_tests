@@ -4,10 +4,12 @@
 rebuild=false
 build_result=0
 
+rm test_output/*
+
 if [[ $# > 0 && (( $1 == "--rebuild" || $1 == "-r" )) ]]
 then
   rebuild=true
-  rm -r bin build test_output
+  rm -r bin build 
 fi
 
 if ! test -d ./bin
@@ -38,8 +40,6 @@ fi
 if ! test -d ./test_output
 then
   mkdir ./test_output
-else
-  rm ./test_output/*
 fi
 
 if test -f run.txt

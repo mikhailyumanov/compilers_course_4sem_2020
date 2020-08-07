@@ -1,0 +1,7 @@
+
+%main:
+	load		[%0], ::fp, 0
+	store		::fp, 4, %0
+	jump		%done
+
+%done:

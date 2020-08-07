@@ -8,16 +8,7 @@
 #include "parser.hh"
 #include "program/Program.hpp"
 
-#include "visitors/PrintVisitor.hpp"
-#include "visitors/Interpreter.hpp"
-#include "visitors/SymbolTreeVisitor.hpp"
-#include "visitors/IrtreeBuildVisitor.hpp"
-
-#include "irtree/blocks/Block.hpp"
-#include "irtree/blocks/BlockTree.hpp"
-
-#include "irtree/elements.hpp"
-
+#include "visitors/elements.hpp"
 
 class Driver {
  public:
@@ -31,6 +22,7 @@ class Driver {
   void PrintTree(const std::string& filename) const;
   void PrintIrtree(const std::string& filename) const;
   void PrintBlockTree(const std::string& filename) const;
+  void PrintJouette(const std::string& filename) const;
   int Eval() const;
 
  public:

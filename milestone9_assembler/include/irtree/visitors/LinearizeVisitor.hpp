@@ -19,6 +19,7 @@ class LinearizeVisitor: public TemplateVisitor<IRT::IrtStorage>,
   void Visit(std::shared_ptr<SeqStatement> element) override;
   void Visit(std::shared_ptr<LabelStatement> element) override;
   void Visit(std::shared_ptr<JumpStatement> element) override;
+  void Visit(std::shared_ptr<ReturnStatement> element) override;
 
   void Visit(std::shared_ptr<ConstExpression> element) override;
   void Visit(std::shared_ptr<BinopExpression> element) override;
@@ -31,9 +32,6 @@ class LinearizeVisitor: public TemplateVisitor<IRT::IrtStorage>,
   void Visit(std::shared_ptr<ExpressionList> element) override;
 
   IRT::IrtStorage Accept(std::shared_ptr<BaseElement> element) override;
-
- private:
-  std::shared_ptr<IdentVisitor> ident_visitor_;
 };
 
 }

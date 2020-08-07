@@ -22,4 +22,11 @@ class Label: public std::enable_shared_from_this<Label> {
   static int counter_;
 };
 
+
+Label& GetDoneLabel();
+bool IsDoneLabel(const Label& label);
+
+Label& GetMainLabel();
+bool IsMainLabel(const Label& label);
+
 }

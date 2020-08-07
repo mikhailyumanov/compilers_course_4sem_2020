@@ -1,0 +1,14 @@
+SeqStatement:
+	LabelStatement: Dog::Bark
+	SeqStatement:
+		MoveStatement:
+			TempExpression: %10
+			CallExpression: 
+				NameExpression: printf
+				ExpressionList: 
+					ConstExpression 12345
+		SeqStatement:
+			JumpStatement: %done
+			SeqStatement:
+				LabelStatement: %done
+				LabelStatement: L3

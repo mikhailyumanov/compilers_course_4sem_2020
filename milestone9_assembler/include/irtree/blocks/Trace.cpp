@@ -17,4 +17,8 @@ void Trace::PrintTrace(const std::string& filename) const {
   stream << std::endl;
 }
 
+std::vector<std::shared_ptr<Block>> Trace::GetBlocks() const {
+  return trace_;
+}
+
 }

@@ -1,0 +1,41 @@
+SeqStatement:
+	LabelStatement: Number::GetNumber
+	SeqStatement:
+		MoveStatement:
+			TempExpression: ::return_value
+			MemExpression: 
+				BinopExpression: PLUS
+					MemExpression: 
+						BinopExpression: PLUS
+							TempExpression: ::fp
+							ConstExpression 0
+					BinopExpression: MUL
+						ConstExpression 0
+						ConstExpression 4
+		SeqStatement:
+			JumpStatement: %done
+			SeqStatement:
+				LabelStatement: %done
+				LabelStatement: L6
+SeqStatement:
+	LabelStatement: Number::SetNumber
+	SeqStatement:
+		MoveStatement:
+			MemExpression: 
+				BinopExpression: PLUS
+					MemExpression: 
+						BinopExpression: PLUS
+							TempExpression: ::fp
+							ConstExpression 0
+					BinopExpression: MUL
+						ConstExpression 0
+						ConstExpression 4
+			MemExpression: 
+				BinopExpression: PLUS
+					TempExpression: ::fp
+					ConstExpression 4
+		SeqStatement:
+			JumpStatement: %done
+			SeqStatement:
+				LabelStatement: %done
+				LabelStatement: L9

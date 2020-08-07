@@ -1,0 +1,38 @@
+SeqStatement:
+	LabelStatement: Dummy::AlwaysTrue
+	SeqStatement:
+		MoveStatement:
+			TempExpression: ::return_value
+			ConstExpression 1
+		SeqStatement:
+			JumpStatement: %done
+			SeqStatement:
+				LabelStatement: %done
+				LabelStatement: L5
+SeqStatement:
+	LabelStatement: Dummy::AlwaysFalse
+	SeqStatement:
+		JumpConditionalStatement: NE
+		TrueLabel: L0
+		FalseLabel: L1
+			ConstExpression 1
+			ConstExpression 0
+		SeqStatement:
+			LabelStatement: L0
+			SeqStatement:
+				MoveStatement:
+					TempExpression: ::return_value
+					ConstExpression 0
+				SeqStatement:
+					JumpStatement: L1
+					SeqStatement:
+						LabelStatement: L1
+						SeqStatement:
+							MoveStatement:
+								TempExpression: ::return_value
+								ConstExpression 1
+							SeqStatement:
+								JumpStatement: %done
+								SeqStatement:
+									LabelStatement: %done
+									LabelStatement: L8

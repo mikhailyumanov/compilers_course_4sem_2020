@@ -3,9 +3,7 @@
 
 namespace IRT {
 
-DoubleCallEliminationVisitor::DoubleCallEliminationVisitor()
-  : ident_visitor_{std::make_shared<IdentVisitor>()} {
-
+DoubleCallEliminationVisitor::DoubleCallEliminationVisitor() {
 }
 
 void DoubleCallEliminationVisitor::Visit(std::shared_ptr<ExpStatement> element) {
@@ -48,6 +46,10 @@ void DoubleCallEliminationVisitor::Visit(std::shared_ptr<LabelStatement> element
 }
 
 void DoubleCallEliminationVisitor::Visit(std::shared_ptr<JumpStatement> element) {
+  tos_value_.stmt = element;
+}
+
+void DoubleCallEliminationVisitor::Visit(std::shared_ptr<ReturnStatement> element) {
   tos_value_.stmt = element;
 }
 
