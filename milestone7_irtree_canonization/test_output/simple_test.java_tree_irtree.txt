@@ -1,0 +1,18 @@
+SeqStatement:
+	ExpStatement:
+		CallExpression: 
+			NameExpression: printf
+			ExpressionList: 
+				ConstExpression 6
+	SeqStatement:
+		ExpStatement:
+			CallExpression: 
+				NameExpression: printf
+				ExpressionList: 
+					ConstExpression 7
+		MoveStatement:
+			MemExpression: 
+				BinopExpression: PLUS
+					TempExpression: ::fp
+					ConstExpression 0
+			ConstExpression 5

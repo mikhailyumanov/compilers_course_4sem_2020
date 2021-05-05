@@ -1,0 +1,25 @@
+SeqStatement:
+	MoveStatement:
+		MemExpression: 
+			BinopExpression: PLUS
+				TempExpression: ::fp
+				ConstExpression 0
+		CallExpression: 
+			NameExpression: malloc
+			ExpressionList: 
+				ConstExpression 1
+	ExpStatement:
+		CallExpression: 
+			NameExpression: Dog::Bark
+			ExpressionList: 
+				CallExpression: 
+					NameExpression: malloc
+					ExpressionList: 
+						ConstExpression 1
+SeqStatement:
+	LabelStatement: Dog::Bark
+	ExpStatement:
+		CallExpression: 
+			NameExpression: printf
+			ExpressionList: 
+				ConstExpression 12345

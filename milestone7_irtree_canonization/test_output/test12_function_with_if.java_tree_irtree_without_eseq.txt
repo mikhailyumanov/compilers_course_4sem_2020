@@ -1,0 +1,163 @@
+SeqStatement:
+	SeqStatement:
+		MoveStatement:
+			TempExpression: %12
+			BinopExpression: PLUS
+				TempExpression: ::fp
+				ConstExpression 0
+		SeqStatement:
+			SeqStatement:
+				MoveStatement:
+					TempExpression: %0
+					CallExpression: 
+						NameExpression: malloc
+						ExpressionList: 
+							ConstExpression 1
+				MoveStatement:
+					TempExpression: %1
+					CallExpression: 
+						NameExpression: Dummy::AlwaysTrue
+						ExpressionList: 
+							TempExpression: %0
+			MoveStatement:
+				MemExpression: 
+					TempExpression: %12
+				TempExpression: %1
+	SeqStatement:
+		MoveStatement:
+			TempExpression: %2
+			CallExpression: 
+				NameExpression: printf
+				ExpressionList: 
+					MemExpression: 
+						BinopExpression: PLUS
+							TempExpression: ::fp
+							ConstExpression 0
+		SeqStatement:
+			SeqStatement:
+				MoveStatement:
+					TempExpression: %13
+					BinopExpression: PLUS
+						TempExpression: ::fp
+						ConstExpression 0
+				SeqStatement:
+					SeqStatement:
+						MoveStatement:
+							TempExpression: %3
+							CallExpression: 
+								NameExpression: malloc
+								ExpressionList: 
+									ConstExpression 1
+						MoveStatement:
+							TempExpression: %4
+							CallExpression: 
+								NameExpression: Dummy::AlwaysTrue
+								ExpressionList: 
+									TempExpression: %3
+					MoveStatement:
+						MemExpression: 
+							TempExpression: %13
+						TempExpression: %4
+			SeqStatement:
+				MoveStatement:
+					TempExpression: %5
+					CallExpression: 
+						NameExpression: printf
+						ExpressionList: 
+							MemExpression: 
+								BinopExpression: PLUS
+									TempExpression: ::fp
+									ConstExpression 0
+				SeqStatement:
+					SeqStatement:
+						MoveStatement:
+							TempExpression: %14
+							BinopExpression: PLUS
+								TempExpression: ::fp
+								ConstExpression 0
+						SeqStatement:
+							SeqStatement:
+								MoveStatement:
+									TempExpression: %6
+									CallExpression: 
+										NameExpression: malloc
+										ExpressionList: 
+											ConstExpression 1
+								MoveStatement:
+									TempExpression: %7
+									CallExpression: 
+										NameExpression: Dummy::AlwaysFalse
+										ExpressionList: 
+											TempExpression: %6
+							MoveStatement:
+								MemExpression: 
+									TempExpression: %14
+								TempExpression: %7
+					SeqStatement:
+						MoveStatement:
+							TempExpression: %8
+							CallExpression: 
+								NameExpression: printf
+								ExpressionList: 
+									MemExpression: 
+										BinopExpression: PLUS
+											TempExpression: ::fp
+											ConstExpression 0
+						SeqStatement:
+							SeqStatement:
+								MoveStatement:
+									TempExpression: %15
+									BinopExpression: PLUS
+										TempExpression: ::fp
+										ConstExpression 0
+								SeqStatement:
+									SeqStatement:
+										MoveStatement:
+											TempExpression: %9
+											CallExpression: 
+												NameExpression: malloc
+												ExpressionList: 
+													ConstExpression 1
+										MoveStatement:
+											TempExpression: %10
+											CallExpression: 
+												NameExpression: Dummy::AlwaysFalse
+												ExpressionList: 
+													TempExpression: %9
+									MoveStatement:
+										MemExpression: 
+											TempExpression: %15
+										TempExpression: %10
+							MoveStatement:
+								TempExpression: %11
+								CallExpression: 
+									NameExpression: printf
+									ExpressionList: 
+										MemExpression: 
+											BinopExpression: PLUS
+												TempExpression: ::fp
+												ConstExpression 0
+SeqStatement:
+	LabelStatement: Dummy::AlwaysTrue
+	MoveStatement:
+		TempExpression: ::return_value
+		ConstExpression 1
+SeqStatement:
+	LabelStatement: Dummy::AlwaysFalse
+	SeqStatement:
+		SeqStatement:
+			JumpConditionalStatement: NE
+			TrueLabel: L0
+			FalseLabel: L1
+				ConstExpression 1
+				ConstExpression 0
+			SeqStatement:
+				SeqStatement:
+					LabelStatement: L0
+					MoveStatement:
+						TempExpression: ::return_value
+						ConstExpression 0
+				LabelStatement: L1
+		MoveStatement:
+			TempExpression: ::return_value
+			ConstExpression 1

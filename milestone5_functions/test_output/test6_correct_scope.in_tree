@@ -1,0 +1,48 @@
+Program
+	NEW SCOPE
+	NEW SCOPE
+	MainClass
+		LocalVarDeclStmt
+			VarDecl type: int, is_array: false x
+		AssignmentStmt
+			Lvalue x
+			IntExpr 5
+		NEW SCOPE
+		StmtListStmt
+			LocalVarDeclStmt
+				VarDecl type: int, is_array: false y
+			AssignmentStmt
+				Lvalue y
+				IdentExpr x
+		NEW SCOPE
+		StmtListStmt
+			LocalVarDeclStmt
+				VarDecl type: int, is_array: false z
+			AssignmentStmt
+				Lvalue z
+				IdentExpr x
+			IfElseStmt
+				BinOpExpr
+					IdentExpr x
+3
+					IntExpr 5
+				NEW SCOPE
+				NEW SCOPE
+				StmtListStmt
+					LocalVarDeclStmt
+						VarDecl type: int, is_array: false i
+					AssignmentStmt
+						Lvalue i
+						IntExpr 6
+					PrintStmt
+						IdentExpr i
+				NEW SCOPE
+				NEW SCOPE
+				StmtListStmt
+					LocalVarDeclStmt
+						VarDecl type: int, is_array: false j
+					AssignmentStmt
+						Lvalue j
+						IntExpr 7
+					PrintStmt
+						IdentExpr j

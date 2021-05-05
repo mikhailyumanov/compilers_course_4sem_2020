@@ -1,0 +1,67 @@
+Program
+	NEW SCOPE
+	NEW SCOPE
+	ClassDecl Five
+		NEW FUNCTION SCOPE
+		MethodDecl Return type: int; Args:  GetNumber
+			ReturnStmt
+				IntExpr 5
+	NEW SCOPE
+	ClassDecl Number
+		VarDecl type: int, is_array: false value
+		NEW FUNCTION SCOPE
+		MethodDecl Return type: int; Args:  GetNumber
+			ReturnStmt
+				IdentExpr value
+		NEW FUNCTION SCOPE
+		MethodDecl Return type: void; Args: new_value(type: int, is_array: false),  SetNumber
+			AssignmentStmt
+				Lvalue value
+				IdentExpr new_value
+	NEW SCOPE
+	MainClass
+		LocalVarDeclStmt
+			VarDecl type: Number, is_array: false n
+		AssignmentStmt
+			Lvalue n
+			NewExpr type = Number
+		MethodStmt
+			MethodInvocation
+				IdentExpr n
+				IntExpr 0
+				NEW SCOPE
+		LocalVarDeclStmt
+			VarDecl type: Five, is_array: false f
+		AssignmentStmt
+			Lvalue f
+			NewExpr type = Five
+		NEW SCOPE
+		WhileStmt
+			BinOpExpr
+				MethodExpr
+					MethodInvocation
+						IdentExpr n
+						NEW SCOPE
+2
+				MethodExpr
+					MethodInvocation
+						IdentExpr f
+						NEW SCOPE
+			NEW SCOPE
+			StmtListStmt
+				PrintStmt
+					MethodExpr
+						MethodInvocation
+							IdentExpr n
+							NEW SCOPE
+				MethodStmt
+					MethodInvocation
+						IdentExpr n
+						BinOpExpr
+							MethodExpr
+								MethodInvocation
+									IdentExpr n
+									NEW SCOPE
+5
+							IntExpr 1
+						NEW SCOPE
