@@ -1,0 +1,52 @@
+#usage: run_tests [ --rebuild | -r ]
+#invoke from main dir (/milestoneN_...)
+
+rebuild=false
+build_result=0
+
+if [[ $# > 0 && (( $1 == "--rebuild" || $1 == "-r" )) ]]
+then
+  rebuild=true
+  rm -r bin build test_output
+fi
+
+if ! test -d ./bin
+then
+  echo "Create directory ./bin"
+  mkdir bin
+fi
+
+if ! test -f ./bin/Project ;
+then
+  if ! test -d ./build
+  then
+    echo "Create directory ./build"
+    mkdir build
+  fi
+  
+  echo "Build project"
+  cd build
+  cmake ..
+  make
+  build_result=$?
+  cd ..
+fi
+
+if [[ ! build_result ]]
+then
+  echo $build_result
+  exit -1
+fi
+
+if ! test -d ./test_output
+then
+  mkdir ./test_output
+fi
+
+for test_program in `ls ./test`
+do
+  echo "========================================"
+  echo "START TEST $test_program"
+  ./bin/Project -t ./test_output/${test_program}_tree ./test/$test_program
+  echo
+done

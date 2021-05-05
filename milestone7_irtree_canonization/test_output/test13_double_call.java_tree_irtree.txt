@@ -1,0 +1,44 @@
+SeqStatement:
+	MoveStatement:
+		MemExpression: 
+			BinopExpression: PLUS
+				TempExpression: ::fp
+				ConstExpression 0
+		CallExpression: 
+			NameExpression: malloc
+			ExpressionList: 
+				ConstExpression 1
+	SeqStatement:
+		MoveStatement:
+			MemExpression: 
+				BinopExpression: PLUS
+					TempExpression: ::fp
+					ConstExpression 4
+			CallExpression: 
+				NameExpression: malloc
+				ExpressionList: 
+					ConstExpression 1
+		ExpStatement:
+			CallExpression: 
+				NameExpression: printf
+				ExpressionList: 
+					BinopExpression: PLUS
+						CallExpression: 
+							NameExpression: Five::GetNum
+							ExpressionList: 
+								MemExpression: 
+									BinopExpression: PLUS
+										TempExpression: ::fp
+										ConstExpression 0
+						CallExpression: 
+							NameExpression: Six::GetNum
+							ExpressionList: 
+								MemExpression: 
+									BinopExpression: PLUS
+										TempExpression: ::fp
+										ConstExpression 4
+SeqStatement:
+	LabelStatement: Six::GetNum
+	MoveStatement:
+		TempExpression: ::return_value
+		ConstExpression 6

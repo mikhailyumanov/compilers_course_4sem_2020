@@ -1,0 +1,1035 @@
+>>> IrtreeBuildVisitor: Program
+>>> PrintVisitor: Program
+GoDown
+Current state: parent: 0x5647f37a3af0 ; child index: 1 num_children: 2 
+operator->; current_parent: 0x5647f37a3af0 child_index: 1 num_children: 2 
+GoDown
+Current state: parent: 0x5647f37a4050 ; child index: 0 num_children: 1 
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+>>> PrintVisitor: MainClass
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+>>> PrintVisitor: LocalVarDeclStmt
+>>> PrintVisitor: VarDecl type: int, is_array: true arr 
+arr type: int, is_array: true 
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+>>> PrintVisitor: AssignmentStmt
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+>>> PrintVisitor: NewArrayExpr type =  int 
+>>> PrintVisitor: IntExpr 5 
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+>>> PrintVisitor: AssignmentStmt
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+>>> PrintVisitor: IntExpr 0 
+>>> PrintVisitor: IntExpr 2 
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+>>> PrintVisitor: AssignmentStmt
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+>>> PrintVisitor: IntExpr 1 
+>>> PrintVisitor: IntExpr 3 
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+>>> PrintVisitor: AssignmentStmt
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+>>> PrintVisitor: IntExpr 2 
+>>> PrintVisitor: IntExpr 5 
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+>>> PrintVisitor: AssignmentStmt
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+>>> PrintVisitor: IntExpr 3 
+>>> PrintVisitor: IntExpr 7 
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+>>> PrintVisitor: AssignmentStmt
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+>>> PrintVisitor: IntExpr 4 
+>>> PrintVisitor: IntExpr 11 
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: SubscriptExpr
+>>> PrintVisitor: IdentExpr arr 
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+>>> PrintVisitor: IntExpr 0 
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: SubscriptExpr
+>>> PrintVisitor: IdentExpr arr 
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+>>> PrintVisitor: IntExpr 4 
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: SubscriptExpr
+>>> PrintVisitor: IdentExpr arr 
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+>>> PrintVisitor: IntExpr 1 
+>>> PrintVisitor: SubscriptExpr
+>>> PrintVisitor: IdentExpr arr 
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+>>> PrintVisitor: IntExpr 3 
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: BinOpExpr
+>>> PrintVisitor: SubscriptExpr
+>>> PrintVisitor: IdentExpr arr 
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+>>> PrintVisitor: IntExpr 2 
+>>> PrintVisitor: IntExpr 4 
+>>> PrintVisitor: PrintStmt
+>>> PrintVisitor: LengthExpr
+>>> PrintVisitor: IdentExpr arr 
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+operator->; current_parent: 0x5647f37a4050 child_index: 0 num_children: 1 
+GoUp
+Current state: parent: 0x5647f37a3af0 ; child index: 1 num_children: 2 
+>>> IrtreeBuildVisitor: MainClass
+>>> IrtreeBuildVisitor: LocalVarDeclStmt
+>>> IrtreeBuildVisitor: VarDecl
+>>> IrtreeBuildVisitor: AssignmentStmt
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: NewArrayExpr
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: AssignmentStmt
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+IRTree::Subscript
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: AssignmentStmt
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+IRTree::Subscript
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: AssignmentStmt
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+IRTree::Subscript
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: AssignmentStmt
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+IRTree::Subscript
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: AssignmentStmt
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+IRTree::Subscript
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: SubscriptExpr
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+IRTree::Subscript
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: SubscriptExpr
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+IRTree::Subscript
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: SubscriptExpr
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+IRTree::Subscript
+>>> IrtreeBuildVisitor: SubscriptExpr
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+IRTree::Subscript
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: BinOpExpr
+>>> IrtreeBuildVisitor: SubscriptExpr
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+>>> IrtreeBuildVisitor: IntExpr
+IRTree::Subscript
+>>> IrtreeBuildVisitor: IntExpr
+>>> IrtreeBuildVisitor: PrintStmt
+>>> IrtreeBuildVisitor: LengthExpr
+>>> IrtreeBuildVisitor: IdentExpr
+>>> IrtreeBuildVisitor: Lvalue
+EseqElimination::SeqStatement
+EseqElimination::MoveStatement
+EseqElimination::MemExpression
+EseqElimination::BinopExpression
+EseqElimination::TempExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 9 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 8 
+EseqElimination::MemExpression (finish)
+EseqElimination::EseqExpression
+EseqElimination::MoveStatement
+EseqElimination::TempExpression
+EseqElimination::CallExpression
+EseqElimination::NameExpression
+EseqElimination::ExpressionList
+EseqElimination::BinopExpression
+EseqElimination::ConstExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 7 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::ExpressionList (finish)
+EseqElimination::IsEseq element type: 8 
+EseqElimination::CallExpression (finish)
+EseqElimination::IsEseq element type: 9 
+EseqElimination::IsEseq element type: 11 
+move: !is_target_eseq && !is_source_eseq
+EseqElimination::MoveStatement (finish)
+EseqElimination::TempExpression
+EseqElimination::IsEseq element type: 9 
+EseqElimination::EseqExpression (finish)
+EseqElimination::IsEseq element type: 10 
+EseqElimination::IsEseq element type: 13 
+move: !is_target_eseq && is_source_eseq
+move: target is MemExpr
+EseqElimination::MoveStatement (finish)
+EseqElimination::SeqStatement
+EseqElimination::MoveStatement
+EseqElimination::MemExpression
+EseqElimination::BinopExpression
+EseqElimination::MemExpression
+EseqElimination::BinopExpression
+EseqElimination::TempExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 9 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 8 
+EseqElimination::MemExpression (finish)
+EseqElimination::BinopExpression
+EseqElimination::BinopExpression
+EseqElimination::ConstExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 7 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 8 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 10 
+EseqElimination::IsEseq element type: 8 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 8 
+EseqElimination::MemExpression (finish)
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 10 
+EseqElimination::IsEseq element type: 7 
+move: !is_target_eseq && !is_source_eseq
+EseqElimination::MoveStatement (finish)
+EseqElimination::SeqStatement
+EseqElimination::MoveStatement
+EseqElimination::MemExpression
+EseqElimination::BinopExpression
+EseqElimination::MemExpression
+EseqElimination::BinopExpression
+EseqElimination::TempExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 9 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 8 
+EseqElimination::MemExpression (finish)
+EseqElimination::BinopExpression
+EseqElimination::BinopExpression
+EseqElimination::ConstExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 7 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 8 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 10 
+EseqElimination::IsEseq element type: 8 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 8 
+EseqElimination::MemExpression (finish)
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 10 
+EseqElimination::IsEseq element type: 7 
+move: !is_target_eseq && !is_source_eseq
+EseqElimination::MoveStatement (finish)
+EseqElimination::SeqStatement
+EseqElimination::MoveStatement
+EseqElimination::MemExpression
+EseqElimination::BinopExpression
+EseqElimination::MemExpression
+EseqElimination::BinopExpression
+EseqElimination::TempExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 9 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 8 
+EseqElimination::MemExpression (finish)
+EseqElimination::BinopExpression
+EseqElimination::BinopExpression
+EseqElimination::ConstExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 7 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 8 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 10 
+EseqElimination::IsEseq element type: 8 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 8 
+EseqElimination::MemExpression (finish)
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 10 
+EseqElimination::IsEseq element type: 7 
+move: !is_target_eseq && !is_source_eseq
+EseqElimination::MoveStatement (finish)
+EseqElimination::SeqStatement
+EseqElimination::MoveStatement
+EseqElimination::MemExpression
+EseqElimination::BinopExpression
+EseqElimination::MemExpression
+EseqElimination::BinopExpression
+EseqElimination::TempExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 9 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 8 
+EseqElimination::MemExpression (finish)
+EseqElimination::BinopExpression
+EseqElimination::BinopExpression
+EseqElimination::ConstExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 7 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 8 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 10 
+EseqElimination::IsEseq element type: 8 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 8 
+EseqElimination::MemExpression (finish)
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 10 
+EseqElimination::IsEseq element type: 7 
+move: !is_target_eseq && !is_source_eseq
+EseqElimination::MoveStatement (finish)
+EseqElimination::SeqStatement
+EseqElimination::MoveStatement
+EseqElimination::MemExpression
+EseqElimination::BinopExpression
+EseqElimination::MemExpression
+EseqElimination::BinopExpression
+EseqElimination::TempExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 9 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 8 
+EseqElimination::MemExpression (finish)
+EseqElimination::BinopExpression
+EseqElimination::BinopExpression
+EseqElimination::ConstExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 7 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 8 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 10 
+EseqElimination::IsEseq element type: 8 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 8 
+EseqElimination::MemExpression (finish)
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 10 
+EseqElimination::IsEseq element type: 7 
+move: !is_target_eseq && !is_source_eseq
+EseqElimination::MoveStatement (finish)
+EseqElimination::SeqStatement
+EseqElimination::ExpStatement
+EseqElimination::EseqExpression
+EseqElimination::MoveStatement
+EseqElimination::TempExpression
+EseqElimination::CallExpression
+EseqElimination::NameExpression
+EseqElimination::ExpressionList
+EseqElimination::MemExpression
+EseqElimination::BinopExpression
+EseqElimination::MemExpression
+EseqElimination::BinopExpression
+EseqElimination::TempExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 9 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 8 
+EseqElimination::MemExpression (finish)
+EseqElimination::BinopExpression
+EseqElimination::BinopExpression
+EseqElimination::ConstExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 7 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 8 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 10 
+EseqElimination::IsEseq element type: 8 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 8 
+EseqElimination::MemExpression (finish)
+EseqElimination::ExpressionList (finish)
+EseqElimination::IsEseq element type: 10 
+EseqElimination::CallExpression (finish)
+EseqElimination::IsEseq element type: 9 
+EseqElimination::IsEseq element type: 11 
+move: !is_target_eseq && !is_source_eseq
+EseqElimination::MoveStatement (finish)
+EseqElimination::TempExpression
+EseqElimination::IsEseq element type: 9 
+EseqElimination::EseqExpression (finish)
+exp stmt: pre `is eseq`
+EseqElimination::IsEseq element type: 13 
+EseqElimination::ExpStatement (finish)
+EseqElimination::SeqStatement
+EseqElimination::ExpStatement
+EseqElimination::EseqExpression
+EseqElimination::MoveStatement
+EseqElimination::TempExpression
+EseqElimination::CallExpression
+EseqElimination::NameExpression
+EseqElimination::ExpressionList
+EseqElimination::MemExpression
+EseqElimination::BinopExpression
+EseqElimination::MemExpression
+EseqElimination::BinopExpression
+EseqElimination::TempExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 9 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 8 
+EseqElimination::MemExpression (finish)
+EseqElimination::BinopExpression
+EseqElimination::BinopExpression
+EseqElimination::ConstExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 7 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 8 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 10 
+EseqElimination::IsEseq element type: 8 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 8 
+EseqElimination::MemExpression (finish)
+EseqElimination::ExpressionList (finish)
+EseqElimination::IsEseq element type: 10 
+EseqElimination::CallExpression (finish)
+EseqElimination::IsEseq element type: 9 
+EseqElimination::IsEseq element type: 11 
+move: !is_target_eseq && !is_source_eseq
+EseqElimination::MoveStatement (finish)
+EseqElimination::TempExpression
+EseqElimination::IsEseq element type: 9 
+EseqElimination::EseqExpression (finish)
+exp stmt: pre `is eseq`
+EseqElimination::IsEseq element type: 13 
+EseqElimination::ExpStatement (finish)
+EseqElimination::SeqStatement
+EseqElimination::ExpStatement
+EseqElimination::EseqExpression
+EseqElimination::MoveStatement
+EseqElimination::TempExpression
+EseqElimination::CallExpression
+EseqElimination::NameExpression
+EseqElimination::ExpressionList
+EseqElimination::EseqExpression
+EseqElimination::SeqStatement
+EseqElimination::MoveStatement
+EseqElimination::TempExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 9 
+EseqElimination::IsEseq element type: 7 
+move: !is_target_eseq && !is_source_eseq
+EseqElimination::MoveStatement (finish)
+EseqElimination::SeqStatement
+EseqElimination::JumpConditionalStatement
+EseqElimination::MemExpression
+EseqElimination::BinopExpression
+EseqElimination::MemExpression
+EseqElimination::BinopExpression
+EseqElimination::TempExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 9 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 8 
+EseqElimination::MemExpression (finish)
+EseqElimination::BinopExpression
+EseqElimination::BinopExpression
+EseqElimination::ConstExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 7 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 8 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 10 
+EseqElimination::IsEseq element type: 8 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 8 
+EseqElimination::MemExpression (finish)
+EseqElimination::MemExpression
+EseqElimination::BinopExpression
+EseqElimination::MemExpression
+EseqElimination::BinopExpression
+EseqElimination::TempExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 9 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 8 
+EseqElimination::MemExpression (finish)
+EseqElimination::BinopExpression
+EseqElimination::BinopExpression
+EseqElimination::ConstExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 7 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 8 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 10 
+EseqElimination::IsEseq element type: 8 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 8 
+EseqElimination::MemExpression (finish)
+EseqElimination::IsEseq element type: 10 
+EseqElimination::IsEseq element type: 10 
+cjump: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::JumpConditionalStatement (finish)
+EseqElimination::SeqStatement
+EseqElimination::LabelStatement
+EseqElimination::SeqStatement
+EseqElimination::MoveStatement
+EseqElimination::TempExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 9 
+EseqElimination::IsEseq element type: 7 
+move: !is_target_eseq && !is_source_eseq
+EseqElimination::MoveStatement (finish)
+EseqElimination::LabelStatement
+EseqElimination::SeqStatement (finish)
+EseqElimination::SeqStatement (finish)
+EseqElimination::SeqStatement (finish)
+EseqElimination::SeqStatement (finish)
+EseqElimination::TempExpression
+EseqElimination::IsEseq element type: 9 
+EseqElimination::EseqExpression (finish)
+EseqElimination::ExpressionList (finish)
+EseqElimination::IsEseq element type: 13 
+EseqElimination::CallExpression (finish)
+EseqElimination::IsEseq element type: 9 
+EseqElimination::IsEseq element type: 13 
+move: !is_target_eseq && is_source_eseq
+move: target is temp
+EseqElimination::MoveStatement (finish)
+EseqElimination::TempExpression
+EseqElimination::IsEseq element type: 9 
+EseqElimination::EseqExpression (finish)
+exp stmt: pre `is eseq`
+EseqElimination::IsEseq element type: 13 
+EseqElimination::ExpStatement (finish)
+EseqElimination::SeqStatement
+EseqElimination::ExpStatement
+EseqElimination::EseqExpression
+EseqElimination::MoveStatement
+EseqElimination::TempExpression
+EseqElimination::CallExpression
+EseqElimination::NameExpression
+EseqElimination::ExpressionList
+EseqElimination::EseqExpression
+EseqElimination::SeqStatement
+EseqElimination::MoveStatement
+EseqElimination::TempExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 9 
+EseqElimination::IsEseq element type: 7 
+move: !is_target_eseq && !is_source_eseq
+EseqElimination::MoveStatement (finish)
+EseqElimination::SeqStatement
+EseqElimination::JumpConditionalStatement
+EseqElimination::MemExpression
+EseqElimination::BinopExpression
+EseqElimination::MemExpression
+EseqElimination::BinopExpression
+EseqElimination::TempExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 9 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 8 
+EseqElimination::MemExpression (finish)
+EseqElimination::BinopExpression
+EseqElimination::BinopExpression
+EseqElimination::ConstExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 7 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 8 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 10 
+EseqElimination::IsEseq element type: 8 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 8 
+EseqElimination::MemExpression (finish)
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 10 
+EseqElimination::IsEseq element type: 7 
+cjump: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::JumpConditionalStatement (finish)
+EseqElimination::SeqStatement
+EseqElimination::LabelStatement
+EseqElimination::SeqStatement
+EseqElimination::MoveStatement
+EseqElimination::TempExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 9 
+EseqElimination::IsEseq element type: 7 
+move: !is_target_eseq && !is_source_eseq
+EseqElimination::MoveStatement (finish)
+EseqElimination::LabelStatement
+EseqElimination::SeqStatement (finish)
+EseqElimination::SeqStatement (finish)
+EseqElimination::SeqStatement (finish)
+EseqElimination::SeqStatement (finish)
+EseqElimination::TempExpression
+EseqElimination::IsEseq element type: 9 
+EseqElimination::EseqExpression (finish)
+EseqElimination::ExpressionList (finish)
+EseqElimination::IsEseq element type: 13 
+EseqElimination::CallExpression (finish)
+EseqElimination::IsEseq element type: 9 
+EseqElimination::IsEseq element type: 13 
+move: !is_target_eseq && is_source_eseq
+move: target is temp
+EseqElimination::MoveStatement (finish)
+EseqElimination::TempExpression
+EseqElimination::IsEseq element type: 9 
+EseqElimination::EseqExpression (finish)
+exp stmt: pre `is eseq`
+EseqElimination::IsEseq element type: 13 
+EseqElimination::ExpStatement (finish)
+EseqElimination::ExpStatement
+EseqElimination::EseqExpression
+EseqElimination::MoveStatement
+EseqElimination::TempExpression
+EseqElimination::CallExpression
+EseqElimination::NameExpression
+EseqElimination::ExpressionList
+EseqElimination::MemExpression
+EseqElimination::MemExpression
+EseqElimination::BinopExpression
+EseqElimination::TempExpression
+EseqElimination::ConstExpression
+EseqElimination::IsEseq element type: 9 
+EseqElimination::IsEseq element type: 7 
+binop: !is_lhs_eseq && !is_rhs_eseq
+EseqElimination::BinopExpression (finish)
+EseqElimination::IsEseq element type: 8 
+EseqElimination::MemExpression (finish)
+EseqElimination::IsEseq element type: 10 
+EseqElimination::MemExpression (finish)
+EseqElimination::ExpressionList (finish)
+EseqElimination::IsEseq element type: 10 
+EseqElimination::CallExpression (finish)
+EseqElimination::IsEseq element type: 9 
+EseqElimination::IsEseq element type: 11 
+move: !is_target_eseq && !is_source_eseq
+EseqElimination::MoveStatement (finish)
+EseqElimination::TempExpression
+EseqElimination::IsEseq element type: 9 
+EseqElimination::EseqExpression (finish)
+exp stmt: pre `is eseq`
+EseqElimination::IsEseq element type: 13 
+EseqElimination::ExpStatement (finish)
+EseqElimination::SeqStatement (finish)
+EseqElimination::SeqStatement (finish)
+EseqElimination::SeqStatement (finish)
+EseqElimination::SeqStatement (finish)
+EseqElimination::SeqStatement (finish)
+EseqElimination::SeqStatement (finish)
+EseqElimination::SeqStatement (finish)
+EseqElimination::SeqStatement (finish)
+EseqElimination::SeqStatement (finish)
+EseqElimination::SeqStatement (finish)
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+build blocks: L1
+build blocks: 1
+build blocks: L2
+build blocks: 1
+build blocks: L4
+build blocks: 1
+build blocks: L0
+build blocks: 1
+build blocks: L3
+build blocks: 1
+BlockTree::PrintTree
+SeqStatement:
+LabelStatement: 
+SeqStatement:
+MoveStatement:
+TempExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+SeqStatement:
+MoveStatement:
+TempExpression: 
+CallExpression: 
+NameExpression: 
+ExpressionList: 
+BinopExpression: 
+ConstExpression 
+ConstExpression 
+SeqStatement:
+MoveStatement:
+MemExpression: 
+TempExpression: 
+TempExpression: 
+SeqStatement:
+MoveStatement:
+MemExpression: 
+BinopExpression: 
+MemExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+BinopExpression: 
+BinopExpression: 
+ConstExpression 
+ConstExpression 
+ConstExpression 
+ConstExpression 
+SeqStatement:
+MoveStatement:
+MemExpression: 
+BinopExpression: 
+MemExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+BinopExpression: 
+BinopExpression: 
+ConstExpression 
+ConstExpression 
+ConstExpression 
+ConstExpression 
+SeqStatement:
+MoveStatement:
+MemExpression: 
+BinopExpression: 
+MemExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+BinopExpression: 
+BinopExpression: 
+ConstExpression 
+ConstExpression 
+ConstExpression 
+ConstExpression 
+SeqStatement:
+MoveStatement:
+MemExpression: 
+BinopExpression: 
+MemExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+BinopExpression: 
+BinopExpression: 
+ConstExpression 
+ConstExpression 
+ConstExpression 
+ConstExpression 
+SeqStatement:
+MoveStatement:
+MemExpression: 
+BinopExpression: 
+MemExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+BinopExpression: 
+BinopExpression: 
+ConstExpression 
+ConstExpression 
+ConstExpression 
+ConstExpression 
+SeqStatement:
+MoveStatement:
+TempExpression: 
+CallExpression: 
+NameExpression: 
+ExpressionList: 
+MemExpression: 
+BinopExpression: 
+MemExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+BinopExpression: 
+BinopExpression: 
+ConstExpression 
+ConstExpression 
+ConstExpression 
+SeqStatement:
+MoveStatement:
+TempExpression: 
+CallExpression: 
+NameExpression: 
+ExpressionList: 
+MemExpression: 
+BinopExpression: 
+MemExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+BinopExpression: 
+BinopExpression: 
+ConstExpression 
+ConstExpression 
+ConstExpression 
+SeqStatement:
+MoveStatement:
+TempExpression: 
+ConstExpression 
+SeqStatement:
+JumpConditionalStatement: 
+MemExpression: 
+BinopExpression: 
+MemExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+BinopExpression: 
+BinopExpression: 
+ConstExpression 
+ConstExpression 
+ConstExpression 
+MemExpression: 
+BinopExpression: 
+MemExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+BinopExpression: 
+BinopExpression: 
+ConstExpression 
+ConstExpression 
+ConstExpression 
+SeqStatement:
+LabelStatement: 
+SeqStatement:
+MoveStatement:
+TempExpression: 
+ConstExpression 
+SeqStatement:
+JumpStatement: 
+SeqStatement:
+LabelStatement: 
+SeqStatement:
+MoveStatement:
+TempExpression: 
+CallExpression: 
+NameExpression: 
+ExpressionList: 
+TempExpression: 
+SeqStatement:
+MoveStatement:
+TempExpression: 
+ConstExpression 
+SeqStatement:
+JumpConditionalStatement: 
+MemExpression: 
+BinopExpression: 
+MemExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+BinopExpression: 
+BinopExpression: 
+ConstExpression 
+ConstExpression 
+ConstExpression 
+ConstExpression 
+SeqStatement:
+LabelStatement: 
+SeqStatement:
+MoveStatement:
+TempExpression: 
+ConstExpression 
+SeqStatement:
+JumpStatement: 
+SeqStatement:
+LabelStatement: 
+SeqStatement:
+MoveStatement:
+TempExpression: 
+CallExpression: 
+NameExpression: 
+ExpressionList: 
+TempExpression: 
+SeqStatement:
+MoveStatement:
+TempExpression: 
+CallExpression: 
+NameExpression: 
+ExpressionList: 
+MemExpression: 
+MemExpression: 
+BinopExpression: 
+TempExpression: 
+ConstExpression 
+SeqStatement:
+JumpStatement: 
+SeqStatement:
+LabelStatement: 
+LabelStatement: 
+BFS
+BFS
+BFS
+BFS
+BFS
+BFS
+BFS
+BFS
+BFS
+BFS
+BFS
+BFS
+BFS finished
+DFS
+L4
+DFS
+L1
+DFS
+L0
+DFS
+L3
+DFS
+L2
+DFS
+%done
+DFS
+DFS
+DFS
+DFS
+DFS
+DFS
+DFS
+DFS
+DFS

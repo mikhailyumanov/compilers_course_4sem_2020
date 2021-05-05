@@ -1,0 +1,46 @@
+>>> IrtreeBuildVisitor: Program
+>>> PrintVisitor: Program
+GoDown
+Current state: parent: 0x563eec230740 ; child index: 1 num_children: 2 
+operator->; current_parent: 0x563eec230740 child_index: 1 num_children: 2 
+GoDown
+Current state: parent: 0x563eec230cd0 ; child index: 0 num_children: 1 
+operator->; current_parent: 0x563eec230cd0 child_index: 0 num_children: 1 
+>>> PrintVisitor: MainClass
+operator->; current_parent: 0x563eec230cd0 child_index: 0 num_children: 1 
+>>> PrintVisitor: LocalVarDeclStmt
+>>> PrintVisitor: VarDecl type: int, is_array: false x 
+x type: int, is_array: false 
+operator->; current_parent: 0x563eec230cd0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+operator->; current_parent: 0x563eec230cd0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+operator->; current_parent: 0x563eec230cd0 child_index: 0 num_children: 1 
+GoDown
+Current state: parent: 0x563eec230e20 ; child index: 0 num_children: 1 
+>>> PrintVisitor: StmtListStmt
+>>> PrintVisitor: LocalVarDeclStmt
+>>> PrintVisitor: VarDecl type: int, is_array: false y 
+y type: int, is_array: false 
+operator->; current_parent: 0x563eec230e20 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+operator->; current_parent: 0x563eec230e20 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+operator->; current_parent: 0x563eec230e20 child_index: 0 num_children: 1 
+>>> PrintVisitor: AssignmentStmt
+operator->; current_parent: 0x563eec230e20 child_index: 0 num_children: 1 
+>>> PrintVisitor: IntExpr 5 
+operator->; current_parent: 0x563eec230e20 child_index: 0 num_children: 1 
+GoUp
+Current state: parent: 0x563eec230cd0 ; child index: 0 num_children: 1 
+>>> PrintVisitor: AssignmentStmt
+operator->; current_parent: 0x563eec230cd0 child_index: 0 num_children: 1 
+>>> PrintVisitor: IdentExpr y 
+operator->; current_parent: 0x563eec230cd0 child_index: 0 num_children: 1 
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  
+ScopeLayer::IsArgument
+ScopeLayer::IsArgument not main Return type: ; Args:  

@@ -1,0 +1,150 @@
+SeqStatement:
+	MoveStatement:
+		MemExpression: 
+			BinopExpression: PLUS
+				TempExpression: ::fp
+				ConstExpression 0
+		EseqExpression:
+			MoveStatement:
+				TempExpression: %0
+				CallExpression: 
+					NameExpression: malloc
+					ExpressionList: 
+						ConstExpression 4
+			TempExpression: %0
+	SeqStatement:
+		ExpStatement:
+			EseqExpression:
+				MoveStatement:
+					TempExpression: %1
+					CallExpression: 
+						NameExpression: Number::SetNumber
+						ExpressionList: 
+							MemExpression: 
+								BinopExpression: PLUS
+									TempExpression: ::fp
+									ConstExpression 0
+							ConstExpression 0
+				TempExpression: %1
+		SeqStatement:
+			MoveStatement:
+				MemExpression: 
+					BinopExpression: PLUS
+						TempExpression: ::fp
+						ConstExpression 4
+				EseqExpression:
+					MoveStatement:
+						TempExpression: %2
+						CallExpression: 
+							NameExpression: malloc
+							ExpressionList: 
+								ConstExpression 1
+					TempExpression: %2
+			SeqStatement:
+				LabelStatement: L0
+				SeqStatement:
+					JumpConditionalStatement: LT
+					TrueLabel: L1
+					FalseLabel: L2
+						EseqExpression:
+							MoveStatement:
+								TempExpression: %3
+								CallExpression: 
+									NameExpression: Number::GetNumber
+									ExpressionList: 
+										MemExpression: 
+											BinopExpression: PLUS
+												TempExpression: ::fp
+												ConstExpression 0
+							TempExpression: %3
+						EseqExpression:
+							MoveStatement:
+								TempExpression: %4
+								CallExpression: 
+									NameExpression: Five::GetNumber
+									ExpressionList: 
+										MemExpression: 
+											BinopExpression: PLUS
+												TempExpression: ::fp
+												ConstExpression 4
+							TempExpression: %4
+					SeqStatement:
+						LabelStatement: L1
+						SeqStatement:
+							SeqStatement:
+								ExpStatement:
+									EseqExpression:
+										MoveStatement:
+											TempExpression: %6
+											CallExpression: 
+												NameExpression: printf
+												ExpressionList: 
+													EseqExpression:
+														MoveStatement:
+															TempExpression: %5
+															CallExpression: 
+																NameExpression: Number::GetNumber
+																ExpressionList: 
+																	MemExpression: 
+																		BinopExpression: PLUS
+																			TempExpression: ::fp
+																			ConstExpression 0
+														TempExpression: %5
+										TempExpression: %6
+								ExpStatement:
+									EseqExpression:
+										MoveStatement:
+											TempExpression: %8
+											CallExpression: 
+												NameExpression: Number::SetNumber
+												ExpressionList: 
+													MemExpression: 
+														BinopExpression: PLUS
+															TempExpression: ::fp
+															ConstExpression 0
+													BinopExpression: PLUS
+														EseqExpression:
+															MoveStatement:
+																TempExpression: %7
+																CallExpression: 
+																	NameExpression: Number::GetNumber
+																	ExpressionList: 
+																		MemExpression: 
+																			BinopExpression: PLUS
+																				TempExpression: ::fp
+																				ConstExpression 0
+															TempExpression: %7
+														ConstExpression 1
+										TempExpression: %8
+							SeqStatement:
+								JumpStatement: L0
+								LabelStatement: L2
+SeqStatement:
+	LabelStatement: Number::GetNumber
+	MoveStatement:
+		TempExpression: ::return_value
+		MemExpression: 
+			BinopExpression: PLUS
+				MemExpression: 
+					BinopExpression: PLUS
+						TempExpression: ::fp
+						ConstExpression 0
+				BinopExpression: MUL
+					ConstExpression 0
+					ConstExpression 4
+SeqStatement:
+	LabelStatement: Number::SetNumber
+	MoveStatement:
+		MemExpression: 
+			BinopExpression: PLUS
+				MemExpression: 
+					BinopExpression: PLUS
+						TempExpression: ::fp
+						ConstExpression 0
+				BinopExpression: MUL
+					ConstExpression 0
+					ConstExpression 4
+		MemExpression: 
+			BinopExpression: PLUS
+				TempExpression: ::fp
+				ConstExpression 4
