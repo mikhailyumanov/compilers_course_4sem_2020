@@ -1,0 +1,67 @@
+Program
+	NEW SCOPE
+	NEW SCOPE
+	MainClass
+		LocalVarDeclStmt
+			VarDecl type: int, is_array: false i
+		AssignmentStmt
+			Lvalue i
+			IntExpr 0
+		NEW SCOPE
+		WhileStmt
+			BinOpExpr
+				IdentExpr i
+2
+				IntExpr 8
+			NEW SCOPE
+			StmtListStmt
+				LocalVarDeclStmt
+					VarDecl type: boolean, is_array: true y
+				AssignmentStmt
+					Lvalue y
+					NewArrayExpr type = boolean
+						IntExpr 3
+				AssignmentStmt
+					Lvalue y
+						IntExpr 0
+					BinOpExpr
+						IdentExpr i
+3
+						IntExpr 3
+				AssignmentStmt
+					Lvalue y
+						IntExpr 1
+					BinOpExpr
+						BinOpExpr
+							IdentExpr i
+9
+							IntExpr 4
+3
+						IntExpr 1
+				AssignmentStmt
+					Lvalue y
+						IntExpr 2
+					BinOpExpr
+						IdentExpr i
+9
+						IntExpr 2
+				AssignmentStmt
+					Lvalue i
+					BinOpExpr
+						IdentExpr i
+5
+						IntExpr 1
+				PrintStmt
+					SubscriptExpr
+						IdentExpr y
+						IntExpr 0
+				PrintStmt
+					SubscriptExpr
+						IdentExpr y
+						IntExpr 1
+				PrintStmt
+					SubscriptExpr
+						IdentExpr y
+						IntExpr 2
+				PrintStmt
+					IntExpr 11111111

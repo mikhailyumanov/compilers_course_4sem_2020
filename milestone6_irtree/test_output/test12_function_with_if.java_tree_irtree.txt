@@ -1,0 +1,111 @@
+SeqStatement:
+	MoveStatement:
+		MemExpression: 
+			BinopExpression: PLUS
+				TempExpression: ::fp
+				ConstExpression 0
+		CallExpression: 
+			NameExpression: Dummy::AlwaysTrue
+			ExpressionList: 
+				CallExpression: 
+					NameExpression: malloc
+					ExpressionList: 
+						ConstExpression 1
+	SeqStatement:
+		ExpStatement:
+			CallExpression: 
+				NameExpression: printf
+				ExpressionList: 
+					MemExpression: 
+						BinopExpression: PLUS
+							TempExpression: ::fp
+							ConstExpression 0
+		SeqStatement:
+			MoveStatement:
+				MemExpression: 
+					BinopExpression: PLUS
+						TempExpression: ::fp
+						ConstExpression 0
+				CallExpression: 
+					NameExpression: Dummy::AlwaysTrue
+					ExpressionList: 
+						CallExpression: 
+							NameExpression: malloc
+							ExpressionList: 
+								ConstExpression 1
+			SeqStatement:
+				ExpStatement:
+					CallExpression: 
+						NameExpression: printf
+						ExpressionList: 
+							MemExpression: 
+								BinopExpression: PLUS
+									TempExpression: ::fp
+									ConstExpression 0
+				SeqStatement:
+					MoveStatement:
+						MemExpression: 
+							BinopExpression: PLUS
+								TempExpression: ::fp
+								ConstExpression 0
+						CallExpression: 
+							NameExpression: Dummy::AlwaysFalse
+							ExpressionList: 
+								CallExpression: 
+									NameExpression: malloc
+									ExpressionList: 
+										ConstExpression 1
+					SeqStatement:
+						ExpStatement:
+							CallExpression: 
+								NameExpression: printf
+								ExpressionList: 
+									MemExpression: 
+										BinopExpression: PLUS
+											TempExpression: ::fp
+											ConstExpression 0
+						SeqStatement:
+							MoveStatement:
+								MemExpression: 
+									BinopExpression: PLUS
+										TempExpression: ::fp
+										ConstExpression 0
+								CallExpression: 
+									NameExpression: Dummy::AlwaysFalse
+									ExpressionList: 
+										CallExpression: 
+											NameExpression: malloc
+											ExpressionList: 
+												ConstExpression 1
+							ExpStatement:
+								CallExpression: 
+									NameExpression: printf
+									ExpressionList: 
+										MemExpression: 
+											BinopExpression: PLUS
+												TempExpression: ::fp
+												ConstExpression 0
+SeqStatement:
+	LabelStatement: Dummy::AlwaysTrue
+	MoveStatement:
+		TempExpression: ::return_value
+		ConstExpression 1
+SeqStatement:
+	LabelStatement: Dummy::AlwaysFalse
+	SeqStatement:
+		SeqStatement:
+			JumpConditionalStatement: NE
+			TrueLabel: L0
+			FalseLabel: L1
+				ConstExpression 1
+				ConstExpression 0
+			SeqStatement:
+				SeqStatement:
+					LabelStatement: L0
+					MoveStatement:
+						TempExpression: ::return_value
+						ConstExpression 0
+				LabelStatement: L1
+		MoveStatement:
+			TempExpression: ::return_value
+			ConstExpression 1

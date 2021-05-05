@@ -1,0 +1,17 @@
+#usage: run_tests {filename}
+#invoke from /tests dir
+
+filename=$1
+
+cd ../build
+cmake ..
+make
+mv Project ../bin
+cd ../test
+
+if ! test -f $filename;
+then
+  exit 1
+else
+  ../bin/Project $filename
+fi 
