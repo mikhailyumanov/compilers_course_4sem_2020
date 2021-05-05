@@ -1,0 +1,75 @@
+Program
+	MainClass
+		PrintStmt
+			IntExpr 1
+		PrintStmt
+			BinOpExpr
+				IntExpr 2
+				5
+				BinOpExpr
+					IntExpr 3
+					7
+					IntExpr 5
+		PrintStmt
+			BinOpExpr
+				BinOpExpr
+					IntExpr 2
+					7
+					IntExpr 3
+				5
+				BinOpExpr
+					IntExpr 5
+					8
+					IntExpr 7
+		PrintStmt
+			BinOpExpr
+				BinOpExpr
+					IntExpr 2
+					7
+					IntExpr 3
+				5
+				BinOpExpr
+					IntExpr 5
+					8
+					IntExpr 7
+		PrintStmt
+			BinOpExpr
+				IntExpr 4
+				6
+				IntExpr 7
+		PrintStmt
+			BinOpExpr
+				NotExpr
+					BinOpExpr
+						IntExpr 2
+						3
+						IntExpr 3
+				4
+				TrueExpr
+		LocalVarDeclStmt
+			VarDecl  is array: 0 i
+		AssignmentStmt
+			Lvalue i is array: 0
+			IntExpr 0
+		WhileStmt
+			BinOpExpr
+				IdentExpr i
+				2
+				IntExpr 10
+			StmtListStmt
+				PrintStmt
+					IdentExpr i
+				IfStmt
+					BinOpExpr
+						IdentExpr i
+						4
+						IntExpr 2
+					StmtListStmt
+						PrintStmt
+							IdentExpr i
+				AssignmentStmt
+					Lvalue i is array: 0
+					BinOpExpr
+						IdentExpr i
+						5
+						IntExpr 1
